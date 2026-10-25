@@ -2,8 +2,9 @@
   'use strict';
   const KEY = 'kong.black-lotus.v1';
   K.validSave = function (data) {
-    if (!data || data.schema !== 1 || data.game !== 'black-lotus' || !data.state) throw new Error('这不是本版本的劫后行存档。');
+    if (!data || ![1,2].includes(data.schema) || data.game !== 'black-lotus' || !data.state) throw new Error('这不是本版本的劫后行存档。');
     const s = data.state;
+    if(s.rules!==undefined&&![1,2].includes(s.rules))throw new Error('不支持的战斗规则。');
     const finite = (v, min, max) => typeof v === 'number' && Number.isFinite(v) && v >= min && v <= max;
     if (s.version !== 1 || typeof s.seed !== 'string' || s.seed.length > 64 || !Number.isInteger(s.stage) || s.stage < 0 || s.stage > 3 || !['playing','paused','reward','dead','won'].includes(s.mode)) throw new Error('存档版本或流程状态无效。');
     if (!s.player || !finite(s.player.hp,0,100) || !finite(s.player.focus,0,100) || !finite(s.player.x,-100,2300) || !finite(s.player.y,-1000,1000) || !finite(s.player.vx,-2000,2000) || !finite(s.player.vy,-2000,2000) || !finite(s.time,0,1e8)) throw new Error('存档角色数据损坏。');
@@ -16,7 +17,7 @@
     if (!Array.isArray(s.relics) || s.relics.length > 6 || new Set(s.relics).size !== s.relics.length || s.relics.some(id => !K.relic(id))) throw new Error('存档舍利数据损坏。');
     const canonical = K.makeRoom(s.seed, s.stage);
     if (!s.room || !Array.isArray(s.room.enemies) || s.room.enemies.length !== canonical.enemies.length || !Array.isArray(s.room.seals) || s.room.seals.length !== canonical.seals.length || !Array.isArray(s.room.pickups) || s.room.pickups.length !== canonical.pickups.length) throw new Error('存档地图数据损坏。');
-    for (let i=0;i<canonical.enemies.length;i++) { const e=s.room.enemies[i], c=canonical.enemies[i]; if (!e || e.id!==c.id || e.kind!==c.kind || !finite(e.hp,0,c.maxHp) || !finite(e.x,0,canonical.width) || !finite(e.y,-200,540) || !finite(e.timer,-10,10) || !finite(e.stun,0,2) || !finite(e.flash,0,2) || !finite(e.attacks,0,1e8) || ![-1,1].includes(e.face) || !['idle','windup','attack','recover','sweep-windup','orb-windup','sweep'].includes(e.phase)) throw new Error('存档敌人数据损坏。'); }
+    for (let i=0;i<canonical.enemies.length;i++) { const e=s.room.enemies[i], c=canonical.enemies[i]; if (!e || e.id!==c.id || e.kind!==c.kind || !finite(e.hp,0,c.maxHp) || !finite(e.x,0,canonical.width) || !finite(e.y,-200,540) || !finite(e.timer,-10,10) || !finite(e.stun,0,2) || !finite(e.flash,0,2) || !finite(e.attacks,0,1e8) || (e.interruptLock!==undefined&&!finite(e.interruptLock,0,2)) || ![-1,1].includes(e.face) || !['idle','windup','attack','recover','sweep-windup','orb-windup','sweep'].includes(e.phase)) throw new Error('存档敌人数据损坏。'); }
     for (let i=0;i<canonical.seals.length;i++) if (!finite(s.room.seals[i].hp,0,42)) throw new Error('存档阵眼数据损坏。');
     if (!Array.isArray(s.projectiles) || s.projectiles.length > 100 || s.projectiles.some(b=>!finite(b.x,-200,2500)||!finite(b.y,-2000,2000)||!finite(b.vx,-2000,2000)||!finite(b.vy,-2000,2000)||!finite(b.life,0,10)||!finite(b.w,1,100)||!finite(b.h,1,100)||typeof b.friendly!=='boolean'||(b.damage!==undefined&&!finite(b.damage,1,100))||(b.hit!==undefined&&(!Array.isArray(b.hit)||b.hit.length>100||b.hit.some(id=>!Number.isInteger(id)))))) throw new Error('存档弹道数据损坏。');
     if(s.clone&&(!finite(s.clone.x,0,2300)||!finite(s.clone.y,-1000,1000)||!finite(s.clone.life,0,4)||!finite(s.clone.timer,-1,1)||![-1,1].includes(s.clone.face)))throw new Error('存档分身数据损坏。');
@@ -25,12 +26,12 @@
     canonical.enemies = s.room.enemies.map((e,i)=>({...canonical.enemies[i], ...e, w:canonical.enemies[i].w, h:canonical.enemies[i].h, maxHp:canonical.enemies[i].maxHp, origin:canonical.enemies[i].origin}));
     canonical.seals.forEach((q,i)=>q.hp=s.room.seals[i].hp); canonical.pickups.forEach((q,i)=>q.used=!!s.room.pickups[i].used);
     const restored = K.newRun(s.seed, null);
-    Object.assign(restored,s,{room:canonical,player:{...s.player,w:24,h:44},effects:[],events:[],log:[],clone:s.clone?{x:s.clone.x,y:s.clone.y,w:24,h:44,life:s.clone.life,timer:s.clone.timer,face:s.clone.face}:null});
+    Object.assign(restored,s,{rules:s.rules===2?2:1,room:canonical,player:{...s.player,w:24,h:44},effects:[],events:[],log:[],clone:s.clone?{x:s.clone.x,y:s.clone.y,w:24,h:44,life:s.clone.life,timer:s.clone.timer,face:s.clone.face}:null});
     if (restored.mode === 'playing') restored.mode='paused';
     return { state:restored, meta:K.cleanMeta(data.meta) };
   };
   K.cleanMeta = m => {const n=v=>Number.isFinite(Number(v))?Math.max(0,Math.min(1e8,Math.floor(Number(v)))):0;return {runs:n(m?.runs),wins:n(m?.wins),best:Math.min(4,n(m?.best))};};
-  K.pack = (state, meta) => JSON.stringify({game:'black-lotus',schema:1,build:K.VERSION,state,meta:K.cleanMeta(meta)});
+  K.pack = (state, meta) => JSON.stringify({game:'black-lotus',schema:state.rules===2?2:1,build:K.VERSION,state,meta:K.cleanMeta(meta)});
   K.Storage = class {
     constructor() { this.available=true; this.error=''; this.cached=null; }
     read() { try { const raw=localStorage.getItem(KEY); if (!raw) return null; const data=JSON.parse(raw); this.cached=data; return K.validSave(data); } catch(e) { this.error=e.message; return null; } }

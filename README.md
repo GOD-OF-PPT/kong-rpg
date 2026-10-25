@@ -1,4 +1,6 @@
-# 大圣 · 劫后行
+当前交付为玩法与美术修正版，当前结论和验收见 [docs/readability](docs/readability/VERIFICATION.md)。原版文档与v1 ZIP保留。完整开发试作单独在codex/full-game-delivery，未合入当前版本。
+
+# 大圣 · 劫后行 v1.1
 
 以《西游记后传》题材创作的像素横版动作肉鸽。三境破阵，舍利成法，终战无天。原创像素画面与本地合成声音；不含影视/竞品抽取素材。
 

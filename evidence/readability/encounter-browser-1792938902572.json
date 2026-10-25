@@ -1,0 +1,1371 @@
+[
+  {
+    "name": "before-hold-cloud",
+    "entryHash": "cfde27c846bd1856e2ad1273d2c910000ddb0ec24ccf7c46dc2393fa854cbd65",
+    "fixture": "valid imported encounter, same seed x390 hp100 focus65; full canonical map",
+    "final": {
+      "won": true,
+      "hp": 100,
+      "damage": 0,
+      "focus": 100,
+      "time": 0.7249999999999999
+    },
+    "actions": [
+      {
+        "at": 25,
+        "keys": [
+          "KeyJ"
+        ]
+      },
+      {
+        "at": 140,
+        "keys": [
+          "KeyJ"
+        ]
+      },
+      {
+        "at": 257,
+        "keys": [
+          "KeyJ"
+        ]
+      },
+      {
+        "at": 473,
+        "keys": [
+          "KeyJ"
+        ]
+      },
+      {
+        "at": 590,
+        "keys": [
+          "KeyJ"
+        ]
+      },
+      {
+        "at": 706,
+        "keys": [
+          "KeyJ"
+        ]
+      }
+    ],
+    "frames": [
+      {
+        "at": 25,
+        "t": 0.041666666666666664,
+        "phase": "windup",
+        "hp": 100,
+        "enemyHp": 38,
+        "x": 390,
+        "y": 396,
+        "focus": 65
+      },
+      {
+        "at": 140,
+        "t": 0.13333333333333333,
+        "phase": "windup",
+        "hp": 100,
+        "enemyHp": 24,
+        "x": 390,
+        "y": 396,
+        "focus": 77
+      },
+      {
+        "at": 257,
+        "t": 0.2333333333333333,
+        "phase": "windup",
+        "hp": 100,
+        "enemyHp": 24,
+        "x": 390,
+        "y": 396,
+        "focus": 77
+      },
+      {
+        "at": 473,
+        "t": 0.4250000000000005,
+        "phase": "windup",
+        "hp": 100,
+        "enemyHp": 10,
+        "x": 390,
+        "y": 396,
+        "focus": 89
+      },
+      {
+        "at": 590,
+        "t": 0.5250000000000006,
+        "phase": "windup",
+        "hp": 100,
+        "enemyHp": 10,
+        "x": 390,
+        "y": 396,
+        "focus": 89
+      },
+      {
+        "at": 706,
+        "t": 0.6416666666666668,
+        "phase": "windup",
+        "hp": 100,
+        "enemyHp": 10,
+        "x": 390,
+        "y": 396,
+        "focus": 89
+      }
+    ],
+    "events": [
+      {
+        "type": "warning",
+        "t": 0.008,
+        "kind": "blade",
+        "id": 0
+      },
+      {
+        "type": "swing",
+        "t": 0.075,
+        "combo": 1
+      },
+      {
+        "type": "hit",
+        "t": 0.133,
+        "target": 0,
+        "kind": "blade",
+        "amount": 14
+      },
+      {
+        "type": "swing",
+        "t": 0.367,
+        "combo": 2
+      },
+      {
+        "type": "hit",
+        "t": 0.425,
+        "target": 0,
+        "kind": "blade",
+        "amount": 14
+      },
+      {
+        "type": "swing",
+        "t": 0.658,
+        "combo": 3
+      },
+      {
+        "type": "hit",
+        "t": 0.717,
+        "target": 0,
+        "kind": "blade",
+        "amount": 27
+      },
+      {
+        "type": "kill",
+        "t": 0.717,
+        "kind": "blade"
+      }
+    ],
+    "audio": [
+      {
+        "type": "warning",
+        "at": 371.7000000476837,
+        "sim": 0.008
+      },
+      {
+        "type": "swing",
+        "at": 413.60000002384186,
+        "sim": 0.075
+      },
+      {
+        "type": "hit",
+        "at": 480.40000009536743,
+        "sim": 0.133
+      },
+      {
+        "type": "swing",
+        "at": 746.8000000715256,
+        "sim": 0.367
+      },
+      {
+        "type": "hit",
+        "at": 813.5,
+        "sim": 0.425
+      },
+      {
+        "type": "swing",
+        "at": 1080.2000000476837,
+        "sim": 0.658
+      },
+      {
+        "type": "hit",
+        "at": 1130.2000000476837,
+        "sim": 0.717
+      },
+      {
+        "type": "kill",
+        "at": 1130.3000000715256,
+        "sim": 0.717
+      }
+    ],
+    "errors": [],
+    "video": "evidence/readability/video/page@a9d720c71000f315bd4f3ba795aaf2d0.webm"
+  },
+  {
+    "name": "before-read-cloud",
+    "entryHash": "cfde27c846bd1856e2ad1273d2c910000ddb0ec24ccf7c46dc2393fa854cbd65",
+    "fixture": "valid imported encounter, same seed x390 hp100 focus65; full canonical map",
+    "final": {
+      "won": true,
+      "hp": 100,
+      "damage": 0,
+      "focus": 100,
+      "time": 1.3499999999999976
+    },
+    "actions": [
+      {
+        "at": 20,
+        "keys": [
+          "KeyJ"
+        ]
+      },
+      {
+        "at": 156,
+        "keys": [
+          "KeyJ",
+          "Space"
+        ]
+      },
+      {
+        "at": 287,
+        "keys": [
+          "KeyJ",
+          "Space",
+          "KeyD"
+        ]
+      },
+      {
+        "at": 486,
+        "keys": [
+          "KeyJ",
+          "Space",
+          "KeyD"
+        ]
+      },
+      {
+        "at": 603,
+        "keys": [
+          "KeyJ"
+        ]
+      },
+      {
+        "at": 719,
+        "keys": [
+          "KeyJ"
+        ]
+      },
+      {
+        "at": 837,
+        "keys": [
+          "KeyJ"
+        ]
+      },
+      {
+        "at": 954,
+        "keys": [
+          "KeyJ"
+        ]
+      },
+      {
+        "at": 1086,
+        "keys": [
+          "KeyJ"
+        ]
+      },
+      {
+        "at": 1203,
+        "keys": [
+          "KeyJ"
+        ]
+      },
+      {
+        "at": 1338,
+        "keys": [
+          "KeyJ"
+        ]
+      }
+    ],
+    "frames": [
+      {
+        "at": 20,
+        "t": 0.008333333333333333,
+        "phase": "windup",
+        "hp": 100,
+        "enemyHp": 38,
+        "x": 390,
+        "y": 396,
+        "focus": 65
+      },
+      {
+        "at": 156,
+        "t": 0.09166666666666666,
+        "phase": "windup",
+        "hp": 100,
+        "enemyHp": 24,
+        "x": 390,
+        "y": 396,
+        "focus": 77
+      },
+      {
+        "at": 287,
+        "t": 0.21666666666666665,
+        "phase": "windup",
+        "hp": 100,
+        "enemyHp": 24,
+        "x": 390,
+        "y": 349.1125,
+        "focus": 77
+      },
+      {
+        "at": 486,
+        "t": 0.43333333333333385,
+        "phase": "windup",
+        "hp": 100,
+        "enemyHp": 24,
+        "x": 415.7698670705582,
+        "y": 290.72986111111106,
+        "focus": 77
+      },
+      {
+        "at": 603,
+        "t": 0.5500000000000005,
+        "phase": "windup",
+        "hp": 100,
+        "enemyHp": 24,
+        "x": 442.02113259097536,
+        "y": 289.82083333333327,
+        "focus": 77
+      },
+      {
+        "at": 719,
+        "t": 0.6666666666666667,
+        "phase": "windup",
+        "hp": 100,
+        "enemyHp": 24,
+        "x": 459.9677988437699,
+        "y": 310.28125,
+        "focus": 77
+      },
+      {
+        "at": 837,
+        "t": 0.783333333333333,
+        "phase": "attack",
+        "hp": 100,
+        "enemyHp": 24,
+        "x": 465.3308554424764,
+        "y": 352.11111111111103,
+        "focus": 77
+      },
+      {
+        "at": 954,
+        "t": 0.8999999999999992,
+        "phase": "attack",
+        "hp": 100,
+        "enemyHp": 24,
+        "x": 466.8903290303652,
+        "y": 396,
+        "focus": 77
+      },
+      {
+        "at": 1086,
+        "t": 1.0166666666666655,
+        "phase": "recover",
+        "hp": 100,
+        "enemyHp": 24,
+        "x": 467.1358463148654,
+        "y": 396,
+        "focus": 77
+      },
+      {
+        "at": 1203,
+        "t": 1.1083333333333318,
+        "phase": "recover",
+        "hp": 100,
+        "enemyHp": 10,
+        "x": 467.15926212004314,
+        "y": 396,
+        "focus": 89
+      },
+      {
+        "at": 1338,
+        "t": 1.224999999999998,
+        "phase": "recover",
+        "hp": 100,
+        "enemyHp": 10,
+        "x": 467.1634844796174,
+        "y": 396,
+        "focus": 89
+      }
+    ],
+    "events": [
+      {
+        "type": "warning",
+        "t": 0.008,
+        "kind": "blade",
+        "id": 0
+      },
+      {
+        "type": "swing",
+        "t": 0.033,
+        "combo": 1
+      },
+      {
+        "type": "hit",
+        "t": 0.092,
+        "target": 0,
+        "kind": "blade",
+        "amount": 14
+      },
+      {
+        "type": "jump",
+        "t": 0.133,
+        "air": false
+      },
+      {
+        "type": "swing",
+        "t": 0.325,
+        "combo": 2
+      },
+      {
+        "type": "swing",
+        "t": 0.617,
+        "combo": 3
+      },
+      {
+        "type": "warning",
+        "t": 0.733,
+        "kind": "caster",
+        "id": 1
+      },
+      {
+        "type": "swing",
+        "t": 1,
+        "combo": 1
+      },
+      {
+        "type": "hit",
+        "t": 1.058,
+        "target": 0,
+        "kind": "blade",
+        "amount": 14
+      },
+      {
+        "type": "swing",
+        "t": 1.292,
+        "combo": 2
+      },
+      {
+        "type": "hit",
+        "t": 1.35,
+        "target": 0,
+        "kind": "blade",
+        "amount": 14
+      },
+      {
+        "type": "kill",
+        "t": 1.35,
+        "kind": "blade"
+      }
+    ],
+    "audio": [
+      {
+        "type": "warning",
+        "at": 254.79999995231628,
+        "sim": 0.008
+      },
+      {
+        "type": "swing",
+        "at": 287.59999990463257,
+        "sim": 0.033
+      },
+      {
+        "type": "hit",
+        "at": 337.89999997615814,
+        "sim": 0.092
+      },
+      {
+        "type": "jump",
+        "at": 421.09999990463257,
+        "sim": 0.133
+      },
+      {
+        "type": "swing",
+        "at": 620.7999999523163,
+        "sim": 0.325
+      },
+      {
+        "type": "swing",
+        "at": 904.0999999046326,
+        "sim": 0.617
+      },
+      {
+        "type": "warning",
+        "at": 1020.7999999523163,
+        "sim": 0.733
+      },
+      {
+        "type": "swing",
+        "at": 1287.3999999761581,
+        "sim": 1
+      },
+      {
+        "type": "hit",
+        "at": 1354.1999999284744,
+        "sim": 1.058
+      },
+      {
+        "type": "swing",
+        "at": 1620.8999999761581,
+        "sim": 1.292
+      },
+      {
+        "type": "hit",
+        "at": 1687.5,
+        "sim": 1.35
+      },
+      {
+        "type": "kill",
+        "at": 1687.5,
+        "sim": 1.35
+      }
+    ],
+    "errors": [],
+    "video": "evidence/readability/video/page@c5ca85f595bbb58d6bdfcb932311be03.webm"
+  },
+  {
+    "name": "before-read-echo",
+    "entryHash": "cfde27c846bd1856e2ad1273d2c910000ddb0ec24ccf7c46dc2393fa854cbd65",
+    "fixture": "valid imported encounter, same seed x390 hp100 focus65; full canonical map",
+    "final": {
+      "won": true,
+      "hp": 100,
+      "damage": 0,
+      "focus": 49,
+      "time": 0.3583333333333336
+    },
+    "actions": [
+      {
+        "at": 22,
+        "keys": [
+          "KeyJ"
+        ]
+      },
+      {
+        "at": 139,
+        "keys": [
+          "KeyJ",
+          "KeyL",
+          "KeyK",
+          "KeyD"
+        ]
+      },
+      {
+        "at": 274,
+        "keys": [
+          "KeyJ",
+          "Space",
+          "KeyD"
+        ]
+      }
+    ],
+    "frames": [
+      {
+        "at": 22,
+        "t": 0.008333333333333333,
+        "phase": "windup",
+        "hp": 100,
+        "enemyHp": 38,
+        "x": 390,
+        "y": 396,
+        "focus": 65
+      },
+      {
+        "at": 139,
+        "t": 0.09166666666666666,
+        "phase": "windup",
+        "hp": 100,
+        "enemyHp": 24,
+        "x": 390,
+        "y": 396,
+        "focus": 77
+      },
+      {
+        "at": 274,
+        "t": 0.22499999999999998,
+        "phase": "windup",
+        "hp": 100,
+        "enemyHp": 24,
+        "x": 465.8333333333336,
+        "y": 396,
+        "focus": 27
+      }
+    ],
+    "events": [
+      {
+        "type": "warning",
+        "t": 0.008,
+        "kind": "blade",
+        "id": 0
+      },
+      {
+        "type": "swing",
+        "t": 0.033,
+        "combo": 1
+      },
+      {
+        "type": "hit",
+        "t": 0.092,
+        "target": 0,
+        "kind": "blade",
+        "amount": 14
+      },
+      {
+        "type": "dash",
+        "t": 0.117
+      },
+      {
+        "type": "clone",
+        "t": 0.117,
+        "cost": 50
+      },
+      {
+        "type": "clone-strike",
+        "t": 0.233
+      },
+      {
+        "type": "hit",
+        "t": 0.25,
+        "target": 0,
+        "kind": "blade",
+        "amount": 18
+      },
+      {
+        "type": "jump",
+        "t": 0.3,
+        "air": false
+      },
+      {
+        "type": "swing",
+        "t": 0.3,
+        "combo": 2
+      },
+      {
+        "type": "hit",
+        "t": 0.358,
+        "target": 0,
+        "kind": "blade",
+        "amount": 14
+      },
+      {
+        "type": "kill",
+        "t": 0.358,
+        "kind": "blade"
+      }
+    ],
+    "audio": [
+      {
+        "type": "warning",
+        "at": 245.70000004768372,
+        "sim": 0.008
+      },
+      {
+        "type": "swing",
+        "at": 278.7000000476837,
+        "sim": 0.033
+      },
+      {
+        "type": "hit",
+        "at": 328.89999997615814,
+        "sim": 0.092
+      },
+      {
+        "type": "dash",
+        "at": 395.5,
+        "sim": 0.117
+      },
+      {
+        "type": "clone",
+        "at": 395.5,
+        "sim": 0.117
+      },
+      {
+        "type": "clone-strike",
+        "at": 512.2999999523163,
+        "sim": 0.233
+      },
+      {
+        "type": "hit",
+        "at": 528.7999999523163,
+        "sim": 0.25
+      },
+      {
+        "type": "jump",
+        "at": 612.1000000238419,
+        "sim": 0.3
+      },
+      {
+        "type": "swing",
+        "at": 612.2000000476837,
+        "sim": 0.3
+      },
+      {
+        "type": "hit",
+        "at": 678.5,
+        "sim": 0.358
+      },
+      {
+        "type": "kill",
+        "at": 678.6000000238419,
+        "sim": 0.358
+      }
+    ],
+    "errors": [],
+    "video": "evidence/readability/video/page@9cd9a02d6bf62dec9c0377de5dda74eb.webm"
+  },
+  {
+    "name": "after-hold-cloud",
+    "entryHash": "85c57667a694afac41c8ee344e739b16c76d2f306834843a576ed3be050cb725",
+    "fixture": "valid imported encounter, same seed x390 hp100 focus65; full canonical map",
+    "final": {
+      "won": true,
+      "hp": 88,
+      "damage": 12,
+      "focus": 100,
+      "time": 0.6083333333333336
+    },
+    "actions": [
+      {
+        "at": 21,
+        "keys": [
+          "KeyJ"
+        ]
+      },
+      {
+        "at": 137,
+        "keys": [
+          "KeyJ"
+        ]
+      },
+      {
+        "at": 254,
+        "keys": [
+          "KeyJ"
+        ]
+      },
+      {
+        "at": 487,
+        "keys": [
+          "KeyJ"
+        ]
+      },
+      {
+        "at": 603,
+        "keys": [
+          "KeyJ"
+        ]
+      }
+    ],
+    "frames": [
+      {
+        "at": 21,
+        "t": 0.008333333333333333,
+        "phase": "windup",
+        "hp": 100,
+        "enemyHp": 38,
+        "x": 390,
+        "y": 396,
+        "focus": 65
+      },
+      {
+        "at": 137,
+        "t": 0.09166666666666666,
+        "phase": "windup",
+        "hp": 100,
+        "enemyHp": 24,
+        "x": 390,
+        "y": 396,
+        "focus": 77
+      },
+      {
+        "at": 254,
+        "t": 0.19999999999999998,
+        "phase": "windup",
+        "hp": 100,
+        "enemyHp": 24,
+        "x": 390,
+        "y": 396,
+        "focus": 77
+      },
+      {
+        "at": 487,
+        "t": 0.39166666666666705,
+        "phase": "windup",
+        "hp": 100,
+        "enemyHp": 10,
+        "x": 390,
+        "y": 396,
+        "focus": 89
+      },
+      {
+        "at": 603,
+        "t": 0.5166666666666673,
+        "phase": "windup",
+        "hp": 100,
+        "enemyHp": 10,
+        "x": 390,
+        "y": 396,
+        "focus": 89
+      }
+    ],
+    "events": [
+      {
+        "type": "warning",
+        "t": 0.008,
+        "kind": "blade",
+        "id": 0
+      },
+      {
+        "type": "swing",
+        "t": 0.033,
+        "combo": 1
+      },
+      {
+        "type": "hit",
+        "t": 0.092,
+        "target": 0,
+        "kind": "blade",
+        "amount": 14
+      },
+      {
+        "type": "swing",
+        "t": 0.325,
+        "combo": 2
+      },
+      {
+        "type": "hit",
+        "t": 0.383,
+        "target": 0,
+        "kind": "blade",
+        "amount": 14
+      },
+      {
+        "type": "enemy-attack",
+        "t": 0.533,
+        "kind": "blade",
+        "id": 0,
+        "box": {
+          "x": 406,
+          "y": 405,
+          "w": 66,
+          "h": 35
+        }
+      },
+      {
+        "type": "hurt",
+        "t": 0.542,
+        "source": "执刃魔兵·斩击",
+        "amount": 12
+      },
+      {
+        "type": "swing",
+        "t": 0.55,
+        "combo": 3
+      },
+      {
+        "type": "hit",
+        "t": 0.608,
+        "target": 0,
+        "kind": "blade",
+        "amount": 27
+      },
+      {
+        "type": "kill",
+        "t": 0.608,
+        "kind": "blade"
+      }
+    ],
+    "audio": [
+      {
+        "type": "warning",
+        "at": 189.89999997615814,
+        "sim": 0.008
+      },
+      {
+        "type": "swing",
+        "at": 223.09999990463257,
+        "sim": 0.033
+      },
+      {
+        "type": "hit",
+        "at": 273.1999999284744,
+        "sim": 0.092
+      },
+      {
+        "type": "swing",
+        "at": 556.1999999284744,
+        "sim": 0.325
+      },
+      {
+        "type": "hit",
+        "at": 606.2999999523163,
+        "sim": 0.383
+      },
+      {
+        "type": "enemy-attack",
+        "at": 806.3999999761581,
+        "sim": 0.533
+      },
+      {
+        "type": "hurt",
+        "at": 806.5999999046326,
+        "sim": 0.542
+      },
+      {
+        "type": "swing",
+        "at": 823,
+        "sim": 0.55
+      },
+      {
+        "type": "hit",
+        "at": 873,
+        "sim": 0.608
+      },
+      {
+        "type": "kill",
+        "at": 873.1999999284744,
+        "sim": 0.608
+      }
+    ],
+    "errors": [],
+    "video": "evidence/readability/video/page@ad4350f00d4bc6a84933a1a241d16dcb.webm"
+  },
+  {
+    "name": "after-read-cloud",
+    "entryHash": "85c57667a694afac41c8ee344e739b16c76d2f306834843a576ed3be050cb725",
+    "fixture": "valid imported encounter, same seed x390 hp100 focus65; full canonical map",
+    "final": {
+      "won": true,
+      "hp": 100,
+      "damage": 0,
+      "focus": 99,
+      "time": 0.7916666666666663
+    },
+    "actions": [
+      {
+        "at": 21,
+        "keys": [
+          "KeyJ"
+        ]
+      },
+      {
+        "at": 139,
+        "keys": [
+          "KeyJ",
+          "Space"
+        ]
+      },
+      {
+        "at": 255,
+        "keys": [
+          "KeyJ",
+          "Space",
+          "KeyD"
+        ]
+      },
+      {
+        "at": 488,
+        "keys": [
+          "KeyJ",
+          "Space",
+          "KeyD"
+        ]
+      },
+      {
+        "at": 605,
+        "keys": [
+          "KeyJ"
+        ]
+      },
+      {
+        "at": 739,
+        "keys": [
+          "KeyJ"
+        ]
+      }
+    ],
+    "frames": [
+      {
+        "at": 21,
+        "t": 0.016666666666666666,
+        "phase": "windup",
+        "hp": 100,
+        "enemyHp": 38,
+        "x": 390,
+        "y": 396,
+        "focus": 65
+      },
+      {
+        "at": 139,
+        "t": 0.09999999999999999,
+        "phase": "windup",
+        "hp": 100,
+        "enemyHp": 24,
+        "x": 390,
+        "y": 396,
+        "focus": 77
+      },
+      {
+        "at": 255,
+        "t": 0.20833333333333331,
+        "phase": "windup",
+        "hp": 100,
+        "enemyHp": 24,
+        "x": 390,
+        "y": 345.50416666666666,
+        "focus": 77
+      },
+      {
+        "at": 488,
+        "t": 0.4250000000000005,
+        "phase": "windup",
+        "hp": 100,
+        "enemyHp": 24,
+        "x": 419.3242748764181,
+        "y": 289.95624999999995,
+        "focus": 77
+      },
+      {
+        "at": 605,
+        "t": 0.5583333333333338,
+        "phase": "attack",
+        "hp": 100,
+        "enemyHp": 24,
+        "x": 449.89990164919965,
+        "y": 292.40625,
+        "focus": 77
+      },
+      {
+        "at": 739,
+        "t": 0.6666666666666667,
+        "phase": "attack",
+        "hp": 100,
+        "enemyHp": 24,
+        "x": 467.3492503853401,
+        "y": 314.94861111111106,
+        "focus": 77
+      }
+    ],
+    "events": [
+      {
+        "type": "warning",
+        "t": 0.008,
+        "kind": "blade",
+        "id": 0
+      },
+      {
+        "type": "swing",
+        "t": 0.042,
+        "combo": 1
+      },
+      {
+        "type": "hit",
+        "t": 0.1,
+        "target": 0,
+        "kind": "blade",
+        "amount": 14
+      },
+      {
+        "type": "jump",
+        "t": 0.117,
+        "air": false
+      },
+      {
+        "type": "swing",
+        "t": 0.333,
+        "combo": 2
+      },
+      {
+        "type": "enemy-attack",
+        "t": 0.533,
+        "kind": "blade",
+        "id": 0,
+        "box": {
+          "x": 394,
+          "y": 405,
+          "w": 66,
+          "h": 35
+        }
+      },
+      {
+        "type": "swing",
+        "t": 0.625,
+        "combo": 3
+      },
+      {
+        "type": "warning",
+        "t": 0.733,
+        "kind": "caster",
+        "id": 1
+      },
+      {
+        "type": "hit",
+        "t": 0.792,
+        "target": 0,
+        "kind": "blade",
+        "amount": 27
+      },
+      {
+        "type": "kill",
+        "t": 0.792,
+        "kind": "blade"
+      }
+    ],
+    "audio": [
+      {
+        "type": "warning",
+        "at": 178.10000002384186,
+        "sim": 0.008
+      },
+      {
+        "type": "swing",
+        "at": 211.10000002384186,
+        "sim": 0.042
+      },
+      {
+        "type": "hit",
+        "at": 261.10000002384186,
+        "sim": 0.1
+      },
+      {
+        "type": "jump",
+        "at": 327.60000002384186,
+        "sim": 0.117
+      },
+      {
+        "type": "swing",
+        "at": 544.1000000238419,
+        "sim": 0.333
+      },
+      {
+        "type": "enemy-attack",
+        "at": 744.1000000238419,
+        "sim": 0.533
+      },
+      {
+        "type": "swing",
+        "at": 827.5,
+        "sim": 0.625
+      },
+      {
+        "type": "warning",
+        "at": 944.2999999523163,
+        "sim": 0.733
+      },
+      {
+        "type": "hit",
+        "at": 1010.8999999761581,
+        "sim": 0.792
+      },
+      {
+        "type": "kill",
+        "at": 1011.1000000238419,
+        "sim": 0.792
+      }
+    ],
+    "errors": [],
+    "video": "evidence/readability/video/page@323229096bbb93cf02a0c5319671c44a.webm"
+  },
+  {
+    "name": "after-read-echo",
+    "entryHash": "85c57667a694afac41c8ee344e739b16c76d2f306834843a576ed3be050cb725",
+    "fixture": "valid imported encounter, same seed x390 hp100 focus65; full canonical map",
+    "final": {
+      "won": true,
+      "hp": 100,
+      "damage": 0,
+      "focus": 49,
+      "time": 0.37500000000000033
+    },
+    "actions": [
+      {
+        "at": 23,
+        "keys": [
+          "KeyJ"
+        ]
+      },
+      {
+        "at": 139,
+        "keys": [
+          "KeyJ",
+          "KeyL",
+          "KeyK",
+          "KeyD"
+        ]
+      },
+      {
+        "at": 256,
+        "keys": [
+          "KeyJ",
+          "Space",
+          "KeyD"
+        ]
+      }
+    ],
+    "frames": [
+      {
+        "at": 23,
+        "t": 0.008333333333333333,
+        "phase": "windup",
+        "hp": 100,
+        "enemyHp": 38,
+        "x": 390,
+        "y": 396,
+        "focus": 65
+      },
+      {
+        "at": 139,
+        "t": 0.09166666666666666,
+        "phase": "windup",
+        "hp": 100,
+        "enemyHp": 24,
+        "x": 390,
+        "y": 396,
+        "focus": 77
+      },
+      {
+        "at": 256,
+        "t": 0.20833333333333331,
+        "phase": "windup",
+        "hp": 100,
+        "enemyHp": 24,
+        "x": 455.0000000000002,
+        "y": 396,
+        "focus": 27
+      }
+    ],
+    "events": [
+      {
+        "type": "warning",
+        "t": 0.008,
+        "kind": "blade",
+        "id": 0
+      },
+      {
+        "type": "swing",
+        "t": 0.033,
+        "combo": 1
+      },
+      {
+        "type": "hit",
+        "t": 0.092,
+        "target": 0,
+        "kind": "blade",
+        "amount": 14
+      },
+      {
+        "type": "dash",
+        "t": 0.117
+      },
+      {
+        "type": "clone",
+        "t": 0.117,
+        "cost": 50
+      },
+      {
+        "type": "clone-strike",
+        "t": 0.233
+      },
+      {
+        "type": "hit",
+        "t": 0.25,
+        "target": 0,
+        "kind": "blade",
+        "amount": 18
+      },
+      {
+        "type": "jump",
+        "t": 0.3,
+        "air": false
+      },
+      {
+        "type": "swing",
+        "t": 0.3,
+        "combo": 2
+      },
+      {
+        "type": "hit",
+        "t": 0.358,
+        "target": 0,
+        "kind": "blade",
+        "amount": 14
+      },
+      {
+        "type": "kill",
+        "t": 0.358,
+        "kind": "blade"
+      }
+    ],
+    "audio": [
+      {
+        "type": "warning",
+        "at": 188.79999995231628,
+        "sim": 0.008
+      },
+      {
+        "type": "swing",
+        "at": 221.89999997615814,
+        "sim": 0.033
+      },
+      {
+        "type": "hit",
+        "at": 271.89999997615814,
+        "sim": 0.092
+      },
+      {
+        "type": "dash",
+        "at": 338.5,
+        "sim": 0.117
+      },
+      {
+        "type": "clone",
+        "at": 338.59999990463257,
+        "sim": 0.117
+      },
+      {
+        "type": "clone-strike",
+        "at": 455.09999990463257,
+        "sim": 0.233
+      },
+      {
+        "type": "hit",
+        "at": 472,
+        "sim": 0.25
+      },
+      {
+        "type": "jump",
+        "at": 571.5999999046326,
+        "sim": 0.3
+      },
+      {
+        "type": "swing",
+        "at": 571.7999999523163,
+        "sim": 0.3
+      },
+      {
+        "type": "hit",
+        "at": 621.7999999523163,
+        "sim": 0.358
+      },
+      {
+        "type": "kill",
+        "at": 621.8999999761581,
+        "sim": 0.358
+      }
+    ],
+    "errors": [],
+    "video": "evidence/readability/video/page@790c5ea36d962e4d4d439715a281b5d7.webm"
+  }
+]

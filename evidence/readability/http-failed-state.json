@@ -1,0 +1,1243 @@
+{
+  "version": 1,
+  "seed": "LOTUS-1025",
+  "stage": 1,
+  "mode": "dead",
+  "time": 35.283333333331974,
+  "roomTime": 24.474999999999252,
+  "relics": [
+    "staff",
+    "mercy"
+  ],
+  "room": {
+    "width": 2140,
+    "platforms": [
+      {
+        "x": 0,
+        "y": 440,
+        "w": 820,
+        "h": 110,
+        "solid": true
+      },
+      {
+        "x": 920,
+        "y": 440,
+        "w": 600,
+        "h": 110,
+        "solid": true
+      },
+      {
+        "x": 1610,
+        "y": 440,
+        "w": 530,
+        "h": 110,
+        "solid": true
+      },
+      {
+        "x": 264,
+        "y": 345,
+        "w": 145,
+        "h": 16
+      },
+      {
+        "x": 469,
+        "y": 285,
+        "w": 125,
+        "h": 16
+      },
+      {
+        "x": 675,
+        "y": 355,
+        "w": 160,
+        "h": 16
+      },
+      {
+        "x": 1010,
+        "y": 335,
+        "w": 140,
+        "h": 16
+      },
+      {
+        "x": 1246,
+        "y": 270,
+        "w": 130,
+        "h": 16
+      },
+      {
+        "x": 1450,
+        "y": 345,
+        "w": 175,
+        "h": 16
+      },
+      {
+        "x": 1744,
+        "y": 340,
+        "w": 130,
+        "h": 16
+      }
+    ],
+    "hazards": [
+      {
+        "x": 1055,
+        "y": 427,
+        "w": 66,
+        "h": 13
+      }
+    ],
+    "enemies": [
+      {
+        "id": 0,
+        "kind": "blade",
+        "x": 354.4250000000006,
+        "y": 400,
+        "w": 26,
+        "h": 40,
+        "hp": 38,
+        "maxHp": 38,
+        "face": -1,
+        "phase": "idle",
+        "timer": -21.066666666666112,
+        "stun": 0,
+        "flash": 0,
+        "attacks": 0,
+        "struck": false,
+        "origin": 422,
+        "interruptLock": 0
+      },
+      {
+        "id": 1,
+        "kind": "blade",
+        "x": 769,
+        "y": 400,
+        "w": 26,
+        "h": 40,
+        "hp": 24,
+        "maxHp": 38,
+        "face": 1,
+        "phase": "idle",
+        "timer": -20.058333333332836,
+        "stun": 0,
+        "flash": 0,
+        "attacks": 0,
+        "struck": false,
+        "origin": 669,
+        "interruptLock": 0
+      },
+      {
+        "id": 2,
+        "kind": "caster",
+        "x": 1149,
+        "y": 327,
+        "w": 26,
+        "h": 40,
+        "hp": 38,
+        "maxHp": 38,
+        "face": -1,
+        "phase": "idle",
+        "timer": 1.2166666666666688,
+        "stun": 0,
+        "flash": 0,
+        "attacks": 0,
+        "struck": false,
+        "origin": 1149,
+        "interruptLock": 0
+      },
+      {
+        "id": 3,
+        "kind": "shield",
+        "x": 1399,
+        "y": 400,
+        "w": 26,
+        "h": 40,
+        "hp": 60,
+        "maxHp": 60,
+        "face": -1,
+        "phase": "idle",
+        "timer": -23.484999999999307,
+        "stun": 0,
+        "flash": 0,
+        "attacks": 0,
+        "struck": false,
+        "origin": 1399,
+        "interruptLock": 0
+      },
+      {
+        "id": 4,
+        "kind": "shield",
+        "x": 1766,
+        "y": 400,
+        "w": 26,
+        "h": 40,
+        "hp": 60,
+        "maxHp": 60,
+        "face": -1,
+        "phase": "idle",
+        "timer": -23.354999999999315,
+        "stun": 0,
+        "flash": 0,
+        "attacks": 0,
+        "struck": false,
+        "origin": 1766,
+        "interruptLock": 0
+      }
+    ],
+    "seals": [
+      {
+        "id": 0,
+        "x": 1058,
+        "y": 287,
+        "w": 28,
+        "h": 48,
+        "hp": 42
+      },
+      {
+        "id": 1,
+        "x": 1675,
+        "y": 392,
+        "w": 28,
+        "h": 48,
+        "hp": 42
+      }
+    ],
+    "pickups": [
+      {
+        "x": 537,
+        "y": 248,
+        "w": 16,
+        "h": 20,
+        "kind": "heal",
+        "used": false
+      },
+      {
+        "x": 1270,
+        "y": 234,
+        "w": 16,
+        "h": 20,
+        "kind": "focus",
+        "used": false
+      }
+    ],
+    "exit": 2054,
+    "variant": 266
+  },
+  "player": {
+    "x": 1013.0651962114542,
+    "y": 396,
+    "w": 24,
+    "h": 44,
+    "vx": -200,
+    "vy": -200,
+    "face": 1,
+    "hp": 0,
+    "focus": 25,
+    "grounded": true,
+    "coyote": 0.1,
+    "buffer": 0,
+    "airJumps": 0,
+    "invuln": 1,
+    "dash": 0,
+    "dashCD": 0,
+    "attack": 0,
+    "attackId": 71,
+    "attackTargets": [],
+    "comboIndex": 2,
+    "slam": false,
+    "landing": 0,
+    "drop": 0,
+    "attackDuration": 0.29
+  },
+  "clone": null,
+  "projectiles": [],
+  "effects": [
+    {
+      "kind": "hurt",
+      "x": 1013.0651962114542,
+      "y": 396,
+      "life": 0.42,
+      "text": "-12"
+    }
+  ],
+  "events": [
+    {
+      "type": "hurt",
+      "t": 35.283,
+      "source": "莲焰飞弹",
+      "amount": 12
+    },
+    {
+      "type": "death",
+      "t": 35.283,
+      "source": "莲焰飞弹"
+    }
+  ],
+  "log": [
+    {
+      "type": "swing",
+      "t": 0.408,
+      "combo": 1
+    },
+    {
+      "type": "swing",
+      "t": 0.7,
+      "combo": 2
+    },
+    {
+      "type": "warning",
+      "t": 0.733,
+      "kind": "caster",
+      "id": 1
+    },
+    {
+      "type": "swing",
+      "t": 0.992,
+      "combo": 3
+    },
+    {
+      "type": "swing",
+      "t": 1.475,
+      "combo": 1
+    },
+    {
+      "type": "dash",
+      "t": 1.692
+    },
+    {
+      "type": "warning",
+      "t": 1.7,
+      "kind": "blade",
+      "id": 0
+    },
+    {
+      "type": "swing",
+      "t": 1.875,
+      "combo": 2
+    },
+    {
+      "type": "swing",
+      "t": 2.167,
+      "combo": 3
+    },
+    {
+      "type": "enemy-attack",
+      "t": 2.225,
+      "kind": "blade",
+      "id": 0,
+      "box": {
+        "x": 315.75000000000057,
+        "y": 405,
+        "w": 66,
+        "h": 35
+      }
+    },
+    {
+      "type": "clone",
+      "t": 2.275,
+      "cost": 40
+    },
+    {
+      "type": "seal-hit",
+      "t": 2.308,
+      "id": 0
+    },
+    {
+      "type": "clone-strike",
+      "t": 2.392
+    },
+    {
+      "type": "swing",
+      "t": 2.65,
+      "combo": 1
+    },
+    {
+      "type": "seal-hit",
+      "t": 2.708,
+      "id": 0
+    },
+    {
+      "type": "clone-strike",
+      "t": 2.917
+    },
+    {
+      "type": "swing",
+      "t": 2.942,
+      "combo": 2
+    },
+    {
+      "type": "seal-hit",
+      "t": 3,
+      "id": 0
+    },
+    {
+      "type": "seal",
+      "t": 3,
+      "id": 0
+    },
+    {
+      "type": "swing",
+      "t": 3.233,
+      "combo": 3
+    },
+    {
+      "type": "warning",
+      "t": 3.3,
+      "kind": "caster",
+      "id": 1
+    },
+    {
+      "type": "clone-strike",
+      "t": 3.442
+    },
+    {
+      "type": "swing",
+      "t": 3.717,
+      "combo": 1
+    },
+    {
+      "type": "hit",
+      "t": 3.967,
+      "target": 0,
+      "kind": "blade",
+      "amount": 12
+    },
+    {
+      "type": "clone-strike",
+      "t": 3.967
+    },
+    {
+      "type": "swing",
+      "t": 4.008,
+      "combo": 2
+    },
+    {
+      "type": "swing",
+      "t": 4.3,
+      "combo": 3
+    },
+    {
+      "type": "jump",
+      "t": 4.467,
+      "air": false
+    },
+    {
+      "type": "swing",
+      "t": 4.783,
+      "combo": 1
+    },
+    {
+      "type": "swing",
+      "t": 5.075,
+      "combo": 2
+    },
+    {
+      "type": "jump",
+      "t": 5.35,
+      "air": false
+    },
+    {
+      "type": "swing",
+      "t": 5.367,
+      "combo": 3
+    },
+    {
+      "type": "hit",
+      "t": 5.425,
+      "target": 2,
+      "kind": "blade",
+      "amount": 27
+    },
+    {
+      "type": "dash",
+      "t": 5.608
+    },
+    {
+      "type": "swing",
+      "t": 5.792,
+      "combo": 1
+    },
+    {
+      "type": "warning",
+      "t": 5.867,
+      "kind": "caster",
+      "id": 1
+    },
+    {
+      "type": "swing",
+      "t": 6.083,
+      "combo": 2
+    },
+    {
+      "type": "jump",
+      "t": 6.275,
+      "air": false
+    },
+    {
+      "type": "warning",
+      "t": 6.292,
+      "kind": "blade",
+      "id": 3
+    },
+    {
+      "type": "swing",
+      "t": 6.375,
+      "combo": 3
+    },
+    {
+      "type": "dash",
+      "t": 6.808
+    },
+    {
+      "type": "enemy-attack",
+      "t": 6.817,
+      "kind": "blade",
+      "id": 3,
+      "box": {
+        "x": 1332.8750000000045,
+        "y": 405,
+        "w": 66,
+        "h": 35
+      }
+    },
+    {
+      "type": "swing",
+      "t": 6.992,
+      "combo": 1
+    },
+    {
+      "type": "clone",
+      "t": 7.042,
+      "cost": 40
+    },
+    {
+      "type": "clone-strike",
+      "t": 7.158
+    },
+    {
+      "type": "swing",
+      "t": 7.283,
+      "combo": 2
+    },
+    {
+      "type": "swing",
+      "t": 7.575,
+      "combo": 3
+    },
+    {
+      "type": "hit",
+      "t": 7.633,
+      "target": 4,
+      "kind": "blade",
+      "amount": 27
+    },
+    {
+      "type": "seal-hit",
+      "t": 7.633,
+      "id": 1
+    },
+    {
+      "type": "clone-strike",
+      "t": 7.683
+    },
+    {
+      "type": "swing",
+      "t": 8.058,
+      "combo": 1
+    },
+    {
+      "type": "hit",
+      "t": 8.117,
+      "target": 4,
+      "kind": "blade",
+      "amount": 14
+    },
+    {
+      "type": "kill",
+      "t": 8.117,
+      "kind": "blade"
+    },
+    {
+      "type": "seal-hit",
+      "t": 8.117,
+      "id": 1
+    },
+    {
+      "type": "clone-strike",
+      "t": 8.208
+    },
+    {
+      "type": "swing",
+      "t": 8.35,
+      "combo": 2
+    },
+    {
+      "type": "seal-hit",
+      "t": 8.408,
+      "id": 1
+    },
+    {
+      "type": "seal",
+      "t": 8.408,
+      "id": 1
+    },
+    {
+      "type": "swing",
+      "t": 8.642,
+      "combo": 3
+    },
+    {
+      "type": "clone-strike",
+      "t": 8.733
+    },
+    {
+      "type": "swing",
+      "t": 9.125,
+      "combo": 1
+    },
+    {
+      "type": "swing",
+      "t": 9.417,
+      "combo": 2
+    },
+    {
+      "type": "swing",
+      "t": 9.708,
+      "combo": 3
+    },
+    {
+      "type": "swing",
+      "t": 10.192,
+      "combo": 1
+    },
+    {
+      "type": "swing",
+      "t": 10.483,
+      "combo": 2
+    },
+    {
+      "type": "swing",
+      "t": 10.775,
+      "combo": 3
+    },
+    {
+      "type": "reward",
+      "t": 10.808
+    },
+    {
+      "type": "relic",
+      "t": 10.808,
+      "id": "mercy"
+    },
+    {
+      "type": "room",
+      "t": 10.808,
+      "stage": 1
+    },
+    {
+      "type": "swing",
+      "t": 11.092,
+      "combo": 1
+    },
+    {
+      "type": "swing",
+      "t": 11.383,
+      "combo": 2
+    },
+    {
+      "type": "swing",
+      "t": 11.675,
+      "combo": 3
+    },
+    {
+      "type": "swing",
+      "t": 12.158,
+      "combo": 1
+    },
+    {
+      "type": "warning",
+      "t": 12.408,
+      "kind": "blade",
+      "id": 0
+    },
+    {
+      "type": "dash",
+      "t": 12.433
+    },
+    {
+      "type": "swing",
+      "t": 12.617,
+      "combo": 2
+    },
+    {
+      "type": "swing",
+      "t": 12.908,
+      "combo": 3
+    },
+    {
+      "type": "enemy-attack",
+      "t": 12.933,
+      "kind": "blade",
+      "id": 0,
+      "box": {
+        "x": 314.4250000000006,
+        "y": 405,
+        "w": 66,
+        "h": 35
+      }
+    },
+    {
+      "type": "swing",
+      "t": 13.392,
+      "combo": 1
+    },
+    {
+      "type": "jump",
+      "t": 13.4,
+      "air": false
+    },
+    {
+      "type": "warning",
+      "t": 13.408,
+      "kind": "caster",
+      "id": 2
+    },
+    {
+      "type": "warning",
+      "t": 13.417,
+      "kind": "blade",
+      "id": 1
+    },
+    {
+      "type": "hit",
+      "t": 13.45,
+      "target": 1,
+      "kind": "blade",
+      "amount": 14
+    },
+    {
+      "type": "dash",
+      "t": 13.642
+    },
+    {
+      "type": "swing",
+      "t": 13.825,
+      "combo": 2
+    },
+    {
+      "type": "enemy-attack",
+      "t": 13.942,
+      "kind": "blade",
+      "id": 1,
+      "box": {
+        "x": 592.8583333333276,
+        "y": 405,
+        "w": 66,
+        "h": 35
+      }
+    },
+    {
+      "type": "swing",
+      "t": 14.117,
+      "combo": 3
+    },
+    {
+      "type": "swing",
+      "t": 14.6,
+      "combo": 1
+    },
+    {
+      "type": "clone",
+      "t": 14.75,
+      "cost": 40
+    },
+    {
+      "type": "clone-strike",
+      "t": 14.867
+    },
+    {
+      "type": "swing",
+      "t": 14.892,
+      "combo": 2
+    },
+    {
+      "type": "jump",
+      "t": 14.908,
+      "air": false
+    },
+    {
+      "type": "hurt",
+      "t": 15,
+      "source": "莲焰飞弹",
+      "amount": 12
+    },
+    {
+      "type": "swing",
+      "t": 15.008,
+      "combo": 3
+    },
+    {
+      "type": "clone-strike",
+      "t": 15.392
+    },
+    {
+      "type": "swing",
+      "t": 15.492,
+      "combo": 1
+    },
+    {
+      "type": "swing",
+      "t": 15.783,
+      "combo": 2
+    },
+    {
+      "type": "clone-strike",
+      "t": 15.917
+    },
+    {
+      "type": "warning",
+      "t": 15.975,
+      "kind": "caster",
+      "id": 2
+    },
+    {
+      "type": "swing",
+      "t": 16.075,
+      "combo": 3
+    },
+    {
+      "type": "clone-strike",
+      "t": 16.442
+    },
+    {
+      "type": "swing",
+      "t": 16.558,
+      "combo": 1
+    },
+    {
+      "type": "swing",
+      "t": 16.85,
+      "combo": 2
+    },
+    {
+      "type": "swing",
+      "t": 17.142,
+      "combo": 3
+    },
+    {
+      "type": "hurt",
+      "t": 17.325,
+      "source": "莲焰飞弹",
+      "amount": 12
+    },
+    {
+      "type": "swing",
+      "t": 17.333,
+      "combo": 1
+    },
+    {
+      "type": "swing",
+      "t": 17.625,
+      "combo": 2
+    },
+    {
+      "type": "clone",
+      "t": 17.817,
+      "cost": 40
+    },
+    {
+      "type": "swing",
+      "t": 17.917,
+      "combo": 3
+    },
+    {
+      "type": "clone-strike",
+      "t": 17.933
+    },
+    {
+      "type": "swing",
+      "t": 18.4,
+      "combo": 1
+    },
+    {
+      "type": "clone-strike",
+      "t": 18.458
+    },
+    {
+      "type": "warning",
+      "t": 18.542,
+      "kind": "caster",
+      "id": 2
+    },
+    {
+      "type": "swing",
+      "t": 18.692,
+      "combo": 2
+    },
+    {
+      "type": "swing",
+      "t": 18.983,
+      "combo": 3
+    },
+    {
+      "type": "clone-strike",
+      "t": 18.983
+    },
+    {
+      "type": "swing",
+      "t": 19.467,
+      "combo": 1
+    },
+    {
+      "type": "clone-strike",
+      "t": 19.508
+    },
+    {
+      "type": "swing",
+      "t": 19.758,
+      "combo": 2
+    },
+    {
+      "type": "hurt",
+      "t": 19.883,
+      "source": "莲焰飞弹",
+      "amount": 12
+    },
+    {
+      "type": "swing",
+      "t": 19.892,
+      "combo": 3
+    },
+    {
+      "type": "swing",
+      "t": 20.375,
+      "combo": 1
+    },
+    {
+      "type": "swing",
+      "t": 20.667,
+      "combo": 2
+    },
+    {
+      "type": "clone",
+      "t": 20.867,
+      "cost": 40
+    },
+    {
+      "type": "swing",
+      "t": 20.958,
+      "combo": 3
+    },
+    {
+      "type": "clone-strike",
+      "t": 20.983
+    },
+    {
+      "type": "warning",
+      "t": 21.108,
+      "kind": "caster",
+      "id": 2
+    },
+    {
+      "type": "swing",
+      "t": 21.442,
+      "combo": 1
+    },
+    {
+      "type": "clone-strike",
+      "t": 21.508
+    },
+    {
+      "type": "swing",
+      "t": 21.733,
+      "combo": 2
+    },
+    {
+      "type": "swing",
+      "t": 22.025,
+      "combo": 3
+    },
+    {
+      "type": "clone-strike",
+      "t": 22.033
+    },
+    {
+      "type": "hurt",
+      "t": 22.458,
+      "source": "莲焰飞弹",
+      "amount": 12
+    },
+    {
+      "type": "swing",
+      "t": 22.467,
+      "combo": 1
+    },
+    {
+      "type": "clone-strike",
+      "t": 22.558
+    },
+    {
+      "type": "swing",
+      "t": 22.758,
+      "combo": 2
+    },
+    {
+      "type": "swing",
+      "t": 23.05,
+      "combo": 3
+    },
+    {
+      "type": "swing",
+      "t": 23.533,
+      "combo": 1
+    },
+    {
+      "type": "warning",
+      "t": 23.675,
+      "kind": "caster",
+      "id": 2
+    },
+    {
+      "type": "swing",
+      "t": 23.825,
+      "combo": 2
+    },
+    {
+      "type": "swing",
+      "t": 24.117,
+      "combo": 3
+    },
+    {
+      "type": "swing",
+      "t": 24.6,
+      "combo": 1
+    },
+    {
+      "type": "swing",
+      "t": 24.892,
+      "combo": 2
+    },
+    {
+      "type": "hurt",
+      "t": 25.025,
+      "source": "莲焰飞弹",
+      "amount": 12
+    },
+    {
+      "type": "swing",
+      "t": 25.033,
+      "combo": 3
+    },
+    {
+      "type": "swing",
+      "t": 25.517,
+      "combo": 1
+    },
+    {
+      "type": "swing",
+      "t": 25.808,
+      "combo": 2
+    },
+    {
+      "type": "swing",
+      "t": 26.1,
+      "combo": 3
+    },
+    {
+      "type": "warning",
+      "t": 26.242,
+      "kind": "caster",
+      "id": 2
+    },
+    {
+      "type": "swing",
+      "t": 26.583,
+      "combo": 1
+    },
+    {
+      "type": "swing",
+      "t": 26.875,
+      "combo": 2
+    },
+    {
+      "type": "swing",
+      "t": 27.167,
+      "combo": 3
+    },
+    {
+      "type": "hurt",
+      "t": 27.583,
+      "source": "莲焰飞弹",
+      "amount": 12
+    },
+    {
+      "type": "swing",
+      "t": 27.592,
+      "combo": 1
+    },
+    {
+      "type": "swing",
+      "t": 27.883,
+      "combo": 2
+    },
+    {
+      "type": "swing",
+      "t": 28.175,
+      "combo": 3
+    },
+    {
+      "type": "swing",
+      "t": 28.658,
+      "combo": 1
+    },
+    {
+      "type": "warning",
+      "t": 28.808,
+      "kind": "caster",
+      "id": 2
+    },
+    {
+      "type": "swing",
+      "t": 28.95,
+      "combo": 2
+    },
+    {
+      "type": "swing",
+      "t": 29.242,
+      "combo": 3
+    },
+    {
+      "type": "swing",
+      "t": 29.725,
+      "combo": 1
+    },
+    {
+      "type": "swing",
+      "t": 30.017,
+      "combo": 2
+    },
+    {
+      "type": "hurt",
+      "t": 30.158,
+      "source": "莲焰飞弹",
+      "amount": 12
+    },
+    {
+      "type": "swing",
+      "t": 30.167,
+      "combo": 3
+    },
+    {
+      "type": "swing",
+      "t": 30.65,
+      "combo": 1
+    },
+    {
+      "type": "swing",
+      "t": 30.942,
+      "combo": 2
+    },
+    {
+      "type": "swing",
+      "t": 31.233,
+      "combo": 3
+    },
+    {
+      "type": "warning",
+      "t": 31.375,
+      "kind": "caster",
+      "id": 2
+    },
+    {
+      "type": "swing",
+      "t": 31.717,
+      "combo": 1
+    },
+    {
+      "type": "swing",
+      "t": 32.008,
+      "combo": 2
+    },
+    {
+      "type": "swing",
+      "t": 32.3,
+      "combo": 3
+    },
+    {
+      "type": "hurt",
+      "t": 32.708,
+      "source": "莲焰飞弹",
+      "amount": 12
+    },
+    {
+      "type": "swing",
+      "t": 32.717,
+      "combo": 1
+    },
+    {
+      "type": "swing",
+      "t": 33.008,
+      "combo": 2
+    },
+    {
+      "type": "swing",
+      "t": 33.3,
+      "combo": 3
+    },
+    {
+      "type": "swing",
+      "t": 33.783,
+      "combo": 1
+    },
+    {
+      "type": "warning",
+      "t": 33.942,
+      "kind": "caster",
+      "id": 2
+    },
+    {
+      "type": "swing",
+      "t": 34.075,
+      "combo": 2
+    },
+    {
+      "type": "swing",
+      "t": 34.367,
+      "combo": 3
+    },
+    {
+      "type": "swing",
+      "t": 34.85,
+      "combo": 1
+    },
+    {
+      "type": "swing",
+      "t": 35.142,
+      "combo": 2
+    },
+    {
+      "type": "hurt",
+      "t": 35.283,
+      "source": "莲焰飞弹",
+      "amount": 12
+    },
+    {
+      "type": "death",
+      "t": 35.283,
+      "source": "莲焰飞弹"
+    }
+  ],
+  "reward": [
+    "mirror",
+    "flame",
+    "mercy"
+  ],
+  "kills": 1,
+  "broken": 2,
+  "damageTaken": 108,
+  "lastDamage": "莲焰飞弹",
+  "hitstop": 0,
+  "shake": 0.18,
+  "checkpoint": 545.5249410800495,
+  "combo": 2,
+  "comboTime": 0.6583333333333339,
+  "serial": 0,
+  "rules": 2
+}

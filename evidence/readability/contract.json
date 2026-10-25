@@ -1,0 +1,37 @@
+{
+  "version": "1.1.0",
+  "results": [
+    {
+      "name": "no additional maps, enemies, relics, health or content geometry",
+      "pass": true
+    },
+    {
+      "name": "v1 save explicitly remains original rules and schema",
+      "pass": true
+    },
+    {
+      "name": "new runs have independent rules2 and schema2",
+      "pass": true
+    },
+    {
+      "name": "original-rule physical replay matches original source exactly",
+      "pass": true
+    },
+    {
+      "name": "a committed warning completes during light-hit flashes",
+      "pass": true
+    },
+    {
+      "name": "heavy hit interrupts a warning only in new rules",
+      "pass": true
+    },
+    {
+      "name": "all physical attack boxes retain original dimensions",
+      "pass": true
+    },
+    {
+      "name": "experimental removal is absent from release code",
+      "pass": true
+    }
+  ]
+}
