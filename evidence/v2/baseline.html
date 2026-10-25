@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>大圣 · 劫后行 | Black Lotus</title><meta name="description" content="一棍破局，一念重来。可离线运行的像素横版动作肉鸽。"><style>:root{color-scheme:dark;--ink:#14151e;--gold:#e7ba70;--paper:#eee0be;--muted:#a69c94;--line:#615345;--red:#cd6460;--jade:#8bc7bf}*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:#11131b;color:var(--paper);font-family:"Microsoft YaHei","PingFang SC",sans-serif}body{background:radial-gradient(ellipse at 50% 45%,#292330 0,#151620 62%,#11121a 100%)}button,input{font:inherit}button,a{-webkit-tap-highlight-color:transparent}button{cursor:pointer;color:inherit}button:focus-visible,a:focus-visible,input:focus-visible,canvas:focus-visible{outline:2px solid var(--gold);outline-offset:4px}button:disabled{opacity:.4;cursor:default}[hidden]{display:none!important}#app{max-width:1504px;margin:auto;padding:0 40px}.masthead{height:96px;display:flex;align-items:center;justify-content:space-between;gap:20px}.masthead a{text-decoration:none;color:var(--paper);display:flex;align-items:center;gap:16px;font-family:SimSun,"Songti SC",serif;font-size:22px;letter-spacing:3px}.brand-seal{border:1px solid #927453;background:#2a2327;color:var(--gold);padding:4px 7px;font-size:25px;position:relative}.brand-seal:after{content:"";position:absolute;inset:3px;border:1px solid #6e5145}.masthead i{font-style:normal;color:#6c5e56;font-size:16px}.edition{font-size:10px;letter-spacing:3px;color:#a39894}.tiny-star{color:var(--gold);padding:0 14px}.text-button{border:0;background:transparent;color:#c0b2a0;font-size:12px;letter-spacing:2px;padding:12px}.text-button span{color:var(--gold);margin-left:10px}#stage{width:100%;aspect-ratio:16/9;max-height:calc(100vh - 164px);min-height:400px;position:relative;isolation:isolate;border:1px solid #6f5d50;box-shadow:0 20px 65px #0006;background:#191827;overflow:hidden}#world{display:block;width:100%;height:100%;object-fit:contain;image-rendering:pixelated;outline:none}#vignette{position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,#11142050,transparent 35%,transparent 80%,#14122535);box-shadow:inset 0 0 65px #11122155}#overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none}#overlay>*{pointer-events:auto}.hero{position:absolute;left:6%;top:13%;width:53%;text-shadow:0 2px 10px #181623}.eyebrow{font-size:11px;color:var(--gold);letter-spacing:5px;display:flex;align-items:center;gap:16px}.eyebrow:before{content:"";height:1px;width:30px;background:#a58a62}.hero h1{font-family:SimSun,"Songti SC",serif;font-weight:500;font-size:clamp(55px,7.7vw,118px);letter-spacing:10px;line-height:1.05;margin:24px 0 12px;color:#f0ddb5}.hero h1 small{font-size:.35em;letter-spacing:8px;display:block;color:#cdb58e;line-height:1.6;margin-bottom:8px}.english-title{font-size:10px;letter-spacing:6px;color:#a99892;margin-bottom:24px}.hero p{font-size:13px;line-height:1.95;letter-spacing:2px;color:#bdb4ad;margin:0 0 24px}.hero .actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap}.button{background:#262432;border:1px solid #7a6858;padding:13px 23px;font-size:13px;letter-spacing:2px;min-height:46px;transition:background .15s,border-color .15s}.button:hover{background:#39303b;border-color:var(--gold)}.button.primary{background:#dfb67a;color:#251e22;border:1px solid #f3d59a;font-weight:700;box-shadow:inset 0 0 0 3px #d2a96e}.button.primary:hover{background:#f0cf97}.button small{font-size:10px;margin-left:25px;opacity:.6}.hero-meta{display:flex;gap:24px;color:#a4978d;font-size:10px;letter-spacing:1px;margin-top:23px}.hero-meta b{font-weight:400;color:#d6c4a4;margin-right:6px}.scene-label{position:absolute;right:4%;top:6%;font-size:10px;letter-spacing:3px;color:#baaaa1;writing-mode:vertical-rl}.scene-label span{color:var(--gold);margin-top:20px}.seed-edit{display:flex;align-items:center;gap:12px;font-size:11px;color:#c6b7a6;margin:22px 0 16px}.seed-edit input{width:160px;border:0;border-bottom:1px solid #71604e;background:#191a2670;padding:6px 8px;color:#d3c4ae;font-family:monospace;font-size:12px;letter-spacing:1px}.panel{width:min(850px,88%);max-height:92%;overflow:auto;padding:30px 38px;background:#1c1c29f5;border:1px solid #8c7055;box-shadow:0 14px 80px #0009;position:relative}.panel:before{content:"";position:absolute;inset:6px;border:1px solid #544638;pointer-events:none}.panel h2{font-family:SimSun,serif;font-size:34px;font-weight:400;letter-spacing:5px;margin:12px 0}.panel .subtitle{font-size:12px;line-height:1.9;color:#b6aaa1;letter-spacing:1px;margin:10px 0 23px}.panel .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}.panel .close{position:absolute;right:20px;top:18px;background:transparent;border:0;color:#a99785;font-size:20px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}.relic-card{background:#252432;border:1px solid #615347;display:flex;flex-direction:column;align-items:flex-start;text-align:left;padding:22px 18px 18px;min-height:220px;position:relative}.relic-card:hover{background:#36303e;border-color:var(--gold)}.relic-card .num{position:absolute;right:12px;top:11px;font-size:11px;color:#a18d78}.relic-glyph{border:1px solid currentColor;font-family:SimSun,serif;width:42px;height:42px;display:grid;place-items:center;font-size:26px;margin-bottom:16px;box-shadow:inset 0 0 0 3px #282331}.relic-card h3{font-family:SimSun,serif;font-size:22px;letter-spacing:2px;font-weight:400;margin:0 0 8px}.relic-card .tag{font-size:10px;color:#b2a38b;letter-spacing:2px;margin-bottom:10px}.relic-card p{font-size:12px;line-height:1.8;color:#d4c8b5;margin:0 0 10px}.relic-card .cost{font-size:10px;color:#a89c94;line-height:1.8;margin-top:auto}.help-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px 25px}.help-grid h3{font-size:13px;font-weight:400;color:#dfbe89;margin:0 0 8px}.help-grid p{font-size:12px;line-height:1.9;color:#bfb3a6;margin:0}.help-grid kbd{font-size:10px}.setting-row{display:flex;gap:18px;align-items:center;margin:15px 0;color:#bdafa1;font-size:12px}.setting-row input[type=range]{accent-color:#d6ae75;width:150px}.setting-row input[type=checkbox]{accent-color:#d6ae75}#hud{position:absolute;inset:0;pointer-events:none}#hud button{pointer-events:auto}.vitals{position:absolute;left:3%;top:5%;width:205px}.vital-head{display:flex;justify-content:space-between;margin-bottom:7px;align-items:center}.vital-head strong{font-family:SimSun,serif;letter-spacing:3px;font-size:16px}.vital-head span{font-family:monospace;font-size:11px;color:#e1c6ad}.meter{height:7px;background:#151824;border:1px solid #6e5c58;padding:1px}.meter i{display:block;width:100%;height:100%;background:#c56c65;transition:width .12s}.focus-line{display:flex;align-items:center;gap:8px;margin-top:8px;font-size:10px;color:#b1c0bd}.focus-line .meter{flex:1;height:5px}.focus-line .meter i{background:#79b8bd}.focus-line b{font-size:10px;font-family:monospace;font-weight:400;width:23px}.journey{position:absolute;left:50%;top:4%;transform:translateX(-50%);text-align:center;display:flex;flex-direction:column;gap:5px;text-shadow:0 2px 4px #111}.journey small{font-size:9px;letter-spacing:4px;color:#c8ac85}.journey strong{font-family:SimSun,serif;letter-spacing:5px;font-weight:400;font-size:20px}.journey>span{font-size:10px;color:#bfb4b0;letter-spacing:1px}.hud-actions{position:absolute;right:3%;top:5%;display:flex;align-items:center;gap:16px}.hud-actions>span{font-family:monospace;letter-spacing:1px;font-size:9px;color:#b5a9a1}.hud-actions button{border:1px solid #766258;background:#24212d99;padding:8px 12px;display:flex;gap:12px}.hud-actions button span{font-size:9px;color:#a29489}.run-bottom{position:absolute;left:3%;right:3%;bottom:4%;display:flex;justify-content:space-between;gap:20px;font-size:10px;color:#d7bea0;letter-spacing:1px;text-shadow:0 2px 3px #111}.run-bottom #dash-state{color:#c1d5cf}#boss-hud{position:absolute;top:21%;left:25%;right:25%}#boss-hud>span{display:flex;justify-content:space-between;font-size:12px;letter-spacing:5px;color:#dac4d1;margin-bottom:8px}#boss-hud em{font-style:normal;font-size:10px;letter-spacing:2px;color:#bda5b9}#boss-hud .meter{height:5px;border-color:#8a5d7e}#boss-hud i{background:#ba77a3}#toast{position:absolute;left:50%;top:29%;transform:translateX(-50%);font-size:13px;letter-spacing:2px;background:#1c1a29e8;border:1px solid #8d705c;padding:12px 22px;pointer-events:none;text-align:center;max-width:80%}#context-hint{position:absolute;bottom:16%;left:50%;transform:translateX(-50%);background:#202431e8;border-bottom:1px solid #b09a70;padding:10px 20px;font-size:12px;color:#ede1c3;letter-spacing:1px;pointer-events:none}.footline{height:66px;display:flex;justify-content:space-between;align-items:center;font-size:10px;color:#8c8587;gap:20px}.footline>div:first-child{display:flex;align-items:center;gap:8px;white-space:nowrap}.status-dot{width:4px;height:4px;background:#8aaf9c;display:inline-block;box-shadow:0 0 6px #8aaf9c55}.keystrip{display:flex;gap:16px}.keystrip>span{white-space:nowrap}kbd{font:9px monospace;border:1px solid #514b50;color:#c2b6a5;padding:2px 4px;margin-right:3px;background:#21222c}.build{font-size:9px;letter-spacing:1px}.build>span{margin:0 8px;color:#746050}.results{display:flex;gap:35px;border-top:1px solid #514538;border-bottom:1px solid #514538;padding:16px 0;margin:20px 0}.results div{display:flex;flex-direction:column;gap:8px}.results small{font-size:10px;color:#9e9088}.results b{font:23px SimSun,serif;color:#e2c18a}.notice{font-size:11px;color:#ba9a8d;line-height:1.8}.starter-note{font-size:10px;color:#a89e93;margin-top:18px;letter-spacing:1px}#stage[data-mode=playing] #vignette{opacity:.55}@media(max-width:1100px){#app{padding:0 20px}.edition{display:none}.masthead{height:76px}.footline{height:62px}.build{display:none}.hero h1{font-size:72px}.hero{top:10%}.hero p{font-size:11px;margin-bottom:10px}.hero-meta{margin-top:12px}.seed-edit{margin-top:12px}.panel{padding:24px}.relic-card{min-height:190px;padding:16px 12px}.relic-card p{font-size:11px}.vitals{width:170px}.hud-actions>span{display:none}}@media(max-height:760px){.masthead{height:64px}.footline{height:54px}#stage{max-height:calc(100vh - 118px)}.hero{top:8%}.hero h1{font-size:70px;margin:16px 0 8px}.hero p{margin-bottom:12px}.english-title{margin-bottom:16px}.seed-edit{margin-top:10px}.hero-meta{margin-top:12px}.panel{padding:20px 30px}.panel h2{font-size:28px}.cards{margin-top:16px}.relic-card{min-height:190px;padding:15px}.relic-glyph{margin-bottom:10px}.panel .subtitle{margin-bottom:12px}}@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+:root #stage{width:min(100%,calc((100vh - 164px)*16/9));min-height:0;margin:0 auto}
+@media(max-height:760px){:root #stage{width:min(100%,calc((100vh - 118px)*16/9))}}
+#stage:not([data-mode=playing]) #toast{top:auto;bottom:4%}
+@media(min-height:761px) and (max-height:850px){.hero{top:9%}.hero h1{font-size:88px;margin:18px 0 12px}.hero-meta{margin-top:16px}}
+</style></head>
+<body>
+  <main id="app">
+    <header class="masthead"><a href="#" id="brand" aria-label="大圣劫后行主菜单"><span class="brand-seal">悟</span><span>大圣 <i>／</i> 劫后行</span></a><span class="edition">A PIXEL PILGRIMAGE <span class="tiny-star">✦</span> 独立离线版</span><button id="guide-top" class="text-button">行者手记 <span>↗</span></button></header>
+    <section id="stage" aria-label="横版游戏区域">
+      <canvas id="world" width="960" height="540" tabindex="0" aria-label="游戏世界。A D移动，空格跳跃，J棍击，K闪避，L分身，E过关，Escape暂停。"></canvas>
+      <div id="vignette" aria-hidden="true"></div>
+      <div id="hud" hidden>
+        <div class="vitals"><div class="vital-head"><strong>孙悟空</strong><span id="hp-number">100 / 100</span></div><div class="meter hp"><i id="hp-fill"></i></div><div class="focus-line"><span>定力</span><div class="meter focus"><i id="focus-fill"></i></div><b id="focus-number">65</b></div></div>
+        <div class="journey"><small id="chapter">第一境</small><strong id="stage-name">雾隐山道</strong><span id="objective">破除黑莲阵眼 0 / 2</span></div>
+        <div class="hud-actions"><span id="run-seed"></span><button id="pause" aria-label="暂停游戏">Ⅱ <span>ESC</span></button></div>
+        <div id="boss-hud" hidden><span>无天 <em id="boss-phase">黑莲横世</em></span><div class="meter"><i id="boss-fill"></i></div></div>
+        <div class="run-bottom"><span id="relic-list"></span><span id="dash-state"></span></div>
+      </div>
+      <div id="overlay"></div>
+      <div id="toast" role="status" aria-live="polite" hidden></div>
+      <div id="context-hint" hidden></div>
+    </section>
+    <footer class="footline"><div><span class="status-dot"></span><span id="storage-status">离线可玩 · 进度自动保存</span></div><div class="keystrip"><span><kbd>A</kbd><kbd>D</kbd> 行走</span><span><kbd>SPACE</kbd> 跃起</span><span><kbd>J</kbd> 棍击</span><span><kbd>K</kbd> 闪避</span><span><kbd>L</kbd> 分身</span></div><span class="build">v1.0 <span>／</span> 三界未明，棍心不改</span></footer>
+    <input id="import-file" type="file" accept="application/json,.json" hidden>
+  </main>
+  <script>
+(function (K) {
+  'use strict';
+  K.VERSION = '1.0.0';
+  K.W = 960; K.H = 540; K.DT = 1 / 120;
+  K.clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+  K.overlap = (a, b) => a.x < b.x + b.w && a.x + a.w > b.x && a.y < b.y + b.h && a.y + a.h > b.y;
+  K.rng = function (seed) { let a = seed >>> 0; return () => { a += 0x6D2B79F5; let t = Math.imul(a ^ a >>> 15, 1 | a); t ^= t + Math.imul(t ^ t >>> 7, 61 | t); return ((t ^ t >>> 14) >>> 0) / 4294967296; }; };
+  K.seedNumber = function (s) { let n = 2166136261; for (const c of String(s)) n = Math.imul(n ^ c.charCodeAt(0), 16777619); return n >>> 0; };
+  K.RELICS = [
+    { id: 'cloud', glyph: '云', name: '腾云骨', tag: '空中路线', text: '多一次空中跳。踩敌后恢复空中跳；空中棍击更远。', cost: '跳得更高，也会进入莲灯使的弹道。', color: '#82d9d2' },
+    { id: 'echo', glyph: '影', name: '照影珠', tag: '驻留诱敌', text: '分身驻留 3 秒，向目标发出穿透棍风。', cost: '分身消耗由 40 增为 50 定力。', color: '#bd9cdb' },
+    { id: 'staff', glyph: '棍', name: '定海心', tag: '三连蓄势', text: '第三棍范围更远、可破正面重盾，命中回定力。', cost: '第三棍后摇延长；贪招时要用闪避脱身。', color: '#efc47a' },
+    { id: 'mirror', glyph: '返', name: '回锋印', tag: '借力反击', text: '闪避触碰的飞弹会返向施法者，造成 24 伤害。', cost: '只有闪避的短暂无敌阶段能够反弹。', color: '#8ec4ee' },
+    { id: 'flame', glyph: '焰', name: '业火莲', tag: '下劈破阵', text: '空中按下＋攻击落地迸出火环，打断附近敌人。', cost: '下劈不能中途转向；落地有短暂恢复。', color: '#f28b65' },
+    { id: 'mercy', glyph: '生', name: '护生灯', tag: '稳健续航', text: '破除阵眼恢复 12 生命；分身结束返还 15 定力。', cost: '需要主动破阵或等待分身结束，不能原地回血。', color: '#a4cf91' }
+  ];
+  K.STAGES = [
+    { name: '雾隐山道', subtitle: '石阶尽处，黑莲初现', sky: '#17192c', mist: '#49616a', accent: '#c4d7b3' },
+    { name: '悬灯古渡', subtitle: '灯火引路，也照见来敌', sky: '#201830', mist: '#6b4c69', accent: '#e5ae74' },
+    { name: '灵山残庭', subtitle: '佛光已黯，棍心未改', sky: '#201b2f', mist: '#655a62', accent: '#ddbf7b' },
+    { name: '黑莲法界', subtitle: '此劫，当由我破', sky: '#191326', mist: '#5c3b65', accent: '#d493c5' }
+  ];
+  K.relic = id => K.RELICS.find(r => r.id === id);
+  K.has = (s, id) => s.relics.includes(id);
+  K.makeRoom = function (seed, stage) {
+    const random = K.rng(K.seedNumber(seed) + stage * 9719);
+    const boss = stage === 3;
+    const room = { width: boss ? 960 : 2140, platforms: [], hazards: [], enemies: [], seals: [], pickups: [], exit: boss ? 900 : 2054, variant: Math.floor(random() * 1000) };
+    const ground = (x, w) => room.platforms.push({ x, y: 440, w, h: 110, solid: true });
+    if (boss) {
+      ground(0, 960);
+      room.platforms.push({ x: 150, y: 335, w: 130, h: 14 }, { x: 680, y: 335, w: 130, h: 14 });
+      room.enemies.push(K.enemy('boss', 730, 368, 0));
+    } else {
+      if(stage===2){ground(0,640);ground(740,660);ground(1500,640);}
+      else {ground(0, 820); ground(920, 600); ground(1610, 530);}
+      const offset = [-16,0,16][Math.floor(random()*3)];
+      room.platforms.push({ x: 280+offset, y: 345, w: 145, h: 16 }, { x: 485+offset, y: 285, w: 125, h: 16 }, { x: 675, y: 355, w: 160, h: 16 }, { x: 1010, y: 335, w: 140, h: 16 }, { x: 1230-offset, y: 270, w: 130, h: 16 }, { x: 1450, y: 345, w: 175, h: 16 }, { x: 1760+offset, y: 340, w: 130, h: 16 });
+      room.hazards.push({ x: 1030 + Math.floor(random() * 70), y: 427, w: 66, h: 13 });
+      room.seals = [{ id: 0, x: 605, y: 392, w: 28, h: 48, hp: 42 }, { id: 1, x: 1675, y: 392, w: 28, h: 48, hp: 42 }];
+      if(stage===1){room.seals[0].x=1058;room.seals[0].y=287;}
+      const types = stage === 0 ? ['blade', 'shield', 'caster', 'blade', 'shield'] : ['shield', 'caster', 'blade', 'caster', 'shield'];
+      const spots = [420, 660, 1130, 1385, 1750];
+      spots.forEach((x, i) => room.enemies.push(K.enemy(types[(i + Math.floor(random() * 2)) % types.length], x + Math.floor(random() * 30), 400, i)));
+      // First encounter is always readable; an upper route offers a heal, not a mandatory key.
+      room.enemies[0] = K.enemy('blade', 422, 400, 0);
+      room.pickups.push({ x: 537, y: 248, w: 16, h: 20, kind: 'heal', used: false }, { x: 1270, y: 234, w: 16, h: 20, kind: 'focus', used: false });
+    }
+    return room;
+  };
+  K.enemy = function (kind, x, y, id) {
+    const boss = kind === 'boss';
+    return { id, kind, x, y: boss ? 368 : kind === 'caster' ? 327 : 400, w: boss ? 48 : 26, h: boss ? 72 : 40, hp: boss ? 270 : kind === 'shield' ? 60 : 38, maxHp: boss ? 270 : kind === 'shield' ? 60 : 38, face: -1, phase: 'idle', timer: .6 + id * .13, stun: 0, flash: 0, attacks: 0, struck: false, origin: x };
+  };
+})(globalThis.Kong ||= {});
+
+</script><script>
+(function (K) {
+  'use strict';
+  K.newRun = function (seed, first) {
+    const s = { version: 1, seed: String(seed || 'BLACK-LOTUS'), stage: 0, mode: 'playing', time: 0, roomTime: 0, relics: first ? [first] : [], room: null, player: null, clone: null, projectiles: [], effects: [], events: [], log: [], reward: [], kills: 0, broken: 0, damageTaken: 0, lastDamage: '', hitstop: 0, shake: 0, checkpoint: 80, combo: 0, comboTime: 0, serial: 0 };
+    K.enterRoom(s, 0, true); return s;
+  };
+  K.enterRoom = function (s, stage, initial) {
+    const old = s.player;
+    s.stage = stage; s.room = K.makeRoom(s.seed, stage); s.roomTime = 0; s.checkpoint = 90;
+    s.player = { x: 90, y: 380, w: 24, h: 44, vx: 0, vy: 0, face: 1, hp: initial ? 100 : Math.min(100, old.hp + 18), focus: initial ? 65 : Math.min(100, old.focus + 20), grounded: false, coyote: 0, buffer: 0, airJumps: 0, invuln: .8, dash: 0, dashCD: 0, attack: 0, attackId: 0, attackTargets: [], comboIndex: 0, slam: false, landing: 0, drop:0 };
+    s.clone = null; s.projectiles = []; s.effects = []; s.hitstop = 0; s.mode = 'playing';
+    K.event(s, 'room', { stage });
+  };
+  K.event = function (s, type, data = {}) { const e = { type, t: +s.time.toFixed(3), ...data }; s.events.push(e); s.log.push(e); if (s.log.length > 220) s.log.shift(); };
+  K.effect = (s, kind, x, y, extra = {}) => s.effects.push({ kind, x, y, life: kind === 'ring' ? .5 : .42, ...extra });
+  K.damage = function (s, n, source, knock = 0) {
+    const p = s.player; if (s.mode !== 'playing' || p.invuln > 0) return false;
+    p.hp = Math.max(0, p.hp - n); p.invuln = 1.0; p.vx = knock * 200; p.vy = -200; p.attack = 0;
+    s.damageTaken += n; s.lastDamage = source; s.shake = .18;
+    K.effect(s, 'hurt', p.x, p.y, { text: '-' + n }); K.event(s, 'hurt', { source, amount: n });
+    if (p.hp <= 0) { s.mode = 'dead'; K.event(s, 'death', { source }); }
+    return true;
+  };
+  K.hitEnemy = function (s, e, amount, origin, pierce = false) {
+    if (e.hp <= 0) return false;
+    if(e.kind==='boss'&&e.phase!=='recover'){K.effect(s,'block',e.x+24,e.y+20);K.event(s,'boss-guard');return false;}
+    const front = (origin - (e.x + e.w / 2)) * e.face > 0;
+    if (e.kind === 'shield' && front && !pierce && e.stun <= 0) { K.effect(s, 'block', e.x, e.y + 12); K.event(s, 'blocked', { target: e.id }); s.player.focus = Math.min(100, s.player.focus + 3); return false; }
+    e.hp = Math.max(0, e.hp - amount); e.flash = .13; e.stun = e.kind === 'boss' ? .04 : .28;
+    if (e.kind !== 'boss') e.x = K.clamp(e.x + Math.sign(e.x - origin) * 12, e.origin - 110, e.origin + 110);
+    K.effect(s, 'hit', e.x + e.w / 2, e.y + 15, { text: String(amount), color: '#f2d28f' });
+    s.hitstop = .035; s.shake = .07; K.event(s, 'hit', { target: e.id, kind: e.kind, amount });
+    if (e.hp === 0) { s.kills++; s.player.focus = Math.min(100, s.player.focus + 10); K.event(s, 'kill', { kind: e.kind });
+      if (e.kind === 'boss') { s.mode = 'won'; K.event(s, 'victory'); }
+    }
+    return true;
+  };
+  K.strike = function (s, box, amount, origin, pierce, targets) {
+    for (const e of s.room.enemies) if (e.hp > 0 && K.overlap(box, e) && !targets.includes('e' + e.id)) {
+      targets.push('e' + e.id); if(K.hitEnemy(s, e, amount, origin, pierce))s.player.focus = Math.min(100, s.player.focus + 12);
+    }
+    for (const seal of s.room.seals) if (seal.hp > 0 && K.overlap(box, seal) && !targets.includes('s' + seal.id)) {
+      targets.push('s' + seal.id); seal.hp = Math.max(0, seal.hp - amount); s.player.focus = Math.min(100, s.player.focus + 9);
+      K.effect(s, 'hit', seal.x + 14, seal.y + 10, { text: String(amount), color: '#e3b3ed' }); K.event(s, 'seal-hit', { id: seal.id });
+      if (seal.hp === 0) { s.broken++; K.effect(s, 'ring', seal.x + 14, seal.y + 20); K.event(s, 'seal', { id: seal.id }); if (K.has(s, 'mercy')) s.player.hp = Math.min(100, s.player.hp + 12); }
+    }
+  };
+  K.attackBox = function (s) {
+    const p = s.player; const range = p.comboIndex === 3 ? (K.has(s, 'staff') ? 112 : 79) : !p.grounded && K.has(s, 'cloud') ? 86 : 65;
+    return { x: p.face > 0 ? p.x + 10 : p.x + 14 - range, y: p.y + 2, w: range, h: 42 };
+  };
+  K.step = function (s, a = {}, dt = K.DT) {
+    s.events = []; if (s.mode !== 'playing') return;
+    if (s.hitstop > 0) { s.hitstop = Math.max(0, s.hitstop - dt); return; }
+    s.time += dt; s.roomTime += dt; s.shake = Math.max(0, s.shake - dt);
+    for (const fx of s.effects) fx.life -= dt; s.effects = s.effects.filter(fx => fx.life > 0);
+    const p = s.player; const oldY = p.y;
+    for (const key of ['invuln', 'dashCD', 'landing', 'buffer', 'coyote','drop']) p[key] = Math.max(0, p[key] - dt);
+    s.comboTime = Math.max(0, s.comboTime - dt); if (s.comboTime === 0) s.combo = 0;
+    if (a.jumpPressed) p.buffer = .12;
+    if (p.grounded) { p.coyote = .10; p.airJumps = 0; const safeGround=s.room.platforms.some(q=>q.solid&&Math.abs(p.y+p.h-q.y)<3&&p.x>q.x+60&&p.x<q.x+q.w-130);if(safeGround&&!s.room.hazards.some(h => Math.abs(h.x - p.x) < 120)) s.checkpoint = p.x; }
+    if(a.down&&a.jumpPressed&&p.grounded&&s.room.platforms.some(q=>!q.solid&&Math.abs(p.y+p.h-q.y)<3&&p.x+p.w>q.x&&p.x<q.x+q.w)){p.drop=.28;p.y+=4;p.vy=90;p.buffer=0;p.coyote=0;p.grounded=false;K.event(s,'drop');}
+    if (a.dashPressed && p.dashCD === 0 && !p.slam) { p.dash = .18; p.dashCD = .85; p.invuln = Math.max(p.invuln, .21); p.attack = 0; p.vy = 0; K.event(s, 'dash'); }
+    if (a.clonePressed && !s.clone) {
+      const cost = K.has(s, 'echo') ? 50 : 40;
+      if (p.focus >= cost) { p.focus -= cost; s.clone = { x: p.x, y: p.y, w: 24, h: 44, face: p.face, life: K.has(s, 'echo') ? 3 : 1.8, timer: .12 }; K.event(s, 'clone', { cost }); }
+      else { K.event(s, 'empty-focus'); K.effect(s, 'notice', p.x, p.y - 14, { text: '定力不足' }); }
+    }
+    const moving = (a.right ? 1 : 0) - (a.left ? 1 : 0);
+    if (moving && !p.dash && !p.slam) p.face = moving;
+    if (a.aimFace && a.attack && p.attack <= 0) p.face = a.aimFace;
+    if (p.buffer > 0 && !p.slam && !p.dash && (p.coyote > 0 || (K.has(s, 'cloud') && p.airJumps < 1))) {
+      const air = p.coyote === 0; p.vy = air ? -490 : -590; if (air) p.airJumps++; p.buffer = 0; p.coyote = 0; p.grounded = false; K.event(s, 'jump', { air }); K.effect(s, 'dust', p.x + 12, p.y + 44);
+    }
+    if (!a.jump && p.vy < -210) p.vy += 1800 * dt;
+    if (a.attack && p.attack <= 0 && p.landing === 0 && p.dash <= 0) {
+      if (a.down && !p.grounded) { p.slam = true; p.vy = 650; p.vx = 0; K.event(s, 'slam'); }
+      else { s.combo = s.combo % 3 + 1; s.comboTime = .8; p.comboIndex = s.combo; p.attack = p.comboIndex === 3 ? (K.has(s, 'staff') ? .48 : .38) : .29; p.attackDuration = p.attack; p.attackTargets = []; p.attackId++; K.event(s, 'swing', { combo: p.comboIndex }); }
+    }
+    if (p.attack > 0) {
+      const elapsed = p.attackDuration - p.attack;
+      if (elapsed >= .055 && elapsed < .18) K.strike(s, K.attackBox(s), p.comboIndex === 3 ? 27 : 14, p.x + 12, p.comboIndex === 3 && K.has(s, 'staff'), p.attackTargets);
+      p.attack = Math.max(0, p.attack - dt);
+    }
+    if (p.dash > 0) { p.dash = Math.max(0, p.dash - dt); p.vx = p.face * 650; p.vy = 0; if (Math.floor(s.time * 45) % 2 === 0) K.effect(s, 'trail', p.x, p.y, { face: p.face }); }
+    else if (!p.slam) { const target = moving * (p.attack > .08 && p.grounded ? 125 : 245); p.vx += (target - p.vx) * Math.min(1, dt * (p.grounded ? 18 : 10)); p.vy = Math.min(p.vy + 1570 * dt, 800); }
+    p.x = K.clamp(p.x + p.vx * dt, 8, s.room.width - p.w - 8); p.y += p.vy * dt; p.grounded = false;
+    for (const platform of s.room.platforms) if ((platform.solid||p.drop===0) && p.vy >= 0 && oldY + p.h <= platform.y + 5 && p.y + p.h >= platform.y && p.x + p.w > platform.x + 2 && p.x < platform.x + platform.w - 2) {
+      p.y = platform.y - p.h; p.vy = 0; p.grounded = true;
+      if (p.slam) { p.slam = false; p.landing = .15; const fire = K.has(s, 'flame'); K.strike(s, { x: p.x - (fire ? 115 : 50), y: p.y - 8, w: fire ? 260 : 124, h: 80 }, fire ? 36 : 22, p.x + 12, true, []); K.effect(s, 'ring', p.x + 12, p.y + p.h, { fire }); K.event(s, 'slam-land', { fire }); }
+    }
+    if (p.y > 590) { p.invuln = 0; K.damage(s, 18, '坠入云渊'); p.x = K.clamp(s.checkpoint - 35, 30, s.room.width - 100); p.y = 396; p.vy = 0; p.vx = 0; p.slam = false; }
+    for (const h of s.room.hazards) if (K.overlap(p, h)) K.damage(s, 14, '黑莲地刺', -p.face);
+    for (const item of s.room.pickups) if (!item.used && K.overlap(p, item)) { item.used = true; if (item.kind === 'heal') p.hp = Math.min(100, p.hp + 22); else p.focus = Math.min(100, p.focus + 30); K.event(s, 'pickup', { kind: item.kind }); K.effect(s, 'notice', p.x, p.y - 5, { text: item.kind === 'heal' ? '生命 +22' : '定力 +30' }); }
+    if (s.clone) {
+      const c = s.clone; c.life -= dt; c.timer -= dt;
+      if (c.timer <= 0) { c.timer = .52; const candidates = s.room.enemies.filter(e => e.hp > 0); const target = candidates.sort((a, b) => Math.abs(a.x - c.x) - Math.abs(b.x - c.x))[0]; c.face = target ? Math.sign(target.x - c.x) || 1 : c.face;
+        if (K.has(s, 'echo')) s.projectiles.push({ x: c.x + 12, y: c.y + 20, vx: c.face * 440, vy: 0, w: 22, h: 14, life: 1.7, friendly: true, damage: 18 });
+        else K.strike(s, { x: c.face > 0 ? c.x : c.x - 65, y: c.y, w: 90, h: 48 }, 12, c.x, false, []);
+        K.effect(s, 'clone-swing', c.x + 12 + c.face * 30, c.y + 18); K.event(s, 'clone-strike');
+      }
+      if (c.life <= 0) { if (K.has(s, 'mercy')) p.focus = Math.min(100, p.focus + 15); s.clone = null; }
+    }
+    for (const e of s.room.enemies) K.stepEnemy(s, e, dt, oldY);
+    for (const b of s.projectiles) {
+      b.life -= dt; b.x += b.vx * dt; b.y += b.vy * dt;
+      if (b.friendly) { for (const e of s.room.enemies) if (e.hp > 0 && K.overlap(b, e) && !(b.hit || []).includes(e.id)) { (b.hit ||= []).push(e.id); K.hitEnemy(s, e, b.damage || 18, b.x - b.vx, true); } }
+      else if (K.overlap(b, p)) {
+        if (p.dash > 0 && K.has(s, 'mirror')) { b.friendly = true; b.vx *= -1.25; b.vy *= -1; b.damage = 24; b.life = 2; K.event(s, 'reflect'); }
+        else if (p.invuln <= 0) { K.damage(s, 12, '莲焰飞弹', Math.sign(b.vx)); b.life = 0; }
+      }
+    }
+    s.projectiles = s.projectiles.filter(b => b.life > 0 && b.x > -100 && b.x < s.room.width + 100);
+    if (a.interactPressed && s.mode === 'playing' && s.stage < 3 && Math.abs(p.x - s.room.exit) < 85) {
+      if (s.room.seals.some(q => q.hp > 0)) K.event(s, 'gate-locked');
+      else { s.mode = 'reward'; const random = K.rng(K.seedNumber(s.seed) + s.stage * 771 + 19); s.reward = K.RELICS.filter(r => !K.has(s, r.id)).map(r => ({ id: r.id, order: random() })).sort((a, b) => a.order - b.order).slice(0, 3).map(r => r.id); K.event(s, 'reward'); }
+    }
+  };
+  K.stepEnemy = function (s, e, dt, oldY) {
+    if (e.hp <= 0 || s.mode !== 'playing') return;
+    const p = s.player; e.flash = Math.max(0, e.flash - dt); e.stun = Math.max(0, e.stun - dt); if (e.stun > 0) return;
+    const target = s.clone && Math.abs(s.clone.x - e.x) < 380 ? s.clone : p;
+    const dx = target.x - e.x; const near = Math.abs(dx);
+    e.timer -= dt;
+    if (e.kind === 'boss') {
+      if (e.phase === 'idle' && e.timer <= 0) { e.attacks++; e.phase = e.attacks % 2 ? 'sweep-windup' : 'orb-windup'; e.timer = e.hp < 135 ? .65 : .9; e.face = Math.sign(p.x - e.x) || -1; K.event(s, 'boss-warning', { attack: e.phase }); }
+      else if (e.phase.endsWith('windup') && e.timer <= 0) {
+        if (e.phase === 'sweep-windup') { e.phase = 'sweep'; e.timer = .34; e.struck = false; }
+        else { for (let i = 0; i < (e.hp < 135 ? 5 : 3); i++) { const n = e.hp < 135 ? 5 : 3; const vy = (i - (n - 1) / 2) * 72; s.projectiles.push({ x: e.x + 12, y: e.y + 22, vx: e.face * 240, vy, w: 15, h: 15, life: 4, friendly: false }); } e.phase = 'recover'; e.timer = 1.3; }
+      } else if (e.phase === 'sweep') {
+        const hit = { x: e.face > 0 ? e.x + 12 : e.x - 200, y: 410, w: 240, h: 30 };
+        if (K.overlap(p, hit)) K.damage(s, 18, '无天·黑莲横扫', e.face);
+        if (e.timer <= 0) { e.phase = 'recover'; e.timer = 1.2; }
+      } else if (e.phase === 'recover' && e.timer <= 0) { e.x=e.x>500?420:730;K.effect(s,'ring',e.x+24,430);e.phase = 'idle'; e.timer = .65;K.event(s,'boss-shift',{x:e.x}); }
+    } else if (e.kind === 'caster') {
+      if (e.phase === 'idle' && near < 600 && e.timer <= 0) { e.phase = 'windup'; e.timer = .75; e.face = Math.sign(dx) || 1; K.event(s, 'warning', { kind: e.kind, id: e.id }); }
+      else if (e.phase === 'windup' && e.timer <= 0) {
+        const tx = target.x + 12 - e.x, ty = target.y + 18 - (e.y + 16), len = Math.hypot(tx, ty) || 1;
+        s.projectiles.push({ x: e.x, y: e.y + 16, vx: tx / len * 220, vy: ty / len * 220, w: 12, h: 12, life: 3, friendly: false }); e.phase = 'idle'; e.timer = 1.8;
+      }
+    } else {
+      if (e.phase === 'idle') {
+        // Shields turn only at the start of an attack: jumping behind has a real window.
+        if (near < 72 && Math.abs(target.y - e.y) < 65 && e.timer <= 0) { e.face = Math.sign(dx) || e.face; e.phase = 'windup'; e.timer = e.kind === 'shield' ? .65 : .48; K.event(s, 'warning', { kind: e.kind, id: e.id }); }
+        else if (near > 50 && near < 330) { if (e.kind !== 'shield' || e.timer <= 0) { e.face = Math.sign(dx); if (e.kind === 'shield') e.timer = .6; } e.x = K.clamp(e.x + e.face * (e.kind === 'shield' ? 28 : 53) * dt, e.origin - 100, e.origin + 100); }
+      } else if (e.phase === 'windup' && e.timer <= 0) { e.phase = 'attack'; e.timer = .17; }
+      else if (e.phase === 'attack') {
+        const box = { x: e.face > 0 ? e.x : e.x - 40, y: e.y + 5, w: 66, h: 35 };
+        if (K.overlap(box, p)) K.damage(s, e.kind === 'shield' ? 16 : 12, e.kind === 'shield' ? '重盾兵·盾撞' : '执刃魔兵·斩击', e.face);
+        if (e.timer <= 0) { e.phase = 'recover'; e.timer = .9; }
+      } else if (e.phase === 'recover' && e.timer <= 0) { e.phase = 'idle'; e.timer = .2; }
+    }
+    // Stomps use the actual previous bottom edge, not a vague overlap.
+    if (p.vy > 70 && oldY + p.h <= e.y + 12 && K.overlap(p, e)) { K.hitEnemy(s, e, p.slam ? 30 : 19, p.x, true); p.vy = -380; p.y = e.y - p.h; p.airJumps = 0; p.slam = false; K.event(s, 'stomp', { kind: e.kind }); }
+    else if (e.kind !== 'caster' && K.overlap(p, e)) K.damage(s, e.kind === 'boss' ? 15 : 9, e.kind === 'boss' ? '无天·近身黑莲' : '撞上魔兵', -p.face);
+  };
+  K.choose = function (s, id) { if (s.mode !== 'reward' || !s.reward.includes(id)) return false; s.relics.push(id); K.event(s, 'relic', { id }); K.enterRoom(s, s.stage + 1, false); return true; };
+})(globalThis.Kong ||= {});
+
+</script><script>
+(function (K) {
+  'use strict';
+  const KEY = 'kong.black-lotus.v1';
+  K.validSave = function (data) {
+    if (!data || data.schema !== 1 || data.game !== 'black-lotus' || !data.state) throw new Error('这不是本版本的劫后行存档。');
+    const s = data.state;
+    const finite = (v, min, max) => typeof v === 'number' && Number.isFinite(v) && v >= min && v <= max;
+    if (s.version !== 1 || typeof s.seed !== 'string' || s.seed.length > 64 || !Number.isInteger(s.stage) || s.stage < 0 || s.stage > 3 || !['playing','paused','reward','dead','won'].includes(s.mode)) throw new Error('存档版本或流程状态无效。');
+    if (!s.player || !finite(s.player.hp,0,100) || !finite(s.player.focus,0,100) || !finite(s.player.x,-100,2300) || !finite(s.player.y,-1000,1000) || !finite(s.player.vx,-2000,2000) || !finite(s.player.vy,-2000,2000) || !finite(s.time,0,1e8)) throw new Error('存档角色数据损坏。');
+    const p=s.player;
+    for(const key of ['coyote','buffer','invuln','dash','dashCD','attack','landing'])if(!finite(p[key],0,5))throw new Error('存档动作计时损坏。');
+    if(p.drop===undefined)p.drop=0;if(!finite(p.drop,0,1))throw new Error('存档下穿状态损坏。');
+    if(![-1,1].includes(p.face)||typeof p.grounded!=='boolean'||typeof p.slam!=='boolean'||!Number.isInteger(p.airJumps)||p.airJumps<0||p.airJumps>1||!Number.isInteger(p.comboIndex)||p.comboIndex<0||p.comboIndex>3||!finite(p.attackId,0,1e8)||!Array.isArray(p.attackTargets)||p.attackTargets.length>20||(p.attack>0&&!finite(p.attackDuration,.1,1)))throw new Error('存档动作状态损坏。');
+    for(const key of ['roomTime','kills','broken','damageTaken','hitstop','shake','checkpoint','combo','comboTime','serial'])if(!finite(s[key],0,1e8))throw new Error('存档流程计数损坏。');
+    if(typeof s.lastDamage!=='string'||s.lastDamage.length>100||!Number.isInteger(s.combo)||s.combo>3)throw new Error('存档流程数据损坏。');
+    if (!Array.isArray(s.relics) || s.relics.length > 6 || new Set(s.relics).size !== s.relics.length || s.relics.some(id => !K.relic(id))) throw new Error('存档舍利数据损坏。');
+    const canonical = K.makeRoom(s.seed, s.stage);
+    if (!s.room || !Array.isArray(s.room.enemies) || s.room.enemies.length !== canonical.enemies.length || !Array.isArray(s.room.seals) || s.room.seals.length !== canonical.seals.length || !Array.isArray(s.room.pickups) || s.room.pickups.length !== canonical.pickups.length) throw new Error('存档地图数据损坏。');
+    for (let i=0;i<canonical.enemies.length;i++) { const e=s.room.enemies[i], c=canonical.enemies[i]; if (!e || e.id!==c.id || e.kind!==c.kind || !finite(e.hp,0,c.maxHp) || !finite(e.x,0,canonical.width) || !finite(e.y,-200,540) || !finite(e.timer,-10,10) || !finite(e.stun,0,2) || !finite(e.flash,0,2) || !finite(e.attacks,0,1e8) || ![-1,1].includes(e.face) || !['idle','windup','attack','recover','sweep-windup','orb-windup','sweep'].includes(e.phase)) throw new Error('存档敌人数据损坏。'); }
+    for (let i=0;i<canonical.seals.length;i++) if (!finite(s.room.seals[i].hp,0,42)) throw new Error('存档阵眼数据损坏。');
+    if (!Array.isArray(s.projectiles) || s.projectiles.length > 100 || s.projectiles.some(b=>!finite(b.x,-200,2500)||!finite(b.y,-2000,2000)||!finite(b.vx,-2000,2000)||!finite(b.vy,-2000,2000)||!finite(b.life,0,10)||!finite(b.w,1,100)||!finite(b.h,1,100)||typeof b.friendly!=='boolean'||(b.damage!==undefined&&!finite(b.damage,1,100))||(b.hit!==undefined&&(!Array.isArray(b.hit)||b.hit.length>100||b.hit.some(id=>!Number.isInteger(id)))))) throw new Error('存档弹道数据损坏。');
+    if(s.clone&&(!finite(s.clone.x,0,2300)||!finite(s.clone.y,-1000,1000)||!finite(s.clone.life,0,4)||!finite(s.clone.timer,-1,1)||![-1,1].includes(s.clone.face)))throw new Error('存档分身数据损坏。');
+    if (!Array.isArray(s.reward) || s.reward.length > 3 || s.reward.some(id => !K.relic(id) || s.relics.includes(id)) || (s.mode==='reward' && s.reward.length===0)) throw new Error('存档奖励数据损坏。');
+    // Restore static geometry from content. Imported files cannot inject collision or dimensions.
+    canonical.enemies = s.room.enemies.map((e,i)=>({...canonical.enemies[i], ...e, w:canonical.enemies[i].w, h:canonical.enemies[i].h, maxHp:canonical.enemies[i].maxHp, origin:canonical.enemies[i].origin}));
+    canonical.seals.forEach((q,i)=>q.hp=s.room.seals[i].hp); canonical.pickups.forEach((q,i)=>q.used=!!s.room.pickups[i].used);
+    const restored = K.newRun(s.seed, null);
+    Object.assign(restored,s,{room:canonical,player:{...s.player,w:24,h:44},effects:[],events:[],log:[],clone:s.clone?{x:s.clone.x,y:s.clone.y,w:24,h:44,life:s.clone.life,timer:s.clone.timer,face:s.clone.face}:null});
+    if (restored.mode === 'playing') restored.mode='paused';
+    return { state:restored, meta:K.cleanMeta(data.meta) };
+  };
+  K.cleanMeta = m => {const n=v=>Number.isFinite(Number(v))?Math.max(0,Math.min(1e8,Math.floor(Number(v)))):0;return {runs:n(m?.runs),wins:n(m?.wins),best:Math.min(4,n(m?.best))};};
+  K.pack = (state, meta) => JSON.stringify({game:'black-lotus',schema:1,build:K.VERSION,state,meta:K.cleanMeta(meta)});
+  K.Storage = class {
+    constructor() { this.available=true; this.error=''; this.cached=null; }
+    read() { try { const raw=localStorage.getItem(KEY); if (!raw) return null; const data=JSON.parse(raw); this.cached=data; return K.validSave(data); } catch(e) { this.error=e.message; return null; } }
+    write(state,meta) { const raw=K.pack(state,meta); this.cached=JSON.parse(raw); try {localStorage.setItem(KEY,raw);this.available=true;return true;} catch {this.available=false;this.error='自动存储不可用，请导出存档。';return false;} }
+    export(state,meta) { const blob=new Blob([K.pack(state,meta)],{type:'application/json'}); const url=URL.createObjectURL(blob); const a=document.createElement('a');a.href=url;a.download='劫后行-'+state.seed+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000); }
+    import(raw) { if(raw.length>1000000)throw new Error('存档文件过大。');return K.validSave(JSON.parse(raw)); }
+  };
+})(globalThis.Kong ||= {});
+
+</script><script>
+(function (K) {
+  'use strict';
+  const C = { ink:'#171426', gold:'#e7ba70', light:'#fae8b8', red:'#cd5651', hair:'#d39b58', blue:'#3c536d', dark:'#25243c', jade:'#80cfc5' };
+  function poly(c, pts, color) { c.fillStyle=color;c.beginPath();pts.forEach((p,i)=>i?c.lineTo(...p):c.moveTo(...p));c.closePath();c.fill(); }
+  function pixel(c,x,y,w,h,col) { c.fillStyle=col;c.fillRect(Math.round(x),Math.round(y),w,h); }
+  function sprite(kind,frame=0) {
+    const out=document.createElement('canvas');out.width=64;out.height=80;const c=out.getContext('2d');c.scale(2,2);
+    const r=(x,y,w,h,col)=>pixel(c,x,y,w,h,col); const walk=Math.sin(frame*Math.PI/2)*2;
+    if(kind==='monkey') {
+      // Tail, scarf, armour, face, crown: 2px hand-authored pixel clusters.
+      r(3,25,8,2,C.hair);r(2,21,2,5,C.hair);r(3,20,4,2,C.hair);
+      r(10,24,6,7,C.dark);r(17,24,6,7,C.dark);r(10-walk,30,5,5,C.blue);r(18+walk,30,4,5,C.blue);
+      r(8-walk,34,8,3,'#9e6b45');r(18+walk,34,7,3,'#9e6b45');r(8-walk,36,8,2,C.gold);r(18+walk,36,7,2,C.gold);
+      r(9,17,15,11,C.blue);r(10,18,4,9,'#66839a');r(20,18,4,9,'#202b46');r(9,25,15,3,C.gold);r(10,27,14,3,'#a94643');r(13,28,4,5,C.red);
+      r(6,18,6,8,C.gold);r(7,19,3,6,C.light);r(22,19,5,7,C.hair);r(24,23,5,4,'#eed19d');
+      r(11,5,12,13,'#754736');r(9,9,4,6,C.hair);r(12,6,11,10,C.hair);r(15,8,10,8,'#e5b77a');r(12,7,4,4,'#754736');
+      r(19,10,5,2,'#342d35');r(20,10,3,1,C.light);r(23,12,3,3,'#e5b77a');r(19,15,5,1,'#754736');
+      r(11,5,13,3,C.gold);r(12,4,4,2,C.light);r(18,4,5,2,C.light);r(13,1,2,4,C.red);r(19,0,2,5,C.red);
+      r(9,16,15,3,C.red);r(4,17,8,3,C.red);r(1,19,6,3,'#9c4248');r(0,21,3,2,C.red);
+      r(27,8,2,29,'#7b4e37');r(27,6,2,6,C.gold);r(27,32,2,7,C.gold);r(27,7,1,4,C.light);r(27,33,1,5,C.light);
+    } else if(kind==='boss') {
+      r(6,19,20,17,'#261d37');poly(c,[[6,20],[3,38],[28,38],[25,20]],'#332340');
+      r(10,19,13,14,'#49334e');r(12,22,2,14,'#936987');r(19,22,2,14,'#936987');r(9,34,15,3,'#1a172b');
+      r(10,3,13,19,'#181728');r(12,7,9,10,'#b6b1ad');r(11,4,11,5,'#252032');r(12,5,2,9,'#252032');r(20,5,2,12,'#252032');r(15,12,2,1,'#aa568e');r(19,12,2,1,'#aa568e');r(16,16,5,1,'#716270');
+      r(4,21,6,9,'#4e3853');r(24,21,5,9,'#4e3853');r(3,29,6,3,'#ada59c');r(25,29,5,3,'#ada59c');
+    } else if(kind==='caster') {
+      poly(c,[[15,4],[23,17],[24,28],[15,34],[7,28],[8,17]],'#344d50');r(11,13,10,12,'#547b71');r(13,15,6,9,'#84c9a2');r(15,17,3,5,'#d8e7af');r(9,10,14,3,'#b49460');r(9,25,14,3,'#b49460');r(14,5,4,6,'#9c7761');r(15,0,2,6,'#4c6974');
+      r(6,30,3,7,'#4c6974');r(22,29,3,7,'#4c6974');r(13,31,3,7,'#42626a');
+    } else {
+      r(10,27,5,9,'#2e2c45');r(19,27,5,9,'#2e2c45');r(8-walk,35,8,3,'#7b657d');r(19+walk,35,7,3,'#7b657d');
+      r(9,15,16,15,'#59455f');r(11,17,12,9,'#79627f');r(12,20,10,2,'#ad87a6');r(16,17,3,12,'#3d344e');r(8,27,18,3,'#998568');
+      r(10,6,14,10,'#373147');r(9,4,16,5,'#6a586c');r(10,3,3,5,'#8d7591');r(21,2,3,6,'#8d7591');r(12,10,10,5,'#222638');r(14,11,3,2,'#e9a3ba');r(20,11,2,2,'#e9a3ba');
+      r(6,16,5,11,'#756079');r(24,16,5,11,'#756079');
+      if(kind==='shield') { r(20,14,11,21,'#b59b75');r(22,15,8,18,'#4b4059');r(24,17,4,14,'#89717e');r(26,19,2,10,'#ceaf7c');r(23,22,7,3,'#c4a882'); }
+      else {r(28,10,2,23,'#bfb1a3');r(27,28,4,2,C.gold);r(28,30,2,7,'#665168');}
+    }
+    return out;
+  }
+  K.Renderer=class {
+    constructor(canvas){this.canvas=canvas;this.c=canvas.getContext('2d',{alpha:false});this.c.imageSmoothingEnabled=false;this.camera=0;this.sprites={};this.backgrounds={};this.clock=0;for(const k of ['monkey','blade','shield','caster','boss'])for(let f=0;f<4;f++)this.sprites[k+f]=sprite(k,f);}
+    background(stage){
+      if(this.backgrounds[stage])return this.backgrounds[stage];
+      const out=document.createElement('canvas');out.width=960;out.height=540;const c=out.getContext('2d');const theme=K.STAGES[stage];
+      for(let i=0;i<18;i++)pixel(c,0,i*30,960,30, i<6?theme.sky:i<11?'#29243a':i<15?'#393147':'#4a3f50');
+      const random=K.rng(279+stage*29);
+      for(let i=0;i<95;i++){const x=Math.floor(random()*960),y=Math.floor(random()*280);pixel(c,x,y,i%7===0?2:1,i%7===0?2:1,i%4===0?'#b3a58f':'#655e78');}
+      // Stepped moon, deliberately crisp instead of blurred gradients.
+      for(let y=-62;y<=62;y+=3){const w=Math.floor(Math.sqrt(62*62-y*y)/3)*3;pixel(c,728-w,133+y,w*2,3,stage===3?'#b07e9c':'#b0a59c');}
+      for(let i=0;i<12;i++){pixel(c,686+(i*31)%88,90+i*7,15+i%3*8,3,'#989097');}
+      poly(c,[[0,325],[0,262],[58,230],[94,255],[163,170],[213,216],[269,192],[343,270],[401,237],[456,273],[537,183],[600,260],[648,215],[732,281],[810,196],[892,247],[960,216],[960,400]],'#302c43');
+      poly(c,[[0,380],[0,298],[49,281],[91,316],[162,274],[230,317],[291,253],[342,289],[404,259],[484,336],[550,268],[609,324],[672,284],[751,316],[830,269],[899,310],[960,285],[960,460]],'#3c3c50');
+      // Ancient pagoda; ornament is kept low contrast behind the playfield.
+      this.pagoda(c,747,301,1.3,'#27283c');this.pagoda(c,100,355,.8,'#303448');
+      for(let i=0;i<7;i++){const y=280+i*24;pixel(c,(i*173)%700-100,y,180+i*30,5,'#605165');pixel(c,(i*131+280)%850,y+8,130,2,'#514759');}
+      poly(c,[[0,430],[0,370],[80,355],[120,389],[180,376],[240,412],[350,375],[420,413],[540,389],[620,421],[680,377],[770,407],[850,383],[960,398],[960,540]],'#303b47');
+      this.backgrounds[stage]=out;return out;
+    }
+    pagoda(c,x,y,scale,col){c.save();c.translate(x,y);c.scale(scale,scale);for(let i=0;i<4;i++){const w=56-i*8,yy=-i*33;pixel(c,-w/2,yy-22,w,25,col);poly(c,[[-w/2-15,yy-17],[-w/2-4,yy-21],[-w/2+7,yy-30],[0,yy-34],[w/2-7,yy-30],[w/2+4,yy-21],[w/2+15,yy-17],[0,yy-19]],col);pixel(c,-4,yy-17,8,13,'#58515b');}pixel(c,-2,-154,4,26,col);c.restore();}
+    person(kind,x,y,face=1,frame=0,alpha=1,flash=false,scale=1){const c=this.c;c.save();c.globalAlpha=alpha;c.translate(Math.round(x+12),Math.round(y+44));c.scale(face*scale,scale);c.drawImage(this.sprites[kind+frame],-32,-74,64,80);if(flash){c.globalCompositeOperation='source-atop';c.globalAlpha=.24;c.fillStyle='#ffe2b2';c.fillRect(-28,-70,56,70);}c.restore();}
+    platform(p){const c=this.c;pixel(c,p.x,p.y,p.w,p.h,'#252b39');pixel(c,p.x,p.y,p.w,3,'#a49a84');pixel(c,p.x,p.y+3,p.w,5,'#63645f');pixel(c,p.x,p.y+8,p.w,4,'#424953');const random=K.rng(p.x+17);for(let x=p.x;x<p.x+p.w;x+=32){pixel(c,x+2,p.y+14,28,2,'#4c535b');pixel(c,x+Math.floor(random()*20),p.y+4,9,3,'#75927e');if(p.solid){pixel(c,x+15,p.y+18,2,22,'#343b47');pixel(c,x,p.y+41,32,2,'#404753');pixel(c,x+Math.floor(random()*20),p.y+65,12,2,'#343e49');}else{const h=5+Math.floor(random()*14);pixel(c,x+5,p.y+p.h,3,h,'#536e62');pixel(c,x+8,p.y+p.h,2,h*.6,'#3c5650');}}
+      if(p.solid){for(let x=p.x+13;x<p.x+p.w;x+=57){pixel(c,x,p.y-6,2,7,'#889382');pixel(c,x+3,p.y-4,2,5,'#5c7b69');pixel(c,x-3,p.y-3,2,4,'#5c7b69');}}
+    }
+    draw(s,ui,dt=.016){this.clock+=dt;const c=this.c;const stage=s?.stage||0;c.setTransform(1,0,0,1,0,0);c.imageSmoothingEnabled=false;c.drawImage(this.background(stage),0,0);
+      const t=this.clock;
+      // Near clouds move independently of the camera.
+      for(let i=0;i<5;i++){const x=((i*267-t*7)%1200+1200)%1200-160;pixel(c,x,320+i*23,150,3,'#625b69');pixel(c,x+38,316+i*23,84,4,'#625b69');}
+      if(!s||ui==='menu'){this.titleScene(t);return;}
+      const target=K.clamp(s.player.x-300,0,s.room.width-960);this.camera+= (target-this.camera)*(1-Math.exp(-dt*10));if(Math.abs(this.camera-target)<.5)this.camera=target;
+      let shake=ui==='playing'&&s.shake>0&&this.shake!==false?Math.sin(t*140)*s.shake*13:0;
+      c.save();c.translate(-Math.round(this.camera)+Math.round(shake),0);
+      // Ruined foreground pillars and suspended lamps anchor the scene.
+      for(let x=220;x<s.room.width;x+=450){pixel(c,x,177,3,112,'#3a3445');pixel(c,x-8,286,20,3,'#a28a67');pixel(c,x-6,289,16,21,'#aa6962');pixel(c,x-4,292,12,15,'#dea273');pixel(c,x,310,2,12,'#b08061');pixel(c,x-21,176,46,4,'#58505b');}
+      if(stage===3)this.lotus(748,384,110,'#382039',true);
+      for(const p of s.room.platforms)this.platform(p);
+      for(const h of s.room.hazards){for(let x=h.x;x<h.x+h.w;x+=11)poly(c,[[x,h.y+h.h],[x+5,h.y-4],[x+11,h.y+h.h]],'#b5769e');pixel(c,h.x,h.y+h.h-3,h.w,3,'#573c59');}
+      for(const q of s.room.seals){if(q.hp>0){pixel(c,q.x-5,q.y+38,38,10,'#6c6075');pixel(c,q.x+6,q.y+4,16,34,'#393343');pixel(c,q.x+9,q.y+8,10,25,'#c984c2');this.lotus(q.x+14,q.y+7,15,'#bf80b5',false);for(let i=0;i<3;i++)pixel(c,q.x+9+i*5,q.y-13,3,3,q.hp>i*14?'#d8a4cc':'#463c52');}else{pixel(c,q.x-6,q.y+40,39,8,'#5a5e62');pixel(c,q.x+6,q.y+31,14,8,'#807e78');}}
+      for(const item of s.room.pickups)if(!item.used){const y=item.y+Math.round(Math.sin(t*3+item.x)*3);this.lotus(item.x+8,y+8,10,item.kind==='heal'?'#c4dba3':'#91d2d4',false);pixel(c,item.x+5,y+20,7,2,'#57636b');}
+      if(stage<3){const open=s.room.seals.every(q=>q.hp===0);pixel(c,s.room.exit-20,333,52,108,'#3e3544');pixel(c,s.room.exit-12,338,36,102,open?'#586e65':'#302936');pixel(c,s.room.exit-25,330,62,6,'#aa9679');pixel(c,s.room.exit-30,326,72,4,'#625864');for(let i=0;i<4;i++)pixel(c,s.room.exit-8+i*9,342,2,93,open?'#a8caa0':'#5f4567');if(open){for(let i=0;i<7;i++)pixel(c,s.room.exit+Math.sin(t+i)*14,365+(i*11+t*20)%65,2,4,'#d6dba6');}}
+      for(const e of s.room.enemies)if(e.hp>0){pixel(c,e.x-2,e.y+e.h-1,e.w+4,4,'#19212d');if(e.kind==='boss'){const col=e.phase==='recover'?'#d4b985':'#805575';for(let i=0;i<10;i++){const ang=i*Math.PI/5+t*.5;pixel(c,e.x+24+Math.cos(ang)*39,e.y+30+Math.sin(ang)*48,4,4,col);}}const f=e.phase==='attack'?2:Math.floor(t*3)%4;const yy=e.kind==='caster'?Math.sin(t*2+e.id)*5:0;this.person(e.kind,e.x,e.y+yy,e.face,f,1,e.flash>0,e.kind==='boss'?1.12:1);
+        if(e.kind!=='boss'&&e.hp<e.maxHp){pixel(c,e.x-5,e.y-21,36,3,'#302634');pixel(c,e.x-5,e.y-21,Math.ceil(36*e.hp/e.maxHp),3,'#bd8494');}
+        if(e.phase.includes('windup')){pixel(c,e.x+9,e.y-34,5,12,'#f4c589');pixel(c,e.x+9,e.y-19,5,4,'#f4c589');if(e.kind==='boss'&&e.phase==='sweep-windup')pixel(c,e.face>0?e.x:e.x-200,435,240,3,'#bd6c9d');}
+        if(e.phase==='attack'){const xx=e.face>0?e.x+25:e.x-39;poly(c,[[xx,e.y+4],[xx+40,e.y+14],[xx+30,e.y+31],[xx+7,e.y+27]],'#d698a2');}
+        if(e.phase==='sweep')poly(c,[[e.x+20,406],[e.x+e.face*220,418],[e.x+e.face*230,440],[e.x+15,438]],'#b560a4');
+      }
+      const p=s.player;pixel(c,p.x-5,439,34,4,'#1d2532');
+      for(const fx of s.effects)if(fx.kind==='trail')this.person('monkey',fx.x,fx.y,fx.face,0,fx.life*.55,false);
+      if(s.clone){c.save();c.globalAlpha=.4;pixel(c,s.clone.x-15,s.clone.y+45,60,3,'#79d9d2');c.restore();this.person('monkey',s.clone.x,s.clone.y,s.clone.face,Math.floor(t*8)%4,.52);}
+      this.person('monkey',p.x,p.y,p.face,p.grounded?Math.abs(p.vx)>30?Math.floor(t*13)%4:0:2,p.invuln>0&&Math.floor(t*15)%2?.45:1,false);
+      if(p.attack>0){const elapsed=p.attackDuration-p.attack;if(elapsed<.20){const b=K.attackBox(s);const alpha=elapsed>.055?.95:.4;c.save();c.globalAlpha=alpha;const xx=p.face>0?p.x+12:p.x+12-b.w;poly(c,[[xx,p.y+9],[xx+b.w,p.y+5],[xx+b.w+5,p.y+21],[xx+b.w,p.y+35],[xx,p.y+32],[xx+Math.min(14,b.w),p.y+23]],p.comboIndex===3?'#f3d496':'#e7ba70');pixel(c,xx,p.y+18,b.w,3,'#fff0c6');c.restore();}}
+      if(p.slam){pixel(c,p.x+5,p.y+25,14,35,'#d9a66b');pixel(c,p.x+10,p.y+25,4,38,'#fff0b6');}
+      for(const b of s.projectiles){const col=b.friendly?'#95e0d3':'#da8ebc';pixel(c,b.x-3,b.y+3,b.w+6,b.h-6,col);pixel(c,b.x,b.y,b.w,b.h,col);pixel(c,b.x+3,b.y+3,b.w-6,b.h-6,b.friendly?'#e5f8cb':'#f5cae1');pixel(c,b.x-Math.sign(b.vx)*10,b.y+4,8,4,b.friendly?'#3d807e':'#75456e');}
+      for(const fx of s.effects)this.fx(fx,t);
+      c.restore();
+      // A sparse foreground particle layer, never the same colour as warnings.
+      for(let i=0;i<14;i++){const x=(i*79+t*(i%2?11:-6)+960)%960,y=180+(i*43+t*8)%350;pixel(c,x,y,2,2,'#a99d80');}
+      pixel(c,0,0,960,2,'#887661');pixel(c,0,538,960,2,'#534a50');
+    }
+    lotus(x,y,r,color,large){const c=this.c;for(let i=0;i<7;i++){const ang=-Math.PI+i*Math.PI/6,px=x+Math.cos(ang)*r*.65,py=y+Math.sin(ang)*r*.55;poly(c,[[x,y],[px-r*.22,py],[px,py-r*.30],[px+r*.22,py]],color);}pixel(c,x-r*.65,y,r*1.3,large?6:3,color);}
+    titleScene(t){const c=this.c;for(let i=0;i<6;i++){const x=625+i*35;pixel(c,x,420-i*7,42,130,'#303945');pixel(c,x,420-i*7,42,4,'#8e8c7b');}this.lotus(752,259,105,'#403147',true);this.person('monkey',728,316,1,0,1,false,2.0);for(let i=0;i<18;i++){const x=650+(i*43)%280+Math.sin(t*.7+i)*7,y=190+(i*59+t*10)%250;pixel(c,x,y,2,3,'#b9a582');}pixel(c,0,500,960,40,'#1c2634');for(let x=0;x<960;x+=32){pixel(c,x,501,31,3,'#4c555b');pixel(c,x+14,510,2,24,'#293641');}}
+    fx(fx,t){const c=this.c;const a=K.clamp(fx.life/.3,0,1);c.save();c.globalAlpha=a;const col=fx.color||'#efd3a0';if(['hit','hurt','block','dust'].includes(fx.kind)){for(let i=0;i<7;i++){const ang=i*2.4,dist=(.45-fx.life)*80;pixel(c,fx.x+Math.cos(ang)*dist,fx.y+Math.sin(ang)*dist,fx.kind==='dust'?4:3,3,fx.kind==='hurt'?'#e7817d':col);}}
+      if(fx.kind==='ring'){const r=(.5-fx.life)*230;for(let i=0;i<20;i++){const ang=i*Math.PI/10;pixel(c,fx.x+Math.cos(ang)*r,fx.y+Math.sin(ang)*r*.25,6,3,fx.fire?'#ed9968':'#c7c4a8');}}
+      if(fx.kind==='clone-swing'){pixel(c,fx.x-20,fx.y,50,3,'#9fe3d8');}c.restore();}
+  };
+})(globalThis.Kong ||= {});
+
+</script><script>
+(function(K){
+  'use strict';
+  K.Input=class{
+    constructor(canvas,onControl,onInput){this.keys=new Set();this.pressed=new Set();this.mouse=false;this.aimFace=0;this.active=false;this.onControl=onControl;
+      window.addEventListener('keydown',e=>{if(['INPUT','TEXTAREA','SELECT'].includes(e.target.tagName))return;if(e.code==='Escape'){e.preventDefault();if(!e.repeat)onControl('pause');return;}if(!this.active)return;if(['Space','ArrowUp','ArrowDown','ArrowLeft','ArrowRight','KeyW','KeyA','KeyS','KeyD','KeyJ','KeyK','KeyL','KeyE','ShiftLeft','ShiftRight'].includes(e.code)){e.preventDefault();if(!this.keys.has(e.code)){this.pressed.add(e.code);onInput(e.timeStamp,e.code);}this.keys.add(e.code);}});
+      window.addEventListener('keyup',e=>this.keys.delete(e.code));
+      canvas.addEventListener('pointerdown',e=>{if(!this.active)return;e.preventDefault();canvas.focus({preventScroll:true});this.aimFace=K.pointerFace?K.pointerFace(e.clientX):0;if(e.button===0){this.mouse=true;this.pressed.add('MouseLeft');onInput(e.timeStamp,'MouseLeft');}if(e.button===2){this.pressed.add('KeyL');onInput(e.timeStamp,'MouseRight');}});
+      window.addEventListener('pointerup',()=>this.mouse=false);canvas.addEventListener('contextmenu',e=>e.preventDefault());
+      window.addEventListener('blur',()=>{this.clear();onControl('blur');});document.addEventListener('visibilitychange',()=>{if(document.hidden){this.clear();onControl('blur');}});
+    }
+    clear(){this.keys.clear();this.pressed.clear();this.mouse=false;this.aimFace=0;}
+    setActive(v){if(v!==this.active)this.clear();this.active=v;}
+    read(){const k=(...ks)=>ks.some(q=>this.keys.has(q)),p=(...ks)=>ks.some(q=>this.pressed.has(q));const a={left:k('KeyA','ArrowLeft'),right:k('KeyD','ArrowRight'),down:k('KeyS','ArrowDown'),jump:k('Space','KeyW','ArrowUp'),jumpPressed:p('Space','KeyW','ArrowUp'),attack:k('KeyJ')||p('KeyJ','MouseLeft')||this.mouse,dashPressed:p('KeyK','ShiftLeft','ShiftRight'),clonePressed:p('KeyL'),interactPressed:p('KeyE'),aimFace:this.mouse||p('MouseLeft')?this.aimFace:0};this.pressed.clear();return a;}
+  };
+})(globalThis.Kong ||= {});
+
+</script><script>
+(function(K){
+  'use strict';
+  K.Audio=class{
+    constructor(){this.ctx=null;this.volume=.25;this.next=0;this.note=0;this.enabled=true;}
+    unlock(){try{if(!this.ctx){this.ctx=new(window.AudioContext||window.webkitAudioContext)();this.bus=this.ctx.createGain();this.bus.gain.value=this.volume*.3;this.bus.connect(this.ctx.destination);}if(this.ctx.state==='suspended')this.ctx.resume();}catch{this.enabled=false;}}
+    tone(freq,len=.12,type='triangle',gain=.2,delay=0){if(!this.ctx||!this.enabled)return;const t=this.ctx.currentTime+delay;const osc=this.ctx.createOscillator(),g=this.ctx.createGain();osc.type=type;osc.frequency.setValueAtTime(freq,t);g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(gain,t+.006);g.gain.exponentialRampToValueAtTime(.001,t+len);osc.connect(g);g.connect(this.bus);osc.start(t);osc.stop(t+len+.02);}
+    event(e){if(e.type==='swing')this.tone(180+e.combo*70,.07,'triangle',.23);if(e.type==='hit'){this.tone(115,.09,'square',.15);this.tone(470,.045,'triangle',.1);}if(e.type==='hurt')this.tone(72,.2,'sawtooth',.12);if(e.type==='jump')this.tone(e.air?590:390,.1,'sine',.17);if(e.type==='dash')this.tone(820,.06,'triangle',.1);if(e.type==='clone'){this.tone(440,.3);this.tone(660,.4,'sine',.2,.1);}if(['seal','relic','victory'].includes(e.type)){[330,440,660].forEach((f,i)=>this.tone(f,.4,'triangle',.2,i*.11));}if(e.type==='blocked')this.tone(970,.045,'square',.07);}
+    tick(playing){if(!this.ctx||!this.enabled||!playing)return;const t=this.ctx.currentTime;if(t>this.next){this.next=t+.65;const notes=[146.83,220,261.63,293.66,220,196,164.81,220];this.tone(notes[this.note++%notes.length],.48,'sine',.065);if(this.note%4===0)this.tone(73.42,.6,'sine',.09);}}
+    setVolume(v){this.volume=v;if(this.bus)this.bus.gain.value=v*.3;}
+  };
+})(globalThis.Kong ||= {});
+
+</script><script>
+(function(K){
+  'use strict';
+  const $=id=>document.getElementById(id),world=$('world'),renderer=new K.Renderer(world),audio=new K.Audio(),storage=new K.Storage();
+  let restored=storage.read(),state=restored?.state||null,meta=restored?.meta||K.cleanMeta(),screen='menu',backScreen='menu',toastUntil=0,lastSave=0,settled=false;
+  let settings={shake:!matchMedia('(prefers-reduced-motion: reduce)').matches,volume:.25};
+  const metrics={frames:[],inputs:[],submitted:[],errors:[],started:performance.now()};
+  let pendingInputs=[];
+  const input=new K.Input(world,control,(t,code)=>pendingInputs.push({t:performance.now(),eventTime:t,code}));
+  const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const button=(id,text,primary=false)=>`<button id="${id}" class="button ${primary?'primary':''}">${text}</button>`;
+  function listen(id,fn){$(id)?.addEventListener('click',fn);}
+  function toast(text){$('toast').textContent=text;$('toast').hidden=false;toastUntil=performance.now()+2300;}
+  function save(){if(state){storage.write(state,meta);$('storage-status').textContent=storage.available?'离线可玩 · 进度已保存':'自动存储不可用 · 请导出存档';lastSave=performance.now();}}
+  function updateScreen(next){screen=next;input.setActive(next==='playing');if(next!=='playing'){pendingInputs=[];$('toast').hidden=true;toastUntil=0;}$('stage').dataset.mode=next;$('hud').hidden=!state||next==='menu'||next==='start';$('overlay').innerHTML='';if(next==='playing'){world.focus({preventScroll:true});return;}if(next==='menu')menu();if(next==='start')starter();if(next==='paused')pauseMenu();if(next==='help')help();if(next==='reward')reward();if(next==='dead'||next==='won')ending();requestAnimationFrame(()=>{const first=$('overlay').querySelector('button:not(:disabled), input');first?.focus({preventScroll:true});});}
+  function menu(){const m=meta;const resumable=state&&['paused','playing','reward'].includes(state.mode);$('overlay').innerHTML=`<div class="hero"><div class="eyebrow">西游记后传 · 像素动作肉鸽</div><h1><small>大 圣</small>劫后行</h1><div class="english-title">AFTER THE BLACK LOTUS</div><p>三界灯火将熄。你还有一根棍，<br>和一个不肯认命的念头。</p><div class="actions">${button('begin','踏上劫途 <small>→</small>',true)}${resumable?button('resume','继续前行'):button('how','初行指南')}</div><div class="seed-edit"><label for="seed">本局因缘</label><input id="seed" aria-label="随机种子" maxlength="32" value="${esc(state?.seed||'LOTUS-1025')}"><button id="random-seed" class="text-button" aria-label="生成新种子">换一签 ↻</button></div><div class="hero-meta"><span><b>${m.runs}</b> 次入劫</span><span><b>${m.wins}</b> 次破局</span><span>键鼠 · 横版 · 离线</span></div></div><div class="scene-label">黑莲之下，万象皆劫<span>一棍破局 · 一念重来</span></div>`;listen('begin',()=>{audio.unlock();K.pendingSeed=$('seed').value.trim()||'LOTUS-1025';updateScreen('start');});listen('resume',resume);listen('how',()=>{backScreen='menu';updateScreen('help');});listen('random-seed',()=>{$('seed').value='LOTUS-'+crypto.getRandomValues(new Uint32Array(1))[0].toString(36).slice(0,6).toUpperCase();});}
+  function cards(ids){return `<div class="cards">${ids.map((id,i)=>{const r=K.relic(id);return `<button class="relic-card" data-relic="${id}" aria-label="选择${r.name}"><span class="num">0${i+1}</span><span class="relic-glyph" style="color:${r.color}">${r.glyph}</span><h3>${r.name}</h3><span class="tag">${r.tag}</span><p>${r.text}</p><span class="cost">${r.cost}</span></button>`;}).join('')}</div>`;}
+  function starter(){ $('overlay').innerHTML=`<section class="panel" aria-label="选择初始舍利"><div class="eyebrow">启程 · 一念成法</div><h2>带哪一念入劫？</h2><p class="subtitle">一枚舍利，一种破局之法。每过一境，还可再选一枚。<br>左右行走，长按空格跳得更高；J 棍击，K 闪避，L 分身。</p>${cards(['cloud','echo','staff'])}<p class="starter-note">按 1 / 2 / 3 选择 · 死亡清空本局，经验留在你手中</p><div class="actions">${button('back','返回')}</div></section>`;for(const b of $('overlay').querySelectorAll('[data-relic]'))b.onclick=()=>startRun(b.dataset.relic);listen('back',()=>updateScreen('menu')); }
+  function startRun(relic){state=K.newRun(K.pendingSeed||state?.seed||'LOTUS-1025',relic);meta.runs++;settled=false;renderer.camera=0;audio.unlock();updateScreen('playing');toast('破除两处阵眼，再到右侧山门按 E。');save();}
+  function resume(){audio.unlock();if(!state)return;if(state.mode==='paused')state.mode='playing';updateScreen(state.mode);}
+  function pauseMenu(){ $('overlay').innerHTML=`<section class="panel" style="max-width:650px" aria-label="暂停菜单"><div class="eyebrow">暂歇 · 棍心不息</div><h2>风停在这一刻</h2><p class="subtitle">${K.STAGES[state.stage].name} · 因缘 ${esc(state.seed)}<br>${state.relics.map(id=>K.relic(id).name).join(' / ')}</p><div class="actions">${button('continue','继续前行',true)}${button('help','行者手记')}</div><div class="setting-row"><label for="volume">声音</label><input id="volume" aria-label="音量" type="range" min="0" max="100" value="${settings.volume*100}"><label><input id="shake" type="checkbox" ${settings.shake?'checked':''}> 屏幕震动</label></div><div class="actions">${button('export','导出存档')}${button('import','导入存档')}${button('main-menu','回到主菜单')}</div><p class="notice">本地 HTTP 与双击入口的自动存档各自独立。导出 JSON 可在两者间带走进度。</p></section>`;listen('continue',resume);listen('help',()=>{backScreen='paused';updateScreen('help');});listen('export',()=>{save();storage.export(state,meta);toast('已导出，保留这份 JSON 可随时恢复。');});listen('import',()=>$('import-file').click());listen('main-menu',()=>{save();updateScreen('menu');});$('volume').oninput=e=>{settings.volume=Number(e.target.value)/100;audio.setVolume(settings.volume);};$('shake').onchange=e=>{settings.shake=e.target.checked;renderer.shake=settings.shake;};}
+  function help(){ $('overlay').innerHTML=`<section class="panel" aria-label="行者手记"><div class="eyebrow">行者手记 · 看清再出手</div><h2>棍有尽处，变化无穷</h2><div class="help-grid"><div><h3>步法与落点</h3><p>A / D 或方向键移动。空格 / W 跳跃，松开缩短跳高；踩敌可反弹。腾云骨允许再按一次空格空中跳。脚下亮边才是落脚面；S＋空格可向下穿过悬台。</p></div><div><h3>棍法与下劈</h3><p>J 或鼠标左键三连，第三棍更重、收招更慢。空中按 S＋J 下劈。定海心的第三棍可破盾；普通棍法要绕背或从上方进攻。</p></div><div><h3>闪避与分身</h3><p>K / Shift 闪避，有 0.85 秒冷却；短暂无敌。L / 右键分身消耗 40 定力，诱敌并攻击。棍击命中积攒定力；照影珠消耗 50、持续更久。</p></div><div><h3>识敌与破阵</h3><p>执刃魔兵亮刀后斩击；重盾兵正面格挡、转身较慢；悬空莲灯使会瞄准施法。先看亮起的预警，再跳跃、绕背或交闪避。</p></div><div><h3>三境与黑莲</h3><p>每境打碎两座紫色阵眼，到最右山门按 E；可绕过敌人。每次过境恢复 18 生命，并选一枚舍利。三境后直面无天：护体时无法造成伤害，金光收招时才是破绽；横扫可跳，散射可闪。</p></div><div><h3>因缘与重来</h3><p>相同种子复现路线、敌人与奖励。不同舍利改变解法。坠落失去 18 生命后回到近处安全落点；死亡只清空本局，不靠永久属性磨过。</p></div></div><div class="actions">${button('close-help','记下了',true)}${button('import','导入存档')}</div><p class="notice">Esc 随时暂停。分身、奖励和界面都使用同一个游戏状态；菜单打开时战斗停止。</p></section>`;listen('close-help',()=>updateScreen(backScreen));listen('import',()=>$('import-file').click());}
+  function reward(){save();$('overlay').innerHTML=`<section class="panel" aria-label="过境奖励"><div class="eyebrow">第${['一','二','三'][state.stage]}境已破 · 舍利余光</div><h2>下一程，如何破局？</h2><p class="subtitle">山门将启。生命恢复 18，定力恢复 20。选一枚舍利带往${K.STAGES[state.stage+1].name}。</p>${cards(state.reward)}<p class="starter-note">按 1 / 2 / 3 选择 · 已有：${state.relics.map(id=>K.relic(id).name).join(' / ')}</p></section>`;for(const b of $('overlay').querySelectorAll('[data-relic]'))b.onclick=()=>choose(b.dataset.relic);}
+  function choose(id){if(K.choose(state,id)){renderer.camera=0;audio.event({type:'relic'});updateScreen('playing');toast(K.STAGES[state.stage].subtitle);save();}}
+  function ending(){const won=state.mode==='won';if(!settled){settled=true;if(won)meta.wins++;meta.best=Math.max(meta.best,won?4:state.stage);save();}const seconds=Math.floor(state.time),time=Math.floor(seconds/60)+'分'+seconds%60+'秒';$('overlay').innerHTML=`<section class="panel" style="max-width:720px" aria-label="${won?'胜利结算':'失败结算'}"><div class="eyebrow">${won?'黑莲已散 · 此心长明':'劫途未尽 · 再起一念'}</div><h2>${won?'三界重见微光':'此身暂歇，棍心未折'}</h2><p class="subtitle">${won?'无天的黑莲散作尘埃。你握紧金箍棒，走向重新亮起的灯火。<br>这一回，你以自己的解法破了此劫。':'最后受伤：'+esc(state.lastDamage)+'。<br>再走一次相同因缘，换一种舍利，试试另一条路。'}</p><div class="results"><div><small>行走</small><b>${time}</b></div><div><small>破阵</small><b>${state.broken} / 6</b></div><div><small>退敌</small><b>${state.kills}</b></div><div><small>因缘</small><b style="font-size:16px">${esc(state.seed)}</b></div></div><p class="subtitle">此行舍利：${state.relics.map(id=>K.relic(id).name).join(' / ')}</p><div class="actions">${button('retry','同缘再行',true)}${button('new-path','另启因缘')}${button('export','导出此行')}</div></section>`;listen('retry',()=>{K.pendingSeed=state.seed;updateScreen('start');});listen('new-path',()=>updateScreen('menu'));listen('export',()=>storage.export(state,meta));}
+  function control(action){if(action==='pause'){if(screen==='playing'){state.mode='paused';save();updateScreen('paused');}else if(screen==='paused')resume();else if(screen==='help')updateScreen(backScreen);}if(action==='blur'&&screen==='playing'){state.mode='paused';save();updateScreen('paused');}}
+  listen('pause',()=>control('pause'));listen('guide-top',()=>{if(screen==='playing'){state.mode='paused';save();}backScreen=state&&screen!=='menu'&&screen!=='start'?'paused':'menu';updateScreen('help');});listen('brand',e=>{e.preventDefault();if(screen==='playing'){state.mode='paused';save();}updateScreen('menu');});
+  $('import-file').onchange=async e=>{const file=e.target.files[0];if(!file)return;try{const data=storage.import(await file.text());state=data.state;meta=data.meta;settled=['dead','won'].includes(state.mode);renderer.camera=K.clamp(state.player.x-300,0,state.room.width-960);save();updateScreen(state.mode);toast('存档已恢复，继续前行。');}catch(err){toast('导入失败：'+err.message);}e.target.value='';};
+  window.addEventListener('keydown',e=>{if(['INPUT','TEXTAREA','SELECT'].includes(e.target.tagName))return;if((screen==='start'||screen==='reward')&&/^Digit[123]$/.test(e.code)){const i=Number(e.code.slice(-1))-1;const ids=screen==='start'?['cloud','echo','staff']:state.reward;if(ids[i]){e.preventDefault();audio.unlock();screen==='start'?startRun(ids[i]):choose(ids[i]);}}if(e.code==='Tab'&&screen!=='playing'){const nodes=[...$('overlay').querySelectorAll('button:not(:disabled),input:not([hidden])')];if(nodes.length){const first=nodes[0],last=nodes[nodes.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}}}});
+  window.addEventListener('beforeunload',save);
+  K.pointerFace=x=>{const rect=world.getBoundingClientRect();const wx=(x-rect.left)/rect.width*960+renderer.camera;return Math.sign(wx-state.player.x-12);};
+  function hud(){if(!state)return;const p=state.player;$('hp-number').textContent=Math.ceil(p.hp)+' / 100';$('hp-fill').style.width=p.hp+'%';$('focus-number').textContent=Math.floor(p.focus);$('focus-fill').style.width=p.focus+'%';$('chapter').textContent=state.stage<3?'第'+['一','二','三'][state.stage]+'境':'终局';$('stage-name').textContent=K.STAGES[state.stage].name;$('objective').textContent=state.stage<3?'破除黑莲阵眼 '+state.room.seals.filter(q=>q.hp===0).length+' / 2':'护体时避让 · 金光时出棍';$('run-seed').textContent=state.seed;$('relic-list').textContent=state.relics.map(id=>K.relic(id).name).join(' · ');$('dash-state').textContent=p.dashCD>0?'闪避恢复 '+p.dashCD.toFixed(1)+'s':'闪避就绪';$('boss-hud').hidden=state.stage!==3;const boss=state.room.enemies.find(e=>e.kind==='boss');if(boss){$('boss-fill').style.width=boss.hp/boss.maxHp*100+'%';$('boss-phase').textContent=boss.phase==='recover'?'破绽已现':boss.phase==='sweep-windup'?'横扫将至 · 跳':boss.phase==='orb-windup'?'莲焰将至 · 闪':'黑莲横世';}
+    const near=state.stage<3&&Math.abs(p.x-state.room.exit)<85;$('context-hint').hidden=screen!=='playing'||(!near&&state.time>12);$('context-hint').textContent=near?(state.room.seals.some(q=>q.hp>0)?'阵眼尚存，回身破阵':'按 E 穿过山门，选择舍利'):'A D 行走 · 长按空格高跳 · J 三连 · K 闪避 · L 分身';
+  }
+  let previous=performance.now(),accumulator=0,lastHud=0;
+  function frame(now){try{const elapsed=Math.min((now-previous)/1000,.1);if(screen==='playing'){metrics.frames.push(now-previous);if(metrics.frames.length>10000)metrics.frames.shift();}previous=now;accumulator+=elapsed;const willStep=screen==='playing'&&accumulator>=K.DT&&state.hitstop<=0;let actions=willStep?input.read():{};let guard=0;
+    if(screen==='playing')while(accumulator>=K.DT&&guard++<13){K.step(state,actions);actions={...actions,jumpPressed:false,dashPressed:false,clonePressed:false,interactPressed:false};for(const event of state.events){audio.event(event);if(event.type==='hurt')toast(event.source+' · -'+event.amount+' 生命');if(event.type==='seal')toast('阵眼已破 · '+state.room.seals.filter(q=>q.hp===0).length+' / 2');if(event.type==='empty-focus')toast('定力不足，用棍击命中来积攒。');if(event.type==='gate-locked')toast('还有黑莲阵眼未破。');if(event.type==='room')meta.best=Math.max(meta.best,state.stage);}accumulator-=K.DT;if(state.mode!=='playing'){updateScreen(state.mode);break;}}
+    else accumulator=0;
+    renderer.draw(state,screen,elapsed);const submitted=performance.now();if(willStep){for(const q of pendingInputs){metrics.inputs.push({code:q.code,ms:+(submitted-q.t).toFixed(3),eventMs:+(submitted-q.eventTime).toFixed(3)});}pendingInputs=[];}if(metrics.inputs.length>1000)metrics.inputs.splice(0,metrics.inputs.length-1000);
+    audio.tick(screen==='playing');if(now-lastHud>80){hud();lastHud=now;}if(now>toastUntil)$('toast').hidden=true;if(state&&screen==='playing'&&now-lastSave>3000)save();
+  }catch(e){metrics.errors.push(String(e.stack||e));toast('运行异常，请导出存档并重新打开。');console.error(e);if(state){state.mode='paused';updateScreen('paused');}}
+    requestAnimationFrame(frame);
+  }
+  Object.defineProperty(window,'__KONG__',{value:Object.freeze({snapshot:()=>state?JSON.parse(JSON.stringify({screen,state,meta,camera:renderer.camera})):({screen,state:null,meta}),metrics:()=>JSON.parse(JSON.stringify(metrics)),version:K.VERSION})});
+  renderer.shake=settings.shake;if(storage.error)toast('自动存档未能读取，可通过手记导入 JSON。');updateScreen('menu');requestAnimationFrame(frame);
+})(globalThis.Kong ||= {});
+
+</script>
+</body></html>

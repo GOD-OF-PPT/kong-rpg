@@ -1,11 +1,14 @@
 const fs=require('node:fs');const path=require('node:path');const crypto=require('node:crypto');
 const root=path.resolve(__dirname,'..');const out=path.join(root,'release');fs.mkdirSync(out,{recursive:true});
 let html=fs.readFileSync(path.join(root,'index.html'),'utf8');
-html=html.replace('<link rel="stylesheet" href="src/style.css">',()=>'<style>'+fs.readFileSync(path.join(root,'src/style.css'),'utf8')+'</style>');
+html=html.replace(/<link rel="stylesheet" href="(src\/[^" ]+)">/g,(_,file)=>'<style>'+fs.readFileSync(path.join(root,file),'utf8')+'</style>');
 html=html.replace(/<script src="(src\/[^" ]+)"><\/script>/g,(_,file)=>'<script>\n'+fs.readFileSync(path.join(root,file),'utf8').replace(/<\/script/gi,'<\\/script')+'\n</script>');
 if(/(?:src|href)="(?:https?:|src\/)/.test(html))throw new Error('Release still has an external dependency');
 fs.writeFileSync(path.join(out,'index.html'),html);
-fs.writeFileSync(path.join(out,'README.md'),'# 大圣 · 劫后行 — 独立离线版\n\n双击同目录的 index.html 即可游玩，推荐 Windows 桌面 Edge / Chrome。无需安装、服务端或网络。\n\nA / D 移动；空格跳跃，松开短跳；S + 空格下穿悬台；J / 左键棍击；空中 S + J 下劈；K / Shift 闪避；L / 右键分身；E 过山门；Esc 暂停。\n\n每境破两处阵眼再到右侧山门按 E。三境之后挑战无天：护体时无法受伤，金色收招阶段出棍。\n\n首次可选腾云骨，允许二段跳。定力不足时用棍击命中来积攒。暂停菜单有完整手记、音量、屏震开关与存档导入导出。\n\n浏览器禁止自动存储时仍可玩；请主动导出 JSON，另次通过导入继续。\n\n玩法与美术依据、调研限制和验证记录在 docs 目录。源码仓库：https://github.com/GOD-OF-PPT/kong-rpg/tree/codex/black-lotus-pilgrimage\n');
-fs.mkdirSync(path.join(out,'docs'),{recursive:true});for(const name of ['DESIGN.md','RESEARCH.md','VERIFICATION.md'])if(fs.existsSync(path.join(root,'docs',name)))fs.copyFileSync(path.join(root,'docs',name),path.join(out,'docs',name));
-fs.writeFileSync(path.join(out,'manifest.json'),JSON.stringify({version:'1.0.0',entry:'index.html',sha256:crypto.createHash('sha256').update(html).digest('hex'),bytes:Buffer.byteLength(html),runtimeDependencies:[]},null,2));
+fs.copyFileSync(path.join(root,'docs/v2/PLAYER.md'),path.join(out,'README.md'));
+fs.mkdirSync(path.join(out,'docs/v1'),{recursive:true});for(const name of ['DESIGN.md','RESEARCH.md','VERIFICATION.md']){if(fs.existsSync(path.join(root,'docs',name)))fs.copyFileSync(path.join(root,'docs',name),path.join(out,'docs/v1',name));const stale=path.join(out,'docs',name);if(fs.existsSync(stale))fs.unlinkSync(stale);}
+const version=JSON.parse(fs.readFileSync(path.join(root,'package.json'),'utf8')).version;
+fs.writeFileSync(path.join(out,'manifest.json'),JSON.stringify({version,entry:'index.html',sha256:crypto.createHash('sha256').update(html).digest('hex'),bytes:Buffer.byteLength(html),runtimeDependencies:[]},null,2));
+const legacyPath=path.join(out,'legacy-v1.html');const legacy=fs.existsSync(legacyPath)?fs.readFileSync(legacyPath):require('node:child_process').execFileSync('git',['show','e5dc0b5:release/index.html'],{cwd:root});if(crypto.createHash('sha256').update(legacy).digest('hex')!=='cfde27c846bd1856e2ad1273d2c910000ddb0ec24ccf7c46dc2393fa854cbd65')throw new Error('Legacy v1 source changed');fs.writeFileSync(legacyPath,legacy);
+fs.mkdirSync(path.join(out,'docs/v2'),{recursive:true});for(const name of fs.readdirSync(path.join(root,'docs/v2')).filter(x=>x.endsWith('.md')))fs.copyFileSync(path.join(root,'docs/v2',name),path.join(out,'docs/v2',name));
 console.log('Standalone release:',Buffer.byteLength(html),'bytes');

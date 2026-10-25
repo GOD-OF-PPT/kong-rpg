@@ -1,34 +1,33 @@
-# 大圣 · 劫后行
+# 大圣 · 劫后行 v2
 
-以《西游记后传》题材创作的像素横版动作肉鸽。三境破阵，舍利成法，终战无天。原创像素画面与本地合成声音；不含影视/竞品抽取素材。
+孙悟空题材的像素横版动作肉鸽。完整小体量旅程：三境六阵、境内借灯、三枚舍利取舍、无天终局、失败重开与原创尾声。保留v1原版与旧存档继续通路。
 
-## 直接游玩
+## 游玩
 
-双击 `release/index.html`，推荐 Windows 桌面 Edge / Chrome；无需安装、服务端或网络。也可双击根目录 `index.html`（需保留 src 目录）。
+双击 release/index.html。离线包在 artifacts/kong-rpg-offline-v2.0.0.zip，解压后双击 index.html。无需安装或网络。PC键鼠为主要目标。
 
-## 本地预览 / 构建
+A D走，空格跳（长按高跳），S+空格下穿悬台，J/左键棍击，空中S+J下劈，K/Shift闪避，L/右键分身，E借灯或过门，Esc暂停。详细说明见 docs/v2/PLAYER.md。
 
-需要 Node.js 18+，无须 npm install。`npm run dev` 后打开 http://127.0.0.1:5188 。`npm run build` 生成完全内联的 `release/index.html`。`npm run verify` 执行模拟/存档/发行验证。
+## 运行与构建
 
-## 操作
+Node18+，无运行依赖，无须npm install。npm run dev 打开 http://127.0.0.1:5188；npm run build 生成内联发行包；npm run verify 验证模拟、存档及发行约束。
 
-- A D / 方向键：行走；空格 / W / 上：跳跃，松开短跳。
-- S + 空格：下穿悬台（不会穿过实地）。
-- J / 左键：棍法三连；空中 S + J：下劈；踩敌可反弹。
-- K / Shift：闪避；L / 右键：分身（40定力，照影珠50）。
-- E：在右侧已开启的山门过关；1 / 2 / 3：选择舍利。
-- Esc：暂停；失焦自动暂停；菜单可调音量、关闭屏震、导入/导出存档。
+浏览器验证需要本地Playwright与Edge：node tools/ui-v2.cjs；node tools/feedback-v2.cjs；node tools/playthrough-v2.cjs http；关掉预览服务器后设置 REQUIRE_SERVER_OFF=1 再运行 node tools/playthrough-v2.cjs file。STARTER=staff 可核对无二段跳起步。工具依赖不进入游戏运行包。
 
-每境需打碎两座紫色阵眼，无须杀光敌人。过境恢复18生命与20定力，三境后挑战无天。每局先选一枚初始舍利，随后继续组合。相同种子复现布局、敌人与奖励。死亡清空本局，累计记录只展示，不加永久战力。
+## 完整交付与证据
 
-无天有黑莲护体，金光收招阶段才可受伤。横扫预警时跃起，散射时闪避；收招后他会换位。
+- docs/v2/DELIVERY-GOAL.md：用户更正后的完整交付标准。
+- docs/v2/CONCLUSION.md：修改依据、对照、移除实验及不能下的结论。
+- docs/v2/VERIFICATION.md：当前发行哈希对应的实际验证。
+- docs/v2/PLAYTEST.md：未执行的外部试玩观察方案。
+- evidence/v2/：原始动作/事件、规则验证、浏览器场景、性能与关键帧。录屏与trace保存在同目录的video及zip中，较大文件未提交Git。
 
-## 保存
+固定遭遇对照需完整Git历史：node tools/experiments/encounter.cjs e5dc0b5；node tools/experiments/encounter.cjs working；node tools/experiments/replay.cjs。read-no-clone只在实验中禁用分身输入，不在发行版提供实验开关。
 
-自动保存每3秒及过境/暂停/结算时发生；HTTP 与 file 入口的存储彼此独立。浏览器禁止自动存储时仍可玩，请在暂停菜单导出 JSON 并通过导入恢复。导入后暂停，由玩家明确继续。不要依靠浏览器私密会话保留自动存档。
+## 架构
 
-## 代码与证据
+src/content.js内容与种子，simulation.js独立固定步长模拟，input.js键鼠动作映射，storage.js版本存档，art.js统一锚点像素动作，renderer.js与visuals.js绘制，audio.js本地合成，app.js负责DOM与状态接线。没有CDN、远程字体、fetch地图或运行时生成接口。
 
-`src/content.js` 内容与种子；`simulation.js` 独立固定步长模拟；`renderer.js` 原创像素绘制；`input.js` 动作映射；`storage.js` 版本存档；`audio.js` 本地合成；`app.js` DOM、状态与循环接线。
+## 边界
 
-玩法/美术依据见 `docs/DESIGN.md`，调研来源及未取得的原始资料见 `docs/RESEARCH.md`，实际验收与边界见 `docs/VERIFICATION.md`。自动化操作不代表真人试玩评价。
+原剧可核实的逐帧片段、外部真人重开意愿与真人试听仍未取得。自动化与设计者关键帧检查不能替代这些证据。v1历史策划和报告留在docs根目录与发行包docs/v1，不能当作v2验收。
