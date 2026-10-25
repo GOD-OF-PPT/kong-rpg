@@ -1,0 +1,43 @@
+{
+  "sha256": "658080d7b64f21d3c5ed336d3bb5bd84c79c71d21ade28f32c38c5876a74151e",
+  "checks": [
+    {
+      "name": "eight embedded image assets decode",
+      "pass": true,
+      "loaded": [
+        "mountain",
+        "ferry",
+        "sanctuary",
+        "wukong",
+        "enemies",
+        "stone",
+        "run",
+        "props"
+      ],
+      "errors": []
+    },
+    {
+      "name": "Tab enters paused DOM focus before navigation",
+      "pass": true
+    },
+    {
+      "name": "focused DOM never receives combat actions",
+      "pass": true
+    },
+    {
+      "name": "window focus loss pauses the world",
+      "pass": true
+    },
+    {
+      "name": "offline visual scenes have zero remote requests",
+      "pass": true
+    },
+    {
+      "name": "no visual exceptions",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "network": [],
+  "video": "evidence/complete-v2/video/page@7eea62a153d2a8962a3fb316fd66c1e7.webm"
+}

@@ -1,0 +1,7663 @@
+{
+  "sourceHash": "7f2738576a221d9001c44b3a6812505f41e129cf93773425cdab0f0248021ed4",
+  "scenario": "actual stage0 first shield; isolated from other enemies; player front spacing56, HP100 focus65; three fixed seeds; no content/stat changes",
+  "method": "100ms decisions using prior 100ms sample; recorded at 120Hz; policies are designed controllers, not human results",
+  "trials": [
+    {
+      "seed": "LOTUS-1025",
+      "relic": "cloud",
+      "policy": "hold",
+      "won": true,
+      "seconds": 4.392,
+      "damage": 16,
+      "enemyHP": 0,
+      "focusSpent": 0,
+      "jumps": 0,
+      "dashes": 0,
+      "waiting": 0,
+      "inputs": [
+        {
+          "tick": 0,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 12,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 24,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 36,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 48,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 60,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 72,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 84,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 96,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 108,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 120,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 132,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 144,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 156,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 168,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 180,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 192,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 204,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 216,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 228,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 240,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 252,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 264,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 276,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 288,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 300,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 312,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 324,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 336,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 348,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 360,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 372,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 384,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 396,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 408,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 420,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 432,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 444,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 456,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 468,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 480,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 492,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 504,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 516,
+          "attack": true,
+          "aimFace": 1
+        }
+      ],
+      "events": [
+        {
+          "tick": 0,
+          "type": "swing",
+          "t": 0.008,
+          "wall": 0.008,
+          "combo": 1
+        },
+        {
+          "tick": 0,
+          "type": "warning",
+          "t": 0.008,
+          "wall": 0.008,
+          "kind": "shield",
+          "id": 1,
+          "x": 1011,
+          "y": 400,
+          "face": -1
+        },
+        {
+          "tick": 7,
+          "type": "blocked",
+          "t": 0.067,
+          "wall": 0.067,
+          "target": 1
+        },
+        {
+          "tick": 35,
+          "type": "swing",
+          "t": 0.3,
+          "wall": 0.3,
+          "combo": 2
+        },
+        {
+          "tick": 42,
+          "type": "blocked",
+          "t": 0.358,
+          "wall": 0.358,
+          "target": 1
+        },
+        {
+          "tick": 70,
+          "type": "swing",
+          "t": 0.592,
+          "wall": 0.592,
+          "combo": 3
+        },
+        {
+          "tick": 77,
+          "type": "blocked",
+          "t": 0.65,
+          "wall": 0.65,
+          "target": 1
+        },
+        {
+          "tick": 84,
+          "type": "enemy-attack",
+          "t": 0.708,
+          "wall": 0.708,
+          "kind": "shield",
+          "id": 1,
+          "box": {
+            "x": 965,
+            "y": 406,
+            "w": 60,
+            "h": 32
+          }
+        },
+        {
+          "tick": 85,
+          "type": "hurt",
+          "t": 0.717,
+          "wall": 0.717,
+          "source": "重盾兵·盾撞",
+          "amount": 16
+        },
+        {
+          "tick": 86,
+          "type": "swing",
+          "t": 0.725,
+          "wall": 0.725,
+          "combo": 1
+        },
+        {
+          "tick": 93,
+          "type": "blocked",
+          "t": 0.783,
+          "wall": 0.783,
+          "target": 1
+        },
+        {
+          "tick": 121,
+          "type": "swing",
+          "t": 1.017,
+          "wall": 1.017,
+          "combo": 2
+        },
+        {
+          "tick": 128,
+          "type": "hit",
+          "t": 1.075,
+          "wall": 1.075,
+          "target": 1,
+          "kind": "shield",
+          "amount": 14
+        },
+        {
+          "tick": 161,
+          "type": "swing",
+          "t": 1.308,
+          "wall": 1.35,
+          "combo": 3
+        },
+        {
+          "tick": 168,
+          "type": "hit",
+          "t": 1.367,
+          "wall": 1.408,
+          "target": 1,
+          "kind": "shield",
+          "amount": 27
+        },
+        {
+          "tick": 212,
+          "type": "swing",
+          "t": 1.692,
+          "wall": 1.775,
+          "combo": 1
+        },
+        {
+          "tick": 247,
+          "type": "swing",
+          "t": 1.983,
+          "wall": 2.067,
+          "combo": 2
+        },
+        {
+          "tick": 282,
+          "type": "swing",
+          "t": 2.275,
+          "wall": 2.358,
+          "combo": 3
+        },
+        {
+          "tick": 289,
+          "type": "blocked",
+          "t": 2.333,
+          "wall": 2.417,
+          "target": 1
+        },
+        {
+          "tick": 322,
+          "type": "warning",
+          "t": 2.608,
+          "wall": 2.692,
+          "kind": "shield",
+          "id": 1,
+          "x": 1012.5999999999985,
+          "y": 400,
+          "face": -1
+        },
+        {
+          "tick": 328,
+          "type": "swing",
+          "t": 2.658,
+          "wall": 2.742,
+          "combo": 1
+        },
+        {
+          "tick": 335,
+          "type": "blocked",
+          "t": 2.717,
+          "wall": 2.8,
+          "target": 1
+        },
+        {
+          "tick": 363,
+          "type": "swing",
+          "t": 2.95,
+          "wall": 3.033,
+          "combo": 2
+        },
+        {
+          "tick": 370,
+          "type": "blocked",
+          "t": 3.008,
+          "wall": 3.092,
+          "target": 1
+        },
+        {
+          "tick": 398,
+          "type": "swing",
+          "t": 3.242,
+          "wall": 3.325,
+          "combo": 3
+        },
+        {
+          "tick": 405,
+          "type": "blocked",
+          "t": 3.3,
+          "wall": 3.383,
+          "target": 1
+        },
+        {
+          "tick": 406,
+          "type": "enemy-attack",
+          "t": 3.308,
+          "wall": 3.392,
+          "kind": "shield",
+          "id": 1,
+          "box": {
+            "x": 966.5999999999985,
+            "y": 406,
+            "w": 60,
+            "h": 32
+          }
+        },
+        {
+          "tick": 444,
+          "type": "swing",
+          "t": 3.625,
+          "wall": 3.708,
+          "combo": 1
+        },
+        {
+          "tick": 451,
+          "type": "hit",
+          "t": 3.683,
+          "wall": 3.767,
+          "target": 1,
+          "kind": "shield",
+          "amount": 14
+        },
+        {
+          "tick": 484,
+          "type": "swing",
+          "t": 3.917,
+          "wall": 4.042,
+          "combo": 2
+        },
+        {
+          "tick": 519,
+          "type": "swing",
+          "t": 4.208,
+          "wall": 4.333,
+          "combo": 3
+        },
+        {
+          "tick": 526,
+          "type": "hit",
+          "t": 4.267,
+          "wall": 4.392,
+          "target": 1,
+          "kind": "shield",
+          "amount": 27
+        },
+        {
+          "tick": 526,
+          "type": "kill",
+          "t": 4.267,
+          "wall": 4.392,
+          "kind": "shield"
+        }
+      ],
+      "replay": "exact recorded inputs reproduce damage and enemy health"
+    },
+    {
+      "seed": "LOTUS-1025",
+      "relic": "cloud",
+      "policy": "read",
+      "won": true,
+      "seconds": 1.858,
+      "damage": 0,
+      "enemyHP": 0,
+      "focusSpent": 0,
+      "jumps": 1,
+      "dashes": 0,
+      "waiting": 0,
+      "inputs": [
+        {
+          "tick": 0,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 12,
+          "attack": true,
+          "aimFace": 1,
+          "jump": false
+        },
+        {
+          "tick": 24,
+          "attack": false,
+          "aimFace": 1,
+          "jumpPressed": true,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 36,
+          "attack": false,
+          "aimFace": 1,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 48,
+          "attack": false,
+          "aimFace": 1,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 60,
+          "attack": false,
+          "aimFace": 1,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 72,
+          "attack": false,
+          "aimFace": -1,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 84,
+          "attack": true,
+          "aimFace": -1,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 96,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        },
+        {
+          "tick": 108,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        },
+        {
+          "tick": 120,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        },
+        {
+          "tick": 132,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        },
+        {
+          "tick": 144,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        },
+        {
+          "tick": 156,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 168,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 180,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 192,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 204,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 216,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        }
+      ],
+      "events": [
+        {
+          "tick": 0,
+          "type": "swing",
+          "t": 0.008,
+          "wall": 0.008,
+          "combo": 1
+        },
+        {
+          "tick": 0,
+          "type": "warning",
+          "t": 0.008,
+          "wall": 0.008,
+          "kind": "shield",
+          "id": 1,
+          "x": 1011,
+          "y": 400,
+          "face": -1
+        },
+        {
+          "tick": 7,
+          "type": "blocked",
+          "t": 0.067,
+          "wall": 0.067,
+          "target": 1
+        },
+        {
+          "tick": 24,
+          "type": "jump",
+          "t": 0.208,
+          "wall": 0.208,
+          "air": false
+        },
+        {
+          "tick": 84,
+          "type": "swing",
+          "t": 0.708,
+          "wall": 0.708,
+          "combo": 2
+        },
+        {
+          "tick": 84,
+          "type": "enemy-attack",
+          "t": 0.708,
+          "wall": 0.708,
+          "kind": "shield",
+          "id": 1,
+          "box": {
+            "x": 965,
+            "y": 406,
+            "w": 60,
+            "h": 32
+          }
+        },
+        {
+          "tick": 105,
+          "type": "hit",
+          "t": 0.883,
+          "wall": 0.883,
+          "target": 1,
+          "kind": "shield",
+          "amount": 14
+        },
+        {
+          "tick": 124,
+          "type": "swing",
+          "t": 1,
+          "wall": 1.042,
+          "combo": 3
+        },
+        {
+          "tick": 131,
+          "type": "hit",
+          "t": 1.058,
+          "wall": 1.1,
+          "target": 1,
+          "kind": "shield",
+          "amount": 27
+        },
+        {
+          "tick": 175,
+          "type": "swing",
+          "t": 1.383,
+          "wall": 1.467,
+          "combo": 1
+        },
+        {
+          "tick": 182,
+          "type": "hit",
+          "t": 1.442,
+          "wall": 1.525,
+          "target": 1,
+          "kind": "shield",
+          "amount": 14
+        },
+        {
+          "tick": 215,
+          "type": "swing",
+          "t": 1.675,
+          "wall": 1.8,
+          "combo": 2
+        },
+        {
+          "tick": 222,
+          "type": "hit",
+          "t": 1.733,
+          "wall": 1.858,
+          "target": 1,
+          "kind": "shield",
+          "amount": 14
+        },
+        {
+          "tick": 222,
+          "type": "kill",
+          "t": 1.733,
+          "wall": 1.858,
+          "kind": "shield"
+        }
+      ],
+      "replay": "exact recorded inputs reproduce damage and enemy health"
+    },
+    {
+      "seed": "LOTUS-1025",
+      "relic": "cloud",
+      "policy": "read-no-clone",
+      "won": true,
+      "seconds": 1.858,
+      "damage": 0,
+      "enemyHP": 0,
+      "focusSpent": 0,
+      "jumps": 1,
+      "dashes": 0,
+      "waiting": 0,
+      "inputs": [
+        {
+          "tick": 0,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 12,
+          "attack": true,
+          "aimFace": 1,
+          "jump": false
+        },
+        {
+          "tick": 24,
+          "attack": false,
+          "aimFace": 1,
+          "jumpPressed": true,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 36,
+          "attack": false,
+          "aimFace": 1,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 48,
+          "attack": false,
+          "aimFace": 1,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 60,
+          "attack": false,
+          "aimFace": 1,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 72,
+          "attack": false,
+          "aimFace": -1,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 84,
+          "attack": true,
+          "aimFace": -1,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 96,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        },
+        {
+          "tick": 108,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        },
+        {
+          "tick": 120,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        },
+        {
+          "tick": 132,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        },
+        {
+          "tick": 144,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        },
+        {
+          "tick": 156,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 168,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 180,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 192,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 204,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 216,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        }
+      ],
+      "events": [
+        {
+          "tick": 0,
+          "type": "swing",
+          "t": 0.008,
+          "wall": 0.008,
+          "combo": 1
+        },
+        {
+          "tick": 0,
+          "type": "warning",
+          "t": 0.008,
+          "wall": 0.008,
+          "kind": "shield",
+          "id": 1,
+          "x": 1011,
+          "y": 400,
+          "face": -1
+        },
+        {
+          "tick": 7,
+          "type": "blocked",
+          "t": 0.067,
+          "wall": 0.067,
+          "target": 1
+        },
+        {
+          "tick": 24,
+          "type": "jump",
+          "t": 0.208,
+          "wall": 0.208,
+          "air": false
+        },
+        {
+          "tick": 84,
+          "type": "swing",
+          "t": 0.708,
+          "wall": 0.708,
+          "combo": 2
+        },
+        {
+          "tick": 84,
+          "type": "enemy-attack",
+          "t": 0.708,
+          "wall": 0.708,
+          "kind": "shield",
+          "id": 1,
+          "box": {
+            "x": 965,
+            "y": 406,
+            "w": 60,
+            "h": 32
+          }
+        },
+        {
+          "tick": 105,
+          "type": "hit",
+          "t": 0.883,
+          "wall": 0.883,
+          "target": 1,
+          "kind": "shield",
+          "amount": 14
+        },
+        {
+          "tick": 124,
+          "type": "swing",
+          "t": 1,
+          "wall": 1.042,
+          "combo": 3
+        },
+        {
+          "tick": 131,
+          "type": "hit",
+          "t": 1.058,
+          "wall": 1.1,
+          "target": 1,
+          "kind": "shield",
+          "amount": 27
+        },
+        {
+          "tick": 175,
+          "type": "swing",
+          "t": 1.383,
+          "wall": 1.467,
+          "combo": 1
+        },
+        {
+          "tick": 182,
+          "type": "hit",
+          "t": 1.442,
+          "wall": 1.525,
+          "target": 1,
+          "kind": "shield",
+          "amount": 14
+        },
+        {
+          "tick": 215,
+          "type": "swing",
+          "t": 1.675,
+          "wall": 1.8,
+          "combo": 2
+        },
+        {
+          "tick": 222,
+          "type": "hit",
+          "t": 1.733,
+          "wall": 1.858,
+          "target": 1,
+          "kind": "shield",
+          "amount": 14
+        },
+        {
+          "tick": 222,
+          "type": "kill",
+          "t": 1.733,
+          "wall": 1.858,
+          "kind": "shield"
+        }
+      ],
+      "replay": "exact recorded inputs reproduce damage and enemy health"
+    },
+    {
+      "seed": "LOTUS-1025",
+      "relic": "echo",
+      "policy": "hold",
+      "won": true,
+      "seconds": 4.392,
+      "damage": 16,
+      "enemyHP": 0,
+      "focusSpent": 0,
+      "jumps": 0,
+      "dashes": 0,
+      "waiting": 0,
+      "inputs": [
+        {
+          "tick": 0,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 12,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 24,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 36,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 48,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 60,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 72,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 84,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 96,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 108,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 120,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 132,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 144,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 156,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 168,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 180,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 192,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 204,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 216,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 228,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 240,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 252,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 264,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 276,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 288,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 300,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 312,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 324,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 336,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 348,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 360,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 372,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 384,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 396,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 408,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 420,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 432,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 444,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 456,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 468,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 480,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 492,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 504,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 516,
+          "attack": true,
+          "aimFace": 1
+        }
+      ],
+      "events": [
+        {
+          "tick": 0,
+          "type": "swing",
+          "t": 0.008,
+          "wall": 0.008,
+          "combo": 1
+        },
+        {
+          "tick": 0,
+          "type": "warning",
+          "t": 0.008,
+          "wall": 0.008,
+          "kind": "shield",
+          "id": 1,
+          "x": 1011,
+          "y": 400,
+          "face": -1
+        },
+        {
+          "tick": 7,
+          "type": "blocked",
+          "t": 0.067,
+          "wall": 0.067,
+          "target": 1
+        },
+        {
+          "tick": 35,
+          "type": "swing",
+          "t": 0.3,
+          "wall": 0.3,
+          "combo": 2
+        },
+        {
+          "tick": 42,
+          "type": "blocked",
+          "t": 0.358,
+          "wall": 0.358,
+          "target": 1
+        },
+        {
+          "tick": 70,
+          "type": "swing",
+          "t": 0.592,
+          "wall": 0.592,
+          "combo": 3
+        },
+        {
+          "tick": 77,
+          "type": "blocked",
+          "t": 0.65,
+          "wall": 0.65,
+          "target": 1
+        },
+        {
+          "tick": 84,
+          "type": "enemy-attack",
+          "t": 0.708,
+          "wall": 0.708,
+          "kind": "shield",
+          "id": 1,
+          "box": {
+            "x": 965,
+            "y": 406,
+            "w": 60,
+            "h": 32
+          }
+        },
+        {
+          "tick": 85,
+          "type": "hurt",
+          "t": 0.717,
+          "wall": 0.717,
+          "source": "重盾兵·盾撞",
+          "amount": 16
+        },
+        {
+          "tick": 86,
+          "type": "swing",
+          "t": 0.725,
+          "wall": 0.725,
+          "combo": 1
+        },
+        {
+          "tick": 93,
+          "type": "blocked",
+          "t": 0.783,
+          "wall": 0.783,
+          "target": 1
+        },
+        {
+          "tick": 121,
+          "type": "swing",
+          "t": 1.017,
+          "wall": 1.017,
+          "combo": 2
+        },
+        {
+          "tick": 128,
+          "type": "hit",
+          "t": 1.075,
+          "wall": 1.075,
+          "target": 1,
+          "kind": "shield",
+          "amount": 14
+        },
+        {
+          "tick": 161,
+          "type": "swing",
+          "t": 1.308,
+          "wall": 1.35,
+          "combo": 3
+        },
+        {
+          "tick": 168,
+          "type": "hit",
+          "t": 1.367,
+          "wall": 1.408,
+          "target": 1,
+          "kind": "shield",
+          "amount": 27
+        },
+        {
+          "tick": 212,
+          "type": "swing",
+          "t": 1.692,
+          "wall": 1.775,
+          "combo": 1
+        },
+        {
+          "tick": 247,
+          "type": "swing",
+          "t": 1.983,
+          "wall": 2.067,
+          "combo": 2
+        },
+        {
+          "tick": 282,
+          "type": "swing",
+          "t": 2.275,
+          "wall": 2.358,
+          "combo": 3
+        },
+        {
+          "tick": 289,
+          "type": "blocked",
+          "t": 2.333,
+          "wall": 2.417,
+          "target": 1
+        },
+        {
+          "tick": 322,
+          "type": "warning",
+          "t": 2.608,
+          "wall": 2.692,
+          "kind": "shield",
+          "id": 1,
+          "x": 1012.5999999999985,
+          "y": 400,
+          "face": -1
+        },
+        {
+          "tick": 328,
+          "type": "swing",
+          "t": 2.658,
+          "wall": 2.742,
+          "combo": 1
+        },
+        {
+          "tick": 335,
+          "type": "blocked",
+          "t": 2.717,
+          "wall": 2.8,
+          "target": 1
+        },
+        {
+          "tick": 363,
+          "type": "swing",
+          "t": 2.95,
+          "wall": 3.033,
+          "combo": 2
+        },
+        {
+          "tick": 370,
+          "type": "blocked",
+          "t": 3.008,
+          "wall": 3.092,
+          "target": 1
+        },
+        {
+          "tick": 398,
+          "type": "swing",
+          "t": 3.242,
+          "wall": 3.325,
+          "combo": 3
+        },
+        {
+          "tick": 405,
+          "type": "blocked",
+          "t": 3.3,
+          "wall": 3.383,
+          "target": 1
+        },
+        {
+          "tick": 406,
+          "type": "enemy-attack",
+          "t": 3.308,
+          "wall": 3.392,
+          "kind": "shield",
+          "id": 1,
+          "box": {
+            "x": 966.5999999999985,
+            "y": 406,
+            "w": 60,
+            "h": 32
+          }
+        },
+        {
+          "tick": 444,
+          "type": "swing",
+          "t": 3.625,
+          "wall": 3.708,
+          "combo": 1
+        },
+        {
+          "tick": 451,
+          "type": "hit",
+          "t": 3.683,
+          "wall": 3.767,
+          "target": 1,
+          "kind": "shield",
+          "amount": 14
+        },
+        {
+          "tick": 484,
+          "type": "swing",
+          "t": 3.917,
+          "wall": 4.042,
+          "combo": 2
+        },
+        {
+          "tick": 519,
+          "type": "swing",
+          "t": 4.208,
+          "wall": 4.333,
+          "combo": 3
+        },
+        {
+          "tick": 526,
+          "type": "hit",
+          "t": 4.267,
+          "wall": 4.392,
+          "target": 1,
+          "kind": "shield",
+          "amount": 27
+        },
+        {
+          "tick": 526,
+          "type": "kill",
+          "t": 4.267,
+          "wall": 4.392,
+          "kind": "shield"
+        }
+      ],
+      "replay": "exact recorded inputs reproduce damage and enemy health"
+    },
+    {
+      "seed": "LOTUS-1025",
+      "relic": "echo",
+      "policy": "read",
+      "won": true,
+      "seconds": 1.575,
+      "damage": 0,
+      "enemyHP": 0,
+      "focusSpent": 50,
+      "jumps": 1,
+      "dashes": 1,
+      "waiting": 0,
+      "inputs": [
+        {
+          "tick": 0,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 12,
+          "attack": true,
+          "aimFace": 1,
+          "jump": false
+        },
+        {
+          "tick": 24,
+          "attack": false,
+          "aimFace": 1,
+          "clonePressed": true,
+          "dashPressed": true,
+          "right": true,
+          "jump": false
+        },
+        {
+          "tick": 36,
+          "attack": false,
+          "aimFace": -1,
+          "jumpPressed": true,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 48,
+          "attack": true,
+          "aimFace": -1,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 60,
+          "attack": true,
+          "aimFace": -1,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 72,
+          "attack": true,
+          "aimFace": -1,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 84,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": true
+        },
+        {
+          "tick": 96,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": true
+        },
+        {
+          "tick": 108,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 120,
+          "attack": false,
+          "aimFace": -1,
+          "right": true,
+          "jump": true,
+          "down": true,
+          "jumpPressed": true
+        },
+        {
+          "tick": 132,
+          "attack": false,
+          "aimFace": -1,
+          "right": true,
+          "jump": true,
+          "down": true,
+          "jumpPressed": true
+        },
+        {
+          "tick": 144,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 156,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        },
+        {
+          "tick": 168,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        },
+        {
+          "tick": 180,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        }
+      ],
+      "events": [
+        {
+          "tick": 0,
+          "type": "swing",
+          "t": 0.008,
+          "wall": 0.008,
+          "combo": 1
+        },
+        {
+          "tick": 0,
+          "type": "warning",
+          "t": 0.008,
+          "wall": 0.008,
+          "kind": "shield",
+          "id": 1,
+          "x": 1011,
+          "y": 400,
+          "face": -1
+        },
+        {
+          "tick": 7,
+          "type": "blocked",
+          "t": 0.067,
+          "wall": 0.067,
+          "target": 1
+        },
+        {
+          "tick": 24,
+          "type": "dash",
+          "t": 0.208,
+          "wall": 0.208
+        },
+        {
+          "tick": 24,
+          "type": "clone",
+          "t": 0.208,
+          "wall": 0.208,
+          "cost": 50
+        },
+        {
+          "tick": 38,
+          "type": "clone-strike",
+          "t": 0.325,
+          "wall": 0.325
+        },
+        {
+          "tick": 44,
+          "type": "hit",
+          "t": 0.375,
+          "wall": 0.375,
+          "target": 1,
+          "kind": "shield",
+          "amount": 18
+        },
+        {
+          "tick": 51,
+          "type": "jump",
+          "t": 0.392,
+          "wall": 0.433,
+          "air": false
+        },
+        {
+          "tick": 51,
+          "type": "swing",
+          "t": 0.392,
+          "wall": 0.433,
+          "combo": 2
+        },
+        {
+          "tick": 86,
+          "type": "swing",
+          "t": 0.683,
+          "wall": 0.725,
+          "combo": 3
+        },
+        {
+          "tick": 89,
+          "type": "enemy-attack",
+          "t": 0.708,
+          "wall": 0.75,
+          "kind": "shield",
+          "id": 1,
+          "box": {
+            "x": 977,
+            "y": 406,
+            "w": 60,
+            "h": 32
+          }
+        },
+        {
+          "tick": 106,
+          "type": "clone-strike",
+          "t": 0.85,
+          "wall": 0.892
+        },
+        {
+          "tick": 115,
+          "type": "hit",
+          "t": 0.925,
+          "wall": 0.967,
+          "target": 1,
+          "kind": "shield",
+          "amount": 18
+        },
+        {
+          "tick": 132,
+          "type": "drop",
+          "t": 1.025,
+          "wall": 1.108
+        },
+        {
+          "tick": 144,
+          "type": "swing",
+          "t": 1.125,
+          "wall": 1.208,
+          "combo": 1
+        },
+        {
+          "tick": 155,
+          "type": "hit",
+          "t": 1.217,
+          "wall": 1.3,
+          "target": 1,
+          "kind": "shield",
+          "amount": 14
+        },
+        {
+          "tick": 179,
+          "type": "clone-strike",
+          "t": 1.375,
+          "wall": 1.5
+        },
+        {
+          "tick": 184,
+          "type": "swing",
+          "t": 1.417,
+          "wall": 1.542,
+          "combo": 2
+        },
+        {
+          "tick": 188,
+          "type": "hit",
+          "t": 1.45,
+          "wall": 1.575,
+          "target": 1,
+          "kind": "shield",
+          "amount": 18
+        },
+        {
+          "tick": 188,
+          "type": "kill",
+          "t": 1.45,
+          "wall": 1.575,
+          "kind": "shield"
+        }
+      ],
+      "replay": "exact recorded inputs reproduce damage and enemy health"
+    },
+    {
+      "seed": "LOTUS-1025",
+      "relic": "echo",
+      "policy": "read-no-clone",
+      "won": true,
+      "seconds": 1.858,
+      "damage": 0,
+      "enemyHP": 0,
+      "focusSpent": 0,
+      "jumps": 1,
+      "dashes": 0,
+      "waiting": 0,
+      "inputs": [
+        {
+          "tick": 0,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 12,
+          "attack": true,
+          "aimFace": 1,
+          "jump": false
+        },
+        {
+          "tick": 24,
+          "attack": false,
+          "aimFace": 1,
+          "jumpPressed": true,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 36,
+          "attack": false,
+          "aimFace": 1,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 48,
+          "attack": false,
+          "aimFace": 1,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 60,
+          "attack": false,
+          "aimFace": 1,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 72,
+          "attack": false,
+          "aimFace": -1,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 84,
+          "attack": true,
+          "aimFace": -1,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 96,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        },
+        {
+          "tick": 108,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        },
+        {
+          "tick": 120,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        },
+        {
+          "tick": 132,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        },
+        {
+          "tick": 144,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        },
+        {
+          "tick": 156,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 168,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 180,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 192,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 204,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 216,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        }
+      ],
+      "events": [
+        {
+          "tick": 0,
+          "type": "swing",
+          "t": 0.008,
+          "wall": 0.008,
+          "combo": 1
+        },
+        {
+          "tick": 0,
+          "type": "warning",
+          "t": 0.008,
+          "wall": 0.008,
+          "kind": "shield",
+          "id": 1,
+          "x": 1011,
+          "y": 400,
+          "face": -1
+        },
+        {
+          "tick": 7,
+          "type": "blocked",
+          "t": 0.067,
+          "wall": 0.067,
+          "target": 1
+        },
+        {
+          "tick": 24,
+          "type": "jump",
+          "t": 0.208,
+          "wall": 0.208,
+          "air": false
+        },
+        {
+          "tick": 84,
+          "type": "swing",
+          "t": 0.708,
+          "wall": 0.708,
+          "combo": 2
+        },
+        {
+          "tick": 84,
+          "type": "enemy-attack",
+          "t": 0.708,
+          "wall": 0.708,
+          "kind": "shield",
+          "id": 1,
+          "box": {
+            "x": 965,
+            "y": 406,
+            "w": 60,
+            "h": 32
+          }
+        },
+        {
+          "tick": 105,
+          "type": "hit",
+          "t": 0.883,
+          "wall": 0.883,
+          "target": 1,
+          "kind": "shield",
+          "amount": 14
+        },
+        {
+          "tick": 124,
+          "type": "swing",
+          "t": 1,
+          "wall": 1.042,
+          "combo": 3
+        },
+        {
+          "tick": 131,
+          "type": "hit",
+          "t": 1.058,
+          "wall": 1.1,
+          "target": 1,
+          "kind": "shield",
+          "amount": 27
+        },
+        {
+          "tick": 175,
+          "type": "swing",
+          "t": 1.383,
+          "wall": 1.467,
+          "combo": 1
+        },
+        {
+          "tick": 182,
+          "type": "hit",
+          "t": 1.442,
+          "wall": 1.525,
+          "target": 1,
+          "kind": "shield",
+          "amount": 14
+        },
+        {
+          "tick": 215,
+          "type": "swing",
+          "t": 1.675,
+          "wall": 1.8,
+          "combo": 2
+        },
+        {
+          "tick": 222,
+          "type": "hit",
+          "t": 1.733,
+          "wall": 1.858,
+          "target": 1,
+          "kind": "shield",
+          "amount": 14
+        },
+        {
+          "tick": 222,
+          "type": "kill",
+          "t": 1.733,
+          "wall": 1.858,
+          "kind": "shield"
+        }
+      ],
+      "replay": "exact recorded inputs reproduce damage and enemy health"
+    },
+    {
+      "seed": "LOTUS-0318",
+      "relic": "cloud",
+      "policy": "hold",
+      "won": true,
+      "seconds": 4.392,
+      "damage": 16,
+      "enemyHP": 0,
+      "focusSpent": 0,
+      "jumps": 0,
+      "dashes": 0,
+      "waiting": 0,
+      "inputs": [
+        {
+          "tick": 0,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 12,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 24,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 36,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 48,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 60,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 72,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 84,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 96,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 108,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 120,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 132,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 144,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 156,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 168,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 180,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 192,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 204,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 216,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 228,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 240,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 252,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 264,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 276,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 288,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 300,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 312,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 324,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 336,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 348,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 360,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 372,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 384,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 396,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 408,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 420,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 432,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 444,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 456,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 468,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 480,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 492,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 504,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 516,
+          "attack": true,
+          "aimFace": 1
+        }
+      ],
+      "events": [
+        {
+          "tick": 0,
+          "type": "swing",
+          "t": 0.008,
+          "wall": 0.008,
+          "combo": 1
+        },
+        {
+          "tick": 0,
+          "type": "warning",
+          "t": 0.008,
+          "wall": 0.008,
+          "kind": "shield",
+          "id": 1,
+          "x": 1030,
+          "y": 400,
+          "face": -1
+        },
+        {
+          "tick": 7,
+          "type": "blocked",
+          "t": 0.067,
+          "wall": 0.067,
+          "target": 1
+        },
+        {
+          "tick": 35,
+          "type": "swing",
+          "t": 0.3,
+          "wall": 0.3,
+          "combo": 2
+        },
+        {
+          "tick": 42,
+          "type": "blocked",
+          "t": 0.358,
+          "wall": 0.358,
+          "target": 1
+        },
+        {
+          "tick": 70,
+          "type": "swing",
+          "t": 0.592,
+          "wall": 0.592,
+          "combo": 3
+        },
+        {
+          "tick": 77,
+          "type": "blocked",
+          "t": 0.65,
+          "wall": 0.65,
+          "target": 1
+        },
+        {
+          "tick": 84,
+          "type": "enemy-attack",
+          "t": 0.708,
+          "wall": 0.708,
+          "kind": "shield",
+          "id": 1,
+          "box": {
+            "x": 984,
+            "y": 406,
+            "w": 60,
+            "h": 32
+          }
+        },
+        {
+          "tick": 85,
+          "type": "hurt",
+          "t": 0.717,
+          "wall": 0.717,
+          "source": "重盾兵·盾撞",
+          "amount": 16
+        },
+        {
+          "tick": 86,
+          "type": "swing",
+          "t": 0.725,
+          "wall": 0.725,
+          "combo": 1
+        },
+        {
+          "tick": 93,
+          "type": "blocked",
+          "t": 0.783,
+          "wall": 0.783,
+          "target": 1
+        },
+        {
+          "tick": 121,
+          "type": "swing",
+          "t": 1.017,
+          "wall": 1.017,
+          "combo": 2
+        },
+        {
+          "tick": 128,
+          "type": "hit",
+          "t": 1.075,
+          "wall": 1.075,
+          "target": 1,
+          "kind": "shield",
+          "amount": 14
+        },
+        {
+          "tick": 161,
+          "type": "swing",
+          "t": 1.308,
+          "wall": 1.35,
+          "combo": 3
+        },
+        {
+          "tick": 168,
+          "type": "hit",
+          "t": 1.367,
+          "wall": 1.408,
+          "target": 1,
+          "kind": "shield",
+          "amount": 27
+        },
+        {
+          "tick": 212,
+          "type": "swing",
+          "t": 1.692,
+          "wall": 1.775,
+          "combo": 1
+        },
+        {
+          "tick": 247,
+          "type": "swing",
+          "t": 1.983,
+          "wall": 2.067,
+          "combo": 2
+        },
+        {
+          "tick": 282,
+          "type": "swing",
+          "t": 2.275,
+          "wall": 2.358,
+          "combo": 3
+        },
+        {
+          "tick": 289,
+          "type": "blocked",
+          "t": 2.333,
+          "wall": 2.417,
+          "target": 1
+        },
+        {
+          "tick": 322,
+          "type": "warning",
+          "t": 2.608,
+          "wall": 2.692,
+          "kind": "shield",
+          "id": 1,
+          "x": 1031.5999999999985,
+          "y": 400,
+          "face": -1
+        },
+        {
+          "tick": 328,
+          "type": "swing",
+          "t": 2.658,
+          "wall": 2.742,
+          "combo": 1
+        },
+        {
+          "tick": 335,
+          "type": "blocked",
+          "t": 2.717,
+          "wall": 2.8,
+          "target": 1
+        },
+        {
+          "tick": 363,
+          "type": "swing",
+          "t": 2.95,
+          "wall": 3.033,
+          "combo": 2
+        },
+        {
+          "tick": 370,
+          "type": "blocked",
+          "t": 3.008,
+          "wall": 3.092,
+          "target": 1
+        },
+        {
+          "tick": 398,
+          "type": "swing",
+          "t": 3.242,
+          "wall": 3.325,
+          "combo": 3
+        },
+        {
+          "tick": 405,
+          "type": "blocked",
+          "t": 3.3,
+          "wall": 3.383,
+          "target": 1
+        },
+        {
+          "tick": 406,
+          "type": "enemy-attack",
+          "t": 3.308,
+          "wall": 3.392,
+          "kind": "shield",
+          "id": 1,
+          "box": {
+            "x": 985.5999999999985,
+            "y": 406,
+            "w": 60,
+            "h": 32
+          }
+        },
+        {
+          "tick": 444,
+          "type": "swing",
+          "t": 3.625,
+          "wall": 3.708,
+          "combo": 1
+        },
+        {
+          "tick": 451,
+          "type": "hit",
+          "t": 3.683,
+          "wall": 3.767,
+          "target": 1,
+          "kind": "shield",
+          "amount": 14
+        },
+        {
+          "tick": 484,
+          "type": "swing",
+          "t": 3.917,
+          "wall": 4.042,
+          "combo": 2
+        },
+        {
+          "tick": 519,
+          "type": "swing",
+          "t": 4.208,
+          "wall": 4.333,
+          "combo": 3
+        },
+        {
+          "tick": 526,
+          "type": "hit",
+          "t": 4.267,
+          "wall": 4.392,
+          "target": 1,
+          "kind": "shield",
+          "amount": 27
+        },
+        {
+          "tick": 526,
+          "type": "kill",
+          "t": 4.267,
+          "wall": 4.392,
+          "kind": "shield"
+        }
+      ],
+      "replay": "exact recorded inputs reproduce damage and enemy health"
+    },
+    {
+      "seed": "LOTUS-0318",
+      "relic": "cloud",
+      "policy": "read",
+      "won": true,
+      "seconds": 3.875,
+      "damage": 16,
+      "enemyHP": 0,
+      "focusSpent": 0,
+      "jumps": 1,
+      "dashes": 0,
+      "waiting": 0,
+      "inputs": [
+        {
+          "tick": 0,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 12,
+          "attack": true,
+          "aimFace": 1,
+          "jump": false
+        },
+        {
+          "tick": 24,
+          "attack": false,
+          "aimFace": 1,
+          "jumpPressed": true,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 36,
+          "attack": false,
+          "aimFace": 1,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 48,
+          "attack": false,
+          "aimFace": 1,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 60,
+          "attack": false,
+          "aimFace": 1,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 72,
+          "attack": false,
+          "aimFace": -1,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 84,
+          "attack": true,
+          "aimFace": -1,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 96,
+          "attack": false,
+          "aimFace": -1,
+          "left": true,
+          "jump": true,
+          "down": true,
+          "jumpPressed": true
+        },
+        {
+          "tick": 108,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        },
+        {
+          "tick": 120,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 132,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 144,
+          "attack": true,
+          "aimFace": -1,
+          "right": true,
+          "jump": false
+        },
+        {
+          "tick": 156,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 168,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 180,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        },
+        {
+          "tick": 192,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        },
+        {
+          "tick": 204,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 216,
+          "attack": true,
+          "aimFace": -1,
+          "right": true,
+          "jump": false
+        },
+        {
+          "tick": 228,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 240,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 252,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 264,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 276,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 288,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 300,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 312,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 324,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 336,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 348,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        },
+        {
+          "tick": 360,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        },
+        {
+          "tick": 372,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 384,
+          "attack": true,
+          "aimFace": -1,
+          "right": true,
+          "jump": false
+        },
+        {
+          "tick": 396,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 408,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 420,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 432,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        },
+        {
+          "tick": 444,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 456,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        }
+      ],
+      "events": [
+        {
+          "tick": 0,
+          "type": "swing",
+          "t": 0.008,
+          "wall": 0.008,
+          "combo": 1
+        },
+        {
+          "tick": 0,
+          "type": "warning",
+          "t": 0.008,
+          "wall": 0.008,
+          "kind": "shield",
+          "id": 1,
+          "x": 1030,
+          "y": 400,
+          "face": -1
+        },
+        {
+          "tick": 7,
+          "type": "blocked",
+          "t": 0.067,
+          "wall": 0.067,
+          "target": 1
+        },
+        {
+          "tick": 24,
+          "type": "jump",
+          "t": 0.208,
+          "wall": 0.208,
+          "air": false
+        },
+        {
+          "tick": 84,
+          "type": "swing",
+          "t": 0.708,
+          "wall": 0.708,
+          "combo": 2
+        },
+        {
+          "tick": 84,
+          "type": "enemy-attack",
+          "t": 0.708,
+          "wall": 0.708,
+          "kind": "shield",
+          "id": 1,
+          "box": {
+            "x": 984,
+            "y": 406,
+            "w": 60,
+            "h": 32
+          }
+        },
+        {
+          "tick": 96,
+          "type": "drop",
+          "t": 0.808,
+          "wall": 0.808
+        },
+        {
+          "tick": 119,
+          "type": "swing",
+          "t": 1,
+          "wall": 1,
+          "combo": 3
+        },
+        {
+          "tick": 126,
+          "type": "hit",
+          "t": 1.058,
+          "wall": 1.058,
+          "target": 1,
+          "kind": "shield",
+          "amount": 27
+        },
+        {
+          "tick": 170,
+          "type": "swing",
+          "t": 1.383,
+          "wall": 1.425,
+          "combo": 1
+        },
+        {
+          "tick": 177,
+          "type": "hit",
+          "t": 1.442,
+          "wall": 1.483,
+          "target": 1,
+          "kind": "shield",
+          "amount": 14
+        },
+        {
+          "tick": 210,
+          "type": "swing",
+          "t": 1.675,
+          "wall": 1.758,
+          "combo": 2
+        },
+        {
+          "tick": 245,
+          "type": "swing",
+          "t": 1.967,
+          "wall": 2.05,
+          "combo": 3
+        },
+        {
+          "tick": 250,
+          "type": "warning",
+          "t": 2.008,
+          "wall": 2.092,
+          "kind": "shield",
+          "id": 1,
+          "x": 1000.633333333333,
+          "y": 400,
+          "face": 1
+        },
+        {
+          "tick": 252,
+          "type": "blocked",
+          "t": 2.025,
+          "wall": 2.108,
+          "target": 1
+        },
+        {
+          "tick": 291,
+          "type": "swing",
+          "t": 2.35,
+          "wall": 2.433,
+          "combo": 1
+        },
+        {
+          "tick": 298,
+          "type": "blocked",
+          "t": 2.408,
+          "wall": 2.492,
+          "target": 1
+        },
+        {
+          "tick": 326,
+          "type": "swing",
+          "t": 2.642,
+          "wall": 2.725,
+          "combo": 2
+        },
+        {
+          "tick": 333,
+          "type": "blocked",
+          "t": 2.7,
+          "wall": 2.783,
+          "target": 1
+        },
+        {
+          "tick": 334,
+          "type": "enemy-attack",
+          "t": 2.708,
+          "wall": 2.792,
+          "kind": "shield",
+          "id": 1,
+          "box": {
+            "x": 1014.633333333333,
+            "y": 406,
+            "w": 60,
+            "h": 32
+          }
+        },
+        {
+          "tick": 335,
+          "type": "hurt",
+          "t": 2.717,
+          "wall": 2.8,
+          "source": "重盾兵·盾撞",
+          "amount": 16
+        },
+        {
+          "tick": 336,
+          "type": "swing",
+          "t": 2.725,
+          "wall": 2.808,
+          "combo": 3
+        },
+        {
+          "tick": 343,
+          "type": "blocked",
+          "t": 2.783,
+          "wall": 2.867,
+          "target": 1
+        },
+        {
+          "tick": 382,
+          "type": "swing",
+          "t": 3.108,
+          "wall": 3.192,
+          "combo": 1
+        },
+        {
+          "tick": 417,
+          "type": "swing",
+          "t": 3.4,
+          "wall": 3.483,
+          "combo": 2
+        },
+        {
+          "tick": 424,
+          "type": "hit",
+          "t": 3.458,
+          "wall": 3.542,
+          "target": 1,
+          "kind": "shield",
+          "amount": 14
+        },
+        {
+          "tick": 457,
+          "type": "swing",
+          "t": 3.692,
+          "wall": 3.817,
+          "combo": 3
+        },
+        {
+          "tick": 464,
+          "type": "hit",
+          "t": 3.75,
+          "wall": 3.875,
+          "target": 1,
+          "kind": "shield",
+          "amount": 27
+        },
+        {
+          "tick": 464,
+          "type": "kill",
+          "t": 3.75,
+          "wall": 3.875,
+          "kind": "shield"
+        }
+      ],
+      "replay": "exact recorded inputs reproduce damage and enemy health"
+    },
+    {
+      "seed": "LOTUS-0318",
+      "relic": "cloud",
+      "policy": "read-no-clone",
+      "won": true,
+      "seconds": 3.875,
+      "damage": 16,
+      "enemyHP": 0,
+      "focusSpent": 0,
+      "jumps": 1,
+      "dashes": 0,
+      "waiting": 0,
+      "inputs": [
+        {
+          "tick": 0,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 12,
+          "attack": true,
+          "aimFace": 1,
+          "jump": false
+        },
+        {
+          "tick": 24,
+          "attack": false,
+          "aimFace": 1,
+          "jumpPressed": true,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 36,
+          "attack": false,
+          "aimFace": 1,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 48,
+          "attack": false,
+          "aimFace": 1,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 60,
+          "attack": false,
+          "aimFace": 1,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 72,
+          "attack": false,
+          "aimFace": -1,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 84,
+          "attack": true,
+          "aimFace": -1,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 96,
+          "attack": false,
+          "aimFace": -1,
+          "left": true,
+          "jump": true,
+          "down": true,
+          "jumpPressed": true
+        },
+        {
+          "tick": 108,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        },
+        {
+          "tick": 120,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 132,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 144,
+          "attack": true,
+          "aimFace": -1,
+          "right": true,
+          "jump": false
+        },
+        {
+          "tick": 156,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 168,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 180,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        },
+        {
+          "tick": 192,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        },
+        {
+          "tick": 204,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 216,
+          "attack": true,
+          "aimFace": -1,
+          "right": true,
+          "jump": false
+        },
+        {
+          "tick": 228,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 240,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 252,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 264,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 276,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 288,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 300,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 312,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 324,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 336,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 348,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        },
+        {
+          "tick": 360,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        },
+        {
+          "tick": 372,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 384,
+          "attack": true,
+          "aimFace": -1,
+          "right": true,
+          "jump": false
+        },
+        {
+          "tick": 396,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 408,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 420,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 432,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        },
+        {
+          "tick": 444,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 456,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        }
+      ],
+      "events": [
+        {
+          "tick": 0,
+          "type": "swing",
+          "t": 0.008,
+          "wall": 0.008,
+          "combo": 1
+        },
+        {
+          "tick": 0,
+          "type": "warning",
+          "t": 0.008,
+          "wall": 0.008,
+          "kind": "shield",
+          "id": 1,
+          "x": 1030,
+          "y": 400,
+          "face": -1
+        },
+        {
+          "tick": 7,
+          "type": "blocked",
+          "t": 0.067,
+          "wall": 0.067,
+          "target": 1
+        },
+        {
+          "tick": 24,
+          "type": "jump",
+          "t": 0.208,
+          "wall": 0.208,
+          "air": false
+        },
+        {
+          "tick": 84,
+          "type": "swing",
+          "t": 0.708,
+          "wall": 0.708,
+          "combo": 2
+        },
+        {
+          "tick": 84,
+          "type": "enemy-attack",
+          "t": 0.708,
+          "wall": 0.708,
+          "kind": "shield",
+          "id": 1,
+          "box": {
+            "x": 984,
+            "y": 406,
+            "w": 60,
+            "h": 32
+          }
+        },
+        {
+          "tick": 96,
+          "type": "drop",
+          "t": 0.808,
+          "wall": 0.808
+        },
+        {
+          "tick": 119,
+          "type": "swing",
+          "t": 1,
+          "wall": 1,
+          "combo": 3
+        },
+        {
+          "tick": 126,
+          "type": "hit",
+          "t": 1.058,
+          "wall": 1.058,
+          "target": 1,
+          "kind": "shield",
+          "amount": 27
+        },
+        {
+          "tick": 170,
+          "type": "swing",
+          "t": 1.383,
+          "wall": 1.425,
+          "combo": 1
+        },
+        {
+          "tick": 177,
+          "type": "hit",
+          "t": 1.442,
+          "wall": 1.483,
+          "target": 1,
+          "kind": "shield",
+          "amount": 14
+        },
+        {
+          "tick": 210,
+          "type": "swing",
+          "t": 1.675,
+          "wall": 1.758,
+          "combo": 2
+        },
+        {
+          "tick": 245,
+          "type": "swing",
+          "t": 1.967,
+          "wall": 2.05,
+          "combo": 3
+        },
+        {
+          "tick": 250,
+          "type": "warning",
+          "t": 2.008,
+          "wall": 2.092,
+          "kind": "shield",
+          "id": 1,
+          "x": 1000.633333333333,
+          "y": 400,
+          "face": 1
+        },
+        {
+          "tick": 252,
+          "type": "blocked",
+          "t": 2.025,
+          "wall": 2.108,
+          "target": 1
+        },
+        {
+          "tick": 291,
+          "type": "swing",
+          "t": 2.35,
+          "wall": 2.433,
+          "combo": 1
+        },
+        {
+          "tick": 298,
+          "type": "blocked",
+          "t": 2.408,
+          "wall": 2.492,
+          "target": 1
+        },
+        {
+          "tick": 326,
+          "type": "swing",
+          "t": 2.642,
+          "wall": 2.725,
+          "combo": 2
+        },
+        {
+          "tick": 333,
+          "type": "blocked",
+          "t": 2.7,
+          "wall": 2.783,
+          "target": 1
+        },
+        {
+          "tick": 334,
+          "type": "enemy-attack",
+          "t": 2.708,
+          "wall": 2.792,
+          "kind": "shield",
+          "id": 1,
+          "box": {
+            "x": 1014.633333333333,
+            "y": 406,
+            "w": 60,
+            "h": 32
+          }
+        },
+        {
+          "tick": 335,
+          "type": "hurt",
+          "t": 2.717,
+          "wall": 2.8,
+          "source": "重盾兵·盾撞",
+          "amount": 16
+        },
+        {
+          "tick": 336,
+          "type": "swing",
+          "t": 2.725,
+          "wall": 2.808,
+          "combo": 3
+        },
+        {
+          "tick": 343,
+          "type": "blocked",
+          "t": 2.783,
+          "wall": 2.867,
+          "target": 1
+        },
+        {
+          "tick": 382,
+          "type": "swing",
+          "t": 3.108,
+          "wall": 3.192,
+          "combo": 1
+        },
+        {
+          "tick": 417,
+          "type": "swing",
+          "t": 3.4,
+          "wall": 3.483,
+          "combo": 2
+        },
+        {
+          "tick": 424,
+          "type": "hit",
+          "t": 3.458,
+          "wall": 3.542,
+          "target": 1,
+          "kind": "shield",
+          "amount": 14
+        },
+        {
+          "tick": 457,
+          "type": "swing",
+          "t": 3.692,
+          "wall": 3.817,
+          "combo": 3
+        },
+        {
+          "tick": 464,
+          "type": "hit",
+          "t": 3.75,
+          "wall": 3.875,
+          "target": 1,
+          "kind": "shield",
+          "amount": 27
+        },
+        {
+          "tick": 464,
+          "type": "kill",
+          "t": 3.75,
+          "wall": 3.875,
+          "kind": "shield"
+        }
+      ],
+      "replay": "exact recorded inputs reproduce damage and enemy health"
+    },
+    {
+      "seed": "LOTUS-0318",
+      "relic": "echo",
+      "policy": "hold",
+      "won": true,
+      "seconds": 4.392,
+      "damage": 16,
+      "enemyHP": 0,
+      "focusSpent": 0,
+      "jumps": 0,
+      "dashes": 0,
+      "waiting": 0,
+      "inputs": [
+        {
+          "tick": 0,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 12,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 24,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 36,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 48,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 60,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 72,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 84,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 96,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 108,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 120,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 132,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 144,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 156,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 168,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 180,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 192,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 204,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 216,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 228,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 240,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 252,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 264,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 276,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 288,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 300,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 312,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 324,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 336,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 348,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 360,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 372,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 384,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 396,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 408,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 420,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 432,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 444,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 456,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 468,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 480,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 492,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 504,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 516,
+          "attack": true,
+          "aimFace": 1
+        }
+      ],
+      "events": [
+        {
+          "tick": 0,
+          "type": "swing",
+          "t": 0.008,
+          "wall": 0.008,
+          "combo": 1
+        },
+        {
+          "tick": 0,
+          "type": "warning",
+          "t": 0.008,
+          "wall": 0.008,
+          "kind": "shield",
+          "id": 1,
+          "x": 1030,
+          "y": 400,
+          "face": -1
+        },
+        {
+          "tick": 7,
+          "type": "blocked",
+          "t": 0.067,
+          "wall": 0.067,
+          "target": 1
+        },
+        {
+          "tick": 35,
+          "type": "swing",
+          "t": 0.3,
+          "wall": 0.3,
+          "combo": 2
+        },
+        {
+          "tick": 42,
+          "type": "blocked",
+          "t": 0.358,
+          "wall": 0.358,
+          "target": 1
+        },
+        {
+          "tick": 70,
+          "type": "swing",
+          "t": 0.592,
+          "wall": 0.592,
+          "combo": 3
+        },
+        {
+          "tick": 77,
+          "type": "blocked",
+          "t": 0.65,
+          "wall": 0.65,
+          "target": 1
+        },
+        {
+          "tick": 84,
+          "type": "enemy-attack",
+          "t": 0.708,
+          "wall": 0.708,
+          "kind": "shield",
+          "id": 1,
+          "box": {
+            "x": 984,
+            "y": 406,
+            "w": 60,
+            "h": 32
+          }
+        },
+        {
+          "tick": 85,
+          "type": "hurt",
+          "t": 0.717,
+          "wall": 0.717,
+          "source": "重盾兵·盾撞",
+          "amount": 16
+        },
+        {
+          "tick": 86,
+          "type": "swing",
+          "t": 0.725,
+          "wall": 0.725,
+          "combo": 1
+        },
+        {
+          "tick": 93,
+          "type": "blocked",
+          "t": 0.783,
+          "wall": 0.783,
+          "target": 1
+        },
+        {
+          "tick": 121,
+          "type": "swing",
+          "t": 1.017,
+          "wall": 1.017,
+          "combo": 2
+        },
+        {
+          "tick": 128,
+          "type": "hit",
+          "t": 1.075,
+          "wall": 1.075,
+          "target": 1,
+          "kind": "shield",
+          "amount": 14
+        },
+        {
+          "tick": 161,
+          "type": "swing",
+          "t": 1.308,
+          "wall": 1.35,
+          "combo": 3
+        },
+        {
+          "tick": 168,
+          "type": "hit",
+          "t": 1.367,
+          "wall": 1.408,
+          "target": 1,
+          "kind": "shield",
+          "amount": 27
+        },
+        {
+          "tick": 212,
+          "type": "swing",
+          "t": 1.692,
+          "wall": 1.775,
+          "combo": 1
+        },
+        {
+          "tick": 247,
+          "type": "swing",
+          "t": 1.983,
+          "wall": 2.067,
+          "combo": 2
+        },
+        {
+          "tick": 282,
+          "type": "swing",
+          "t": 2.275,
+          "wall": 2.358,
+          "combo": 3
+        },
+        {
+          "tick": 289,
+          "type": "blocked",
+          "t": 2.333,
+          "wall": 2.417,
+          "target": 1
+        },
+        {
+          "tick": 322,
+          "type": "warning",
+          "t": 2.608,
+          "wall": 2.692,
+          "kind": "shield",
+          "id": 1,
+          "x": 1031.5999999999985,
+          "y": 400,
+          "face": -1
+        },
+        {
+          "tick": 328,
+          "type": "swing",
+          "t": 2.658,
+          "wall": 2.742,
+          "combo": 1
+        },
+        {
+          "tick": 335,
+          "type": "blocked",
+          "t": 2.717,
+          "wall": 2.8,
+          "target": 1
+        },
+        {
+          "tick": 363,
+          "type": "swing",
+          "t": 2.95,
+          "wall": 3.033,
+          "combo": 2
+        },
+        {
+          "tick": 370,
+          "type": "blocked",
+          "t": 3.008,
+          "wall": 3.092,
+          "target": 1
+        },
+        {
+          "tick": 398,
+          "type": "swing",
+          "t": 3.242,
+          "wall": 3.325,
+          "combo": 3
+        },
+        {
+          "tick": 405,
+          "type": "blocked",
+          "t": 3.3,
+          "wall": 3.383,
+          "target": 1
+        },
+        {
+          "tick": 406,
+          "type": "enemy-attack",
+          "t": 3.308,
+          "wall": 3.392,
+          "kind": "shield",
+          "id": 1,
+          "box": {
+            "x": 985.5999999999985,
+            "y": 406,
+            "w": 60,
+            "h": 32
+          }
+        },
+        {
+          "tick": 444,
+          "type": "swing",
+          "t": 3.625,
+          "wall": 3.708,
+          "combo": 1
+        },
+        {
+          "tick": 451,
+          "type": "hit",
+          "t": 3.683,
+          "wall": 3.767,
+          "target": 1,
+          "kind": "shield",
+          "amount": 14
+        },
+        {
+          "tick": 484,
+          "type": "swing",
+          "t": 3.917,
+          "wall": 4.042,
+          "combo": 2
+        },
+        {
+          "tick": 519,
+          "type": "swing",
+          "t": 4.208,
+          "wall": 4.333,
+          "combo": 3
+        },
+        {
+          "tick": 526,
+          "type": "hit",
+          "t": 4.267,
+          "wall": 4.392,
+          "target": 1,
+          "kind": "shield",
+          "amount": 27
+        },
+        {
+          "tick": 526,
+          "type": "kill",
+          "t": 4.267,
+          "wall": 4.392,
+          "kind": "shield"
+        }
+      ],
+      "replay": "exact recorded inputs reproduce damage and enemy health"
+    },
+    {
+      "seed": "LOTUS-0318",
+      "relic": "echo",
+      "policy": "read",
+      "won": true,
+      "seconds": 1.575,
+      "damage": 0,
+      "enemyHP": 0,
+      "focusSpent": 50,
+      "jumps": 1,
+      "dashes": 1,
+      "waiting": 0,
+      "inputs": [
+        {
+          "tick": 0,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 12,
+          "attack": true,
+          "aimFace": 1,
+          "jump": false
+        },
+        {
+          "tick": 24,
+          "attack": false,
+          "aimFace": 1,
+          "clonePressed": true,
+          "dashPressed": true,
+          "right": true,
+          "jump": false
+        },
+        {
+          "tick": 36,
+          "attack": false,
+          "aimFace": -1,
+          "jumpPressed": true,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 48,
+          "attack": true,
+          "aimFace": -1,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 60,
+          "attack": true,
+          "aimFace": -1,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 72,
+          "attack": true,
+          "aimFace": -1,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 84,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": true
+        },
+        {
+          "tick": 96,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": true
+        },
+        {
+          "tick": 108,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 120,
+          "attack": false,
+          "aimFace": -1,
+          "right": true,
+          "jump": true,
+          "down": true,
+          "jumpPressed": true
+        },
+        {
+          "tick": 132,
+          "attack": false,
+          "aimFace": -1,
+          "right": true,
+          "jump": true,
+          "down": true,
+          "jumpPressed": true
+        },
+        {
+          "tick": 144,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 156,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        },
+        {
+          "tick": 168,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        },
+        {
+          "tick": 180,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        }
+      ],
+      "events": [
+        {
+          "tick": 0,
+          "type": "swing",
+          "t": 0.008,
+          "wall": 0.008,
+          "combo": 1
+        },
+        {
+          "tick": 0,
+          "type": "warning",
+          "t": 0.008,
+          "wall": 0.008,
+          "kind": "shield",
+          "id": 1,
+          "x": 1030,
+          "y": 400,
+          "face": -1
+        },
+        {
+          "tick": 7,
+          "type": "blocked",
+          "t": 0.067,
+          "wall": 0.067,
+          "target": 1
+        },
+        {
+          "tick": 24,
+          "type": "dash",
+          "t": 0.208,
+          "wall": 0.208
+        },
+        {
+          "tick": 24,
+          "type": "clone",
+          "t": 0.208,
+          "wall": 0.208,
+          "cost": 50
+        },
+        {
+          "tick": 38,
+          "type": "clone-strike",
+          "t": 0.325,
+          "wall": 0.325
+        },
+        {
+          "tick": 44,
+          "type": "hit",
+          "t": 0.375,
+          "wall": 0.375,
+          "target": 1,
+          "kind": "shield",
+          "amount": 18
+        },
+        {
+          "tick": 51,
+          "type": "jump",
+          "t": 0.392,
+          "wall": 0.433,
+          "air": false
+        },
+        {
+          "tick": 51,
+          "type": "swing",
+          "t": 0.392,
+          "wall": 0.433,
+          "combo": 2
+        },
+        {
+          "tick": 86,
+          "type": "swing",
+          "t": 0.683,
+          "wall": 0.725,
+          "combo": 3
+        },
+        {
+          "tick": 89,
+          "type": "enemy-attack",
+          "t": 0.708,
+          "wall": 0.75,
+          "kind": "shield",
+          "id": 1,
+          "box": {
+            "x": 996,
+            "y": 406,
+            "w": 60,
+            "h": 32
+          }
+        },
+        {
+          "tick": 106,
+          "type": "clone-strike",
+          "t": 0.85,
+          "wall": 0.892
+        },
+        {
+          "tick": 115,
+          "type": "hit",
+          "t": 0.925,
+          "wall": 0.967,
+          "target": 1,
+          "kind": "shield",
+          "amount": 18
+        },
+        {
+          "tick": 132,
+          "type": "drop",
+          "t": 1.025,
+          "wall": 1.108
+        },
+        {
+          "tick": 144,
+          "type": "swing",
+          "t": 1.125,
+          "wall": 1.208,
+          "combo": 1
+        },
+        {
+          "tick": 155,
+          "type": "hit",
+          "t": 1.217,
+          "wall": 1.3,
+          "target": 1,
+          "kind": "shield",
+          "amount": 14
+        },
+        {
+          "tick": 179,
+          "type": "clone-strike",
+          "t": 1.375,
+          "wall": 1.5
+        },
+        {
+          "tick": 184,
+          "type": "swing",
+          "t": 1.417,
+          "wall": 1.542,
+          "combo": 2
+        },
+        {
+          "tick": 188,
+          "type": "hit",
+          "t": 1.45,
+          "wall": 1.575,
+          "target": 1,
+          "kind": "shield",
+          "amount": 18
+        },
+        {
+          "tick": 188,
+          "type": "kill",
+          "t": 1.45,
+          "wall": 1.575,
+          "kind": "shield"
+        }
+      ],
+      "replay": "exact recorded inputs reproduce damage and enemy health"
+    },
+    {
+      "seed": "LOTUS-0318",
+      "relic": "echo",
+      "policy": "read-no-clone",
+      "won": true,
+      "seconds": 3.875,
+      "damage": 16,
+      "enemyHP": 0,
+      "focusSpent": 0,
+      "jumps": 1,
+      "dashes": 0,
+      "waiting": 0,
+      "inputs": [
+        {
+          "tick": 0,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 12,
+          "attack": true,
+          "aimFace": 1,
+          "jump": false
+        },
+        {
+          "tick": 24,
+          "attack": false,
+          "aimFace": 1,
+          "jumpPressed": true,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 36,
+          "attack": false,
+          "aimFace": 1,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 48,
+          "attack": false,
+          "aimFace": 1,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 60,
+          "attack": false,
+          "aimFace": 1,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 72,
+          "attack": false,
+          "aimFace": -1,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 84,
+          "attack": true,
+          "aimFace": -1,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 96,
+          "attack": false,
+          "aimFace": -1,
+          "left": true,
+          "jump": true,
+          "down": true,
+          "jumpPressed": true
+        },
+        {
+          "tick": 108,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        },
+        {
+          "tick": 120,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 132,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 144,
+          "attack": true,
+          "aimFace": -1,
+          "right": true,
+          "jump": false
+        },
+        {
+          "tick": 156,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 168,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 180,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        },
+        {
+          "tick": 192,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        },
+        {
+          "tick": 204,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 216,
+          "attack": true,
+          "aimFace": -1,
+          "right": true,
+          "jump": false
+        },
+        {
+          "tick": 228,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 240,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 252,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 264,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 276,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 288,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 300,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 312,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 324,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 336,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 348,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        },
+        {
+          "tick": 360,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        },
+        {
+          "tick": 372,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 384,
+          "attack": true,
+          "aimFace": -1,
+          "right": true,
+          "jump": false
+        },
+        {
+          "tick": 396,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 408,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 420,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 432,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        },
+        {
+          "tick": 444,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 456,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        }
+      ],
+      "events": [
+        {
+          "tick": 0,
+          "type": "swing",
+          "t": 0.008,
+          "wall": 0.008,
+          "combo": 1
+        },
+        {
+          "tick": 0,
+          "type": "warning",
+          "t": 0.008,
+          "wall": 0.008,
+          "kind": "shield",
+          "id": 1,
+          "x": 1030,
+          "y": 400,
+          "face": -1
+        },
+        {
+          "tick": 7,
+          "type": "blocked",
+          "t": 0.067,
+          "wall": 0.067,
+          "target": 1
+        },
+        {
+          "tick": 24,
+          "type": "jump",
+          "t": 0.208,
+          "wall": 0.208,
+          "air": false
+        },
+        {
+          "tick": 84,
+          "type": "swing",
+          "t": 0.708,
+          "wall": 0.708,
+          "combo": 2
+        },
+        {
+          "tick": 84,
+          "type": "enemy-attack",
+          "t": 0.708,
+          "wall": 0.708,
+          "kind": "shield",
+          "id": 1,
+          "box": {
+            "x": 984,
+            "y": 406,
+            "w": 60,
+            "h": 32
+          }
+        },
+        {
+          "tick": 96,
+          "type": "drop",
+          "t": 0.808,
+          "wall": 0.808
+        },
+        {
+          "tick": 119,
+          "type": "swing",
+          "t": 1,
+          "wall": 1,
+          "combo": 3
+        },
+        {
+          "tick": 126,
+          "type": "hit",
+          "t": 1.058,
+          "wall": 1.058,
+          "target": 1,
+          "kind": "shield",
+          "amount": 27
+        },
+        {
+          "tick": 170,
+          "type": "swing",
+          "t": 1.383,
+          "wall": 1.425,
+          "combo": 1
+        },
+        {
+          "tick": 177,
+          "type": "hit",
+          "t": 1.442,
+          "wall": 1.483,
+          "target": 1,
+          "kind": "shield",
+          "amount": 14
+        },
+        {
+          "tick": 210,
+          "type": "swing",
+          "t": 1.675,
+          "wall": 1.758,
+          "combo": 2
+        },
+        {
+          "tick": 245,
+          "type": "swing",
+          "t": 1.967,
+          "wall": 2.05,
+          "combo": 3
+        },
+        {
+          "tick": 250,
+          "type": "warning",
+          "t": 2.008,
+          "wall": 2.092,
+          "kind": "shield",
+          "id": 1,
+          "x": 1000.633333333333,
+          "y": 400,
+          "face": 1
+        },
+        {
+          "tick": 252,
+          "type": "blocked",
+          "t": 2.025,
+          "wall": 2.108,
+          "target": 1
+        },
+        {
+          "tick": 291,
+          "type": "swing",
+          "t": 2.35,
+          "wall": 2.433,
+          "combo": 1
+        },
+        {
+          "tick": 298,
+          "type": "blocked",
+          "t": 2.408,
+          "wall": 2.492,
+          "target": 1
+        },
+        {
+          "tick": 326,
+          "type": "swing",
+          "t": 2.642,
+          "wall": 2.725,
+          "combo": 2
+        },
+        {
+          "tick": 333,
+          "type": "blocked",
+          "t": 2.7,
+          "wall": 2.783,
+          "target": 1
+        },
+        {
+          "tick": 334,
+          "type": "enemy-attack",
+          "t": 2.708,
+          "wall": 2.792,
+          "kind": "shield",
+          "id": 1,
+          "box": {
+            "x": 1014.633333333333,
+            "y": 406,
+            "w": 60,
+            "h": 32
+          }
+        },
+        {
+          "tick": 335,
+          "type": "hurt",
+          "t": 2.717,
+          "wall": 2.8,
+          "source": "重盾兵·盾撞",
+          "amount": 16
+        },
+        {
+          "tick": 336,
+          "type": "swing",
+          "t": 2.725,
+          "wall": 2.808,
+          "combo": 3
+        },
+        {
+          "tick": 343,
+          "type": "blocked",
+          "t": 2.783,
+          "wall": 2.867,
+          "target": 1
+        },
+        {
+          "tick": 382,
+          "type": "swing",
+          "t": 3.108,
+          "wall": 3.192,
+          "combo": 1
+        },
+        {
+          "tick": 417,
+          "type": "swing",
+          "t": 3.4,
+          "wall": 3.483,
+          "combo": 2
+        },
+        {
+          "tick": 424,
+          "type": "hit",
+          "t": 3.458,
+          "wall": 3.542,
+          "target": 1,
+          "kind": "shield",
+          "amount": 14
+        },
+        {
+          "tick": 457,
+          "type": "swing",
+          "t": 3.692,
+          "wall": 3.817,
+          "combo": 3
+        },
+        {
+          "tick": 464,
+          "type": "hit",
+          "t": 3.75,
+          "wall": 3.875,
+          "target": 1,
+          "kind": "shield",
+          "amount": 27
+        },
+        {
+          "tick": 464,
+          "type": "kill",
+          "t": 3.75,
+          "wall": 3.875,
+          "kind": "shield"
+        }
+      ],
+      "replay": "exact recorded inputs reproduce damage and enemy health"
+    },
+    {
+      "seed": "LOTUS-0916",
+      "relic": "cloud",
+      "policy": "hold",
+      "won": true,
+      "seconds": 4.392,
+      "damage": 16,
+      "enemyHP": 0,
+      "focusSpent": 0,
+      "jumps": 0,
+      "dashes": 0,
+      "waiting": 0,
+      "inputs": [
+        {
+          "tick": 0,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 12,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 24,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 36,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 48,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 60,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 72,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 84,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 96,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 108,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 120,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 132,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 144,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 156,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 168,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 180,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 192,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 204,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 216,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 228,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 240,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 252,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 264,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 276,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 288,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 300,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 312,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 324,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 336,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 348,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 360,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 372,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 384,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 396,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 408,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 420,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 432,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 444,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 456,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 468,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 480,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 492,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 504,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 516,
+          "attack": true,
+          "aimFace": 1
+        }
+      ],
+      "events": [
+        {
+          "tick": 0,
+          "type": "swing",
+          "t": 0.008,
+          "wall": 0.008,
+          "combo": 1
+        },
+        {
+          "tick": 0,
+          "type": "warning",
+          "t": 0.008,
+          "wall": 0.008,
+          "kind": "shield",
+          "id": 1,
+          "x": 1026,
+          "y": 400,
+          "face": -1
+        },
+        {
+          "tick": 7,
+          "type": "blocked",
+          "t": 0.067,
+          "wall": 0.067,
+          "target": 1
+        },
+        {
+          "tick": 35,
+          "type": "swing",
+          "t": 0.3,
+          "wall": 0.3,
+          "combo": 2
+        },
+        {
+          "tick": 42,
+          "type": "blocked",
+          "t": 0.358,
+          "wall": 0.358,
+          "target": 1
+        },
+        {
+          "tick": 70,
+          "type": "swing",
+          "t": 0.592,
+          "wall": 0.592,
+          "combo": 3
+        },
+        {
+          "tick": 77,
+          "type": "blocked",
+          "t": 0.65,
+          "wall": 0.65,
+          "target": 1
+        },
+        {
+          "tick": 84,
+          "type": "enemy-attack",
+          "t": 0.708,
+          "wall": 0.708,
+          "kind": "shield",
+          "id": 1,
+          "box": {
+            "x": 980,
+            "y": 406,
+            "w": 60,
+            "h": 32
+          }
+        },
+        {
+          "tick": 85,
+          "type": "hurt",
+          "t": 0.717,
+          "wall": 0.717,
+          "source": "重盾兵·盾撞",
+          "amount": 16
+        },
+        {
+          "tick": 86,
+          "type": "swing",
+          "t": 0.725,
+          "wall": 0.725,
+          "combo": 1
+        },
+        {
+          "tick": 93,
+          "type": "blocked",
+          "t": 0.783,
+          "wall": 0.783,
+          "target": 1
+        },
+        {
+          "tick": 121,
+          "type": "swing",
+          "t": 1.017,
+          "wall": 1.017,
+          "combo": 2
+        },
+        {
+          "tick": 128,
+          "type": "hit",
+          "t": 1.075,
+          "wall": 1.075,
+          "target": 1,
+          "kind": "shield",
+          "amount": 14
+        },
+        {
+          "tick": 161,
+          "type": "swing",
+          "t": 1.308,
+          "wall": 1.35,
+          "combo": 3
+        },
+        {
+          "tick": 168,
+          "type": "hit",
+          "t": 1.367,
+          "wall": 1.408,
+          "target": 1,
+          "kind": "shield",
+          "amount": 27
+        },
+        {
+          "tick": 212,
+          "type": "swing",
+          "t": 1.692,
+          "wall": 1.775,
+          "combo": 1
+        },
+        {
+          "tick": 247,
+          "type": "swing",
+          "t": 1.983,
+          "wall": 2.067,
+          "combo": 2
+        },
+        {
+          "tick": 282,
+          "type": "swing",
+          "t": 2.275,
+          "wall": 2.358,
+          "combo": 3
+        },
+        {
+          "tick": 289,
+          "type": "blocked",
+          "t": 2.333,
+          "wall": 2.417,
+          "target": 1
+        },
+        {
+          "tick": 322,
+          "type": "warning",
+          "t": 2.608,
+          "wall": 2.692,
+          "kind": "shield",
+          "id": 1,
+          "x": 1027.5999999999985,
+          "y": 400,
+          "face": -1
+        },
+        {
+          "tick": 328,
+          "type": "swing",
+          "t": 2.658,
+          "wall": 2.742,
+          "combo": 1
+        },
+        {
+          "tick": 335,
+          "type": "blocked",
+          "t": 2.717,
+          "wall": 2.8,
+          "target": 1
+        },
+        {
+          "tick": 363,
+          "type": "swing",
+          "t": 2.95,
+          "wall": 3.033,
+          "combo": 2
+        },
+        {
+          "tick": 370,
+          "type": "blocked",
+          "t": 3.008,
+          "wall": 3.092,
+          "target": 1
+        },
+        {
+          "tick": 398,
+          "type": "swing",
+          "t": 3.242,
+          "wall": 3.325,
+          "combo": 3
+        },
+        {
+          "tick": 405,
+          "type": "blocked",
+          "t": 3.3,
+          "wall": 3.383,
+          "target": 1
+        },
+        {
+          "tick": 406,
+          "type": "enemy-attack",
+          "t": 3.308,
+          "wall": 3.392,
+          "kind": "shield",
+          "id": 1,
+          "box": {
+            "x": 981.5999999999985,
+            "y": 406,
+            "w": 60,
+            "h": 32
+          }
+        },
+        {
+          "tick": 444,
+          "type": "swing",
+          "t": 3.625,
+          "wall": 3.708,
+          "combo": 1
+        },
+        {
+          "tick": 451,
+          "type": "hit",
+          "t": 3.683,
+          "wall": 3.767,
+          "target": 1,
+          "kind": "shield",
+          "amount": 14
+        },
+        {
+          "tick": 484,
+          "type": "swing",
+          "t": 3.917,
+          "wall": 4.042,
+          "combo": 2
+        },
+        {
+          "tick": 519,
+          "type": "swing",
+          "t": 4.208,
+          "wall": 4.333,
+          "combo": 3
+        },
+        {
+          "tick": 526,
+          "type": "hit",
+          "t": 4.267,
+          "wall": 4.392,
+          "target": 1,
+          "kind": "shield",
+          "amount": 27
+        },
+        {
+          "tick": 526,
+          "type": "kill",
+          "t": 4.267,
+          "wall": 4.392,
+          "kind": "shield"
+        }
+      ],
+      "replay": "exact recorded inputs reproduce damage and enemy health"
+    },
+    {
+      "seed": "LOTUS-0916",
+      "relic": "cloud",
+      "policy": "read",
+      "won": true,
+      "seconds": 3.875,
+      "damage": 16,
+      "enemyHP": 0,
+      "focusSpent": 0,
+      "jumps": 1,
+      "dashes": 0,
+      "waiting": 0,
+      "inputs": [
+        {
+          "tick": 0,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 12,
+          "attack": true,
+          "aimFace": 1,
+          "jump": false
+        },
+        {
+          "tick": 24,
+          "attack": false,
+          "aimFace": 1,
+          "jumpPressed": true,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 36,
+          "attack": false,
+          "aimFace": 1,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 48,
+          "attack": false,
+          "aimFace": 1,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 60,
+          "attack": false,
+          "aimFace": 1,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 72,
+          "attack": false,
+          "aimFace": -1,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 84,
+          "attack": true,
+          "aimFace": -1,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 96,
+          "attack": false,
+          "aimFace": -1,
+          "left": true,
+          "jump": true,
+          "down": true,
+          "jumpPressed": true
+        },
+        {
+          "tick": 108,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        },
+        {
+          "tick": 120,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 132,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 144,
+          "attack": true,
+          "aimFace": -1,
+          "right": true,
+          "jump": false
+        },
+        {
+          "tick": 156,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 168,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 180,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        },
+        {
+          "tick": 192,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        },
+        {
+          "tick": 204,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 216,
+          "attack": true,
+          "aimFace": -1,
+          "right": true,
+          "jump": false
+        },
+        {
+          "tick": 228,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 240,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 252,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 264,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 276,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 288,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 300,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 312,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 324,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 336,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 348,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        },
+        {
+          "tick": 360,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        },
+        {
+          "tick": 372,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 384,
+          "attack": true,
+          "aimFace": -1,
+          "right": true,
+          "jump": false
+        },
+        {
+          "tick": 396,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 408,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 420,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 432,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        },
+        {
+          "tick": 444,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 456,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        }
+      ],
+      "events": [
+        {
+          "tick": 0,
+          "type": "swing",
+          "t": 0.008,
+          "wall": 0.008,
+          "combo": 1
+        },
+        {
+          "tick": 0,
+          "type": "warning",
+          "t": 0.008,
+          "wall": 0.008,
+          "kind": "shield",
+          "id": 1,
+          "x": 1026,
+          "y": 400,
+          "face": -1
+        },
+        {
+          "tick": 7,
+          "type": "blocked",
+          "t": 0.067,
+          "wall": 0.067,
+          "target": 1
+        },
+        {
+          "tick": 24,
+          "type": "jump",
+          "t": 0.208,
+          "wall": 0.208,
+          "air": false
+        },
+        {
+          "tick": 84,
+          "type": "swing",
+          "t": 0.708,
+          "wall": 0.708,
+          "combo": 2
+        },
+        {
+          "tick": 84,
+          "type": "enemy-attack",
+          "t": 0.708,
+          "wall": 0.708,
+          "kind": "shield",
+          "id": 1,
+          "box": {
+            "x": 980,
+            "y": 406,
+            "w": 60,
+            "h": 32
+          }
+        },
+        {
+          "tick": 96,
+          "type": "drop",
+          "t": 0.808,
+          "wall": 0.808
+        },
+        {
+          "tick": 119,
+          "type": "swing",
+          "t": 1,
+          "wall": 1,
+          "combo": 3
+        },
+        {
+          "tick": 126,
+          "type": "hit",
+          "t": 1.058,
+          "wall": 1.058,
+          "target": 1,
+          "kind": "shield",
+          "amount": 27
+        },
+        {
+          "tick": 170,
+          "type": "swing",
+          "t": 1.383,
+          "wall": 1.425,
+          "combo": 1
+        },
+        {
+          "tick": 177,
+          "type": "hit",
+          "t": 1.442,
+          "wall": 1.483,
+          "target": 1,
+          "kind": "shield",
+          "amount": 14
+        },
+        {
+          "tick": 210,
+          "type": "swing",
+          "t": 1.675,
+          "wall": 1.758,
+          "combo": 2
+        },
+        {
+          "tick": 245,
+          "type": "swing",
+          "t": 1.967,
+          "wall": 2.05,
+          "combo": 3
+        },
+        {
+          "tick": 250,
+          "type": "warning",
+          "t": 2.008,
+          "wall": 2.092,
+          "kind": "shield",
+          "id": 1,
+          "x": 996.633333333333,
+          "y": 400,
+          "face": 1
+        },
+        {
+          "tick": 252,
+          "type": "blocked",
+          "t": 2.025,
+          "wall": 2.108,
+          "target": 1
+        },
+        {
+          "tick": 291,
+          "type": "swing",
+          "t": 2.35,
+          "wall": 2.433,
+          "combo": 1
+        },
+        {
+          "tick": 298,
+          "type": "blocked",
+          "t": 2.408,
+          "wall": 2.492,
+          "target": 1
+        },
+        {
+          "tick": 326,
+          "type": "swing",
+          "t": 2.642,
+          "wall": 2.725,
+          "combo": 2
+        },
+        {
+          "tick": 333,
+          "type": "blocked",
+          "t": 2.7,
+          "wall": 2.783,
+          "target": 1
+        },
+        {
+          "tick": 334,
+          "type": "enemy-attack",
+          "t": 2.708,
+          "wall": 2.792,
+          "kind": "shield",
+          "id": 1,
+          "box": {
+            "x": 1010.633333333333,
+            "y": 406,
+            "w": 60,
+            "h": 32
+          }
+        },
+        {
+          "tick": 335,
+          "type": "hurt",
+          "t": 2.717,
+          "wall": 2.8,
+          "source": "重盾兵·盾撞",
+          "amount": 16
+        },
+        {
+          "tick": 336,
+          "type": "swing",
+          "t": 2.725,
+          "wall": 2.808,
+          "combo": 3
+        },
+        {
+          "tick": 343,
+          "type": "blocked",
+          "t": 2.783,
+          "wall": 2.867,
+          "target": 1
+        },
+        {
+          "tick": 382,
+          "type": "swing",
+          "t": 3.108,
+          "wall": 3.192,
+          "combo": 1
+        },
+        {
+          "tick": 417,
+          "type": "swing",
+          "t": 3.4,
+          "wall": 3.483,
+          "combo": 2
+        },
+        {
+          "tick": 424,
+          "type": "hit",
+          "t": 3.458,
+          "wall": 3.542,
+          "target": 1,
+          "kind": "shield",
+          "amount": 14
+        },
+        {
+          "tick": 457,
+          "type": "swing",
+          "t": 3.692,
+          "wall": 3.817,
+          "combo": 3
+        },
+        {
+          "tick": 464,
+          "type": "hit",
+          "t": 3.75,
+          "wall": 3.875,
+          "target": 1,
+          "kind": "shield",
+          "amount": 27
+        },
+        {
+          "tick": 464,
+          "type": "kill",
+          "t": 3.75,
+          "wall": 3.875,
+          "kind": "shield"
+        }
+      ],
+      "replay": "exact recorded inputs reproduce damage and enemy health"
+    },
+    {
+      "seed": "LOTUS-0916",
+      "relic": "cloud",
+      "policy": "read-no-clone",
+      "won": true,
+      "seconds": 3.875,
+      "damage": 16,
+      "enemyHP": 0,
+      "focusSpent": 0,
+      "jumps": 1,
+      "dashes": 0,
+      "waiting": 0,
+      "inputs": [
+        {
+          "tick": 0,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 12,
+          "attack": true,
+          "aimFace": 1,
+          "jump": false
+        },
+        {
+          "tick": 24,
+          "attack": false,
+          "aimFace": 1,
+          "jumpPressed": true,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 36,
+          "attack": false,
+          "aimFace": 1,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 48,
+          "attack": false,
+          "aimFace": 1,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 60,
+          "attack": false,
+          "aimFace": 1,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 72,
+          "attack": false,
+          "aimFace": -1,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 84,
+          "attack": true,
+          "aimFace": -1,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 96,
+          "attack": false,
+          "aimFace": -1,
+          "left": true,
+          "jump": true,
+          "down": true,
+          "jumpPressed": true
+        },
+        {
+          "tick": 108,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        },
+        {
+          "tick": 120,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 132,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 144,
+          "attack": true,
+          "aimFace": -1,
+          "right": true,
+          "jump": false
+        },
+        {
+          "tick": 156,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 168,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 180,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        },
+        {
+          "tick": 192,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        },
+        {
+          "tick": 204,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 216,
+          "attack": true,
+          "aimFace": -1,
+          "right": true,
+          "jump": false
+        },
+        {
+          "tick": 228,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 240,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 252,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 264,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 276,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 288,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 300,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 312,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 324,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 336,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 348,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        },
+        {
+          "tick": 360,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        },
+        {
+          "tick": 372,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 384,
+          "attack": true,
+          "aimFace": -1,
+          "right": true,
+          "jump": false
+        },
+        {
+          "tick": 396,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 408,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 420,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 432,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        },
+        {
+          "tick": 444,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 456,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        }
+      ],
+      "events": [
+        {
+          "tick": 0,
+          "type": "swing",
+          "t": 0.008,
+          "wall": 0.008,
+          "combo": 1
+        },
+        {
+          "tick": 0,
+          "type": "warning",
+          "t": 0.008,
+          "wall": 0.008,
+          "kind": "shield",
+          "id": 1,
+          "x": 1026,
+          "y": 400,
+          "face": -1
+        },
+        {
+          "tick": 7,
+          "type": "blocked",
+          "t": 0.067,
+          "wall": 0.067,
+          "target": 1
+        },
+        {
+          "tick": 24,
+          "type": "jump",
+          "t": 0.208,
+          "wall": 0.208,
+          "air": false
+        },
+        {
+          "tick": 84,
+          "type": "swing",
+          "t": 0.708,
+          "wall": 0.708,
+          "combo": 2
+        },
+        {
+          "tick": 84,
+          "type": "enemy-attack",
+          "t": 0.708,
+          "wall": 0.708,
+          "kind": "shield",
+          "id": 1,
+          "box": {
+            "x": 980,
+            "y": 406,
+            "w": 60,
+            "h": 32
+          }
+        },
+        {
+          "tick": 96,
+          "type": "drop",
+          "t": 0.808,
+          "wall": 0.808
+        },
+        {
+          "tick": 119,
+          "type": "swing",
+          "t": 1,
+          "wall": 1,
+          "combo": 3
+        },
+        {
+          "tick": 126,
+          "type": "hit",
+          "t": 1.058,
+          "wall": 1.058,
+          "target": 1,
+          "kind": "shield",
+          "amount": 27
+        },
+        {
+          "tick": 170,
+          "type": "swing",
+          "t": 1.383,
+          "wall": 1.425,
+          "combo": 1
+        },
+        {
+          "tick": 177,
+          "type": "hit",
+          "t": 1.442,
+          "wall": 1.483,
+          "target": 1,
+          "kind": "shield",
+          "amount": 14
+        },
+        {
+          "tick": 210,
+          "type": "swing",
+          "t": 1.675,
+          "wall": 1.758,
+          "combo": 2
+        },
+        {
+          "tick": 245,
+          "type": "swing",
+          "t": 1.967,
+          "wall": 2.05,
+          "combo": 3
+        },
+        {
+          "tick": 250,
+          "type": "warning",
+          "t": 2.008,
+          "wall": 2.092,
+          "kind": "shield",
+          "id": 1,
+          "x": 996.633333333333,
+          "y": 400,
+          "face": 1
+        },
+        {
+          "tick": 252,
+          "type": "blocked",
+          "t": 2.025,
+          "wall": 2.108,
+          "target": 1
+        },
+        {
+          "tick": 291,
+          "type": "swing",
+          "t": 2.35,
+          "wall": 2.433,
+          "combo": 1
+        },
+        {
+          "tick": 298,
+          "type": "blocked",
+          "t": 2.408,
+          "wall": 2.492,
+          "target": 1
+        },
+        {
+          "tick": 326,
+          "type": "swing",
+          "t": 2.642,
+          "wall": 2.725,
+          "combo": 2
+        },
+        {
+          "tick": 333,
+          "type": "blocked",
+          "t": 2.7,
+          "wall": 2.783,
+          "target": 1
+        },
+        {
+          "tick": 334,
+          "type": "enemy-attack",
+          "t": 2.708,
+          "wall": 2.792,
+          "kind": "shield",
+          "id": 1,
+          "box": {
+            "x": 1010.633333333333,
+            "y": 406,
+            "w": 60,
+            "h": 32
+          }
+        },
+        {
+          "tick": 335,
+          "type": "hurt",
+          "t": 2.717,
+          "wall": 2.8,
+          "source": "重盾兵·盾撞",
+          "amount": 16
+        },
+        {
+          "tick": 336,
+          "type": "swing",
+          "t": 2.725,
+          "wall": 2.808,
+          "combo": 3
+        },
+        {
+          "tick": 343,
+          "type": "blocked",
+          "t": 2.783,
+          "wall": 2.867,
+          "target": 1
+        },
+        {
+          "tick": 382,
+          "type": "swing",
+          "t": 3.108,
+          "wall": 3.192,
+          "combo": 1
+        },
+        {
+          "tick": 417,
+          "type": "swing",
+          "t": 3.4,
+          "wall": 3.483,
+          "combo": 2
+        },
+        {
+          "tick": 424,
+          "type": "hit",
+          "t": 3.458,
+          "wall": 3.542,
+          "target": 1,
+          "kind": "shield",
+          "amount": 14
+        },
+        {
+          "tick": 457,
+          "type": "swing",
+          "t": 3.692,
+          "wall": 3.817,
+          "combo": 3
+        },
+        {
+          "tick": 464,
+          "type": "hit",
+          "t": 3.75,
+          "wall": 3.875,
+          "target": 1,
+          "kind": "shield",
+          "amount": 27
+        },
+        {
+          "tick": 464,
+          "type": "kill",
+          "t": 3.75,
+          "wall": 3.875,
+          "kind": "shield"
+        }
+      ],
+      "replay": "exact recorded inputs reproduce damage and enemy health"
+    },
+    {
+      "seed": "LOTUS-0916",
+      "relic": "echo",
+      "policy": "hold",
+      "won": true,
+      "seconds": 4.392,
+      "damage": 16,
+      "enemyHP": 0,
+      "focusSpent": 0,
+      "jumps": 0,
+      "dashes": 0,
+      "waiting": 0,
+      "inputs": [
+        {
+          "tick": 0,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 12,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 24,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 36,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 48,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 60,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 72,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 84,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 96,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 108,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 120,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 132,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 144,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 156,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 168,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 180,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 192,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 204,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 216,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 228,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 240,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 252,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 264,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 276,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 288,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 300,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 312,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 324,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 336,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 348,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 360,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 372,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 384,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 396,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 408,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 420,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 432,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 444,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 456,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 468,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 480,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 492,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 504,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 516,
+          "attack": true,
+          "aimFace": 1
+        }
+      ],
+      "events": [
+        {
+          "tick": 0,
+          "type": "swing",
+          "t": 0.008,
+          "wall": 0.008,
+          "combo": 1
+        },
+        {
+          "tick": 0,
+          "type": "warning",
+          "t": 0.008,
+          "wall": 0.008,
+          "kind": "shield",
+          "id": 1,
+          "x": 1026,
+          "y": 400,
+          "face": -1
+        },
+        {
+          "tick": 7,
+          "type": "blocked",
+          "t": 0.067,
+          "wall": 0.067,
+          "target": 1
+        },
+        {
+          "tick": 35,
+          "type": "swing",
+          "t": 0.3,
+          "wall": 0.3,
+          "combo": 2
+        },
+        {
+          "tick": 42,
+          "type": "blocked",
+          "t": 0.358,
+          "wall": 0.358,
+          "target": 1
+        },
+        {
+          "tick": 70,
+          "type": "swing",
+          "t": 0.592,
+          "wall": 0.592,
+          "combo": 3
+        },
+        {
+          "tick": 77,
+          "type": "blocked",
+          "t": 0.65,
+          "wall": 0.65,
+          "target": 1
+        },
+        {
+          "tick": 84,
+          "type": "enemy-attack",
+          "t": 0.708,
+          "wall": 0.708,
+          "kind": "shield",
+          "id": 1,
+          "box": {
+            "x": 980,
+            "y": 406,
+            "w": 60,
+            "h": 32
+          }
+        },
+        {
+          "tick": 85,
+          "type": "hurt",
+          "t": 0.717,
+          "wall": 0.717,
+          "source": "重盾兵·盾撞",
+          "amount": 16
+        },
+        {
+          "tick": 86,
+          "type": "swing",
+          "t": 0.725,
+          "wall": 0.725,
+          "combo": 1
+        },
+        {
+          "tick": 93,
+          "type": "blocked",
+          "t": 0.783,
+          "wall": 0.783,
+          "target": 1
+        },
+        {
+          "tick": 121,
+          "type": "swing",
+          "t": 1.017,
+          "wall": 1.017,
+          "combo": 2
+        },
+        {
+          "tick": 128,
+          "type": "hit",
+          "t": 1.075,
+          "wall": 1.075,
+          "target": 1,
+          "kind": "shield",
+          "amount": 14
+        },
+        {
+          "tick": 161,
+          "type": "swing",
+          "t": 1.308,
+          "wall": 1.35,
+          "combo": 3
+        },
+        {
+          "tick": 168,
+          "type": "hit",
+          "t": 1.367,
+          "wall": 1.408,
+          "target": 1,
+          "kind": "shield",
+          "amount": 27
+        },
+        {
+          "tick": 212,
+          "type": "swing",
+          "t": 1.692,
+          "wall": 1.775,
+          "combo": 1
+        },
+        {
+          "tick": 247,
+          "type": "swing",
+          "t": 1.983,
+          "wall": 2.067,
+          "combo": 2
+        },
+        {
+          "tick": 282,
+          "type": "swing",
+          "t": 2.275,
+          "wall": 2.358,
+          "combo": 3
+        },
+        {
+          "tick": 289,
+          "type": "blocked",
+          "t": 2.333,
+          "wall": 2.417,
+          "target": 1
+        },
+        {
+          "tick": 322,
+          "type": "warning",
+          "t": 2.608,
+          "wall": 2.692,
+          "kind": "shield",
+          "id": 1,
+          "x": 1027.5999999999985,
+          "y": 400,
+          "face": -1
+        },
+        {
+          "tick": 328,
+          "type": "swing",
+          "t": 2.658,
+          "wall": 2.742,
+          "combo": 1
+        },
+        {
+          "tick": 335,
+          "type": "blocked",
+          "t": 2.717,
+          "wall": 2.8,
+          "target": 1
+        },
+        {
+          "tick": 363,
+          "type": "swing",
+          "t": 2.95,
+          "wall": 3.033,
+          "combo": 2
+        },
+        {
+          "tick": 370,
+          "type": "blocked",
+          "t": 3.008,
+          "wall": 3.092,
+          "target": 1
+        },
+        {
+          "tick": 398,
+          "type": "swing",
+          "t": 3.242,
+          "wall": 3.325,
+          "combo": 3
+        },
+        {
+          "tick": 405,
+          "type": "blocked",
+          "t": 3.3,
+          "wall": 3.383,
+          "target": 1
+        },
+        {
+          "tick": 406,
+          "type": "enemy-attack",
+          "t": 3.308,
+          "wall": 3.392,
+          "kind": "shield",
+          "id": 1,
+          "box": {
+            "x": 981.5999999999985,
+            "y": 406,
+            "w": 60,
+            "h": 32
+          }
+        },
+        {
+          "tick": 444,
+          "type": "swing",
+          "t": 3.625,
+          "wall": 3.708,
+          "combo": 1
+        },
+        {
+          "tick": 451,
+          "type": "hit",
+          "t": 3.683,
+          "wall": 3.767,
+          "target": 1,
+          "kind": "shield",
+          "amount": 14
+        },
+        {
+          "tick": 484,
+          "type": "swing",
+          "t": 3.917,
+          "wall": 4.042,
+          "combo": 2
+        },
+        {
+          "tick": 519,
+          "type": "swing",
+          "t": 4.208,
+          "wall": 4.333,
+          "combo": 3
+        },
+        {
+          "tick": 526,
+          "type": "hit",
+          "t": 4.267,
+          "wall": 4.392,
+          "target": 1,
+          "kind": "shield",
+          "amount": 27
+        },
+        {
+          "tick": 526,
+          "type": "kill",
+          "t": 4.267,
+          "wall": 4.392,
+          "kind": "shield"
+        }
+      ],
+      "replay": "exact recorded inputs reproduce damage and enemy health"
+    },
+    {
+      "seed": "LOTUS-0916",
+      "relic": "echo",
+      "policy": "read",
+      "won": true,
+      "seconds": 1.575,
+      "damage": 0,
+      "enemyHP": 0,
+      "focusSpent": 50,
+      "jumps": 1,
+      "dashes": 1,
+      "waiting": 0,
+      "inputs": [
+        {
+          "tick": 0,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 12,
+          "attack": true,
+          "aimFace": 1,
+          "jump": false
+        },
+        {
+          "tick": 24,
+          "attack": false,
+          "aimFace": 1,
+          "clonePressed": true,
+          "dashPressed": true,
+          "right": true,
+          "jump": false
+        },
+        {
+          "tick": 36,
+          "attack": false,
+          "aimFace": -1,
+          "jumpPressed": true,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 48,
+          "attack": true,
+          "aimFace": -1,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 60,
+          "attack": true,
+          "aimFace": -1,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 72,
+          "attack": true,
+          "aimFace": -1,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 84,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": true
+        },
+        {
+          "tick": 96,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": true
+        },
+        {
+          "tick": 108,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 120,
+          "attack": false,
+          "aimFace": -1,
+          "right": true,
+          "jump": true,
+          "down": true,
+          "jumpPressed": true
+        },
+        {
+          "tick": 132,
+          "attack": false,
+          "aimFace": -1,
+          "right": true,
+          "jump": true,
+          "down": true,
+          "jumpPressed": true
+        },
+        {
+          "tick": 144,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 156,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        },
+        {
+          "tick": 168,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        },
+        {
+          "tick": 180,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        }
+      ],
+      "events": [
+        {
+          "tick": 0,
+          "type": "swing",
+          "t": 0.008,
+          "wall": 0.008,
+          "combo": 1
+        },
+        {
+          "tick": 0,
+          "type": "warning",
+          "t": 0.008,
+          "wall": 0.008,
+          "kind": "shield",
+          "id": 1,
+          "x": 1026,
+          "y": 400,
+          "face": -1
+        },
+        {
+          "tick": 7,
+          "type": "blocked",
+          "t": 0.067,
+          "wall": 0.067,
+          "target": 1
+        },
+        {
+          "tick": 24,
+          "type": "dash",
+          "t": 0.208,
+          "wall": 0.208
+        },
+        {
+          "tick": 24,
+          "type": "clone",
+          "t": 0.208,
+          "wall": 0.208,
+          "cost": 50
+        },
+        {
+          "tick": 38,
+          "type": "clone-strike",
+          "t": 0.325,
+          "wall": 0.325
+        },
+        {
+          "tick": 44,
+          "type": "hit",
+          "t": 0.375,
+          "wall": 0.375,
+          "target": 1,
+          "kind": "shield",
+          "amount": 18
+        },
+        {
+          "tick": 51,
+          "type": "jump",
+          "t": 0.392,
+          "wall": 0.433,
+          "air": false
+        },
+        {
+          "tick": 51,
+          "type": "swing",
+          "t": 0.392,
+          "wall": 0.433,
+          "combo": 2
+        },
+        {
+          "tick": 86,
+          "type": "swing",
+          "t": 0.683,
+          "wall": 0.725,
+          "combo": 3
+        },
+        {
+          "tick": 89,
+          "type": "enemy-attack",
+          "t": 0.708,
+          "wall": 0.75,
+          "kind": "shield",
+          "id": 1,
+          "box": {
+            "x": 992,
+            "y": 406,
+            "w": 60,
+            "h": 32
+          }
+        },
+        {
+          "tick": 106,
+          "type": "clone-strike",
+          "t": 0.85,
+          "wall": 0.892
+        },
+        {
+          "tick": 115,
+          "type": "hit",
+          "t": 0.925,
+          "wall": 0.967,
+          "target": 1,
+          "kind": "shield",
+          "amount": 18
+        },
+        {
+          "tick": 132,
+          "type": "drop",
+          "t": 1.025,
+          "wall": 1.108
+        },
+        {
+          "tick": 144,
+          "type": "swing",
+          "t": 1.125,
+          "wall": 1.208,
+          "combo": 1
+        },
+        {
+          "tick": 155,
+          "type": "hit",
+          "t": 1.217,
+          "wall": 1.3,
+          "target": 1,
+          "kind": "shield",
+          "amount": 14
+        },
+        {
+          "tick": 179,
+          "type": "clone-strike",
+          "t": 1.375,
+          "wall": 1.5
+        },
+        {
+          "tick": 184,
+          "type": "swing",
+          "t": 1.417,
+          "wall": 1.542,
+          "combo": 2
+        },
+        {
+          "tick": 188,
+          "type": "hit",
+          "t": 1.45,
+          "wall": 1.575,
+          "target": 1,
+          "kind": "shield",
+          "amount": 18
+        },
+        {
+          "tick": 188,
+          "type": "kill",
+          "t": 1.45,
+          "wall": 1.575,
+          "kind": "shield"
+        }
+      ],
+      "replay": "exact recorded inputs reproduce damage and enemy health"
+    },
+    {
+      "seed": "LOTUS-0916",
+      "relic": "echo",
+      "policy": "read-no-clone",
+      "won": true,
+      "seconds": 3.875,
+      "damage": 16,
+      "enemyHP": 0,
+      "focusSpent": 0,
+      "jumps": 1,
+      "dashes": 0,
+      "waiting": 0,
+      "inputs": [
+        {
+          "tick": 0,
+          "attack": true,
+          "aimFace": 1
+        },
+        {
+          "tick": 12,
+          "attack": true,
+          "aimFace": 1,
+          "jump": false
+        },
+        {
+          "tick": 24,
+          "attack": false,
+          "aimFace": 1,
+          "jumpPressed": true,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 36,
+          "attack": false,
+          "aimFace": 1,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 48,
+          "attack": false,
+          "aimFace": 1,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 60,
+          "attack": false,
+          "aimFace": 1,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 72,
+          "attack": false,
+          "aimFace": -1,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 84,
+          "attack": true,
+          "aimFace": -1,
+          "right": true,
+          "jump": true
+        },
+        {
+          "tick": 96,
+          "attack": false,
+          "aimFace": -1,
+          "left": true,
+          "jump": true,
+          "down": true,
+          "jumpPressed": true
+        },
+        {
+          "tick": 108,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        },
+        {
+          "tick": 120,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 132,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 144,
+          "attack": true,
+          "aimFace": -1,
+          "right": true,
+          "jump": false
+        },
+        {
+          "tick": 156,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 168,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 180,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        },
+        {
+          "tick": 192,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        },
+        {
+          "tick": 204,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 216,
+          "attack": true,
+          "aimFace": -1,
+          "right": true,
+          "jump": false
+        },
+        {
+          "tick": 228,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 240,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 252,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 264,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 276,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 288,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 300,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 312,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 324,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 336,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 348,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        },
+        {
+          "tick": 360,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        },
+        {
+          "tick": 372,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 384,
+          "attack": true,
+          "aimFace": -1,
+          "right": true,
+          "jump": false
+        },
+        {
+          "tick": 396,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 408,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 420,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 432,
+          "attack": true,
+          "aimFace": -1,
+          "left": true,
+          "jump": false
+        },
+        {
+          "tick": 444,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        },
+        {
+          "tick": 456,
+          "attack": true,
+          "aimFace": -1,
+          "jump": false
+        }
+      ],
+      "events": [
+        {
+          "tick": 0,
+          "type": "swing",
+          "t": 0.008,
+          "wall": 0.008,
+          "combo": 1
+        },
+        {
+          "tick": 0,
+          "type": "warning",
+          "t": 0.008,
+          "wall": 0.008,
+          "kind": "shield",
+          "id": 1,
+          "x": 1026,
+          "y": 400,
+          "face": -1
+        },
+        {
+          "tick": 7,
+          "type": "blocked",
+          "t": 0.067,
+          "wall": 0.067,
+          "target": 1
+        },
+        {
+          "tick": 24,
+          "type": "jump",
+          "t": 0.208,
+          "wall": 0.208,
+          "air": false
+        },
+        {
+          "tick": 84,
+          "type": "swing",
+          "t": 0.708,
+          "wall": 0.708,
+          "combo": 2
+        },
+        {
+          "tick": 84,
+          "type": "enemy-attack",
+          "t": 0.708,
+          "wall": 0.708,
+          "kind": "shield",
+          "id": 1,
+          "box": {
+            "x": 980,
+            "y": 406,
+            "w": 60,
+            "h": 32
+          }
+        },
+        {
+          "tick": 96,
+          "type": "drop",
+          "t": 0.808,
+          "wall": 0.808
+        },
+        {
+          "tick": 119,
+          "type": "swing",
+          "t": 1,
+          "wall": 1,
+          "combo": 3
+        },
+        {
+          "tick": 126,
+          "type": "hit",
+          "t": 1.058,
+          "wall": 1.058,
+          "target": 1,
+          "kind": "shield",
+          "amount": 27
+        },
+        {
+          "tick": 170,
+          "type": "swing",
+          "t": 1.383,
+          "wall": 1.425,
+          "combo": 1
+        },
+        {
+          "tick": 177,
+          "type": "hit",
+          "t": 1.442,
+          "wall": 1.483,
+          "target": 1,
+          "kind": "shield",
+          "amount": 14
+        },
+        {
+          "tick": 210,
+          "type": "swing",
+          "t": 1.675,
+          "wall": 1.758,
+          "combo": 2
+        },
+        {
+          "tick": 245,
+          "type": "swing",
+          "t": 1.967,
+          "wall": 2.05,
+          "combo": 3
+        },
+        {
+          "tick": 250,
+          "type": "warning",
+          "t": 2.008,
+          "wall": 2.092,
+          "kind": "shield",
+          "id": 1,
+          "x": 996.633333333333,
+          "y": 400,
+          "face": 1
+        },
+        {
+          "tick": 252,
+          "type": "blocked",
+          "t": 2.025,
+          "wall": 2.108,
+          "target": 1
+        },
+        {
+          "tick": 291,
+          "type": "swing",
+          "t": 2.35,
+          "wall": 2.433,
+          "combo": 1
+        },
+        {
+          "tick": 298,
+          "type": "blocked",
+          "t": 2.408,
+          "wall": 2.492,
+          "target": 1
+        },
+        {
+          "tick": 326,
+          "type": "swing",
+          "t": 2.642,
+          "wall": 2.725,
+          "combo": 2
+        },
+        {
+          "tick": 333,
+          "type": "blocked",
+          "t": 2.7,
+          "wall": 2.783,
+          "target": 1
+        },
+        {
+          "tick": 334,
+          "type": "enemy-attack",
+          "t": 2.708,
+          "wall": 2.792,
+          "kind": "shield",
+          "id": 1,
+          "box": {
+            "x": 1010.633333333333,
+            "y": 406,
+            "w": 60,
+            "h": 32
+          }
+        },
+        {
+          "tick": 335,
+          "type": "hurt",
+          "t": 2.717,
+          "wall": 2.8,
+          "source": "重盾兵·盾撞",
+          "amount": 16
+        },
+        {
+          "tick": 336,
+          "type": "swing",
+          "t": 2.725,
+          "wall": 2.808,
+          "combo": 3
+        },
+        {
+          "tick": 343,
+          "type": "blocked",
+          "t": 2.783,
+          "wall": 2.867,
+          "target": 1
+        },
+        {
+          "tick": 382,
+          "type": "swing",
+          "t": 3.108,
+          "wall": 3.192,
+          "combo": 1
+        },
+        {
+          "tick": 417,
+          "type": "swing",
+          "t": 3.4,
+          "wall": 3.483,
+          "combo": 2
+        },
+        {
+          "tick": 424,
+          "type": "hit",
+          "t": 3.458,
+          "wall": 3.542,
+          "target": 1,
+          "kind": "shield",
+          "amount": 14
+        },
+        {
+          "tick": 457,
+          "type": "swing",
+          "t": 3.692,
+          "wall": 3.817,
+          "combo": 3
+        },
+        {
+          "tick": 464,
+          "type": "hit",
+          "t": 3.75,
+          "wall": 3.875,
+          "target": 1,
+          "kind": "shield",
+          "amount": 27
+        },
+        {
+          "tick": 464,
+          "type": "kill",
+          "t": 3.75,
+          "wall": 3.875,
+          "kind": "shield"
+        }
+      ],
+      "replay": "exact recorded inputs reproduce damage and enemy health"
+    }
+  ]
+}

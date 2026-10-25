@@ -1,0 +1,28 @@
+{
+  "entry": "E:\\githome\\kong-rpg\\artifacts\\portable-check",
+  "sha256": "658080d7b64f21d3c5ed336d3bb5bd84c79c71d21ade28f32c38c5876a74151e",
+  "checks": [
+    {
+      "name": "unpacked arbitrary directory starts with real clone input",
+      "pass": true
+    },
+    {
+      "name": "legacy entry resolves beside arbitrary unpacked entry",
+      "pass": true
+    },
+    {
+      "name": "storage-denied exported progress actually imports",
+      "pass": true
+    },
+    {
+      "name": "unpacked offline UI makes no remote requests",
+      "pass": true
+    },
+    {
+      "name": "unpacked UI has no exceptions",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "requests": []
+}
