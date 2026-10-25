@@ -1,0 +1,203 @@
+{
+  "build": "1.0.0",
+  "sha256": "cfde27c846bd1856e2ad1273d2c910000ddb0ec24ccf7c46dc2393fa854cbd65",
+  "checks": [
+    {
+      "name": "1366x768 canvas keeps 16:9 and no overflow",
+      "pass": true,
+      "ratio": 1.7803877799984427,
+      "overflow": false,
+      "bodyHeight": 766,
+      "height": 768
+    },
+    {
+      "name": "real Space key grants cloud second jump",
+      "pass": true,
+      "airJumps": 1
+    },
+    {
+      "name": "gesture and game actions create local WebAudio voices",
+      "pass": true
+    },
+    {
+      "name": "real L spends focus and creates base clone",
+      "pass": true
+    },
+    {
+      "name": "DOM pause ignores combat and movement",
+      "pass": true
+    },
+    {
+      "name": "audio and motion options accessible",
+      "pass": true
+    },
+    {
+      "name": "guide explains enemy counters",
+      "pass": true
+    },
+    {
+      "name": "corrupt save shows rejection without destroying run",
+      "pass": true
+    },
+    {
+      "name": "same-seed staff cannot use cloud air jump",
+      "pass": true
+    },
+    {
+      "name": "echo has distinct cost lifetime and ranged attack",
+      "pass": true
+    },
+    {
+      "name": "targeted low-health imported fixture reaches failure UI",
+      "pass": true
+    },
+    {
+      "name": "same-seed retry resets run and preserves seed",
+      "pass": true
+    },
+    {
+      "name": "pointer attack reaches shared simulation",
+      "pass": true
+    },
+    {
+      "name": "visible jump feedback sample 0",
+      "pass": true,
+      "action": "jump",
+      "ms": 24.100000023841858,
+      "changedPixels": 3286
+    },
+    {
+      "name": "visible jump feedback sample 1",
+      "pass": true,
+      "action": "jump",
+      "ms": 20.700000047683716,
+      "changedPixels": 3288
+    },
+    {
+      "name": "visible jump feedback sample 2",
+      "pass": true,
+      "action": "jump",
+      "ms": 13.5,
+      "changedPixels": 2977
+    },
+    {
+      "name": "visible attack feedback sample 3",
+      "pass": true,
+      "action": "attack",
+      "ms": 9.700000047683716,
+      "changedPixels": 1747
+    },
+    {
+      "name": "visible attack feedback sample 4",
+      "pass": true,
+      "action": "attack",
+      "ms": 18,
+      "changedPixels": 1751
+    },
+    {
+      "name": "visible attack feedback sample 5",
+      "pass": true,
+      "action": "attack",
+      "ms": 11.899999976158142,
+      "changedPixels": 2136
+    },
+    {
+      "name": "visible clone feedback sample 6",
+      "pass": true,
+      "action": "clone",
+      "ms": 21.699999928474426,
+      "changedPixels": 186
+    },
+    {
+      "name": "visible dash feedback sample 7",
+      "pass": true,
+      "action": "dash",
+      "ms": 21.699999928474426,
+      "changedPixels": 3711
+    },
+    {
+      "name": "blur-handler pauses authoritative state",
+      "pass": true
+    },
+    {
+      "name": "targeted UI no runtime errors",
+      "pass": true,
+      "errors": []
+    },
+    {
+      "name": "storage-denied fresh context remains playable",
+      "pass": true
+    },
+    {
+      "name": "storage-denied fallback actually exports JSON",
+      "pass": true
+    }
+  ],
+  "comparisons": {
+    "airJump": {
+      "seed": "LOTUS-1025",
+      "cloud": {
+        "airJumps": 1,
+        "vy": -411.5000000000001
+      },
+      "staff": {
+        "airJumps": 0,
+        "vy": -262.91666666666686
+      }
+    },
+    "clone": {
+      "seed": "LOTUS-1025",
+      "base": {
+        "focus": 25,
+        "life": 1.6416666666666673
+      },
+      "echo": {
+        "focus": 15,
+        "life": 2.8166666666666673,
+        "projectiles": 1
+      }
+    }
+  },
+  "visibleFeedback": [
+    {
+      "action": "jump",
+      "ms": 24.100000023841858,
+      "changedPixels": 3286
+    },
+    {
+      "action": "jump",
+      "ms": 20.700000047683716,
+      "changedPixels": 3288
+    },
+    {
+      "action": "jump",
+      "ms": 13.5,
+      "changedPixels": 2977
+    },
+    {
+      "action": "attack",
+      "ms": 9.700000047683716,
+      "changedPixels": 1747
+    },
+    {
+      "action": "attack",
+      "ms": 18,
+      "changedPixels": 1751
+    },
+    {
+      "action": "attack",
+      "ms": 11.899999976158142,
+      "changedPixels": 2136
+    },
+    {
+      "action": "clone",
+      "ms": 21.699999928474426,
+      "changedPixels": 186
+    },
+    {
+      "action": "dash",
+      "ms": 21.699999928474426,
+      "changedPixels": 3711
+    }
+  ]
+}
