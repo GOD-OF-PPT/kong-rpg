@@ -1,0 +1,36 @@
+{
+  "tool": "built-in image_gen",
+  "runtime": "embedded data URLs; no network or fetch",
+  "assets": {
+    "mountain": {
+      "file": "assets/art-v1/mountain-approach.png",
+      "bytes": 2593019,
+      "sha256": "57e9513653529b4825a2a406b6c64775de29ba4dddbcb9ff3be6406c5c168e56"
+    },
+    "ferry": {
+      "file": "assets/art-v1/lantern-ferry.png",
+      "bytes": 2645367,
+      "sha256": "be12588fb7f74815f79f48a77a8e8b1147cbfb6201b585a56fc60eb9a03e4c49"
+    },
+    "sanctuary": {
+      "file": "assets/art-v1/ruined-sanctuary.png",
+      "bytes": 2979693,
+      "sha256": "867935f592dfb15b8b3ff4bc9d05c779c147ec2a9ea489dc11611a6873b6046a"
+    },
+    "wukong": {
+      "file": "assets/art-v1/wukong-atlas.png",
+      "bytes": 1269917,
+      "sha256": "ce37326df844b464a177a956ae165e91560a7af5f65d4bb1a99b2978485b22c1"
+    },
+    "enemies": {
+      "file": "assets/art-v1/enemy-atlas.png",
+      "bytes": 2389650,
+      "sha256": "a3226339999519e17fdafed08bfa01bf9b85e4c0db87cf097534b9f3ef805fa1"
+    },
+    "stone": {
+      "file": "assets/art-v1/stone-platform.png",
+      "bytes": 946448,
+      "sha256": "0e6e36cd6a30ce74c4ea3a1bb2a6096bd3ae65e868b2715fbec0c65e25aa09de"
+    }
+  }
+}

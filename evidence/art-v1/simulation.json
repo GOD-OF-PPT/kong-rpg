@@ -1,0 +1,133 @@
+{
+  "version": "1.2.0",
+  "results": [
+    {
+      "name": "seed determinism and real room variation",
+      "pass": true
+    },
+    {
+      "name": "fixed input replay identical state",
+      "pass": true
+    },
+    {
+      "name": "jump height reaches 95px platform with margin",
+      "pass": true
+    },
+    {
+      "name": "release jump makes a shorter jump",
+      "pass": true
+    },
+    {
+      "name": "cloud changes air-jump permission, not damage scalar",
+      "pass": true
+    },
+    {
+      "name": "dash has limited duration and cooldown",
+      "pass": true
+    },
+    {
+      "name": "shield blocks frontal strike and takes rear strike",
+      "pass": true
+    },
+    {
+      "name": "staff third strike pierces shield, ordinary strike does not",
+      "pass": true
+    },
+    {
+      "name": "one swing hits each target at most once",
+      "pass": true
+    },
+    {
+      "name": "insufficient focus cannot create clone",
+      "pass": true
+    },
+    {
+      "name": "echo trades more focus for duration and ranged output",
+      "pass": true
+    },
+    {
+      "name": "mercy heals only on seal destruction",
+      "pass": true
+    },
+    {
+      "name": "mirror turns a hostile projectile into a damaging friendly one",
+      "pass": true
+    },
+    {
+      "name": "damage immunity prevents repeated collision damage",
+      "pass": true
+    },
+    {
+      "name": "death is authoritative and freezes simulation",
+      "pass": true
+    },
+    {
+      "name": "fall returns near safe ground and exact cost",
+      "pass": true
+    },
+    {
+      "name": "checkpoint excludes floating ledges and respawns immediately on safe solid ground",
+      "pass": true
+    },
+    {
+      "name": "enemy warning precedes its attack",
+      "pass": true
+    },
+    {
+      "name": "gate refuses exit with living seals",
+      "pass": true
+    },
+    {
+      "name": "reward progression is real and removes acquired relics",
+      "pass": true
+    },
+    {
+      "name": "pause freezes all gameplay time",
+      "pass": true
+    },
+    {
+      "name": "down plus jump drops through one-way platform and lands on solid floor",
+      "pass": true
+    },
+    {
+      "name": "three stages change topology and an elevated seal changes required movement",
+      "pass": true
+    },
+    {
+      "name": "clone state survives portable save without losing paid focus",
+      "pass": true
+    },
+    {
+      "name": "boss guard forces a recover window and cannot be pierced by staff",
+      "pass": true
+    },
+    {
+      "name": "boss dies into victory and cannot hit after death",
+      "pass": true
+    },
+    {
+      "name": "full run advances three rewards into boss, not endless stages",
+      "pass": true
+    },
+    {
+      "name": "save roundtrip retains run and pauses on restore",
+      "pass": true
+    },
+    {
+      "name": "reward save remains selectable on restore",
+      "pass": true
+    },
+    {
+      "name": "corrupt, alien and unsupported saves rejected",
+      "pass": true
+    },
+    {
+      "name": "import cannot replace map geometry",
+      "pass": true
+    },
+    {
+      "name": "packaged HTML is standalone, without ESM or external resources",
+      "pass": true
+    }
+  ]
+}

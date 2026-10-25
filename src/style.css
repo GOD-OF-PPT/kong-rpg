@@ -3,3 +3,16 @@
 @media(max-height:760px){:root #stage{width:min(100%,calc((100vh - 118px)*16/9))}}
 #stage:not([data-mode=playing]) #toast{top:auto;bottom:4%}
 @media(min-height:761px) and (max-height:850px){.hero{top:9%}.hero h1{font-size:88px;margin:18px 0 12px}.hero-meta{margin-top:16px}}
+/* ImageGen art direction: aged paper, lacquer and narrow bronze frames. */
+:root{--paper:#f1dfb3;--gold:#d9b57a;--line:#78634a;--jade:#8bb9b2}
+body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d 100%)}
+.masthead a{letter-spacing:4px}.brand-seal{background:#542d2c;border-color:#ad835b;color:#efd4a4}.brand-seal:after{border-color:#b68b5e80}
+#stage{border-color:#806c50;box-shadow:0 24px 80px #0009,0 0 0 4px #17242b,0 0 0 5px #5a5042}
+.hero{top:12%}.hero h1{color:#f2ddb0;text-shadow:0 3px 0 #312c28,0 5px 24px #0008}.hero p{color:#c9c5b7}
+.eyebrow{color:#d8b97e}.hero .english-title{color:#adaf9f}.scene-label{color:#d0bc9b}
+.button{background:#182832e8;border-color:#8f7757;position:relative}.button:hover{background:#344347;border-color:#e7c38a}.button.primary{background:#d0aa70;border-color:#ead2a3;box-shadow:inset 0 0 0 3px #b48b55;color:#282221}.button.primary:hover{background:#e6c38a}
+.panel{background:linear-gradient(135deg,#1a2c35f5,#17232ff8 66%,#25242bf8);border-color:#b19266;box-shadow:0 16px 80px #000b}.panel:before{border-color:#7b65494d}.panel h2{color:#efdbaf}.panel .subtitle{color:#bfc5bd}
+.relic-card{background:linear-gradient(145deg,#283c40f0,#1a2a33f5);border-color:#84745b}.relic-card:hover{background:linear-gradient(145deg,#3e514df0,#273b42f5);border-color:#e4c58f}.relic-card p{color:#d1d8ca}.relic-card .cost{color:#aaa797}.relic-glyph{box-shadow:inset 0 0 0 3px #1b3038;background:#172932}
+.vitals{padding:10px 12px;left:2%;top:3%;width:225px;background:#0f202ab8;border-left:2px solid #b69b6d}.journey{background:#10212aa8;padding:10px 20px;top:3%;min-width:210px;border-top:1px solid #a58c63}.hud-actions button{background:#13242bc9;border-color:#8f7656}
+#toast{background:#142932ed;border-color:#a88960;color:#e6d5b2;font-size:12px;box-shadow:0 5px 20px #0005}#context-hint{background:#172b33dc;border-bottom-color:#b99a69;bottom:5%;font-size:11px}.footline{color:#96a5a5}.footline .build{color:#9b9e91}.keystrip kbd{background:#1b2b32;border-color:#52616a;color:#c3c4ac}
+@media(max-height:760px){.hero{top:8%}.vitals{width:195px;padding:8px}.journey{padding:7px 12px}.panel h2{font-size:27px}}

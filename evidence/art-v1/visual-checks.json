@@ -1,0 +1,46 @@
+{
+  "sha256": "d694f752df059b684e6952e8dada834c4b7a581061ec0917a5bd7415d6d0a9da",
+  "checks": [
+    {
+      "name": "all six ImageGen assets decode from embedded data",
+      "pass": true,
+      "keys": [
+        "mountain",
+        "ferry",
+        "sanctuary",
+        "wukong",
+        "enemies",
+        "stone"
+      ],
+      "errors": []
+    },
+    {
+      "name": "generated character retains real transparent alpha",
+      "pass": true,
+      "zero": 1098373,
+      "solid": 307800,
+      "total": 1573538
+    },
+    {
+      "name": "real input reaches generated animation with no exceptions",
+      "pass": true
+    },
+    {
+      "name": "art and DOM remain within desktop viewport",
+      "pass": true,
+      "overflow": false,
+      "height": 766,
+      "viewport": 768
+    },
+    {
+      "name": "file art views have no HTTP(S) requests",
+      "pass": true
+    },
+    {
+      "name": "no runtime exceptions in four art stages",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "requests": []
+}

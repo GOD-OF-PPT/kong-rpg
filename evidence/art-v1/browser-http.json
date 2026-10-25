@@ -1,0 +1,827 @@
+{
+  "version": "1.2.0",
+  "sha256": "d694f752df059b684e6952e8dada834c4b7a581061ec0917a5bd7415d6d0a9da",
+  "browser": "156.0.4314.42",
+  "checks": [
+    {
+      "name": "http starts through UI",
+      "pass": true
+    },
+    {
+      "name": "http pause freezes world",
+      "pass": true
+    },
+    {
+      "name": "http portable save imports paused",
+      "pass": true
+    },
+    {
+      "name": "http complete real-input run",
+      "pass": true,
+      "final": {
+        "time": 49.01666666666453,
+        "hp": 49,
+        "kills": 5,
+        "relics": [
+          "staff",
+          "mercy",
+          "flame",
+          "cloud"
+        ],
+        "broken": 6
+      }
+    },
+    {
+      "name": "http no runtime exceptions",
+      "pass": true
+    },
+    {
+      "name": "http p95 frame time under 25ms",
+      "pass": true
+    },
+    {
+      "name": "http p95 event-to-submit under 50ms",
+      "pass": true
+    }
+  ],
+  "runs": [
+    {
+      "kind": "http",
+      "url": "http://127.0.0.1:5188/release/index.html",
+      "stages": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "rewards": [
+        [
+          "mirror",
+          "flame",
+          "mercy"
+        ],
+        [
+          "echo",
+          "flame",
+          "mirror"
+        ],
+        [
+          "mirror",
+          "cloud",
+          "echo"
+        ]
+      ],
+      "samples": [
+        {
+          "t": 0.33333333333333354,
+          "stage": 0,
+          "x": 90,
+          "y": 396,
+          "grounded": true,
+          "hp": 100,
+          "focus": 65,
+          "seals": [
+            42,
+            42
+          ],
+          "boss": null
+        },
+        {
+          "t": 1.3916666666666642,
+          "stage": 0,
+          "x": 211,
+          "y": 396,
+          "grounded": true,
+          "hp": 100,
+          "focus": 65,
+          "seals": [
+            42,
+            42
+          ],
+          "boss": null
+        },
+        {
+          "t": 2.2666666666666613,
+          "stage": 0,
+          "x": 455,
+          "y": 396,
+          "grounded": true,
+          "hp": 100,
+          "focus": 65,
+          "seals": [
+            42,
+            42
+          ],
+          "boss": null
+        },
+        {
+          "t": 3.133333333333325,
+          "stage": 0,
+          "x": 562,
+          "y": 396,
+          "grounded": true,
+          "hp": 100,
+          "focus": 43,
+          "seals": [
+            1,
+            42
+          ],
+          "boss": null
+        },
+        {
+          "t": 3.9999999999999885,
+          "stage": 0,
+          "x": 678,
+          "y": 396,
+          "grounded": true,
+          "hp": 100,
+          "focus": 52,
+          "seals": [
+            0,
+            42
+          ],
+          "boss": null
+        },
+        {
+          "t": 4.8250000000000295,
+          "stage": 0,
+          "x": 815,
+          "y": 309,
+          "grounded": false,
+          "hp": 100,
+          "focus": 64,
+          "seals": [
+            0,
+            42
+          ],
+          "boss": null
+        },
+        {
+          "t": 5.658333333333404,
+          "stage": 0,
+          "x": 1003,
+          "y": 349,
+          "grounded": false,
+          "hp": 100,
+          "focus": 76,
+          "seals": [
+            0,
+            42
+          ],
+          "boss": null
+        },
+        {
+          "t": 6.525000000000114,
+          "stage": 0,
+          "x": 1303,
+          "y": 361,
+          "grounded": false,
+          "hp": 100,
+          "focus": 76,
+          "seals": [
+            0,
+            42
+          ],
+          "boss": null
+        },
+        {
+          "t": 7.391666666666824,
+          "stage": 0,
+          "x": 1617,
+          "y": 363,
+          "grounded": false,
+          "hp": 100,
+          "focus": 36,
+          "seals": [
+            0,
+            42
+          ],
+          "boss": null
+        },
+        {
+          "t": 8.250000000000172,
+          "stage": 0,
+          "x": 1631,
+          "y": 396,
+          "grounded": true,
+          "hp": 100,
+          "focus": 57,
+          "seals": [
+            0,
+            15
+          ],
+          "boss": null
+        },
+        {
+          "t": 9.125000000000123,
+          "stage": 0,
+          "x": 1702,
+          "y": 396,
+          "grounded": true,
+          "hp": 100,
+          "focus": 97,
+          "seals": [
+            0,
+            0
+          ],
+          "boss": null
+        },
+        {
+          "t": 10.025000000000071,
+          "stage": 0,
+          "x": 1845,
+          "y": 396,
+          "grounded": true,
+          "hp": 100,
+          "focus": 97,
+          "seals": [
+            0,
+            0
+          ],
+          "boss": null
+        },
+        {
+          "t": 10.891666666666689,
+          "stage": 0,
+          "x": 1977,
+          "y": 396,
+          "grounded": true,
+          "hp": 100,
+          "focus": 97,
+          "seals": [
+            0,
+            0
+          ],
+          "boss": null
+        },
+        {
+          "t": 12.05833333333329,
+          "stage": 1,
+          "x": 196,
+          "y": 396,
+          "grounded": true,
+          "hp": 100,
+          "focus": 100,
+          "seals": [
+            42,
+            42
+          ],
+          "boss": null
+        },
+        {
+          "t": 12.941666666666572,
+          "stage": 1,
+          "x": 438,
+          "y": 396,
+          "grounded": true,
+          "hp": 100,
+          "focus": 100,
+          "seals": [
+            42,
+            42
+          ],
+          "boss": null
+        },
+        {
+          "t": 13.816666666666523,
+          "stage": 1,
+          "x": 585,
+          "y": 318,
+          "grounded": false,
+          "hp": 100,
+          "focus": 100,
+          "seals": [
+            42,
+            42
+          ],
+          "boss": null
+        },
+        {
+          "t": 14.699999999999806,
+          "stage": 1,
+          "x": 901,
+          "y": 206,
+          "grounded": false,
+          "hp": 100,
+          "focus": 100,
+          "seals": [
+            42,
+            42
+          ],
+          "boss": null
+        },
+        {
+          "t": 15.583333333333089,
+          "stage": 1,
+          "x": 1018,
+          "y": 288,
+          "grounded": false,
+          "hp": 100,
+          "focus": 69,
+          "seals": [
+            15,
+            42
+          ],
+          "boss": null
+        },
+        {
+          "t": 16.48333333333304,
+          "stage": 1,
+          "x": 1014,
+          "y": 256,
+          "grounded": false,
+          "hp": 100,
+          "focus": 78,
+          "seals": [
+            1,
+            42
+          ],
+          "boss": null
+        },
+        {
+          "t": 17.366666666666323,
+          "stage": 1,
+          "x": 1060,
+          "y": 227,
+          "grounded": false,
+          "hp": 100,
+          "focus": 100,
+          "seals": [
+            0,
+            42
+          ],
+          "boss": null
+        },
+        {
+          "t": 18.26666666666627,
+          "stage": 1,
+          "x": 1269,
+          "y": 396,
+          "grounded": true,
+          "hp": 100,
+          "focus": 100,
+          "seals": [
+            0,
+            42
+          ],
+          "boss": null
+        },
+        {
+          "t": 19.149999999999554,
+          "stage": 1,
+          "x": 1533,
+          "y": 294,
+          "grounded": false,
+          "hp": 100,
+          "focus": 100,
+          "seals": [
+            0,
+            42
+          ],
+          "boss": null
+        },
+        {
+          "t": 20.00833333333284,
+          "stage": 1,
+          "x": 1633,
+          "y": 396,
+          "grounded": true,
+          "hp": 100,
+          "focus": 81,
+          "seals": [
+            0,
+            15
+          ],
+          "boss": null
+        },
+        {
+          "t": 20.874999999999456,
+          "stage": 1,
+          "x": 1782,
+          "y": 396,
+          "grounded": true,
+          "hp": 100,
+          "focus": 99,
+          "seals": [
+            0,
+            0
+          ],
+          "boss": null
+        },
+        {
+          "t": 21.75833333333274,
+          "stage": 1,
+          "x": 1926,
+          "y": 396,
+          "grounded": true,
+          "hp": 100,
+          "focus": 100,
+          "seals": [
+            0,
+            0
+          ],
+          "boss": null
+        },
+        {
+          "t": 22.92499999999934,
+          "stage": 2,
+          "x": 135,
+          "y": 396,
+          "grounded": true,
+          "hp": 100,
+          "focus": 100,
+          "seals": [
+            42,
+            42
+          ],
+          "boss": null
+        },
+        {
+          "t": 23.83333333333262,
+          "stage": 2,
+          "x": 271,
+          "y": 396,
+          "grounded": true,
+          "hp": 100,
+          "focus": 100,
+          "seals": [
+            42,
+            42
+          ],
+          "boss": null
+        },
+        {
+          "t": 24.724999999999238,
+          "stage": 2,
+          "x": 516,
+          "y": 396,
+          "grounded": true,
+          "hp": 100,
+          "focus": 69,
+          "seals": [
+            15,
+            42
+          ],
+          "boss": null
+        },
+        {
+          "t": 25.599999999999188,
+          "stage": 2,
+          "x": 612,
+          "y": 346,
+          "grounded": false,
+          "hp": 100,
+          "focus": 99,
+          "seals": [
+            0,
+            42
+          ],
+          "boss": null
+        },
+        {
+          "t": 26.42499999999914,
+          "stage": 2,
+          "x": 804,
+          "y": 304,
+          "grounded": false,
+          "hp": 100,
+          "focus": 100,
+          "seals": [
+            0,
+            42
+          ],
+          "boss": null
+        },
+        {
+          "t": 27.316666666665757,
+          "stage": 2,
+          "x": 985,
+          "y": 396,
+          "grounded": true,
+          "hp": 100,
+          "focus": 100,
+          "seals": [
+            0,
+            42
+          ],
+          "boss": null
+        },
+        {
+          "t": 28.149999999999043,
+          "stage": 2,
+          "x": 1151,
+          "y": 292,
+          "grounded": false,
+          "hp": 100,
+          "focus": 100,
+          "seals": [
+            0,
+            42
+          ],
+          "boss": null
+        },
+        {
+          "t": 28.99166666666566,
+          "stage": 2,
+          "x": 1375,
+          "y": 386,
+          "grounded": false,
+          "hp": 100,
+          "focus": 100,
+          "seals": [
+            0,
+            42
+          ],
+          "boss": null
+        },
+        {
+          "t": 29.849999999998946,
+          "stage": 2,
+          "x": 1266,
+          "y": 396,
+          "grounded": true,
+          "hp": 82,
+          "focus": 72,
+          "seals": [
+            0,
+            42
+          ],
+          "boss": null
+        },
+        {
+          "t": 30.76666666666556,
+          "stage": 2,
+          "x": 1235,
+          "y": 396,
+          "grounded": false,
+          "hp": 64,
+          "focus": 72,
+          "seals": [
+            0,
+            42
+          ],
+          "boss": null
+        },
+        {
+          "t": 31.64166666666551,
+          "stage": 2,
+          "x": 1360,
+          "y": 361,
+          "grounded": false,
+          "hp": 64,
+          "focus": 100,
+          "seals": [
+            0,
+            42
+          ],
+          "boss": null
+        },
+        {
+          "t": 32.55833333333213,
+          "stage": 2,
+          "x": 1542,
+          "y": 301,
+          "grounded": true,
+          "hp": 64,
+          "focus": 100,
+          "seals": [
+            0,
+            42
+          ],
+          "boss": null
+        },
+        {
+          "t": 33.49166666666541,
+          "stage": 2,
+          "x": 1633,
+          "y": 396,
+          "grounded": true,
+          "hp": 64,
+          "focus": 84,
+          "seals": [
+            0,
+            14
+          ],
+          "boss": null
+        },
+        {
+          "t": 34.349999999998694,
+          "stage": 2,
+          "x": 1871,
+          "y": 396,
+          "grounded": true,
+          "hp": 76,
+          "focus": 100,
+          "seals": [
+            0,
+            0
+          ],
+          "boss": null
+        },
+        {
+          "t": 35.574999999998624,
+          "stage": 3,
+          "x": 94,
+          "y": 396,
+          "grounded": true,
+          "hp": 94,
+          "focus": 60,
+          "seals": [],
+          "boss": 270
+        },
+        {
+          "t": 36.47499999999857,
+          "stage": 3,
+          "x": 236,
+          "y": 326,
+          "grounded": false,
+          "hp": 94,
+          "focus": 60,
+          "seals": [],
+          "boss": 270
+        },
+        {
+          "t": 37.37499999999852,
+          "stage": 3,
+          "x": 432,
+          "y": 396,
+          "grounded": true,
+          "hp": 94,
+          "focus": 75,
+          "seals": [],
+          "boss": 270
+        },
+        {
+          "t": 38.27499999999847,
+          "stage": 3,
+          "x": 568,
+          "y": 396,
+          "grounded": true,
+          "hp": 94,
+          "focus": 35,
+          "seals": [],
+          "boss": 270
+        },
+        {
+          "t": 39.17499999999842,
+          "stage": 3,
+          "x": 461,
+          "y": 385,
+          "grounded": false,
+          "hp": 79,
+          "focus": 35,
+          "seals": [],
+          "boss": 270
+        },
+        {
+          "t": 40.066666666665036,
+          "stage": 3,
+          "x": 368,
+          "y": 396,
+          "grounded": true,
+          "hp": 79,
+          "focus": 22,
+          "seals": [],
+          "boss": 258
+        },
+        {
+          "t": 40.791666666664995,
+          "stage": 3,
+          "x": 373,
+          "y": 396,
+          "grounded": true,
+          "hp": 79,
+          "focus": 70,
+          "seals": [],
+          "boss": 191
+        },
+        {
+          "t": 41.608333333331615,
+          "stage": 3,
+          "x": 400,
+          "y": 396,
+          "grounded": true,
+          "hp": 79,
+          "focus": 60,
+          "seals": [],
+          "boss": 165
+        },
+        {
+          "t": 42.52499999999823,
+          "stage": 3,
+          "x": 543,
+          "y": 396,
+          "grounded": true,
+          "hp": 79,
+          "focus": 60,
+          "seals": [],
+          "boss": 165
+        },
+        {
+          "t": 43.383333333331514,
+          "stage": 3,
+          "x": 674,
+          "y": 396,
+          "grounded": true,
+          "hp": 79,
+          "focus": 87,
+          "seals": [],
+          "boss": 151
+        },
+        {
+          "t": 44.116666666664806,
+          "stage": 3,
+          "x": 674,
+          "y": 396,
+          "grounded": true,
+          "hp": 79,
+          "focus": 95,
+          "seals": [],
+          "boss": 86
+        },
+        {
+          "t": 44.97499999999809,
+          "stage": 3,
+          "x": 635,
+          "y": 396,
+          "grounded": true,
+          "hp": 79,
+          "focus": 100,
+          "seals": [],
+          "boss": 72
+        },
+        {
+          "t": 45.891666666664705,
+          "stage": 3,
+          "x": 497,
+          "y": 396,
+          "grounded": true,
+          "hp": 79,
+          "focus": 60,
+          "seals": [],
+          "boss": 72
+        },
+        {
+          "t": 46.69166666666466,
+          "stage": 3,
+          "x": 379,
+          "y": 396,
+          "grounded": true,
+          "hp": 67,
+          "focus": 84,
+          "seals": [],
+          "boss": 44
+        },
+        {
+          "t": 47.524999999997945,
+          "stage": 3,
+          "x": 380,
+          "y": 396,
+          "grounded": true,
+          "hp": 67,
+          "focus": 100,
+          "seals": [],
+          "boss": 3
+        },
+        {
+          "t": 48.40833333333123,
+          "stage": 3,
+          "x": 521,
+          "y": 326,
+          "grounded": false,
+          "hp": 67,
+          "focus": 60,
+          "seals": [],
+          "boss": 3
+        }
+      ],
+      "final": {
+        "time": 49.01666666666453,
+        "hp": 49,
+        "kills": 5,
+        "relics": [
+          "staff",
+          "mercy",
+          "flame",
+          "cloud"
+        ],
+        "broken": 6
+      },
+      "performance": {
+        "frames": 3025,
+        "frameP50": 16.69999999999709,
+        "frameP95": 16.900000000001455,
+        "inputSamples": 89,
+        "inputP95": 16.3,
+        "inputMax": 23.2,
+        "definition": "browser event handler to render submission after simulation; excludes hardware and screen scanout"
+      },
+      "errors": [],
+      "networkRequests": [
+        "http://127.0.0.1:5188/release/index.html"
+      ],
+      "trace": "evidence/art-v1/http-trace-1792942409105.zip",
+      "video": "evidence/art-v1/video/page@0e846410e090ba18fd37fc8e9d231b70.webm"
+    }
+  ]
+}

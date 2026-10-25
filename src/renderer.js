@@ -63,17 +63,17 @@
     draw(s,ui,dt=.016){this.clock+=dt;const c=this.c;const stage=s?.stage||0;c.setTransform(1,0,0,1,0,0);c.imageSmoothingEnabled=false;c.drawImage(this.background(stage),0,0);
       const t=this.clock;
       // Near clouds move independently of the camera.
-      for(let i=0;i<5;i++){const x=((i*267-t*7)%1200+1200)%1200-160;pixel(c,x,320+i*23,150,3,'#625b69');pixel(c,x+38,316+i*23,84,4,'#625b69');}
+      if(!K.ImageArt?.images.mountain)for(let i=0;i<5;i++){const x=((i*267-t*7)%1200+1200)%1200-160;pixel(c,x,320+i*23,150,3,'#625b69');pixel(c,x+38,316+i*23,84,4,'#625b69');}
       if(!s||ui==='menu'){this.titleScene(t);return;}
       const target=K.clamp(s.player.x-300,0,s.room.width-960);this.camera+= (target-this.camera)*(1-Math.exp(-dt*10));if(Math.abs(this.camera-target)<.5)this.camera=target;
       let shake=ui==='playing'&&s.shake>0&&this.shake!==false?Math.sin(t*140)*s.shake*13:0;
       c.save();c.translate(-Math.round(this.camera)+Math.round(shake),0);
       // Ruined foreground pillars and suspended lamps anchor the scene.
-      for(let x=220;x<s.room.width;x+=450){pixel(c,x,177,3,112,'#3a3445');pixel(c,x-8,286,20,3,'#a28a67');pixel(c,x-6,289,16,21,'#aa6962');pixel(c,x-4,292,12,15,'#dea273');pixel(c,x,310,2,12,'#b08061');pixel(c,x-21,176,46,4,'#58505b');}
-      if(stage===3)this.lotus(748,384,110,'#382039',true);
+      if(!K.ImageArt?.images.mountain)for(let x=220;x<s.room.width;x+=450){pixel(c,x,177,3,112,'#3a3445');pixel(c,x-8,286,20,3,'#a28a67');pixel(c,x-6,289,16,21,'#aa6962');pixel(c,x-4,292,12,15,'#dea273');pixel(c,x,310,2,12,'#b08061');pixel(c,x-21,176,46,4,'#58505b');}
+      if(stage===3&&!K.ImageArt?.images.sanctuary)this.lotus(748,384,110,'#382039',true);
       for(const p of s.room.platforms)this.platform(p);
       for(const h of s.room.hazards){for(let x=h.x;x<h.x+h.w;x+=11)poly(c,[[x,h.y+h.h],[x+5,h.y-4],[x+11,h.y+h.h]],'#b5769e');pixel(c,h.x,h.y+h.h-3,h.w,3,'#573c59');}
-      for(const q of s.room.seals){if(q.hp>0){pixel(c,q.x-5,q.y+38,38,10,'#6c6075');pixel(c,q.x+6,q.y+4,16,34,'#393343');pixel(c,q.x+9,q.y+8,10,25,'#c984c2');this.lotus(q.x+14,q.y+7,15,'#bf80b5',false);for(let i=0;i<3;i++)pixel(c,q.x+9+i*5,q.y-13,3,3,q.hp>i*14?'#d8a4cc':'#463c52');}else{pixel(c,q.x-6,q.y+40,39,8,'#5a5e62');pixel(c,q.x+6,q.y+31,14,8,'#807e78');}}
+      for(const q of s.room.seals){if(this.drawSeal&&K.ImageArt?.images.enemies){this.drawSeal(q);continue;}if(q.hp>0){pixel(c,q.x-5,q.y+38,38,10,'#6c6075');pixel(c,q.x+6,q.y+4,16,34,'#393343');pixel(c,q.x+9,q.y+8,10,25,'#c984c2');this.lotus(q.x+14,q.y+7,15,'#bf80b5',false);for(let i=0;i<3;i++)pixel(c,q.x+9+i*5,q.y-13,3,3,q.hp>i*14?'#d8a4cc':'#463c52');}else{pixel(c,q.x-6,q.y+40,39,8,'#5a5e62');pixel(c,q.x+6,q.y+31,14,8,'#807e78');}}
       for(const item of s.room.pickups)if(!item.used){const y=item.y+Math.round(Math.sin(t*3+item.x)*3);this.lotus(item.x+8,y+8,10,item.kind==='heal'?'#c4dba3':'#91d2d4',false);pixel(c,item.x+5,y+20,7,2,'#57636b');}
       if(stage<3){const open=s.room.seals.every(q=>q.hp===0);pixel(c,s.room.exit-20,333,52,108,'#3e3544');pixel(c,s.room.exit-12,338,36,102,open?'#586e65':'#302936');pixel(c,s.room.exit-25,330,62,6,'#aa9679');pixel(c,s.room.exit-30,326,72,4,'#625864');for(let i=0;i<4;i++)pixel(c,s.room.exit-8+i*9,342,2,93,open?'#a8caa0':'#5f4567');if(open){for(let i=0;i<7;i++)pixel(c,s.room.exit+Math.sin(t+i)*14,365+(i*11+t*20)%65,2,4,'#d6dba6');}}
       for(const e of s.room.enemies)if(e.hp>0){pixel(c,e.x-2,e.y+e.h-1,e.w+4,4,'#19212d');if(e.kind==='boss'){const col=e.phase==='recover'?'#d4b985':'#805575';for(let i=0;i<10;i++){const ang=i*Math.PI/5+t*.5;pixel(c,e.x+24+Math.cos(ang)*39,e.y+30+Math.sin(ang)*48,4,4,col);}}const f=e.phase==='attack'?5:e.phase.includes('windup')?4:Math.floor(t*3)%4;const yy=e.kind==='caster'?Math.sin(t*2+e.id)*5:0;this.person(e.kind,e.x,e.y+yy,e.face,f,1,e.flash>0,e.kind==='boss'?1.12:1);
