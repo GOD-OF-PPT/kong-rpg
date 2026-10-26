@@ -25,7 +25,7 @@
   const worldSummary=()=>state?['rescue','bridge','bell'].map(id=>state.world[id]?K.WORLD_STORIES[id].title:null).filter(Boolean).join(' · '):'';
   const journal=()=>state?.journal.length?'<details class="run-journal"><summary>此行见闻 · '+state.journal.length+'</summary>'+state.journal.map(key=>{const[id,part]=key.split(':');return '<p><b>'+K.WORLD_STORIES[id].title+'</b> · '+K.WORLD_STORIES[id][part]+'</p>';}).join('')+'</details>':'';
   const panel=(label,eyebrow,title,body)=>{
-    const choice=['start','reward','replace'].includes(screen),hint=choice?'<span><kbd>←</kbd><kbd>→</kbd> 选卷</span><span><kbd>Enter</kbd> 确认</span><span><kbd>1</kbd><kbd>2</kbd><kbd>3</kbd> 速选</span>':screen==='history'?'<span><kbd>↑</kbd><kbd>↓</kbd> 翻阅</span><span><kbd>Tab</kbd> 移步</span><span><kbd>Enter</kbd> 确认</span>':'<span><kbd>↑</kbd><kbd>↓</kbd> 移步</span><span><kbd>Enter</kbd> 确认</span>';
+    const choice=['start','reward','replace'].includes(screen),hint=choice?'<span><kbd>A</kbd><kbd>D</kbd> / <kbd>←</kbd><kbd>→</kbd> 选卷</span><span><kbd>Enter</kbd> 确认</span><span><kbd>1</kbd><kbd>2</kbd><kbd>3</kbd> 速选</span>':screen==='history'?'<span><kbd>↑</kbd><kbd>↓</kbd> 翻阅</span><span><kbd>Tab</kbd> 移步</span><span><kbd>Enter</kbd> 确认</span>':'<span><kbd>↑</kbd><kbd>↓</kbd> 移步</span><span><kbd>Enter</kbd> 确认</span>';
     const back=['paused','help','legacy','history','prologue','epilogue','start','replace','won','dead'].includes(screen)?`<span><kbd>Esc</kbd> ${screen==='paused'?'继续':screen==='replace'?'返回选择':'返回'}</span>`:'';
     return `<section class="panel game-dialog dialog-${screen}" role="dialog" aria-modal="true" aria-label="${label}" aria-labelledby="dialog-title"><header class="dialog-heading"><span class="dialog-sigil" aria-hidden="true"></span><div class="eyebrow">${eyebrow}</div><h2 id="dialog-title">${title}</h2></header><div class="dialog-content">${body}</div><footer class="dialog-footer"><span class="footer-mark" aria-hidden="true">◇</span>${hint}${back}</footer></section>`;
   };
@@ -128,7 +128,9 @@
     if(screen!=='playing'){
       const nodes=[...$('overlay').querySelectorAll('button:not(:disabled),input:not([hidden]),summary,[tabindex="0"]')].filter(n=>n.getClientRects().length);
       if(e.code==='Tab'&&nodes.length){const first=nodes[0],last=nodes[nodes.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}}
-      if(!field&&['ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(e.code)&&!e.target.classList.contains('history-list')&&nodes.length){e.preventDefault();const cards=[...$('overlay').querySelectorAll('.relic-card')],list=cards.includes(document.activeElement)&&['ArrowLeft','ArrowRight'].includes(e.code)?cards:nodes;const dir=['ArrowUp','ArrowLeft'].includes(e.code)?-1:1,index=list.indexOf(document.activeElement);list[(index+dir+list.length)%list.length].focus();audio.menu('move');}
+      const cardKey=['start','reward','replace'].includes(screen)&&!e.ctrlKey&&!e.metaKey&&!e.altKey&&['KeyA','KeyD'].includes(e.code);
+      const navCode=cardKey?(e.code==='KeyA'?'ArrowLeft':'ArrowRight'):e.code;
+      if(!field&&['ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(navCode)&&!e.target.classList.contains('history-list')&&nodes.length){e.preventDefault();const cards=[...$('overlay').querySelectorAll('.relic-card')],list=cards.length&&(cardKey||cards.includes(document.activeElement))&&['ArrowLeft','ArrowRight'].includes(navCode)?cards:nodes;const dir=['ArrowUp','ArrowLeft'].includes(navCode)?-1:1,index=list.indexOf(document.activeElement);list[index<0?(dir<0?list.length-1:0):(index+dir+list.length)%list.length].focus();audio.menu('move');}
       if(e.code==='Enter'&&e.repeat)e.preventDefault();
     }
   });
