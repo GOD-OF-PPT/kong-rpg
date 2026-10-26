@@ -1,0 +1,61 @@
+{
+  "tool": "built-in image_gen",
+  "runtime": "embedded data URLs; no network or fetch",
+  "assets": {
+    "mountain": {
+      "file": "assets/art-v1/mountain-approach.png",
+      "bytes": 2593019,
+      "sha256": "57e9513653529b4825a2a406b6c64775de29ba4dddbcb9ff3be6406c5c168e56"
+    },
+    "ferry": {
+      "file": "assets/art-v1/lantern-ferry.png",
+      "bytes": 2645367,
+      "sha256": "be12588fb7f74815f79f48a77a8e8b1147cbfb6201b585a56fc60eb9a03e4c49"
+    },
+    "sanctuary": {
+      "file": "assets/art-v1/ruined-sanctuary.png",
+      "bytes": 2979693,
+      "sha256": "867935f592dfb15b8b3ff4bc9d05c779c147ec2a9ea489dc11611a6873b6046a"
+    },
+    "wukong": {
+      "file": "assets/art-v1/wukong-atlas.png",
+      "bytes": 1269917,
+      "sha256": "ce37326df844b464a177a956ae165e91560a7af5f65d4bb1a99b2978485b22c1"
+    },
+    "enemies": {
+      "file": "assets/art-v1/enemy-atlas.png",
+      "bytes": 2389650,
+      "sha256": "a3226339999519e17fdafed08bfa01bf9b85e4c0db87cf097534b9f3ef805fa1"
+    },
+    "stone": {
+      "file": "assets/art-v1/stone-platform.png",
+      "bytes": 946448,
+      "sha256": "0e6e36cd6a30ce74c4ea3a1bb2a6096bd3ae65e868b2715fbec0c65e25aa09de"
+    },
+    "run": {
+      "file": "assets/art-v2/wukong-run.png",
+      "bytes": 860700,
+      "sha256": "0a2de6e34eb2e3c101fe9a609e6faa5d3a943e1c83583387d6681b784a521c8d"
+    },
+    "props": {
+      "file": "assets/art-v2/journey-props.png",
+      "bytes": 1265179,
+      "sha256": "56e3b8c4f4537c3a1d88b3d9d0d6667fcb314aedfb803ab0b6438631025880d4"
+    },
+    "uiScroll": {
+      "file": "assets/ui-v3/pilgrim-scroll.png",
+      "bytes": 1617682,
+      "sha256": "45960432047946fd390e83d12ceeec907e8bd2a08af6459f313c4d68690e9388"
+    },
+    "uiIcons": {
+      "file": "assets/ui-v3/relic-icons.png",
+      "bytes": 2261550,
+      "sha256": "474240ea1bb2d07a0290da25985b680e5d08179bea3cffc8d23b36270a4ccfbc"
+    },
+    "uiFolio": {
+      "file": "assets/ui-v3/field-folio.png",
+      "bytes": 1901827,
+      "sha256": "c50cda5a0e6677b632301559070720df70b4330db61381a7f2620b071a2ef1fa"
+    }
+  }
+}

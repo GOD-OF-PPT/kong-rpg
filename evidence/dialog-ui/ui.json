@@ -1,0 +1,90 @@
+{
+  "sha256": "a2b22371d0815f88a58d3c96eb9450b29ba12346f03aff0d931d476ed6dc737e",
+  "checks": [
+    {
+      "name": "PC frame fits 1366x768 without page overflow",
+      "pass": true,
+      "overflow": false,
+      "height": 766,
+      "viewport": 768
+    },
+    {
+      "name": "first journey has an actual prologue",
+      "pass": true
+    },
+    {
+      "name": "real keys permit cloud aerial jump",
+      "pass": true
+    },
+    {
+      "name": "modal controls do not leak combat input",
+      "pass": true
+    },
+    {
+      "name": "volume and reduced motion persist across reload",
+      "pass": true
+    },
+    {
+      "name": "guide describes actual chip and recovery rules",
+      "pass": true
+    },
+    {
+      "name": "exported v2 save restores paused",
+      "pass": true
+    },
+    {
+      "name": "fourth relic opens explicit replacement",
+      "pass": true
+    },
+    {
+      "name": "pending replacement survives a real reload",
+      "pass": true
+    },
+    {
+      "name": "replacement changes only selected relic and resumes original room",
+      "pass": true
+    },
+    {
+      "name": "rest card heals and preserves build",
+      "pass": true
+    },
+    {
+      "name": "bad save rejected while current journey survives",
+      "pass": true
+    },
+    {
+      "name": "targeted active enemy attack reaches real failure UI",
+      "pass": true
+    },
+    {
+      "name": "same-seed retry resets all run state",
+      "pass": true
+    },
+    {
+      "name": "legacy import opens preservation flow, not silent migration",
+      "pass": true
+    },
+    {
+      "name": "preserved original actually restores old map and progress",
+      "pass": true
+    },
+    {
+      "name": "opening legacy does not overwrite the v2 journey",
+      "pass": true
+    },
+    {
+      "name": "storage-denied context still starts full game",
+      "pass": true
+    },
+    {
+      "name": "storage-denied fallback exports real schema2",
+      "pass": true
+    },
+    {
+      "name": "no UI runtime exceptions",
+      "pass": true,
+      "errors": []
+    }
+  ],
+  "errors": []
+}

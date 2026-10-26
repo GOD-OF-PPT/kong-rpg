@@ -20,5 +20,6 @@
     }
     tick(playing,stage=0){if(!this.ctx||!this.enabled||!playing)return;const t=this.ctx.currentTime;if(t>this.next){const melodies=[[146.83,220,261.63,293.66,220,196,164.81,220],[164.81,196,246.94,293.66,246.94,220,196,164.81],[130.81,196,233.08,261.63,196,174.61,155.56,196],[110,130.81,164.81,196,164.81,130.81,146.83,110]];const notes=melodies[stage]||melodies[0];this.next=t+(stage===3?.45:.65);this.tone(notes[this.note++%notes.length],.48,'sine',.065);if(this.note%4===0){this.tone(notes[0]/2,.6,'sine',.09);this.noise(.14,.025);}}}
     setVolume(v){this.volume=v;if(this.bus)this.bus.gain.value=v*.3;}
+    menu(kind){if(kind==='move')this.tone(440,.045,'sine',.055);else{this.tone(660,.09,'triangle',.07);this.tone(880,.13,'sine',.035,.035);}}
   };
 })(globalThis.Kong ||= {});

@@ -1,0 +1,115 @@
+/* Pilgrimage UI: hanging relic scrolls, ink folios and a quiet shrine pause. */
+:root{--ui-ink:#201c17;--ui-paper:#e6cf9e;--ui-muted:#bfb6a0;--ui-gold:#e7c889;--ui-cinnabar:#ba6049;--ui-night:#101b20;--scroll-art:linear-gradient(135deg,#dbc18b,#b89b63);--ui-type:SimSun,"Songti SC",serif}
+#stage{container-type:inline-size}
+#overlay{z-index:5}
+#stage[data-mode]:not([data-mode=playing]):not([data-mode=menu]) #overlay{background:radial-gradient(ellipse at 50% 48%,#0b151dd9,#080f16ed);backdrop-filter:brightness(.72)}
+#stage[data-mode=paused] #overlay{background:linear-gradient(90deg,#070e14b0,#0a1419f0 48%,#0a1419f5)}
+#stage[data-mode=won] #overlay{background:radial-gradient(ellipse at 50% 40%,#363323df,#0c171eee)}
+#stage[data-mode=dead] #overlay{background:radial-gradient(ellipse at 50% 45%,#302123df,#0b131aee)}
+.panel.game-dialog{position:relative;width:91%;max-width:none;max-height:96%;padding:22px 38px 14px;border:0;background:none;box-shadow:none;overflow:auto;scrollbar-width:thin;scrollbar-color:#9a7d4b #142029;animation:dialog-arrive .18s ease-out;color:var(--ui-paper)}
+.panel.game-dialog:before{display:none}
+.dialog-heading{text-align:center;position:relative;margin:0 auto 12px;max-width:860px}
+.dialog-heading .eyebrow{justify-content:center;font-size:11px;letter-spacing:4px;color:#c4af86}
+.dialog-heading .eyebrow:before,.dialog-heading .eyebrow:after{content:"";display:block;height:1px;width:45px;background:linear-gradient(90deg,transparent,#a28250)}
+.dialog-heading .eyebrow:after{transform:rotate(180deg)}
+.dialog-heading h2{font:normal clamp(26px,3.1cqw,44px)/1.3 var(--ui-type);letter-spacing:6px;margin:9px 0;color:#f0d7a0;text-shadow:0 2px #15181b}
+.dialog-content{position:relative}
+.dialog-content>.subtitle{text-align:center;line-height:1.8;color:#d0c9b8;font-size:13px;margin:5px 0 12px;letter-spacing:1px}
+.dialog-sigil{display:block;width:56px;height:57px;margin:0 auto 7px;background:var(--icon-crest) center/contain no-repeat;image-rendering:pixelated}
+.dialog-heading .dialog-sigil{display:none}
+.game-dialog .actions{justify-content:center;gap:18px;margin-top:13px}
+.game-dialog .button{border:0;background:none;box-shadow:none;padding:9px 23px;min-height:42px;color:#d8c6a3;font:16px/1.3 var(--ui-type);letter-spacing:3px;position:relative;isolation:isolate;transition:color .12s}
+.game-dialog .button:before{content:"";position:absolute;inset:2px 0;z-index:-1;background:linear-gradient(90deg,transparent,#3b3b2c99,transparent);opacity:0;border-block:1px solid #8c744740}
+.game-dialog .button:hover,.game-dialog .button:focus-visible{color:#fff0bd;background:none;outline:none;box-shadow:none}
+.game-dialog .button:hover:before,.game-dialog .button:focus-visible:before{opacity:1}
+.game-dialog .button:focus-visible:after{content:"◆";font-size:9px;position:absolute;left:4px;top:50%;transform:translateY(-50%);color:#efcf82}
+.game-dialog .button.primary{color:#f0d49a;background:none;box-shadow:none;font-weight:600;border-block:1px solid #aa844c80}
+.game-dialog .button.primary:hover{background:none}
+.dialog-footer{display:flex;justify-content:center;align-items:center;gap:18px;margin-top:15px;padding-top:10px;border-top:1px solid #89754b40;font:11px/1.5 "Microsoft YaHei",sans-serif;color:#b6af9d;letter-spacing:1px}
+.dialog-footer kbd{background:#142128;border-color:#6d6b54;color:#e3d1aa;font-size:10px}
+.dialog-footer .footer-mark{color:#bd9b58}
+.game-dialog .starter-note{text-align:center;color:#c0b598;font-size:11px;line-height:1.7;margin:8px 0}
+.game-dialog .notice{font-size:11px;line-height:1.8;color:#b8b29f;max-width:700px;margin:13px auto 0;text-align:center}
+/* Reward: physical objects first, ability and price second, one clear selection. */
+.game-dialog .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;max-width:850px;margin:0 auto}
+.game-dialog .relic-card{--relic-tone:#d7be89;position:relative;align-items:center;min-height:0;height:345px;padding:30px 43px 43px;border:0;background:var(--scroll-art) center/100% 100% no-repeat;box-shadow:none;color:var(--ui-ink);isolation:isolate;image-rendering:pixelated;transition:transform .12s ease-out,filter .12s;overflow:visible}
+.game-dialog .relic-card:before{content:"";position:absolute;inset:0;z-index:-1;box-shadow:0 10px 23px #0005;opacity:0}
+.game-dialog .relic-card:hover,.game-dialog .relic-card:focus-visible{background:var(--scroll-art) center/100% 100% no-repeat;outline:none;transform:translateY(-5px);filter:brightness(1.08)}
+.game-dialog .relic-card:focus:after{content:"◆";position:absolute;top:-15px;left:calc(50% - 9px);color:#ffe5a0;font-size:18px;text-shadow:0 2px 3px #000;line-height:1}
+.game-dialog .relic-card:focus-visible:before{opacity:1}
+.game-dialog .relic-card .num{top:29px;left:39px;right:auto;font:12px var(--ui-type);color:#6a402a;letter-spacing:1px}
+.relic-art{display:block;flex:0 0 75px;width:100px;height:75px;margin:0 auto 3px;background-image:var(--item-art);background-size:contain;background-repeat:no-repeat;background-position:center;image-rendering:pixelated;filter:drop-shadow(0 3px 2px #3a27174d)}
+.game-dialog .relic-card h3{font:600 24px/1.3 var(--ui-type);letter-spacing:3px;margin:1px 0 4px;color:#332418}
+.game-dialog .relic-card .tag{color:#59331e;font-size:11px;margin-bottom:10px;letter-spacing:3px}
+.game-dialog .relic-card p{font:13px/1.75 "Microsoft YaHei",sans-serif;color:#32271b;margin:0;text-align:left;width:100%;letter-spacing:0}
+.game-dialog .relic-card .cost{font:11px/1.7 "Microsoft YaHei",sans-serif;color:#54351f;margin-top:auto;border-top:1px solid #78533050;padding-top:8px;width:100%;text-align:left}
+.game-dialog .relic-card .choice-verb{font:11px var(--ui-type);letter-spacing:4px;color:#65321f;position:absolute;bottom:24px}
+.equipped-line{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:6px;color:#d2c3a3;font-size:11px}
+.equipped-line span{display:flex;gap:4px;align-items:center}
+.equipped-line .relic-art{height:23px;width:25px;flex:none;margin:0;filter:none}
+.offering-status{display:flex;justify-content:center;gap:25px;margin:6px auto 10px;color:#d4cdb7;font-size:12px}.offering-status b{font-weight:400;color:#edcf96}
+.incoming-relic{display:flex;align-items:center;justify-content:center;gap:15px;max-width:700px;margin:0 auto 6px;padding:6px 0;border-block:1px solid #89754b40}.incoming-relic .relic-art{width:55px;height:50px;flex:none;margin:0}.incoming-relic p{font-size:12px;line-height:1.7;margin:0;color:#d0c9b8}.incoming-relic strong{display:block;font:18px var(--ui-type);color:#e8c58c;margin-bottom:4px}
+/* Pause is a shrine-side menu, not a settings form. */
+.panel.dialog-paused{width:85%;max-width:1100px;padding:22px 35px 15px;overflow:visible}
+.dialog-paused .dialog-heading{text-align:left;margin-left:44%;margin-bottom:12px}
+.dialog-paused .dialog-heading .eyebrow{justify-content:flex-start}.dialog-paused .dialog-heading .eyebrow:before,.dialog-paused .dialog-heading .eyebrow:after{display:none}
+.dialog-paused .dialog-content{margin-left:44%;min-height:270px;max-width:440px}
+.dialog-paused:after{content:"";position:absolute;width:33%;height:85%;left:4%;bottom:5%;background:var(--portrait-art) bottom center/contain no-repeat;image-rendering:pixelated;filter:drop-shadow(5px 9px 8px #0008);pointer-events:none}
+.pause-place{font-size:12px;color:#b9b9a6;letter-spacing:2px;margin-bottom:9px}.pause-nav{display:flex;flex-direction:column;align-items:stretch;margin-bottom:12px}.pause-nav .button{text-align:left;font-size:20px;letter-spacing:5px;padding:11px 26px;min-height:46px}.pause-nav .button.primary{border:0}.pause-nav .button.primary:before{opacity:1}.pause-nav .button span{float:right;font:10px/2 "Microsoft YaHei",sans-serif;letter-spacing:1px;color:#aa9d7c}
+.game-dialog .setting-row{padding:10px 0;border-block:1px solid #75634555;gap:16px;margin:5px 0;color:#d3c5a4;font-size:12px;flex-wrap:wrap}
+.game-dialog input[type=range]{appearance:none;-webkit-appearance:none;background:#132329;height:4px;border:1px solid #7b714f;width:112px;outline-offset:5px}.game-dialog input[type=range]::-webkit-slider-thumb{appearance:none;width:11px;height:17px;background:#d4b879;border:2px solid #423b2b;border-radius:0;cursor:pointer;box-shadow:0 0 0 1px #bda064}
+.game-dialog input[type=checkbox]{appearance:none;-webkit-appearance:none;vertical-align:middle;width:12px;height:12px;background:#132329;border:1px solid #9b855a;border-radius:0;margin:0 4px 0 0}.game-dialog input[type=checkbox]:checked{background:#d1b478;box-shadow:inset 0 0 0 2px #132329}
+.pause-tools{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}.pause-tools .button{font:12px "Microsoft YaHei",sans-serif;letter-spacing:1px;padding:6px 12px;min-height:30px}
+.dialog-paused .notice{text-align:left;font-size:10px;margin-top:8px;color:#aeb09f;max-width:380px}
+.dialog-paused .dialog-footer{margin-left:44%;justify-content:flex-start}
+/* Narrative and results: open space, stamped chapter, no desktop window frame. */
+.panel.dialog-prologue,.panel.dialog-epilogue,.panel.dialog-legacy{width:80%;max-width:950px;padding:24px 45px 18px}
+.dialog-prologue .dialog-heading .dialog-sigil,.dialog-epilogue .dialog-heading .dialog-sigil,.dialog-won .dialog-heading .dialog-sigil,.dialog-dead .dialog-heading .dialog-sigil,.dialog-history .dialog-heading .dialog-sigil{display:block}
+.game-dialog .story-copy{font:clamp(14px,1.45cqw,20px)/2.15 var(--ui-type);letter-spacing:2px;text-align:center;color:#d8ccb1;max-width:720px;margin:15px auto 24px}
+.game-dialog .journey-map{max-width:720px;margin:12px auto 21px;padding:13px 15px;border-color:#8c754d60;color:#c7aa69;background:linear-gradient(90deg,transparent,#4a463125,transparent)}
+.game-dialog .journey-map span{font:23px/1.7 var(--ui-type)}.game-dialog .journey-map b{font:12px "Microsoft YaHei",sans-serif;letter-spacing:3px;color:#d0c8b2}
+.panel.dialog-won,.panel.dialog-dead{width:82%;max-width:1000px}
+.dialog-won .dialog-heading h2,.dialog-dead .dialog-heading h2{font-size:clamp(30px,4.5cqw,58px);letter-spacing:8px;margin:12px 0 16px}
+.dialog-dead .dialog-heading h2{color:#d9a18a}.dialog-dead .dialog-sigil{filter:saturate(.3) brightness(.8)}
+.game-dialog .results{justify-content:center;gap:42px;max-width:720px;margin:18px auto;padding:15px 0;border-color:#8e774944}.game-dialog .results>div{align-items:center;gap:7px}.game-dialog .results small{font:11px "Microsoft YaHei",sans-serif;color:#b9b39f;letter-spacing:3px}.game-dialog .results b{font:30px var(--ui-type);color:#ead0a0}.result-build{text-align:center;font-size:12px;color:#c6c0aa;margin:12px 0;line-height:1.9}.result-build .equipped-line{margin:8px 0}
+.dialog-epilogue:after{content:"";display:block;position:absolute;right:10px;bottom:15px;width:90px;height:105px;background:var(--lamp-art) center/contain no-repeat;opacity:.7;pointer-events:none}
+/* Handwritten field manual: six indexed lessons, roomy ink-paper contrast. */
+.panel.dialog-help,.panel.dialog-history{width:87%;padding:22px 38px 14px;background:linear-gradient(90deg,#30291caa,#1b211eeb 3%,#1c2420f5 50%,#1b211eeb 97%,#30291caa);border-block:2px solid #9a7b46;box-shadow:0 6px 30px #0006}
+.dialog-help .dialog-heading{margin-bottom:15px}.game-dialog .help-grid{gap:16px 35px;counter-reset:lesson;padding:8px 7px 10px}.game-dialog .help-grid>div{counter-increment:lesson;position:relative;padding-left:32px}.game-dialog .help-grid>div:before{content:counter(lesson,simp-chinese-formal);position:absolute;left:0;top:0;color:#b89d65;font:16px var(--ui-type);border-bottom:1px solid #8a704c;padding-bottom:4px}.game-dialog .help-grid h3{font:18px var(--ui-type);letter-spacing:3px;color:#e2c78e;margin:0 0 8px}.game-dialog .help-grid p{font:12px/1.9 "Microsoft YaHei",sans-serif;color:#d0cabb}.dialog-help .notice{display:none}
+.game-dialog .history-list{max-width:760px;margin:18px auto;max-height:270px}.game-dialog .history-list>div{border-color:#8c744c4d;padding:15px 8px}.game-dialog .history-list b{font:17px var(--ui-type);color:#e0c18a}.game-dialog .history-list span{font-size:12px;color:#d0c6af}.game-dialog .history-list small{font-size:11px;color:#b8b49f}
+.empty-history{text-align:center;padding:15px 0}.empty-history .relic-art{width:80px;height:90px;margin:0 auto 10px}.empty-history p{font:16px/2 var(--ui-type);letter-spacing:2px;color:#c4b99c}
+/* Transient notices remain edge-of-field, distinct from modal decisions. */
+#stage #toast{top:auto;bottom:14%;background:linear-gradient(90deg,#15202300,#101b22f5 12%,#101b22f5 88%,#15202300);border:0;border-block:1px solid #b59a5b50;box-shadow:none;padding:9px 27px;color:#ead4a7;font:13px/1.6 var(--ui-type);letter-spacing:1px;max-width:72%;z-index:6}
+#stage:not([data-mode=playing]) #toast{top:8px;bottom:auto;font-size:12px}
+#context-hint{background:linear-gradient(90deg,transparent,#102027df 10%,#102027df 90%,transparent);border:0;color:#ead6aa}
+.panel.dialog-help{background:none;border:0;box-shadow:none}
+.dialog-help .help-grid{background:var(--folio-art,linear-gradient(#d4bd88,#bea16d)) center/100% 100% no-repeat;image-rendering:pixelated;padding:50px 90px 70px;gap:18px 100px}
+.dialog-help .help-grid>div{padding-left:26px}
+.dialog-help .help-grid>div:before{color:#76522d;border-color:#9a7b4e}
+.dialog-help .help-grid h3{color:#57311f;text-shadow:none}
+.dialog-help .help-grid p{color:#33291d;font-size:12px}
+.panel.dialog-history{background:none;border:0;box-shadow:none}
+.dialog-history .dialog-heading .dialog-sigil{display:none}
+.history-folio{padding:45px 90px 70px;background:var(--folio-art,linear-gradient(#d4bd88,#bea16d)) center/100% 100% no-repeat;image-rendering:pixelated;margin:9px 0 14px}
+.game-dialog .history-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px 95px;max-width:none;max-height:250px;min-height:150px;margin:0;padding:0;background:none;overflow:auto;scrollbar-width:thin;scrollbar-color:#775633 #d6c18b}
+.game-dialog .history-list>div{display:block;min-width:0;border-bottom:1px solid #88643955;padding:7px 0}
+.game-dialog .history-list b{display:block;font:17px var(--ui-type);color:#57311f;margin-bottom:6px}
+.game-dialog .history-list span{font-size:11px;color:#49351f;overflow-wrap:anywhere;line-height:1.7}
+.game-dialog .history-list span:nth-of-type(2){margin-left:15px;color:#684826}
+.game-dialog .history-list small{display:block;font:11px/1.7 "Microsoft YaHei",sans-serif;color:#54351f;margin-top:5px}
+.game-dialog .history-list>.empty-history{border:0;display:flex;flex-direction:column;justify-content:center;padding:5px}
+.game-dialog .history-list>.empty-history p{color:#573d28;font-size:15px}
+.history-list:focus-visible{outline:1px solid #795432;outline-offset:4px}
+.history-hint{text-align:center;color:#bdaa82;font:11px/1.5 "Microsoft YaHei",sans-serif;letter-spacing:1px;margin:3px 0 7px}
+@keyframes dialog-arrive{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+@container(max-width:1120px){
+ .panel.game-dialog{padding:14px 24px 10px}.dialog-heading{margin-bottom:7px}.dialog-heading h2{font-size:28px;margin:7px 0;letter-spacing:4px}.dialog-heading .eyebrow{font-size:10px}.dialog-content>.subtitle{font-size:12px;margin:3px 0 8px;line-height:1.6}
+ .game-dialog .cards{max-width:730px;gap:12px}.game-dialog .relic-card{height:300px;padding:27px 35px 34px}.game-dialog .relic-card h3{font-size:21px}.game-dialog .relic-card .num{top:25px;left:32px;font-size:11px}.relic-art{height:54px;flex-basis:54px;width:86px}.game-dialog .relic-card .tag{font-size:10px;margin-bottom:7px}.game-dialog .relic-card p{font-size:11px;line-height:1.7}.game-dialog .relic-card .cost{font-size:10px;line-height:1.6;padding-top:6px}.game-dialog .relic-card .choice-verb{bottom:20px;font-size:10px}
+ .dialog-footer{font-size:10px;margin-top:10px;padding-top:8px}.game-dialog .actions{margin-top:9px}.game-dialog .button{font-size:14px;min-height:35px;padding:7px 18px}.game-dialog .starter-note{font-size:10px;margin:6px 0}.offering-status{font-size:11px;margin:4px 0 6px}.equipped-line{font-size:10px;margin-top:4px;gap:8px}.incoming-relic{padding:3px 0}.incoming-relic .relic-art{height:38px}.incoming-relic p{font-size:11px}.incoming-relic strong{font-size:16px}
+ .panel.dialog-paused{width:88%;padding:18px 24px 11px}.dialog-paused .dialog-heading{margin-left:43%;text-align:left}.dialog-paused .dialog-content,.dialog-paused .dialog-footer{margin-left:43%}.dialog-paused .dialog-content{min-height:230px}.pause-nav .button{font-size:18px;min-height:39px;padding:8px 23px}.pause-tools .button{font-size:11px;min-height:28px;padding:5px 10px}.game-dialog .setting-row{font-size:11px;padding:8px 0;gap:12px}
+ .game-dialog .story-copy{font-size:14px;line-height:2;margin:12px auto 16px}.game-dialog .journey-map{margin:10px auto 15px;padding:10px}.game-dialog .journey-map span{font-size:20px}.game-dialog .journey-map b{font-size:11px}
+ .dialog-heading .dialog-sigil{width:45px;height:44px;margin-bottom:5px}.game-dialog .help-grid{gap:13px 24px;padding:4px 0}.game-dialog .help-grid>div{padding-left:25px}.game-dialog .help-grid h3{font-size:16px;margin-bottom:5px}.game-dialog .help-grid p{font-size:11px;line-height:1.8}.game-dialog .results{gap:32px;margin:13px auto;padding:12px 0}.game-dialog .results b{font-size:26px}.result-build{font-size:11px;margin:8px 0}.game-dialog .notice{font-size:10px;margin-top:9px}
+}
+@media(prefers-reduced-motion:reduce){.panel.game-dialog{animation:none}.game-dialog .relic-card{transition:none}.game-dialog .relic-card:hover,.game-dialog .relic-card:focus-visible{transform:none}}
+@container(max-width:850px){.panel.game-dialog{width:96%;padding-inline:18px}.game-dialog .relic-card{padding-inline:31px}.game-dialog .cards{gap:7px}.dialog-heading h2{font-size:24px}.game-dialog .relic-card p{font-size:11px}.game-dialog .relic-card .cost{font-size:10px}.game-dialog .help-grid{gap:10px 18px}.game-dialog .help-grid p{font-size:10px}.dialog-paused:after{width:30%}.dialog-paused .dialog-heading,.dialog-paused .dialog-content,.dialog-paused .dialog-footer{margin-left:36%}}
+@container(max-width:1120px){.dialog-help .help-grid{padding:44px 72px 60px;gap:12px 70px}.dialog-help .help-grid h3{font-size:16px}.dialog-help .help-grid p{font-size:11px;line-height:1.8}.history-folio{padding:40px 72px 62px}.game-dialog .history-list{padding:0;max-height:205px;gap:6px 65px}.game-dialog .history-list b{font-size:15px}.game-dialog .history-list span,.game-dialog .history-list small{font-size:10px}}
