@@ -1,0 +1,6445 @@
+{
+  "version": "3.0.1",
+  "sha256": "9ebd8dc19de7c0853705cd0c1bd483d37231b9301f63935f36f0e85f3fda7fa1",
+  "kind": "file",
+  "checks": [
+    {
+      "name": "preview server is stopped before offline session",
+      "pass": true
+    },
+    {
+      "name": "generated UI textures ready",
+      "pass": true
+    },
+    {
+      "name": "prologue-1440 reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "prologue-1440 dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "prologue-1440 uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "start-1440 reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "start-1440 dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "start-1440 uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "start-1440 cloud full text stays inside quiet paper",
+      "pass": true
+    },
+    {
+      "name": "start-1440 cloud text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "start-1440 cloud text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "start-1440 cloud text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "start-1440 cloud text does not overlap 4",
+      "pass": true
+    },
+    {
+      "name": "start-1440 cloud price and choice have reading gap",
+      "pass": true
+    },
+    {
+      "name": "start-1440 echo full text stays inside quiet paper",
+      "pass": true
+    },
+    {
+      "name": "start-1440 echo text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "start-1440 echo text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "start-1440 echo text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "start-1440 echo text does not overlap 4",
+      "pass": true
+    },
+    {
+      "name": "start-1440 echo price and choice have reading gap",
+      "pass": true
+    },
+    {
+      "name": "start-1440 staff full text stays inside quiet paper",
+      "pass": true
+    },
+    {
+      "name": "start-1440 staff text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "start-1440 staff text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "start-1440 staff text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "start-1440 staff text does not overlap 4",
+      "pass": true
+    },
+    {
+      "name": "start-1440 staff price and choice have reading gap",
+      "pass": true
+    },
+    {
+      "name": "right key selects second scroll",
+      "pass": true
+    },
+    {
+      "name": "left key selects first scroll",
+      "pass": true
+    },
+    {
+      "name": "reverse Tab stays in dialog",
+      "pass": true
+    },
+    {
+      "name": "Tab wraps to first scroll",
+      "pass": true
+    },
+    {
+      "name": "Enter confirms relic and starts combat",
+      "pass": true
+    },
+    {
+      "name": "pause-1440 reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "pause-1440 dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "pause-1440 uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "dialog blocks attack and clone input",
+      "pass": true
+    },
+    {
+      "name": "pause Down focuses guide",
+      "pass": true
+    },
+    {
+      "name": "help-1440 reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "help-1440 dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "help-1440 uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "guide returns to pause trigger",
+      "pass": true
+    },
+    {
+      "name": "range keeps native arrow adjustment",
+      "pass": true
+    },
+    {
+      "name": "Escape works from settings field",
+      "pass": true
+    },
+    {
+      "name": "export and import keep paused state",
+      "pass": true
+    },
+    {
+      "name": "reward-mid-1440 reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "reward-mid-1440 dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "reward-mid-1440 uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "reward-mid-1440 mirror full text stays inside quiet paper",
+      "pass": true
+    },
+    {
+      "name": "reward-mid-1440 mirror text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-mid-1440 mirror text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-mid-1440 mirror text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-mid-1440 mirror text does not overlap 4",
+      "pass": true
+    },
+    {
+      "name": "reward-mid-1440 mirror price and choice have reading gap",
+      "pass": true
+    },
+    {
+      "name": "reward-mid-1440 flame full text stays inside quiet paper",
+      "pass": true
+    },
+    {
+      "name": "reward-mid-1440 flame text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-mid-1440 flame text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-mid-1440 flame text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-mid-1440 flame text does not overlap 4",
+      "pass": true
+    },
+    {
+      "name": "reward-mid-1440 flame price and choice have reading gap",
+      "pass": true
+    },
+    {
+      "name": "reward-mid-1440 rest full text stays inside quiet paper",
+      "pass": true
+    },
+    {
+      "name": "reward-mid-1440 rest text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-mid-1440 rest text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-mid-1440 rest text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-mid-1440 rest text does not overlap 4",
+      "pass": true
+    },
+    {
+      "name": "reward-mid-1440 rest price and choice have reading gap",
+      "pass": true
+    },
+    {
+      "name": "rest remains a real resource tradeoff",
+      "pass": true
+    },
+    {
+      "name": "replace-1440 reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "replace-1440 dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "replace-1440 uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "replace-1440 cloud full text stays inside quiet paper",
+      "pass": true
+    },
+    {
+      "name": "replace-1440 cloud text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "replace-1440 cloud text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "replace-1440 cloud text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "replace-1440 cloud text does not overlap 4",
+      "pass": true
+    },
+    {
+      "name": "replace-1440 cloud price and choice have reading gap",
+      "pass": true
+    },
+    {
+      "name": "replace-1440 echo full text stays inside quiet paper",
+      "pass": true
+    },
+    {
+      "name": "replace-1440 echo text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "replace-1440 echo text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "replace-1440 echo text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "replace-1440 echo text does not overlap 4",
+      "pass": true
+    },
+    {
+      "name": "replace-1440 echo price and choice have reading gap",
+      "pass": true
+    },
+    {
+      "name": "replace-1440 staff full text stays inside quiet paper",
+      "pass": true
+    },
+    {
+      "name": "replace-1440 staff text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "replace-1440 staff text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "replace-1440 staff text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "replace-1440 staff text does not overlap 4",
+      "pass": true
+    },
+    {
+      "name": "replace-1440 staff price and choice have reading gap",
+      "pass": true
+    },
+    {
+      "name": "replace Escape cancels safely",
+      "pass": true
+    },
+    {
+      "name": "pending replacement survives reload",
+      "pass": true
+    },
+    {
+      "name": "replacement changes only chosen equipped relic",
+      "pass": true
+    },
+    {
+      "name": "reward-exit-1440 reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "reward-exit-1440 dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "reward-exit-1440 uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "reward-exit-1440 mercy full text stays inside quiet paper",
+      "pass": true
+    },
+    {
+      "name": "reward-exit-1440 mercy text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-exit-1440 mercy text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-exit-1440 mercy text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-exit-1440 mercy text does not overlap 4",
+      "pass": true
+    },
+    {
+      "name": "reward-exit-1440 mercy price and choice have reading gap",
+      "pass": true
+    },
+    {
+      "name": "reward-exit-1440 flame full text stays inside quiet paper",
+      "pass": true
+    },
+    {
+      "name": "reward-exit-1440 flame text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-exit-1440 flame text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-exit-1440 flame text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-exit-1440 flame text does not overlap 4",
+      "pass": true
+    },
+    {
+      "name": "reward-exit-1440 flame price and choice have reading gap",
+      "pass": true
+    },
+    {
+      "name": "reward-exit-1440 rest full text stays inside quiet paper",
+      "pass": true
+    },
+    {
+      "name": "reward-exit-1440 rest text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-exit-1440 rest text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-exit-1440 rest text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-exit-1440 rest text does not overlap 4",
+      "pass": true
+    },
+    {
+      "name": "reward-exit-1440 rest price and choice have reading gap",
+      "pass": true
+    },
+    {
+      "name": "exit reward advances to next stage",
+      "pass": true
+    },
+    {
+      "name": "death-1440 reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "death-1440 dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "death-1440 uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "failure retry starts same seed with different relic",
+      "pass": true
+    },
+    {
+      "name": "victory-1440 reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "victory-1440 dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "victory-1440 uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "epilogue-1440 reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "epilogue-1440 dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "epilogue-1440 uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "epilogue returns to results",
+      "pass": true
+    },
+    {
+      "name": "history-1440 reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "history-1440 dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "history-1440 uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "legacy-1440 reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "legacy-1440 dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "legacy-1440 uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "start-1366 reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "start-1366 dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "start-1366 uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "start-1366 cloud full text stays inside quiet paper",
+      "pass": true
+    },
+    {
+      "name": "start-1366 cloud text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "start-1366 cloud text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "start-1366 cloud text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "start-1366 cloud text does not overlap 4",
+      "pass": true
+    },
+    {
+      "name": "start-1366 cloud price and choice have reading gap",
+      "pass": true
+    },
+    {
+      "name": "start-1366 echo full text stays inside quiet paper",
+      "pass": true
+    },
+    {
+      "name": "start-1366 echo text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "start-1366 echo text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "start-1366 echo text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "start-1366 echo text does not overlap 4",
+      "pass": true
+    },
+    {
+      "name": "start-1366 echo price and choice have reading gap",
+      "pass": true
+    },
+    {
+      "name": "start-1366 staff full text stays inside quiet paper",
+      "pass": true
+    },
+    {
+      "name": "start-1366 staff text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "start-1366 staff text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "start-1366 staff text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "start-1366 staff text does not overlap 4",
+      "pass": true
+    },
+    {
+      "name": "start-1366 staff price and choice have reading gap",
+      "pass": true
+    },
+    {
+      "name": "pause-1366 reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "pause-1366 dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "pause-1366 uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "help-1366 reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "help-1366 dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "help-1366 uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "reward-1366 reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "reward-1366 dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "reward-1366 uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "reward-1366 mirror full text stays inside quiet paper",
+      "pass": true
+    },
+    {
+      "name": "reward-1366 mirror text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-1366 mirror text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-1366 mirror text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-1366 mirror text does not overlap 4",
+      "pass": true
+    },
+    {
+      "name": "reward-1366 mirror price and choice have reading gap",
+      "pass": true
+    },
+    {
+      "name": "reward-1366 flame full text stays inside quiet paper",
+      "pass": true
+    },
+    {
+      "name": "reward-1366 flame text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-1366 flame text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-1366 flame text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-1366 flame text does not overlap 4",
+      "pass": true
+    },
+    {
+      "name": "reward-1366 flame price and choice have reading gap",
+      "pass": true
+    },
+    {
+      "name": "reward-1366 rest full text stays inside quiet paper",
+      "pass": true
+    },
+    {
+      "name": "reward-1366 rest text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-1366 rest text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-1366 rest text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-1366 rest text does not overlap 4",
+      "pass": true
+    },
+    {
+      "name": "reward-1366 rest price and choice have reading gap",
+      "pass": true
+    },
+    {
+      "name": "replace-1366 reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "replace-1366 dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "replace-1366 uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "replace-1366 cloud full text stays inside quiet paper",
+      "pass": true
+    },
+    {
+      "name": "replace-1366 cloud text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "replace-1366 cloud text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "replace-1366 cloud text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "replace-1366 cloud text does not overlap 4",
+      "pass": true
+    },
+    {
+      "name": "replace-1366 cloud price and choice have reading gap",
+      "pass": true
+    },
+    {
+      "name": "replace-1366 echo full text stays inside quiet paper",
+      "pass": true
+    },
+    {
+      "name": "replace-1366 echo text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "replace-1366 echo text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "replace-1366 echo text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "replace-1366 echo text does not overlap 4",
+      "pass": true
+    },
+    {
+      "name": "replace-1366 echo price and choice have reading gap",
+      "pass": true
+    },
+    {
+      "name": "replace-1366 staff full text stays inside quiet paper",
+      "pass": true
+    },
+    {
+      "name": "replace-1366 staff text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "replace-1366 staff text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "replace-1366 staff text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "replace-1366 staff text does not overlap 4",
+      "pass": true
+    },
+    {
+      "name": "replace-1366 staff price and choice have reading gap",
+      "pass": true
+    },
+    {
+      "name": "victory-1366 reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "victory-1366 dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "victory-1366 uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "epilogue-1366 reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "epilogue-1366 dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "epilogue-1366 uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "history-1366 reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "history-1366 dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "history-1366 uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "legacy-1366 reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "legacy-1366 dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "legacy-1366 uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "history-full-1366 reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "history-full-1366 dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "history-full-1366 uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "full journal scrolls through real keyboard input",
+      "pass": true
+    },
+    {
+      "name": "history-scrolled-1366 reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "history-scrolled-1366 dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "history-scrolled-1366 uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "history-empty-1366 reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "history-empty-1366 dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "history-empty-1366 uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "prologue-1366 reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "prologue-1366 dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "prologue-1366 uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "death-1366 reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "death-1366 dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "death-1366 uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-cloud reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-cloud dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-cloud uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-cloud cloud full text stays inside quiet paper",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-cloud cloud text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-cloud cloud text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-cloud cloud text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-cloud cloud text does not overlap 4",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-cloud cloud price and choice have reading gap",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-cloud echo full text stays inside quiet paper",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-cloud echo text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-cloud echo text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-cloud echo text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-cloud echo text does not overlap 4",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-cloud echo price and choice have reading gap",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-cloud staff full text stays inside quiet paper",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-cloud staff text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-cloud staff text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-cloud staff text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-cloud staff text does not overlap 4",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-cloud staff price and choice have reading gap",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-mirror reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-mirror dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-mirror uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-mirror mirror full text stays inside quiet paper",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-mirror mirror text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-mirror mirror text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-mirror mirror text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-mirror mirror text does not overlap 4",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-mirror mirror price and choice have reading gap",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-mirror flame full text stays inside quiet paper",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-mirror flame text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-mirror flame text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-mirror flame text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-mirror flame text does not overlap 4",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-mirror flame price and choice have reading gap",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-mirror mercy full text stays inside quiet paper",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-mirror mercy text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-mirror mercy text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-mirror mercy text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-mirror mercy text does not overlap 4",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-mirror mercy price and choice have reading gap",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-rest reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-rest dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-rest uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-rest rest full text stays inside quiet paper",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-rest rest text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-rest rest text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-rest rest text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-rest rest text does not overlap 4",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-rest rest price and choice have reading gap",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-rest staff full text stays inside quiet paper",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-rest staff text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-rest staff text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-rest staff text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-rest staff text does not overlap 4",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-rest staff price and choice have reading gap",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-rest echo full text stays inside quiet paper",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-rest echo text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-rest echo text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-rest echo text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-rest echo text does not overlap 4",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1320-rest echo price and choice have reading gap",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1320 reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1320 dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1320 uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1320 mirror full text stays inside quiet paper",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1320 mirror text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1320 mirror text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1320 mirror text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1320 mirror text does not overlap 4",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1320 mirror price and choice have reading gap",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1320 flame full text stays inside quiet paper",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1320 flame text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1320 flame text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1320 flame text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1320 flame text does not overlap 4",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1320 flame price and choice have reading gap",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1320 mercy full text stays inside quiet paper",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1320 mercy text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1320 mercy text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1320 mercy text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1320 mercy text does not overlap 4",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1320 mercy price and choice have reading gap",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-cloud reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-cloud dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-cloud uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-cloud cloud full text stays inside quiet paper",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-cloud cloud text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-cloud cloud text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-cloud cloud text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-cloud cloud text does not overlap 4",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-cloud cloud price and choice have reading gap",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-cloud echo full text stays inside quiet paper",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-cloud echo text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-cloud echo text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-cloud echo text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-cloud echo text does not overlap 4",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-cloud echo price and choice have reading gap",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-cloud staff full text stays inside quiet paper",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-cloud staff text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-cloud staff text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-cloud staff text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-cloud staff text does not overlap 4",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-cloud staff price and choice have reading gap",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-mirror reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-mirror dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-mirror uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-mirror mirror full text stays inside quiet paper",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-mirror mirror text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-mirror mirror text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-mirror mirror text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-mirror mirror text does not overlap 4",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-mirror mirror price and choice have reading gap",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-mirror flame full text stays inside quiet paper",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-mirror flame text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-mirror flame text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-mirror flame text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-mirror flame text does not overlap 4",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-mirror flame price and choice have reading gap",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-mirror mercy full text stays inside quiet paper",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-mirror mercy text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-mirror mercy text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-mirror mercy text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-mirror mercy text does not overlap 4",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-mirror mercy price and choice have reading gap",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-rest reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-rest dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-rest uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-rest rest full text stays inside quiet paper",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-rest rest text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-rest rest text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-rest rest text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-rest rest text does not overlap 4",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-rest rest price and choice have reading gap",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-rest staff full text stays inside quiet paper",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-rest staff text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-rest staff text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-rest staff text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-rest staff text does not overlap 4",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-rest staff price and choice have reading gap",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-rest echo full text stays inside quiet paper",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-rest echo text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-rest echo text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-rest echo text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-rest echo text does not overlap 4",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1280-rest echo price and choice have reading gap",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1280 reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1280 dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1280 uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1280 mirror full text stays inside quiet paper",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1280 mirror text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1280 mirror text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1280 mirror text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1280 mirror text does not overlap 4",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1280 mirror price and choice have reading gap",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1280 flame full text stays inside quiet paper",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1280 flame text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1280 flame text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1280 flame text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1280 flame text does not overlap 4",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1280 flame price and choice have reading gap",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1280 mercy full text stays inside quiet paper",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1280 mercy text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1280 mercy text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1280 mercy text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1280 mercy text does not overlap 4",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1280 mercy price and choice have reading gap",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-cloud reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-cloud dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-cloud uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-cloud cloud full text stays inside quiet paper",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-cloud cloud text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-cloud cloud text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-cloud cloud text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-cloud cloud text does not overlap 4",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-cloud cloud price and choice have reading gap",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-cloud echo full text stays inside quiet paper",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-cloud echo text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-cloud echo text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-cloud echo text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-cloud echo text does not overlap 4",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-cloud echo price and choice have reading gap",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-cloud staff full text stays inside quiet paper",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-cloud staff text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-cloud staff text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-cloud staff text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-cloud staff text does not overlap 4",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-cloud staff price and choice have reading gap",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-mirror reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-mirror dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-mirror uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-mirror mirror full text stays inside quiet paper",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-mirror mirror text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-mirror mirror text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-mirror mirror text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-mirror mirror text does not overlap 4",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-mirror mirror price and choice have reading gap",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-mirror flame full text stays inside quiet paper",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-mirror flame text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-mirror flame text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-mirror flame text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-mirror flame text does not overlap 4",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-mirror flame price and choice have reading gap",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-mirror mercy full text stays inside quiet paper",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-mirror mercy text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-mirror mercy text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-mirror mercy text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-mirror mercy text does not overlap 4",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-mirror mercy price and choice have reading gap",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-rest reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-rest dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-rest uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-rest rest full text stays inside quiet paper",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-rest rest text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-rest rest text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-rest rest text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-rest rest text does not overlap 4",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-rest rest price and choice have reading gap",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-rest staff full text stays inside quiet paper",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-rest staff text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-rest staff text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-rest staff text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-rest staff text does not overlap 4",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-rest staff price and choice have reading gap",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-rest echo full text stays inside quiet paper",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-rest echo text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-rest echo text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-rest echo text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-rest echo text does not overlap 4",
+      "pass": true
+    },
+    {
+      "name": "reward-paper-1024-rest echo price and choice have reading gap",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1024 reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1024 dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1024 uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1024 mirror full text stays inside quiet paper",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1024 mirror text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1024 mirror text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1024 mirror text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1024 mirror text does not overlap 4",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1024 mirror price and choice have reading gap",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1024 flame full text stays inside quiet paper",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1024 flame text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1024 flame text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1024 flame text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1024 flame text does not overlap 4",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1024 flame price and choice have reading gap",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1024 mercy full text stays inside quiet paper",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1024 mercy text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1024 mercy text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1024 mercy text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1024 mercy text does not overlap 4",
+      "pass": true
+    },
+    {
+      "name": "replace-paper-1024 mercy price and choice have reading gap",
+      "pass": true
+    },
+    {
+      "name": "small cost text contrast on paper exceeds 4.5 to 1",
+      "pass": true
+    },
+    {
+      "name": "no page errors",
+      "pass": true
+    },
+    {
+      "name": "offline dialogs make zero HTTP requests",
+      "pass": true
+    },
+    {
+      "name": "reduced motion disables panel entrance",
+      "pass": true
+    }
+  ],
+  "layouts": [
+    {
+      "name": "prologue-1440",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "mode": "prologue",
+      "stage": {
+        "x": 40,
+        "y": 96,
+        "w": 1360,
+        "h": 765
+      },
+      "panel": {
+        "x": 245,
+        "y": 176.140625,
+        "w": 950,
+        "h": 604.71875
+      },
+      "scroll": 0,
+      "focus": "begin-relic",
+      "role": "dialog",
+      "modal": "true",
+      "cards": []
+    },
+    {
+      "name": "start-1440",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "mode": "start",
+      "stage": {
+        "x": 40,
+        "y": 96,
+        "w": 1360,
+        "h": 765
+      },
+      "panel": {
+        "x": 102.109375,
+        "y": 168.6875,
+        "w": 1235.765625,
+        "h": 619.609375
+      },
+      "scroll": 0,
+      "focus": "cloud",
+      "role": "dialog",
+      "modal": "true",
+      "cards": [
+        {
+          "id": "cloud",
+          "box": {
+            "x": 294.984375,
+            "y": 311.796875,
+            "w": 271.328125,
+            "h": 360
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 389.4375,
+                "y": 420.796875,
+                "w": 82.40625,
+                "h": 31.1875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 402.640625,
+                "y": 455.984375,
+                "w": 56,
+                "h": 15
+              },
+              "clipped": false
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 346.53125,
+                "y": 480.984375,
+                "w": 168.234375,
+                "h": 45.5
+              },
+              "clipped": false
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 346.53125,
+                "y": 561.609375,
+                "w": 168.234375,
+                "h": 27.6875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "choice-verb",
+              "box": {
+                "x": 400.640625,
+                "y": 597.296875,
+                "w": 60,
+                "h": 16.5
+              },
+              "clipped": false
+            }
+          ]
+        },
+        {
+          "id": "echo",
+          "box": {
+            "x": 584.3125,
+            "y": 316.796875,
+            "w": 271.328125,
+            "h": 360
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 678.765625,
+                "y": 425.796875,
+                "w": 82.40625,
+                "h": 31.1875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 691.96875,
+                "y": 460.984375,
+                "w": 56,
+                "h": 15
+              },
+              "clipped": false
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 635.859375,
+                "y": 485.984375,
+                "w": 168.234375,
+                "h": 45.5
+              },
+              "clipped": false
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 635.859375,
+                "y": 566.609375,
+                "w": 168.234375,
+                "h": 27.6875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "choice-verb",
+              "box": {
+                "x": 689.96875,
+                "y": 602.296875,
+                "w": 60,
+                "h": 16.5
+              },
+              "clipped": false
+            }
+          ]
+        },
+        {
+          "id": "staff",
+          "box": {
+            "x": 873.640625,
+            "y": 316.796875,
+            "w": 271.34375,
+            "h": 360
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 968.109375,
+                "y": 425.796875,
+                "w": 82.40625,
+                "h": 31.1875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 981.3125,
+                "y": 460.984375,
+                "w": 56,
+                "h": 15
+              },
+              "clipped": false
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 925.1875,
+                "y": 485.984375,
+                "w": 168.25,
+                "h": 45.5
+              },
+              "clipped": false
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 925.1875,
+                "y": 566.609375,
+                "w": 168.25,
+                "h": 27.6875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "choice-verb",
+              "box": {
+                "x": 979.3125,
+                "y": 602.296875,
+                "w": 60,
+                "h": 16.5
+              },
+              "clipped": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pause-1440",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "mode": "paused",
+      "stage": {
+        "x": 40,
+        "y": 96,
+        "w": 1360,
+        "h": 765
+      },
+      "panel": {
+        "x": 170,
+        "y": 250.890625,
+        "w": 1100,
+        "h": 455.21875
+      },
+      "scroll": 0,
+      "focus": "continue",
+      "role": "dialog",
+      "modal": "true",
+      "cards": []
+    },
+    {
+      "name": "help-1440",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "mode": "help",
+      "stage": {
+        "x": 40,
+        "y": 96,
+        "w": 1360,
+        "h": 765
+      },
+      "panel": {
+        "x": 129.265625,
+        "y": 175,
+        "w": 1181.453125,
+        "h": 607
+      },
+      "scroll": 0,
+      "focus": "close-help",
+      "role": "dialog",
+      "modal": "true",
+      "cards": []
+    },
+    {
+      "name": "reward-mid-1440",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "mode": "reward",
+      "stage": {
+        "x": 40,
+        "y": 96,
+        "w": 1360,
+        "h": 765
+      },
+      "panel": {
+        "x": 102.109375,
+        "y": 168.6875,
+        "w": 1235.765625,
+        "h": 619.609375
+      },
+      "scroll": 0,
+      "focus": "mirror",
+      "role": "dialog",
+      "modal": "true",
+      "cards": [
+        {
+          "id": "mirror",
+          "box": {
+            "x": 294.984375,
+            "y": 342.796875,
+            "w": 271.328125,
+            "h": 360
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 389.4375,
+                "y": 451.796875,
+                "w": 82.40625,
+                "h": 31.1875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 402.640625,
+                "y": 486.984375,
+                "w": 56,
+                "h": 15
+              },
+              "clipped": false
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 346.53125,
+                "y": 511.984375,
+                "w": 168.234375,
+                "h": 45.5
+              },
+              "clipped": false
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 346.53125,
+                "y": 592.609375,
+                "w": 168.234375,
+                "h": 27.6875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "choice-verb",
+              "box": {
+                "x": 400.640625,
+                "y": 628.296875,
+                "w": 60,
+                "h": 16.5
+              },
+              "clipped": false
+            }
+          ]
+        },
+        {
+          "id": "flame",
+          "box": {
+            "x": 584.3125,
+            "y": 337.796875,
+            "w": 271.328125,
+            "h": 360
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 678.765625,
+                "y": 446.796875,
+                "w": 82.40625,
+                "h": 31.1875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 691.96875,
+                "y": 481.984375,
+                "w": 56,
+                "h": 15
+              },
+              "clipped": false
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 635.859375,
+                "y": 506.984375,
+                "w": 168.234375,
+                "h": 45.5
+              },
+              "clipped": false
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 635.859375,
+                "y": 587.609375,
+                "w": 168.234375,
+                "h": 27.6875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "choice-verb",
+              "box": {
+                "x": 689.96875,
+                "y": 623.296875,
+                "w": 60,
+                "h": 16.5
+              },
+              "clipped": false
+            }
+          ]
+        },
+        {
+          "id": "rest",
+          "box": {
+            "x": 873.640625,
+            "y": 342.796875,
+            "w": 271.34375,
+            "h": 360
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 954.375,
+                "y": 451.796875,
+                "w": 109.875,
+                "h": 31.1875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 981.3125,
+                "y": 486.984375,
+                "w": 56,
+                "h": 15
+              },
+              "clipped": false
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 925.1875,
+                "y": 511.984375,
+                "w": 168.25,
+                "h": 45.5
+              },
+              "clipped": false
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 925.1875,
+                "y": 592.609375,
+                "w": 168.25,
+                "h": 27.6875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "choice-verb",
+              "box": {
+                "x": 979.3125,
+                "y": 628.296875,
+                "w": 60,
+                "h": 16.5
+              },
+              "clipped": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "replace-1440",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "mode": "replace",
+      "stage": {
+        "x": 40,
+        "y": 96,
+        "w": 1360,
+        "h": 765
+      },
+      "panel": {
+        "x": 102.109375,
+        "y": 137.046875,
+        "w": 1235.765625,
+        "h": 682.90625
+      },
+      "scroll": 0,
+      "focus": "cloud",
+      "role": "dialog",
+      "modal": "true",
+      "cards": [
+        {
+          "id": "cloud",
+          "box": {
+            "x": 294.984375,
+            "y": 343.453125,
+            "w": 271.328125,
+            "h": 360
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 389.4375,
+                "y": 452.453125,
+                "w": 82.40625,
+                "h": 31.1875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 402.640625,
+                "y": 487.640625,
+                "w": 56,
+                "h": 15
+              },
+              "clipped": false
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 346.53125,
+                "y": 512.640625,
+                "w": 168.234375,
+                "h": 45.5
+              },
+              "clipped": false
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 346.53125,
+                "y": 593.265625,
+                "w": 168.234375,
+                "h": 27.6875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "choice-verb",
+              "box": {
+                "x": 400.640625,
+                "y": 628.953125,
+                "w": 60,
+                "h": 16.5
+              },
+              "clipped": false
+            }
+          ]
+        },
+        {
+          "id": "echo",
+          "box": {
+            "x": 584.3125,
+            "y": 348.453125,
+            "w": 271.328125,
+            "h": 360
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 678.765625,
+                "y": 457.453125,
+                "w": 82.40625,
+                "h": 31.1875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 691.96875,
+                "y": 492.640625,
+                "w": 56,
+                "h": 15
+              },
+              "clipped": false
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 635.859375,
+                "y": 517.640625,
+                "w": 168.234375,
+                "h": 45.5
+              },
+              "clipped": false
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 635.859375,
+                "y": 598.265625,
+                "w": 168.234375,
+                "h": 27.6875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "choice-verb",
+              "box": {
+                "x": 689.96875,
+                "y": 633.953125,
+                "w": 60,
+                "h": 16.5
+              },
+              "clipped": false
+            }
+          ]
+        },
+        {
+          "id": "staff",
+          "box": {
+            "x": 873.640625,
+            "y": 348.453125,
+            "w": 271.34375,
+            "h": 360
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 968.109375,
+                "y": 457.453125,
+                "w": 82.40625,
+                "h": 31.1875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 981.3125,
+                "y": 492.640625,
+                "w": 56,
+                "h": 15
+              },
+              "clipped": false
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 925.1875,
+                "y": 517.640625,
+                "w": 168.25,
+                "h": 45.5
+              },
+              "clipped": false
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 925.1875,
+                "y": 598.265625,
+                "w": 168.25,
+                "h": 27.6875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "choice-verb",
+              "box": {
+                "x": 979.3125,
+                "y": 633.953125,
+                "w": 60,
+                "h": 16.5
+              },
+              "clipped": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "reward-exit-1440",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "mode": "reward",
+      "stage": {
+        "x": 40,
+        "y": 96,
+        "w": 1360,
+        "h": 765
+      },
+      "panel": {
+        "x": 102.109375,
+        "y": 168.6875,
+        "w": 1235.765625,
+        "h": 619.609375
+      },
+      "scroll": 0,
+      "focus": "mercy",
+      "role": "dialog",
+      "modal": "true",
+      "cards": [
+        {
+          "id": "mercy",
+          "box": {
+            "x": 294.984375,
+            "y": 337.796875,
+            "w": 271.328125,
+            "h": 360
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 389.4375,
+                "y": 446.796875,
+                "w": 82.40625,
+                "h": 31.1875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 402.640625,
+                "y": 481.984375,
+                "w": 56,
+                "h": 15
+              },
+              "clipped": false
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 346.53125,
+                "y": 506.984375,
+                "w": 168.234375,
+                "h": 45.5
+              },
+              "clipped": false
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 346.53125,
+                "y": 587.609375,
+                "w": 168.234375,
+                "h": 27.6875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "choice-verb",
+              "box": {
+                "x": 400.640625,
+                "y": 623.296875,
+                "w": 60,
+                "h": 16.5
+              },
+              "clipped": false
+            }
+          ]
+        },
+        {
+          "id": "flame",
+          "box": {
+            "x": 584.3125,
+            "y": 342.796875,
+            "w": 271.328125,
+            "h": 360
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 678.765625,
+                "y": 451.796875,
+                "w": 82.40625,
+                "h": 31.1875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 691.96875,
+                "y": 486.984375,
+                "w": 56,
+                "h": 15
+              },
+              "clipped": false
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 635.859375,
+                "y": 511.984375,
+                "w": 168.234375,
+                "h": 45.5
+              },
+              "clipped": false
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 635.859375,
+                "y": 592.609375,
+                "w": 168.234375,
+                "h": 27.6875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "choice-verb",
+              "box": {
+                "x": 689.96875,
+                "y": 628.296875,
+                "w": 60,
+                "h": 16.5
+              },
+              "clipped": false
+            }
+          ]
+        },
+        {
+          "id": "rest",
+          "box": {
+            "x": 873.640625,
+            "y": 342.796875,
+            "w": 271.34375,
+            "h": 360
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 954.375,
+                "y": 451.796875,
+                "w": 109.875,
+                "h": 31.1875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 981.3125,
+                "y": 486.984375,
+                "w": 56,
+                "h": 15
+              },
+              "clipped": false
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 925.1875,
+                "y": 511.984375,
+                "w": 168.25,
+                "h": 45.5
+              },
+              "clipped": false
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 925.1875,
+                "y": 592.609375,
+                "w": 168.25,
+                "h": 27.6875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "choice-verb",
+              "box": {
+                "x": 979.3125,
+                "y": 628.296875,
+                "w": 60,
+                "h": 16.5
+              },
+              "clipped": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "death-1440",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "mode": "dead",
+      "stage": {
+        "x": 40,
+        "y": 96,
+        "w": 1360,
+        "h": 765
+      },
+      "panel": {
+        "x": 220,
+        "y": 181.46875,
+        "w": 1000,
+        "h": 594.0625
+      },
+      "scroll": 0,
+      "focus": "retry",
+      "role": "dialog",
+      "modal": "true",
+      "cards": []
+    },
+    {
+      "name": "victory-1440",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "mode": "won",
+      "stage": {
+        "x": 40,
+        "y": 96,
+        "w": 1360,
+        "h": 765
+      },
+      "panel": {
+        "x": 220,
+        "y": 193.15625,
+        "w": 1000,
+        "h": 570.671875
+      },
+      "scroll": 0,
+      "focus": "epilogue",
+      "role": "dialog",
+      "modal": "true",
+      "cards": []
+    },
+    {
+      "name": "epilogue-1440",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "mode": "epilogue",
+      "stage": {
+        "x": 40,
+        "y": 96,
+        "w": 1360,
+        "h": 765
+      },
+      "panel": {
+        "x": 245,
+        "y": 218.5625,
+        "w": 950,
+        "h": 519.859375
+      },
+      "scroll": 0,
+      "focus": "again",
+      "role": "dialog",
+      "modal": "true",
+      "cards": []
+    },
+    {
+      "name": "history-1440",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "mode": "history",
+      "stage": {
+        "x": 40,
+        "y": 96,
+        "w": 1360,
+        "h": 765
+      },
+      "panel": {
+        "x": 129.265625,
+        "y": 218.640625,
+        "w": 1181.453125,
+        "h": 519.71875
+      },
+      "scroll": 0,
+      "focus": "DIV",
+      "role": "dialog",
+      "modal": "true",
+      "cards": []
+    },
+    {
+      "name": "legacy-1440",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "mode": "legacy",
+      "stage": {
+        "x": 40,
+        "y": 96,
+        "w": 1360,
+        "h": 765
+      },
+      "panel": {
+        "x": 245,
+        "y": 271.734375,
+        "w": 950,
+        "h": 413.53125
+      },
+      "scroll": 0,
+      "focus": "open-legacy",
+      "role": "dialog",
+      "modal": "true",
+      "cards": []
+    },
+    {
+      "name": "start-1366",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "mode": "start",
+      "stage": {
+        "x": 146.109375,
+        "y": 96,
+        "w": 1073.765625,
+        "h": 603.984375
+      },
+      "panel": {
+        "x": 195.34375,
+        "y": 141.203125,
+        "w": 975.296875,
+        "h": 513.578125
+      },
+      "scroll": 0,
+      "focus": "cloud",
+      "role": "dialog",
+      "modal": "true",
+      "cards": [
+        {
+          "id": "cloud",
+          "box": {
+            "x": 317.984375,
+            "y": 246.78125,
+            "w": 235.328125,
+            "h": 320
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 399.03125,
+                "y": 331.78125,
+                "w": 73.234375,
+                "h": 27.296875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 409.640625,
+                "y": 363.078125,
+                "w": 52,
+                "h": 14
+              },
+              "clipped": false
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 362.6875,
+                "y": 384.078125,
+                "w": 145.921875,
+                "h": 37.375
+              },
+              "clipped": false
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 362.6875,
+                "y": 468.78125,
+                "w": 145.921875,
+                "h": 23
+              },
+              "clipped": false
+            },
+            {
+              "kind": "choice-verb",
+              "box": {
+                "x": 407.640625,
+                "y": 499.78125,
+                "w": 56,
+                "h": 15
+              },
+              "clipped": false
+            }
+          ]
+        },
+        {
+          "id": "echo",
+          "box": {
+            "x": 565.3125,
+            "y": 246.78125,
+            "w": 235.328125,
+            "h": 320
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 646.359375,
+                "y": 331.78125,
+                "w": 73.234375,
+                "h": 27.296875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 656.96875,
+                "y": 363.078125,
+                "w": 52,
+                "h": 14
+              },
+              "clipped": false
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 610.015625,
+                "y": 384.078125,
+                "w": 145.921875,
+                "h": 37.375
+              },
+              "clipped": false
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 610.015625,
+                "y": 468.78125,
+                "w": 145.921875,
+                "h": 23
+              },
+              "clipped": false
+            },
+            {
+              "kind": "choice-verb",
+              "box": {
+                "x": 654.96875,
+                "y": 499.78125,
+                "w": 56,
+                "h": 15
+              },
+              "clipped": false
+            }
+          ]
+        },
+        {
+          "id": "staff",
+          "box": {
+            "x": 812.640625,
+            "y": 246.78125,
+            "w": 235.328125,
+            "h": 320
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 893.6875,
+                "y": 331.78125,
+                "w": 73.234375,
+                "h": 27.296875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 904.296875,
+                "y": 363.078125,
+                "w": 52,
+                "h": 14
+              },
+              "clipped": false
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 857.34375,
+                "y": 384.078125,
+                "w": 145.921875,
+                "h": 37.375
+              },
+              "clipped": false
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 857.34375,
+                "y": 452.78125,
+                "w": 145.921875,
+                "h": 39
+              },
+              "clipped": false
+            },
+            {
+              "kind": "choice-verb",
+              "box": {
+                "x": 902.296875,
+                "y": 499.78125,
+                "w": 56,
+                "h": 15
+              },
+              "clipped": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pause-1366",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "mode": "paused",
+      "stage": {
+        "x": 146.109375,
+        "y": 96,
+        "w": 1073.765625,
+        "h": 603.984375
+      },
+      "panel": {
+        "x": 211.421875,
+        "y": 205.1875,
+        "w": 943.140625,
+        "h": 385.59375
+      },
+      "scroll": 0,
+      "focus": "continue",
+      "role": "dialog",
+      "modal": "true",
+      "cards": []
+    },
+    {
+      "name": "help-1366",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "mode": "help",
+      "stage": {
+        "x": 146.109375,
+        "y": 96,
+        "w": 1073.765625,
+        "h": 603.984375
+      },
+      "panel": {
+        "x": 216.78125,
+        "y": 152.90625,
+        "w": 932.421875,
+        "h": 490.171875
+      },
+      "scroll": 0,
+      "focus": "old",
+      "role": "dialog",
+      "modal": "true",
+      "cards": []
+    },
+    {
+      "name": "reward-1366",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "mode": "reward",
+      "stage": {
+        "x": 146.109375,
+        "y": 96,
+        "w": 1073.765625,
+        "h": 603.984375
+      },
+      "panel": {
+        "x": 195.34375,
+        "y": 139.203125,
+        "w": 975.296875,
+        "h": 517.578125
+      },
+      "scroll": 0,
+      "focus": "mirror",
+      "role": "dialog",
+      "modal": "true",
+      "cards": [
+        {
+          "id": "mirror",
+          "box": {
+            "x": 317.984375,
+            "y": 260.78125,
+            "w": 235.328125,
+            "h": 320
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 399.03125,
+                "y": 345.78125,
+                "w": 73.234375,
+                "h": 27.296875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 409.640625,
+                "y": 377.078125,
+                "w": 52,
+                "h": 14
+              },
+              "clipped": false
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 362.6875,
+                "y": 398.078125,
+                "w": 145.921875,
+                "h": 37.375
+              },
+              "clipped": false
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 362.6875,
+                "y": 466.78125,
+                "w": 145.921875,
+                "h": 39
+              },
+              "clipped": false
+            },
+            {
+              "kind": "choice-verb",
+              "box": {
+                "x": 407.640625,
+                "y": 513.78125,
+                "w": 56,
+                "h": 15
+              },
+              "clipped": false
+            }
+          ]
+        },
+        {
+          "id": "flame",
+          "box": {
+            "x": 565.3125,
+            "y": 265.78125,
+            "w": 235.328125,
+            "h": 320
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 646.359375,
+                "y": 350.78125,
+                "w": 73.234375,
+                "h": 27.296875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 656.96875,
+                "y": 382.078125,
+                "w": 52,
+                "h": 14
+              },
+              "clipped": false
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 610.015625,
+                "y": 403.078125,
+                "w": 145.921875,
+                "h": 37.375
+              },
+              "clipped": false
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 610.015625,
+                "y": 487.78125,
+                "w": 145.921875,
+                "h": 23
+              },
+              "clipped": false
+            },
+            {
+              "kind": "choice-verb",
+              "box": {
+                "x": 654.96875,
+                "y": 518.78125,
+                "w": 56,
+                "h": 15
+              },
+              "clipped": false
+            }
+          ]
+        },
+        {
+          "id": "rest",
+          "box": {
+            "x": 812.640625,
+            "y": 260.78125,
+            "w": 235.328125,
+            "h": 320
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 881.484375,
+                "y": 345.78125,
+                "w": 97.640625,
+                "h": 27.296875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 904.296875,
+                "y": 377.078125,
+                "w": 52,
+                "h": 14
+              },
+              "clipped": false
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 857.34375,
+                "y": 398.078125,
+                "w": 145.921875,
+                "h": 37.375
+              },
+              "clipped": false
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 857.34375,
+                "y": 482.78125,
+                "w": 145.921875,
+                "h": 23
+              },
+              "clipped": false
+            },
+            {
+              "kind": "choice-verb",
+              "box": {
+                "x": 902.296875,
+                "y": 513.78125,
+                "w": 56,
+                "h": 15
+              },
+              "clipped": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "replace-1366",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "mode": "replace",
+      "stage": {
+        "x": 146.109375,
+        "y": 96,
+        "w": 1073.765625,
+        "h": 603.984375
+      },
+      "panel": {
+        "x": 195.34375,
+        "y": 115.953125,
+        "w": 975.296875,
+        "h": 564.078125
+      },
+      "scroll": 0,
+      "focus": "cloud",
+      "role": "dialog",
+      "modal": "true",
+      "cards": [
+        {
+          "id": "cloud",
+          "box": {
+            "x": 317.984375,
+            "y": 267.03125,
+            "w": 235.328125,
+            "h": 320
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 399.03125,
+                "y": 352.03125,
+                "w": 73.234375,
+                "h": 27.296875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 409.640625,
+                "y": 383.328125,
+                "w": 52,
+                "h": 14
+              },
+              "clipped": false
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 362.6875,
+                "y": 404.328125,
+                "w": 145.921875,
+                "h": 37.375
+              },
+              "clipped": false
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 362.6875,
+                "y": 489.03125,
+                "w": 145.921875,
+                "h": 23
+              },
+              "clipped": false
+            },
+            {
+              "kind": "choice-verb",
+              "box": {
+                "x": 407.640625,
+                "y": 520.03125,
+                "w": 56,
+                "h": 15
+              },
+              "clipped": false
+            }
+          ]
+        },
+        {
+          "id": "echo",
+          "box": {
+            "x": 565.3125,
+            "y": 272.03125,
+            "w": 235.328125,
+            "h": 320
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 646.359375,
+                "y": 357.03125,
+                "w": 73.234375,
+                "h": 27.296875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 656.96875,
+                "y": 388.328125,
+                "w": 52,
+                "h": 14
+              },
+              "clipped": false
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 610.015625,
+                "y": 409.328125,
+                "w": 145.921875,
+                "h": 37.375
+              },
+              "clipped": false
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 610.015625,
+                "y": 494.03125,
+                "w": 145.921875,
+                "h": 23
+              },
+              "clipped": false
+            },
+            {
+              "kind": "choice-verb",
+              "box": {
+                "x": 654.96875,
+                "y": 525.03125,
+                "w": 56,
+                "h": 15
+              },
+              "clipped": false
+            }
+          ]
+        },
+        {
+          "id": "staff",
+          "box": {
+            "x": 812.640625,
+            "y": 267.03125,
+            "w": 235.328125,
+            "h": 320
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 893.6875,
+                "y": 352.03125,
+                "w": 73.234375,
+                "h": 27.296875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 904.296875,
+                "y": 383.328125,
+                "w": 52,
+                "h": 14
+              },
+              "clipped": false
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 857.34375,
+                "y": 404.328125,
+                "w": 145.921875,
+                "h": 37.375
+              },
+              "clipped": false
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 857.34375,
+                "y": 473.03125,
+                "w": 145.921875,
+                "h": 39
+              },
+              "clipped": false
+            },
+            {
+              "kind": "choice-verb",
+              "box": {
+                "x": 902.296875,
+                "y": 520.03125,
+                "w": 56,
+                "h": 15
+              },
+              "clipped": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "victory-1366",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "mode": "won",
+      "stage": {
+        "x": 146.109375,
+        "y": 96,
+        "w": 1073.765625,
+        "h": 603.984375
+      },
+      "panel": {
+        "x": 243.5625,
+        "y": 157.703125,
+        "w": 878.84375,
+        "h": 480.5625
+      },
+      "scroll": 0,
+      "focus": "epilogue",
+      "role": "dialog",
+      "modal": "true",
+      "cards": []
+    },
+    {
+      "name": "epilogue-1366",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "mode": "epilogue",
+      "stage": {
+        "x": 146.109375,
+        "y": 96,
+        "w": 1073.765625,
+        "h": 603.984375
+      },
+      "panel": {
+        "x": 254.28125,
+        "y": 214.296875,
+        "w": 857.40625,
+        "h": 367.390625
+      },
+      "scroll": 0,
+      "focus": "again",
+      "role": "dialog",
+      "modal": "true",
+      "cards": []
+    },
+    {
+      "name": "history-1366",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "mode": "history",
+      "stage": {
+        "x": 146.109375,
+        "y": 96,
+        "w": 1073.765625,
+        "h": 603.984375
+      },
+      "panel": {
+        "x": 216.78125,
+        "y": 172.546875,
+        "w": 932.421875,
+        "h": 450.890625
+      },
+      "scroll": 0,
+      "focus": "DIV",
+      "role": "dialog",
+      "modal": "true",
+      "cards": []
+    },
+    {
+      "name": "legacy-1366",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "mode": "legacy",
+      "stage": {
+        "x": 146.109375,
+        "y": 96,
+        "w": 1073.765625,
+        "h": 603.984375
+      },
+      "panel": {
+        "x": 254.28125,
+        "y": 266.796875,
+        "w": 857.40625,
+        "h": 262.390625
+      },
+      "scroll": 0,
+      "focus": "open-legacy",
+      "role": "dialog",
+      "modal": "true",
+      "cards": []
+    },
+    {
+      "name": "history-full-1366",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "mode": "history",
+      "stage": {
+        "x": 146.109375,
+        "y": 96,
+        "w": 1073.765625,
+        "h": 603.984375
+      },
+      "panel": {
+        "x": 216.78125,
+        "y": 145.046875,
+        "w": 932.421875,
+        "h": 505.890625
+      },
+      "scroll": 0,
+      "focus": "DIV",
+      "role": "dialog",
+      "modal": "true",
+      "cards": []
+    },
+    {
+      "name": "history-scrolled-1366",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "mode": "history",
+      "stage": {
+        "x": 146.109375,
+        "y": 96,
+        "w": 1073.765625,
+        "h": 603.984375
+      },
+      "panel": {
+        "x": 216.78125,
+        "y": 145.046875,
+        "w": 932.421875,
+        "h": 505.890625
+      },
+      "scroll": 0,
+      "focus": "DIV",
+      "role": "dialog",
+      "modal": "true",
+      "cards": []
+    },
+    {
+      "name": "history-empty-1366",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "mode": "history",
+      "stage": {
+        "x": 146.109375,
+        "y": 96,
+        "w": 1073.765625,
+        "h": 603.984375
+      },
+      "panel": {
+        "x": 216.78125,
+        "y": 159.546875,
+        "w": 932.421875,
+        "h": 476.890625
+      },
+      "scroll": 0,
+      "focus": "DIV",
+      "role": "dialog",
+      "modal": "true",
+      "cards": []
+    },
+    {
+      "name": "prologue-1366",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "mode": "prologue",
+      "stage": {
+        "x": 146.109375,
+        "y": 96,
+        "w": 1073.765625,
+        "h": 603.984375
+      },
+      "panel": {
+        "x": 254.28125,
+        "y": 175.796875,
+        "w": 857.40625,
+        "h": 444.390625
+      },
+      "scroll": 0,
+      "focus": "begin-relic",
+      "role": "dialog",
+      "modal": "true",
+      "cards": []
+    },
+    {
+      "name": "death-1366",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "mode": "dead",
+      "stage": {
+        "x": 146.109375,
+        "y": 96,
+        "w": 1073.765625,
+        "h": 603.984375
+      },
+      "panel": {
+        "x": 243.5625,
+        "y": 148.109375,
+        "w": 878.84375,
+        "h": 499.75
+      },
+      "scroll": 0,
+      "focus": "retry",
+      "role": "dialog",
+      "modal": "true",
+      "cards": []
+    },
+    {
+      "name": "reward-paper-1320-cloud",
+      "viewport": {
+        "width": 1320,
+        "height": 760
+      },
+      "mode": "reward",
+      "stage": {
+        "x": 89.328125,
+        "y": 64,
+        "w": 1141.328125,
+        "h": 641.984375
+      },
+      "panel": {
+        "x": 141.59375,
+        "y": 79.59375,
+        "w": 1036.78125,
+        "h": 610.796875
+      },
+      "scroll": 0,
+      "focus": "cloud",
+      "role": "dialog",
+      "modal": "true",
+      "cards": [
+        {
+          "id": "cloud",
+          "box": {
+            "x": 234.984375,
+            "y": 239.890625,
+            "w": 271.328125,
+            "h": 360
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 329.4375,
+                "y": 348.890625,
+                "w": 82.40625,
+                "h": 31.1875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 342.640625,
+                "y": 384.078125,
+                "w": 56,
+                "h": 15
+              },
+              "clipped": false
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 286.53125,
+                "y": 409.078125,
+                "w": 168.234375,
+                "h": 45.5
+              },
+              "clipped": false
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 286.53125,
+                "y": 489.703125,
+                "w": 168.234375,
+                "h": 27.6875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "choice-verb",
+              "box": {
+                "x": 340.640625,
+                "y": 525.390625,
+                "w": 60,
+                "h": 16.5
+              },
+              "clipped": false
+            }
+          ]
+        },
+        {
+          "id": "echo",
+          "box": {
+            "x": 524.3125,
+            "y": 244.890625,
+            "w": 271.328125,
+            "h": 360
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 618.765625,
+                "y": 353.890625,
+                "w": 82.40625,
+                "h": 31.1875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 631.96875,
+                "y": 389.078125,
+                "w": 56,
+                "h": 15
+              },
+              "clipped": false
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 575.859375,
+                "y": 414.078125,
+                "w": 168.234375,
+                "h": 45.5
+              },
+              "clipped": false
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 575.859375,
+                "y": 494.703125,
+                "w": 168.234375,
+                "h": 27.6875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "choice-verb",
+              "box": {
+                "x": 629.96875,
+                "y": 530.390625,
+                "w": 60,
+                "h": 16.5
+              },
+              "clipped": false
+            }
+          ]
+        },
+        {
+          "id": "staff",
+          "box": {
+            "x": 813.640625,
+            "y": 244.890625,
+            "w": 271.34375,
+            "h": 360
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 908.109375,
+                "y": 353.890625,
+                "w": 82.40625,
+                "h": 31.1875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 921.3125,
+                "y": 389.078125,
+                "w": 56,
+                "h": 15
+              },
+              "clipped": false
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 865.1875,
+                "y": 414.078125,
+                "w": 168.25,
+                "h": 45.5
+              },
+              "clipped": false
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 865.1875,
+                "y": 494.703125,
+                "w": 168.25,
+                "h": 27.6875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "choice-verb",
+              "box": {
+                "x": 919.3125,
+                "y": 530.390625,
+                "w": 60,
+                "h": 16.5
+              },
+              "clipped": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "reward-paper-1320-mirror",
+      "viewport": {
+        "width": 1320,
+        "height": 760
+      },
+      "mode": "reward",
+      "stage": {
+        "x": 89.328125,
+        "y": 64,
+        "w": 1141.328125,
+        "h": 641.984375
+      },
+      "panel": {
+        "x": 141.59375,
+        "y": 79.59375,
+        "w": 1036.78125,
+        "h": 610.796875
+      },
+      "scroll": 0,
+      "focus": "mirror",
+      "role": "dialog",
+      "modal": "true",
+      "cards": [
+        {
+          "id": "mirror",
+          "box": {
+            "x": 234.984375,
+            "y": 239.890625,
+            "w": 271.328125,
+            "h": 360
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 329.4375,
+                "y": 348.890625,
+                "w": 82.40625,
+                "h": 31.1875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 342.640625,
+                "y": 384.078125,
+                "w": 56,
+                "h": 15
+              },
+              "clipped": false
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 286.53125,
+                "y": 409.078125,
+                "w": 168.234375,
+                "h": 45.5
+              },
+              "clipped": false
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 286.53125,
+                "y": 489.703125,
+                "w": 168.234375,
+                "h": 27.6875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "choice-verb",
+              "box": {
+                "x": 340.640625,
+                "y": 525.390625,
+                "w": 60,
+                "h": 16.5
+              },
+              "clipped": false
+            }
+          ]
+        },
+        {
+          "id": "flame",
+          "box": {
+            "x": 524.3125,
+            "y": 244.890625,
+            "w": 271.328125,
+            "h": 360
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 618.765625,
+                "y": 353.890625,
+                "w": 82.40625,
+                "h": 31.1875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 631.96875,
+                "y": 389.078125,
+                "w": 56,
+                "h": 15
+              },
+              "clipped": false
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 575.859375,
+                "y": 414.078125,
+                "w": 168.234375,
+                "h": 45.5
+              },
+              "clipped": false
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 575.859375,
+                "y": 494.703125,
+                "w": 168.234375,
+                "h": 27.6875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "choice-verb",
+              "box": {
+                "x": 629.96875,
+                "y": 530.390625,
+                "w": 60,
+                "h": 16.5
+              },
+              "clipped": false
+            }
+          ]
+        },
+        {
+          "id": "mercy",
+          "box": {
+            "x": 813.640625,
+            "y": 244.890625,
+            "w": 271.34375,
+            "h": 360
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 908.109375,
+                "y": 353.890625,
+                "w": 82.40625,
+                "h": 31.1875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 921.3125,
+                "y": 389.078125,
+                "w": 56,
+                "h": 15
+              },
+              "clipped": false
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 865.1875,
+                "y": 414.078125,
+                "w": 168.25,
+                "h": 45.5
+              },
+              "clipped": false
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 865.1875,
+                "y": 494.703125,
+                "w": 168.25,
+                "h": 27.6875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "choice-verb",
+              "box": {
+                "x": 919.3125,
+                "y": 530.390625,
+                "w": 60,
+                "h": 16.5
+              },
+              "clipped": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "reward-paper-1320-rest",
+      "viewport": {
+        "width": 1320,
+        "height": 760
+      },
+      "mode": "reward",
+      "stage": {
+        "x": 89.328125,
+        "y": 64,
+        "w": 1141.328125,
+        "h": 641.984375
+      },
+      "panel": {
+        "x": 141.59375,
+        "y": 79.59375,
+        "w": 1036.78125,
+        "h": 610.796875
+      },
+      "scroll": 0,
+      "focus": "rest",
+      "role": "dialog",
+      "modal": "true",
+      "cards": [
+        {
+          "id": "rest",
+          "box": {
+            "x": 234.984375,
+            "y": 239.890625,
+            "w": 271.328125,
+            "h": 360
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 315.703125,
+                "y": 348.890625,
+                "w": 109.875,
+                "h": 31.1875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 342.640625,
+                "y": 384.078125,
+                "w": 56,
+                "h": 15
+              },
+              "clipped": false
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 286.53125,
+                "y": 409.078125,
+                "w": 168.234375,
+                "h": 45.5
+              },
+              "clipped": false
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 286.53125,
+                "y": 489.703125,
+                "w": 168.234375,
+                "h": 27.6875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "choice-verb",
+              "box": {
+                "x": 340.640625,
+                "y": 525.390625,
+                "w": 60,
+                "h": 16.5
+              },
+              "clipped": false
+            }
+          ]
+        },
+        {
+          "id": "staff",
+          "box": {
+            "x": 524.3125,
+            "y": 244.890625,
+            "w": 271.328125,
+            "h": 360
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 618.765625,
+                "y": 353.890625,
+                "w": 82.40625,
+                "h": 31.1875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 631.96875,
+                "y": 389.078125,
+                "w": 56,
+                "h": 15
+              },
+              "clipped": false
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 575.859375,
+                "y": 414.078125,
+                "w": 168.234375,
+                "h": 45.5
+              },
+              "clipped": false
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 575.859375,
+                "y": 494.703125,
+                "w": 168.234375,
+                "h": 27.6875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "choice-verb",
+              "box": {
+                "x": 629.96875,
+                "y": 530.390625,
+                "w": 60,
+                "h": 16.5
+              },
+              "clipped": false
+            }
+          ]
+        },
+        {
+          "id": "echo",
+          "box": {
+            "x": 813.640625,
+            "y": 244.890625,
+            "w": 271.34375,
+            "h": 360
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 908.109375,
+                "y": 353.890625,
+                "w": 82.40625,
+                "h": 31.1875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 921.3125,
+                "y": 389.078125,
+                "w": 56,
+                "h": 15
+              },
+              "clipped": false
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 865.1875,
+                "y": 414.078125,
+                "w": 168.25,
+                "h": 45.5
+              },
+              "clipped": false
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 865.1875,
+                "y": 494.703125,
+                "w": 168.25,
+                "h": 27.6875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "choice-verb",
+              "box": {
+                "x": 919.3125,
+                "y": 530.390625,
+                "w": 60,
+                "h": 16.5
+              },
+              "clipped": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "replace-paper-1320",
+      "viewport": {
+        "width": 1320,
+        "height": 760
+      },
+      "mode": "replace",
+      "stage": {
+        "x": 89.328125,
+        "y": 64,
+        "w": 1141.328125,
+        "h": 641.984375
+      },
+      "panel": {
+        "x": 141.59375,
+        "y": 77.796875,
+        "w": 1036.78125,
+        "h": 614.375
+      },
+      "scroll": 60,
+      "focus": "mirror",
+      "role": "dialog",
+      "modal": "true",
+      "cards": [
+        {
+          "id": "mirror",
+          "box": {
+            "x": 234.984375,
+            "y": 275.390625,
+            "w": 271.328125,
+            "h": 360
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 329.4375,
+                "y": 384.390625,
+                "w": 82.40625,
+                "h": 31.1875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 342.640625,
+                "y": 419.578125,
+                "w": 56,
+                "h": 15
+              },
+              "clipped": false
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 286.53125,
+                "y": 444.578125,
+                "w": 168.234375,
+                "h": 45.5
+              },
+              "clipped": false
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 286.53125,
+                "y": 525.203125,
+                "w": 168.234375,
+                "h": 27.6875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "choice-verb",
+              "box": {
+                "x": 340.640625,
+                "y": 560.890625,
+                "w": 60,
+                "h": 16.5
+              },
+              "clipped": false
+            }
+          ]
+        },
+        {
+          "id": "flame",
+          "box": {
+            "x": 524.3125,
+            "y": 280.390625,
+            "w": 271.328125,
+            "h": 360
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 618.765625,
+                "y": 389.390625,
+                "w": 82.40625,
+                "h": 31.1875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 631.96875,
+                "y": 424.578125,
+                "w": 56,
+                "h": 15
+              },
+              "clipped": false
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 575.859375,
+                "y": 449.578125,
+                "w": 168.234375,
+                "h": 45.5
+              },
+              "clipped": false
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 575.859375,
+                "y": 530.203125,
+                "w": 168.234375,
+                "h": 27.6875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "choice-verb",
+              "box": {
+                "x": 629.96875,
+                "y": 565.890625,
+                "w": 60,
+                "h": 16.5
+              },
+              "clipped": false
+            }
+          ]
+        },
+        {
+          "id": "mercy",
+          "box": {
+            "x": 813.640625,
+            "y": 280.390625,
+            "w": 271.34375,
+            "h": 360
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 908.109375,
+                "y": 389.390625,
+                "w": 82.40625,
+                "h": 31.1875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 921.3125,
+                "y": 424.578125,
+                "w": 56,
+                "h": 15
+              },
+              "clipped": false
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 865.1875,
+                "y": 449.578125,
+                "w": 168.25,
+                "h": 45.5
+              },
+              "clipped": false
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 865.1875,
+                "y": 530.203125,
+                "w": 168.25,
+                "h": 27.6875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "choice-verb",
+              "box": {
+                "x": 919.3125,
+                "y": 565.890625,
+                "w": 60,
+                "h": 16.5
+              },
+              "clipped": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "reward-paper-1280-cloud",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "mode": "reward",
+      "stage": {
+        "x": 104.890625,
+        "y": 64,
+        "w": 1070.21875,
+        "h": 601.984375
+      },
+      "panel": {
+        "x": 153.953125,
+        "y": 106.203125,
+        "w": 972.078125,
+        "h": 517.578125
+      },
+      "scroll": 0,
+      "focus": "cloud",
+      "role": "dialog",
+      "modal": "true",
+      "cards": [
+        {
+          "id": "cloud",
+          "box": {
+            "x": 274.984375,
+            "y": 227.78125,
+            "w": 235.328125,
+            "h": 320
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 356.03125,
+                "y": 312.78125,
+                "w": 73.234375,
+                "h": 27.296875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 366.640625,
+                "y": 344.078125,
+                "w": 52,
+                "h": 14
+              },
+              "clipped": false
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 319.6875,
+                "y": 365.078125,
+                "w": 145.921875,
+                "h": 37.375
+              },
+              "clipped": false
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 319.6875,
+                "y": 449.78125,
+                "w": 145.921875,
+                "h": 23
+              },
+              "clipped": false
+            },
+            {
+              "kind": "choice-verb",
+              "box": {
+                "x": 364.640625,
+                "y": 480.78125,
+                "w": 56,
+                "h": 15
+              },
+              "clipped": false
+            }
+          ]
+        },
+        {
+          "id": "echo",
+          "box": {
+            "x": 522.3125,
+            "y": 232.78125,
+            "w": 235.328125,
+            "h": 320
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 603.359375,
+                "y": 317.78125,
+                "w": 73.234375,
+                "h": 27.296875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 613.96875,
+                "y": 349.078125,
+                "w": 52,
+                "h": 14
+              },
+              "clipped": false
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 567.015625,
+                "y": 370.078125,
+                "w": 145.921875,
+                "h": 37.375
+              },
+              "clipped": false
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 567.015625,
+                "y": 454.78125,
+                "w": 145.921875,
+                "h": 23
+              },
+              "clipped": false
+            },
+            {
+              "kind": "choice-verb",
+              "box": {
+                "x": 611.96875,
+                "y": 485.78125,
+                "w": 56,
+                "h": 15
+              },
+              "clipped": false
+            }
+          ]
+        },
+        {
+          "id": "staff",
+          "box": {
+            "x": 769.640625,
+            "y": 232.78125,
+            "w": 235.328125,
+            "h": 320
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 850.6875,
+                "y": 317.78125,
+                "w": 73.234375,
+                "h": 27.296875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 861.296875,
+                "y": 349.078125,
+                "w": 52,
+                "h": 14
+              },
+              "clipped": false
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 814.34375,
+                "y": 370.078125,
+                "w": 145.921875,
+                "h": 37.375
+              },
+              "clipped": false
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 814.34375,
+                "y": 438.78125,
+                "w": 145.921875,
+                "h": 39
+              },
+              "clipped": false
+            },
+            {
+              "kind": "choice-verb",
+              "box": {
+                "x": 859.296875,
+                "y": 485.78125,
+                "w": 56,
+                "h": 15
+              },
+              "clipped": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "reward-paper-1280-mirror",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "mode": "reward",
+      "stage": {
+        "x": 104.890625,
+        "y": 64,
+        "w": 1070.21875,
+        "h": 601.984375
+      },
+      "panel": {
+        "x": 153.953125,
+        "y": 106.203125,
+        "w": 972.078125,
+        "h": 517.578125
+      },
+      "scroll": 0,
+      "focus": "mirror",
+      "role": "dialog",
+      "modal": "true",
+      "cards": [
+        {
+          "id": "mirror",
+          "box": {
+            "x": 274.984375,
+            "y": 227.78125,
+            "w": 235.328125,
+            "h": 320
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 356.03125,
+                "y": 312.78125,
+                "w": 73.234375,
+                "h": 27.296875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 366.640625,
+                "y": 344.078125,
+                "w": 52,
+                "h": 14
+              },
+              "clipped": false
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 319.6875,
+                "y": 365.078125,
+                "w": 145.921875,
+                "h": 37.375
+              },
+              "clipped": false
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 319.6875,
+                "y": 433.78125,
+                "w": 145.921875,
+                "h": 39
+              },
+              "clipped": false
+            },
+            {
+              "kind": "choice-verb",
+              "box": {
+                "x": 364.640625,
+                "y": 480.78125,
+                "w": 56,
+                "h": 15
+              },
+              "clipped": false
+            }
+          ]
+        },
+        {
+          "id": "flame",
+          "box": {
+            "x": 522.3125,
+            "y": 232.78125,
+            "w": 235.328125,
+            "h": 320
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 603.359375,
+                "y": 317.78125,
+                "w": 73.234375,
+                "h": 27.296875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 613.96875,
+                "y": 349.078125,
+                "w": 52,
+                "h": 14
+              },
+              "clipped": false
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 567.015625,
+                "y": 370.078125,
+                "w": 145.921875,
+                "h": 37.375
+              },
+              "clipped": false
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 567.015625,
+                "y": 454.78125,
+                "w": 145.921875,
+                "h": 23
+              },
+              "clipped": false
+            },
+            {
+              "kind": "choice-verb",
+              "box": {
+                "x": 611.96875,
+                "y": 485.78125,
+                "w": 56,
+                "h": 15
+              },
+              "clipped": false
+            }
+          ]
+        },
+        {
+          "id": "mercy",
+          "box": {
+            "x": 769.640625,
+            "y": 232.78125,
+            "w": 235.328125,
+            "h": 320
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 850.6875,
+                "y": 317.78125,
+                "w": 73.234375,
+                "h": 27.296875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 861.296875,
+                "y": 349.078125,
+                "w": 52,
+                "h": 14
+              },
+              "clipped": false
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 814.34375,
+                "y": 370.078125,
+                "w": 145.921875,
+                "h": 37.375
+              },
+              "clipped": false
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 814.34375,
+                "y": 454.78125,
+                "w": 145.921875,
+                "h": 23
+              },
+              "clipped": false
+            },
+            {
+              "kind": "choice-verb",
+              "box": {
+                "x": 859.296875,
+                "y": 485.78125,
+                "w": 56,
+                "h": 15
+              },
+              "clipped": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "reward-paper-1280-rest",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "mode": "reward",
+      "stage": {
+        "x": 104.890625,
+        "y": 64,
+        "w": 1070.21875,
+        "h": 601.984375
+      },
+      "panel": {
+        "x": 153.953125,
+        "y": 106.203125,
+        "w": 972.078125,
+        "h": 517.578125
+      },
+      "scroll": 0,
+      "focus": "rest",
+      "role": "dialog",
+      "modal": "true",
+      "cards": [
+        {
+          "id": "rest",
+          "box": {
+            "x": 274.984375,
+            "y": 227.78125,
+            "w": 235.328125,
+            "h": 320
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 343.828125,
+                "y": 312.78125,
+                "w": 97.640625,
+                "h": 27.296875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 366.640625,
+                "y": 344.078125,
+                "w": 52,
+                "h": 14
+              },
+              "clipped": false
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 319.6875,
+                "y": 365.078125,
+                "w": 145.921875,
+                "h": 37.375
+              },
+              "clipped": false
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 319.6875,
+                "y": 449.78125,
+                "w": 145.921875,
+                "h": 23
+              },
+              "clipped": false
+            },
+            {
+              "kind": "choice-verb",
+              "box": {
+                "x": 364.640625,
+                "y": 480.78125,
+                "w": 56,
+                "h": 15
+              },
+              "clipped": false
+            }
+          ]
+        },
+        {
+          "id": "staff",
+          "box": {
+            "x": 522.3125,
+            "y": 232.78125,
+            "w": 235.328125,
+            "h": 320
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 603.359375,
+                "y": 317.78125,
+                "w": 73.234375,
+                "h": 27.296875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 613.96875,
+                "y": 349.078125,
+                "w": 52,
+                "h": 14
+              },
+              "clipped": false
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 567.015625,
+                "y": 370.078125,
+                "w": 145.921875,
+                "h": 37.375
+              },
+              "clipped": false
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 567.015625,
+                "y": 438.78125,
+                "w": 145.921875,
+                "h": 39
+              },
+              "clipped": false
+            },
+            {
+              "kind": "choice-verb",
+              "box": {
+                "x": 611.96875,
+                "y": 485.78125,
+                "w": 56,
+                "h": 15
+              },
+              "clipped": false
+            }
+          ]
+        },
+        {
+          "id": "echo",
+          "box": {
+            "x": 769.640625,
+            "y": 232.78125,
+            "w": 235.328125,
+            "h": 320
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 850.6875,
+                "y": 317.78125,
+                "w": 73.234375,
+                "h": 27.296875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 861.296875,
+                "y": 349.078125,
+                "w": 52,
+                "h": 14
+              },
+              "clipped": false
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 814.34375,
+                "y": 370.078125,
+                "w": 145.921875,
+                "h": 37.375
+              },
+              "clipped": false
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 814.34375,
+                "y": 454.78125,
+                "w": 145.921875,
+                "h": 23
+              },
+              "clipped": false
+            },
+            {
+              "kind": "choice-verb",
+              "box": {
+                "x": 859.296875,
+                "y": 485.78125,
+                "w": 56,
+                "h": 15
+              },
+              "clipped": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "replace-paper-1280",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "mode": "replace",
+      "stage": {
+        "x": 104.890625,
+        "y": 64,
+        "w": 1070.21875,
+        "h": 601.984375
+      },
+      "panel": {
+        "x": 153.953125,
+        "y": 82.953125,
+        "w": 972.078125,
+        "h": 564.078125
+      },
+      "scroll": 0,
+      "focus": "mirror",
+      "role": "dialog",
+      "modal": "true",
+      "cards": [
+        {
+          "id": "mirror",
+          "box": {
+            "x": 274.984375,
+            "y": 234.03125,
+            "w": 235.328125,
+            "h": 320
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 356.03125,
+                "y": 319.03125,
+                "w": 73.234375,
+                "h": 27.296875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 366.640625,
+                "y": 350.328125,
+                "w": 52,
+                "h": 14
+              },
+              "clipped": false
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 319.6875,
+                "y": 371.328125,
+                "w": 145.921875,
+                "h": 37.375
+              },
+              "clipped": false
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 319.6875,
+                "y": 440.03125,
+                "w": 145.921875,
+                "h": 39
+              },
+              "clipped": false
+            },
+            {
+              "kind": "choice-verb",
+              "box": {
+                "x": 364.640625,
+                "y": 487.03125,
+                "w": 56,
+                "h": 15
+              },
+              "clipped": false
+            }
+          ]
+        },
+        {
+          "id": "flame",
+          "box": {
+            "x": 522.3125,
+            "y": 239.03125,
+            "w": 235.328125,
+            "h": 320
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 603.359375,
+                "y": 324.03125,
+                "w": 73.234375,
+                "h": 27.296875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 613.96875,
+                "y": 355.328125,
+                "w": 52,
+                "h": 14
+              },
+              "clipped": false
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 567.015625,
+                "y": 376.328125,
+                "w": 145.921875,
+                "h": 37.375
+              },
+              "clipped": false
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 567.015625,
+                "y": 461.03125,
+                "w": 145.921875,
+                "h": 23
+              },
+              "clipped": false
+            },
+            {
+              "kind": "choice-verb",
+              "box": {
+                "x": 611.96875,
+                "y": 492.03125,
+                "w": 56,
+                "h": 15
+              },
+              "clipped": false
+            }
+          ]
+        },
+        {
+          "id": "mercy",
+          "box": {
+            "x": 769.640625,
+            "y": 239.03125,
+            "w": 235.328125,
+            "h": 320
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 850.6875,
+                "y": 324.03125,
+                "w": 73.234375,
+                "h": 27.296875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 861.296875,
+                "y": 355.328125,
+                "w": 52,
+                "h": 14
+              },
+              "clipped": false
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 814.34375,
+                "y": 376.328125,
+                "w": 145.921875,
+                "h": 37.375
+              },
+              "clipped": false
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 814.34375,
+                "y": 461.03125,
+                "w": 145.921875,
+                "h": 23
+              },
+              "clipped": false
+            },
+            {
+              "kind": "choice-verb",
+              "box": {
+                "x": 859.296875,
+                "y": 492.03125,
+                "w": 56,
+                "h": 15
+              },
+              "clipped": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "reward-paper-1024-cloud",
+      "viewport": {
+        "width": 1024,
+        "height": 600
+      },
+      "mode": "reward",
+      "stage": {
+        "x": 83.5625,
+        "y": 64,
+        "w": 856.875,
+        "h": 481.984375
+      },
+      "panel": {
+        "x": 123.03125,
+        "y": 74.59375,
+        "w": 777.921875,
+        "h": 460.78125
+      },
+      "scroll": 57,
+      "focus": "cloud",
+      "role": "dialog",
+      "modal": "true",
+      "cards": [
+        {
+          "id": "cloud",
+          "box": {
+            "x": 147.03125,
+            "y": 196.171875,
+            "w": 235.296875,
+            "h": 320
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 228.0625,
+                "y": 281.171875,
+                "w": 73.234375,
+                "h": 27.296875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 238.671875,
+                "y": 312.46875,
+                "w": 52,
+                "h": 14
+              },
+              "clipped": false
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 191.734375,
+                "y": 333.46875,
+                "w": 145.890625,
+                "h": 37.375
+              },
+              "clipped": false
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 191.734375,
+                "y": 418.171875,
+                "w": 145.890625,
+                "h": 23
+              },
+              "clipped": false
+            },
+            {
+              "kind": "choice-verb",
+              "box": {
+                "x": 236.671875,
+                "y": 449.171875,
+                "w": 56,
+                "h": 15
+              },
+              "clipped": false
+            }
+          ]
+        },
+        {
+          "id": "echo",
+          "box": {
+            "x": 394.328125,
+            "y": 201.171875,
+            "w": 235.3125,
+            "h": 320
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 475.359375,
+                "y": 286.171875,
+                "w": 73.234375,
+                "h": 27.296875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 485.984375,
+                "y": 317.46875,
+                "w": 52,
+                "h": 14
+              },
+              "clipped": false
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 439.03125,
+                "y": 338.46875,
+                "w": 145.90625,
+                "h": 37.375
+              },
+              "clipped": false
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 439.03125,
+                "y": 423.171875,
+                "w": 145.90625,
+                "h": 23
+              },
+              "clipped": false
+            },
+            {
+              "kind": "choice-verb",
+              "box": {
+                "x": 483.984375,
+                "y": 454.171875,
+                "w": 56,
+                "h": 15
+              },
+              "clipped": false
+            }
+          ]
+        },
+        {
+          "id": "staff",
+          "box": {
+            "x": 641.640625,
+            "y": 201.171875,
+            "w": 235.3125,
+            "h": 320
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 722.671875,
+                "y": 286.171875,
+                "w": 73.234375,
+                "h": 27.296875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 733.296875,
+                "y": 317.46875,
+                "w": 52,
+                "h": 14
+              },
+              "clipped": false
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 686.34375,
+                "y": 338.46875,
+                "w": 145.90625,
+                "h": 37.375
+              },
+              "clipped": false
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 686.34375,
+                "y": 407.171875,
+                "w": 145.90625,
+                "h": 39
+              },
+              "clipped": false
+            },
+            {
+              "kind": "choice-verb",
+              "box": {
+                "x": 731.296875,
+                "y": 454.171875,
+                "w": 56,
+                "h": 15
+              },
+              "clipped": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "reward-paper-1024-mirror",
+      "viewport": {
+        "width": 1024,
+        "height": 600
+      },
+      "mode": "reward",
+      "stage": {
+        "x": 83.5625,
+        "y": 64,
+        "w": 856.875,
+        "h": 481.984375
+      },
+      "panel": {
+        "x": 123.03125,
+        "y": 74.59375,
+        "w": 777.921875,
+        "h": 460.78125
+      },
+      "scroll": 57,
+      "focus": "mirror",
+      "role": "dialog",
+      "modal": "true",
+      "cards": [
+        {
+          "id": "mirror",
+          "box": {
+            "x": 147.03125,
+            "y": 196.171875,
+            "w": 235.296875,
+            "h": 320
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 228.0625,
+                "y": 281.171875,
+                "w": 73.234375,
+                "h": 27.296875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 238.671875,
+                "y": 312.46875,
+                "w": 52,
+                "h": 14
+              },
+              "clipped": false
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 191.734375,
+                "y": 333.46875,
+                "w": 145.890625,
+                "h": 37.375
+              },
+              "clipped": false
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 191.734375,
+                "y": 402.171875,
+                "w": 145.890625,
+                "h": 39
+              },
+              "clipped": false
+            },
+            {
+              "kind": "choice-verb",
+              "box": {
+                "x": 236.671875,
+                "y": 449.171875,
+                "w": 56,
+                "h": 15
+              },
+              "clipped": false
+            }
+          ]
+        },
+        {
+          "id": "flame",
+          "box": {
+            "x": 394.328125,
+            "y": 201.171875,
+            "w": 235.3125,
+            "h": 320
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 475.359375,
+                "y": 286.171875,
+                "w": 73.234375,
+                "h": 27.296875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 485.984375,
+                "y": 317.46875,
+                "w": 52,
+                "h": 14
+              },
+              "clipped": false
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 439.03125,
+                "y": 338.46875,
+                "w": 145.90625,
+                "h": 37.375
+              },
+              "clipped": false
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 439.03125,
+                "y": 423.171875,
+                "w": 145.90625,
+                "h": 23
+              },
+              "clipped": false
+            },
+            {
+              "kind": "choice-verb",
+              "box": {
+                "x": 483.984375,
+                "y": 454.171875,
+                "w": 56,
+                "h": 15
+              },
+              "clipped": false
+            }
+          ]
+        },
+        {
+          "id": "mercy",
+          "box": {
+            "x": 641.640625,
+            "y": 201.171875,
+            "w": 235.3125,
+            "h": 320
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 722.671875,
+                "y": 286.171875,
+                "w": 73.234375,
+                "h": 27.296875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 733.296875,
+                "y": 317.46875,
+                "w": 52,
+                "h": 14
+              },
+              "clipped": false
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 686.34375,
+                "y": 338.46875,
+                "w": 145.90625,
+                "h": 37.375
+              },
+              "clipped": false
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 686.34375,
+                "y": 423.171875,
+                "w": 145.90625,
+                "h": 23
+              },
+              "clipped": false
+            },
+            {
+              "kind": "choice-verb",
+              "box": {
+                "x": 731.296875,
+                "y": 454.171875,
+                "w": 56,
+                "h": 15
+              },
+              "clipped": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "reward-paper-1024-rest",
+      "viewport": {
+        "width": 1024,
+        "height": 600
+      },
+      "mode": "reward",
+      "stage": {
+        "x": 83.5625,
+        "y": 64,
+        "w": 856.875,
+        "h": 481.984375
+      },
+      "panel": {
+        "x": 123.03125,
+        "y": 74.59375,
+        "w": 777.921875,
+        "h": 460.78125
+      },
+      "scroll": 57,
+      "focus": "rest",
+      "role": "dialog",
+      "modal": "true",
+      "cards": [
+        {
+          "id": "rest",
+          "box": {
+            "x": 147.03125,
+            "y": 196.171875,
+            "w": 235.296875,
+            "h": 320
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 215.859375,
+                "y": 281.171875,
+                "w": 97.640625,
+                "h": 27.296875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 238.671875,
+                "y": 312.46875,
+                "w": 52,
+                "h": 14
+              },
+              "clipped": false
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 191.734375,
+                "y": 333.46875,
+                "w": 145.890625,
+                "h": 37.375
+              },
+              "clipped": false
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 191.734375,
+                "y": 418.171875,
+                "w": 145.890625,
+                "h": 23
+              },
+              "clipped": false
+            },
+            {
+              "kind": "choice-verb",
+              "box": {
+                "x": 236.671875,
+                "y": 449.171875,
+                "w": 56,
+                "h": 15
+              },
+              "clipped": false
+            }
+          ]
+        },
+        {
+          "id": "staff",
+          "box": {
+            "x": 394.328125,
+            "y": 201.171875,
+            "w": 235.3125,
+            "h": 320
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 475.359375,
+                "y": 286.171875,
+                "w": 73.234375,
+                "h": 27.296875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 485.984375,
+                "y": 317.46875,
+                "w": 52,
+                "h": 14
+              },
+              "clipped": false
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 439.03125,
+                "y": 338.46875,
+                "w": 145.90625,
+                "h": 37.375
+              },
+              "clipped": false
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 439.03125,
+                "y": 407.171875,
+                "w": 145.90625,
+                "h": 39
+              },
+              "clipped": false
+            },
+            {
+              "kind": "choice-verb",
+              "box": {
+                "x": 483.984375,
+                "y": 454.171875,
+                "w": 56,
+                "h": 15
+              },
+              "clipped": false
+            }
+          ]
+        },
+        {
+          "id": "echo",
+          "box": {
+            "x": 641.640625,
+            "y": 201.171875,
+            "w": 235.3125,
+            "h": 320
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 722.671875,
+                "y": 286.171875,
+                "w": 73.234375,
+                "h": 27.296875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 733.296875,
+                "y": 317.46875,
+                "w": 52,
+                "h": 14
+              },
+              "clipped": false
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 686.34375,
+                "y": 338.46875,
+                "w": 145.90625,
+                "h": 37.375
+              },
+              "clipped": false
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 686.34375,
+                "y": 423.171875,
+                "w": 145.90625,
+                "h": 23
+              },
+              "clipped": false
+            },
+            {
+              "kind": "choice-verb",
+              "box": {
+                "x": 731.296875,
+                "y": 454.171875,
+                "w": 56,
+                "h": 15
+              },
+              "clipped": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "replace-paper-1024",
+      "viewport": {
+        "width": 1024,
+        "height": 600
+      },
+      "mode": "replace",
+      "stage": {
+        "x": 83.5625,
+        "y": 64,
+        "w": 856.875,
+        "h": 481.984375
+      },
+      "panel": {
+        "x": 123.03125,
+        "y": 74.59375,
+        "w": 777.921875,
+        "h": 460.78125
+      },
+      "scroll": 103,
+      "focus": "mirror",
+      "role": "dialog",
+      "modal": "true",
+      "cards": [
+        {
+          "id": "mirror",
+          "box": {
+            "x": 147.03125,
+            "y": 225.671875,
+            "w": 235.296875,
+            "h": 320
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 228.0625,
+                "y": 310.671875,
+                "w": 73.234375,
+                "h": 27.296875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 238.671875,
+                "y": 341.96875,
+                "w": 52,
+                "h": 14
+              },
+              "clipped": false
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 191.734375,
+                "y": 362.96875,
+                "w": 145.890625,
+                "h": 37.375
+              },
+              "clipped": false
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 191.734375,
+                "y": 431.671875,
+                "w": 145.890625,
+                "h": 39
+              },
+              "clipped": false
+            },
+            {
+              "kind": "choice-verb",
+              "box": {
+                "x": 236.671875,
+                "y": 478.671875,
+                "w": 56,
+                "h": 15
+              },
+              "clipped": false
+            }
+          ]
+        },
+        {
+          "id": "flame",
+          "box": {
+            "x": 394.328125,
+            "y": 230.671875,
+            "w": 235.3125,
+            "h": 320
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 475.359375,
+                "y": 315.671875,
+                "w": 73.234375,
+                "h": 27.296875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 485.984375,
+                "y": 346.96875,
+                "w": 52,
+                "h": 14
+              },
+              "clipped": false
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 439.03125,
+                "y": 367.96875,
+                "w": 145.90625,
+                "h": 37.375
+              },
+              "clipped": false
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 439.03125,
+                "y": 452.671875,
+                "w": 145.90625,
+                "h": 23
+              },
+              "clipped": false
+            },
+            {
+              "kind": "choice-verb",
+              "box": {
+                "x": 483.984375,
+                "y": 483.671875,
+                "w": 56,
+                "h": 15
+              },
+              "clipped": false
+            }
+          ]
+        },
+        {
+          "id": "mercy",
+          "box": {
+            "x": 641.640625,
+            "y": 230.671875,
+            "w": 235.3125,
+            "h": 320
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 722.671875,
+                "y": 315.671875,
+                "w": 73.234375,
+                "h": 27.296875
+              },
+              "clipped": false
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 733.296875,
+                "y": 346.96875,
+                "w": 52,
+                "h": 14
+              },
+              "clipped": false
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 686.34375,
+                "y": 367.96875,
+                "w": 145.90625,
+                "h": 37.375
+              },
+              "clipped": false
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 686.34375,
+                "y": 452.671875,
+                "w": 145.90625,
+                "h": 23
+              },
+              "clipped": false
+            },
+            {
+              "kind": "choice-verb",
+              "box": {
+                "x": 731.296875,
+                "y": 483.671875,
+                "w": 56,
+                "h": 15
+              },
+              "clipped": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "requests": [],
+  "browser": "156.0.4314.42",
+  "contrast": {
+    "paperFifthPercentileLuminance": 0.44321311511875255,
+    "costTextOnPaper": 5.175399324609814,
+    "method": "darker fifth-percentile luminance in quiet paper region against cost ink #54351f; texture sample, not full accessibility certification"
+  },
+  "video": "evidence/scroll-layout/video/page@337b5ba6083f87c25cd4d8844d27fc6f.webm"
+}
