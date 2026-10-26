@@ -166,6 +166,18 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
 .build-scroll-hint{text-align:right;font:10px/1.6 "Microsoft YaHei",sans-serif;color:#bba57b;margin:0 14px 4px 0}.build-scroll{scrollbar-gutter:stable;border-bottom:1px solid #ad925c55}.build-scroll:focus-visible{outline:1px solid #ad925c66;outline-offset:3px}
 </style><style>.hero-choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:34px;max-width:820px;margin:auto}.hero-choice{position:relative;text-align:center;background:linear-gradient(180deg,#15252b66,#122027cc);border:1px solid #ad925d66;padding:12px 20px 19px;color:#e4d4b6;transition:transform .15s,border-color .15s}.hero-choice:hover,.hero-choice:focus-visible{border-color:#ead49b;transform:translateY(-3px);outline:1px solid #c4b07a;outline-offset:3px}.hero-choice h3{font:25px/1.5 SimSun,serif;letter-spacing:6px;margin:0 0 7px;color:#edcb86}.hero-choice b{font-size:12px;letter-spacing:2px;color:#b7cebc}.hero-choice p{font:12px/1.9 "Microsoft YaHei",sans-serif;min-height:46px;max-width:280px;margin:12px auto;color:#c3bdab}.hero-choice small{font:10px/1.8 "Microsoft YaHei",sans-serif;color:#d5b784;display:block}.hero-portrait{display:block;width:170px;height:165px;margin:-18px auto 0;background-repeat:no-repeat;image-rendering:pixelated}.hero-wukong{background-size:400% 200%;background-position:0 0}.hero-nezha{background-size:600% 100%;background-position:0 0}.run-arts #range-state{color:#e8cf91;white-space:nowrap}#range-state:empty{display:none}.run-arts{gap:10px;max-width:70%}.run-arts #growth-state{max-width:290px}
 @container(max-width:1100px){.hero-choices{max-width:690px;gap:25px}.hero-portrait{width:130px;height:125px}.hero-choice{padding:6px 16px 12px}.hero-choice h3{font-size:21px}.hero-choice p{font-size:11px;min-height:42px;margin:7px auto}.hero-choice small{font-size:9px}.run-arts #growth-state{max-width:240px}}
+</style><style>/* One upper-left cluster: survival first, then the bonuses already chosen this run. */
+.hud-left{position:absolute;left:2%;top:3%;width:min(235px,23%)}
+.hud-left .vitals{position:static;width:100%;padding:10px 12px}
+.equipped-hud{margin-top:4px;padding:7px 10px 8px 12px;border-left:2px solid #96815b;background:linear-gradient(90deg,#0f202ad9,#0f202ab0);text-shadow:0 1px 2px #091219;color:#e1cfab}
+.equipped-heading{display:flex;justify-content:space-between;align-items:center;margin-bottom:5px;color:#cdbb91;font:10px/1.6 "Microsoft YaHei",sans-serif;letter-spacing:1px}
+.equipped-heading small{font:9px/1.6 "Microsoft YaHei",sans-serif;color:#a4b1a9;letter-spacing:0}
+.equipped-hud dl{margin:0;display:grid;gap:4px}
+.equipped-row{display:grid;grid-template-columns:29px minmax(0,1fr);gap:5px;font:10px/1.65 "Microsoft YaHei",sans-serif;letter-spacing:0}
+.equipped-row dt{color:#9dac9e}.equipped-row dd{margin:0;min-width:0;overflow-wrap:anywhere}
+.equipped-row #growth-state{color:#e4cc98}.equipped-row #talisman-state{color:#afe0dc}
+.run-bottom #range-state{color:#e8cf91}
+@container(max-width:1000px){.hud-left .vitals{padding:8px}.equipped-hud{padding:6px 7px 7px 8px}.equipped-row{grid-template-columns:25px minmax(0,1fr);gap:3px;font-size:9px}.equipped-heading{font-size:9px}}
 </style></head>
 <body>
   <main id="app">
@@ -174,25 +186,34 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
       <canvas id="world" width="960" height="540" tabindex="0" aria-label="游戏世界。A D移动，空格跳跃，J棍击，K闪避，L分身，R法天象地，Q符术，F交互，B查看加成，Escape暂停。"></canvas>
       <div id="vignette" aria-hidden="true"></div>
       <div id="hud" hidden>
-        <div class="vitals"><div class="vital-head"><strong id="player-name">孙悟空</strong><span id="hp-number">100 / 100</span></div><div class="meter hp"><i id="hp-fill"></i></div><div class="focus-line"><span>定力</span><div class="meter focus"><i id="focus-fill"></i></div><b id="focus-number">65</b></div><div class="focus-line rage-line" id="rage-line"><span id="ultimate-name">R 法天象地</span><div class="meter"><i id="rage-fill"></i></div><b id="rage-number">25</b></div></div>
+        <div class="hud-left">
+          <div class="vitals"><div class="vital-head"><strong id="player-name">孙悟空</strong><span id="hp-number">100 / 100</span></div><div class="meter hp"><i id="hp-fill"></i></div><div class="focus-line"><span>定力</span><div class="meter focus"><i id="focus-fill"></i></div><b id="focus-number">65</b></div><div class="focus-line rage-line" id="rage-line"><span id="ultimate-name">R 法天象地</span><div class="meter"><i id="rage-fill"></i></div><b id="rage-number">25</b></div></div>
+          <section class="equipped-hud" aria-label="当前已选加成">
+            <div class="equipped-heading"><span>已选加成</span><small>B 详情</small></div>
+            <dl>
+              <div class="equipped-row"><dt>舍利</dt><dd id="relic-list"></dd></div>
+              <div class="equipped-row"><dt>法门</dt><dd id="growth-state"></dd></div>
+              <div class="equipped-row"><dt>符术</dt><dd id="talisman-state">Q 未携符术</dd></div>
+            </dl>
+          </section>
+        </div>
         <div class="journey"><small id="chapter">第一境</small><strong id="stage-name">雾隐山道</strong><span id="objective">破除黑莲阵眼 0 / 2</span><div class="journey-progress"><i id="journey-fill"></i></div></div>
         <div class="hud-actions"><span id="run-seed"></span><button id="build-open" aria-label="查看本局法门">本局法门 <span>B</span></button><button id="pause" aria-label="暂停游戏">Ⅱ <span>ESC</span></button></div>
         <div id="boss-hud" hidden><span><b id="boss-name">无天</b><em id="boss-phase">黑莲横世</em></span><div class="meter"><i id="boss-fill"></i></div></div>
-        <div class="run-arts"><span id="range-state"></span><span id="talisman-state">Q 未携符术</span><span id="growth-state"></span></div>
-        <div class="run-bottom"><span id="relic-list"></span><span id="dash-state"></span></div>
+        <div class="run-bottom"><span id="range-state"></span><span id="dash-state"></span></div>
       </div>
       <div id="overlay"></div>
       <div id="combat-labels" aria-hidden="true"></div>
       <div id="toast" role="status" aria-live="polite" hidden></div>
       <div id="context-hint" hidden></div>
     </section>
-    <footer class="footline"><div><span class="status-dot"></span><span id="storage-status">离线可玩 · 进度自动保存</span></div><div class="keystrip"><span><kbd>A</kbd><kbd>D</kbd> 行走</span><span><kbd>SPACE</kbd> 跃起</span><span><kbd>J</kbd> 攻击</span><span><kbd>K</kbd> 闪避</span><span><kbd>L</kbd> 神通</span><span><kbd>R</kbd> 大招</span><span><kbd>Q</kbd> 符术</span></div><span class="build">v6.0 <span>／</span> 棍影 · 回环 · 应劫</span></footer>
+    <footer class="footline"><div><span class="status-dot"></span><span id="storage-status">离线可玩 · 进度自动保存</span></div><div class="keystrip"><span><kbd>A</kbd><kbd>D</kbd> 行走</span><span><kbd>SPACE</kbd> 跃起</span><span><kbd>J</kbd> 攻击</span><span><kbd>K</kbd> 闪避</span><span><kbd>L</kbd> 神通</span><span><kbd>R</kbd> 大招</span><span><kbd>Q</kbd> 符术</span></div><span class="build">v6.0.1 <span>／</span> 棍影 · 回环 · 应劫</span></footer>
     <input id="import-file" type="file" accept="application/json,.json" hidden>
   </main>
   <script>
 (function (K) {
   'use strict';
-  K.VERSION = '6.0.0';
+  K.VERSION = '6.0.1';
   K.W = 960; K.H = 540; K.DT = 1 / 120;
   K.clamp = (v, a, b) => Math.max(a, Math.min(b, v));
   K.overlap = (a, b) => a.x < b.x + b.w && a.x + a.w > b.x && a.y < b.y + b.h && a.y + a.h > b.y;
@@ -1614,7 +1635,7 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
   K.pointerFace=x=>{if(!state)return 0;const r=world.getBoundingClientRect();return Math.sign((x-r.left)/r.width*960+renderer.camera-state.player.x-12);};
   function hud(){
     if(!state)return;const p=state.player;$('player-name').textContent=K.heroDef(state).name;$('ultimate-name').textContent='R '+K.heroDef(state).skill;$('range-state').textContent=K.isRanged(state)?(state.ring?(state.ring.phase==='out'?'乾坤圈 · 去程':'乾坤圈 · 回收'):'乾坤圈 · 就绪'):'';
-    $('hp-number').textContent=Math.ceil(p.hp)+' / '+K.maxHP(state);$('hp-fill').style.width=(p.hp/K.maxHP(state)*100)+'%';$('focus-number').textContent=Math.floor(p.focus);$('focus-fill').style.width=p.focus+'%';$('rage-number').textContent=Math.floor(p.rage);$('rage-fill').style.width=p.rage+'%';$('rage-line').classList.toggle('ready',p.rage>=100);$('rage-line').title=p.rage>=100?'按 R 释放'+K.heroDef(state).skill:'命中积攒战意';$('talisman-state').textContent=state.talisman?'Q '+rewardInfo(state.talisman.id).name+' ×'+state.talisman.charges:'Q 未携符术';$('growth-state').textContent=Object.entries(state.growth).map(([id,n])=>rewardInfo(id).name+(n>1?'·'+n+'重':'')).join(' · ');$('chapter').textContent=state.stage<3?'第'+['一','二','三'][state.stage]+'境':'终局';$('stage-name').textContent=K.STAGES[state.stage].name;$('chapter').textContent+=' · '+K.region(state.stage,p.x);
+    $('hp-number').textContent=Math.ceil(p.hp)+' / '+K.maxHP(state);$('hp-fill').style.width=(p.hp/K.maxHP(state)*100)+'%';$('focus-number').textContent=Math.floor(p.focus);$('focus-fill').style.width=p.focus+'%';$('rage-number').textContent=Math.floor(p.rage);$('rage-fill').style.width=p.rage+'%';$('rage-line').classList.toggle('ready',p.rage>=100);$('rage-line').title=p.rage>=100?'按 R 释放'+K.heroDef(state).skill:'命中积攒战意';$('talisman-state').textContent=state.talisman?'Q '+rewardInfo(state.talisman.id).name+' ×'+state.talisman.charges:'Q 未携符术';$('growth-state').textContent=Object.entries(state.growth).map(([id,n])=>rewardInfo(id).name+(n>1?'·'+n+'重':'')).join(' · ')||'暂无';$('chapter').textContent=state.stage<3?'第'+['一','二','三'][state.stage]+'境':'终局';$('stage-name').textContent=K.STAGES[state.stage].name;$('chapter').textContent+=' · '+K.region(state.stage,p.x);
     const left=state.room.seals.find(q=>q.hp>0),guardian=K.guardian(state);$('objective').textContent=state.stage<3?(left?'阵眼 '+(state.room.seals.filter(q=>q.hp===0).length+1)+' / 2 · 前方 '+Math.max(0,Math.ceil((left.x-p.x)/10))+'丈':guardian?.hp>0?'击退山门守关者 · '+K.GUARDIANS[state.stage].name:'双阵与守关已破 · F过门'):left?'破除法界双阵 · 前方 '+Math.max(0,Math.ceil((left.x-p.x)/10))+'丈':state.room.enemies[0].dormant?'前往莲座 · 归灯可调息一次':'绕背破莲 · 金色收招全额受伤';
     $('run-seed').textContent=state.seed;$('relic-list').textContent=state.relics.map(id=>rewardInfo(id).name).join(' · ')+'  ['+state.relics.length+'/3]';$('dash-state').textContent=p.dashCD>0?'闪避恢复 '+p.dashCD.toFixed(1)+'s':'闪避就绪';
     const boss=state.room.enemies.find(e=>(e.kind==='boss'||e.kind==='warden')&&!e.dormant&&e.hp>0);$('boss-hud').hidden=!boss;

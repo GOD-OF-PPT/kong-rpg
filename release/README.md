@@ -1,4 +1,6 @@
-# 大圣 · 劫后行 v6.0
+# 大圣 · 劫后行 v6.0.1
+
+v6.0.1：已选舍利、法门等级与符术余量集中显示在左上生命栏下方；B继续查看完整效果。布局验证见 [HUD记录](docs/ranged-v6/HUD-6.0.1.md)。
 
 新增可选角色哪吒，与孙悟空一同应劫。哪吒用乾坤圈去回程输出，L混天绫控位，R莲火轮阵清场；左键朝光标掷环，J水平掷环，一环在外不可再掷。原有舍利和法门按角色产生对应效果，按B查看详情。怪物会依据距离使用逐影突刺、举盾逼近和交叉封位；预警后锁定，不追踪作弊。
 
@@ -46,7 +48,7 @@ npm run dev
 
 预览 http://127.0.0.1:5188/release/index.html 。`build` 从 assets 中的 PNG 重建内嵌素材脚本，再将脚本、CSS与图片全部内联到发行 HTML。克隆源码后先 build；正式发行包可直接离线打开。
 
-完整离线包为 `artifacts/kong-rpg-offline-v6.0.0.zip`，含v1–v5原入口，约140MiB以上，超过GitHub单文件100MiB限制，因此作为本地交付物保留。Git仓库包含全部发行文件；需要重打包时执行 `python tools/package-release.py`。
+完整离线包为 `artifacts/kong-rpg-offline-v6.0.1.zip`，含v1–v5原入口，约140MiB以上，超过GitHub单文件100MiB限制，因此作为本地交付物保留。Git仓库包含全部发行文件；需要重打包时执行 `python tools/package-release.py`。
 
 `src/content.js` 内容与种子；`simulation.js` 固定120Hz模拟；`heroes.js` 角色、回环、绫缚与远距反制；`journey.js` 延长路线、强化怪、掉落、试炼与归灯；`progression.js` 成长、符术、大招与守关规则；`input.js` 键鼠与焦点；`storage.js` 版本存档；`renderer.js` 世界渲染；`visuals.js` 与 `progression-art.js` 图集和动作；`app.js` DOM界面；`audio.js` 本地声音。
 

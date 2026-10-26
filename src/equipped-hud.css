@@ -1,0 +1,12 @@
+/* One upper-left cluster: survival first, then the bonuses already chosen this run. */
+.hud-left{position:absolute;left:2%;top:3%;width:min(235px,23%)}
+.hud-left .vitals{position:static;width:100%;padding:10px 12px}
+.equipped-hud{margin-top:4px;padding:7px 10px 8px 12px;border-left:2px solid #96815b;background:linear-gradient(90deg,#0f202ad9,#0f202ab0);text-shadow:0 1px 2px #091219;color:#e1cfab}
+.equipped-heading{display:flex;justify-content:space-between;align-items:center;margin-bottom:5px;color:#cdbb91;font:10px/1.6 "Microsoft YaHei",sans-serif;letter-spacing:1px}
+.equipped-heading small{font:9px/1.6 "Microsoft YaHei",sans-serif;color:#a4b1a9;letter-spacing:0}
+.equipped-hud dl{margin:0;display:grid;gap:4px}
+.equipped-row{display:grid;grid-template-columns:29px minmax(0,1fr);gap:5px;font:10px/1.65 "Microsoft YaHei",sans-serif;letter-spacing:0}
+.equipped-row dt{color:#9dac9e}.equipped-row dd{margin:0;min-width:0;overflow-wrap:anywhere}
+.equipped-row #growth-state{color:#e4cc98}.equipped-row #talisman-state{color:#afe0dc}
+.run-bottom #range-state{color:#e8cf91}
+@container(max-width:1000px){.hud-left .vitals{padding:8px}.equipped-hud{padding:6px 7px 7px 8px}.equipped-row{grid-template-columns:25px minmax(0,1fr);gap:3px;font-size:9px}.equipped-heading{font-size:9px}}
