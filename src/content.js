@@ -1,6 +1,6 @@
 (function (K) {
   'use strict';
-  K.VERSION = '6.2.1';
+  K.VERSION = '7.0.0';
   K.W = 960; K.H = 540; K.DT = 1 / 120;
   K.clamp = (v, a, b) => Math.max(a, Math.min(b, v));
   K.overlap = (a, b) => a.x < b.x + b.w && a.x + a.w > b.x && a.y < b.y + b.h && a.y + a.h > b.y;
@@ -9,7 +9,7 @@
   K.RELICS = [
     { id:'cloud',glyph:'云',name:'腾云骨',tag:'空中取势',text:'一次空中跳。空中棍击伸得更远，踩敌后再次获得腾云。',cost:'用高度避开地面斩击；空中仍会被莲焰命中。',color:'#82d9d2' },
     { id:'echo',glyph:'影',name:'照影珠',tag:'驻影绕背',text:'分身驻留3秒，发出穿透棍风。敌人会朝分身蓄力，本体可绕背。',cost:'每次50定力；放错位置会浪费整次输出窗口。',color:'#bd9cdb' },
-    { id:'staff',glyph:'棍',name:'定海心',tag:'重棍破势',text:'第三棍范围更远、破正面重盾；重棍命中能打断普通敌人蓄力。',cost:'第三棍收招更长，须提前判断敌招时机。',color:'#efc47a' },
+    { id:'staff',glyph:'棍',name:'定海心',tag:'重棍破势',text:'第三棍范围更远、破正面重盾；U伸棍的金色棍尖区更宽。',cost:'第三棍收招更长，须提前判断敌招时机。',color:'#efc47a' },
     { id:'mirror',glyph:'返',name:'回锋印',tag:'迎焰而返',text:'闪避的无敌阶段接住飞弹，将其返向施法者，造成24伤害。',cost:'提前闪避会错过接弹时机，并留下冷却空当。',color:'#8ec4ee' },
     { id:'flame',glyph:'焰',name:'业火莲',tag:'下劈控场',text:'空中下＋攻击落地迸出火环，打断附近敌人蓄力并破盾。',cost:'下劈不能中途转向；要先选好落脚点。',color:'#f28b65' },
     { id:'mercy',glyph:'生',name:'护生灯',tag:'破阵续航',text:'破除阵眼恢复12生命；分身结束返还15定力。',cost:'需要主动破阵，不能原地无限回血。',color:'#a4cf91' }
@@ -25,7 +25,7 @@
   K.has = (s,id) => s.relics.includes(id);
   K.enemy = function(kind,x,y,id) {
     const boss=kind==='boss'; const h=boss?72:40;
-    return {id,kind,x,y:y===undefined?(boss?368:kind==='caster'?327:400):y,w:boss?48:26,h,hp:boss?270:kind==='shield'?60:38,maxHp:boss?270:kind==='shield'?60:38,face:-1,phase:'idle',style:'basic',recoil:0,recoilFace:1,timer:kind==='caster'?.45+(id%10)*.07:boss?.8:0,stun:0,flash:0,attacks:0,struck:false,roamRange:100,followup:false,origin:x,baseY:y===undefined?(kind==='caster'?327:400):y,interruptLock:0};
+    return {id,kind,x,y:y===undefined?(boss?368:kind==='caster'?327:400):y,w:boss?48:26,h,hp:boss?270:kind==='shield'?60:38,maxHp:boss?270:kind==='shield'?60:38,face:-1,phase:'idle',style:'basic',recoil:0,recoilFace:1,timer:kind==='caster'?.45+(id%10)*.07:boss?.8:0,stun:0,flash:0,attacks:0,struck:false,roamRange:100,followup:false,origin:x,baseY:y===undefined?(kind==='caster'?327:400):y,interruptLock:0,signatureCD:0};
   };
   const BLUEPRINTS = [
     {ground:[[0,820],[920,870],[1900,850],[2860,810],[3780,1380]],

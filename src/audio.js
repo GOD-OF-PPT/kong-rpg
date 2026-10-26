@@ -55,6 +55,9 @@
     noise(length=.08,gain=.09){if(!this.ctx||!this.enabled)return;const count=Math.floor(this.ctx.sampleRate*length),buffer=this.ctx.createBuffer(1,count,this.ctx.sampleRate),samples=buffer.getChannelData(0);let n=73;for(let i=0;i<count;i++){n=(n*16807)%2147483647;samples[i]=(n/1073741824-1)*Math.pow(1-i/count,2);}const source=this.ctx.createBufferSource(),level=this.ctx.createGain();source.buffer=buffer;level.gain.value=gain;source.connect(level);level.connect(this.bus);source.start();}
     sweep(from,to,len=.1,gain=.1){if(!this.ctx||!this.enabled)return;const t=this.ctx.currentTime,o=this.ctx.createOscillator(),g=this.ctx.createGain();o.type='triangle';o.frequency.setValueAtTime(from,t);o.frequency.exponentialRampToValueAtTime(to,t+len);g.gain.setValueAtTime(gain,t);g.gain.exponentialRampToValueAtTime(.001,t+len);o.connect(g);g.connect(this.bus);o.start(t);o.stop(t+len+.01);}
     event(e){
+      if(e.type==='staff-extend'){this.sweep(370,95,.13,.075);this.noise(.065,.04);}
+      if(e.type==='staff-vault'){this.sweep(210,620,.2,.07);this.sample('ground-slam',.35,1);}
+      if(e.type==='wheel-start'){this.noise(.12,.035);this.sweep(240,670,.18,.06);}
       if(e.type==='ultimate'){this.sweep(95,360,.2,.13);this.tone(146.83,.7,'triangle',.12);this.tone(293.66,.65,'sine',.1,.13);}
       if(e.type==='ultimate-hit'&&!this.sample('ultimate-hit',.85,3)){this.sweep(190,35,.3,.17);this.noise(.2,.16);}
       if(e.type==='ultimate-ready'){[440,660,880].forEach((f,i)=>this.tone(f,.17,'sine',.07,i*.08));}

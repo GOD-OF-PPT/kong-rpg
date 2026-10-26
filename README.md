@@ -1,4 +1,6 @@
-# 大圣 · 劫后行 v6.2.1
+# 大圣 · 劫后行 v7.0.0
+
+v7.0.0：如意与风火。悟空U蓄伸金箍棒，棍尖破盾，S松U改撑地起跃；哪吒U短时驭风火轮、W升S降，飞行中可投环，落地松键回充。盾兵会预警锁线破距冲，法师会锁定空中莲印；新招与分身/绫缚竞争定力。原四关与构筑保留，规则隔离为schema7，v6.2.1入口原样保留。[研究依据](docs/signature-v7/RESEARCH.md) · [规则与取舍](docs/signature-v7/DESIGN.md) · [验收](docs/signature-v7/VERIFICATION.md)。
 
 v6.2.1：全流程排查并修复破阵棍风无法伤害阵眼、历史记录混用角色名称、手记说明过期与书页正文压边。补齐友方飞弹阵眼命中存档去重，兼容旧schema6。两角色HTTP/断网file整局及定向交互记录见 [全流程验收](docs/flow-v6/VERIFICATION.md)。
 
@@ -16,11 +18,12 @@ v6.0.1：已选舍利、法门等级与符术余量集中显示在左上生命�
 
 ## 游玩
 
-直接双击 `release/index.html`。PC Edge / Chrome，无须安装、网络或浏览器设置。离线包解压后双击包内 `index.html`，请保留旁边的 `legacy-v1.html`、`legacy-v2.html` 、`legacy-v3.html` 、`legacy-v4.html` 和 `legacy-v5.html`，供旧旅程继续。
+直接双击 `release/index.html`。PC Edge / Chrome，无须安装、网络或浏览器设置。离线包解压后双击包内 `index.html`，请保留旁边的 `legacy-v1.html`、`legacy-v2.html` 、`legacy-v3.html` 、`legacy-v4.html`、`legacy-v5.html` 和 `legacy-v6.html`，供旧旅程继续。
 
 - A / D 或方向键行走；空格 / W 跳跃，长按高跳、松开短跳。
 - S + 空格下穿悬台；孙悟空 J / 左键棍法三连；哪吒 J 水平掷环 / 左键朝光标掷环；空中 S + J 下劈。
 - B 查看本局全部已选加成，再按 B / Esc 返回；滚轮、↑↓、Home / End 翻阅。
+- U 是角色变化：悟空按住蓄棍、松开伸刺，S松开撑跃；哪吒按住驭轮，W/空格升、S降，松开收轮。
 - K / Shift 闪避；L / 右键使用角色神通（悟空分身 / 哪吒混天绫）；F 借灯整顿或过山门；Esc 暂停。
 - 棍击、破阵与反击积攒战意，满100按 R 施展角色大招（悟空法天象地 / 哪吒莲火轮阵）；Q 使用携带的雷符或护符，次数用尽消失。
 - 舍利可用 A / D 或 ← / → 左右选取，Enter 确认，1 / 2 / 3 速选；菜单也可用鼠标、Tab / Enter。战斗中 Tab 先暂停再进入界面。
@@ -43,7 +46,7 @@ v6.0.1：已选舍利、法门等级与符术余量集中显示在左上生命�
 
 每3秒、暂停、整顿和结算时自动保存。导入/导出在暂停与手记中；导入的战斗先暂停，等待继续。音量和屏震设置保留。
 
-HTTP 与 file 入口的自动存储独立。自动存储被禁用时仍可游玩，请用导出 JSON 保存，通过导入实际恢复。v1 / v2 / v3 / v4 / v5 的进行中旅程保留在对应旧入口。v6使用独立存档键和schema6，角色、飞环、绫缚、试炼、归灯、掉落、战意、法门、符术次数与Boss招式均随旅程保存。
+HTTP 与 file 入口的自动存储独立。自动存储被禁用时仍可游玩，请用导出 JSON 保存，通过导入实际恢复。v1 / v2 / v3 / v4 / v5 / v6 的进行中旅程保留在对应旧入口。v7使用独立存档键和schema7，伸棍、撑跃与驭轮状态，角色、飞环、绫缚、试炼、归灯、掉落、战意、法门、符术次数与Boss招式均随旅程保存。
 
 ## 源码与运行
 
@@ -56,13 +59,13 @@ npm run dev
 
 预览 http://127.0.0.1:5188/release/index.html 。`build` 从 assets 中的 PNG 与已处理 WAV 重建内嵌素材脚本，再将脚本、CSS、图片与声音全部内联到发行 HTML。克隆源码后先 build；正式发行包可直接离线打开。
 
-完整离线包为 `artifacts/kong-rpg-offline-v6.2.1.zip`，含v1–v5原入口，约140MiB以上，超过GitHub单文件100MiB限制，因此作为本地交付物保留。Git仓库包含全部发行文件；需要重打包时执行 `python tools/package-release.py`。
+完整离线包为 `artifacts/kong-rpg-offline-v7.0.0.zip`，含v1–v6原入口，约160MiB以上，超过GitHub单文件100MiB限制，因此作为本地交付物保留。Git仓库包含全部发行文件；需要重打包时执行 `python tools/package-release.py`。
 
-`src/content.js` 内容与种子；`simulation.js` 固定120Hz模拟；`heroes.js` 角色、回环、绫缚与远距反制；`journey.js` 延长路线、强化怪、掉落、试炼与归灯；`progression.js` 成长、符术、大招与守关规则；`input.js` 键鼠与焦点；`storage.js` 版本存档；`renderer.js` 世界渲染；`visuals.js` 与 `progression-art.js` 图集和动作；`app.js` DOM界面；`audio.js` 本地声音。
+`src/content.js` 内容与种子；`simulation.js` 固定120Hz模拟；`heroes.js` 角色、回环、绫缚与远距反制；`signature.js` 伸棍、撑跃、驭轮和锁空/破距响应；`signature-art.js` 对应姿态、棍身和双轮特效；`journey.js` 延长路线、强化怪、掉落、试炼与归灯；`progression.js` 成长、符术、大招与守关规则；`input.js` 键鼠与焦点；`storage.js` 版本存档；`renderer.js` 世界渲染；`visuals.js` 与 `progression-art.js` 图集和动作；`app.js` DOM界面；`audio.js` 本地声音。
 
 ## 本轮记录
 
-当前地图美术与验收见 `docs/map-v6/`，音效见 `docs/audio-v6/`，角色与远程反制见 `docs/ranged-v6/`；v5记录在 `docs/journey-v5/`，v4记录在 `docs/progression-v4/`；原始 ImageGen 美术记录在 `docs/art-v1/`。素材源在 `assets/art-v1/`、`assets/art-v2/`、`assets/ui-v3/`、`assets/combat-v3/`、`assets/progression-v4/`、`assets/map-v6/`，均随包嵌入，运行时不调用生成接口。
+当前如意与风火见 `docs/signature-v7/`，素材及完整提示词见 `assets/signature-v7/`；地图美术与验收见 `docs/map-v6/`，音效见 `docs/audio-v6/`，角色与远程反制见 `docs/ranged-v6/`；v5记录在 `docs/journey-v5/`，v4记录在 `docs/progression-v4/`；原始 ImageGen 美术记录在 `docs/art-v1/`。素材源在 `assets/art-v1/`、`assets/art-v2/`、`assets/ui-v3/`、`assets/combat-v3/`、`assets/progression-v4/`、`assets/map-v6/`，均随包嵌入，运行时不调用生成接口。
 
 已完成功能和发行验证不等于真人体验认可；原剧逐帧研究、真人首次体验与试听仍未取得。具体证据与限制见当前验收记录。历史文档中的旧结论不作当前版本验收。
 
@@ -73,4 +76,4 @@ npm run dev
 
 敌人新增突进斩、盾冲、锁地咒，无天增加先锁定地面的落火。看路径、离开莲印，或用重棍/踩踏打断普通敌人蓄力。
 
-v6使用独立存档键与schema6，v1/v2/v3/v4/v5旧档保留在对应入口继续，不静默改变旧局规则。新版入口全部使用F；保留的历史入口按其原有按键运行。
+v7使用独立存档键与schema7，v1/v2/v3/v4/v5/v6旧档保留在对应入口继续，不静默改变旧局规则。新版入口全部使用F；保留的历史入口按其原有按键运行。

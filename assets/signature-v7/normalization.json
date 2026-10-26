@@ -1,0 +1,344 @@
+{
+  "tool": "built-in image_gen",
+  "process": "explicit crops; shared scale; nearest-neighbour; original alpha retained",
+  "sources": {
+    "wukong": {
+      "size": [
+        1254,
+        1254
+      ],
+      "sha256": "43be0d0c09c0cb2f40c5a966949a0990cc7fba369d24b43ce0bed046dc2bab57",
+      "transparent": 916810
+    },
+    "nezha": {
+      "size": [
+        1254,
+        1254
+      ],
+      "sha256": "cfe3235cf59ef716c242b86bbbb54a5e2af91c0419e5cfca11c9d3f4e862f24b",
+      "transparent": 1105961
+    },
+    "fx": {
+      "size": [
+        1254,
+        1254
+      ],
+      "sha256": "19640d10f34e023bbb050f8ede7ec4ed63b5169e33eb7c894ffff30079d32bae",
+      "transparent": 1228734
+    }
+  },
+  "frames": {
+    "wukong0": {
+      "source": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "alphaBounds": [
+        28,
+        64,
+        627,
+        591
+      ],
+      "scale": 0.15939278937381404,
+      "bodyBounds": [
+        14,
+        28,
+        95,
+        84
+      ]
+    },
+    "wukong1": {
+      "source": [
+        627,
+        0,
+        1254,
+        627
+      ],
+      "alphaBounds": [
+        0,
+        149,
+        619,
+        591
+      ],
+      "scale": 0.15939278937381404,
+      "bodyBounds": [
+        27,
+        42,
+        99,
+        70
+      ]
+    },
+    "wukong2": {
+      "source": [
+        0,
+        627,
+        627,
+        1254
+      ],
+      "alphaBounds": [
+        35,
+        64,
+        583,
+        570
+      ],
+      "scale": 0.15939278937381404,
+      "bodyBounds": [
+        18,
+        31,
+        87,
+        81
+      ]
+    },
+    "wukong3": {
+      "source": [
+        627,
+        627,
+        1254,
+        1254
+      ],
+      "alphaBounds": [
+        28,
+        8,
+        526,
+        516
+      ],
+      "scale": 0.15939278937381404,
+      "bodyBounds": [
+        31,
+        31,
+        79,
+        81
+      ]
+    },
+    "nezha0": {
+      "source": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "alphaBounds": [
+        120,
+        197,
+        574,
+        576
+      ],
+      "scale": 0.1759656652360515,
+      "bodyBounds": [
+        30,
+        45,
+        80,
+        67
+      ]
+    },
+    "nezha1": {
+      "source": [
+        627,
+        0,
+        1254,
+        627
+      ],
+      "alphaBounds": [
+        80,
+        113,
+        536,
+        579
+      ],
+      "scale": 0.1759656652360515,
+      "bodyBounds": [
+        24,
+        30,
+        80,
+        82
+      ]
+    },
+    "nezha2": {
+      "source": [
+        0,
+        627,
+        627,
+        1254
+      ],
+      "alphaBounds": [
+        99,
+        74,
+        585,
+        488
+      ],
+      "scale": 0.1759656652360515,
+      "bodyBounds": [
+        30,
+        39,
+        86,
+        73
+      ]
+    },
+    "nezha3": {
+      "source": [
+        627,
+        627,
+        1254,
+        1254
+      ],
+      "alphaBounds": [
+        128,
+        84,
+        547,
+        517
+      ],
+      "scale": 0.1759656652360515,
+      "bodyBounds": [
+        17,
+        36,
+        74,
+        76
+      ]
+    },
+    "shaft": {
+      "source": [
+        0,
+        0,
+        313,
+        627
+      ],
+      "alphaBounds": [
+        23,
+        350,
+        310,
+        384
+      ],
+      "outputSize": [
+        32,
+        7
+      ]
+    },
+    "cap": {
+      "source": [
+        313,
+        0,
+        627,
+        627
+      ],
+      "alphaBounds": [
+        73,
+        326,
+        282,
+        401
+      ],
+      "outputSize": [
+        22,
+        8
+      ]
+    },
+    "tip": {
+      "source": [
+        627,
+        0,
+        940,
+        627
+      ],
+      "alphaBounds": [
+        34,
+        235,
+        313,
+        477
+      ],
+      "outputSize": [
+        38,
+        38
+      ]
+    },
+    "wind": {
+      "source": [
+        940,
+        0,
+        1254,
+        627
+      ],
+      "alphaBounds": [
+        0,
+        267,
+        304,
+        438
+      ],
+      "outputSize": [
+        38,
+        16
+      ]
+    },
+    "air-warning": {
+      "source": [
+        0,
+        627,
+        313,
+        1254
+      ],
+      "alphaBounds": [
+        10,
+        120,
+        313,
+        441
+      ],
+      "outputSize": [
+        64,
+        48
+      ]
+    },
+    "air-active": {
+      "source": [
+        313,
+        627,
+        627,
+        1254
+      ],
+      "alphaBounds": [
+        0,
+        111,
+        314,
+        445
+      ],
+      "outputSize": [
+        64,
+        48
+      ]
+    },
+    "brace": {
+      "source": [
+        627,
+        627,
+        940,
+        1254
+      ],
+      "alphaBounds": [
+        0,
+        137,
+        289,
+        425
+      ],
+      "outputSize": [
+        22,
+        24
+      ]
+    },
+    "charge": {
+      "source": [
+        940,
+        627,
+        1254,
+        1254
+      ],
+      "alphaBounds": [
+        10,
+        131,
+        299,
+        432
+      ],
+      "outputSize": [
+        40,
+        24
+      ]
+    }
+  }
+}

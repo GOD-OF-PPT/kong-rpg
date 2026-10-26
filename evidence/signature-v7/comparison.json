@@ -1,0 +1,393 @@
+{
+  "seed": "RUYI-COMPARE",
+  "durationLimit": 18,
+  "method": "isolated flat scene with same shield/caster and resources per hero; production simulation, three scripted policies; no claims about human play",
+  "results": [
+    {
+      "hero": "wukong",
+      "relic": "staff",
+      "policy": "basic",
+      "seconds": 18,
+      "hp": 28,
+      "damage": 72,
+      "enemyHP": [
+        {
+          "kind": "shield",
+          "hp": 0
+        },
+        {
+          "kind": "caster",
+          "hp": 38
+        }
+      ],
+      "clear": false,
+      "focusSpent": 0,
+      "focusLeft": 100,
+      "tipHits": 0,
+      "flights": 0,
+      "waiting": 0,
+      "modeSwitches": 1,
+      "hitSources": [
+        "莲焰飞弹",
+        "莲焰飞弹",
+        "莲焰飞弹",
+        "莲焰飞弹",
+        "莲焰飞弹",
+        "莲焰飞弹"
+      ]
+    },
+    {
+      "hero": "wukong",
+      "relic": "staff",
+      "policy": "hold",
+      "seconds": 18,
+      "hp": 18,
+      "damage": 82,
+      "enemyHP": [
+        {
+          "kind": "shield",
+          "hp": 0
+        },
+        {
+          "kind": "caster",
+          "hp": 38
+        }
+      ],
+      "clear": false,
+      "focusSpent": 158,
+      "focusLeft": 0,
+      "tipHits": 0,
+      "flights": 0,
+      "waiting": 0,
+      "modeSwitches": 17,
+      "hitSources": [
+        "重盾兵·破距冲",
+        "莲焰飞弹",
+        "重盾兵·盾撞",
+        "重盾兵·盾撞",
+        "莲灯使·交叉封位",
+        "莲焰飞弹"
+      ]
+    },
+    {
+      "hero": "wukong",
+      "relic": "staff",
+      "policy": "observe",
+      "seconds": 12.12,
+      "hp": 88,
+      "damage": 12,
+      "enemyHP": [
+        {
+          "kind": "shield",
+          "hp": 0
+        },
+        {
+          "kind": "caster",
+          "hp": 0
+        }
+      ],
+      "clear": true,
+      "focusSpent": 147.4,
+      "focusLeft": 23.6,
+      "tipHits": 1,
+      "flights": 0,
+      "waiting": 1.83,
+      "modeSwitches": 30,
+      "hitSources": [
+        "莲焰飞弹"
+      ]
+    },
+    {
+      "hero": "wukong",
+      "relic": "cloud",
+      "policy": "basic",
+      "seconds": 18,
+      "hp": 8,
+      "damage": 92,
+      "enemyHP": [
+        {
+          "kind": "shield",
+          "hp": 0
+        },
+        {
+          "kind": "caster",
+          "hp": 38
+        }
+      ],
+      "clear": false,
+      "focusSpent": 0,
+      "focusLeft": 100,
+      "tipHits": 0,
+      "flights": 0,
+      "waiting": 0,
+      "modeSwitches": 1,
+      "hitSources": [
+        "重盾兵·盾撞",
+        "重盾兵·盾撞",
+        "莲焰飞弹",
+        "莲焰飞弹",
+        "莲焰飞弹",
+        "莲焰飞弹",
+        "莲焰飞弹"
+      ]
+    },
+    {
+      "hero": "wukong",
+      "relic": "cloud",
+      "policy": "hold",
+      "seconds": 18,
+      "hp": 18,
+      "damage": 82,
+      "enemyHP": [
+        {
+          "kind": "shield",
+          "hp": 0
+        },
+        {
+          "kind": "caster",
+          "hp": 38
+        }
+      ],
+      "clear": false,
+      "focusSpent": 188.6,
+      "focusLeft": 8.4,
+      "tipHits": 0,
+      "flights": 0,
+      "waiting": 0,
+      "modeSwitches": 26,
+      "hitSources": [
+        "重盾兵·破距冲",
+        "莲焰飞弹",
+        "重盾兵·盾撞",
+        "重盾兵·盾撞",
+        "莲灯使·交叉封位",
+        "莲焰飞弹"
+      ]
+    },
+    {
+      "hero": "wukong",
+      "relic": "cloud",
+      "policy": "observe",
+      "seconds": 11.17,
+      "hp": 60,
+      "damage": 40,
+      "enemyHP": [
+        {
+          "kind": "shield",
+          "hp": 0
+        },
+        {
+          "kind": "caster",
+          "hp": 0
+        }
+      ],
+      "clear": true,
+      "focusSpent": 130.8,
+      "focusLeft": 61.2,
+      "tipHits": 1,
+      "flights": 0,
+      "waiting": 1.39,
+      "modeSwitches": 26,
+      "hitSources": [
+        "莲焰飞弹",
+        "重盾兵·盾撞",
+        "莲焰飞弹"
+      ]
+    },
+    {
+      "hero": "nezha",
+      "relic": "staff",
+      "policy": "basic",
+      "seconds": 18,
+      "hp": 28,
+      "damage": 72,
+      "enemyHP": [
+        {
+          "kind": "shield",
+          "hp": 60
+        },
+        {
+          "kind": "caster",
+          "hp": 38
+        }
+      ],
+      "clear": false,
+      "focusSpent": 0,
+      "focusLeft": 100,
+      "tipHits": 0,
+      "flights": 0,
+      "waiting": 0,
+      "modeSwitches": 1,
+      "hitSources": [
+        "莲焰飞弹",
+        "莲灯使·交叉封位",
+        "莲焰飞弹",
+        "莲灯使·交叉封位",
+        "莲焰飞弹",
+        "莲灯使·交叉封位"
+      ]
+    },
+    {
+      "hero": "nezha",
+      "relic": "staff",
+      "policy": "hold",
+      "seconds": 18,
+      "hp": 16,
+      "damage": 84,
+      "enemyHP": [
+        {
+          "kind": "shield",
+          "hp": 60
+        },
+        {
+          "kind": "caster",
+          "hp": 38
+        }
+      ],
+      "clear": false,
+      "focusSpent": 33,
+      "focusLeft": 100,
+      "tipHits": 0,
+      "flights": 1,
+      "waiting": 0,
+      "modeSwitches": 3,
+      "hitSources": [
+        "莲灯使·锁空莲印",
+        "莲焰飞弹",
+        "莲灯使·交叉封位",
+        "莲焰飞弹",
+        "莲灯使·交叉封位",
+        "莲焰飞弹",
+        "莲灯使·交叉封位"
+      ]
+    },
+    {
+      "hero": "nezha",
+      "relic": "staff",
+      "policy": "observe",
+      "seconds": 14.16,
+      "hp": 64,
+      "damage": 36,
+      "enemyHP": [
+        {
+          "kind": "shield",
+          "hp": 0
+        },
+        {
+          "kind": "caster",
+          "hp": 0
+        }
+      ],
+      "clear": true,
+      "focusSpent": 163.2,
+      "focusLeft": 31.8,
+      "tipHits": 0,
+      "flights": 12,
+      "waiting": 0,
+      "modeSwitches": 25,
+      "hitSources": [
+        "莲焰飞弹",
+        "莲灯使·交叉封位",
+        "莲焰飞弹"
+      ]
+    },
+    {
+      "hero": "nezha",
+      "relic": "cloud",
+      "policy": "basic",
+      "seconds": 18,
+      "hp": 28,
+      "damage": 72,
+      "enemyHP": [
+        {
+          "kind": "shield",
+          "hp": 60
+        },
+        {
+          "kind": "caster",
+          "hp": 38
+        }
+      ],
+      "clear": false,
+      "focusSpent": 0,
+      "focusLeft": 100,
+      "tipHits": 0,
+      "flights": 0,
+      "waiting": 0,
+      "modeSwitches": 1,
+      "hitSources": [
+        "莲焰飞弹",
+        "莲灯使·交叉封位",
+        "莲焰飞弹",
+        "莲灯使·交叉封位",
+        "莲焰飞弹",
+        "莲灯使·交叉封位"
+      ]
+    },
+    {
+      "hero": "nezha",
+      "relic": "cloud",
+      "policy": "hold",
+      "seconds": 18,
+      "hp": 16,
+      "damage": 84,
+      "enemyHP": [
+        {
+          "kind": "shield",
+          "hp": 60
+        },
+        {
+          "kind": "caster",
+          "hp": 38
+        }
+      ],
+      "clear": false,
+      "focusSpent": 38,
+      "focusLeft": 100,
+      "tipHits": 0,
+      "flights": 1,
+      "waiting": 0,
+      "modeSwitches": 3,
+      "hitSources": [
+        "莲灯使·锁空莲印",
+        "莲焰飞弹",
+        "莲灯使·交叉封位",
+        "莲焰飞弹",
+        "莲灯使·交叉封位",
+        "莲焰飞弹",
+        "莲灯使·交叉封位"
+      ]
+    },
+    {
+      "hero": "nezha",
+      "relic": "cloud",
+      "policy": "observe",
+      "seconds": 15.8,
+      "hp": 52,
+      "damage": 48,
+      "enemyHP": [
+        {
+          "kind": "shield",
+          "hp": 0
+        },
+        {
+          "kind": "caster",
+          "hp": 0
+        }
+      ],
+      "clear": true,
+      "focusSpent": 180.3,
+      "focusLeft": 23.7,
+      "tipHits": 0,
+      "flights": 14,
+      "waiting": 0,
+      "modeSwitches": 29,
+      "hitSources": [
+        "莲焰飞弹",
+        "莲灯使·交叉封位",
+        "莲焰飞弹",
+        "莲灯使·交叉封位"
+      ]
+    }
+  ]
+}

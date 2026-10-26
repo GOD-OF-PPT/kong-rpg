@@ -86,7 +86,7 @@
     const p=s.player,t=s.room.trial,c=s.room.camp;
     if(t&&Math.abs(p.x-t.x)<95&&Math.abs(p.y-t.y)<75){
       if(t.state==='ready'){t.state='active';for(const e of s.room.enemies)if(t.guards.includes(e.id)){e.hp=e.maxHp;e.timer=.9;}K.event(s,'ability-note',{text:'试炼已起：可退回下路，再来击退守卒领取奖励。'});}
-      else if(t.state==='cleared'){s.rewardKind='trial';s.reward=K.options(s);s.mode='reward';K.event(s,'reward',{kind:'trial'});}
+      else if(t.state==='cleared'){s.rewardKind='trial';s.reward=K.options(s);K.cancelSignature?.(s);s.mode='reward';K.event(s,'reward',{kind:'trial'});}
       else K.event(s,'ability-note',{text:t.state==='active'?'守卒尚在，可离开后返回。':'此处试炼的奖励已取。'});
       return true;
     }
