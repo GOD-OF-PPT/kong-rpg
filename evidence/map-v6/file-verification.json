@@ -1,0 +1,225 @@
+{
+  "version": "6.2.0",
+  "kind": "file",
+  "base": "59b91e0b1fa2754067b800dbba83f4111514703b",
+  "entrySha256": "5063610b83274891ce38e2f97a820ab6c3e21773739798e46a25a05900a76328",
+  "environment": {
+    "os": "10.0.26200",
+    "cpu": "Intel(R) Core(TM) i5-14600K",
+    "node": "v22.12.0",
+    "viewport": "1440x1000 / 1366x768"
+  },
+  "checks": [
+    {
+      "name": "twenty embedded image assets and thirty map frames load",
+      "pass": true,
+      "keys": [
+        "mountain",
+        "ferry",
+        "sanctuary",
+        "wukong",
+        "enemies",
+        "stone",
+        "run",
+        "props",
+        "uiScroll",
+        "uiIcons",
+        "uiFolio",
+        "combo",
+        "impacts",
+        "nodes",
+        "nodesDone",
+        "guardians",
+        "nezha",
+        "mapProps",
+        "mapTerrain",
+        "mapDressing"
+      ],
+      "errors": [],
+      "frames": [
+        "trial-ready",
+        "trial-active",
+        "trial-cleared",
+        "trial-claimed",
+        "camp-lit",
+        "camp-spent",
+        "pickup-heal",
+        "pickup-focus",
+        "pickup-rage",
+        "hazard-quiet",
+        "hazard-warning",
+        "hazard-active",
+        "ledge-mountain",
+        "ledge-ferry",
+        "ledge-temple",
+        "fragile-ready",
+        "fragile-cracking",
+        "raft",
+        "bridge-off",
+        "bridge-on",
+        "wall-mountain",
+        "wall-ferry",
+        "wall-temple",
+        "arena-pillar",
+        "dressing-mountain-a",
+        "dressing-ferry-a",
+        "dressing-temple-a",
+        "dressing-mountain-b",
+        "dressing-ferry-b",
+        "dressing-temple-b"
+      ]
+    },
+    {
+      "name": "new map art preserves start and embedded audio",
+      "pass": true
+    },
+    {
+      "name": "F uses the drawn return lamp once",
+      "pass": true
+    },
+    {
+      "name": "spent lantern cannot pay twice",
+      "pass": true
+    },
+    {
+      "name": "F activates the drawn trial shrine",
+      "pass": true
+    },
+    {
+      "name": "cleared shrine reaches reward and claimed art",
+      "pass": true
+    },
+    {
+      "name": "lamp mechanism activates exactly the existing three bridges",
+      "pass": true
+    },
+    {
+      "name": "new cracked slab collapses at the old timing",
+      "pass": true
+    },
+    {
+      "name": "fragile slab restores without a new save rule",
+      "pass": true
+    },
+    {
+      "name": "wooden raft carries grounded player on the same top edge",
+      "pass": true
+    },
+    {
+      "name": "quiet lotus art agrees with damage phase",
+      "pass": true,
+      "hp": 70,
+      "lastDamage": ""
+    },
+    {
+      "name": "warning lotus art agrees with damage phase",
+      "pass": true,
+      "hp": 70,
+      "lastDamage": ""
+    },
+    {
+      "name": "active lotus art agrees with damage phase",
+      "pass": true,
+      "hp": 56,
+      "lastDamage": "灵山·地焰"
+    },
+    {
+      "name": "heal remains visible when resource is full",
+      "pass": true
+    },
+    {
+      "name": "heal sprite still collects automatically",
+      "pass": true
+    },
+    {
+      "name": "focus remains visible when resource is full",
+      "pass": true
+    },
+    {
+      "name": "focus sprite still collects automatically",
+      "pass": true
+    },
+    {
+      "name": "rage remains visible when resource is full",
+      "pass": true
+    },
+    {
+      "name": "rage sprite still collects automatically",
+      "pass": true
+    },
+    {
+      "name": "lotus pixels stay inside the actual hazard box",
+      "pass": true,
+      "bounds": [
+        {
+          "phase": "quiet",
+          "outside": 0,
+          "count": 297
+        },
+        {
+          "phase": "warning",
+          "outside": 0,
+          "count": 437
+        },
+        {
+          "phase": "active",
+          "outside": 0,
+          "count": 563
+        }
+      ]
+    },
+    {
+      "name": "PC HUD and map fit 1366x768",
+      "pass": true,
+      "width": 1366,
+      "viewport": 1366,
+      "height": 766,
+      "viewHeight": 768
+    },
+    {
+      "name": "DOM pause still gates combat",
+      "pass": true
+    },
+    {
+      "name": "map presentation keeps schema 6 import/export",
+      "pass": true
+    },
+    {
+      "name": "no runtime errors",
+      "pass": true
+    },
+    {
+      "name": "new offline file session has zero HTTP requests",
+      "pass": true
+    }
+  ],
+  "captures": [
+    "file-camp-lit.png",
+    "file-camp-spent.png",
+    "file-trial-ready.png",
+    "file-trial-active.png",
+    "file-trial-cleared.png",
+    "file-trial-claimed.png",
+    "file-fragile-intact.png",
+    "file-fragile-cracking.png",
+    "file-fragile-broken.png",
+    "file-raft.png",
+    "file-hazard-quiet.png",
+    "file-hazard-warning.png",
+    "file-hazard-active.png",
+    "file-pickup-heal-full.png",
+    "file-pickup-focus-full.png",
+    "file-pickup-rage-full.png",
+    "file-mountain.png",
+    "file-ferry.png",
+    "file-temple.png",
+    "file-arena.png",
+    "file-bridge-off.png",
+    "file-bridge-on.png",
+    "file-desktop-1366.png"
+  ],
+  "errors": [],
+  "network": [],
+  "browser": "156.0.4314.42",
+  "video": "evidence/map-v6/video/page@f4a5e801f8265ee802c1fafc0cfba26d.webm"
+}

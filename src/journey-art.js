@@ -4,18 +4,19 @@
   K.Renderer=class extends Base{
     combatCues(){
       super.combatCues();const s=this.scene;if(!s)return;const c=this.c,t=s.room.trial,cm=s.room.camp;
-      if(t){
+      if(t&&!this.image('mapProps')){
         const done=t.state==='claimed',col=done?'#6b7872':t.state==='active'?'#d895bf':'#e3c47f';
         rect(c,t.x-25,276,50,4,'#796d60');rect(c,t.x-15,248,30,28,'#33343f');rect(c,t.x-11,251,22,22,'#685064');
         for(let i=0;i<3;i++){rect(c,t.x-7+i*6,254,3,13,col);rect(c,t.x-8+i*6,264,5,2,col);}
         if(t.state==='cleared')for(let i=0;i<6;i++)rect(c,t.x-22+i*8,238-Math.sin(this.clock*3+i)*4,2,3,'#ffe5a1');
       }
-      if(cm){
+      if(cm&&!this.image('mapProps')){
         rect(c,cm.x-18,433,36,7,'#706b5e');rect(c,cm.x-3,393,6,40,'#7b6c50');rect(c,cm.x-13,387,26,3,'#cab183');rect(c,cm.x-9,390,18,23,cm.used?'#514b46':'#a27c49');
         rect(c,cm.x-5,394,10,14,cm.used?'#716d5d':'#f0d49c');rect(c,cm.x-16,415,32,2,cm.used?'#655d53':'#baa582');
         if(!cm.used)rect(c,cm.x-1,398+Math.sin(this.clock*3)*2,3,6,'#fff0bb');
       }
-      if(s.stage===3){const a=s.room.arena;for(let y=290;y<440;y+=15)rect(c,a.enter-3,y,3,7,s.room.seals.some(q=>q.hp>0)?'#b879b2':'#b7c6a1');}
+      if(s.stage===3&&!this.image('mapTerrain')){const a=s.room.arena;for(let y=290;y<440;y+=15)rect(c,a.enter-3,y,3,7,s.room.seals.some(q=>q.hp>0)?'#b879b2':'#b7c6a1');}
+      this.drawMapProps?.();
       for(const e of s.room.enemies)if(e.hp>0&&!e.dormant&&e.trait){
         const col={twin:'#edb58c',pulse:'#e4cb89',volley:'#bcace4'}[e.trait],x=e.x+e.w/2,y=e.y-45;
         // Shape signatures remain distinct even without colour.
