@@ -13,6 +13,7 @@ evidence/**/*trace*.zip
 evidence/**/*progress.json
 src/generated-art.js
 artifacts/portable-check/
+artifacts/portable-check-v4/
 # UI iterations remain local; representative comparison captures are force-added.
 evidence/dialog-ui/*.png
 # Keep all v3 iterations locally; selected review frames are committed explicitly.
@@ -20,3 +21,6 @@ evidence/combat-v3/*.png
 evidence/combat-v3/*.webm
 # Keep scroll-layout iterations local; selected before/after captures are committed.
 evidence/scroll-layout/*.png
+# Working visual iterations stay local; selected v4 review captures are committed.
+evidence/progression-v4/*.png
+evidence/progression-v4/*.webm

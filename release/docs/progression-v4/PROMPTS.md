@@ -1,0 +1,13 @@
+# v4 原创守关者素材
+
+使用内置 image_gen，透明背景。参考为既有敌人图集，只继承材质与轮廓层级；三位新守关者为游戏原创。成品：`assets/progression-v4/guardians.png`，原始生成文件保留在本机生成目录。
+
+首次图集出现武器侵入相邻格的问题，第二次修正留白和排布。修正图第三行的两把兵器仍相连，已从运行帧中排除；正式画面采用前两行的待势与蓄力姿势、统一比例和实测脚底锚点，配合位移、棍浪、落印及受击表现。不宣称九帧全部通过，也不逐帧独立生成。
+
+## 首次提示词
+
+Use case: stylized-concept. Asset type: production transparent sprite atlas for a Chinese dark-fantasy pixel side-view platform-action game, matching the accompanying enemy atlas's silhouette weight, antique gold trim, restrained plum shadows and readable game-scale shapes. Make ONE atlas of THREE ORIGINAL stage guardians, exactly 3 columns x 3 rows, equal cell sizes, square canvas. Column 1: massive rust-gold stone mountain ape warlord, horned bronze mask, huge two-handed stone polehammer, ochre/black palette. Column 2: tall spectral river ferryman guardian, teal tattered robes, crescent boat-hook polearm, two hanging lanterns, no full boat, jade/blue-grey palette. Column 3: slender pale ceremonial bell priest, ivory hood and purple robe, large broken bronze hand-bell and floating rectangular prayer seals, ivory/plum palette. Rows: row 1 grounded ready idle facing LEFT, row 2 clearly telegraphed windup facing LEFT, row 3 committed attack follow-through facing LEFT. Each column is the SAME character across its three rows, same proportions/outfit/colors; bottoms/foot anchors aligned within every cell, consistent figure scale across rows, ample transparent gutters, entire weapons visible, no cell overlap. Crisp pixel-art clusters that read at 80-100px figure height, dark 1px outlines, limited colored highlight ramps, no blur, no antialias glow. Only sprites; genuine transparent background; no scenery, no ground shadows, no writing, no labels, no UI, no frames. The reference is style reference only, do not copy its four characters.
+
+## 排布修正提示词
+
+Edit this game sprite atlas, preserving the three character designs, all nine poses, colors and crisp pixel shading exactly. Fix ONLY the production layout: precisely 3 columns by 3 rows of equal-sized cells on a square transparent canvas. Scale EVERY sprite down with ONE common scale so that every complete weapon, trailing cloth and particle stays inside the inner 78% of its own cell; leave wide empty transparent gutters between all cells. Each figure must be separately cuttable without ANY part of its neighboring sprite entering the cell. Keep figures' foot anchors at 85% of each cell height and body centers at 50% of cell width across all three poses. Column 1 gold mountain hammer ape, column 2 teal lantern ferryman, column 3 ivory/plum bell priest; rows idle, windup, attack. No design changes, no new details, no shadows or scenery, no labels or lines. Actual transparent alpha background.

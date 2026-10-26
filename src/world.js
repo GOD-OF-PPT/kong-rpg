@@ -22,6 +22,7 @@
     }
     if(stage===2)room.hazards.forEach((h,i)=>{h.period=3.8;h.offset=i*.72;});
     room.signs.push({x:x-180,text:stage===1?'灯枢可用 F 注入20定力，接回断桥。':stage===0?'旧寨还有被困行者。F 破笼会惊动守卒；也可继续赶路。':'F 叩钟可救出愿力，也会惊动守钟众。'});
+    if(K.attachGuardian)K.attachGuardian(room,stage);
     return room;
   };
   K.hazardPhase=function(s,h){if(!h.period)return 'active';const t=(s.roomTime+h.offset)%h.period;return t<1.65?'quiet':t<2.35?'warning':'active';};
@@ -52,7 +53,7 @@
   K.updateWorld=function(s){
     const n=s.room.node;if(s.mode!=='playing'||!n||n.state!=='active')return;
     if(n.guards.every(id=>s.room.enemies.find(e=>e.id===id)?.hp===0)){
-      n.state='done';s.world[n.id]=true;s.player.hp=Math.min(100,s.player.hp+18);s.player.focus=Math.min(100,s.player.focus+20);K.applyWorld(s);K.rememberStory(s,n.id,'done');K.effect(s,'world-rise',n.x,410);K.event(s,'world-clear',{id:n.id});
+      n.state='done';s.world[n.id]=true;s.player.hp=Math.min(K.maxHP(s),s.player.hp+18);s.player.focus=Math.min(100,s.player.focus+20);K.applyWorld(s);K.rememberStory(s,n.id,'done');K.effect(s,'world-rise',n.x,410);K.event(s,'world-clear',{id:n.id});
     }
   };
   K.surfaceAt=function(s,x,y){const q=s.room.platforms.filter(p=>K.platformEnabled(p)&&p.x<=x&&p.x+p.w>=x&&p.y>=y).sort((a,b)=>a.y-b.y)[0];return q?.y||440;};

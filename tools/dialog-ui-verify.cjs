@@ -1,6 +1,6 @@
 const fs=require('fs'),path=require('path'),vm=require('vm'),crypto=require('crypto'),assert=require('assert/strict'),{chromium}=require('playwright');
 const root=path.resolve(__dirname,'..'),out=path.join(root,process.env.EVIDENCE_DIR||'evidence/dialog-ui'),kind=process.argv[2]||'file',ctx=vm.createContext({console});
-for(const file of ['content','world','simulation','storage'])vm.runInContext(fs.readFileSync(path.join(root,'src',file+'.js'),'utf8'),ctx);const K=ctx.Kong;
+for(const file of ['content','world','progression','simulation','storage'])vm.runInContext(fs.readFileSync(path.join(root,'src',file+'.js'),'utf8'),ctx);const K=ctx.Kong;
 const report={version:K.VERSION,sha256:crypto.createHash('sha256').update(fs.readFileSync(path.join(root,'release/index.html'))).digest('hex'),kind,checks:[],layouts:[],errors:[],requests:[]};
 function check(name,pass,data={}){report.checks.push({name,pass:!!pass,...data});assert.ok(pass,name);}
 function scenario(seed='UI-SHRINE'){const s=K.newRun(seed,'cloud');s.runId=seed;return s;}
@@ -14,6 +14,7 @@ const b=await chromium.launch({channel:'msedge',headless:true});try{
     return{mode:document.getElementById('stage').dataset.mode,stage,panel:r,scroll:panel.scrollHeight-panel.clientHeight,focus:focus.id||focus.dataset.relic||focus.tagName,role:panel.getAttribute('role'),modal:panel.getAttribute('aria-modal'),cards};});
     report.layouts.push({name,viewport:await p.viewportSize(),...layout});const prefix=name.split('-')[0],expected={pause:'paused',death:'dead',victory:'won'}[prefix]||prefix;check(name+' reaches intended screen',layout.mode===expected);check(name+' dialog remains inside game view',layout.panel.x>=layout.stage.x&&layout.panel.y>=layout.stage.y-1&&layout.panel.x+layout.panel.w<=layout.stage.x+layout.stage.w+1&&layout.panel.y+layout.panel.h<=layout.stage.y+layout.stage.h+1);
     check(name+' uses semantic modal',layout.role==='dialog'&&layout.modal==='true');
+    if(layout.cards.length&&(await p.viewportSize()).height>=720)check(name+' complete choice and key hints fit target PC view',layout.scroll<=1);
     // The painted inner frame and bottom seal are inside the button bounds.
     // Outer-element overflow alone misses text printed across that ornament.
     for(const c of layout.cards){check(name+' '+c.id+' full text stays inside quiet paper',!c.overflow&&c.parts.every(t=>!t.clipped&&t.box.x>=c.box.x+c.box.w*.18-1&&t.box.x+t.box.w<=c.box.x+c.box.w*.82+1&&t.box.y>=c.box.y+c.box.h*.12&&t.box.y+t.box.h<=c.box.y+c.box.h*.85+1));for(let i=1;i<c.parts.length;i++)check(name+' '+c.id+' text does not overlap '+i,c.parts[i].box.y>=c.parts[i-1].box.y+c.parts[i-1].box.h-1);const cost=c.parts.find(t=>t.kind==='cost').box,verb=c.parts.find(t=>t.kind==='choice-verb').box;check(name+' '+c.id+' price and choice have reading gap',verb.y-cost.y-cost.h>=7);}
@@ -46,8 +47,8 @@ const b=await chromium.launch({channel:'msedge',headless:true});try{
   // Smaller effective viewports also exercise desktop zoom / short browser windows.
   for(const size of [{width:1320,height:760},{width:1280,height:720},{width:1024,height:600}]){
     await p.setViewportSize(size);
-    for(const ids of [['cloud','echo','staff'],['mirror','flame','mercy'],['rest','staff','echo']]){s=scenario('PAPER-'+size.width+'-'+ids[0]);s.relics=[K.RELICS.find(r=>!ids.includes(r.id)).id];s.mode='reward';s.rewardKind='mid';s.reward=ids;await load(s);await capture('reward-paper-'+size.width+'-'+ids[0]);}
-    s.relics=['mirror','flame','mercy'];s.pendingRelic='staff';await load(s);await capture('replace-paper-'+size.width);
+    for(const ids of [['cloud','echo','staff'],['mirror','flame','mercy'],['rest','staff','echo'],['vitality','staff-wave','dash-strike'],['clone-burst','ultimate-echo','thunder'],['ward','vitality','rest']]){s=scenario('PAPER-'+size.width+'-'+ids[0]);s.relics=[K.RELICS.find(r=>!ids.includes(r.id)).id];s.mode='reward';s.rewardKind='mid';s.reward=ids;await load(s);await capture('reward-paper-'+size.width+'-'+ids[0]);}
+    s.relics=['mirror','flame','mercy'];s.reward=['staff','thunder','rest'];s.pendingRelic='staff';await load(s);await capture('replace-paper-'+size.width);
   }
   const contrast=await p.evaluate(()=>{const image=Kong.ImageArt.images.uiScroll,c=document.createElement('canvas');c.width=image.width;c.height=image.height;const x=c.getContext('2d');x.drawImage(image,0,0);const d=x.getImageData(310,400,380,750).data,lum=rgb=>{const a=rgb.map(v=>{v/=255;return v<=.04045?v/12.92:((v+.055)/1.055)**2.4;});return a[0]*.2126+a[1]*.7152+a[2]*.0722;},values=[];for(let i=0;i<d.length;i+=40)values.push(lum([d[i],d[i+1],d[i+2]]));values.sort((a,b)=>a-b);const paper=values[Math.floor(values.length*.05)],ink=lum([84,53,31]);return{paperFifthPercentileLuminance:paper,costTextOnPaper:(paper+.05)/(ink+.05),method:'darker fifth-percentile luminance in quiet paper region against cost ink #54351f; texture sample, not full accessibility certification'};});report.contrast=contrast;check('small cost text contrast on paper exceeds 4.5 to 1',contrast.costTextOnPaper>=4.5);
   check('no page errors',report.errors.length===0);if(kind==='file')check('offline dialogs make zero HTTP requests',report.requests.length===0);

@@ -1,17 +1,18 @@
 <!doctype html>
 <html lang="zh-CN">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>大圣 · 劫后行 | Black Lotus</title><meta name="description" content="一棍破局，一念重来。可离线运行的像素横版动作肉鸽。"><link rel="stylesheet" href="src/style.css"><link rel="stylesheet" href="src/v2.css"><link rel="stylesheet" href="src/dialogs.css"><link rel="stylesheet" href="src/combat.css"></head>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>大圣 · 劫后行 | Black Lotus</title><meta name="description" content="一棍破局，一念重来。可离线运行的像素横版动作肉鸽。"><link rel="stylesheet" href="src/style.css"><link rel="stylesheet" href="src/v2.css"><link rel="stylesheet" href="src/dialogs.css"><link rel="stylesheet" href="src/combat.css"><link rel="stylesheet" href="src/progression.css"></head>
 <body>
   <main id="app">
     <header class="masthead"><a href="#" id="brand" aria-label="大圣劫后行主菜单"><span class="brand-seal">悟</span><span>大圣 <i>／</i> 劫后行</span></a><span class="edition">A PIXEL PILGRIMAGE <span class="tiny-star">✦</span> 独立离线版</span><button id="guide-top" class="text-button">行者手记 <span>↗</span></button></header>
     <section id="stage" aria-label="横版游戏区域">
-      <canvas id="world" width="960" height="540" tabindex="0" aria-label="游戏世界。A D移动，空格跳跃，J棍击，K闪避，L分身，F交互，Escape暂停。"></canvas>
+      <canvas id="world" width="960" height="540" tabindex="0" aria-label="游戏世界。A D移动，空格跳跃，J棍击，K闪避，L分身，R法天象地，Q符术，F交互，Escape暂停。"></canvas>
       <div id="vignette" aria-hidden="true"></div>
       <div id="hud" hidden>
-        <div class="vitals"><div class="vital-head"><strong>孙悟空</strong><span id="hp-number">100 / 100</span></div><div class="meter hp"><i id="hp-fill"></i></div><div class="focus-line"><span>定力</span><div class="meter focus"><i id="focus-fill"></i></div><b id="focus-number">65</b></div></div>
+        <div class="vitals"><div class="vital-head"><strong>孙悟空</strong><span id="hp-number">100 / 100</span></div><div class="meter hp"><i id="hp-fill"></i></div><div class="focus-line"><span>定力</span><div class="meter focus"><i id="focus-fill"></i></div><b id="focus-number">65</b></div><div class="focus-line rage-line" id="rage-line"><span>R 法天象地</span><div class="meter"><i id="rage-fill"></i></div><b id="rage-number">25</b></div></div>
         <div class="journey"><small id="chapter">第一境</small><strong id="stage-name">雾隐山道</strong><span id="objective">破除黑莲阵眼 0 / 2</span><div class="journey-progress"><i id="journey-fill"></i></div></div>
         <div class="hud-actions"><span id="run-seed"></span><button id="pause" aria-label="暂停游戏">Ⅱ <span>ESC</span></button></div>
-        <div id="boss-hud" hidden><span>无天 <em id="boss-phase">黑莲横世</em></span><div class="meter"><i id="boss-fill"></i></div></div>
+        <div id="boss-hud" hidden><span><b id="boss-name">无天</b><em id="boss-phase">黑莲横世</em></span><div class="meter"><i id="boss-fill"></i></div></div>
+        <div class="run-arts"><span id="talisman-state">Q 未携符术</span><span id="growth-state"></span></div>
         <div class="run-bottom"><span id="relic-list"></span><span id="dash-state"></span></div>
       </div>
       <div id="overlay"></div>
@@ -19,8 +20,8 @@
       <div id="toast" role="status" aria-live="polite" hidden></div>
       <div id="context-hint" hidden></div>
     </section>
-    <footer class="footline"><div><span class="status-dot"></span><span id="storage-status">离线可玩 · 进度自动保存</span></div><div class="keystrip"><span><kbd>A</kbd><kbd>D</kbd> 行走</span><span><kbd>SPACE</kbd> 跃起</span><span><kbd>J</kbd> 棍击</span><span><kbd>K</kbd> 闪避</span><span><kbd>L</kbd> 分身</span></div><span class="build">v3.0 <span>／</span> 三境六阵 · 舍利成法</span></footer>
+    <footer class="footline"><div><span class="status-dot"></span><span id="storage-status">离线可玩 · 进度自动保存</span></div><div class="keystrip"><span><kbd>A</kbd><kbd>D</kbd> 行走</span><span><kbd>SPACE</kbd> 跃起</span><span><kbd>J</kbd> 棍击</span><span><kbd>K</kbd> 闪避</span><span><kbd>L</kbd> 分身</span><span><kbd>R</kbd> 大招</span><span><kbd>Q</kbd> 符术</span></div><span class="build">v4.0 <span>／</span> 蓄势 · 成法 · 破关</span></footer>
     <input id="import-file" type="file" accept="application/json,.json" hidden>
   </main>
-  <script src="src/content.js"></script><script src="src/world.js"></script><script src="src/simulation.js"></script><script src="src/storage.js"></script><script src="src/renderer.js"></script><script src="src/art.js"></script><script src="src/generated-art.js"></script><script src="src/visuals.js"></script><script src="src/combat-art.js"></script><script src="src/dialog-art.js"></script><script src="src/input.js"></script><script src="src/audio.js"></script><script src="src/app.js"></script>
+  <script src="src/content.js"></script><script src="src/world.js"></script><script src="src/progression.js"></script><script src="src/simulation.js"></script><script src="src/storage.js"></script><script src="src/renderer.js"></script><script src="src/art.js"></script><script src="src/generated-art.js"></script><script src="src/visuals.js"></script><script src="src/combat-art.js"></script><script src="src/progression-art.js"></script><script src="src/dialog-art.js"></script><script src="src/input.js"></script><script src="src/audio.js"></script><script src="src/app.js"></script>
 </body></html>
