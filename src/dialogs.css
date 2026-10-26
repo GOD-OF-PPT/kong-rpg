@@ -85,7 +85,7 @@
 #stage:not([data-mode=playing]) #toast{top:8px;bottom:auto;font-size:12px}
 #context-hint{background:linear-gradient(90deg,transparent,#102027df 10%,#102027df 90%,transparent);border:0;color:#ead6aa}
 .panel.dialog-help{background:none;border:0;box-shadow:none}
-.dialog-help .help-grid{background:var(--folio-art,linear-gradient(#d4bd88,#bea16d)) center/100% 100% no-repeat;image-rendering:pixelated;padding:50px 90px 70px;gap:18px 100px}
+.dialog-help .help-grid{background:var(--folio-art,linear-gradient(#d4bd88,#bea16d)) center/100% 100% no-repeat;image-rendering:pixelated;padding:50px 90px 90px;gap:18px 100px}
 .dialog-help .help-grid>div{padding-left:26px}
 .dialog-help .help-grid>div:before{color:#76522d;border-color:#9a7b4e}
 .dialog-help .help-grid h3{color:#57311f;text-shadow:none}
@@ -114,4 +114,4 @@
 }
 @media(prefers-reduced-motion:reduce){.panel.game-dialog{animation:none}.game-dialog .relic-card{transition:none}.game-dialog .relic-card:hover,.game-dialog .relic-card:focus-visible{transform:none}}
 @container(max-width:850px){.panel.game-dialog{width:96%;padding-inline:18px}.game-dialog .cards{gap:7px}.dialog-heading h2{font-size:24px}.game-dialog .relic-card p{font-size:11px}.game-dialog .relic-card .cost{font-size:10px}.game-dialog .help-grid{gap:10px 18px}.game-dialog .help-grid p{font-size:10px}.dialog-paused:after{width:30%}.dialog-paused .dialog-heading,.dialog-paused .dialog-content,.dialog-paused .dialog-footer{margin-left:36%}}
-@container(max-width:1200px){.dialog-help .help-grid{padding:44px 72px 60px;gap:12px 70px}.dialog-help .help-grid h3{font-size:16px}.dialog-help .help-grid p{font-size:11px;line-height:1.8}.history-folio{padding:40px 72px 62px}.game-dialog .history-list{padding:0;max-height:205px;gap:6px 65px}.game-dialog .history-list b{font-size:15px}.game-dialog .history-list span,.game-dialog .history-list small{font-size:10px}}
+@container(max-width:1200px){.dialog-help .help-grid{padding:44px 72px 80px;gap:12px 70px}.dialog-help .help-grid h3{font-size:16px}.dialog-help .help-grid p{font-size:11px;line-height:1.8}.history-folio{padding:40px 72px 62px}.game-dialog .history-list{padding:0;max-height:205px;gap:6px 65px}.game-dialog .history-list b{font-size:15px}.game-dialog .history-list span,.game-dialog .history-list small{font-size:10px}}

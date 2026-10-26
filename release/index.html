@@ -108,7 +108,7 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
 #stage:not([data-mode=playing]) #toast{top:8px;bottom:auto;font-size:12px}
 #context-hint{background:linear-gradient(90deg,transparent,#102027df 10%,#102027df 90%,transparent);border:0;color:#ead6aa}
 .panel.dialog-help{background:none;border:0;box-shadow:none}
-.dialog-help .help-grid{background:var(--folio-art,linear-gradient(#d4bd88,#bea16d)) center/100% 100% no-repeat;image-rendering:pixelated;padding:50px 90px 70px;gap:18px 100px}
+.dialog-help .help-grid{background:var(--folio-art,linear-gradient(#d4bd88,#bea16d)) center/100% 100% no-repeat;image-rendering:pixelated;padding:50px 90px 90px;gap:18px 100px}
 .dialog-help .help-grid>div{padding-left:26px}
 .dialog-help .help-grid>div:before{color:#76522d;border-color:#9a7b4e}
 .dialog-help .help-grid h3{color:#57311f;text-shadow:none}
@@ -137,7 +137,7 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
 }
 @media(prefers-reduced-motion:reduce){.panel.game-dialog{animation:none}.game-dialog .relic-card{transition:none}.game-dialog .relic-card:hover,.game-dialog .relic-card:focus-visible{transform:none}}
 @container(max-width:850px){.panel.game-dialog{width:96%;padding-inline:18px}.game-dialog .cards{gap:7px}.dialog-heading h2{font-size:24px}.game-dialog .relic-card p{font-size:11px}.game-dialog .relic-card .cost{font-size:10px}.game-dialog .help-grid{gap:10px 18px}.game-dialog .help-grid p{font-size:10px}.dialog-paused:after{width:30%}.dialog-paused .dialog-heading,.dialog-paused .dialog-content,.dialog-paused .dialog-footer{margin-left:36%}}
-@container(max-width:1200px){.dialog-help .help-grid{padding:44px 72px 60px;gap:12px 70px}.dialog-help .help-grid h3{font-size:16px}.dialog-help .help-grid p{font-size:11px;line-height:1.8}.history-folio{padding:40px 72px 62px}.game-dialog .history-list{padding:0;max-height:205px;gap:6px 65px}.game-dialog .history-list b{font-size:15px}.game-dialog .history-list span,.game-dialog .history-list small{font-size:10px}}
+@container(max-width:1200px){.dialog-help .help-grid{padding:44px 72px 80px;gap:12px 70px}.dialog-help .help-grid h3{font-size:16px}.dialog-help .help-grid p{font-size:11px;line-height:1.8}.history-folio{padding:40px 72px 62px}.game-dialog .history-list{padding:0;max-height:205px;gap:6px 65px}.game-dialog .history-list b{font-size:15px}.game-dialog .history-list span,.game-dialog .history-list small{font-size:10px}}
 </style><style>#combat-labels .impact-number{font:700 15px/1 monospace;color:#fff1ce;text-shadow:-1px 0 #241e24,1px 0 #241e24,0 -1px #241e24,0 1px #241e24,1px 2px #241e24;letter-spacing:0}
 #combat-labels .impact-number.heavy{font-size:21px;color:#ffe4a0}
 #combat-labels .impact-number.block{font:600 12px/1 "Microsoft YaHei",sans-serif;color:#a5eee4}
@@ -207,13 +207,13 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
       <div id="toast" role="status" aria-live="polite" hidden></div>
       <div id="context-hint" hidden></div>
     </section>
-    <footer class="footline"><div><span class="status-dot"></span><span id="storage-status">离线可玩 · 进度自动保存</span></div><div class="keystrip"><span><kbd>A</kbd><kbd>D</kbd> 行走</span><span><kbd>SPACE</kbd> 跃起</span><span><kbd>J</kbd> 攻击</span><span><kbd>K</kbd> 闪避</span><span><kbd>L</kbd> 神通</span><span><kbd>R</kbd> 大招</span><span><kbd>Q</kbd> 符术</span></div><span class="build">v6.2.0 <span>／</span> 棍影 · 回环 · 应劫</span></footer>
+    <footer class="footline"><div><span class="status-dot"></span><span id="storage-status">离线可玩 · 进度自动保存</span></div><div class="keystrip"><span><kbd>A</kbd><kbd>D</kbd> 行走</span><span><kbd>SPACE</kbd> 跃起</span><span><kbd>J</kbd> 攻击</span><span><kbd>K</kbd> 闪避</span><span><kbd>L</kbd> 神通</span><span><kbd>R</kbd> 大招</span><span><kbd>Q</kbd> 符术</span></div><span class="build">v6.2.1 <span>／</span> 棍影 · 回环 · 应劫</span></footer>
     <input id="import-file" type="file" accept="application/json,.json" hidden>
   </main>
   <script>
 (function (K) {
   'use strict';
-  K.VERSION = '6.2.0';
+  K.VERSION = '6.2.1';
   K.W = 960; K.H = 540; K.DT = 1 / 120;
   K.clamp = (v, a, b) => Math.max(a, Math.min(b, v));
   K.overlap = (a, b) => a.x < b.x + b.w && a.x + a.w > b.x && a.y < b.y + b.h && a.y + a.h > b.y;
@@ -657,10 +657,15 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
       targets.push('e'+e.id);if(K.hitEnemy(s,e,amount,origin,pierce,impact))s.player.focus=Math.min(100,s.player.focus+12);
     }
     for (const seal of s.room.seals) if (seal.hp > 0 && K.overlap(box, seal) && !targets.includes('s' + seal.id)) {
-      targets.push('s' + seal.id); seal.hp = Math.max(0, seal.hp - amount); s.player.focus = Math.min(100, s.player.focus + 9);if(impact!=='ultimate')K.gainRage(s,5);
-      K.effect(s,impact==='heavy'?'heavy-hit':'hit',seal.x+14,seal.y+18,{text:String(amount),impact,face:Math.sign(seal.x-origin)||1});K.event(s,'seal-hit',{id:seal.id});
-      if (seal.hp === 0) { s.broken++; K.effect(s, 'ring', seal.x + 14, seal.y + 20); K.event(s, 'seal', { id: seal.id }); if (K.has(s, 'mercy')) s.player.hp = Math.min(K.maxHP(s), s.player.hp + 12); }
+      targets.push('s' + seal.id);K.hitSeal(s,seal,amount,origin,impact);
     }
+  };
+  K.hitSeal=function(s,seal,amount,origin,impact='light'){
+    if(s.mode!=='playing'||seal.hp<=0)return false;
+    seal.hp=Math.max(0,seal.hp-amount);s.player.focus=Math.min(100,s.player.focus+9);if(impact!=='ultimate')K.gainRage(s,5);
+    K.effect(s,impact==='heavy'?'heavy-hit':'hit',seal.x+14,seal.y+18,{text:String(amount),impact,face:Math.sign(seal.x-origin)||1});K.event(s,'seal-hit',{id:seal.id});
+    if(seal.hp===0){s.broken++;K.effect(s,'ring',seal.x+14,seal.y+20);K.event(s,'seal',{id:seal.id});if(K.has(s,'mercy'))s.player.hp=Math.min(K.maxHP(s),s.player.hp+12);}
+    return true;
   };
   K.attackBox = function (s) {
     const p = s.player; const range = p.comboIndex === 3 ? (K.has(s, 'staff') ? 112 : 79) : !p.grounded && K.has(s, 'cloud') ? 86 : 65;
@@ -732,7 +737,12 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
     for (const e of s.room.enemies) K.stepEnemy(s, e, dt, oldY);
     for (const b of s.projectiles) {
       b.life -= dt;if(b.life<=0)continue;b.x += b.vx * dt; b.y += b.vy * dt;
-      if (b.friendly) { for (const e of s.room.enemies) if (e.hp > 0 && K.overlap(b, e) && !(b.hit || []).includes(e.id)) { (b.hit ||= []).push(e.id); K.hitEnemy(s, e, b.damage || 18, b.x - b.vx, true); } }
+      if (b.friendly) {
+        for (const e of s.room.enemies) if (e.hp > 0 && K.overlap(b, e) && !(b.hit || []).includes(e.id)) { (b.hit ||= []).push(e.id); K.hitEnemy(s, e, b.damage || 18, b.x - b.vx, true); }
+        for (const seal of s.room.seals) if (seal.hp > 0 && K.overlap(b,seal) && !(b.sealHits || []).includes(seal.id)) {
+          if(K.hitSeal(s,seal,b.damage||18,b.x-b.vx))(b.sealHits ||= []).push(seal.id);
+        }
+      }
       else if (K.overlap(b, p)) {
         if (p.dash > 0 && K.has(s, 'mirror')) { b.friendly=true;b.vx*=-1.25;b.vy*=-1;b.damage=24;b.life=2;K.effect(s,'reflect',b.x,b.y,{face:p.face});K.event(s,'reflect');K.gainRage(s,10); }
         else if (p.invuln <= 0) { K.damage(s, 12, b.source||'莲焰飞弹', Math.sign(b.vx)); b.life = 0; }
@@ -876,7 +886,9 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
       for(const [key,min,max]of[['x',-200,canonical.width+200],['y',-2000,2000],['vx',-2000,2000],['vy',-2000,2000],['life',0,10],['w',1,100],['h',1,100]])if(!number(b[key],min,max))fail();
       if(typeof b.friendly!=='boolean'||(b.damage!==undefined&&!number(b.damage,1,100))||(b.hit!==undefined&&(!Array.isArray(b.hit)||b.hit.length>100||b.hit.some(x=>!Number.isInteger(x)))))fail();
       if(b.source!==undefined&&!['渡厄灯魁·散焰','震盾兵·地波'].includes(b.source))fail();
-      return {x:b.x,y:b.y,vx:b.vx,vy:b.vy,life:b.life,w:b.w,h:b.h,friendly:b.friendly,damage:b.damage,hit:b.hit,source:b.source};
+      // Optional for existing schema6 saves; separate IDs avoid enemy 0 / seal 0 collisions.
+      if(b.sealHits!==undefined&&(!Array.isArray(b.sealHits)||b.sealHits.length>canonical.seals.length||new Set(b.sealHits).size!==b.sealHits.length||b.sealHits.some(id=>!canonical.seals.some(q=>q.id===id))||(!b.friendly&&b.sealHits.length)))fail();
+      return {x:b.x,y:b.y,vx:b.vx,vy:b.vy,life:b.life,w:b.w,h:b.h,friendly:b.friendly,damage:b.damage,hit:b.hit,sealHits:b.sealHits?.slice(),source:b.source};
     });
     let clone=null;if(s.clone){const c=s.clone;if(!number(c.x,0,canonical.width)||!number(c.y,-1000,1000)||!number(c.life,0,4)||!number(c.timer,-1,1)||![-1,1].includes(c.face))fail();clone={x:c.x,y:c.y,w:24,h:44,life:c.life,timer:c.timer,face:c.face};}
     if(!['mid','exit','trial'].includes(s.rewardKind)||!Array.isArray(s.reward)||s.reward.length>3||new Set(s.reward).size!==s.reward.length||s.reward.some(id=>!K.rewardEligible(s,id))||(s.mode==='reward'&&s.reward.length!==3)||(s.pendingRelic!==null&&(!s.reward.includes(s.pendingRelic)||!K.RELICS.some(r=>r.id===s.pendingRelic)||s.relics.length!==3)))fail();
@@ -1719,11 +1731,11 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
   function help(){
     const lessons=[
       ['步法与落点','A D移动，空格/W跳。长按高跳、松开短跳；S＋空格下穿。踩敌反弹，腾云骨多一跳。'],
-      ['棍法与掷环','哪吒：J水平掷环，左键朝光标掷出；一环在外不可再掷，去程18/回程22。L混天绫减缓敌人位移，R莲火轮阵清近处敌弹。悟空：J/左键三连，第三棍收招慢、可打断蓄力。空中S＋J下劈；盾兵须绕背、踩踏或借定海心破盾。'],
-      ['闪避与分身','K/Shift闪避，0.85秒冷却。L/右键分身，耗40定力；照影珠耗50。棍击命中回定力。'],
-      ['法天象地与符术','命中积攒战意，满100按R释放大招：破盾、清近处敌弹。起势护体，收招仍有风险。Q使用限次符术，次数显示在左下。'],
-      ['长路与成法','B查看本局全部加成。上路F开启可选试炼，清场回去领奖；归灯只能调息一次。怪物掉落不消失，资源满时留在地上。F借灯、触发见闻或过门。奖励只取一项：舍利最多三枚；法门本局保留；新符会替换旧符。角色强化、技能与调息互相取舍。'],
-      ['敌招与重来','远距站定会引来逐影突刺、举盾逼近与交叉落印。突刺看路径跳避，落印锁定后横移，举盾可借回程打背。魈王冲撞要跳、灯魁索灯要移、法使封愿光柱要横避。三境需破双阵并击败守关者。无天正面减伤，绕背或等收招。失败清空本局成长。']
+      ['棍法与掷环','悟空J/左键三连，第三棍可打断；空中S＋J下劈。哪吒J水平掷环、左键瞄准，去程18/回程22；一环在外不能再掷。盾兵可绕背、踩踏或借破盾加成。'],
+      ['闪避与神通','K/Shift闪避，0.85秒冷却。L/右键：悟空分身、哪吒混天绫，耗40定力；照影珠或缚莲绫耗50。攻击命中回定力。'],
+      ['法天象地与符术','命中积攒战意，满100按R释放大招：破盾、清近处敌弹。起势护体，收招仍有风险。Q使用限次符术，次数显示在左上加成栏。'],
+      ['长路与成法','F借灯、触发见闻或过门。上路试炼可跳过，清场后回去领奖；归灯只用一次。补给满值留地。每次奖励择一：舍利最多三枚，法门本局保留，新符替换旧符；B查详情。'],
+      ['敌招与重来','突刺看路径跳避，交叉落印锁定后横移。魈王冲撞要跳，灯魁索灯与法使封愿要移开。三境均需破双阵、退守关者。无天正面减伤，绕背或趁收招攻击。失败清空本局成长。']
     ];
     $('overlay').innerHTML=panel('行者手记','手记 · 看清再出手','棍有尽处，变化无穷',`<div class="help-grid">${lessons.map(([title,text])=>`<div><h3>${title}</h3><p>${text}</p></div>`).join('')}</div><div class="actions">${btn('close-help','记下了',true)}${btn('import','导入存档')}${btn('old','原版旅程')}</div>`);
     on('close-help',()=>show(backScreen));on('import',()=>$('import-file').click());on('old',()=>show('legacy'));
@@ -1751,7 +1763,7 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
     on('again',()=>{K.pendingSeed='LOTUS-'+crypto.getRandomValues(new Uint32Array(1))[0].toString(36).slice(0,6);show('heroes');});on('back-result',()=>show('won'));on('main-menu',()=>show('menu'));
   }
   function history(){
-    $('overlay').innerHTML=panel('往昔旅程','因缘簿 · 留迹不留战力','你走过的路',`<div class="history-folio"><div class="history-list" tabindex="0" aria-label="旅程记录，可滚动">${meta.history.length?meta.history.slice().reverse().map(r=>`<div><b>${r.won?'破劫':'止步'+K.STAGES[r.stage].name}</b><span>${esc(r.seed)}</span><span>${Math.floor(r.seconds/60)}分${r.seconds%60}秒</span><small>${r.relics.map(id=>rewardInfo(id).name).join(' · ')}</small></div>`).join(''):`<div class="empty-history">${relicArt('rest')}<p>因缘簿尚未落墨。<br>选择应劫者，先走一程。</p></div>`}</div></div><p class="history-hint">${meta.history.length?'共 '+meta.history.length+' 行旅记 · 滚轮或 ↑ ↓ 翻阅':'行过之处，终会留下痕迹'}</p><div class="actions">${btn('back','返回',true)}</div>`);on('back',()=>show('menu'));
+    $('overlay').innerHTML=panel('往昔旅程','因缘簿 · 留迹不留战力','你走过的路',`<div class="history-folio"><div class="history-list" tabindex="0" aria-label="旅程记录，可滚动">${meta.history.length?meta.history.slice().reverse().map(r=>`<div><b>${r.won?'破劫':'止步'+K.STAGES[r.stage].name}</b><span>${esc(r.seed)}</span><span>${Math.floor(r.seconds/60)}分${r.seconds%60}秒</span><small>${K.heroDef(r).name} · ${r.relics.map(id=>K.reward(id,r).name).join(' · ')}</small></div>`).join(''):`<div class="empty-history">${relicArt('rest')}<p>因缘簿尚未落墨。<br>选择应劫者，先走一程。</p></div>`}</div></div><p class="history-hint">${meta.history.length?'共 '+meta.history.length+' 行旅记 · 滚轮或 ↑ ↓ 翻阅':'行过之处，终会留下痕迹'}</p><div class="actions">${btn('back','返回',true)}</div>`);on('back',()=>show('menu'));
   }
   function legacyMenu(){
     $('overlay').innerHTML=panel('原版旅程','存档保护 · 旧路仍在','在原来的规则中继续',`<p class="story-copy">旧版的地图与规则和新版不同。你的旧旅程不会被覆盖，也不会被悄悄搬到另一张地图。<br><br>${storage.legacy?'可先下载旧档，再在打开的原版里通过「初行指南 → 导入存档」继续。':'保留的原版可直接打开；如果你有旧JSON文件，请在原版的指南中导入。'}</p><div class="actions">${btn('open-legacy',storage.legacy?'备份旧档并打开原版':'打开原版',true)}${btn('back','返回新版')}</div>`);

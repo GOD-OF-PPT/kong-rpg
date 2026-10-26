@@ -89,11 +89,11 @@
   function help(){
     const lessons=[
       ['步法与落点','A D移动，空格/W跳。长按高跳、松开短跳；S＋空格下穿。踩敌反弹，腾云骨多一跳。'],
-      ['棍法与掷环','哪吒：J水平掷环，左键朝光标掷出；一环在外不可再掷，去程18/回程22。L混天绫减缓敌人位移，R莲火轮阵清近处敌弹。悟空：J/左键三连，第三棍收招慢、可打断蓄力。空中S＋J下劈；盾兵须绕背、踩踏或借定海心破盾。'],
-      ['闪避与分身','K/Shift闪避，0.85秒冷却。L/右键分身，耗40定力；照影珠耗50。棍击命中回定力。'],
-      ['法天象地与符术','命中积攒战意，满100按R释放大招：破盾、清近处敌弹。起势护体，收招仍有风险。Q使用限次符术，次数显示在左下。'],
-      ['长路与成法','B查看本局全部加成。上路F开启可选试炼，清场回去领奖；归灯只能调息一次。怪物掉落不消失，资源满时留在地上。F借灯、触发见闻或过门。奖励只取一项：舍利最多三枚；法门本局保留；新符会替换旧符。角色强化、技能与调息互相取舍。'],
-      ['敌招与重来','远距站定会引来逐影突刺、举盾逼近与交叉落印。突刺看路径跳避，落印锁定后横移，举盾可借回程打背。魈王冲撞要跳、灯魁索灯要移、法使封愿光柱要横避。三境需破双阵并击败守关者。无天正面减伤，绕背或等收招。失败清空本局成长。']
+      ['棍法与掷环','悟空J/左键三连，第三棍可打断；空中S＋J下劈。哪吒J水平掷环、左键瞄准，去程18/回程22；一环在外不能再掷。盾兵可绕背、踩踏或借破盾加成。'],
+      ['闪避与神通','K/Shift闪避，0.85秒冷却。L/右键：悟空分身、哪吒混天绫，耗40定力；照影珠或缚莲绫耗50。攻击命中回定力。'],
+      ['法天象地与符术','命中积攒战意，满100按R释放大招：破盾、清近处敌弹。起势护体，收招仍有风险。Q使用限次符术，次数显示在左上加成栏。'],
+      ['长路与成法','F借灯、触发见闻或过门。上路试炼可跳过，清场后回去领奖；归灯只用一次。补给满值留地。每次奖励择一：舍利最多三枚，法门本局保留，新符替换旧符；B查详情。'],
+      ['敌招与重来','突刺看路径跳避，交叉落印锁定后横移。魈王冲撞要跳，灯魁索灯与法使封愿要移开。三境均需破双阵、退守关者。无天正面减伤，绕背或趁收招攻击。失败清空本局成长。']
     ];
     $('overlay').innerHTML=panel('行者手记','手记 · 看清再出手','棍有尽处，变化无穷',`<div class="help-grid">${lessons.map(([title,text])=>`<div><h3>${title}</h3><p>${text}</p></div>`).join('')}</div><div class="actions">${btn('close-help','记下了',true)}${btn('import','导入存档')}${btn('old','原版旅程')}</div>`);
     on('close-help',()=>show(backScreen));on('import',()=>$('import-file').click());on('old',()=>show('legacy'));
@@ -121,7 +121,7 @@
     on('again',()=>{K.pendingSeed='LOTUS-'+crypto.getRandomValues(new Uint32Array(1))[0].toString(36).slice(0,6);show('heroes');});on('back-result',()=>show('won'));on('main-menu',()=>show('menu'));
   }
   function history(){
-    $('overlay').innerHTML=panel('往昔旅程','因缘簿 · 留迹不留战力','你走过的路',`<div class="history-folio"><div class="history-list" tabindex="0" aria-label="旅程记录，可滚动">${meta.history.length?meta.history.slice().reverse().map(r=>`<div><b>${r.won?'破劫':'止步'+K.STAGES[r.stage].name}</b><span>${esc(r.seed)}</span><span>${Math.floor(r.seconds/60)}分${r.seconds%60}秒</span><small>${r.relics.map(id=>rewardInfo(id).name).join(' · ')}</small></div>`).join(''):`<div class="empty-history">${relicArt('rest')}<p>因缘簿尚未落墨。<br>选择应劫者，先走一程。</p></div>`}</div></div><p class="history-hint">${meta.history.length?'共 '+meta.history.length+' 行旅记 · 滚轮或 ↑ ↓ 翻阅':'行过之处，终会留下痕迹'}</p><div class="actions">${btn('back','返回',true)}</div>`);on('back',()=>show('menu'));
+    $('overlay').innerHTML=panel('往昔旅程','因缘簿 · 留迹不留战力','你走过的路',`<div class="history-folio"><div class="history-list" tabindex="0" aria-label="旅程记录，可滚动">${meta.history.length?meta.history.slice().reverse().map(r=>`<div><b>${r.won?'破劫':'止步'+K.STAGES[r.stage].name}</b><span>${esc(r.seed)}</span><span>${Math.floor(r.seconds/60)}分${r.seconds%60}秒</span><small>${K.heroDef(r).name} · ${r.relics.map(id=>K.reward(id,r).name).join(' · ')}</small></div>`).join(''):`<div class="empty-history">${relicArt('rest')}<p>因缘簿尚未落墨。<br>选择应劫者，先走一程。</p></div>`}</div></div><p class="history-hint">${meta.history.length?'共 '+meta.history.length+' 行旅记 · 滚轮或 ↑ ↓ 翻阅':'行过之处，终会留下痕迹'}</p><div class="actions">${btn('back','返回',true)}</div>`);on('back',()=>show('menu'));
   }
   function legacyMenu(){
     $('overlay').innerHTML=panel('原版旅程','存档保护 · 旧路仍在','在原来的规则中继续',`<p class="story-copy">旧版的地图与规则和新版不同。你的旧旅程不会被覆盖，也不会被悄悄搬到另一张地图。<br><br>${storage.legacy?'可先下载旧档，再在打开的原版里通过「初行指南 → 导入存档」继续。':'保留的原版可直接打开；如果你有旧JSON文件，请在原版的指南中导入。'}</p><div class="actions">${btn('open-legacy',storage.legacy?'备份旧档并打开原版':'打开原版',true)}${btn('back','返回新版')}</div>`);

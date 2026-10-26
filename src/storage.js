@@ -61,7 +61,9 @@
       for(const [key,min,max]of[['x',-200,canonical.width+200],['y',-2000,2000],['vx',-2000,2000],['vy',-2000,2000],['life',0,10],['w',1,100],['h',1,100]])if(!number(b[key],min,max))fail();
       if(typeof b.friendly!=='boolean'||(b.damage!==undefined&&!number(b.damage,1,100))||(b.hit!==undefined&&(!Array.isArray(b.hit)||b.hit.length>100||b.hit.some(x=>!Number.isInteger(x)))))fail();
       if(b.source!==undefined&&!['渡厄灯魁·散焰','震盾兵·地波'].includes(b.source))fail();
-      return {x:b.x,y:b.y,vx:b.vx,vy:b.vy,life:b.life,w:b.w,h:b.h,friendly:b.friendly,damage:b.damage,hit:b.hit,source:b.source};
+      // Optional for existing schema6 saves; separate IDs avoid enemy 0 / seal 0 collisions.
+      if(b.sealHits!==undefined&&(!Array.isArray(b.sealHits)||b.sealHits.length>canonical.seals.length||new Set(b.sealHits).size!==b.sealHits.length||b.sealHits.some(id=>!canonical.seals.some(q=>q.id===id))||(!b.friendly&&b.sealHits.length)))fail();
+      return {x:b.x,y:b.y,vx:b.vx,vy:b.vy,life:b.life,w:b.w,h:b.h,friendly:b.friendly,damage:b.damage,hit:b.hit,sealHits:b.sealHits?.slice(),source:b.source};
     });
     let clone=null;if(s.clone){const c=s.clone;if(!number(c.x,0,canonical.width)||!number(c.y,-1000,1000)||!number(c.life,0,4)||!number(c.timer,-1,1)||![-1,1].includes(c.face))fail();clone={x:c.x,y:c.y,w:24,h:44,life:c.life,timer:c.timer,face:c.face};}
     if(!['mid','exit','trial'].includes(s.rewardKind)||!Array.isArray(s.reward)||s.reward.length>3||new Set(s.reward).size!==s.reward.length||s.reward.some(id=>!K.rewardEligible(s,id))||(s.mode==='reward'&&s.reward.length!==3)||(s.pendingRelic!==null&&(!s.reward.includes(s.pendingRelic)||!K.RELICS.some(r=>r.id===s.pendingRelic)||s.relics.length!==3)))fail();

@@ -46,10 +46,15 @@
       targets.push('e'+e.id);if(K.hitEnemy(s,e,amount,origin,pierce,impact))s.player.focus=Math.min(100,s.player.focus+12);
     }
     for (const seal of s.room.seals) if (seal.hp > 0 && K.overlap(box, seal) && !targets.includes('s' + seal.id)) {
-      targets.push('s' + seal.id); seal.hp = Math.max(0, seal.hp - amount); s.player.focus = Math.min(100, s.player.focus + 9);if(impact!=='ultimate')K.gainRage(s,5);
-      K.effect(s,impact==='heavy'?'heavy-hit':'hit',seal.x+14,seal.y+18,{text:String(amount),impact,face:Math.sign(seal.x-origin)||1});K.event(s,'seal-hit',{id:seal.id});
-      if (seal.hp === 0) { s.broken++; K.effect(s, 'ring', seal.x + 14, seal.y + 20); K.event(s, 'seal', { id: seal.id }); if (K.has(s, 'mercy')) s.player.hp = Math.min(K.maxHP(s), s.player.hp + 12); }
+      targets.push('s' + seal.id);K.hitSeal(s,seal,amount,origin,impact);
     }
+  };
+  K.hitSeal=function(s,seal,amount,origin,impact='light'){
+    if(s.mode!=='playing'||seal.hp<=0)return false;
+    seal.hp=Math.max(0,seal.hp-amount);s.player.focus=Math.min(100,s.player.focus+9);if(impact!=='ultimate')K.gainRage(s,5);
+    K.effect(s,impact==='heavy'?'heavy-hit':'hit',seal.x+14,seal.y+18,{text:String(amount),impact,face:Math.sign(seal.x-origin)||1});K.event(s,'seal-hit',{id:seal.id});
+    if(seal.hp===0){s.broken++;K.effect(s,'ring',seal.x+14,seal.y+20);K.event(s,'seal',{id:seal.id});if(K.has(s,'mercy'))s.player.hp=Math.min(K.maxHP(s),s.player.hp+12);}
+    return true;
   };
   K.attackBox = function (s) {
     const p = s.player; const range = p.comboIndex === 3 ? (K.has(s, 'staff') ? 112 : 79) : !p.grounded && K.has(s, 'cloud') ? 86 : 65;
@@ -121,7 +126,12 @@
     for (const e of s.room.enemies) K.stepEnemy(s, e, dt, oldY);
     for (const b of s.projectiles) {
       b.life -= dt;if(b.life<=0)continue;b.x += b.vx * dt; b.y += b.vy * dt;
-      if (b.friendly) { for (const e of s.room.enemies) if (e.hp > 0 && K.overlap(b, e) && !(b.hit || []).includes(e.id)) { (b.hit ||= []).push(e.id); K.hitEnemy(s, e, b.damage || 18, b.x - b.vx, true); } }
+      if (b.friendly) {
+        for (const e of s.room.enemies) if (e.hp > 0 && K.overlap(b, e) && !(b.hit || []).includes(e.id)) { (b.hit ||= []).push(e.id); K.hitEnemy(s, e, b.damage || 18, b.x - b.vx, true); }
+        for (const seal of s.room.seals) if (seal.hp > 0 && K.overlap(b,seal) && !(b.sealHits || []).includes(seal.id)) {
+          if(K.hitSeal(s,seal,b.damage||18,b.x-b.vx))(b.sealHits ||= []).push(seal.id);
+        }
+      }
       else if (K.overlap(b, p)) {
         if (p.dash > 0 && K.has(s, 'mirror')) { b.friendly=true;b.vx*=-1.25;b.vy*=-1;b.damage=24;b.life=2;K.effect(s,'reflect',b.x,b.y,{face:p.face});K.event(s,'reflect');K.gainRage(s,10); }
         else if (p.invuln <= 0) { K.damage(s, 12, b.source||'莲焰飞弹', Math.sign(b.vx)); b.life = 0; }

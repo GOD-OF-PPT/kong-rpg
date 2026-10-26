@@ -1,5 +1,5 @@
 const {chromium}=require('playwright'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),crypto=require('node:crypto'),assert=require('node:assert/strict'),os=require('node:os');
-const root=path.resolve(__dirname,'..'),kind=process.argv[2]||'http',out=path.join(root,'evidence/map-v6'),sandbox=vm.createContext({console});
+const root=path.resolve(__dirname,'..'),kind=process.argv[2]||'http',out=path.join(root,process.env.EVIDENCE_DIR||'evidence/map-v6'),sandbox=vm.createContext({console});
 for(const name of ['content','world','progression','journey','heroes','simulation','storage'])vm.runInContext(fs.readFileSync(path.join(root,'src',name+'.js'),'utf8'),sandbox);
 const K=sandbox.Kong,report={version:K.VERSION,kind,base:'59b91e0b1fa2754067b800dbba83f4111514703b',entrySha256:crypto.createHash('sha256').update(fs.readFileSync(path.join(root,'release/index.html'))).digest('hex'),environment:{os:os.release(),cpu:os.cpus()[0].model,node:process.version,viewport:'1440x1000 / 1366x768'},checks:[],captures:[],errors:[],network:[]};
 function check(name,pass,data={}){report.checks.push({name,pass:!!pass,...data});assert.ok(pass,name);}

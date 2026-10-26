@@ -1,4 +1,6 @@
-# 大圣 · 劫后行 v6.2.0
+# 大圣 · 劫后行 v6.2.1
+
+v6.2.1：全流程排查并修复破阵棍风无法伤害阵眼、历史记录混用角色名称、手记说明过期与书页正文压边。补齐友方飞弹阵眼命中存档去重，兼容旧schema6。两角色HTTP/断网file整局及定向交互记录见 [全流程验收](docs/flow-v6/VERIFICATION.md)。
 
 v6.2.0：补齐新增地图元素的像素美术：试炼铜龛四状态、归灯明灭、葫芦/定心珠/战意焰补给，山道苔石/古渡湿木/残庭灰石，碎台、浮筏、接桥、黑莲地刺与三境遗物。使用内置ImageGen生成、按游戏比例归一并离线内嵌，玩法和schema6存档不变。[美术依据与素材](docs/map-v6/DESIGN.md) · [验收记录](docs/map-v6/VERIFICATION.md)。
 
@@ -54,7 +56,7 @@ npm run dev
 
 预览 http://127.0.0.1:5188/release/index.html 。`build` 从 assets 中的 PNG 与已处理 WAV 重建内嵌素材脚本，再将脚本、CSS、图片与声音全部内联到发行 HTML。克隆源码后先 build；正式发行包可直接离线打开。
 
-完整离线包为 `artifacts/kong-rpg-offline-v6.2.0.zip`，含v1–v5原入口，约140MiB以上，超过GitHub单文件100MiB限制，因此作为本地交付物保留。Git仓库包含全部发行文件；需要重打包时执行 `python tools/package-release.py`。
+完整离线包为 `artifacts/kong-rpg-offline-v6.2.1.zip`，含v1–v5原入口，约140MiB以上，超过GitHub单文件100MiB限制，因此作为本地交付物保留。Git仓库包含全部发行文件；需要重打包时执行 `python tools/package-release.py`。
 
 `src/content.js` 内容与种子；`simulation.js` 固定120Hz模拟；`heroes.js` 角色、回环、绫缚与远距反制；`journey.js` 延长路线、强化怪、掉落、试炼与归灯；`progression.js` 成长、符术、大招与守关规则；`input.js` 键鼠与焦点；`storage.js` 版本存档；`renderer.js` 世界渲染；`visuals.js` 与 `progression-art.js` 图集和动作；`app.js` DOM界面；`audio.js` 本地声音。
 
