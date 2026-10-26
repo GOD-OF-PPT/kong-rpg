@@ -1,5 +1,5 @@
 {
-  "version": "6.0.0",
+  "version": "6.0.2",
   "results": [
     {
       "name": "fresh stages restore with three distinct wardens and a separate final boss",
@@ -171,6 +171,10 @@
     },
     {
       "name": "a pickup cannot revive a dead character later in the fatal frame",
+      "pass": true
+    },
+    {
+      "name": "pickup feedback follows the actual health cap and reports the real gain only once",
       "pass": true
     },
     {

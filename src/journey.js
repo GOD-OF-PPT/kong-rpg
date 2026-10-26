@@ -65,11 +65,22 @@
     item.x=K.clamp(e.x+e.w/2-8,8,s.room.width-24);item.y=K.surfaceAt(s,item.x+8,e.y+e.h-4)-20;item.enabled=true;
     K.effect(s,'drop-rise',item.x+8,item.y,{color:K.DROPS[item.kind].color});K.event(s,'drop',{id:e.id,kind:item.kind,x:item.x,y:item.y});
   };
+  K.pickupInfo=function(s,item){
+    const key={heal:'hp',focus:'focus',rage:'rage'}[item.kind],label={heal:'生命',focus:'定力',rage:'战意'}[item.kind],cap=item.kind==='heal'?K.maxHP(s):100;
+    const amount=item.amount||(item.kind==='heal'?22:30),current=s.player[key],full=current>=cap;
+    return {name:K.DROPS[item.kind].name,key,label,cap,current,amount,full,gain:Math.min(amount,cap-current)};
+  };
+  K.pickupHint=function(s,item){
+    const q=K.pickupInfo(s,item);
+    if(!q.full)return q.name+' · '+q.label+' +'+q.gain+' · 走近自动拾取';
+    const action=item.kind==='rage'?'先用 R 大招':item.kind==='focus'?'神通消耗后可拾取':'暂留原地';
+    return q.name+' · '+q.label+'已满（'+Math.ceil(q.current)+'/'+q.cap+'）· '+action;
+  };
   K.collectPickup=function(s,item){
-    if(s.mode!=='playing'||item.used||item.enabled===false)return;const p=s.player,cap=item.kind==='heal'?K.maxHP(s):100,key={heal:'hp',focus:'focus',rage:'rage'}[item.kind];
-    if(p[key]>=cap)return;const amount=item.amount||(item.kind==='heal'?22:30);item.used=true;
-    if(item.kind==='rage')K.gainRage(s,amount);else p[key]=Math.min(cap,p[key]+amount);
-    s.stats.drops+=(item.sourceId!==undefined?1:0);K.event(s,'pickup',{kind:item.kind,amount,sourceId:item.sourceId});K.effect(s,'notice',p.x,p.y-5,{text:({heal:'生命',focus:'定力',rage:'战意'}[item.kind])+' +'+amount});
+    if(s.mode!=='playing'||item.used||item.enabled===false)return;const p=s.player,q=K.pickupInfo(s,item);
+    if(q.full)return;item.used=true;
+    if(item.kind==='rage')K.gainRage(s,q.gain);else p[q.key]+=q.gain;
+    s.stats.drops+=(item.sourceId!==undefined?1:0);K.event(s,'pickup',{kind:item.kind,amount:q.gain,sourceId:item.sourceId});K.effect(s,'notice',p.x,p.y-5,{text:q.label+' +'+q.gain});
   };
   K.journeyInteract=function(s){
     const p=s.player,t=s.room.trial,c=s.room.camp;

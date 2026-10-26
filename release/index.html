@@ -207,13 +207,13 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
       <div id="toast" role="status" aria-live="polite" hidden></div>
       <div id="context-hint" hidden></div>
     </section>
-    <footer class="footline"><div><span class="status-dot"></span><span id="storage-status">离线可玩 · 进度自动保存</span></div><div class="keystrip"><span><kbd>A</kbd><kbd>D</kbd> 行走</span><span><kbd>SPACE</kbd> 跃起</span><span><kbd>J</kbd> 攻击</span><span><kbd>K</kbd> 闪避</span><span><kbd>L</kbd> 神通</span><span><kbd>R</kbd> 大招</span><span><kbd>Q</kbd> 符术</span></div><span class="build">v6.0.1 <span>／</span> 棍影 · 回环 · 应劫</span></footer>
+    <footer class="footline"><div><span class="status-dot"></span><span id="storage-status">离线可玩 · 进度自动保存</span></div><div class="keystrip"><span><kbd>A</kbd><kbd>D</kbd> 行走</span><span><kbd>SPACE</kbd> 跃起</span><span><kbd>J</kbd> 攻击</span><span><kbd>K</kbd> 闪避</span><span><kbd>L</kbd> 神通</span><span><kbd>R</kbd> 大招</span><span><kbd>Q</kbd> 符术</span></div><span class="build">v6.0.2 <span>／</span> 棍影 · 回环 · 应劫</span></footer>
     <input id="import-file" type="file" accept="application/json,.json" hidden>
   </main>
   <script>
 (function (K) {
   'use strict';
-  K.VERSION = '6.0.1';
+  K.VERSION = '6.0.2';
   K.W = 960; K.H = 540; K.DT = 1 / 120;
   K.clamp = (v, a, b) => Math.max(a, Math.min(b, v));
   K.overlap = (a, b) => a.x < b.x + b.w && a.x + a.w > b.x && a.y < b.y + b.h && a.y + a.h > b.y;
@@ -510,11 +510,22 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
     item.x=K.clamp(e.x+e.w/2-8,8,s.room.width-24);item.y=K.surfaceAt(s,item.x+8,e.y+e.h-4)-20;item.enabled=true;
     K.effect(s,'drop-rise',item.x+8,item.y,{color:K.DROPS[item.kind].color});K.event(s,'drop',{id:e.id,kind:item.kind,x:item.x,y:item.y});
   };
+  K.pickupInfo=function(s,item){
+    const key={heal:'hp',focus:'focus',rage:'rage'}[item.kind],label={heal:'生命',focus:'定力',rage:'战意'}[item.kind],cap=item.kind==='heal'?K.maxHP(s):100;
+    const amount=item.amount||(item.kind==='heal'?22:30),current=s.player[key],full=current>=cap;
+    return {name:K.DROPS[item.kind].name,key,label,cap,current,amount,full,gain:Math.min(amount,cap-current)};
+  };
+  K.pickupHint=function(s,item){
+    const q=K.pickupInfo(s,item);
+    if(!q.full)return q.name+' · '+q.label+' +'+q.gain+' · 走近自动拾取';
+    const action=item.kind==='rage'?'先用 R 大招':item.kind==='focus'?'神通消耗后可拾取':'暂留原地';
+    return q.name+' · '+q.label+'已满（'+Math.ceil(q.current)+'/'+q.cap+'）· '+action;
+  };
   K.collectPickup=function(s,item){
-    if(s.mode!=='playing'||item.used||item.enabled===false)return;const p=s.player,cap=item.kind==='heal'?K.maxHP(s):100,key={heal:'hp',focus:'focus',rage:'rage'}[item.kind];
-    if(p[key]>=cap)return;const amount=item.amount||(item.kind==='heal'?22:30);item.used=true;
-    if(item.kind==='rage')K.gainRage(s,amount);else p[key]=Math.min(cap,p[key]+amount);
-    s.stats.drops+=(item.sourceId!==undefined?1:0);K.event(s,'pickup',{kind:item.kind,amount,sourceId:item.sourceId});K.effect(s,'notice',p.x,p.y-5,{text:({heal:'生命',focus:'定力',rage:'战意'}[item.kind])+' +'+amount});
+    if(s.mode!=='playing'||item.used||item.enabled===false)return;const p=s.player,q=K.pickupInfo(s,item);
+    if(q.full)return;item.used=true;
+    if(item.kind==='rage')K.gainRage(s,q.gain);else p[q.key]+=q.gain;
+    s.stats.drops+=(item.sourceId!==undefined?1:0);K.event(s,'pickup',{kind:item.kind,amount:q.gain,sourceId:item.sourceId});K.effect(s,'notice',p.x,p.y-5,{text:q.label+' +'+q.gain});
   };
   K.journeyInteract=function(s){
     const p=s.player,t=s.room.trial,c=s.room.camp;
@@ -971,7 +982,7 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
       for(const p of s.room.platforms)this.platform(p);
       for(const h of s.room.hazards){const phase=K.hazardPhase(s,h);if(phase==='quiet'){pixel(c,h.x,h.y+h.h-2,h.w,2,'#725b76');continue;}if(phase==='warning'){pixel(c,h.x,h.y+h.h-2,h.w,2,'#d295b8');for(let j=0;j<h.w;j+=14)pixel(c,h.x+j,h.y+4,5,2,'#a7719a');continue;}for(let x=h.x;x<h.x+h.w;x+=11)poly(c,[[x,h.y+h.h],[x+5,h.y-4],[x+11,h.y+h.h]],'#b5769e');pixel(c,h.x,h.y+h.h-3,h.w,3,'#573c59');}
       for(const q of s.room.seals){if(this.drawSeal&&K.ImageArt?.images.enemies){this.drawSeal(q);continue;}if(q.hp>0){pixel(c,q.x-5,q.y+38,38,10,'#6c6075');pixel(c,q.x+6,q.y+4,16,34,'#393343');pixel(c,q.x+9,q.y+8,10,25,'#c984c2');this.lotus(q.x+14,q.y+7,15,'#bf80b5',false);for(let i=0;i<3;i++)pixel(c,q.x+9+i*5,q.y-13,3,3,q.hp>i*14?'#d8a4cc':'#463c52');}else{pixel(c,q.x-6,q.y+40,39,8,'#5a5e62');pixel(c,q.x+6,q.y+31,14,8,'#807e78');}}
-      for(const item of s.room.pickups)if(!item.used&&item.enabled!==false){const y=item.y+Math.round(Math.sin(t*3+item.x)*3);this.lotus(item.x+8,y+8,10,item.kind==='heal'?'#c4dba3':item.kind==='rage'?'#f0c671':'#91d2d4',false);pixel(c,item.x+5,y+20,7,2,'#57636b');}
+      for(const item of s.room.pickups)if(!item.used&&item.enabled!==false)this.drawPickup(item);
       if(stage<3&&this.drawGate){this.drawGate(s.room.exit,s.room.seals.every(q=>q.hp===0));}else if(stage<3){const open=s.room.seals.every(q=>q.hp===0);pixel(c,s.room.exit-20,333,52,108,'#3e3544');pixel(c,s.room.exit-12,338,36,102,open?'#586e65':'#302936');pixel(c,s.room.exit-25,330,62,6,'#aa9679');pixel(c,s.room.exit-30,326,72,4,'#625864');for(let i=0;i<4;i++)pixel(c,s.room.exit-8+i*9,342,2,93,open?'#a8caa0':'#5f4567');if(open){for(let i=0;i<7;i++)pixel(c,s.room.exit+Math.sin(t+i)*14,365+(i*11+t*20)%65,2,4,'#d6dba6');}}
       for(const e of s.room.enemies)if(e.hp>0&&!e.dormant){pixel(c,e.x-2,e.y+e.h-1,e.w+4,4,'#19212d');if(e.kind==='boss'){const col=e.phase==='recover'?'#d4b985':'#805575';for(let i=0;i<10;i++){const ang=e.phase==='recover'?i*Math.PI/5:-Math.PI/2+i*Math.PI/9;pixel(c,e.x+24+Math.cos(ang)*39*(e.phase==='recover'?1:e.face),e.y+30+Math.sin(ang)*48,4,4,col);}}const f=e.phase==='attack'?5:e.phase.includes('windup')?4:Math.floor(t*3)%4;const yy=0;this.person(e.kind,e.x,e.y+yy,e.face,f,1,e.flash>0,e.kind==='boss'?1.12:1);
         if(e.kind!=='boss'&&e.hp<e.maxHp){pixel(c,e.x-5,e.y-21,36,3,'#302634');pixel(c,e.x-5,e.y-21,Math.ceil(36*e.hp/e.maxHp),3,'#bd8494');}
@@ -992,6 +1003,7 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
       for(let i=0;i<14;i++){const x=(i*79+t*(i%2?11:-6)+960)%960,y=180+(i*43+t*8)%350;pixel(c,x,y,2,2,'#a99d80');}
       pixel(c,0,0,960,2,'#887661');pixel(c,0,538,960,2,'#534a50');
     }
+    drawPickup(item){const y=item.y+Math.round(Math.sin(this.clock*3+item.x)*3);this.lotus(item.x+8,y+8,10,item.kind==='heal'?'#c4dba3':item.kind==='rage'?'#f0c671':'#91d2d4',false);pixel(this.c,item.x+5,y+20,7,2,'#57636b');}
     lotus(x,y,r,color,large){const c=this.c;for(let i=0;i<7;i++){const ang=-Math.PI+i*Math.PI/6,px=x+Math.cos(ang)*r*.65,py=y+Math.sin(ang)*r*.55;poly(c,[[x,y],[px-r*.22,py],[px,py-r*.30],[px+r*.22,py]],color);}pixel(c,x-r*.65,y,r*1.3,large?6:3,color);}
     titleScene(t){const c=this.c;for(let i=0;i<6;i++){const x=625+i*35;pixel(c,x,420-i*7,42,130,'#303945');pixel(c,x,420-i*7,42,4,'#8e8c7b');}this.lotus(752,259,105,'#403147',true);this.person('monkey',728,316,1,0,1,false,2.0);for(let i=0;i<18;i++){const x=650+(i*43)%280+Math.sin(t*.7+i)*7,y=190+(i*59+t*10)%250;pixel(c,x,y,2,3,'#b9a582');}pixel(c,0,500,960,40,'#1c2634');for(let x=0;x<960;x+=32){pixel(c,x,501,31,3,'#4c555b');pixel(c,x+14,510,2,24,'#293641');}}
     fx(fx,t){const c=this.c;const a=K.clamp(fx.life/.3,0,1);c.save();c.globalAlpha=a;const col=fx.color||'#efd3a0';if(['hit','hurt','block','dust'].includes(fx.kind)){for(let i=0;i<7;i++){const ang=i*2.4,dist=(.45-fx.life)*80;pixel(c,fx.x+Math.cos(ang)*dist,fx.y+Math.sin(ang)*dist,fx.kind==='dust'?4:3,3,fx.kind==='hurt'?'#e7817d':col);}}
@@ -1355,14 +1367,16 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
           const a=Math.atan2(e.aimY-e.y-16,e.aimX-e.x);for(const d of[-.24,0,.24])for(let i=1;i<9;i++)rect(c,e.x+Math.cos(a+d)*i*24,e.y+16+Math.sin(a+d)*i*24,2,2,col);
         }
       }
-      // Healing uses a cross, focus a diamond, rage a three-prong flame.
-      for(const item of s.room.pickups)if(!item.used&&item.enabled!==false&&item.sourceId!==undefined){
-        const x=item.x+8,y=item.y+6+Math.round(Math.sin(this.clock*3+item.x)*3),col=K.DROPS[item.kind].color;
-        rect(c,x-7,y-7,14,14,'#222d35');
-        if(item.kind==='heal'){rect(c,x-2,y-5,4,10,col);rect(c,x-5,y-2,10,4,col);}
-        else if(item.kind==='focus'){for(let i=-4;i<=4;i++)rect(c,x-Math.abs(4-Math.abs(i)),y+i,2*Math.abs(4-Math.abs(i))+1,1,col);}
-        else{rect(c,x-4,y-1,8,6,col);rect(c,x-5,y-4,2,5,col);rect(c,x-1,y-6,2,7,col);rect(c,x+3,y-4,2,5,col);}
-      }
+    }
+    // Draw once at the actual pickup layer, after platforms: the old lotus hid these glyphs.
+    drawPickup(item){
+      const c=this.c,q=K.pickupInfo(this.scene,item),x=item.x+8,y=item.y+7+Math.round(Math.sin(this.clock*3+item.x)*3),col=K.DROPS[item.kind].color;
+      rect(c,x-5,item.y+19,10,2,'#53616a');c.save();c.globalAlpha=q.full?.55:1;
+      rect(c,x-7,y-7,14,14,'#17252f');rect(c,x-6,y-6,12,12,'#293a40');
+      if(item.kind==='heal'){rect(c,x-2,y-5,4,10,col);rect(c,x-5,y-2,10,4,col);}
+      else if(item.kind==='focus'){for(let i=-5;i<=5;i++)rect(c,x-5+Math.abs(i),y+i,11-2*Math.abs(i),1,col);rect(c,x,y-2,1,4,'#e3ffed');}
+      else{rect(c,x-4,y,8,5,col);rect(c,x-5,y-3,2,6,col);rect(c,x-1,y-6,2,9,col);rect(c,x+3,y-3,2,6,col);rect(c,x-1,y+1,2,3,'#fff0c4');}
+      c.restore();
     }
     fx(f,t){if(f.kind==='drop-rise'){const u=1-f.life/f.duration;for(let i=0;i<5;i++)rect(this.c,f.x-12+i*6,f.y-u*28-(i%2)*5,2,4,f.color);return;}super.fx(f,t);}
   };
@@ -1642,8 +1656,10 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
     if(boss){$('boss-name').textContent=boss.kind==='warden'?K.GUARDIANS[state.stage].name:'无天';$('boss-fill').style.width=boss.hp/boss.maxHp*100+'%';$('boss-hud').style.setProperty('--boss-color',boss.kind==='warden'?K.GUARDIANS[state.stage].color:'#ba77a3');$('boss-phase').textContent=boss.kind==='warden'?(boss.phase==='recover'?'收招破绽 · 出棍':boss.phase==='warden-windup'?({charge:'冲撞将至 · 跃过路径',quake:'震地将至 · 跳',fan:'散焰将至 · 跳或返弹',lantern:'索灯将至 · 离开莲印',columns:'封愿将至 · 横移',bell:'钟浪将至 · 跳'}[boss.move]):'看清下一招'):boss.phase==='recover'?'破绽已现':boss.phase==='sweep-windup'?'横扫将至 · 跳':boss.phase==='orb-windup'?'莲焰将至 · 闪':boss.phase==='rain-windup'?'落火将至 · 离开莲印':boss.phase==='shift-windup'?'移形将至 · 让路':'黑莲护在正面';}
     const trial=state.room.trial,camp=state.room.camp,nearTrial=trial&&Math.abs(p.x-trial.x)<95&&Math.abs(p.y-trial.y)<75,nearCamp=camp&&Math.abs(p.x-camp.x)<75&&Math.abs(p.y-camp.y)<65;
     const node=state.room.node,nearNode=node&&Math.abs(p.x-node.x)<90&&Math.abs(p.y-396)<95;const gate=state.stage<3&&Math.abs(p.x-state.room.exit)<85;const lamp=state.stage<3&&state.room.seals[0].hp===0&&!state.room.midClaimed&&Math.abs(p.x-state.room.seals[0].x)<85;
-    $('context-hint').hidden=screen!=='playing'||(!gate&&!lamp&&!nearNode&&!nearTrial&&!nearCamp&&state.roomTime>9);
+    const pickup=state.room.pickups.filter(q=>!q.used&&q.enabled!==false&&Math.abs(p.x+p.w/2-q.x-q.w/2)<72&&Math.abs(p.y+p.h-q.y-q.h)<54).sort((a,b)=>Math.abs(p.x-a.x)-Math.abs(p.x-b.x))[0];
+    $('context-hint').hidden=screen!=='playing'||(!gate&&!lamp&&!nearNode&&!nearTrial&&!nearCamp&&!pickup&&state.roomTime>9);
     $('context-hint').textContent=nearTrial?(trial.state==='ready'?'F 开启'+trial.name+' · 可跳过，胜后多选一项加成':trial.state==='cleared'?'F 领取试炼奖励':trial.state==='claimed'?'试炼奖励已取':'试炼进行中 · 可退回下路'):nearCamp?(camp.used?'归灯余温已尽':'F 归灯调息 · 生命+24 定力+20 · 仅一次'):nearNode?(node.state==='done'?'F 回看此地见闻':node.state==='active'?'守阵者尚在 · 可离开后返回':node.id==='bridge'?'F 燃灯接桥 · 消耗20定力':node.id==='rescue'?'F 破笼救困 · 会惊动守卒':'F 叩钟破妄 · 会惊动守钟众'):lamp?'F 借灯整顿 · 舍利、法门与符术':gate?(left?'阵眼尚存，回身破阵':guardian?.hp>0?'守关者尚在，击退后过门':'F 穿过山门'):(K.isRanged(state)?'左键瞄准掷环 · J水平掷环 · L混天绫 · K闪避':'J棍击 · L分身 · K闪避');
+    if(pickup){const text=K.pickupHint(state,pickup);$('context-hint').textContent=nearTrial||nearCamp||nearNode||lamp||gate?$('context-hint').textContent+' · '+text:text;}
     const progress=$('journey-fill');if(progress)progress.style.width=Math.min(100,p.x/state.room.exit*100)+'%';
     const labels=$('combat-labels');if(labels)labels.innerHTML=state.effects.filter(f=>f.text&&f.life>0).slice(-12).map(f=>`<span class="impact-number ${f.kind==='hurt'?'hurt':f.kind==='heavy-hit'?'heavy':f.kind==='block'?'block':''}" style="left:${(f.x-renderer.camera)/960*100}%;top:${(f.y-((f.duration||.42)-f.life)*65)/540*100}%">${esc(f.text)}</span>`).join('');
   }

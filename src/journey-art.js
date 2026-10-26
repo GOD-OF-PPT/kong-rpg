@@ -28,14 +28,16 @@
           const a=Math.atan2(e.aimY-e.y-16,e.aimX-e.x);for(const d of[-.24,0,.24])for(let i=1;i<9;i++)rect(c,e.x+Math.cos(a+d)*i*24,e.y+16+Math.sin(a+d)*i*24,2,2,col);
         }
       }
-      // Healing uses a cross, focus a diamond, rage a three-prong flame.
-      for(const item of s.room.pickups)if(!item.used&&item.enabled!==false&&item.sourceId!==undefined){
-        const x=item.x+8,y=item.y+6+Math.round(Math.sin(this.clock*3+item.x)*3),col=K.DROPS[item.kind].color;
-        rect(c,x-7,y-7,14,14,'#222d35');
-        if(item.kind==='heal'){rect(c,x-2,y-5,4,10,col);rect(c,x-5,y-2,10,4,col);}
-        else if(item.kind==='focus'){for(let i=-4;i<=4;i++)rect(c,x-Math.abs(4-Math.abs(i)),y+i,2*Math.abs(4-Math.abs(i))+1,1,col);}
-        else{rect(c,x-4,y-1,8,6,col);rect(c,x-5,y-4,2,5,col);rect(c,x-1,y-6,2,7,col);rect(c,x+3,y-4,2,5,col);}
-      }
+    }
+    // Draw once at the actual pickup layer, after platforms: the old lotus hid these glyphs.
+    drawPickup(item){
+      const c=this.c,q=K.pickupInfo(this.scene,item),x=item.x+8,y=item.y+7+Math.round(Math.sin(this.clock*3+item.x)*3),col=K.DROPS[item.kind].color;
+      rect(c,x-5,item.y+19,10,2,'#53616a');c.save();c.globalAlpha=q.full?.55:1;
+      rect(c,x-7,y-7,14,14,'#17252f');rect(c,x-6,y-6,12,12,'#293a40');
+      if(item.kind==='heal'){rect(c,x-2,y-5,4,10,col);rect(c,x-5,y-2,10,4,col);}
+      else if(item.kind==='focus'){for(let i=-5;i<=5;i++)rect(c,x-5+Math.abs(i),y+i,11-2*Math.abs(i),1,col);rect(c,x,y-2,1,4,'#e3ffed');}
+      else{rect(c,x-4,y,8,5,col);rect(c,x-5,y-3,2,6,col);rect(c,x-1,y-6,2,9,col);rect(c,x+3,y-3,2,6,col);rect(c,x-1,y+1,2,3,'#fff0c4');}
+      c.restore();
     }
     fx(f,t){if(f.kind==='drop-rise'){const u=1-f.life/f.duration;for(let i=0;i<5;i++)rect(this.c,f.x-12+i*6,f.y-u*28-(i%2)*5,2,4,f.color);return;}super.fx(f,t);}
   };
