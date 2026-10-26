@@ -1,0 +1,74 @@
+{
+  "provider": "ElevenLabs",
+  "flowId": "v8fj02jOm6mPw1Ry64T5",
+  "flowUrl": "https://elevenlabs.io/app/flows/v8fj02jOm6mPw1Ry64T5",
+  "model": "eleven_text_to_sound_v2",
+  "generatedOn": "2026-10-26",
+  "parameters": {
+    "prompt_influence": 0.3,
+    "loop": false,
+    "duration_seconds": "auto"
+  },
+  "notes": [
+    "Five completed source generations; additional variations were rate-limited. No completed source was regenerated.",
+    "ground-slam is an edited variation of staff-heavy, not a sixth ElevenLabs source.",
+    "Candidate selection uses onset/peak/decay measurements. Human listening remains unverified."
+  ],
+  "sources": [
+    {
+      "id": "staff-light",
+      "generationId": "m6wZWVSNESIWwJ4gI8x5",
+      "prompt": "A single dry, punchy bronze staff hit on padded armour: a crisp woody crack and tight short body, close-miked, one impact at the beginning followed by silence, no voice, music, ambience or long reverb",
+      "duration": 2,
+      "price": {
+        "credits": 50,
+        "price_cents": 0.5,
+        "cost_fiat_currency": "usd"
+      }
+    },
+    {
+      "id": "ring-hit",
+      "generationId": "CPmCKYFN3JPyk3XUeBTp",
+      "prompt": "One small brass combat ring striking armour, a bright hard metallic ping with a punchy short body and brief shimmer, dry close-miked, no voice, music, ambience or long resonance.",
+      "duration": 0.48,
+      "price": {
+        "credits": 50,
+        "price_cents": 0.5,
+        "cost_fiat_currency": "usd"
+      }
+    },
+    {
+      "id": "staff-heavy",
+      "generationId": "XhblVSeQRX5FVx2BqCb4",
+      "prompt": "One forceful heavy bronze staff strike on stone armour, a deep tight thump and sharp crunchy attack with a tiny gritty decay, dry close-miked game impact, no voice, music, ambience or long rumble.",
+      "duration": 3,
+      "price": {
+        "credits": 50,
+        "price_cents": 0.5,
+        "cost_fiat_currency": "usd"
+      }
+    },
+    {
+      "id": "shield-block",
+      "generationId": "4QQKM8gDpNR95DmVs2ud",
+      "prompt": "One sharp bronze shield parry, a hard metallic clack with a very short ringing tail, dry and close-miked, no voice, music, ambience or spacious reverb.",
+      "duration": 6,
+      "price": {
+        "credits": 50,
+        "price_cents": 0.5,
+        "cost_fiat_currency": "usd"
+      }
+    },
+    {
+      "id": "ultimate-hit",
+      "generationId": "nUfzmX0Hj7TeqXSosDVe",
+      "prompt": "One powerful magical metal impact, a dense low-mid punch with a crisp explosive crack and very short airy decay, dry close-miked, no voice, music, ambience or long reverb.",
+      "duration": 7,
+      "price": {
+        "credits": 50,
+        "price_cents": 0.5,
+        "cost_fiat_currency": "usd"
+      }
+    }
+  ]
+}

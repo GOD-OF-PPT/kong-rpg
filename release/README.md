@@ -1,4 +1,6 @@
-# 大圣 · 劫后行 v6.0.2
+# 大圣 · 劫后行 v6.1.0
+
+v6.1.0：使用ElevenLabs制作轻棍、重棍、盾挡、飞环和大神通五条原素材，剪成八条短采样。下劈为重棍低频变奏；挥空与命中分离，多目标范围攻击共用一次主体声，保留预警。全部内嵌离线运行。打开 [音效试听页](release/sound-check.html)，或查阅 [设计与来源](docs/audio-v6/DESIGN.md)、[验证边界](docs/audio-v6/VERIFICATION.md)。
 
 v6.0.2：补给靠近时显示名称和满值原因；药品、定力、战意使用独立图标。满值暂留，资源不足时走近自动拾取，无需F。原因与复现见 [拾取记录](docs/ranged-v6/PICKUP-6.0.2.md)。
 
@@ -48,9 +50,9 @@ npm run build
 npm run dev
 ```
 
-预览 http://127.0.0.1:5188/release/index.html 。`build` 从 assets 中的 PNG 重建内嵌素材脚本，再将脚本、CSS与图片全部内联到发行 HTML。克隆源码后先 build；正式发行包可直接离线打开。
+预览 http://127.0.0.1:5188/release/index.html 。`build` 从 assets 中的 PNG 与已处理 WAV 重建内嵌素材脚本，再将脚本、CSS、图片与声音全部内联到发行 HTML。克隆源码后先 build；正式发行包可直接离线打开。
 
-完整离线包为 `artifacts/kong-rpg-offline-v6.0.2.zip`，含v1–v5原入口，约140MiB以上，超过GitHub单文件100MiB限制，因此作为本地交付物保留。Git仓库包含全部发行文件；需要重打包时执行 `python tools/package-release.py`。
+完整离线包为 `artifacts/kong-rpg-offline-v6.1.0.zip`，含v1–v5原入口，约140MiB以上，超过GitHub单文件100MiB限制，因此作为本地交付物保留。Git仓库包含全部发行文件；需要重打包时执行 `python tools/package-release.py`。
 
 `src/content.js` 内容与种子；`simulation.js` 固定120Hz模拟；`heroes.js` 角色、回环、绫缚与远距反制；`journey.js` 延长路线、强化怪、掉落、试炼与归灯；`progression.js` 成长、符术、大招与守关规则；`input.js` 键鼠与焦点；`storage.js` 版本存档；`renderer.js` 世界渲染；`visuals.js` 与 `progression-art.js` 图集和动作；`app.js` DOM界面；`audio.js` 本地声音。
 
