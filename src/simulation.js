@@ -1,7 +1,7 @@
 (function (K) {
   'use strict';
   K.newRun = function (seed, first) {
-    const s = { version:4,rules:4,growth:{},talisman:null,casts:[],world:{rescue:false,bridge:false,bell:false},journal:[],dangers:[],seed:String(seed || 'BLACK-LOTUS'), stage:0, mode:'playing',time:0,elapsed:0,roomTime:0,relics:first?[first]:[],room:null,player:null,clone:null,projectiles:[],effects:[],events:[],log:[],reward:[],rewardKind:'exit',pendingRelic:null,kills:0,broken:0,damageTaken:0,lastDamage:'',hitstop:0,shake:0,checkpoint:90,combo:0,comboTime:0,serial:0,hints:[],stats:{swings:0,hits:0,blocks:0,jumps:0,dashes:0,clones:0,focusSpent:0,rests:0,ultimates:0,talismans:0,guardians:0} };
+    const s = { version:5,rules:5,growth:{},talisman:null,casts:[],world:{rescue:false,bridge:false,bell:false},journal:[],dangers:[],seed:String(seed || 'BLACK-LOTUS'), stage:0, mode:'playing',time:0,elapsed:0,roomTime:0,relics:first?[first]:[],room:null,player:null,clone:null,projectiles:[],effects:[],events:[],log:[],reward:[],rewardKind:'exit',pendingRelic:null,kills:0,broken:0,damageTaken:0,lastDamage:'',hitstop:0,shake:0,checkpoint:90,combo:0,comboTime:0,serial:0,hints:[],stats:{swings:0,hits:0,blocks:0,jumps:0,dashes:0,clones:0,focusSpent:0,rests:0,ultimates:0,talismans:0,guardians:0,drops:0,camps:0,trials:0} };
     K.enterRoom(s, 0, true); return s;
   };
   K.enterRoom = function (s, stage, initial) {
@@ -30,10 +30,11 @@
     if (e.kind === 'shield' && front && !pierce && e.stun <= 0 && e.phase !== 'recover') { K.effect(s,'block',e.x+(e.face>0?e.w:0),e.y+16,{text:'格挡',face:Math.sign(e.x-origin)||1});K.event(s,'blocked',{target:e.id});s.player.focus=Math.min(100,s.player.focus+3);return false; }
     e.hp=Math.max(0,e.hp-amount);e.flash=.08;e.stun=K.isMajor(e)?0:.065;e.recoil=.12;e.recoilFace=Math.sign(e.x-origin)||1;
     if((!K.isMajor(e)&&['heavy','thunder','ultimate'].includes(impact)&&e.phase.endsWith('windup')&&(e.interruptLock||0)<=0)||(e.kind==='warden'&&impact==='ultimate')){e.phase='recover';e.timer=.85;e.marks=[];e.interruptLock=1;K.event(s,'interrupt',{target:e.id});K.effect(s,'block',e.x+12,e.y+4,{text:'破势'});}
-    if(!K.isMajor(e)){const bounds=K.patrolBounds(s,e);e.x=K.clamp(e.x+Math.sign(e.x-origin)*12,bounds.min,bounds.max);}
+    if(!K.isMajor(e)&&!(e.trait&&e.phase.endsWith('windup')&&impact==='light')){const bounds=K.patrolBounds(s,e);e.x=K.clamp(e.x+Math.sign(e.x-origin)*12,bounds.min,bounds.max);}
     const heavy=['heavy','ultimate','thunder'].includes(impact);K.effect(s,heavy?'heavy-hit':'hit',e.x+e.w/2,e.y+18,{text:String(amount),face:Math.sign(e.x-origin)||1,impact,color:heavy?'#ffe9a8':'#fff1ce'});
     s.hitstop=Math.max(s.hitstop,heavy?.058:.018);s.shake=heavy?.18:.065;K.event(s,'hit',{target:e.id,kind:e.kind,amount,impact,x:e.x+e.w/2,y:e.y+18});if(impact!=='ultimate')K.gainRage(s,impact==='heavy'?14:8);
     if (e.hp === 0) { s.kills++;s.player.focus=Math.min(100,s.player.focus+10);K.effect(s,'kill',e.x+e.w/2,e.y+20,{face:Math.sign(e.x-origin)||1});K.event(s,'kill',{kind:e.kind});
+      if(K.dropEnemy)K.dropEnemy(s,e);
       if(e.kind==='warden'){e.marks=[];s.stats.guardians++;K.gainRage(s,18);s.player.hp=Math.min(K.maxHP(s),s.player.hp+12);K.event(s,'guardian-defeat',{name:K.GUARDIANS[s.stage].name});}
       if (e.kind === 'boss') { s.mode = 'won'; K.event(s, 'victory'); }
     }
@@ -102,7 +103,7 @@
     }
     if (p.y > 590) { p.invuln = 0; K.damage(s, 18, '坠入云渊'); p.x = K.clamp(s.checkpoint - 35, 30, s.room.width - 100); p.y = 396; p.vy = 0; p.vx = 0; p.slam = false; }
     for (const h of s.room.hazards) if(K.hazardPhase(s,h)==='active'&&K.overlap(p,h))K.damage(s,14,h.period?'灵山·地焰':'黑莲地刺',-p.face);
-    for (const item of s.room.pickups) if (!item.used && K.overlap(p, item)) { item.used = true; if (item.kind === 'heal') p.hp = Math.min(K.maxHP(s), p.hp + 22); else p.focus = Math.min(100, p.focus + 30); K.event(s, 'pickup', { kind: item.kind }); K.effect(s, 'notice', p.x, p.y - 5, { text: item.kind === 'heal' ? '生命 +22' : '定力 +30' }); }
+    for(const item of s.room.pickups)if(!item.used&&item.enabled!==false&&K.overlap(p,item))K.collectPickup(s,item);
     if (s.clone) {
       const c = s.clone; c.life -= dt; c.timer -= dt;
       if (c.timer <= 0) { c.timer = .52; const candidates = s.room.enemies.filter(e => e.hp > 0); const target = candidates.sort((a, b) => Math.abs(a.x - c.x) - Math.abs(b.x - c.x))[0]; c.face = target ? Math.sign(target.x - c.x) || 1 : c.face;
@@ -123,10 +124,11 @@
     }
     s.projectiles = s.projectiles.filter(b => b.life > 0 && b.x > -100 && b.x < s.room.width + 100);
     for(const d of s.dangers){d.life-=dt;if(d.life>0&&K.overlap(p,d))K.damage(s,d.damage,d.source,Math.sign(p.x-d.x-d.w/2));}s.dangers=s.dangers.filter(d=>d.life>0);
-    K.updateWorld(s);
+    K.updateWorld(s);K.updateJourney(s);
     for(const q of s.room.seals)if(q.hp>0&&Math.abs(q.x-p.x)<420){q.pulse=(q.pulse??2.2)-dt;q.warning=q.pulse<.65;if(q.pulse<=0){q.pulse=3.4;q.warning=false;for(const face of[-1,1])s.projectiles.push({x:q.x+14,y:q.y+25,vx:face*175,vy:0,w:12,h:12,life:2.5,friendly:false});K.event(s,'seal-burst',{id:q.id});}}
     for(let i=0;i<s.room.signs.length;i++)if(Math.abs(s.room.signs[i].x-p.x)<65&&!s.hints.includes(s.stage+':'+i)){s.hints.push(s.stage+':'+i);K.event(s,'hint',{text:s.room.signs[i].text});}
-    if(a.interactPressed&&s.mode==='playing'&&K.worldInteract(s)){}
+    if(a.interactPressed&&s.mode==='playing'&&K.journeyInteract(s)){}
+    else if(a.interactPressed&&s.mode==='playing'&&K.worldInteract(s)){}
     else if(a.interactPressed&&s.mode==='playing'&&s.stage<3&&s.room.seals[0].hp===0&&!s.room.midClaimed&&Math.abs(p.x-s.room.seals[0].x)<85){s.rewardKind='mid';s.reward=K.options(s);s.mode='reward';K.event(s,'reward',{kind:'mid'});}
     else if (a.interactPressed && s.mode === 'playing' && s.stage < 3 && Math.abs(p.x - s.room.exit) < 85) {
       if (s.room.seals.some(q => q.hp > 0)||K.guardian(s)?.hp>0) K.event(s, 'gate-locked');
@@ -135,7 +137,7 @@
   };
   K.stepEnemy=function(s,e,dt,oldY){
     if(e.hp<=0||e.dormant||s.mode!=='playing')return;
-    const p=s.player;e.flash=Math.max(0,e.flash-dt);e.stun=Math.max(0,e.stun-dt);e.recoil=Math.max(0,(e.recoil||0)-dt);e.interruptLock=Math.max(0,(e.interruptLock||0)-dt);
+    const p=s.player,o=s.room.arena.offset;e.flash=Math.max(0,e.flash-dt);e.stun=Math.max(0,e.stun-dt);e.recoil=Math.max(0,(e.recoil||0)-dt);e.interruptLock=Math.max(0,(e.interruptLock||0)-dt);
     if(e.kind==='caster')e.y=e.baseY+Math.sin(s.time*2+e.id)*4;
     const target=s.clone&&Math.abs(s.clone.x-e.x)<380?s.clone:p,dx=target.x-e.x,near=Math.abs(dx);
     e.timer=Math.max(-1,e.timer-dt);if(e.stun>0&&e.phase==='idle')return;
@@ -143,40 +145,40 @@
     else if(e.kind==='boss'){
       if(e.phase==='idle'&&e.timer<=0){
         e.attacks++;e.phase=e.attacks%3===0?'rain-windup':e.attacks%2?'sweep-windup':'orb-windup';e.timer=e.phase==='rain-windup'?1.05:e.hp<135?.65:.9;e.face=Math.sign(target.x-e.x)||-1;
-        if(e.phase==='rain-windup'){const center=K.clamp(target.x+12,110,850),offsets=s.world.bell?[-95,95]:[-150,0,150];e.marks=offsets.map(offset=>({x:K.clamp(center+offset-42,24,852),y:418,w:84,h:22}));}
+        if(e.phase==='rain-windup'){const center=K.clamp(target.x+12,110+o,850+o),offsets=s.world.bell?[-95,95]:[-150,0,150];e.marks=offsets.map(offset=>({x:K.clamp(center+offset-42,24+o,852+o),y:418,w:84,h:22}));}
         K.event(s,'boss-warning',{attack:e.phase,x:e.x,y:e.y,face:e.face});
       }else if(e.phase==='rain-windup'&&e.timer<=0){for(const box of e.marks||[])s.dangers.push({...box,life:.45,damage:16,source:'无天·黑莲落火'});e.marks=[];e.phase='recover';e.timer=1.5;K.event(s,'enemy-attack',{kind:'boss',move:'rain'});}
       else if(['sweep-windup','orb-windup'].includes(e.phase)&&e.timer<=0){
         if(e.phase==='sweep-windup'){e.phase='sweep';e.timer=.34;K.event(s,'enemy-attack',{id:e.id,kind:e.kind,box:K.enemyAttackBox(e)});}
         else{const n=e.hp<135?5:3;for(let i=0;i<n;i++)s.projectiles.push({x:e.x+12,y:e.y+22,vx:e.face*240,vy:(i-(n-1)/2)*72,w:15,h:15,life:4,friendly:false});e.phase='recover';e.timer=1.3;}
       }else if(e.phase==='sweep'){if(K.overlap(p,K.enemyAttackBox(e)))K.damage(s,18,'无天·黑莲横扫',e.face);if(e.timer<=0){e.phase='recover';e.timer=1.2;}}
-      else if(e.phase==='recover'&&e.timer<=0){e.shiftTo=e.x>500?260:710;e.phase='shift-windup';e.timer=.55;K.event(s,'boss-shift-warning',{from:e.x,to:e.shiftTo});}
+      else if(e.phase==='recover'&&e.timer<=0){e.shiftTo=e.x>500+o?260+o:710+o;e.phase='shift-windup';e.timer=.55;K.event(s,'boss-shift-warning',{from:e.x,to:e.shiftTo});}
       else if(e.phase==='shift-windup'&&e.timer<=0){e.phase='shift';e.timer=.8;e.face=Math.sign(e.shiftTo-e.x);K.event(s,'boss-shift',{from:e.x,to:e.shiftTo});}
       else if(e.phase==='shift'){e.x+=Math.sign(e.shiftTo-e.x)*650*dt;if(Math.abs(e.x-e.shiftTo)<8||e.timer<=0){e.x=e.shiftTo;e.phase='idle';e.timer=.4;}}
     }else if(e.kind==='caster'){
       if(e.phase==='idle'&&near<600&&e.timer<=0){
-        e.attacks++;const sigil=e.style==='sigil'&&e.attacks%2===0;e.phase=sigil?'sigil-windup':'windup';e.timer=sigil?.95:.75;e.face=Math.sign(dx)||1;e.aimX=target.x+12;e.aimY=sigil?K.surfaceAt(s,target.x+12,target.y+35):target.y+18;
+        e.attacks++;const sigil=e.trait!=='volley'&&e.style==='sigil'&&e.attacks%2===0;e.phase=sigil?'sigil-windup':'windup';e.timer=sigil?.95:e.trait==='volley'?1.05:.75;e.face=Math.sign(dx)||1;e.aimX=target.x+12;e.aimY=sigil?K.surfaceAt(s,target.x+12,target.y+35):target.y+18;
         K.event(s,'warning',{kind:e.kind,id:e.id,move:sigil?'sigil':'orb',aimX:e.aimX,aimY:e.aimY});
       }else if(e.phase==='sigil-windup'&&e.timer<=0){s.dangers.push({...K.sigilBox(e),life:.38,damage:12,source:'莲灯使·锁地咒'});e.phase='recover';e.timer=1.25;K.event(s,'enemy-attack',{kind:e.kind,move:'sigil'});}
-      else if(e.phase==='windup'&&e.timer<=0){const tx=e.aimX-e.x,ty=e.aimY-e.y-16,len=Math.hypot(tx,ty)||1;s.projectiles.push({x:e.x,y:e.y+16,vx:tx/len*220,vy:ty/len*220,w:12,h:12,life:3,friendly:false});e.phase='idle';e.timer=1.8;}
+      else if(e.phase==='windup'&&e.timer<=0){const tx=e.aimX-e.x,ty=e.aimY-e.y-16,len=Math.hypot(tx,ty)||1;for(const angle of(e.trait==='volley'?[-.24,0,.24]:[0])){const vx=tx/len*220,vy=ty/len*220;s.projectiles.push({x:e.x,y:e.y+16,vx:vx*Math.cos(angle)-vy*Math.sin(angle),vy:vx*Math.sin(angle)+vy*Math.cos(angle),w:12,h:12,life:3,friendly:false});}e.phase='recover';e.timer=1.4;}
       else if(e.phase==='recover'&&e.timer<=0){e.phase='idle';e.timer=.3;}
     }else{
       if(e.phase==='idle'){
         const reach=e.style==='rush'?185:e.style==='lunge'?145:84;
-        if(near<reach&&Math.abs(target.y-e.y)<65&&e.timer<=0){e.face=Math.sign(dx)||e.face;e.attacks++;const special=e.attacks%2===1&&e.style!=='basic';e.phase=special?e.style+'-windup':'windup';e.timer=special?(e.style==='rush'?.85:.62):e.kind==='shield'?.7:.52;K.event(s,'warning',{kind:e.kind,id:e.id,move:e.phase,x:e.x,y:e.y,face:e.face});}
+        if(near<reach&&Math.abs(target.y-e.y)<65&&e.timer<=0){e.face=Math.sign(dx)||e.face;e.attacks++;e.followup=false;const special=e.trait!=='twin'&&e.attacks%2===1&&e.style!=='basic';e.phase=special?e.style+'-windup':'windup';e.timer=special?(e.style==='rush'?.85:.62):e.kind==='shield'?.7:.52;K.event(s,'warning',{kind:e.kind,id:e.id,move:e.phase,x:e.x,y:e.y,face:e.face});}
         else if(near>50&&near<330){if(e.kind!=='shield'||e.timer<=0){e.face=Math.sign(dx);if(e.kind==='shield')e.timer=.6;}const bounds=K.patrolBounds(s,e);e.x=K.clamp(e.x+e.face*(e.kind==='shield'?28:53)*dt,bounds.min,bounds.max);}
       }else if(['rush-windup','lunge-windup'].includes(e.phase)&&e.timer<=0){e.phase=e.phase.split('-')[0];e.timer=e.phase==='rush'?.36:.24;K.event(s,'enemy-attack',{kind:e.kind,id:e.id,move:e.phase});}
       else if(['rush','lunge'].includes(e.phase)){
         const bounds=K.patrolBounds(s,e);e.x=K.clamp(e.x+e.face*(e.phase==='rush'?360:285)*Math.min(dt,Math.max(0,e.timer+dt)),bounds.min,bounds.max);if(K.overlap(p,K.enemyAttackBox(e)))K.damage(s,e.kind==='shield'?16:12,e.kind==='shield'?'重盾兵·蓄势冲撞':'执刃魔兵·突进斩',e.face);
         if(e.timer<=0){e.phase='recover';e.timer=1.15;}
-      }else if(e.phase==='windup'&&e.timer<=0){e.phase='attack';e.timer=.18;K.event(s,'enemy-attack',{kind:e.kind,id:e.id,box:K.enemyAttackBox(e)});}
-      else if(e.phase==='attack'){if(K.overlap(K.enemyAttackBox(e),p))K.damage(s,e.kind==='shield'?16:12,e.kind==='shield'?'重盾兵·盾撞':'执刃魔兵·斩击',e.face);if(e.timer<=0){e.phase='recover';e.timer=.9;}}
+      }else if(['windup','chain-windup'].includes(e.phase)&&e.timer<=0){e.phase='attack';e.timer=.18;K.event(s,'enemy-attack',{kind:e.kind,id:e.id,box:K.enemyAttackBox(e)});}
+      else if(e.phase==='attack'){if(K.overlap(K.enemyAttackBox(e),p))K.damage(s,e.kind==='shield'?16:12,e.kind==='shield'?'重盾兵·盾撞':'执刃魔兵·斩击',e.face);if(e.timer<=0){if(e.trait==='twin'&&!e.followup){e.followup=true;e.phase='chain-windup';e.timer=.48;K.event(s,'warning',{kind:e.kind,id:e.id,move:'second-slash'});}else{if(e.trait==='pulse')s.projectiles.push({x:e.x+e.w/2,y:428,vx:e.face*175,vy:0,w:24,h:12,life:2.8,friendly:false,source:'震盾兵·地波'});e.phase='recover';e.timer=e.trait==='twin'?1.25:.9;}}}
       else if(e.phase==='recover'&&e.timer<=0){e.phase='idle';e.timer=.2;}
     }
     if(p.vy>70&&oldY+p.h<=e.y+12&&K.overlap(p,e)){K.hitEnemy(s,e,p.slam?30:19,p.x,true,'heavy');p.vy=-380;p.y=e.y-p.h;p.airJumps=0;p.slam=false;K.event(s,'stomp',{kind:e.kind});}
     else if(e.kind!=='caster'&&p.dash<=0&&K.overlap(p,e)){if(e.kind==='boss'&&e.phase==='shift')K.damage(s,15,'无天·移形冲击',e.face);else{p.x=p.x+12<e.x+e.w/2?e.x-p.w-1:e.x+e.w+1;p.vx=0;}}
   };
-  K.enemyAttackBox=function(e){return e.kind==='warden'?K.wardenAttackBox(e):e.kind==='boss'?{x:e.face>0?e.x+12:e.x-200,y:410,w:240,h:30}:{x:e.face>0?e.x+14:e.x-46,y:e.y+6,w:60,h:32};};
+  K.enemyAttackBox=function(e){if(e.trait==='twin'&&e.followup)return{x:e.face>0?e.x+14:e.x-80,y:e.y+6,w:94,h:32};return e.kind==='warden'?K.wardenAttackBox(e):e.kind==='boss'?{x:e.face>0?e.x+12:e.x-200,y:410,w:240,h:30}:{x:e.face>0?e.x+14:e.x-46,y:e.y+6,w:60,h:32};};
   K.patrolBounds=function(s,e){const p=s.room.platforms.find(p=>Math.abs(p.y-e.baseY-e.h)<3&&e.origin>=p.x&&e.origin<p.x+p.w);return p?{min:Math.max(e.origin-100,p.x),max:Math.min(e.origin+100,p.x+p.w-e.w)}:{min:e.origin-100,max:e.origin+100};};
   K.choose=function(s,id,replace){if(s.mode!=='reward'||!s.reward.includes(id))return false;
     if(id==='rest'){s.player.hp=Math.min(K.maxHP(s),s.player.hp+30);s.player.focus=Math.min(100,s.player.focus+35);s.stats.rests++;}
@@ -187,7 +189,7 @@
     }
     else if(s.relics.length>=3){if(!s.relics.includes(replace)){s.pendingRelic=id;return 'replace';}s.relics[s.relics.indexOf(replace)]=id;K.event(s,'relic',{id,replace});}
     else{s.relics.push(id);K.event(s,'relic',{id});}
-    if(s.rewardKind==='mid'){s.room.midClaimed=true;s.mode='playing';s.reward=[];s.pendingRelic=null;s.player.invuln=Math.max(s.player.invuln,.5);}
+    if(s.rewardKind==='mid'||s.rewardKind==='trial'){if(s.rewardKind==='trial')s.room.trial.state='claimed';else s.room.midClaimed=true;s.mode='playing';s.reward=[];s.pendingRelic=null;s.player.invuln=Math.max(s.player.invuln,.5);}
     else K.enterRoom(s,s.stage+1,false);
     return true;
   };

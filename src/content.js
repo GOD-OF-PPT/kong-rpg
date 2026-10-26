@@ -1,6 +1,6 @@
 (function (K) {
   'use strict';
-  K.VERSION = '4.0.0';
+  K.VERSION = '5.0.0';
   K.W = 960; K.H = 540; K.DT = 1 / 120;
   K.clamp = (v, a, b) => Math.max(a, Math.min(b, v));
   K.overlap = (a, b) => a.x < b.x + b.w && a.x + a.w > b.x && a.y < b.y + b.h && a.y + a.h > b.y;
@@ -25,7 +25,7 @@
   K.has = (s,id) => s.relics.includes(id);
   K.enemy = function(kind,x,y,id) {
     const boss=kind==='boss'; const h=boss?72:40;
-    return {id,kind,x,y:y===undefined?(boss?368:kind==='caster'?327:400):y,w:boss?48:26,h,hp:boss?270:kind==='shield'?60:38,maxHp:boss?270:kind==='shield'?60:38,face:-1,phase:'idle',style:'basic',recoil:0,recoilFace:1,timer:kind==='caster'?.45+id*.07:boss?.8:0,stun:0,flash:0,attacks:0,struck:false,origin:x,baseY:y===undefined?(kind==='caster'?327:400):y,interruptLock:0};
+    return {id,kind,x,y:y===undefined?(boss?368:kind==='caster'?327:400):y,w:boss?48:26,h,hp:boss?270:kind==='shield'?60:38,maxHp:boss?270:kind==='shield'?60:38,face:-1,phase:'idle',style:'basic',recoil:0,recoilFace:1,timer:kind==='caster'?.45+(id%10)*.07:boss?.8:0,stun:0,flash:0,attacks:0,struck:false,followup:false,origin:x,baseY:y===undefined?(kind==='caster'?327:400):y,interruptLock:0};
   };
   const BLUEPRINTS = [
     {ground:[[0,820],[920,870],[1900,850],[2860,810],[3780,1380]],

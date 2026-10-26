@@ -12,9 +12,12 @@ const temp=path.join(out,'.index-build-'+process.pid+'.html');fs.writeFileSync(t
 // Windows readers/AV can briefly hold a file handle during the atomic replace.
 for(let attempt=0;;attempt++){try{fs.renameSync(temp,path.join(out,'index.html'));break;}catch(error){if(attempt>=20||!['EPERM','EACCES','EBUSY'].includes(error.code))throw error;Atomics.wait(new Int32Array(new SharedArrayBuffer(4)),0,0,100);}}
 fs.copyFileSync(path.join(root,'README.md'),path.join(out,'README.md'));
-for(const folder of ['art-v1','readability','complete-v2','dialog-ui','combat-v3','progression-v4']){fs.mkdirSync(path.join(out,'docs',folder),{recursive:true});for(const file of fs.readdirSync(path.join(root,'docs',folder)).filter(x=>x.endsWith('.md')))fs.copyFileSync(path.join(root,'docs',folder,file),path.join(out,'docs',folder,file));}
+for(const folder of ['art-v1','readability','complete-v2','dialog-ui','combat-v3','progression-v4','journey-v5']){fs.mkdirSync(path.join(out,'docs',folder),{recursive:true});for(const file of fs.readdirSync(path.join(root,'docs',folder)).filter(x=>x.endsWith('.md')))fs.copyFileSync(path.join(root,'docs',folder,file),path.join(out,'docs',folder,file));}
 if(!fs.existsSync(path.join(out,'legacy-v2.html')))throw new Error('Preserved v2.1 entry is missing');
+if(!fs.existsSync(path.join(out,'legacy-v4.html')))throw new Error('Preserved v4 entry is missing');
 if(!fs.existsSync(path.join(out,'legacy-v3.html')))throw new Error('Preserved v3.0.2 entry is missing');
 if(!fs.existsSync(path.join(out,'legacy-v1.html')))throw new Error('Preserved v1.2 entry is missing');
-fs.writeFileSync(path.join(out,'manifest.json'),JSON.stringify({version:JSON.parse(fs.readFileSync(path.join(root,'package.json'),'utf8')).version,entry:'index.html',sha256:crypto.createHash('sha256').update(html).digest('hex'),bytes:Buffer.byteLength(html),runtimeDependencies:[],legacyEntry:'legacy-v3.html',legacyEntries:['legacy-v1.html','legacy-v2.html','legacy-v3.html']},null,2));
+const manifest=JSON.stringify({version:JSON.parse(fs.readFileSync(path.join(root,'package.json'),'utf8')).version,entry:'index.html',sha256:crypto.createHash('sha256').update(html).digest('hex'),bytes:Buffer.byteLength(html),runtimeDependencies:[],legacyEntry:'legacy-v4.html',legacyEntries:['legacy-v1.html','legacy-v2.html','legacy-v3.html','legacy-v4.html']},null,2);
+const manifestTemp=path.join(out,'.manifest-build-'+process.pid+'.json');fs.writeFileSync(manifestTemp,manifest);
+for(let attempt=0;;attempt++){try{fs.renameSync(manifestTemp,path.join(out,'manifest.json'));break;}catch(error){if(attempt>=20||!['EPERM','EACCES','EBUSY','UNKNOWN'].includes(error.code))throw error;Atomics.wait(new Int32Array(new SharedArrayBuffer(4)),0,0,100);}}
 console.log('Standalone release:',Buffer.byteLength(html),'bytes');

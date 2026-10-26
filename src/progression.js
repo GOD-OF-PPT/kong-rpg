@@ -15,7 +15,7 @@
   K.reward=id=>K.relic(id)||K.GROWTH.find(r=>r.id===id);
   K.rewardEligible=(s,id)=>{const r=K.reward(id);return !!r&&(K.relic(id)?id==='rest'||!K.has(s,id):r.temporary||K.rank(s,id)<r.max);};
   K.options=function(s){
-    const random=K.rng(K.seedNumber(s.seed)+s.stage*771+(s.rewardKind==='mid'?29:91));
+    const random=K.rng(K.seedNumber(s.seed)+s.stage*771+(s.rewardKind==='mid'?29:s.rewardKind==='trial'?57:91));
     const shuffled=xs=>xs.map(r=>({r,n:random()})).sort((a,b)=>a.n-b.n).map(x=>x.r);
     const roots=shuffled([...K.RELICS,...K.GROWTH.filter(r=>r.id==='vitality'||r.id==='staff-wave')].filter(r=>K.rewardEligible(s,r.id)));
     const arts=shuffled(K.GROWTH.filter(r=>r.id!=='vitality'&&K.rewardEligible(s,r.id)));
@@ -55,21 +55,28 @@
   K.isMajor=e=>e.kind==='boss'||e.kind==='warden';
   K.guardian=s=>s.room.enemies.find(e=>e.kind==='warden');
   K.attachGuardian=function(room,stage){if(stage===3)return;room.enemies=room.enemies.filter(e=>e.origin<4470);const def=K.GUARDIANS[stage],e=K.enemy('warden',4860,352,900);Object.assign(e,{guardian:def.id,w:58,h:88,hp:def.hp,maxHp:def.hp,baseY:352,dormant:true,move:'',marks:[],timer:.8});room.enemies.push(e);room.signs.push({x:4380,text:def.name+'镇守山门：'+def.lesson});};
-  K.updateArena=function(s){const e=K.guardian(s);if(!e||e.hp<=0)return;const p=s.player;if(e.dormant&&p.x>=4470){e.dormant=false;e.timer=1.2;s.checkpoint=4500;K.event(s,'guardian-enter',{name:K.GUARDIANS[s.stage].name});}if(!e.dormant){p.x=K.clamp(p.x,4430,5128);s.checkpoint=4500;}};
+  K.updateArena=function(s){
+    const e=K.guardian(s)||s.room.enemies.find(e=>e.kind==='boss');if(!e||e.hp<=0)return;
+    const p=s.player,a=s.room.arena;if(e.dormant&&p.x>=a.enter){
+      if(s.stage===3&&s.room.seals.some(q=>q.hp>0)){p.x=a.enter-25;return;}
+      e.dormant=false;e.timer=1.2;s.checkpoint=a.checkpoint;K.event(s,e.kind==='boss'?'boss-enter':'guardian-enter',{name:e.kind==='boss'?'无天':K.GUARDIANS[s.stage].name});
+    }
+    if(!e.dormant){p.x=K.clamp(p.x,a.min,a.max);s.checkpoint=a.checkpoint;}
+  };
   K.wardenAttackBox=e=>({x:e.x-5,y:e.y+5,w:e.w+10,h:e.h-5});
   K.stepWarden=function(s,e,dt,target){
     if(e.dormant)return;
-    const p=s.player,face=Math.sign(target.x-e.x)||e.face;
+    const p=s.player,o=s.room.arena.offset,face=Math.sign(target.x-e.x)||e.face;
     if(e.phase==='idle'&&e.timer<=0){
       e.face=face;e.attacks++;e.phase='warden-windup';e.timer=e.guardian==='mountain'?.9:1.05;
       if(e.guardian==='mountain'){
         e.move=e.attacks%2?'charge':'quake';
-        if(e.move==='charge'){e.chargeTo=K.clamp(e.x+face*290,4460,5060);const box=K.wardenAttackBox(e);e.marks=[{x:Math.min(box.x,e.chargeTo-5),y:box.y,w:Math.abs(e.chargeTo-e.x)+box.w,h:box.h}];}
-        else e.marks=[{x:Math.max(4430,e.x-150),y:414,w:Math.min(300,5140-Math.max(4430,e.x-150)),h:26}];
+        if(e.move==='charge'){e.chargeTo=K.clamp(e.x+face*290,4460+o,5060+o);const box=K.wardenAttackBox(e);e.marks=[{x:Math.min(box.x,e.chargeTo-5),y:box.y,w:Math.abs(e.chargeTo-e.x)+box.w,h:box.h}];}
+        else e.marks=[{x:Math.max(4430+o,e.x-150),y:414,w:Math.min(300,5140+o-Math.max(4430+o,e.x-150)),h:26}];
       }else if(e.guardian==='ferry'){
-        e.move=e.attacks%2?'fan':'lantern';const center=K.clamp(target.x+12,4535,5045);e.marks=e.move==='lantern'?[-85,85].map(o=>({x:K.clamp(center+o-38,4435,5050),y:404,w:76,h:36})):[];
+        e.move=e.attacks%2?'fan':'lantern';const center=K.clamp(target.x+12,4535+o,5045+o);e.marks=e.move==='lantern'?[-85,85].map(delta=>({x:K.clamp(center+delta-38,4435+o,5050+o),y:404,w:76,h:36})):[];
       }else{
-        e.move=e.attacks%2?'columns':'bell';const center=K.clamp(target.x+12,4560,5030);e.marks=e.move==='columns'?[-140,0,140].map(o=>({x:K.clamp(center+o-25,4435,5080),y:280,w:50,h:160})):[{x:Math.max(4430,e.x-205),y:416,w:Math.min(410,5140-Math.max(4430,e.x-205)),h:24}];
+        e.move=e.attacks%2?'columns':'bell';const center=K.clamp(target.x+12,4560+o,5030+o);e.marks=e.move==='columns'?[-140,0,140].map(delta=>({x:K.clamp(center+delta-25,4435+o,5080+o),y:280,w:50,h:160})):[{x:Math.max(4430+o,e.x-205),y:416,w:Math.min(410,5140+o-Math.max(4430+o,e.x-205)),h:24}];
       }
       K.event(s,'boss-warning',{attack:e.move,name:K.GUARDIANS[s.stage].name});
     }else if(e.phase==='warden-windup'&&e.timer<=0){

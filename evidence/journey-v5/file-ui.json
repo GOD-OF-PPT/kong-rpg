@@ -1,0 +1,185 @@
+{
+  "kind": "file",
+  "version": "5.0.0",
+  "sha256": "620e43e67c9ea65fa3b2135de3142c13384952ab7c10b2d35d3785b472baa817",
+  "fixtures": "Targeted states constructed in VM and imported through normal JSON UI; not a full natural playthrough.",
+  "checks": [
+    {
+      "name": "B opens equipped build from live combat",
+      "pass": true
+    },
+    {
+      "name": "build pauses world and gates attack",
+      "pass": true
+    },
+    {
+      "name": "starting relic effect is readable",
+      "pass": true
+    },
+    {
+      "name": "Esc closes build to focused Canvas",
+      "pass": true
+    },
+    {
+      "name": "all selected relics growth ranks and remaining talisman appear",
+      "pass": true
+    },
+    {
+      "name": "current max health and rank match simulation",
+      "pass": true
+    },
+    {
+      "name": "build geometry fits 1440",
+      "pass": true,
+      "data": [
+        {
+          "class": "panel game-dialog dialog-build",
+          "x": 102.109375,
+          "y": 169.4158935546875,
+          "w": 1236,
+          "sw": 1236,
+          "h": 620,
+          "sh": 620
+        },
+        {
+          "class": "dialog-content",
+          "x": 140.109375,
+          "y": 282.1346435546875,
+          "w": 1160,
+          "sw": 1160,
+          "h": 450,
+          "sh": 450
+        },
+        {
+          "class": "build-scroll",
+          "x": 140.109375,
+          "y": 338.5252685546875,
+          "w": 1150,
+          "sw": 1150,
+          "h": 339,
+          "sh": 1061
+        }
+      ]
+    },
+    {
+      "name": "build scroll reaches last ability 1440",
+      "pass": true
+    },
+    {
+      "name": "build geometry fits 1366",
+      "pass": true,
+      "data": [
+        {
+          "class": "panel game-dialog dialog-build",
+          "x": 195.34375,
+          "y": 160.953125,
+          "w": 975,
+          "sw": 975,
+          "h": 474,
+          "sh": 474
+        },
+        {
+          "class": "dialog-content",
+          "x": 219.34375,
+          "y": 239.34375,
+          "w": 927,
+          "sw": 927,
+          "h": 352,
+          "sh": 352
+        },
+        {
+          "class": "build-scroll",
+          "x": 219.34375,
+          "y": 294.03125,
+          "w": 917,
+          "sw": 917,
+          "h": 249,
+          "sh": 991
+        }
+      ]
+    },
+    {
+      "name": "build scroll reaches last ability 1366",
+      "pass": true
+    },
+    {
+      "name": "build returns to previous pause menu",
+      "pass": true
+    },
+    {
+      "name": "reward B keeps original reward pending",
+      "pass": true
+    },
+    {
+      "name": "return does not reroll reward",
+      "pass": true
+    },
+    {
+      "name": "AD and Enter choose trial reward",
+      "pass": true
+    },
+    {
+      "name": "enemy death leaves a visible pickup",
+      "pass": true
+    },
+    {
+      "name": "Tab pauses before DOM navigation",
+      "pass": true
+    },
+    {
+      "name": "current journey JSON restores drops and camp/trial state",
+      "pass": true
+    },
+    {
+      "name": "focus loss pauses",
+      "pass": true
+    },
+    {
+      "name": "actual enemy damage reaches death screen",
+      "pass": true
+    },
+    {
+      "name": "retry clears prior growth and keeps seed",
+      "pass": true
+    },
+    {
+      "name": "real F starts upper trial",
+      "pass": true
+    },
+    {
+      "name": "real attacks clear both trial enemies",
+      "pass": true
+    },
+    {
+      "name": "returning F opens trial reward",
+      "pass": true
+    },
+    {
+      "name": "real choice consumes trial exactly once",
+      "pass": true
+    },
+    {
+      "name": "v4 import routes to old-entry dialog",
+      "pass": true
+    },
+    {
+      "name": "preserved v4 actually opens",
+      "pass": true
+    },
+    {
+      "name": "storage-denied export imports actual progress",
+      "pass": true
+    },
+    {
+      "name": "no runtime errors",
+      "pass": true
+    },
+    {
+      "name": "zero HTTP(S) requests in fresh offline session",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "network": [],
+  "browser": "156.0.4314.42"
+}

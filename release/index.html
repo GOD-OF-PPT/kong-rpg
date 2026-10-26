@@ -156,17 +156,25 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
 #boss-name{font-weight:400;color:var(--boss-color,#d8b2d0)}#boss-hud .meter i{background:var(--boss-color,#ba77a3)}#boss-phase{letter-spacing:1px}
 .game-dialog .relic-card .tag{max-width:100%;letter-spacing:1.5px;text-align:center;line-height:1.6}.footline .keystrip{gap:11px}
 @container(max-width:1200px){.run-arts{font-size:9px;gap:9px}.growth-line{font-size:10px}.game-dialog .relic-card .tag{letter-spacing:1px}}
+</style><style>#build-open{padding:8px 10px;color:#e4c88a;white-space:nowrap;font-size:11px;letter-spacing:1px}#build-open span{margin-left:6px;color:#a69e85;font:10px monospace}.hud-actions{gap:9px}
+.build-heading{display:flex;justify-content:space-between;align-items:center;gap:15px;margin:0 auto 12px;max-width:720px;color:#d9caa5;font-size:12px}.build-heading .button{padding:6px 12px;min-width:0;font-size:11px}
+.build-vitals{display:flex;justify-content:center;gap:22px;flex-wrap:wrap;color:#d5c59d;font:12px/1.7 "Microsoft YaHei",sans-serif;margin-bottom:12px}.build-vitals b{color:#f6dfaa;font-weight:500}
+.build-scroll{max-height:340px;overflow:auto;padding:0 14px 4px 2px;scrollbar-color:#a68a5d #322d2a;scrollbar-width:thin}.build-scroll h3{font:15px/1.7 "SimSun",serif;color:#e8cd8d;letter-spacing:3px;margin:10px 0 6px;border-bottom:1px solid #a18b5b44}.build-entry{display:grid;grid-template-columns:45px 1fr;gap:8px;padding:10px 0;border-bottom:1px solid #a18b5b22}.build-entry .relic-art{width:38px;height:38px;margin:0;align-self:start}.build-entry h4{font:15px/1.6 "SimSun",serif;color:#f2d59b;letter-spacing:1px;margin:0 0 3px}.build-entry h4 small{font:10px/1.6 "Microsoft YaHei",sans-serif;color:#b6c5ac;margin-left:10px}.build-entry p{font:12px/1.8 "Microsoft YaHei",sans-serif;color:#ded5bb;letter-spacing:.3px;margin:0;overflow-wrap:anywhere}.build-entry .build-cost{color:#b2a388;font-size:11px}.build-empty{font-size:12px;color:#adab95;line-height:1.8}.build-summary{display:flex;justify-content:center;align-items:center;gap:12px;margin:8px auto 0;flex-wrap:wrap}.build-summary .button{padding:5px 10px;font-size:11px;min-width:0}.build-summary .growth-line{margin:0;max-width:590px}
+.dialog-build .dialog-content{padding-top:4px}.dialog-build .actions{margin-top:12px}.run-arts{max-width:58%}.run-arts #growth-state{max-width:350px;overflow-wrap:anywhere}.run-bottom #relic-list{max-width:66%;line-height:1.7}
+@container(max-width:1100px){.build-scroll{max-height:250px}.build-entry{padding:7px 0}.build-entry p{font-size:11px}.build-vitals{gap:12px;font-size:11px}.run-arts #growth-state{max-width:285px;font-size:9px}}
+
+.build-scroll-hint{text-align:right;font:10px/1.6 "Microsoft YaHei",sans-serif;color:#bba57b;margin:0 14px 4px 0}.build-scroll{scrollbar-gutter:stable;border-bottom:1px solid #ad925c55}.build-scroll:focus-visible{outline:1px solid #ad925c66;outline-offset:3px}
 </style></head>
 <body>
   <main id="app">
     <header class="masthead"><a href="#" id="brand" aria-label="大圣劫后行主菜单"><span class="brand-seal">悟</span><span>大圣 <i>／</i> 劫后行</span></a><span class="edition">A PIXEL PILGRIMAGE <span class="tiny-star">✦</span> 独立离线版</span><button id="guide-top" class="text-button">行者手记 <span>↗</span></button></header>
     <section id="stage" aria-label="横版游戏区域">
-      <canvas id="world" width="960" height="540" tabindex="0" aria-label="游戏世界。A D移动，空格跳跃，J棍击，K闪避，L分身，R法天象地，Q符术，F交互，Escape暂停。"></canvas>
+      <canvas id="world" width="960" height="540" tabindex="0" aria-label="游戏世界。A D移动，空格跳跃，J棍击，K闪避，L分身，R法天象地，Q符术，F交互，B查看加成，Escape暂停。"></canvas>
       <div id="vignette" aria-hidden="true"></div>
       <div id="hud" hidden>
         <div class="vitals"><div class="vital-head"><strong>孙悟空</strong><span id="hp-number">100 / 100</span></div><div class="meter hp"><i id="hp-fill"></i></div><div class="focus-line"><span>定力</span><div class="meter focus"><i id="focus-fill"></i></div><b id="focus-number">65</b></div><div class="focus-line rage-line" id="rage-line"><span>R 法天象地</span><div class="meter"><i id="rage-fill"></i></div><b id="rage-number">25</b></div></div>
         <div class="journey"><small id="chapter">第一境</small><strong id="stage-name">雾隐山道</strong><span id="objective">破除黑莲阵眼 0 / 2</span><div class="journey-progress"><i id="journey-fill"></i></div></div>
-        <div class="hud-actions"><span id="run-seed"></span><button id="pause" aria-label="暂停游戏">Ⅱ <span>ESC</span></button></div>
+        <div class="hud-actions"><span id="run-seed"></span><button id="build-open" aria-label="查看本局法门">本局法门 <span>B</span></button><button id="pause" aria-label="暂停游戏">Ⅱ <span>ESC</span></button></div>
         <div id="boss-hud" hidden><span><b id="boss-name">无天</b><em id="boss-phase">黑莲横世</em></span><div class="meter"><i id="boss-fill"></i></div></div>
         <div class="run-arts"><span id="talisman-state">Q 未携符术</span><span id="growth-state"></span></div>
         <div class="run-bottom"><span id="relic-list"></span><span id="dash-state"></span></div>
@@ -176,13 +184,13 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
       <div id="toast" role="status" aria-live="polite" hidden></div>
       <div id="context-hint" hidden></div>
     </section>
-    <footer class="footline"><div><span class="status-dot"></span><span id="storage-status">离线可玩 · 进度自动保存</span></div><div class="keystrip"><span><kbd>A</kbd><kbd>D</kbd> 行走</span><span><kbd>SPACE</kbd> 跃起</span><span><kbd>J</kbd> 棍击</span><span><kbd>K</kbd> 闪避</span><span><kbd>L</kbd> 分身</span><span><kbd>R</kbd> 大招</span><span><kbd>Q</kbd> 符术</span></div><span class="build">v4.0 <span>／</span> 蓄势 · 成法 · 破关</span></footer>
+    <footer class="footline"><div><span class="status-dot"></span><span id="storage-status">离线可玩 · 进度自动保存</span></div><div class="keystrip"><span><kbd>A</kbd><kbd>D</kbd> 行走</span><span><kbd>SPACE</kbd> 跃起</span><span><kbd>J</kbd> 棍击</span><span><kbd>K</kbd> 闪避</span><span><kbd>L</kbd> 分身</span><span><kbd>R</kbd> 大招</span><span><kbd>Q</kbd> 符术</span></div><span class="build">v5.0 <span>／</span> 长路 · 问法 · 归灯</span></footer>
     <input id="import-file" type="file" accept="application/json,.json" hidden>
   </main>
   <script>
 (function (K) {
   'use strict';
-  K.VERSION = '4.0.0';
+  K.VERSION = '5.0.0';
   K.W = 960; K.H = 540; K.DT = 1 / 120;
   K.clamp = (v, a, b) => Math.max(a, Math.min(b, v));
   K.overlap = (a, b) => a.x < b.x + b.w && a.x + a.w > b.x && a.y < b.y + b.h && a.y + a.h > b.y;
@@ -207,7 +215,7 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
   K.has = (s,id) => s.relics.includes(id);
   K.enemy = function(kind,x,y,id) {
     const boss=kind==='boss'; const h=boss?72:40;
-    return {id,kind,x,y:y===undefined?(boss?368:kind==='caster'?327:400):y,w:boss?48:26,h,hp:boss?270:kind==='shield'?60:38,maxHp:boss?270:kind==='shield'?60:38,face:-1,phase:'idle',style:'basic',recoil:0,recoilFace:1,timer:kind==='caster'?.45+id*.07:boss?.8:0,stun:0,flash:0,attacks:0,struck:false,origin:x,baseY:y===undefined?(kind==='caster'?327:400):y,interruptLock:0};
+    return {id,kind,x,y:y===undefined?(boss?368:kind==='caster'?327:400):y,w:boss?48:26,h,hp:boss?270:kind==='shield'?60:38,maxHp:boss?270:kind==='shield'?60:38,face:-1,phase:'idle',style:'basic',recoil:0,recoilFace:1,timer:kind==='caster'?.45+(id%10)*.07:boss?.8:0,stun:0,flash:0,attacks:0,struck:false,followup:false,origin:x,baseY:y===undefined?(kind==='caster'?327:400):y,interruptLock:0};
   };
   const BLUEPRINTS = [
     {ground:[[0,820],[920,870],[1900,850],[2860,810],[3780,1380]],
@@ -331,7 +339,7 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
   K.reward=id=>K.relic(id)||K.GROWTH.find(r=>r.id===id);
   K.rewardEligible=(s,id)=>{const r=K.reward(id);return !!r&&(K.relic(id)?id==='rest'||!K.has(s,id):r.temporary||K.rank(s,id)<r.max);};
   K.options=function(s){
-    const random=K.rng(K.seedNumber(s.seed)+s.stage*771+(s.rewardKind==='mid'?29:91));
+    const random=K.rng(K.seedNumber(s.seed)+s.stage*771+(s.rewardKind==='mid'?29:s.rewardKind==='trial'?57:91));
     const shuffled=xs=>xs.map(r=>({r,n:random()})).sort((a,b)=>a.n-b.n).map(x=>x.r);
     const roots=shuffled([...K.RELICS,...K.GROWTH.filter(r=>r.id==='vitality'||r.id==='staff-wave')].filter(r=>K.rewardEligible(s,r.id)));
     const arts=shuffled(K.GROWTH.filter(r=>r.id!=='vitality'&&K.rewardEligible(s,r.id)));
@@ -371,21 +379,28 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
   K.isMajor=e=>e.kind==='boss'||e.kind==='warden';
   K.guardian=s=>s.room.enemies.find(e=>e.kind==='warden');
   K.attachGuardian=function(room,stage){if(stage===3)return;room.enemies=room.enemies.filter(e=>e.origin<4470);const def=K.GUARDIANS[stage],e=K.enemy('warden',4860,352,900);Object.assign(e,{guardian:def.id,w:58,h:88,hp:def.hp,maxHp:def.hp,baseY:352,dormant:true,move:'',marks:[],timer:.8});room.enemies.push(e);room.signs.push({x:4380,text:def.name+'镇守山门：'+def.lesson});};
-  K.updateArena=function(s){const e=K.guardian(s);if(!e||e.hp<=0)return;const p=s.player;if(e.dormant&&p.x>=4470){e.dormant=false;e.timer=1.2;s.checkpoint=4500;K.event(s,'guardian-enter',{name:K.GUARDIANS[s.stage].name});}if(!e.dormant){p.x=K.clamp(p.x,4430,5128);s.checkpoint=4500;}};
+  K.updateArena=function(s){
+    const e=K.guardian(s)||s.room.enemies.find(e=>e.kind==='boss');if(!e||e.hp<=0)return;
+    const p=s.player,a=s.room.arena;if(e.dormant&&p.x>=a.enter){
+      if(s.stage===3&&s.room.seals.some(q=>q.hp>0)){p.x=a.enter-25;return;}
+      e.dormant=false;e.timer=1.2;s.checkpoint=a.checkpoint;K.event(s,e.kind==='boss'?'boss-enter':'guardian-enter',{name:e.kind==='boss'?'无天':K.GUARDIANS[s.stage].name});
+    }
+    if(!e.dormant){p.x=K.clamp(p.x,a.min,a.max);s.checkpoint=a.checkpoint;}
+  };
   K.wardenAttackBox=e=>({x:e.x-5,y:e.y+5,w:e.w+10,h:e.h-5});
   K.stepWarden=function(s,e,dt,target){
     if(e.dormant)return;
-    const p=s.player,face=Math.sign(target.x-e.x)||e.face;
+    const p=s.player,o=s.room.arena.offset,face=Math.sign(target.x-e.x)||e.face;
     if(e.phase==='idle'&&e.timer<=0){
       e.face=face;e.attacks++;e.phase='warden-windup';e.timer=e.guardian==='mountain'?.9:1.05;
       if(e.guardian==='mountain'){
         e.move=e.attacks%2?'charge':'quake';
-        if(e.move==='charge'){e.chargeTo=K.clamp(e.x+face*290,4460,5060);const box=K.wardenAttackBox(e);e.marks=[{x:Math.min(box.x,e.chargeTo-5),y:box.y,w:Math.abs(e.chargeTo-e.x)+box.w,h:box.h}];}
-        else e.marks=[{x:Math.max(4430,e.x-150),y:414,w:Math.min(300,5140-Math.max(4430,e.x-150)),h:26}];
+        if(e.move==='charge'){e.chargeTo=K.clamp(e.x+face*290,4460+o,5060+o);const box=K.wardenAttackBox(e);e.marks=[{x:Math.min(box.x,e.chargeTo-5),y:box.y,w:Math.abs(e.chargeTo-e.x)+box.w,h:box.h}];}
+        else e.marks=[{x:Math.max(4430+o,e.x-150),y:414,w:Math.min(300,5140+o-Math.max(4430+o,e.x-150)),h:26}];
       }else if(e.guardian==='ferry'){
-        e.move=e.attacks%2?'fan':'lantern';const center=K.clamp(target.x+12,4535,5045);e.marks=e.move==='lantern'?[-85,85].map(o=>({x:K.clamp(center+o-38,4435,5050),y:404,w:76,h:36})):[];
+        e.move=e.attacks%2?'fan':'lantern';const center=K.clamp(target.x+12,4535+o,5045+o);e.marks=e.move==='lantern'?[-85,85].map(delta=>({x:K.clamp(center+delta-38,4435+o,5050+o),y:404,w:76,h:36})):[];
       }else{
-        e.move=e.attacks%2?'columns':'bell';const center=K.clamp(target.x+12,4560,5030);e.marks=e.move==='columns'?[-140,0,140].map(o=>({x:K.clamp(center+o-25,4435,5080),y:280,w:50,h:160})):[{x:Math.max(4430,e.x-205),y:416,w:Math.min(410,5140-Math.max(4430,e.x-205)),h:24}];
+        e.move=e.attacks%2?'columns':'bell';const center=K.clamp(target.x+12,4560+o,5030+o);e.marks=e.move==='columns'?[-140,0,140].map(delta=>({x:K.clamp(center+delta-25,4435+o,5080+o),y:280,w:50,h:160})):[{x:Math.max(4430+o,e.x-205),y:416,w:Math.min(410,5140+o-Math.max(4430+o,e.x-205)),h:24}];
       }
       K.event(s,'boss-warning',{attack:e.move,name:K.GUARDIANS[s.stage].name});
     }else if(e.phase==='warden-windup'&&e.timer<=0){
@@ -405,10 +420,101 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
 })(globalThis.Kong ||= {});
 
 </script><script>
+(function(K){
+  'use strict';
+  // Coordinates belong to the room. Simulation, cues, saves and controllers share them.
+  const baseEnrich=K.enrichRoom,CUT=2760,EXTRA=2160;
+  const shiftRoom=(room,cut,by)=>{
+    const split=[];
+    for(const p of room.platforms){
+      if(p.x<cut&&p.x+p.w>cut){split.push({...p,w:cut-p.x},{...p,x:cut+by,w:p.x+p.w-cut});}
+      else{if(p.x>=cut){p.x+=by;if(p.originX!==undefined)p.originX+=by;}split.push(p);}
+    }
+    room.platforms=split;
+    for(const key of ['enemies','seals','hazards','pickups','signs'])for(const o of room[key])if(o.x>=cut){o.x+=by;if(o.origin!==undefined)o.origin+=by;}
+    room.landmarks=room.landmarks.map(x=>x>=cut?x+by:x);
+    if(room.node?.x>=cut)room.node.x+=by;
+    room.exit+=by;room.width+=by;
+  };
+  const addEnemy=(room,kind,x,y,id,trait)=>{const e=K.enemy(kind,x,y,id);e.style=kind==='shield'?'rush':kind==='blade'?'lunge':'sigil';e.trait=trait||'';room.enemies.push(e);return e;};
+  K.TRAITS={twin:{name:'连刃',text:'第一斩后有更远的二段斩；轻棍不推退蓄力，重棍可打断。'},pulse:{name:'震盾',text:'盾撞后发出低位盾波；跃过或用回锋返弹。'},volley:{name:'散焰',text:'长蓄力后扇射三焰；近身打断或寻找弹间空隙。'}};
+  K.DROPS={heal:{name:'小还丹',amount:12,color:'#bcdb9b'},focus:{name:'定心光',amount:20,color:'#8edcd9'},rage:{name:'战意火',amount:14,color:'#f0c671'}};
+  K.enrichRoom=function(room,stage){
+    baseEnrich(room,stage);
+    room.trial=null;room.camp=null;
+    if(stage<3){
+      shiftRoom(room,CUT,EXTRA);
+      room.arena={offset:EXTRA,min:4430+EXTRA,max:5128+EXTRA,enter:4470+EXTRA,checkpoint:4500+EXTRA};
+      for(const [x,w] of [[0,640],[740,680],[1530,630]])room.platforms.push({x:CUT+x,y:440,w,h:110,solid:true});
+      for(const [x,y,w] of [[70,350,190],[340,280,180],[580,350,240],[810,350,150],[940,280,410],[1400,350,250],[1700,280,180],[1910,350,230]])room.platforms.push({x:CUT+x,y,w,h:16,...(stage===2&&y===350?{fragile:true,crack:0,cooldown:0}:{})});
+      for(const [i,kind,x,y,trait] of [[0,'blade',310,400,'twin'],[1,'shield',855,400,stage===1?'pulse':''],[2,'caster',1660,327,stage===2?'volley':''],[3,'blade',1950,400,stage===0?'':'twin']])addEnemy(room,kind,CUT+x,y,400+i,trait);
+      room.hazards.push({x:CUT+1190,y:427,w:60,h:13,...(stage===2?{period:3.8,offset:1.1}:{})});
+      const trialNames=['断松试棍','悬灯问影','灰庭破阵'];
+      room.trial={x:CUT+1100,y:236,state:'ready',guards:[500,501],name:trialNames[stage]};
+      for(const [kind,x,y,id,trait] of [['blade',CUT+1020,240,500,'twin'],['caster',CUT+1250,225,501,'volley']]){const e=addEnemy(room,kind,x,y,id,trait);e.hp=0;}
+      room.camp={x:CUT+1810,y:396,used:false};
+      room.signs.push({x:CUT+80,text:'前方双路：上层 F 挑战试炼赢取一项法门，也可沿下路赶往山门。'},
+        {x:CUT+285,text:'连刃第二斩更远。轻棍不推退蓄力，重棍可打断；先看刀光。'},
+        {x:CUT+1650,text:stage===2?'散焰使蓄力更长，一次放出三焰；近身重棍可断招。':'怪物倒下会留下补给；资源满时不会收走，可回头再取。'});
+      room.landmarks.push(CUT+600,CUT+1480);
+    }else{
+      shiftRoom(room,0,2520);
+      room.arena={offset:2520,min:2544,max:3448,enter:2560,checkpoint:2600};
+      room.enemies[0].dormant=true;
+      for(const [x,w] of [[0,700],[820,710],[1650,870]])room.platforms.push({x,y:440,w,h:110,solid:true});
+      for(const [x,y,w] of [[250,350,170],[480,280,160],[650,350,210],[980,350,180],[1230,280,170],[1440,350,240],[1800,350,180],[2030,280,180],[2300,350,170]])room.platforms.push({x,y,w,h:16});
+      for(const [id,kind,x,y,trait] of [[600,'blade',420,400,'twin'],[601,'shield',950,400,'pulse'],[602,'caster',1410,327,'volley'],[603,'blade',1840,400,'twin'],[604,'shield',2290,400,'pulse']])addEnemy(room,kind,x,y,id,trait);
+      for(const [id,x] of [[0,1130],[1,2170]])room.seals.push({id,x,y:392,w:28,h:48,hp:56,pulse:2.2,warning:false});
+      room.pickups.push({x:550,y:244,w:16,h:20,kind:'heal',used:false});
+      room.hazards.push({x:1770,y:427,w:55,h:13,period:3.8,offset:0});
+      room.camp={x:2420,y:396,used:false};room.landmarks=[730,1600,2380];
+      room.signs.push({x:150,text:'无天之前尚有双阵。破阵、取补给，再过莲界。'},
+        {x:850,text:'震盾兵盾撞后放出低位棍波。起跳避过，回锋印也能返弹。'},
+        {x:2340,text:'最后一盏归灯可调息一次。前方破双阵后直面无天。'});
+    }
+    // Preallocated deterministic drops keep saves bounded and prevent rerolling on reload.
+    for(const e of room.enemies){
+      if(K.isMajor(e))continue;
+      const roll=K.rng(room.variant*977+e.id*101+stage*199)();
+      if(e.trait||roll<.62){const kind=roll<.29?'heal':roll<.55?'focus':'rage';room.pickups.push({x:e.x,y:420,w:16,h:20,kind,used:false,enabled:false,sourceId:e.id,amount:K.DROPS[kind].amount});}
+    }
+    return room;
+  };
+  K.region=(stage,x)=>stage===3?(x<800?'莲界外道':x<1650?'断愿双阵':x<2520?'归灯残阶':'无天莲座'):
+    x<CUT?K.REGIONS[stage][Math.min(1,Math.floor(x/1350))]:x<CUT+EXTRA?(x<CUT+1150?['断松岔路','悬灯上栈','灰庭叠阶'][stage]:['旧寨归灯','水道归灯','残庭归灯'][stage]):K.REGIONS[stage][Math.min(3,Math.floor((x-EXTRA)/1350))];
+  K.dropEnemy=function(s,e){
+    const item=s.room.pickups.find(p=>p.sourceId===e.id);if(!item||item.enabled)return;
+    item.x=K.clamp(e.x+e.w/2-8,8,s.room.width-24);item.y=K.surfaceAt(s,item.x+8,e.y+e.h-4)-20;item.enabled=true;
+    K.effect(s,'drop-rise',item.x+8,item.y,{color:K.DROPS[item.kind].color});K.event(s,'drop',{id:e.id,kind:item.kind,x:item.x,y:item.y});
+  };
+  K.collectPickup=function(s,item){
+    if(item.used||item.enabled===false)return;const p=s.player,cap=item.kind==='heal'?K.maxHP(s):100,key={heal:'hp',focus:'focus',rage:'rage'}[item.kind];
+    if(p[key]>=cap)return;const amount=item.amount||(item.kind==='heal'?22:30);item.used=true;
+    if(item.kind==='rage')K.gainRage(s,amount);else p[key]=Math.min(cap,p[key]+amount);
+    s.stats.drops+=(item.sourceId!==undefined?1:0);K.event(s,'pickup',{kind:item.kind,amount,sourceId:item.sourceId});K.effect(s,'notice',p.x,p.y-5,{text:({heal:'生命',focus:'定力',rage:'战意'}[item.kind])+' +'+amount});
+  };
+  K.journeyInteract=function(s){
+    const p=s.player,t=s.room.trial,c=s.room.camp;
+    if(t&&Math.abs(p.x-t.x)<95&&Math.abs(p.y-t.y)<75){
+      if(t.state==='ready'){t.state='active';for(const e of s.room.enemies)if(t.guards.includes(e.id)){e.hp=e.maxHp;e.timer=.9;}K.event(s,'ability-note',{text:'试炼已起：可退回下路，再来击退守卒领取奖励。'});}
+      else if(t.state==='cleared'){s.rewardKind='trial';s.reward=K.options(s);s.mode='reward';K.event(s,'reward',{kind:'trial'});}
+      else K.event(s,'ability-note',{text:t.state==='active'?'守卒尚在，可离开后返回。':'此处试炼的奖励已取。'});
+      return true;
+    }
+    if(c&&Math.abs(p.x-c.x)<75&&Math.abs(p.y-c.y)<65){
+      if(!c.used){c.used=true;p.hp=Math.min(K.maxHP(s),p.hp+24);p.focus=Math.min(100,p.focus+20);s.checkpoint=c.x;s.stats.camps++;K.effect(s,'world-rise',c.x,410);K.event(s,'ability-note',{text:'归灯调息 · 生命+24、定力+20。此灯只可借一次。'});}
+      else K.event(s,'ability-note',{text:'归灯余温已尽，继续向前。'});return true;
+    }
+    return false;
+  };
+  K.updateJourney=function(s){const t=s.room.trial;if(t?.state==='active'&&t.guards.every(id=>s.room.enemies.find(e=>e.id===id).hp===0)){t.state='cleared';s.stats.trials++;K.event(s,'ability-note',{text:t.name+'已破 · 回到上层按 F 领取一项奖励。'});}};
+})(globalThis.Kong ||= {});
+
+</script><script>
 (function (K) {
   'use strict';
   K.newRun = function (seed, first) {
-    const s = { version:4,rules:4,growth:{},talisman:null,casts:[],world:{rescue:false,bridge:false,bell:false},journal:[],dangers:[],seed:String(seed || 'BLACK-LOTUS'), stage:0, mode:'playing',time:0,elapsed:0,roomTime:0,relics:first?[first]:[],room:null,player:null,clone:null,projectiles:[],effects:[],events:[],log:[],reward:[],rewardKind:'exit',pendingRelic:null,kills:0,broken:0,damageTaken:0,lastDamage:'',hitstop:0,shake:0,checkpoint:90,combo:0,comboTime:0,serial:0,hints:[],stats:{swings:0,hits:0,blocks:0,jumps:0,dashes:0,clones:0,focusSpent:0,rests:0,ultimates:0,talismans:0,guardians:0} };
+    const s = { version:5,rules:5,growth:{},talisman:null,casts:[],world:{rescue:false,bridge:false,bell:false},journal:[],dangers:[],seed:String(seed || 'BLACK-LOTUS'), stage:0, mode:'playing',time:0,elapsed:0,roomTime:0,relics:first?[first]:[],room:null,player:null,clone:null,projectiles:[],effects:[],events:[],log:[],reward:[],rewardKind:'exit',pendingRelic:null,kills:0,broken:0,damageTaken:0,lastDamage:'',hitstop:0,shake:0,checkpoint:90,combo:0,comboTime:0,serial:0,hints:[],stats:{swings:0,hits:0,blocks:0,jumps:0,dashes:0,clones:0,focusSpent:0,rests:0,ultimates:0,talismans:0,guardians:0,drops:0,camps:0,trials:0} };
     K.enterRoom(s, 0, true); return s;
   };
   K.enterRoom = function (s, stage, initial) {
@@ -437,10 +543,11 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
     if (e.kind === 'shield' && front && !pierce && e.stun <= 0 && e.phase !== 'recover') { K.effect(s,'block',e.x+(e.face>0?e.w:0),e.y+16,{text:'格挡',face:Math.sign(e.x-origin)||1});K.event(s,'blocked',{target:e.id});s.player.focus=Math.min(100,s.player.focus+3);return false; }
     e.hp=Math.max(0,e.hp-amount);e.flash=.08;e.stun=K.isMajor(e)?0:.065;e.recoil=.12;e.recoilFace=Math.sign(e.x-origin)||1;
     if((!K.isMajor(e)&&['heavy','thunder','ultimate'].includes(impact)&&e.phase.endsWith('windup')&&(e.interruptLock||0)<=0)||(e.kind==='warden'&&impact==='ultimate')){e.phase='recover';e.timer=.85;e.marks=[];e.interruptLock=1;K.event(s,'interrupt',{target:e.id});K.effect(s,'block',e.x+12,e.y+4,{text:'破势'});}
-    if(!K.isMajor(e)){const bounds=K.patrolBounds(s,e);e.x=K.clamp(e.x+Math.sign(e.x-origin)*12,bounds.min,bounds.max);}
+    if(!K.isMajor(e)&&!(e.trait&&e.phase.endsWith('windup')&&impact==='light')){const bounds=K.patrolBounds(s,e);e.x=K.clamp(e.x+Math.sign(e.x-origin)*12,bounds.min,bounds.max);}
     const heavy=['heavy','ultimate','thunder'].includes(impact);K.effect(s,heavy?'heavy-hit':'hit',e.x+e.w/2,e.y+18,{text:String(amount),face:Math.sign(e.x-origin)||1,impact,color:heavy?'#ffe9a8':'#fff1ce'});
     s.hitstop=Math.max(s.hitstop,heavy?.058:.018);s.shake=heavy?.18:.065;K.event(s,'hit',{target:e.id,kind:e.kind,amount,impact,x:e.x+e.w/2,y:e.y+18});if(impact!=='ultimate')K.gainRage(s,impact==='heavy'?14:8);
     if (e.hp === 0) { s.kills++;s.player.focus=Math.min(100,s.player.focus+10);K.effect(s,'kill',e.x+e.w/2,e.y+20,{face:Math.sign(e.x-origin)||1});K.event(s,'kill',{kind:e.kind});
+      if(K.dropEnemy)K.dropEnemy(s,e);
       if(e.kind==='warden'){e.marks=[];s.stats.guardians++;K.gainRage(s,18);s.player.hp=Math.min(K.maxHP(s),s.player.hp+12);K.event(s,'guardian-defeat',{name:K.GUARDIANS[s.stage].name});}
       if (e.kind === 'boss') { s.mode = 'won'; K.event(s, 'victory'); }
     }
@@ -509,7 +616,7 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
     }
     if (p.y > 590) { p.invuln = 0; K.damage(s, 18, '坠入云渊'); p.x = K.clamp(s.checkpoint - 35, 30, s.room.width - 100); p.y = 396; p.vy = 0; p.vx = 0; p.slam = false; }
     for (const h of s.room.hazards) if(K.hazardPhase(s,h)==='active'&&K.overlap(p,h))K.damage(s,14,h.period?'灵山·地焰':'黑莲地刺',-p.face);
-    for (const item of s.room.pickups) if (!item.used && K.overlap(p, item)) { item.used = true; if (item.kind === 'heal') p.hp = Math.min(K.maxHP(s), p.hp + 22); else p.focus = Math.min(100, p.focus + 30); K.event(s, 'pickup', { kind: item.kind }); K.effect(s, 'notice', p.x, p.y - 5, { text: item.kind === 'heal' ? '生命 +22' : '定力 +30' }); }
+    for(const item of s.room.pickups)if(!item.used&&item.enabled!==false&&K.overlap(p,item))K.collectPickup(s,item);
     if (s.clone) {
       const c = s.clone; c.life -= dt; c.timer -= dt;
       if (c.timer <= 0) { c.timer = .52; const candidates = s.room.enemies.filter(e => e.hp > 0); const target = candidates.sort((a, b) => Math.abs(a.x - c.x) - Math.abs(b.x - c.x))[0]; c.face = target ? Math.sign(target.x - c.x) || 1 : c.face;
@@ -530,10 +637,11 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
     }
     s.projectiles = s.projectiles.filter(b => b.life > 0 && b.x > -100 && b.x < s.room.width + 100);
     for(const d of s.dangers){d.life-=dt;if(d.life>0&&K.overlap(p,d))K.damage(s,d.damage,d.source,Math.sign(p.x-d.x-d.w/2));}s.dangers=s.dangers.filter(d=>d.life>0);
-    K.updateWorld(s);
+    K.updateWorld(s);K.updateJourney(s);
     for(const q of s.room.seals)if(q.hp>0&&Math.abs(q.x-p.x)<420){q.pulse=(q.pulse??2.2)-dt;q.warning=q.pulse<.65;if(q.pulse<=0){q.pulse=3.4;q.warning=false;for(const face of[-1,1])s.projectiles.push({x:q.x+14,y:q.y+25,vx:face*175,vy:0,w:12,h:12,life:2.5,friendly:false});K.event(s,'seal-burst',{id:q.id});}}
     for(let i=0;i<s.room.signs.length;i++)if(Math.abs(s.room.signs[i].x-p.x)<65&&!s.hints.includes(s.stage+':'+i)){s.hints.push(s.stage+':'+i);K.event(s,'hint',{text:s.room.signs[i].text});}
-    if(a.interactPressed&&s.mode==='playing'&&K.worldInteract(s)){}
+    if(a.interactPressed&&s.mode==='playing'&&K.journeyInteract(s)){}
+    else if(a.interactPressed&&s.mode==='playing'&&K.worldInteract(s)){}
     else if(a.interactPressed&&s.mode==='playing'&&s.stage<3&&s.room.seals[0].hp===0&&!s.room.midClaimed&&Math.abs(p.x-s.room.seals[0].x)<85){s.rewardKind='mid';s.reward=K.options(s);s.mode='reward';K.event(s,'reward',{kind:'mid'});}
     else if (a.interactPressed && s.mode === 'playing' && s.stage < 3 && Math.abs(p.x - s.room.exit) < 85) {
       if (s.room.seals.some(q => q.hp > 0)||K.guardian(s)?.hp>0) K.event(s, 'gate-locked');
@@ -542,7 +650,7 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
   };
   K.stepEnemy=function(s,e,dt,oldY){
     if(e.hp<=0||e.dormant||s.mode!=='playing')return;
-    const p=s.player;e.flash=Math.max(0,e.flash-dt);e.stun=Math.max(0,e.stun-dt);e.recoil=Math.max(0,(e.recoil||0)-dt);e.interruptLock=Math.max(0,(e.interruptLock||0)-dt);
+    const p=s.player,o=s.room.arena.offset;e.flash=Math.max(0,e.flash-dt);e.stun=Math.max(0,e.stun-dt);e.recoil=Math.max(0,(e.recoil||0)-dt);e.interruptLock=Math.max(0,(e.interruptLock||0)-dt);
     if(e.kind==='caster')e.y=e.baseY+Math.sin(s.time*2+e.id)*4;
     const target=s.clone&&Math.abs(s.clone.x-e.x)<380?s.clone:p,dx=target.x-e.x,near=Math.abs(dx);
     e.timer=Math.max(-1,e.timer-dt);if(e.stun>0&&e.phase==='idle')return;
@@ -550,40 +658,40 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
     else if(e.kind==='boss'){
       if(e.phase==='idle'&&e.timer<=0){
         e.attacks++;e.phase=e.attacks%3===0?'rain-windup':e.attacks%2?'sweep-windup':'orb-windup';e.timer=e.phase==='rain-windup'?1.05:e.hp<135?.65:.9;e.face=Math.sign(target.x-e.x)||-1;
-        if(e.phase==='rain-windup'){const center=K.clamp(target.x+12,110,850),offsets=s.world.bell?[-95,95]:[-150,0,150];e.marks=offsets.map(offset=>({x:K.clamp(center+offset-42,24,852),y:418,w:84,h:22}));}
+        if(e.phase==='rain-windup'){const center=K.clamp(target.x+12,110+o,850+o),offsets=s.world.bell?[-95,95]:[-150,0,150];e.marks=offsets.map(offset=>({x:K.clamp(center+offset-42,24+o,852+o),y:418,w:84,h:22}));}
         K.event(s,'boss-warning',{attack:e.phase,x:e.x,y:e.y,face:e.face});
       }else if(e.phase==='rain-windup'&&e.timer<=0){for(const box of e.marks||[])s.dangers.push({...box,life:.45,damage:16,source:'无天·黑莲落火'});e.marks=[];e.phase='recover';e.timer=1.5;K.event(s,'enemy-attack',{kind:'boss',move:'rain'});}
       else if(['sweep-windup','orb-windup'].includes(e.phase)&&e.timer<=0){
         if(e.phase==='sweep-windup'){e.phase='sweep';e.timer=.34;K.event(s,'enemy-attack',{id:e.id,kind:e.kind,box:K.enemyAttackBox(e)});}
         else{const n=e.hp<135?5:3;for(let i=0;i<n;i++)s.projectiles.push({x:e.x+12,y:e.y+22,vx:e.face*240,vy:(i-(n-1)/2)*72,w:15,h:15,life:4,friendly:false});e.phase='recover';e.timer=1.3;}
       }else if(e.phase==='sweep'){if(K.overlap(p,K.enemyAttackBox(e)))K.damage(s,18,'无天·黑莲横扫',e.face);if(e.timer<=0){e.phase='recover';e.timer=1.2;}}
-      else if(e.phase==='recover'&&e.timer<=0){e.shiftTo=e.x>500?260:710;e.phase='shift-windup';e.timer=.55;K.event(s,'boss-shift-warning',{from:e.x,to:e.shiftTo});}
+      else if(e.phase==='recover'&&e.timer<=0){e.shiftTo=e.x>500+o?260+o:710+o;e.phase='shift-windup';e.timer=.55;K.event(s,'boss-shift-warning',{from:e.x,to:e.shiftTo});}
       else if(e.phase==='shift-windup'&&e.timer<=0){e.phase='shift';e.timer=.8;e.face=Math.sign(e.shiftTo-e.x);K.event(s,'boss-shift',{from:e.x,to:e.shiftTo});}
       else if(e.phase==='shift'){e.x+=Math.sign(e.shiftTo-e.x)*650*dt;if(Math.abs(e.x-e.shiftTo)<8||e.timer<=0){e.x=e.shiftTo;e.phase='idle';e.timer=.4;}}
     }else if(e.kind==='caster'){
       if(e.phase==='idle'&&near<600&&e.timer<=0){
-        e.attacks++;const sigil=e.style==='sigil'&&e.attacks%2===0;e.phase=sigil?'sigil-windup':'windup';e.timer=sigil?.95:.75;e.face=Math.sign(dx)||1;e.aimX=target.x+12;e.aimY=sigil?K.surfaceAt(s,target.x+12,target.y+35):target.y+18;
+        e.attacks++;const sigil=e.trait!=='volley'&&e.style==='sigil'&&e.attacks%2===0;e.phase=sigil?'sigil-windup':'windup';e.timer=sigil?.95:e.trait==='volley'?1.05:.75;e.face=Math.sign(dx)||1;e.aimX=target.x+12;e.aimY=sigil?K.surfaceAt(s,target.x+12,target.y+35):target.y+18;
         K.event(s,'warning',{kind:e.kind,id:e.id,move:sigil?'sigil':'orb',aimX:e.aimX,aimY:e.aimY});
       }else if(e.phase==='sigil-windup'&&e.timer<=0){s.dangers.push({...K.sigilBox(e),life:.38,damage:12,source:'莲灯使·锁地咒'});e.phase='recover';e.timer=1.25;K.event(s,'enemy-attack',{kind:e.kind,move:'sigil'});}
-      else if(e.phase==='windup'&&e.timer<=0){const tx=e.aimX-e.x,ty=e.aimY-e.y-16,len=Math.hypot(tx,ty)||1;s.projectiles.push({x:e.x,y:e.y+16,vx:tx/len*220,vy:ty/len*220,w:12,h:12,life:3,friendly:false});e.phase='idle';e.timer=1.8;}
+      else if(e.phase==='windup'&&e.timer<=0){const tx=e.aimX-e.x,ty=e.aimY-e.y-16,len=Math.hypot(tx,ty)||1;for(const angle of(e.trait==='volley'?[-.24,0,.24]:[0])){const vx=tx/len*220,vy=ty/len*220;s.projectiles.push({x:e.x,y:e.y+16,vx:vx*Math.cos(angle)-vy*Math.sin(angle),vy:vx*Math.sin(angle)+vy*Math.cos(angle),w:12,h:12,life:3,friendly:false});}e.phase='recover';e.timer=1.4;}
       else if(e.phase==='recover'&&e.timer<=0){e.phase='idle';e.timer=.3;}
     }else{
       if(e.phase==='idle'){
         const reach=e.style==='rush'?185:e.style==='lunge'?145:84;
-        if(near<reach&&Math.abs(target.y-e.y)<65&&e.timer<=0){e.face=Math.sign(dx)||e.face;e.attacks++;const special=e.attacks%2===1&&e.style!=='basic';e.phase=special?e.style+'-windup':'windup';e.timer=special?(e.style==='rush'?.85:.62):e.kind==='shield'?.7:.52;K.event(s,'warning',{kind:e.kind,id:e.id,move:e.phase,x:e.x,y:e.y,face:e.face});}
+        if(near<reach&&Math.abs(target.y-e.y)<65&&e.timer<=0){e.face=Math.sign(dx)||e.face;e.attacks++;e.followup=false;const special=e.trait!=='twin'&&e.attacks%2===1&&e.style!=='basic';e.phase=special?e.style+'-windup':'windup';e.timer=special?(e.style==='rush'?.85:.62):e.kind==='shield'?.7:.52;K.event(s,'warning',{kind:e.kind,id:e.id,move:e.phase,x:e.x,y:e.y,face:e.face});}
         else if(near>50&&near<330){if(e.kind!=='shield'||e.timer<=0){e.face=Math.sign(dx);if(e.kind==='shield')e.timer=.6;}const bounds=K.patrolBounds(s,e);e.x=K.clamp(e.x+e.face*(e.kind==='shield'?28:53)*dt,bounds.min,bounds.max);}
       }else if(['rush-windup','lunge-windup'].includes(e.phase)&&e.timer<=0){e.phase=e.phase.split('-')[0];e.timer=e.phase==='rush'?.36:.24;K.event(s,'enemy-attack',{kind:e.kind,id:e.id,move:e.phase});}
       else if(['rush','lunge'].includes(e.phase)){
         const bounds=K.patrolBounds(s,e);e.x=K.clamp(e.x+e.face*(e.phase==='rush'?360:285)*Math.min(dt,Math.max(0,e.timer+dt)),bounds.min,bounds.max);if(K.overlap(p,K.enemyAttackBox(e)))K.damage(s,e.kind==='shield'?16:12,e.kind==='shield'?'重盾兵·蓄势冲撞':'执刃魔兵·突进斩',e.face);
         if(e.timer<=0){e.phase='recover';e.timer=1.15;}
-      }else if(e.phase==='windup'&&e.timer<=0){e.phase='attack';e.timer=.18;K.event(s,'enemy-attack',{kind:e.kind,id:e.id,box:K.enemyAttackBox(e)});}
-      else if(e.phase==='attack'){if(K.overlap(K.enemyAttackBox(e),p))K.damage(s,e.kind==='shield'?16:12,e.kind==='shield'?'重盾兵·盾撞':'执刃魔兵·斩击',e.face);if(e.timer<=0){e.phase='recover';e.timer=.9;}}
+      }else if(['windup','chain-windup'].includes(e.phase)&&e.timer<=0){e.phase='attack';e.timer=.18;K.event(s,'enemy-attack',{kind:e.kind,id:e.id,box:K.enemyAttackBox(e)});}
+      else if(e.phase==='attack'){if(K.overlap(K.enemyAttackBox(e),p))K.damage(s,e.kind==='shield'?16:12,e.kind==='shield'?'重盾兵·盾撞':'执刃魔兵·斩击',e.face);if(e.timer<=0){if(e.trait==='twin'&&!e.followup){e.followup=true;e.phase='chain-windup';e.timer=.48;K.event(s,'warning',{kind:e.kind,id:e.id,move:'second-slash'});}else{if(e.trait==='pulse')s.projectiles.push({x:e.x+e.w/2,y:428,vx:e.face*175,vy:0,w:24,h:12,life:2.8,friendly:false,source:'震盾兵·地波'});e.phase='recover';e.timer=e.trait==='twin'?1.25:.9;}}}
       else if(e.phase==='recover'&&e.timer<=0){e.phase='idle';e.timer=.2;}
     }
     if(p.vy>70&&oldY+p.h<=e.y+12&&K.overlap(p,e)){K.hitEnemy(s,e,p.slam?30:19,p.x,true,'heavy');p.vy=-380;p.y=e.y-p.h;p.airJumps=0;p.slam=false;K.event(s,'stomp',{kind:e.kind});}
     else if(e.kind!=='caster'&&p.dash<=0&&K.overlap(p,e)){if(e.kind==='boss'&&e.phase==='shift')K.damage(s,15,'无天·移形冲击',e.face);else{p.x=p.x+12<e.x+e.w/2?e.x-p.w-1:e.x+e.w+1;p.vx=0;}}
   };
-  K.enemyAttackBox=function(e){return e.kind==='warden'?K.wardenAttackBox(e):e.kind==='boss'?{x:e.face>0?e.x+12:e.x-200,y:410,w:240,h:30}:{x:e.face>0?e.x+14:e.x-46,y:e.y+6,w:60,h:32};};
+  K.enemyAttackBox=function(e){if(e.trait==='twin'&&e.followup)return{x:e.face>0?e.x+14:e.x-80,y:e.y+6,w:94,h:32};return e.kind==='warden'?K.wardenAttackBox(e):e.kind==='boss'?{x:e.face>0?e.x+12:e.x-200,y:410,w:240,h:30}:{x:e.face>0?e.x+14:e.x-46,y:e.y+6,w:60,h:32};};
   K.patrolBounds=function(s,e){const p=s.room.platforms.find(p=>Math.abs(p.y-e.baseY-e.h)<3&&e.origin>=p.x&&e.origin<p.x+p.w);return p?{min:Math.max(e.origin-100,p.x),max:Math.min(e.origin+100,p.x+p.w-e.w)}:{min:e.origin-100,max:e.origin+100};};
   K.choose=function(s,id,replace){if(s.mode!=='reward'||!s.reward.includes(id))return false;
     if(id==='rest'){s.player.hp=Math.min(K.maxHP(s),s.player.hp+30);s.player.focus=Math.min(100,s.player.focus+35);s.stats.rests++;}
@@ -594,7 +702,7 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
     }
     else if(s.relics.length>=3){if(!s.relics.includes(replace)){s.pendingRelic=id;return 'replace';}s.relics[s.relics.indexOf(replace)]=id;K.event(s,'relic',{id,replace});}
     else{s.relics.push(id);K.event(s,'relic',{id});}
-    if(s.rewardKind==='mid'){s.room.midClaimed=true;s.mode='playing';s.reward=[];s.pendingRelic=null;s.player.invuln=Math.max(s.player.invuln,.5);}
+    if(s.rewardKind==='mid'||s.rewardKind==='trial'){if(s.rewardKind==='trial')s.room.trial.state='claimed';else s.room.midClaimed=true;s.mode='playing';s.reward=[];s.pendingRelic=null;s.player.invuln=Math.max(s.player.invuln,.5);}
     else K.enterRoom(s,s.stage+1,false);
     return true;
   };
@@ -603,7 +711,7 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
 </script><script>
 (function(K){
   'use strict';
-  const KEY='kong.black-lotus.v4',LEGACY='kong.black-lotus.v1',PREVIOUS='kong.black-lotus.v2',THIRD='kong.black-lotus.v3',SETTINGS='kong.black-lotus.settings.v2';
+  const KEY='kong.black-lotus.v5',LEGACY='kong.black-lotus.v1',PREVIOUS='kong.black-lotus.v2',THIRD='kong.black-lotus.v3',FOURTH='kong.black-lotus.v4',SETTINGS='kong.black-lotus.settings.v2';
   const number=(v,a,b)=>typeof v==='number'&&Number.isFinite(v)&&v>=a&&v<=b;
   const fail=()=>{throw new Error('存档数据不完整或已损坏，请保留原文件。');};
   const count=v=>Number.isFinite(Number(v))?Math.max(0,Math.min(1e7,Math.floor(Number(v)))):0;
@@ -611,10 +719,10 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
     return {runs:count(m?.runs),wins:count(m?.wins),best:Math.min(4,count(m?.best)),history:Array.isArray(m?.history)?m.history.filter(x=>x&&typeof x.id==='string'&&typeof x.seed==='string').slice(-8).map(x=>({id:x.id.slice(0,100),seed:x.seed.slice(0,32),won:!!x.won,stage:Math.min(3,count(x.stage)),seconds:count(x.seconds),damage:count(x.damage),relics:Array.isArray(x.relics)?x.relics.filter(id=>K.RELICS.some(r=>r.id===id)).slice(0,3):[]})):[]};
   };
   K.validSave=function(data){
-    if(data?.game==='black-lotus'&&[1,2,3].includes(data.schema)&&data.schema===data.state?.version){const error=new Error('这是旧版旅程，请在保留的原版中继续。');error.legacy=true;throw error;}
-    if(!data||data.schema!==4||data.game!=='black-lotus'||!data.state)throw new Error('这不是劫后行v4存档。');
+    if(data?.game==='black-lotus'&&[1,2,3,4].includes(data.schema)&&data.schema===data.state?.version){const error=new Error('这是旧版旅程，请在保留的原版中继续。');error.legacy=true;throw error;}
+    if(!data||data.schema!==5||data.game!=='black-lotus'||!data.state)throw new Error('这不是劫后行v5存档。');
     const s=data.state;
-    if(s.version!==4||s.rules!==4||!Number.isInteger(s.stage)||s.stage<0||s.stage>3||typeof s.seed!=='string'||s.seed.length>32||!['playing','paused','reward','dead','won'].includes(s.mode))fail();
+    if(s.version!==5||s.rules!==5||!Number.isInteger(s.stage)||s.stage<0||s.stage>3||typeof s.seed!=='string'||s.seed.length>32||!['playing','paused','reward','dead','won'].includes(s.mode))fail();
     if(!s.growth||typeof s.growth!=='object'||Array.isArray(s.growth)||Object.entries(s.growth).some(([id,n])=>{const r=K.GROWTH.find(r=>r.id===id&&!r.temporary);return !r||!Number.isInteger(n)||n<1||n>r.max;}))fail();
     if(s.talisman!==null&&(!s.talisman||!['thunder','ward'].includes(s.talisman.id)||!Number.isInteger(s.talisman.charges)||s.talisman.charges<1||s.talisman.charges>(s.talisman.id==='thunder'?3:2)))fail();
     if(!s.world||['rescue','bridge','bell'].some(key=>typeof s.world[key]!=='boolean')||!Array.isArray(s.journal)||s.journal.length>6||new Set(s.journal).size!==s.journal.length||s.journal.some(key=>!['rescue:start','rescue:done','bridge:done','bell:start','bell:done'].includes(key)))fail();
@@ -626,15 +734,17 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
     if(typeof p.grounded!=='boolean'||typeof p.slam!=='boolean'||!Number.isInteger(p.airJumps)||p.airJumps<0||p.airJumps>1||!Number.isInteger(p.comboIndex)||p.comboIndex<0||p.comboIndex>3||!number(p.attackId,0,1e7)||!Array.isArray(p.attackTargets)||p.attackTargets.length>40||p.attackTargets.some(x=>typeof x!=='string')||(p.attack>0&&!number(p.attackDuration,.1,1)))fail();
     if(p.slam&&p.vy<=0)fail();
     for(const key of ['time','elapsed','roomTime','kills','broken','damageTaken','hitstop','shake','checkpoint','combo','comboTime','serial'])if(!number(s[key],0,1e8))fail();
-    if(s.broken>6||s.checkpoint>canonical.width||s.combo>3||typeof s.lastDamage!=='string'||s.lastDamage.length>100||!Array.isArray(s.hints)||s.hints.length>30||s.hints.some(x=>typeof x!=='string'||x.length>50))fail();
+    if(s.broken>8||s.checkpoint>canonical.width||s.combo>3||typeof s.lastDamage!=='string'||s.lastDamage.length>100||!Array.isArray(s.hints)||s.hints.length>30||s.hints.some(x=>typeof x!=='string'||x.length>50))fail();
     if(!s.room||!Array.isArray(s.room.enemies)||s.room.enemies.length!==canonical.enemies.length||!Array.isArray(s.room.seals)||s.room.seals.length!==canonical.seals.length||!Array.isArray(s.room.pickups)||s.room.pickups.length!==canonical.pickups.length||typeof s.room.midClaimed!=='boolean')fail();
-    const phases=['idle','windup','attack','recover','sweep-windup','orb-windup','sweep','shift-windup','shift','lunge-windup','lunge','rush-windup','rush','sigil-windup','rain-windup','warden-windup','warden-rush'];
+    const phases=['idle','windup','attack','recover','sweep-windup','orb-windup','sweep','shift-windup','shift','lunge-windup','lunge','rush-windup','rush','sigil-windup','rain-windup','warden-windup','warden-rush','chain-windup'];
     function validBox(b){return b&&number(b.x,-200,canonical.width+200)&&number(b.y,-1000,1000)&&number(b.w,1,620)&&number(b.h,1,200);}
     canonical.enemies.forEach((e,i)=>{
       const x=s.room.enemies[i];if(!x||x.id!==e.id||x.kind!==e.kind||!number(x.hp,0,e.maxHp)||!number(x.x,0,canonical.width)||!number(x.y,-200,540)||!number(x.timer,-2,10)||!number(x.stun,0,2)||!number(x.flash,0,2)||!number(x.interruptLock,0,2)||!number(x.attacks,0,1e7)||![-1,1].includes(x.face)||!phases.includes(x.phase))fail();
+      if(typeof x.followup!=='boolean')fail();e.followup=x.followup;
+      if(e.kind==='boss'){if(typeof x.dormant!=='boolean')fail();e.dormant=x.dormant;}
       for(const key of ['hp','x','y','timer','stun','flash','interruptLock','attacks','face','phase','struck'])e[key]=x[key];
-      if(e.kind==='warden'){if(x.guardian!==e.guardian||typeof x.dormant!=='boolean'||!['','charge','quake','fan','lantern','columns','bell'].includes(x.move))fail();e.dormant=x.dormant;e.move=x.move;if(x.chargeTo!==undefined){if(!number(x.chargeTo,4430,5140))fail();e.chargeTo=x.chargeTo;}if(e.phase==='warden-rush'&&(e.move!=='charge'||!Number.isFinite(e.chargeTo)))fail();}
-      if(x.shiftTo!==undefined){if(!number(x.shiftTo,0,960))fail();e.shiftTo=x.shiftTo;}
+      if(e.kind==='warden'){if(x.guardian!==e.guardian||typeof x.dormant!=='boolean'||!['','charge','quake','fan','lantern','columns','bell'].includes(x.move))fail();e.dormant=x.dormant;e.move=x.move;if(x.chargeTo!==undefined){if(!number(x.chargeTo,4430+canonical.arena.offset,5140+canonical.arena.offset))fail();e.chargeTo=x.chargeTo;}if(e.phase==='warden-rush'&&(e.move!=='charge'||!Number.isFinite(e.chargeTo)))fail();}
+      if(x.shiftTo!==undefined){if(!number(x.shiftTo,canonical.arena.offset,canonical.width))fail();e.shiftTo=x.shiftTo;}
       if(x.aimX!==undefined){if(!number(x.aimX,-200,canonical.width+200)||!number(x.aimY,-1000,1000))fail();e.aimX=x.aimX;e.aimY=x.aimY;}
       if(!number(x.recoil,0,1)||![-1,1].includes(x.recoilFace))fail();e.recoil=x.recoil;e.recoilFace=x.recoilFace;
       if(x.marks!==undefined){if(!Array.isArray(x.marks)||x.marks.length>3||x.marks.some(b=>!validBox(b)))fail();e.marks=x.marks.map(b=>({x:b.x,y:b.y,w:b.w,h:b.h}));}
@@ -642,7 +752,13 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
       if(e.phase==='sigil-windup'&&x.aimX===undefined)fail();
     });
     canonical.seals.forEach((q,i)=>{const x=s.room.seals[i];if(!x||!number(x.hp,0,56)||!number(x.pulse,0,4)||typeof x.warning!=='boolean')fail();q.hp=x.hp;q.pulse=x.pulse;q.warning=x.warning;});
-    canonical.pickups.forEach((q,i)=>q.used=!!s.room.pickups[i].used);canonical.midClaimed=s.room.midClaimed;
+    canonical.pickups.forEach((q,i)=>{
+      const x=s.room.pickups[i];if(!x||typeof x.used!=='boolean'||x.kind!==q.kind||x.sourceId!==q.sourceId)fail();q.used=x.used;
+      if(q.sourceId!==undefined){const e=canonical.enemies.find(e=>e.id===q.sourceId);if(typeof x.enabled!=='boolean'||(x.enabled&&e.hp>0)||(x.used&&!x.enabled)||!number(x.x,e.origin-180,e.origin+220)||!number(x.y,0,440))fail();q.enabled=x.enabled;q.x=x.x;q.y=x.y;}
+    });canonical.midClaimed=s.room.midClaimed;
+    if(canonical.camp){if(typeof s.room.camp?.used!=='boolean')fail();canonical.camp.used=s.room.camp.used;}
+    if(canonical.trial){const t=s.room.trial;if(!t||!['ready','active','cleared','claimed'].includes(t.state))fail();canonical.trial.state=t.state;const guards=canonical.enemies.filter(e=>canonical.trial.guards.includes(e.id));if(['ready','cleared','claimed'].includes(t.state)&&guards.some(e=>e.hp>0))fail();if(t.state==='ready'&&canonical.pickups.some(q=>canonical.trial.guards.includes(q.sourceId)&&q.enabled))fail();}
+
     if(!Array.isArray(s.room.platforms)||s.room.platforms.length!==canonical.platforms.length)fail();
     canonical.platforms.forEach((q,i)=>{if(q.fragile){const x=s.room.platforms[i];if(!x||!number(x.crack,0,.65)||!number(x.cooldown,0,2.8))fail();q.crack=x.crack;q.cooldown=x.cooldown;}if(q.raft)q.x=q.originX+Math.sin(s.roomTime*.85)*65;});
     if(canonical.node){const n=s.room.node;if(!n||n.id!==canonical.node.id||!['ready','active','done'].includes(n.state)||(n.state==='done')!==s.world[n.id])fail();canonical.node.state=n.state;if(n.state==='ready'&&canonical.enemies.some(e=>canonical.node.guards.includes(e.id)&&e.hp>0))fail();}
@@ -653,11 +769,12 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
     const projectiles=s.projectiles.map(b=>{
       for(const [key,min,max]of[['x',-200,canonical.width+200],['y',-2000,2000],['vx',-2000,2000],['vy',-2000,2000],['life',0,10],['w',1,100],['h',1,100]])if(!number(b[key],min,max))fail();
       if(typeof b.friendly!=='boolean'||(b.damage!==undefined&&!number(b.damage,1,100))||(b.hit!==undefined&&(!Array.isArray(b.hit)||b.hit.length>100||b.hit.some(x=>!Number.isInteger(x)))))fail();
-      if(b.source!==undefined&&b.source!=='渡厄灯魁·散焰')fail();
+      if(b.source!==undefined&&!['渡厄灯魁·散焰','震盾兵·地波'].includes(b.source))fail();
       return {x:b.x,y:b.y,vx:b.vx,vy:b.vy,life:b.life,w:b.w,h:b.h,friendly:b.friendly,damage:b.damage,hit:b.hit,source:b.source};
     });
     let clone=null;if(s.clone){const c=s.clone;if(!number(c.x,0,canonical.width)||!number(c.y,-1000,1000)||!number(c.life,0,4)||!number(c.timer,-1,1)||![-1,1].includes(c.face))fail();clone={x:c.x,y:c.y,w:24,h:44,life:c.life,timer:c.timer,face:c.face};}
-    if(!['mid','exit'].includes(s.rewardKind)||!Array.isArray(s.reward)||s.reward.length>3||new Set(s.reward).size!==s.reward.length||s.reward.some(id=>!K.rewardEligible(s,id))||(s.mode==='reward'&&s.reward.length!==3)||(s.pendingRelic!==null&&(!s.reward.includes(s.pendingRelic)||!K.RELICS.some(r=>r.id===s.pendingRelic)||s.relics.length!==3)))fail();
+    if(!['mid','exit','trial'].includes(s.rewardKind)||!Array.isArray(s.reward)||s.reward.length>3||new Set(s.reward).size!==s.reward.length||s.reward.some(id=>!K.rewardEligible(s,id))||(s.mode==='reward'&&s.reward.length!==3)||(s.pendingRelic!==null&&(!s.reward.includes(s.pendingRelic)||!K.RELICS.some(r=>r.id===s.pendingRelic)||s.relics.length!==3)))fail();
+    if(s.mode==='reward'&&s.rewardKind==='trial'&&canonical.trial?.state!=='cleared')fail();
     if((s.mode==='dead'&&p.hp!==0)||(p.hp===0&&s.mode!=='dead')||(s.mode==='won'&&(s.stage!==3||canonical.enemies[0].hp!==0)))fail();
     const restored=K.newRun(s.seed,null);K.enterRoom(restored,s.stage,true);
     for(const key of ['time','elapsed','roomTime','kills','broken','damageTaken','lastDamage','hitstop','shake','checkpoint','combo','comboTime','serial','rewardKind','pendingRelic'])restored[key]=s[key];
@@ -666,13 +783,13 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
     for(const key of Object.keys(restored.stats)){if(!number(s.stats?.[key],0,1e7))fail();restored.stats[key]=s.stats[key];}
     return {state:restored,meta:K.cleanMeta(data.meta)};
   };
-  K.pack=(state,meta)=>JSON.stringify({game:'black-lotus',schema:4,build:K.VERSION,state,meta:K.cleanMeta(meta)});
+  K.pack=(state,meta)=>JSON.stringify({game:'black-lotus',schema:5,build:K.VERSION,state,meta:K.cleanMeta(meta)});
   K.download=function(raw,name){const url=URL.createObjectURL(new Blob([raw],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
   K.Storage=class{
-    constructor(){this.available=true;this.error='';this.legacy=null;try{for(const key of[LEGACY,PREVIOUS,THIRD]){const raw=localStorage.getItem(key);if(raw&&raw.length<1000000){const x=JSON.parse(raw);if(x.game==='black-lotus'&&[1,2,3].includes(x.state?.version)&&x.schema===x.state.version)this.legacy=x;}}}catch{this.available=false;}}
+    constructor(){this.available=true;this.error='';this.legacy=null;try{for(const key of[LEGACY,PREVIOUS,THIRD,FOURTH]){const raw=localStorage.getItem(key);if(raw&&raw.length<1000000){const x=JSON.parse(raw);if(x.game==='black-lotus'&&[1,2,3,4].includes(x.state?.version)&&x.schema===x.state.version)this.legacy=x;}}}catch{this.available=false;}}
     read(){try{const raw=localStorage.getItem(KEY);if(!raw)return null;if(raw.length>1000000)fail();return K.validSave(JSON.parse(raw));}catch(e){this.error=e.message;return null;}}
     write(state,meta){try{localStorage.setItem(KEY,K.pack(state,meta));this.available=true;return true;}catch{this.available=false;return false;}}
-    export(state,meta){K.download(K.pack(state,meta),'劫后行-v4-'+state.seed+'.json');}
+    export(state,meta){K.download(K.pack(state,meta),'劫后行-v5-'+state.seed+'.json');}
     import(raw){if(raw.length>1000000)throw new Error('存档文件过大。');return K.validSave(JSON.parse(raw));}
     readSettings(){try{const x=JSON.parse(localStorage.getItem(SETTINGS)||'{}');return {volume:number(x.volume,0,1)?x.volume:.25,shake:typeof x.shake==='boolean'?x.shake:!matchMedia('(prefers-reduced-motion: reduce)').matches};}catch{return{volume:.25,shake:false};}}
     settings(value){try{localStorage.setItem(SETTINGS,JSON.stringify(value));}catch{}}
@@ -756,9 +873,9 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
       for(const p of s.room.platforms)this.platform(p);
       for(const h of s.room.hazards){const phase=K.hazardPhase(s,h);if(phase==='quiet'){pixel(c,h.x,h.y+h.h-2,h.w,2,'#725b76');continue;}if(phase==='warning'){pixel(c,h.x,h.y+h.h-2,h.w,2,'#d295b8');for(let j=0;j<h.w;j+=14)pixel(c,h.x+j,h.y+4,5,2,'#a7719a');continue;}for(let x=h.x;x<h.x+h.w;x+=11)poly(c,[[x,h.y+h.h],[x+5,h.y-4],[x+11,h.y+h.h]],'#b5769e');pixel(c,h.x,h.y+h.h-3,h.w,3,'#573c59');}
       for(const q of s.room.seals){if(this.drawSeal&&K.ImageArt?.images.enemies){this.drawSeal(q);continue;}if(q.hp>0){pixel(c,q.x-5,q.y+38,38,10,'#6c6075');pixel(c,q.x+6,q.y+4,16,34,'#393343');pixel(c,q.x+9,q.y+8,10,25,'#c984c2');this.lotus(q.x+14,q.y+7,15,'#bf80b5',false);for(let i=0;i<3;i++)pixel(c,q.x+9+i*5,q.y-13,3,3,q.hp>i*14?'#d8a4cc':'#463c52');}else{pixel(c,q.x-6,q.y+40,39,8,'#5a5e62');pixel(c,q.x+6,q.y+31,14,8,'#807e78');}}
-      for(const item of s.room.pickups)if(!item.used){const y=item.y+Math.round(Math.sin(t*3+item.x)*3);this.lotus(item.x+8,y+8,10,item.kind==='heal'?'#c4dba3':'#91d2d4',false);pixel(c,item.x+5,y+20,7,2,'#57636b');}
+      for(const item of s.room.pickups)if(!item.used&&item.enabled!==false){const y=item.y+Math.round(Math.sin(t*3+item.x)*3);this.lotus(item.x+8,y+8,10,item.kind==='heal'?'#c4dba3':item.kind==='rage'?'#f0c671':'#91d2d4',false);pixel(c,item.x+5,y+20,7,2,'#57636b');}
       if(stage<3&&this.drawGate){this.drawGate(s.room.exit,s.room.seals.every(q=>q.hp===0));}else if(stage<3){const open=s.room.seals.every(q=>q.hp===0);pixel(c,s.room.exit-20,333,52,108,'#3e3544');pixel(c,s.room.exit-12,338,36,102,open?'#586e65':'#302936');pixel(c,s.room.exit-25,330,62,6,'#aa9679');pixel(c,s.room.exit-30,326,72,4,'#625864');for(let i=0;i<4;i++)pixel(c,s.room.exit-8+i*9,342,2,93,open?'#a8caa0':'#5f4567');if(open){for(let i=0;i<7;i++)pixel(c,s.room.exit+Math.sin(t+i)*14,365+(i*11+t*20)%65,2,4,'#d6dba6');}}
-      for(const e of s.room.enemies)if(e.hp>0){pixel(c,e.x-2,e.y+e.h-1,e.w+4,4,'#19212d');if(e.kind==='boss'){const col=e.phase==='recover'?'#d4b985':'#805575';for(let i=0;i<10;i++){const ang=e.phase==='recover'?i*Math.PI/5:-Math.PI/2+i*Math.PI/9;pixel(c,e.x+24+Math.cos(ang)*39*(e.phase==='recover'?1:e.face),e.y+30+Math.sin(ang)*48,4,4,col);}}const f=e.phase==='attack'?5:e.phase.includes('windup')?4:Math.floor(t*3)%4;const yy=0;this.person(e.kind,e.x,e.y+yy,e.face,f,1,e.flash>0,e.kind==='boss'?1.12:1);
+      for(const e of s.room.enemies)if(e.hp>0&&!e.dormant){pixel(c,e.x-2,e.y+e.h-1,e.w+4,4,'#19212d');if(e.kind==='boss'){const col=e.phase==='recover'?'#d4b985':'#805575';for(let i=0;i<10;i++){const ang=e.phase==='recover'?i*Math.PI/5:-Math.PI/2+i*Math.PI/9;pixel(c,e.x+24+Math.cos(ang)*39*(e.phase==='recover'?1:e.face),e.y+30+Math.sin(ang)*48,4,4,col);}}const f=e.phase==='attack'?5:e.phase.includes('windup')?4:Math.floor(t*3)%4;const yy=0;this.person(e.kind,e.x,e.y+yy,e.face,f,1,e.flash>0,e.kind==='boss'?1.12:1);
         if(e.kind!=='boss'&&e.hp<e.maxHp){pixel(c,e.x-5,e.y-21,36,3,'#302634');pixel(c,e.x-5,e.y-21,Math.ceil(36*e.hp/e.maxHp),3,'#bd8494');}
         if(e.phase.includes('windup')){pixel(c,e.x+9,e.y-34,5,12,'#f4c589');pixel(c,e.x+9,e.y-19,5,4,'#f4c589');if(e.kind==='boss'&&e.phase==='sweep-windup'){const b=K.enemyAttackBox(e);pixel(c,b.x,b.y+b.h-4,b.w,3,'#bd6c9d');}else if(e.phase==='windup'&&(e.kind==='blade'||e.kind==='shield')){const b=K.enemyAttackBox(e);pixel(c,b.x,b.y+b.h-3,b.w,2,'#a78b61');}}
         if(e.phase==='attack'){const b=K.enemyAttackBox(e);pixel(c,b.x,b.y+10,b.w,3,'#e3a49e');pixel(c,b.x,b.y+b.h-3,b.w,3,'#ba6879');}
@@ -1087,7 +1204,7 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
     combatCues(){
       super.combatCues();const s=this.scene;if(!s)return;const c=this.c,e=K.guardian(s);
       if(e?.hp>0&&!e.dormant){
-        for(let y=345;y<440;y+=14)rect(c,4420,y,3,7,'#bea074');
+        for(let y=345;y<440;y+=14)rect(c,s.room.arena.min-10,y,3,7,'#bea074');
         if(e.phase==='warden-windup'){
           for(const box of e.marks)this.mark(box);
           if(e.move==='fan')for(const v of[-95,0,95])for(let i=1;i<11;i++)rect(c,e.x+24+e.face*i*22,e.y+25+v/225*i*22,2,2,'#c594be');
@@ -1112,6 +1229,50 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
 </script><script>
 (function(K){
   'use strict';
+  const Base=K.Renderer,rect=(c,x,y,w,h,color)=>{c.fillStyle=color;c.fillRect(Math.round(x),Math.round(y),Math.round(w),Math.round(h));};
+  K.Renderer=class extends Base{
+    combatCues(){
+      super.combatCues();const s=this.scene;if(!s)return;const c=this.c,t=s.room.trial,cm=s.room.camp;
+      if(t){
+        const done=t.state==='claimed',col=done?'#6b7872':t.state==='active'?'#d895bf':'#e3c47f';
+        rect(c,t.x-25,276,50,4,'#796d60');rect(c,t.x-15,248,30,28,'#33343f');rect(c,t.x-11,251,22,22,'#685064');
+        for(let i=0;i<3;i++){rect(c,t.x-7+i*6,254,3,13,col);rect(c,t.x-8+i*6,264,5,2,col);}
+        if(t.state==='cleared')for(let i=0;i<6;i++)rect(c,t.x-22+i*8,238-Math.sin(this.clock*3+i)*4,2,3,'#ffe5a1');
+      }
+      if(cm){
+        rect(c,cm.x-18,433,36,7,'#706b5e');rect(c,cm.x-3,393,6,40,'#7b6c50');rect(c,cm.x-13,387,26,3,'#cab183');rect(c,cm.x-9,390,18,23,cm.used?'#514b46':'#a27c49');
+        rect(c,cm.x-5,394,10,14,cm.used?'#716d5d':'#f0d49c');rect(c,cm.x-16,415,32,2,cm.used?'#655d53':'#baa582');
+        if(!cm.used)rect(c,cm.x-1,398+Math.sin(this.clock*3)*2,3,6,'#fff0bb');
+      }
+      if(s.stage===3){const a=s.room.arena;for(let y=290;y<440;y+=15)rect(c,a.enter-3,y,3,7,s.room.seals.some(q=>q.hp>0)?'#b879b2':'#b7c6a1');}
+      for(const e of s.room.enemies)if(e.hp>0&&!e.dormant&&e.trait){
+        const col={twin:'#edb58c',pulse:'#e4cb89',volley:'#bcace4'}[e.trait],x=e.x+e.w/2,y=e.y-45;
+        // Shape signatures remain distinct even without colour.
+        if(e.trait==='twin'){for(const dx of[-5,3]){rect(c,x+dx,y,2,9,col);rect(c,x+dx-2,y+7,6,2,col);}}
+        if(e.trait==='pulse'){rect(c,x-7,y,14,2,col);rect(c,x-7,y+2,2,7,col);rect(c,x+5,y+2,2,7,col);rect(c,x-5,y+9,10,2,col);}
+        if(e.trait==='volley')for(const dx of[-7,0,7])rect(c,x+dx,y+Math.abs(dx)*.5,3,3,col);
+        if(e.phase==='chain-windup'){this.mark(K.enemyAttackBox(e));rect(c,x-5,y-7,3,4,'#ffe3a1');rect(c,x+2,y-7,3,4,'#ffe3a1');}
+        if(e.trait==='pulse'&&e.phase==='windup'){rect(c,e.face>0?e.x:e.x-250,435,250,2,'#d9bd80');}
+        if(e.trait==='volley'&&e.phase==='windup'&&Number.isFinite(e.aimX)){
+          const a=Math.atan2(e.aimY-e.y-16,e.aimX-e.x);for(const d of[-.24,0,.24])for(let i=1;i<9;i++)rect(c,e.x+Math.cos(a+d)*i*24,e.y+16+Math.sin(a+d)*i*24,2,2,col);
+        }
+      }
+      // Healing uses a cross, focus a diamond, rage a three-prong flame.
+      for(const item of s.room.pickups)if(!item.used&&item.enabled!==false&&item.sourceId!==undefined){
+        const x=item.x+8,y=item.y+6+Math.round(Math.sin(this.clock*3+item.x)*3),col=K.DROPS[item.kind].color;
+        rect(c,x-7,y-7,14,14,'#222d35');
+        if(item.kind==='heal'){rect(c,x-2,y-5,4,10,col);rect(c,x-5,y-2,10,4,col);}
+        else if(item.kind==='focus'){for(let i=-4;i<=4;i++)rect(c,x-Math.abs(4-Math.abs(i)),y+i,2*Math.abs(4-Math.abs(i))+1,1,col);}
+        else{rect(c,x-4,y-1,8,6,col);rect(c,x-5,y-4,2,5,col);rect(c,x-1,y-6,2,7,col);rect(c,x+3,y-4,2,5,col);}
+      }
+    }
+    fx(f,t){if(f.kind==='drop-rise'){const u=1-f.life/f.duration;for(let i=0;i<5;i++)rect(this.c,f.x-12+i*6,f.y-u*28-(i%2)*5,2,4,f.color);return;}super.fx(f,t);}
+  };
+})(globalThis.Kong ||= {});
+
+</script><script>
+(function(K){
+  'use strict';
   // Atlas extraction only: keep original generated PNGs and their transparency.
   K.DialogArtReady=K.ImageArt.ready.then(()=>{
     const root=document.documentElement;
@@ -1130,7 +1291,7 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
   'use strict';
   K.Input=class{
     constructor(canvas,onControl,onInput){this.keys=new Set();this.pressed=new Set();this.mouse=false;this.aimFace=0;this.active=false;this.onControl=onControl;this.combatButtons=new Set();this.suppressClick=false;
-      window.addEventListener('keydown',e=>{if(['INPUT','TEXTAREA','SELECT'].includes(e.target.tagName))return;if(e.code==='Escape'){e.preventDefault();if(!e.repeat)onControl('pause');return;}if(!this.active)return;if(['Space','ArrowUp','ArrowDown','ArrowLeft','ArrowRight','KeyW','KeyA','KeyS','KeyD','KeyJ','KeyK','KeyL','KeyF','KeyR','KeyQ','ShiftLeft','ShiftRight'].includes(e.code)){e.preventDefault();if(!this.keys.has(e.code)){this.pressed.add(e.code);onInput(e.timeStamp,e.code);}this.keys.add(e.code);}});
+      window.addEventListener('keydown',e=>{if(['INPUT','TEXTAREA','SELECT'].includes(e.target.tagName))return;if(e.code==='Escape'){e.preventDefault();if(!e.repeat)onControl('pause');return;}if(this.active&&e.code==='KeyB'){e.preventDefault();if(!e.repeat)onControl('build');return;}if(!this.active)return;if(['Space','ArrowUp','ArrowDown','ArrowLeft','ArrowRight','KeyW','KeyA','KeyS','KeyD','KeyJ','KeyK','KeyL','KeyF','KeyR','KeyQ','ShiftLeft','ShiftRight'].includes(e.code)){e.preventDefault();if(!this.keys.has(e.code)){this.pressed.add(e.code);onInput(e.timeStamp,e.code);}this.keys.add(e.code);}});
       window.addEventListener('keyup',e=>this.keys.delete(e.code));
       // Enter DOM navigation through pause, never leave combat running behind focus.
       window.addEventListener('keydown',e=>{if(this.active&&e.code==='Tab'){e.preventDefault();this.clear();onControl('pause');}});
@@ -1194,7 +1355,7 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
   const $=id=>document.getElementById(id),world=$('world');
   const renderer=new K.Renderer(world),audio=new K.Audio(),storage=new K.Storage();
   const loaded=storage.read();let state=loaded?.state||null,meta=loaded?.meta||K.cleanMeta();
-  let screen='menu',backScreen='menu',toastUntil=0,lastSave=0,pendingInputs=[];
+  let screen='menu',backScreen='menu',buildBack='playing',toastUntil=0,lastSave=0,pendingInputs=[];
   const rememberedFocus=new Map();let focusRevision=0;
   const settings=storage.readSettings();renderer.shake=settings.shake;audio.setVolume(settings.volume);
   const metrics={frames:[],inputs:[],errors:[],started:performance.now()};
@@ -1217,8 +1378,8 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
   const worldSummary=()=>state?['rescue','bridge','bell'].map(id=>state.world[id]?K.WORLD_STORIES[id].title:null).filter(Boolean).join(' · '):'';
   const journal=()=>state?.journal.length?'<details class="run-journal"><summary>此行见闻 · '+state.journal.length+'</summary>'+state.journal.map(key=>{const[id,part]=key.split(':');return '<p><b>'+K.WORLD_STORIES[id].title+'</b> · '+K.WORLD_STORIES[id][part]+'</p>';}).join('')+'</details>':'';
   const panel=(label,eyebrow,title,body)=>{
-    const choice=['start','reward','replace'].includes(screen),hint=choice?'<span><kbd>A</kbd><kbd>D</kbd> / <kbd>←</kbd><kbd>→</kbd> 选卷</span><span><kbd>Enter</kbd> 确认</span><span><kbd>1</kbd><kbd>2</kbd><kbd>3</kbd> 速选</span>':screen==='history'?'<span><kbd>↑</kbd><kbd>↓</kbd> 翻阅</span><span><kbd>Tab</kbd> 移步</span><span><kbd>Enter</kbd> 确认</span>':'<span><kbd>↑</kbd><kbd>↓</kbd> 移步</span><span><kbd>Enter</kbd> 确认</span>';
-    const back=['paused','help','legacy','history','prologue','epilogue','start','replace','won','dead'].includes(screen)?`<span><kbd>Esc</kbd> ${screen==='paused'?'继续':screen==='replace'?'返回选择':'返回'}</span>`:'';
+    const choice=['start','reward','replace'].includes(screen),hint=choice?'<span><kbd>A</kbd><kbd>D</kbd> / <kbd>←</kbd><kbd>→</kbd> 选卷</span><span><kbd>Enter</kbd> 确认</span><span><kbd>1</kbd><kbd>2</kbd><kbd>3</kbd> 速选</span>':['history','build'].includes(screen)?'<span><kbd>↑</kbd><kbd>↓</kbd> 翻阅</span><span><kbd>Tab</kbd> 移步</span><span><kbd>Enter</kbd> 确认</span>':'<span><kbd>↑</kbd><kbd>↓</kbd> 移步</span><span><kbd>Enter</kbd> 确认</span>';
+    const back=['paused','build','help','legacy','history','prologue','epilogue','start','replace','won','dead'].includes(screen)?`<span><kbd>Esc</kbd> ${screen==='paused'?'继续':screen==='replace'?'返回选择':'返回'}</span>`:'';
     return `<section class="panel game-dialog dialog-${screen}" role="dialog" aria-modal="true" aria-label="${label}" aria-labelledby="dialog-title"><header class="dialog-heading"><span class="dialog-sigil" aria-hidden="true"></span><div class="eyebrow">${eyebrow}</div><h2 id="dialog-title">${title}</h2></header><div class="dialog-content">${body}</div><footer class="dialog-footer"><span class="footer-mark" aria-hidden="true">◇</span>${hint}${back}</footer></section>`;
   };
   function toast(text,seconds=2.8){$('toast').textContent=text;$('toast').hidden=false;toastUntil=performance.now()+seconds*1000;}
@@ -1231,9 +1392,9 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
     $('hud').hidden=!state||next!=='playing';$('overlay').innerHTML='';
     $('pause').disabled=!['playing','paused'].includes(next);$('combat-labels').hidden=next!=='playing';
     if(next==='playing'){world.focus({preventScroll:true});return;}
-    const render={menu,prologue, start:starter,paused:pauseMenu,help,reward,replace:replaceRelic,dead:ending,won:ending,epilogue,legacy:legacyMenu,history};render[next]?.();
+    const render={menu,prologue, start:starter,paused:pauseMenu,build:buildMenu,help,reward,replace:replaceRelic,dead:ending,won:ending,epilogue,legacy:legacyMenu,history};render[next]?.();
     const revision=++focusRevision;
-    requestAnimationFrame(()=>{if(revision!==focusRevision||screen!==next)return;const memory=rememberedFocus.get(next),node=memory?.id?$(memory.id):memory?.relic?$('overlay').querySelector('[data-relic="'+memory.relic+'"]'):null;(node||(next==='history'?$('overlay').querySelector('.history-list'):$('overlay').querySelector('button:not(:disabled),input')))?.focus({preventScroll:true});});
+    requestAnimationFrame(()=>{if(revision!==focusRevision||screen!==next)return;const memory=rememberedFocus.get(next),node=memory?.id?$(memory.id):memory?.relic?$('overlay').querySelector('[data-relic="'+memory.relic+'"]'):null;(node||(['history','build'].includes(next)?$('overlay').querySelector('.history-list,.build-scroll'):$('overlay').querySelector('button:not(:disabled),input')))?.focus({preventScroll:true});});
   }
   function menu(){
     const resumable=state&&['paused','playing','reward'].includes(state.mode);
@@ -1243,7 +1404,7 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
     on('random-seed',()=>$('seed').value='LOTUS-'+crypto.getRandomValues(new Uint32Array(1))[0].toString(36).slice(0,6).toUpperCase());
   }
   function prologue(){
-    $('overlay').innerHTML=panel('开篇','序 · 黑莲之劫','三界的灯，还没有熄',`<p class="story-copy">无天的黑莲遮住灵山。三位守阵者扼住了众生的归路。<br><br>你是孙悟空。走过三境、破除六阵、击退守关者，再叩无天。<br>棍击积攒战意，满时按 R 施展法天象地。<br>沿途择舍利、悟法门、借符术。你的解法，决定此行。</p><div class="journey-map"><span>壹<br><b>雾隐山道</b></span><i>―</i><span>贰<br><b>悬灯古渡</b></span><i>―</i><span>叁<br><b>灵山残庭</b></span><i>―</i><span>终<br><b>黑莲法界</b></span></div><div class="actions">${btn('begin-relic','握紧金箍棒',true)}${btn('back','返回')}</div>`);
+    $('overlay').innerHTML=panel('开篇','序 · 黑莲之劫','三界的灯，还没有熄',`<p class="story-copy">无天的黑莲遮住灵山。三位守阵者扼住了众生的归路。<br><br>你是孙悟空。走过三境、破除沿途阵眼、击退守关者，再叩无天。<br>棍击积攒战意，满时按 R 施展法天象地。<br>沿途择舍利、悟法门、借符术。你的解法，决定此行。</p><div class="journey-map"><span>壹<br><b>雾隐山道</b></span><i>―</i><span>贰<br><b>悬灯古渡</b></span><i>―</i><span>叁<br><b>灵山残庭</b></span><i>―</i><span>终<br><b>黑莲法界</b></span></div><div class="actions">${btn('begin-relic','握紧金箍棒',true)}${btn('back','返回')}</div>`);
     on('begin-relic',()=>show('start'));on('back',()=>show('menu'));
   }
   function cards(ids){return `<div class="cards">${ids.map((id,i)=>{const r=K.reward(id),copy=cardCopy[id]||[r.text,r.cost],verb=screen==='replace'?'放下此物':id==='rest'?'借灯调息':r.temporary?'携此符术':r.max?'悟此法门':'取此舍利',tag=r.max?r.tag+' · '+(K.rank(state,id)+1)+'/'+r.max:r.tag;return `<button class="relic-card" data-relic="${id}" aria-label="${screen==='replace'?'放下':'选择'}${r.name}" aria-describedby="relic-detail-${id} relic-cost-${id}" style="--relic-tone:${r.color}"><span class="num" aria-hidden="true">${['壹','贰','叁'][i]}</span>${relicArt(id)}<h3>${r.name}</h3><span class="tag">${tag}</span><p id="relic-detail-${id}">${copy[0]}</p><span class="cost" id="relic-cost-${id}">${copy[1]}</span><span class="choice-verb" aria-hidden="true">${verb}</span></button>`;}).join('')}</div>`;}
@@ -1257,10 +1418,18 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
   }
   function resume(){if(!state)return;audio.unlock();if(state.mode==='paused')state.mode='playing';show(state.mode==='reward'&&state.pendingRelic?'replace':state.mode);}
   function pauseMenu(){
-    $('overlay').innerHTML=panel('暂停菜单','暂歇 · 风停此刻','棍心未歇',`<p class="pause-place">${K.STAGES[state.stage].name} · 因缘 ${esc(state.seed)}</p>${growthLine()}<nav class="pause-nav" aria-label="暂歇选择">${btn('continue','继续前行 <span aria-hidden="true">ESC</span>',true)}${btn('help','行者手记 <span aria-hidden="true">招式与破局</span>')}${btn('main-menu','回到主菜单')}</nav><div class="setting-row"><label for="volume">声音</label><input id="volume" aria-label="音量" type="range" min="0" max="100" value="${settings.volume*100}"><label><input id="shake" type="checkbox" ${settings.shake?'checked':''}> 屏震</label></div><div class="pause-tools">${btn('export','导出存档')}${btn('import','导入存档')}</div><p class="notice">旅程已停。导出存档可将此行带往另一入口。</p>${journal()}`);
-    on('continue',resume);on('help',()=>openHelp('paused'));on('export',exportSave);on('import',()=>$('import-file').click());on('main-menu',()=>{save();show('menu');});
+    $('overlay').innerHTML=panel('暂停菜单','暂歇 · 风停此刻','棍心未歇',`<p class="pause-place">${K.STAGES[state.stage].name} · 因缘 ${esc(state.seed)}</p>${growthLine()}<nav class="pause-nav" aria-label="暂歇选择">${btn('continue','继续前行 <span aria-hidden="true">ESC</span>',true)}${btn('build-details','本局法门 <span aria-hidden="true">已选加成 · B</span>')}${btn('help','行者手记 <span aria-hidden="true">招式与破局</span>')}${btn('main-menu','回到主菜单')}</nav><div class="setting-row"><label for="volume">声音</label><input id="volume" aria-label="音量" type="range" min="0" max="100" value="${settings.volume*100}"><label><input id="shake" type="checkbox" ${settings.shake?'checked':''}> 屏震</label></div><div class="pause-tools">${btn('export','导出存档')}${btn('import','导入存档')}</div><p class="notice">旅程已停。导出存档可将此行带往另一入口。</p>${journal()}`);
+    on('build-details',()=>openBuild('paused'));on('continue',resume);on('help',()=>openHelp('paused'));on('export',exportSave);on('import',()=>$('import-file').click());on('main-menu',()=>{save();show('menu');});
     $('volume').oninput=e=>{settings.volume=Number(e.target.value)/100;audio.setVolume(settings.volume);storage.settings(settings);};
     $('shake').onchange=e=>{settings.shake=e.target.checked;renderer.shake=settings.shake;storage.settings(settings);};
+  }
+  function openBuild(back){if(!state)return;buildBack=back;if(back==='playing'){state.mode='paused';save();}show('build');}
+  function closeBuild(){if(buildBack==='playing'){state.mode='playing';show('playing');}else show(buildBack);}
+  function buildMenu(){
+    const section=(title,entries)=>'<h3>'+title+'</h3>'+ (entries.length?entries.map(([id,level])=>{const r=K.reward(id);return `<article class="build-entry" role="listitem">${relicArt(id)}<div><h4>${r.name}<small>${level}</small></h4><p>${r.text}</p><p class="build-cost">${r.cost}</p></div></article>`;}).join(''):'<p class="build-empty">此行尚未取得。可在借灯或试炼奖励中选择。</p>');
+    const body=section('舍利 · '+state.relics.length+' / 3',state.relics.map(id=>[id,'已携带']))+section('法门 · 本局保留',Object.entries(state.growth).map(([id,n])=>[id,n+'/'+K.reward(id).max+'重'+(id==='vitality'?' · 上限 +'+20*n:'')]))+section('符术 · Q 限次',state.talisman?[[state.talisman.id,'剩余 '+state.talisman.charges+' 次']]:[]);
+    $('overlay').innerHTML=panel('本局法门与已选加成','此行所悟 · 看清再变化','本局法门',`<div class="build-vitals"><span>生命 <b>${Math.ceil(state.player.hp)} / ${K.maxHP(state)}</b></span><span>定力 <b>${Math.floor(state.player.focus)} / 100</b></span><span>战意 <b>${Math.floor(state.player.rage)} / 100</b></span></div><p class="build-scroll-hint">滚轮 / ↑ ↓ 翻阅全部加成 · Tab 移步 · B 或 Esc 返回</p><div class="build-scroll" role="list" tabindex="0" aria-label="已选加成效果，可滚动">${body}<h3>常备神通</h3><p class="build-empty">R 法天象地：100战意，64伤害；如意余威追加32。<br>L 分身：${K.has(state,'echo')?'50定力 / 3秒 / 穿透棍风':'40定力 / 1.8秒 / 近身棍击'}。K 闪避：0.85秒冷却，起势短暂无敌。<br>掉落已拾 ${state.stats.drops} · 试炼已破 ${state.stats.trials} · 归灯已借 ${state.stats.camps}</p></div><div class="actions">${btn('close-build',buildBack==='reward'?'返回奖励选择':buildBack==='paused'?'返回暂歇':'继续前行',true)}</div>`);
+    on('close-build',closeBuild);
   }
   function openHelp(back){backScreen=back;show('help');}
   function help(){
@@ -1269,15 +1438,15 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
       ['棍法与下劈','J/左键三连，第三棍收招慢、可打断蓄力。空中S＋J下劈；盾兵须绕背、踩踏或借定海心破盾。'],
       ['闪避与分身','K/Shift闪避，0.85秒冷却。L/右键分身，耗40定力；照影珠耗50。棍击命中回定力。'],
       ['法天象地与符术','命中积攒战意，满100按R释放大招：破盾、清近处敌弹。起势护体，收招仍有风险。Q使用限次符术，次数显示在左下。'],
-      ['三境与成法','F借灯、触发见闻或过门。奖励只取一项：舍利最多三枚；法门本局保留；新符会替换旧符。角色强化、技能与调息互相取舍。'],
+      ['长路与成法','B查看本局全部加成。上路F开启可选试炼，清场回去领奖；归灯只能调息一次。怪物掉落不消失，资源满时留在地上。F借灯、触发见闻或过门。奖励只取一项：舍利最多三枚；法门本局保留；新符会替换旧符。角色强化、技能与调息互相取舍。'],
       ['守关与重来','魈王冲撞要跳、灯魁索灯要移、法使封愿光柱要横避。三境需破双阵并击败守关者。无天正面减伤，绕背或等收招。失败清空本局成长。']
     ];
     $('overlay').innerHTML=panel('行者手记','手记 · 看清再出手','棍有尽处，变化无穷',`<div class="help-grid">${lessons.map(([title,text])=>`<div><h3>${title}</h3><p>${text}</p></div>`).join('')}</div><div class="actions">${btn('close-help','记下了',true)}${btn('import','导入存档')}${btn('old','原版旅程')}</div>`);
     on('close-help',()=>show(backScreen));on('import',()=>$('import-file').click());on('old',()=>show('legacy'));
   }
   function reward(){
-    save();const mid=state.rewardKind==='mid';
-    $('overlay').innerHTML=panel('舍利、法门与补给',mid?'阵眼已破 · 余灯尚温':'守关者已退 · 山门将启',mid?'借灯，重整一念':'山门将启，再择一法',`<p class="subtitle">${mid?'舍利、法门或符术择一，亦可借灯调息。':'前往'+K.STAGES[state.stage+1].name+' · 过境另恢复18生命、20定力。'}</p><div class="offering-status"><span>生命 <b>${Math.ceil(state.player.hp)} / ${K.maxHP(state)}</b></span><span>定力 <b>${Math.floor(state.player.focus)}</b></span><span>舍利 <b>${state.relics.length} / 3</b></span></div>${cards(state.reward)}${equipped(state.relics)}${growthLine()}`);bindCards(choose);
+    save();const mid=state.rewardKind==='mid',trial=state.rewardKind==='trial';
+    $('overlay').innerHTML=panel('舍利、法门与补给',trial?'试炼已破 · 以战悟法':mid?'阵眼已破 · 余灯尚温':'守关者已退 · 山门将启',trial?state.room.trial.name+' · 择一法':mid?'借灯，重整一念':'山门将启，再择一法',`<p class="subtitle">${mid||trial?'舍利、法门或符术择一，亦可借灯调息。':'前往'+K.STAGES[state.stage+1].name+' · 过境另恢复18生命、20定力。'}</p><div class="offering-status"><span>生命 <b>${Math.ceil(state.player.hp)} / ${K.maxHP(state)}</b></span><span>定力 <b>${Math.floor(state.player.focus)}</b></span><span>舍利 <b>${state.relics.length} / 3</b></span></div>${cards(state.reward)}${equipped(state.relics)}<div class="build-summary">${growthLine()}${btn('build-details','查看已选加成 · B')}</div>`);bindCards(choose);on('build-details',()=>openBuild('reward'));
   }
   function choose(id,replace){const kind=state.rewardKind,result=K.choose(state,id,replace);if(result==='replace'){show('replace');save();return;}if(result){audio.event({type:'relic'});if(kind==='exit')renderer.camera=0;show('playing');toast(kind==='exit'?K.STAGES[state.stage].lore:'灯火尚在，继续前行。',3.5);save();}}
   function replaceRelic(){
@@ -1290,7 +1459,7 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
   }
   function ending(){
     settle();const won=state.mode==='won',seconds=Math.floor(state.elapsed),time=Math.floor(seconds/60)+'分'+seconds%60+'秒';
-    $('overlay').innerHTML=panel(won?'胜利结算':'失败结算',won?'黑莲已散 · 此心长明':'劫途未尽 · 再起一念',won?'三界重见微光':'此身暂歇，棍心未折',`<p class="subtitle">${won?'无天的莲影终于落地。三境的灯火，正一盏一盏重新亮起。':'最后受伤：'+esc(state.lastDamage)+'。<br>记住刀光和落点，再次入劫时可以换一枚舍利。'}</p><div class="results"><div><small>此行</small><b>${time}</b></div><div><small>破阵</small><b>${state.broken} / 6</b></div><div><small>退敌</small><b>${state.kills}</b></div><div><small>承伤</small><b>${state.damageTaken}</b></div></div><div class="result-build">因缘 ${esc(state.seed)}${equipped(state.relics)}${growthLine()}法天象地 ${state.stats.ultimates} 次 · 符术 ${state.stats.talismans} 次 · 守关 ${state.stats.guardians}/3<br>跃起 ${state.stats.jumps} 次 · 分身 ${state.stats.clones} 次 · 消耗定力 ${state.stats.focusSpent}<br>此行所护：${worldSummary()||'一路直抵黑莲，尚有未尽的归路'}</div><div class="actions">${won?btn('epilogue','走出黑莲',true):btn('retry','同缘再行',true)}${won?btn('retry','同缘再行'):btn('new-path','另启因缘')}${btn('export','导出此行')}</div>`);
+    $('overlay').innerHTML=panel(won?'胜利结算':'失败结算',won?'黑莲已散 · 此心长明':'劫途未尽 · 再起一念',won?'三界重见微光':'此身暂歇，棍心未折',`<p class="subtitle">${won?'无天的莲影终于落地。三境的灯火，正一盏一盏重新亮起。':'最后受伤：'+esc(state.lastDamage)+'。<br>记住刀光和落点，再次入劫时可以换一枚舍利。'}</p><div class="results"><div><small>此行</small><b>${time}</b></div><div><small>破阵</small><b>${state.broken} / 8</b></div><div><small>退敌</small><b>${state.kills}</b></div><div><small>承伤</small><b>${state.damageTaken}</b></div></div><div class="result-build">因缘 ${esc(state.seed)}${equipped(state.relics)}${growthLine()}法天象地 ${state.stats.ultimates} 次 · 符术 ${state.stats.talismans} 次 · 守关 ${state.stats.guardians}/3<br>跃起 ${state.stats.jumps} 次 · 分身 ${state.stats.clones} 次 · 消耗定力 ${state.stats.focusSpent}<br>此行所护：${worldSummary()||'一路直抵黑莲，尚有未尽的归路'}</div><div class="actions">${won?btn('epilogue','走出黑莲',true):btn('retry','同缘再行',true)}${won?btn('retry','同缘再行'):btn('new-path','另启因缘')}${btn('export','导出此行')}</div>`);
     on('retry',()=>{K.pendingSeed=state.seed;show('start');});on('new-path',()=>show('menu'));on('export',exportSave);on('epilogue',()=>show('epilogue'));
   }
   function epilogue(){
@@ -1302,18 +1471,21 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
   }
   function legacyMenu(){
     $('overlay').innerHTML=panel('原版旅程','存档保护 · 旧路仍在','在原来的规则中继续',`<p class="story-copy">旧版的地图与规则和新版不同。你的旧旅程不会被覆盖，也不会被悄悄搬到另一张地图。<br><br>${storage.legacy?'可先下载旧档，再在打开的原版里通过「初行指南 → 导入存档」继续。':'保留的原版可直接打开；如果你有旧JSON文件，请在原版的指南中导入。'}</p><div class="actions">${btn('open-legacy',storage.legacy?'备份旧档并打开原版':'打开原版',true)}${btn('back','返回新版')}</div>`);
-    on('open-legacy',()=>{if(storage.legacy)K.download(JSON.stringify(storage.legacy),'劫后行-v'+storage.legacy.state.version+'-旧旅程.json');const version=storage.legacy?.state?.version||3,legacyName='legacy-v'+version+'.html';const legacy=document.querySelector('meta[name="kong-package"]')?legacyName:'release/'+legacyName;window.open(new URL(legacy,location.href).href,'_blank','noopener');toast('已打开保留的原版；可通过手记导入旧旅程。',4);});on('back',()=>show('menu'));
+    on('open-legacy',()=>{if(storage.legacy)K.download(JSON.stringify(storage.legacy),'劫后行-v'+storage.legacy.state.version+'-旧旅程.json');const version=storage.legacy?.state?.version||4,legacyName='legacy-v'+version+'.html';const legacy=document.querySelector('meta[name="kong-package"]')?legacyName:'release/'+legacyName;window.open(new URL(legacy,location.href).href,'_blank','noopener');toast('已打开保留的原版；可通过手记导入旧旅程。',4);});on('back',()=>show('menu'));
   }
   function exportSave(){save();storage.export(state,meta);toast('已导出整段旅程，含动态敌招与舍利选择。');}
   function control(action){
-    if(action==='pause'){if(screen==='playing'){state.mode='paused';save();show('paused');}else if(screen==='paused')resume();else if(screen==='help')show(backScreen);else if(screen==='replace'){state.pendingRelic=null;show('reward');save();}else if(screen==='epilogue')show('won');else if(['start','prologue','legacy','history','won','dead'].includes(screen))show('menu');}
+    if(action==='build'&&screen==='playing')openBuild('playing');
+    if(action==='pause'){if(screen==='playing'){state.mode='paused';save();show('paused');}else if(screen==='paused')resume();else if(screen==='build')closeBuild();else if(screen==='help')show(backScreen);else if(screen==='replace'){state.pendingRelic=null;show('reward');save();}else if(screen==='epilogue')show('won');else if(['start','prologue','legacy','history','won','dead'].includes(screen))show('menu');}
     if(action==='blur'&&screen==='playing'){state.mode='paused';save();show('paused');}
   }
-  on('pause',()=>control('pause'));on('guide-top',()=>{const back=screen==='playing'?'paused':screen;if(screen==='playing'){state.mode='paused';save();}openHelp(back==='help'?backScreen:back);});
+  on('build-open',()=>openBuild('playing'));on('pause',()=>control('pause'));on('guide-top',()=>{const back=screen==='playing'?'paused':screen;if(screen==='playing'){state.mode='paused';save();}openHelp(back==='help'?backScreen:back);});
   on('brand',e=>{e.preventDefault();if(screen==='playing'){state.mode='paused';save();}show('menu');});
   $('import-file').onchange=async e=>{const file=e.target.files[0];if(!file)return;let raw='';try{raw=await file.text();const data=storage.import(raw);state=data.state;meta=data.meta;renderer.camera=K.clamp(state.player.x-300,0,state.room.width-960);save();show(state.mode==='reward'&&state.pendingRelic?'replace':state.mode);toast('旅程已恢复。',2);}catch(err){if(err.legacy){try{storage.legacy=JSON.parse(raw);show('legacy');}catch{toast('旧存档无法读取。');}}else toast('导入失败：'+err.message);}e.target.value='';};
   window.addEventListener('keydown',e=>{
     if(e.defaultPrevented)return;
+    if(e.target.classList.contains('build-scroll')&&['ArrowDown','ArrowUp','PageDown','PageUp','Home','End'].includes(e.code)){e.preventDefault();const n=e.target;if(e.code==='Home')n.scrollTop=0;else if(e.code==='End')n.scrollTop=n.scrollHeight;else n.scrollTop+=(['ArrowUp','PageUp'].includes(e.code)?-1:1)*(e.code.startsWith('Page')?n.clientHeight*.8:45);return;}
+    if(e.code==='KeyB'&&!e.repeat&&['paused','reward','build'].includes(screen)){e.preventDefault();if(screen==='build')closeBuild();else openBuild(screen);return;}
     if(e.code==='Escape'&&screen!=='playing'){e.preventDefault();if(!e.repeat)control('pause');return;}
     const field=['INPUT','TEXTAREA','SELECT'].includes(e.target.tagName);
     if(!field&&['start','reward','replace'].includes(screen)&&/^Digit[123]$/.test(e.code)){e.preventDefault();if(e.repeat)return;const i=Number(e.code.slice(-1))-1;audio.unlock();audio.menu('confirm');if(screen==='start')startRun(['cloud','echo','staff'][i]);else if(screen==='replace')choose(state.pendingRelic,state.relics[i]);else choose(state.reward[i]);return;}
@@ -1322,7 +1494,7 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
       if(e.code==='Tab'&&nodes.length){const first=nodes[0],last=nodes[nodes.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}}
       const cardKey=['start','reward','replace'].includes(screen)&&!e.ctrlKey&&!e.metaKey&&!e.altKey&&['KeyA','KeyD'].includes(e.code);
       const navCode=cardKey?(e.code==='KeyA'?'ArrowLeft':'ArrowRight'):e.code;
-      if(!field&&['ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(navCode)&&!e.target.classList.contains('history-list')&&nodes.length){e.preventDefault();const cards=[...$('overlay').querySelectorAll('.relic-card')],list=cards.length&&(cardKey||cards.includes(document.activeElement))&&['ArrowLeft','ArrowRight'].includes(navCode)?cards:nodes;const dir=['ArrowUp','ArrowLeft'].includes(navCode)?-1:1,index=list.indexOf(document.activeElement);list[index<0?(dir<0?list.length-1:0):(index+dir+list.length)%list.length].focus();audio.menu('move');}
+      if(!field&&['ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(navCode)&&!e.target.classList.contains('history-list')&&!e.target.classList.contains('build-scroll')&&nodes.length){e.preventDefault();const cards=[...$('overlay').querySelectorAll('.relic-card')],list=cards.length&&(cardKey||cards.includes(document.activeElement))&&['ArrowLeft','ArrowRight'].includes(navCode)?cards:nodes;const dir=['ArrowUp','ArrowLeft'].includes(navCode)?-1:1,index=list.indexOf(document.activeElement);list[index<0?(dir<0?list.length-1:0):(index+dir+list.length)%list.length].focus();audio.menu('move');}
       if(e.code==='Enter'&&e.repeat)e.preventDefault();
     }
   });
@@ -1332,14 +1504,15 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
   K.pointerFace=x=>{if(!state)return 0;const r=world.getBoundingClientRect();return Math.sign((x-r.left)/r.width*960+renderer.camera-state.player.x-12);};
   function hud(){
     if(!state)return;const p=state.player;
-    $('hp-number').textContent=Math.ceil(p.hp)+' / '+K.maxHP(state);$('hp-fill').style.width=(p.hp/K.maxHP(state)*100)+'%';$('focus-number').textContent=Math.floor(p.focus);$('focus-fill').style.width=p.focus+'%';$('rage-number').textContent=Math.floor(p.rage);$('rage-fill').style.width=p.rage+'%';$('rage-line').classList.toggle('ready',p.rage>=100);$('rage-line').title=p.rage>=100?'按 R 释放法天象地':'命中积攒战意';$('talisman-state').textContent=state.talisman?'Q '+K.reward(state.talisman.id).name+' ×'+state.talisman.charges:'Q 未携符术';$('growth-state').textContent=Object.keys(state.growth).map(id=>K.reward(id).name).join(' · ');$('chapter').textContent=state.stage<3?'第'+['一','二','三'][state.stage]+'境':'终局';$('stage-name').textContent=K.STAGES[state.stage].name;$('chapter').textContent+=' · '+K.region(state.stage,p.x);
-    const left=state.room.seals.find(q=>q.hp>0),guardian=K.guardian(state);$('objective').textContent=state.stage<3?(left?'阵眼 '+(state.room.seals.filter(q=>q.hp===0).length+1)+' / 2 · 前方 '+Math.max(0,Math.ceil((left.x-p.x)/10))+'丈':guardian?.hp>0?'击退山门守关者 · '+K.GUARDIANS[state.stage].name:'双阵与守关已破 · F过门'):'绕背破莲 · 金色收招全额受伤';
+    $('hp-number').textContent=Math.ceil(p.hp)+' / '+K.maxHP(state);$('hp-fill').style.width=(p.hp/K.maxHP(state)*100)+'%';$('focus-number').textContent=Math.floor(p.focus);$('focus-fill').style.width=p.focus+'%';$('rage-number').textContent=Math.floor(p.rage);$('rage-fill').style.width=p.rage+'%';$('rage-line').classList.toggle('ready',p.rage>=100);$('rage-line').title=p.rage>=100?'按 R 释放法天象地':'命中积攒战意';$('talisman-state').textContent=state.talisman?'Q '+K.reward(state.talisman.id).name+' ×'+state.talisman.charges:'Q 未携符术';$('growth-state').textContent=Object.entries(state.growth).map(([id,n])=>K.reward(id).name+(n>1?'·'+n+'重':'')).join(' · ');$('chapter').textContent=state.stage<3?'第'+['一','二','三'][state.stage]+'境':'终局';$('stage-name').textContent=K.STAGES[state.stage].name;$('chapter').textContent+=' · '+K.region(state.stage,p.x);
+    const left=state.room.seals.find(q=>q.hp>0),guardian=K.guardian(state);$('objective').textContent=state.stage<3?(left?'阵眼 '+(state.room.seals.filter(q=>q.hp===0).length+1)+' / 2 · 前方 '+Math.max(0,Math.ceil((left.x-p.x)/10))+'丈':guardian?.hp>0?'击退山门守关者 · '+K.GUARDIANS[state.stage].name:'双阵与守关已破 · F过门'):left?'破除法界双阵 · 前方 '+Math.max(0,Math.ceil((left.x-p.x)/10))+'丈':state.room.enemies[0].dormant?'前往莲座 · 归灯可调息一次':'绕背破莲 · 金色收招全额受伤';
     $('run-seed').textContent=state.seed;$('relic-list').textContent=state.relics.map(id=>K.relic(id).name).join(' · ')+'  ['+state.relics.length+'/3]';$('dash-state').textContent=p.dashCD>0?'闪避恢复 '+p.dashCD.toFixed(1)+'s':'闪避就绪';
-    const boss=state.room.enemies.find(e=>e.kind==='boss'||e.kind==='warden'&&!e.dormant&&e.hp>0);$('boss-hud').hidden=!boss;
+    const boss=state.room.enemies.find(e=>(e.kind==='boss'||e.kind==='warden')&&!e.dormant&&e.hp>0);$('boss-hud').hidden=!boss;
     if(boss){$('boss-name').textContent=boss.kind==='warden'?K.GUARDIANS[state.stage].name:'无天';$('boss-fill').style.width=boss.hp/boss.maxHp*100+'%';$('boss-hud').style.setProperty('--boss-color',boss.kind==='warden'?K.GUARDIANS[state.stage].color:'#ba77a3');$('boss-phase').textContent=boss.kind==='warden'?(boss.phase==='recover'?'收招破绽 · 出棍':boss.phase==='warden-windup'?({charge:'冲撞将至 · 跃过路径',quake:'震地将至 · 跳',fan:'散焰将至 · 跳或返弹',lantern:'索灯将至 · 离开莲印',columns:'封愿将至 · 横移',bell:'钟浪将至 · 跳'}[boss.move]):'看清下一招'):boss.phase==='recover'?'破绽已现':boss.phase==='sweep-windup'?'横扫将至 · 跳':boss.phase==='orb-windup'?'莲焰将至 · 闪':boss.phase==='rain-windup'?'落火将至 · 离开莲印':boss.phase==='shift-windup'?'移形将至 · 让路':'黑莲护在正面';}
+    const trial=state.room.trial,camp=state.room.camp,nearTrial=trial&&Math.abs(p.x-trial.x)<95&&Math.abs(p.y-trial.y)<75,nearCamp=camp&&Math.abs(p.x-camp.x)<75&&Math.abs(p.y-camp.y)<65;
     const node=state.room.node,nearNode=node&&Math.abs(p.x-node.x)<90&&Math.abs(p.y-396)<95;const gate=state.stage<3&&Math.abs(p.x-state.room.exit)<85;const lamp=state.stage<3&&state.room.seals[0].hp===0&&!state.room.midClaimed&&Math.abs(p.x-state.room.seals[0].x)<85;
-    $('context-hint').hidden=screen!=='playing'||(!gate&&!lamp&&!nearNode&&state.roomTime>9);
-    $('context-hint').textContent=nearNode?(node.state==='done'?'F 回看此地见闻':node.state==='active'?'守阵者尚在 · 可离开后返回':node.id==='bridge'?'F 燃灯接桥 · 消耗20定力':node.id==='rescue'?'F 破笼救困 · 会惊动守卒':'F 叩钟破妄 · 会惊动守钟众'):lamp?'F 借灯整顿 · 舍利、法门与符术':gate?(left?'阵眼尚存，回身破阵':guardian?.hp>0?'守关者尚在，击退后过门':'F 穿过山门'):'J 棍击 · K 闪避 · L 分身 · R 战意满施大招 · Q 符术';
+    $('context-hint').hidden=screen!=='playing'||(!gate&&!lamp&&!nearNode&&!nearTrial&&!nearCamp&&state.roomTime>9);
+    $('context-hint').textContent=nearTrial?(trial.state==='ready'?'F 开启'+trial.name+' · 可跳过，胜后多选一项加成':trial.state==='cleared'?'F 领取试炼奖励':trial.state==='claimed'?'试炼奖励已取':'试炼进行中 · 可退回下路'):nearCamp?(camp.used?'归灯余温已尽':'F 归灯调息 · 生命+24 定力+20 · 仅一次'):nearNode?(node.state==='done'?'F 回看此地见闻':node.state==='active'?'守阵者尚在 · 可离开后返回':node.id==='bridge'?'F 燃灯接桥 · 消耗20定力':node.id==='rescue'?'F 破笼救困 · 会惊动守卒':'F 叩钟破妄 · 会惊动守钟众'):lamp?'F 借灯整顿 · 舍利、法门与符术':gate?(left?'阵眼尚存，回身破阵':guardian?.hp>0?'守关者尚在，击退后过门':'F 穿过山门'):'J 棍击 · K 闪避 · L 分身 · R 战意满施大招 · Q 符术';
     const progress=$('journey-fill');if(progress)progress.style.width=Math.min(100,p.x/state.room.exit*100)+'%';
     const labels=$('combat-labels');if(labels)labels.innerHTML=state.effects.filter(f=>f.text&&f.life>0).slice(-12).map(f=>`<span class="impact-number ${f.kind==='hurt'?'hurt':f.kind==='heavy-hit'?'heavy':f.kind==='block'?'block':''}" style="left:${(f.x-renderer.camera)/960*100}%;top:${(f.y-((f.duration||.42)-f.life)*65)/540*100}%">${esc(f.text)}</span>`).join('');
   }

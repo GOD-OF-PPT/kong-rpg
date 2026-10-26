@@ -24,3 +24,10 @@ evidence/scroll-layout/*.png
 # Working visual iterations stay local; selected v4 review captures are committed.
 evidence/progression-v4/*.png
 evidence/progression-v4/*.webm
+
+# v5 full archive includes all legacy entries and exceeds GitHub's 100 MiB blob limit.
+artifacts/kong-rpg-offline-v5.0.0.zip
+artifacts/portable-check-v5/
+# Keep visual iterations locally; selected final frames are explicitly staged.
+evidence/journey-v5/**/*.png
+evidence/journey-v5/*.png

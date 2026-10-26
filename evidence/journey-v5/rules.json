@@ -1,0 +1,129 @@
+{
+  "version": "5.0.0",
+  "results": [
+    {
+      "name": "fresh stages restore with three distinct wardens and a separate final boss",
+      "pass": true
+    },
+    {
+      "name": "reward seeds replay exactly and keep a real healing alternative",
+      "pass": true
+    },
+    {
+      "name": "growth and limited arts do not consume the three relic slots",
+      "pass": true
+    },
+    {
+      "name": "new talisman replaces the old charges explicitly and death restart clears growth",
+      "pass": true
+    },
+    {
+      "name": "third-strike wave reaches a target that the original staff cannot reach",
+      "pass": true
+    },
+    {
+      "name": "dash strike rewards passing through a target, once per dash",
+      "pass": true
+    },
+    {
+      "name": "clone burst depends on the final clone position rather than immediate free damage",
+      "pass": true
+    },
+    {
+      "name": "waiting cannot charge ultimate; a real hit charges and dead enemies cannot be farmed",
+      "pass": true
+    },
+    {
+      "name": "ultimate has preparation and settles one pulse, even across 120Hz steps",
+      "pass": true
+    },
+    {
+      "name": "ultimate echo changes the commitment window and interruption cancels its second pulse",
+      "pass": true
+    },
+    {
+      "name": "an orb cleared by the second pulse cannot damage the unprotected player later that step",
+      "pass": true
+    },
+    {
+      "name": "thunder is delayed, consumes one charge and cannot repeat within cooldown",
+      "pass": true
+    },
+    {
+      "name": "ward protects its stated period, then leaves the player vulnerable",
+      "pass": true
+    },
+    {
+      "name": "damage interrupts a falling staff slam and normal gravity returns the player to ground",
+      "pass": true
+    },
+    {
+      "name": "each warden has two distinct moves and saved warnings match its active geometry",
+      "pass": true
+    },
+    {
+      "name": "warden movement is gated by arena entry and defeating it never ends the run",
+      "pass": true
+    },
+    {
+      "name": "moving into a chosen gap avoids columns, while standing in their real area hurts",
+      "pass": true
+    },
+    {
+      "name": "ongoing ultimate, delayed thunder, ward, growth and guardian phases restore",
+      "pass": true
+    },
+    {
+      "name": "pause freezes new combat clocks and does not spend charges",
+      "pass": true
+    },
+    {
+      "name": "malformed new-state data is rejected instead of silently changing saved rules",
+      "pass": true
+    },
+    {
+      "name": "v3 save routes to the exact preserved v3.0.2 entry",
+      "pass": true
+    },
+    {
+      "name": "standalone distribution has no runtime network/module requirement and keeps its Git LF hash",
+      "pass": true
+    },
+    {
+      "name": "all four stages grow playable ground routes without requiring an air jump",
+      "pass": true
+    },
+    {
+      "name": "same seed fixes drops; full resources leave them available and one pickup cannot repeat",
+      "pass": true
+    },
+    {
+      "name": "camp is one use, does not consume a growth reward, and restores on export/import",
+      "pass": true
+    },
+    {
+      "name": "optional trial is skippable, persists an active encounter, and pays only once",
+      "pass": true
+    },
+    {
+      "name": "new save states reject fake drops, reused camps and inconsistent trial guards",
+      "pass": true
+    },
+    {
+      "name": "twin blade commits to its direction and a heavy strike cancels the second warning",
+      "pass": true
+    },
+    {
+      "name": "volley uses three aimed bolts with long preparation and pulse remains jumpable",
+      "pass": true
+    },
+    {
+      "name": "final approach keeps boss asleep until both seals break and its warnings stay inside translated arena",
+      "pass": true
+    },
+    {
+      "name": "preserved v4 retains exact published bytes and imports route to that version",
+      "pass": true
+    }
+  ]
+}

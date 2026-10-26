@@ -34,7 +34,7 @@
     combatCues(){
       super.combatCues();const s=this.scene;if(!s)return;const c=this.c,e=K.guardian(s);
       if(e?.hp>0&&!e.dormant){
-        for(let y=345;y<440;y+=14)rect(c,4420,y,3,7,'#bea074');
+        for(let y=345;y<440;y+=14)rect(c,s.room.arena.min-10,y,3,7,'#bea074');
         if(e.phase==='warden-windup'){
           for(const box of e.marks)this.mark(box);
           if(e.move==='fan')for(const v of[-95,0,95])for(let i=1;i<11;i++)rect(c,e.x+24+e.face*i*22,e.y+25+v/225*i*22,2,2,'#c594be');
