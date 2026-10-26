@@ -1,0 +1,3488 @@
+{
+  "environment": {
+    "os": "win32 10.0.26200",
+    "cpu": "Intel(R) Core(TM) i5-14600K",
+    "node": "v22.12.0",
+    "viewport": "1440x1000",
+    "mode": "headless Edge real-time requestAnimationFrame; event-to-render-submission, not display photon latency"
+  },
+  "version": "6.0.0",
+  "sha256": "7093ca8be60fc88f72fd2d13a2c9334089f1a598c4e20eb5cda8b66c78240d55",
+  "kind": "http",
+  "jumpKey": "KeyW",
+  "hero": "nezha",
+  "buildPreference": "martial",
+  "checks": [
+    {
+      "name": "new run starts through prologue and relic choice",
+      "pass": true
+    },
+    {
+      "name": "pause gates world input",
+      "pass": true
+    },
+    {
+      "name": "v6 JSON imports paused",
+      "pass": true
+    }
+  ],
+  "samples": [
+    {
+      "time": 0.6166666666666669,
+      "wall": 0.6166666666666669,
+      "stage": 0,
+      "x": 90,
+      "y": 396,
+      "hp": 100,
+      "focus": 65,
+      "seals": [
+        56,
+        56
+      ],
+      "boss": null,
+      "rage": 25,
+      "growth": {}
+    },
+    {
+      "time": 3.54999999999999,
+      "wall": 3.59999999999999,
+      "stage": 0,
+      "x": 385,
+      "y": 396,
+      "hp": 88,
+      "focus": 87,
+      "seals": [
+        56,
+        56
+      ],
+      "boss": null,
+      "rage": 55,
+      "growth": {}
+    },
+    {
+      "time": 5.525000000000064,
+      "wall": 5.575000000000067,
+      "stage": 0,
+      "x": 818,
+      "y": 361,
+      "hp": 88,
+      "focus": 90,
+      "seals": [
+        56,
+        56
+      ],
+      "boss": null,
+      "rage": 55,
+      "growth": {}
+    },
+    {
+      "time": 8.316666666666835,
+      "wall": 8.366666666666832,
+      "stage": 0,
+      "x": 1501,
+      "y": 396,
+      "hp": 94,
+      "focus": 77,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 70,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 10.650000000000036,
+      "wall": 10.725000000000032,
+      "stage": 0,
+      "x": 1986,
+      "y": 359,
+      "hp": 94,
+      "focus": 43,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 78,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 12.724999999999918,
+      "wall": 12.90833333333324,
+      "stage": 0,
+      "x": 2240,
+      "y": 396,
+      "hp": 94,
+      "focus": 37,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 14.883333333333129,
+      "wall": 15.224999999999776,
+      "stage": 0,
+      "x": 2223,
+      "y": 387,
+      "hp": 82,
+      "focus": 58,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 17.158333333333,
+      "wall": 17.549999999999645,
+      "stage": 0,
+      "x": 2158,
+      "y": 396,
+      "hp": 112,
+      "focus": 72,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 19.466666666666203,
+      "wall": 19.858333333332848,
+      "stage": 0,
+      "x": 2703,
+      "y": 396,
+      "hp": 112,
+      "focus": 35,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 21.533333333332752,
+      "wall": 21.974999999999394,
+      "stage": 0,
+      "x": 3141,
+      "y": 396,
+      "hp": 112,
+      "focus": 57,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 23.549999999999304,
+      "wall": 24.016666666665945,
+      "stage": 0,
+      "x": 3670,
+      "y": 306,
+      "hp": 112,
+      "focus": 63,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 25.641666666665852,
+      "wall": 26.108333333332492,
+      "stage": 0,
+      "x": 4097,
+      "y": 396,
+      "hp": 112,
+      "focus": 66,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 27.76666666666573,
+      "wall": 28.3166666666657,
+      "stage": 0,
+      "x": 4570,
+      "y": 396,
+      "hp": 120,
+      "focus": 64,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 29.924999999998942,
+      "wall": 30.49999999999891,
+      "stage": 0,
+      "x": 5030,
+      "y": 457,
+      "hp": 120,
+      "focus": 70,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 32.258333333332146,
+      "wall": 32.85833333333211,
+      "stage": 0,
+      "x": 4793,
+      "y": 306,
+      "hp": 90,
+      "focus": 36,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 34.65833333333201,
+      "wall": 35.258333333331976,
+      "stage": 0,
+      "x": 4623,
+      "y": 303,
+      "hp": 72,
+      "focus": 36,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 37.23333333333186,
+      "wall": 37.83333333333183,
+      "stage": 0,
+      "x": 5175,
+      "y": 396,
+      "hp": 60,
+      "focus": 39,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 0,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 39.391666666665074,
+      "wall": 40.04999999999837,
+      "stage": 0,
+      "x": 5429,
+      "y": 396,
+      "hp": 60,
+      "focus": 100,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 0,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 41.69166666666494,
+      "wall": 42.34999999999824,
+      "stage": 0,
+      "x": 5954,
+      "y": 308,
+      "hp": 60,
+      "focus": 100,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 0,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 44.09166666666481,
+      "wall": 44.83333333333143,
+      "stage": 0,
+      "x": 6340,
+      "y": 396,
+      "hp": 60,
+      "focus": 78,
+      "seals": [
+        0,
+        16
+      ],
+      "boss": null,
+      "rage": 40,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 46.574999999998,
+      "wall": 47.34166666666462,
+      "stage": 0,
+      "x": 6620,
+      "y": 396,
+      "hp": 48,
+      "focus": 100,
+      "seals": [
+        0,
+        0
+      ],
+      "boss": null,
+      "rage": 53,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 49.08333333333119,
+      "wall": 49.92499999999781,
+      "stage": 0,
+      "x": 7136,
+      "y": 295,
+      "hp": 48,
+      "focus": 38,
+      "seals": [
+        0,
+        0
+      ],
+      "boss": 122,
+      "guardian": "mountain",
+      "rage": 77,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 51.608333333331046,
+      "wall": 52.52499999999766,
+      "stage": 0,
+      "x": 6913,
+      "y": 396,
+      "hp": 48,
+      "focus": 16,
+      "seals": [
+        0,
+        0
+      ],
+      "boss": 64,
+      "guardian": "mountain",
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 54.09166666666424,
+      "wall": 55.09166666666418,
+      "stage": 0,
+      "x": 7159,
+      "y": 396,
+      "hp": 60,
+      "focus": 44,
+      "seals": [
+        0,
+        0
+      ],
+      "boss": null,
+      "rage": 26,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 57.224999999997394,
+      "wall": 58.274999999997334,
+      "stage": 1,
+      "x": 326,
+      "y": 396,
+      "hp": 96,
+      "focus": 100,
+      "seals": [
+        56,
+        56
+      ],
+      "boss": null,
+      "rage": 42,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 59.74999999999725,
+      "wall": 60.79999999999719,
+      "stage": 1,
+      "x": 875,
+      "y": 293,
+      "hp": 96,
+      "focus": 100,
+      "seals": [
+        56,
+        56
+      ],
+      "boss": null,
+      "rage": 42,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 62.54166666666376,
+      "wall": 63.6166666666637,
+      "stage": 1,
+      "x": 1652,
+      "y": 365,
+      "hp": 96,
+      "focus": 69,
+      "seals": [
+        56,
+        56
+      ],
+      "boss": null,
+      "rage": 50,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 65.23333333333132,
+      "wall": 66.41666666666559,
+      "stage": 1,
+      "x": 2106,
+      "y": 314,
+      "hp": 84,
+      "focus": 83,
+      "seals": [
+        56,
+        56
+      ],
+      "boss": null,
+      "rage": 80,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 68.32500000000044,
+      "wall": 69.50833333333472,
+      "stage": 1,
+      "x": 2123,
+      "y": 346,
+      "hp": 56,
+      "focus": 6,
+      "seals": [
+        56,
+        56
+      ],
+      "boss": null,
+      "rage": 80,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 71.35000000000285,
+      "wall": 72.53333333333713,
+      "stage": 1,
+      "x": 2051,
+      "y": 377,
+      "hp": 44,
+      "focus": 6,
+      "seals": [
+        56,
+        56
+      ],
+      "boss": null,
+      "rage": 80,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 74.466666666672,
+      "wall": 75.70000000000631,
+      "stage": 1,
+      "x": 2099,
+      "y": 296,
+      "hp": 16,
+      "focus": 18,
+      "seals": [
+        56,
+        56
+      ],
+      "boss": null,
+      "rage": 96,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 77.09166666667409,
+      "wall": 78.37500000000844,
+      "stage": 1,
+      "x": 2059,
+      "y": 296,
+      "hp": 4,
+      "focus": 58,
+      "seals": [
+        16,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    }
+  ],
+  "rewards": [
+    {
+      "stage": 0,
+      "kind": "mid",
+      "options": [
+        "vitality",
+        "clone-burst",
+        "rest"
+      ],
+      "hp": 74,
+      "chosen": "vitality"
+    },
+    {
+      "stage": 0,
+      "kind": "exit",
+      "options": [
+        "vitality",
+        "dash-strike",
+        "rest"
+      ],
+      "hp": 60,
+      "chosen": "rest"
+    }
+  ],
+  "stages": [
+    0,
+    1
+  ],
+  "worldEvents": [
+    {
+      "stage": 0,
+      "id": "rescue",
+      "state": "active",
+      "time": 12.724999999999918,
+      "hp": 94
+    },
+    {
+      "stage": 0,
+      "id": "rescue",
+      "state": "done",
+      "time": 17.158333333333,
+      "hp": 112
+    }
+  ],
+  "errors": [],
+  "network": [
+    "http://127.0.0.1:5188/release/index.html"
+  ],
+  "browser": "156.0.4314.42",
+  "seed": "LOTUS-1025",
+  "failed": {
+    "source": "莲灯使·交叉封位",
+    "stage": 1,
+    "player": {
+      "x": 2029.6162172272007,
+      "y": 316.32708333333335,
+      "w": 24,
+      "h": 44,
+      "vx": -200,
+      "vy": -200,
+      "face": 1,
+      "hp": 0,
+      "focus": 58,
+      "rage": 100,
+      "ringCD": 0,
+      "ringAim": {
+        "x": 2119.3031067483857,
+        "y": 311.999983681295
+      },
+      "ultimate": 0,
+      "ultimateStage": 0,
+      "talismanCD": 0,
+      "ward": 0,
+      "dashTargets": [],
+      "grounded": false,
+      "coyote": 0.09166666666666667,
+      "buffer": 0,
+      "airJumps": 0,
+      "invuln": 1,
+      "dash": 0,
+      "dashCD": 0,
+      "attack": 0,
+      "attackId": 17,
+      "attackTargets": [
+        "ring"
+      ],
+      "comboIndex": 1,
+      "slam": false,
+      "landing": 0,
+      "drop": 0,
+      "hurt": 0.24,
+      "attackBuffer": 0,
+      "attackDuration": 0.38
+    },
+    "log": [
+      {
+        "type": "hit",
+        "t": 17.058,
+        "wall": 17.425,
+        "target": 201,
+        "kind": "shield",
+        "amount": 22,
+        "impact": "ring",
+        "x": 2186.9233333333677,
+        "y": 418
+      },
+      {
+        "type": "kill",
+        "t": 17.058,
+        "wall": 17.425,
+        "kind": "shield"
+      },
+      {
+        "type": "drop",
+        "t": 17.058,
+        "wall": 17.425,
+        "id": 201,
+        "kind": "heal",
+        "x": 2178.9233333333677,
+        "y": 420
+      },
+      {
+        "type": "story",
+        "t": 17.058,
+        "wall": 17.425,
+        "id": "rescue",
+        "part": "done",
+        "title": "归途有人",
+        "text": "牢笼已开，行者带走了地刺的阵符。山道从此有了归路。"
+      },
+      {
+        "type": "world-clear",
+        "t": 17.058,
+        "wall": 17.425,
+        "id": "rescue"
+      },
+      {
+        "type": "ring-catch",
+        "t": 17.1,
+        "wall": 17.492
+      },
+      {
+        "type": "pickup",
+        "t": 17.15,
+        "wall": 17.542,
+        "kind": "heal",
+        "amount": 12,
+        "sourceId": 201
+      },
+      {
+        "type": "swing",
+        "t": 17.283,
+        "wall": 17.675,
+        "combo": 1,
+        "hero": "nezha"
+      },
+      {
+        "type": "ring-throw",
+        "t": 17.425,
+        "wall": 17.817
+      },
+      {
+        "type": "dash",
+        "t": 17.65,
+        "wall": 18.042
+      },
+      {
+        "type": "ring-turn",
+        "t": 17.65,
+        "wall": 18.042,
+        "x": 2074.035561759537,
+        "y": 500.24695751288436
+      },
+      {
+        "type": "blocked",
+        "t": 17.833,
+        "wall": 18.225,
+        "target": 4
+      },
+      {
+        "type": "warning",
+        "t": 17.917,
+        "wall": 18.308,
+        "kind": "shield",
+        "id": 4,
+        "move": "windup",
+        "x": 2235.8500000000417,
+        "y": 400,
+        "face": 1
+      },
+      {
+        "type": "ring-catch",
+        "t": 18.05,
+        "wall": 18.442
+      },
+      {
+        "type": "silk",
+        "t": 18.108,
+        "wall": 18.5
+      },
+      {
+        "type": "swing",
+        "t": 18.233,
+        "wall": 18.625,
+        "combo": 1,
+        "hero": "nezha"
+      },
+      {
+        "type": "ring-throw",
+        "t": 18.375,
+        "wall": 18.767
+      },
+      {
+        "type": "enemy-attack",
+        "t": 18.617,
+        "wall": 19.008,
+        "kind": "shield",
+        "id": 4,
+        "box": {
+          "x": 2249.8500000000417,
+          "y": 406,
+          "w": 60,
+          "h": 32
+        }
+      },
+      {
+        "type": "ring-turn",
+        "t": 18.867,
+        "wall": 19.258,
+        "x": 2836.464153414942,
+        "y": 401.3868049229525
+      },
+      {
+        "type": "warning",
+        "t": 19.017,
+        "wall": 19.408,
+        "kind": "blade",
+        "id": 400,
+        "move": "pursuit"
+      },
+      {
+        "type": "ring-catch",
+        "t": 19.092,
+        "wall": 19.483
+      },
+      {
+        "type": "swing",
+        "t": 19.275,
+        "wall": 19.667,
+        "combo": 1,
+        "hero": "nezha"
+      },
+      {
+        "type": "ring-throw",
+        "t": 19.417,
+        "wall": 19.808
+      },
+      {
+        "type": "jump",
+        "t": 19.592,
+        "wall": 19.983,
+        "air": false
+      },
+      {
+        "type": "hint",
+        "t": 19.842,
+        "wall": 20.233,
+        "text": "前方双路：上层 F 挑战试炼赢取一项法门，也可沿下路赶往山门。"
+      },
+      {
+        "type": "hit",
+        "t": 19.9,
+        "wall": 20.292,
+        "target": 400,
+        "kind": "blade",
+        "amount": 18,
+        "impact": "ring",
+        "x": 3083,
+        "y": 418
+      },
+      {
+        "type": "ring-turn",
+        "t": 19.908,
+        "wall": 20.325,
+        "x": 3056.672977299181,
+        "y": 401.38462101088476
+      },
+      {
+        "type": "hit",
+        "t": 19.917,
+        "wall": 20.333,
+        "target": 400,
+        "kind": "blade",
+        "amount": 22,
+        "impact": "ring",
+        "x": 3083,
+        "y": 418
+      },
+      {
+        "type": "kill",
+        "t": 19.917,
+        "wall": 20.333,
+        "kind": "blade"
+      },
+      {
+        "type": "drop",
+        "t": 19.917,
+        "wall": 20.333,
+        "id": 400,
+        "kind": "rage",
+        "x": 3075,
+        "y": 420
+      },
+      {
+        "type": "ring-catch",
+        "t": 20.158,
+        "wall": 20.6
+      },
+      {
+        "type": "swing",
+        "t": 20.342,
+        "wall": 20.783,
+        "combo": 1,
+        "hero": "nezha"
+      },
+      {
+        "type": "ring-throw",
+        "t": 20.483,
+        "wall": 20.925
+      },
+      {
+        "type": "hint",
+        "t": 20.825,
+        "wall": 21.267,
+        "text": "连刃第二斩更远。轻棍不推退蓄力，重棍可打断；先看刀光。"
+      },
+      {
+        "type": "ring-turn",
+        "t": 20.975,
+        "wall": 21.417,
+        "x": 3275.737789324003,
+        "y": 365.6386171567767
+      },
+      {
+        "type": "ring-catch",
+        "t": 21.2,
+        "wall": 21.642
+      },
+      {
+        "type": "swing",
+        "t": 21.383,
+        "wall": 21.825,
+        "combo": 1,
+        "hero": "nezha"
+      },
+      {
+        "type": "ring-throw",
+        "t": 21.525,
+        "wall": 21.967
+      },
+      {
+        "type": "warning",
+        "t": 21.65,
+        "wall": 22.092,
+        "kind": "shield",
+        "id": 401,
+        "move": "advance"
+      },
+      {
+        "type": "ring-turn",
+        "t": 22.017,
+        "wall": 22.458,
+        "x": 3499.959217695604,
+        "y": 401.37351005205187
+      },
+      {
+        "type": "ring-catch",
+        "t": 22.242,
+        "wall": 22.683
+      },
+      {
+        "type": "swing",
+        "t": 22.425,
+        "wall": 22.867,
+        "combo": 1,
+        "hero": "nezha"
+      },
+      {
+        "type": "ring-throw",
+        "t": 22.567,
+        "wall": 23.008
+      },
+      {
+        "type": "jump",
+        "t": 22.617,
+        "wall": 23.058,
+        "air": false
+      },
+      {
+        "type": "hit",
+        "t": 22.733,
+        "wall": 23.175,
+        "target": 401,
+        "kind": "shield",
+        "amount": 18,
+        "impact": "ring",
+        "x": 3529,
+        "y": 418
+      },
+      {
+        "type": "ring-turn",
+        "t": 23.067,
+        "wall": 23.533,
+        "x": 3726.1675093321887,
+        "y": 401.34632362143077
+      },
+      {
+        "type": "dash",
+        "t": 23.308,
+        "wall": 23.775
+      },
+      {
+        "type": "ring-catch",
+        "t": 23.308,
+        "wall": 23.775
+      },
+      {
+        "type": "swing",
+        "t": 23.492,
+        "wall": 23.958,
+        "combo": 1,
+        "hero": "nezha"
+      },
+      {
+        "type": "ring-throw",
+        "t": 23.633,
+        "wall": 24.1
+      },
+      {
+        "type": "blocked",
+        "t": 23.867,
+        "wall": 24.333,
+        "target": 401
+      },
+      {
+        "type": "ring-turn",
+        "t": 23.867,
+        "wall": 24.333,
+        "x": 3543.9693908960794,
+        "y": 413.23820182668186
+      },
+      {
+        "type": "warning",
+        "t": 24.167,
+        "wall": 24.633,
+        "kind": "shield",
+        "id": 401,
+        "move": "advance"
+      },
+      {
+        "type": "ring-catch",
+        "t": 24.183,
+        "wall": 24.65
+      },
+      {
+        "type": "warning",
+        "t": 24.275,
+        "wall": 24.742,
+        "kind": "caster",
+        "id": 402,
+        "move": "orb",
+        "aimX": 3832.460727984856,
+        "aimY": 414
+      },
+      {
+        "type": "swing",
+        "t": 24.367,
+        "wall": 24.833,
+        "combo": 1,
+        "hero": "nezha"
+      },
+      {
+        "type": "ring-throw",
+        "t": 24.508,
+        "wall": 24.975
+      },
+      {
+        "type": "ring-turn",
+        "t": 25,
+        "wall": 25.467,
+        "x": 4224.887647069507,
+        "y": 401.3855059208613
+      },
+      {
+        "type": "ring-catch",
+        "t": 25.225,
+        "wall": 25.692
+      },
+      {
+        "type": "swing",
+        "t": 25.408,
+        "wall": 25.875,
+        "combo": 1,
+        "hero": "nezha"
+      },
+      {
+        "type": "ring-throw",
+        "t": 25.55,
+        "wall": 26.017
+      },
+      {
+        "type": "ring-turn",
+        "t": 26.05,
+        "wall": 26.517,
+        "x": 4451.095894874434,
+        "y": 401.3786992409435
+      },
+      {
+        "type": "jump",
+        "t": 26.075,
+        "wall": 26.542,
+        "air": false
+      },
+      {
+        "type": "ring-catch",
+        "t": 26.317,
+        "wall": 26.783
+      },
+      {
+        "type": "swing",
+        "t": 26.708,
+        "wall": 27.175,
+        "combo": 1,
+        "hero": "nezha"
+      },
+      {
+        "type": "hint",
+        "t": 26.708,
+        "wall": 27.175,
+        "text": "怪物倒下会留下补给；资源满时不会收走，可回头再取。"
+      },
+      {
+        "type": "warning",
+        "t": 26.742,
+        "wall": 27.208,
+        "kind": "caster",
+        "id": 402,
+        "move": "sigil",
+        "aimX": 4364.931774144882,
+        "aimY": 350
+      },
+      {
+        "type": "ring-throw",
+        "t": 26.85,
+        "wall": 27.317
+      },
+      {
+        "type": "hit",
+        "t": 26.883,
+        "wall": 27.35,
+        "target": 402,
+        "kind": "caster",
+        "amount": 18,
+        "impact": "ring",
+        "x": 4445,
+        "y": 344.13073084919307
+      },
+      {
+        "type": "interrupt",
+        "t": 26.892,
+        "wall": 27.383,
+        "target": 402
+      },
+      {
+        "type": "hit",
+        "t": 26.892,
+        "wall": 27.383,
+        "target": 402,
+        "kind": "caster",
+        "amount": 12,
+        "impact": "heavy",
+        "x": 4457,
+        "y": 344.0657811896704
+      },
+      {
+        "type": "silk",
+        "t": 26.892,
+        "wall": 27.383
+      },
+      {
+        "type": "ring-turn",
+        "t": 27.342,
+        "wall": 27.892,
+        "x": 4728.588460541791,
+        "y": 312
+      },
+      {
+        "type": "ring-catch",
+        "t": 27.592,
+        "wall": 28.142
+      },
+      {
+        "type": "warning",
+        "t": 27.608,
+        "wall": 28.158,
+        "kind": "blade",
+        "id": 403,
+        "move": "lunge-windup",
+        "x": 4674.6666666666715,
+        "y": 400,
+        "face": -1
+      },
+      {
+        "type": "ability-note",
+        "t": 27.708,
+        "wall": 28.258,
+        "text": "归灯调息 · 生命+24、定力+20。此灯只可借一次。"
+      },
+      {
+        "type": "swing",
+        "t": 27.775,
+        "wall": 28.325,
+        "combo": 1,
+        "hero": "nezha"
+      },
+      {
+        "type": "ring-throw",
+        "t": 27.917,
+        "wall": 28.467
+      },
+      {
+        "type": "hit",
+        "t": 27.992,
+        "wall": 28.542,
+        "target": 403,
+        "kind": "blade",
+        "amount": 18,
+        "impact": "ring",
+        "x": 4699.6666666666715,
+        "y": 418
+      },
+      {
+        "type": "jump",
+        "t": 28.017,
+        "wall": 28.592,
+        "air": false
+      },
+      {
+        "type": "warning",
+        "t": 28.042,
+        "wall": 28.617,
+        "kind": "caster",
+        "id": 402,
+        "move": "orb",
+        "aimX": 4623.068135111513,
+        "aimY": 395.4236111111111
+      },
+      {
+        "type": "enemy-attack",
+        "t": 28.233,
+        "wall": 28.808,
+        "kind": "blade",
+        "id": 403,
+        "move": "lunge"
+      },
+      {
+        "type": "warning",
+        "t": 28.333,
+        "wall": 28.908,
+        "kind": "caster",
+        "id": 5,
+        "move": "orb",
+        "aimX": 4687.195662104771,
+        "aimY": 307.29166666666663
+      },
+      {
+        "type": "ring-turn",
+        "t": 28.408,
+        "wall": 28.983,
+        "x": 4954.298371596096,
+        "y": 401.36087650818195
+      },
+      {
+        "type": "ring-catch",
+        "t": 28.65,
+        "wall": 29.225
+      },
+      {
+        "type": "swing",
+        "t": 28.833,
+        "wall": 29.408,
+        "combo": 1,
+        "hero": "nezha"
+      },
+      {
+        "type": "ring-throw",
+        "t": 28.975,
+        "wall": 29.55
+      },
+      {
+        "type": "ring-turn",
+        "t": 29.467,
+        "wall": 30.042,
+        "x": 5175.185810091899,
+        "y": 366.44829077139275
+      },
+      {
+        "type": "ring-catch",
+        "t": 29.708,
+        "wall": 30.283
+      },
+      {
+        "type": "jump",
+        "t": 29.867,
+        "wall": 30.442,
+        "air": true
+      },
+      {
+        "type": "swing",
+        "t": 29.892,
+        "wall": 30.467,
+        "combo": 1,
+        "hero": "nezha"
+      },
+      {
+        "type": "ring-throw",
+        "t": 30.033,
+        "wall": 30.608
+      },
+      {
+        "type": "warning",
+        "t": 30.6,
+        "wall": 31.175,
+        "kind": "shield",
+        "id": 6,
+        "move": "advance"
+      },
+      {
+        "type": "ring-turn",
+        "t": 30.625,
+        "wall": 31.2,
+        "x": 5486.557292072182,
+        "y": 408.3888009367947
+      },
+      {
+        "type": "hurt",
+        "t": 30.65,
+        "wall": 31.225,
+        "source": "坠入云渊",
+        "amount": 18
+      },
+      {
+        "type": "warning",
+        "t": 30.65,
+        "wall": 31.225,
+        "kind": "caster",
+        "id": 402,
+        "move": "sigil",
+        "aimX": 4583.105708219649,
+        "aimY": 440
+      },
+      {
+        "type": "warning",
+        "t": 30.65,
+        "wall": 31.225,
+        "kind": "blade",
+        "id": 403,
+        "move": "windup",
+        "x": 4618.266666666672,
+        "y": 400,
+        "face": -1
+      },
+      {
+        "type": "silk",
+        "t": 30.875,
+        "wall": 31.45
+      },
+      {
+        "type": "jump",
+        "t": 31.092,
+        "wall": 31.667,
+        "air": false
+      },
+      {
+        "type": "enemy-attack",
+        "t": 31.175,
+        "wall": 31.75,
+        "kind": "blade",
+        "id": 403,
+        "box": {
+          "x": 4572.266666666672,
+          "y": 406,
+          "w": 60,
+          "h": 32
+        }
+      },
+      {
+        "type": "warning",
+        "t": 31.558,
+        "wall": 32.133,
+        "kind": "caster",
+        "id": 5,
+        "move": "orb",
+        "aimX": 4687.198892268242,
+        "aimY": 313.9729166666666
+      },
+      {
+        "type": "ring-catch",
+        "t": 31.583,
+        "wall": 32.158
+      },
+      {
+        "type": "enemy-attack",
+        "t": 31.608,
+        "wall": 32.183,
+        "kind": "caster",
+        "move": "sigil"
+      },
+      {
+        "type": "hurt",
+        "t": 31.658,
+        "wall": 32.233,
+        "source": "莲焰飞弹",
+        "amount": 12
+      },
+      {
+        "type": "swing",
+        "t": 31.767,
+        "wall": 32.342,
+        "combo": 1,
+        "hero": "nezha"
+      },
+      {
+        "type": "ring-throw",
+        "t": 31.908,
+        "wall": 32.483
+      },
+      {
+        "type": "hit",
+        "t": 32.083,
+        "wall": 32.658,
+        "target": 403,
+        "kind": "blade",
+        "amount": 18,
+        "impact": "ring",
+        "x": 4619.266666666672,
+        "y": 418
+      },
+      {
+        "type": "ring-turn",
+        "t": 32.242,
+        "wall": 32.842,
+        "x": 4572.528340898152,
+        "y": 504.17799009569137
+      },
+      {
+        "type": "ring-catch",
+        "t": 32.675,
+        "wall": 33.275
+      },
+      {
+        "type": "swing",
+        "t": 32.958,
+        "wall": 33.558,
+        "combo": 1,
+        "hero": "nezha"
+      },
+      {
+        "type": "ring-throw",
+        "t": 33.1,
+        "wall": 33.7
+      },
+      {
+        "type": "warning",
+        "t": 33.167,
+        "wall": 33.767,
+        "kind": "caster",
+        "id": 402,
+        "move": "orb",
+        "aimX": 5027.605101235687,
+        "aimY": 510.54652777777767
+      },
+      {
+        "type": "jump",
+        "t": 33.175,
+        "wall": 33.775,
+        "air": true
+      },
+      {
+        "type": "warning",
+        "t": 33.425,
+        "wall": 34.025,
+        "kind": "shield",
+        "id": 6,
+        "move": "advance"
+      },
+      {
+        "type": "ring-turn",
+        "t": 33.692,
+        "wall": 34.292,
+        "x": 5430.230101556779,
+        "y": 445.5590277777777
+      },
+      {
+        "type": "hurt",
+        "t": 33.95,
+        "wall": 34.55,
+        "source": "坠入云渊",
+        "amount": 18
+      },
+      {
+        "type": "warning",
+        "t": 33.95,
+        "wall": 34.55,
+        "kind": "blade",
+        "id": 403,
+        "move": "lunge-windup",
+        "x": 4627.37833333332,
+        "y": 400,
+        "face": -1
+      },
+      {
+        "type": "jump",
+        "t": 34.433,
+        "wall": 35.033,
+        "air": false
+      },
+      {
+        "type": "enemy-attack",
+        "t": 34.575,
+        "wall": 35.175,
+        "kind": "blade",
+        "id": 403,
+        "move": "lunge"
+      },
+      {
+        "type": "ring-catch",
+        "t": 34.725,
+        "wall": 35.325
+      },
+      {
+        "type": "warning",
+        "t": 34.883,
+        "wall": 35.483,
+        "kind": "caster",
+        "id": 5,
+        "move": "orb",
+        "aimX": 4686.246968750401,
+        "aimY": 311.4861111111111
+      },
+      {
+        "type": "hurt",
+        "t": 34.958,
+        "wall": 35.558,
+        "source": "莲焰飞弹",
+        "amount": 12
+      },
+      {
+        "type": "swing",
+        "t": 34.983,
+        "wall": 35.583,
+        "combo": 1,
+        "hero": "nezha"
+      },
+      {
+        "type": "ring-throw",
+        "t": 35.125,
+        "wall": 35.725
+      },
+      {
+        "type": "warning",
+        "t": 35.633,
+        "wall": 36.233,
+        "kind": "caster",
+        "id": 402,
+        "move": "cross"
+      },
+      {
+        "type": "ring-turn",
+        "t": 35.717,
+        "wall": 36.317,
+        "x": 5133.608037541586,
+        "y": 301.04861111111114
+      },
+      {
+        "type": "ring-catch",
+        "t": 35.975,
+        "wall": 36.575
+      },
+      {
+        "type": "jump",
+        "t": 36.058,
+        "wall": 36.658,
+        "air": false
+      },
+      {
+        "type": "warning",
+        "t": 36.233,
+        "wall": 36.833,
+        "kind": "shield",
+        "id": 6,
+        "move": "advance"
+      },
+      {
+        "type": "swing",
+        "t": 36.775,
+        "wall": 37.375,
+        "combo": 1,
+        "hero": "nezha"
+      },
+      {
+        "type": "enemy-attack",
+        "t": 36.792,
+        "wall": 37.392,
+        "kind": "caster",
+        "id": 402,
+        "move": "cross"
+      },
+      {
+        "type": "ring-throw",
+        "t": 36.917,
+        "wall": 37.517
+      },
+      {
+        "type": "blocked",
+        "t": 37.15,
+        "wall": 37.75,
+        "target": 6
+      },
+      {
+        "type": "ring-turn",
+        "t": 37.15,
+        "wall": 37.75,
+        "x": 5301.673523384695,
+        "y": 395.5326388888887
+      },
+      {
+        "type": "ultimate",
+        "t": 37.175,
+        "wall": 37.775
+      },
+      {
+        "type": "ring-catch",
+        "t": 37.283,
+        "wall": 37.883
+      },
+      {
+        "type": "warning",
+        "t": 37.35,
+        "wall": 37.95,
+        "kind": "caster",
+        "id": 5,
+        "move": "orb",
+        "aimX": 5186.599449450645,
+        "aimY": 414
+      },
+      {
+        "type": "interrupt",
+        "t": 37.375,
+        "wall": 37.975,
+        "target": 5
+      },
+      {
+        "type": "hit",
+        "t": 37.375,
+        "wall": 37.975,
+        "target": 5,
+        "kind": "caster",
+        "amount": 64,
+        "impact": "ultimate",
+        "x": 5299,
+        "y": 341.28131860665576
+      },
+      {
+        "type": "kill",
+        "t": 37.375,
+        "wall": 37.975,
+        "kind": "caster"
+      },
+      {
+        "type": "hit",
+        "t": 37.375,
+        "wall": 37.975,
+        "target": 6,
+        "kind": "shield",
+        "amount": 64,
+        "impact": "ultimate",
+        "x": 5329.7499999998845,
+        "y": 418
+      },
+      {
+        "type": "kill",
+        "t": 37.375,
+        "wall": 37.975,
+        "kind": "shield"
+      },
+      {
+        "type": "drop",
+        "t": 37.375,
+        "wall": 37.975,
+        "id": 6,
+        "kind": "focus",
+        "x": 5321.7499999998845,
+        "y": 420
+      },
+      {
+        "type": "ultimate-hit",
+        "t": 37.375,
+        "wall": 37.975,
+        "pulse": 1,
+        "box": {
+          "x": 4886.599449450645,
+          "y": 318,
+          "w": 600,
+          "h": 160
+        }
+      },
+      {
+        "type": "swing",
+        "t": 38.042,
+        "wall": 38.7,
+        "combo": 1,
+        "hero": "nezha"
+      },
+      {
+        "type": "ring-throw",
+        "t": 38.183,
+        "wall": 38.842
+      },
+      {
+        "type": "ring-turn",
+        "t": 38.675,
+        "wall": 39.333,
+        "x": 5547.777089933258,
+        "y": 401.4247597530068
+      },
+      {
+        "type": "pickup",
+        "t": 38.733,
+        "wall": 39.392,
+        "kind": "focus",
+        "amount": 20,
+        "sourceId": 6
+      },
+      {
+        "type": "ring-catch",
+        "t": 38.9,
+        "wall": 39.558
+      },
+      {
+        "type": "swing",
+        "t": 39.083,
+        "wall": 39.742,
+        "combo": 1,
+        "hero": "nezha"
+      },
+      {
+        "type": "ring-throw",
+        "t": 39.225,
+        "wall": 39.883
+      },
+      {
+        "type": "ring-turn",
+        "t": 39.717,
+        "wall": 40.375,
+        "x": 5767.25514451866,
+        "y": 401.37000120796597
+      },
+      {
+        "type": "ring-catch",
+        "t": 39.942,
+        "wall": 40.6
+      },
+      {
+        "type": "swing",
+        "t": 40.125,
+        "wall": 40.783,
+        "combo": 1,
+        "hero": "nezha"
+      },
+      {
+        "type": "ring-throw",
+        "t": 40.267,
+        "wall": 40.925
+      },
+      {
+        "type": "ring-turn",
+        "t": 40.758,
+        "wall": 41.417,
+        "x": 5987.463440651448,
+        "y": 401.3490913927951
+      },
+      {
+        "type": "ring-catch",
+        "t": 40.983,
+        "wall": 41.642
+      },
+      {
+        "type": "jump",
+        "t": 41.167,
+        "wall": 41.825,
+        "air": false
+      },
+      {
+        "type": "warning",
+        "t": 41.75,
+        "wall": 42.408,
+        "kind": "shield",
+        "id": 7,
+        "move": "advance"
+      },
+      {
+        "type": "swing",
+        "t": 41.817,
+        "wall": 42.475,
+        "combo": 1,
+        "hero": "nezha"
+      },
+      {
+        "type": "ring-throw",
+        "t": 41.958,
+        "wall": 42.617
+      },
+      {
+        "type": "blocked",
+        "t": 42.4,
+        "wall": 43.058,
+        "target": 7
+      },
+      {
+        "type": "ring-turn",
+        "t": 42.4,
+        "wall": 43.058,
+        "x": 6340.765672541681,
+        "y": 402
+      },
+      {
+        "type": "blocked",
+        "t": 42.408,
+        "wall": 43.067,
+        "target": 7
+      },
+      {
+        "type": "ring-catch",
+        "t": 42.6,
+        "wall": 43.258
+      },
+      {
+        "type": "dash",
+        "t": 42.7,
+        "wall": 43.358
+      },
+      {
+        "type": "swing",
+        "t": 42.883,
+        "wall": 43.542,
+        "combo": 1,
+        "hero": "nezha"
+      },
+      {
+        "type": "ring-throw",
+        "t": 43.025,
+        "wall": 43.683
+      },
+      {
+        "type": "hit",
+        "t": 43.025,
+        "wall": 43.683,
+        "target": 7,
+        "kind": "shield",
+        "amount": 18,
+        "impact": "ring",
+        "x": 6340.16666666663,
+        "y": 418
+      },
+      {
+        "type": "seal-hit",
+        "t": 43.267,
+        "wall": 43.95,
+        "id": 1
+      },
+      {
+        "type": "ring-turn",
+        "t": 43.525,
+        "wall": 44.208,
+        "x": 6655.072456487953,
+        "y": 442.52495872651474
+      },
+      {
+        "type": "warning",
+        "t": 43.625,
+        "wall": 44.308,
+        "kind": "shield",
+        "id": 7,
+        "move": "windup",
+        "x": 6327.16666666663,
+        "y": 400,
+        "face": -1
+      },
+      {
+        "type": "seal-hit",
+        "t": 43.692,
+        "wall": 44.375,
+        "id": 1
+      },
+      {
+        "type": "interrupt",
+        "t": 43.883,
+        "wall": 44.567,
+        "target": 7
+      },
+      {
+        "type": "hit",
+        "t": 43.883,
+        "wall": 44.567,
+        "target": 7,
+        "kind": "shield",
+        "amount": 12,
+        "impact": "heavy",
+        "x": 6352.16666666663,
+        "y": 418
+      },
+      {
+        "type": "silk",
+        "t": 43.883,
+        "wall": 44.567
+      },
+      {
+        "type": "hit",
+        "t": 43.883,
+        "wall": 44.567,
+        "target": 7,
+        "kind": "shield",
+        "amount": 22,
+        "impact": "ring",
+        "x": 6340.16666666663,
+        "y": 418
+      },
+      {
+        "type": "ring-catch",
+        "t": 43.925,
+        "wall": 44.667
+      },
+      {
+        "type": "dash",
+        "t": 44.042,
+        "wall": 44.783
+      },
+      {
+        "type": "swing",
+        "t": 44.225,
+        "wall": 44.967,
+        "combo": 1,
+        "hero": "nezha"
+      },
+      {
+        "type": "ring-throw",
+        "t": 44.367,
+        "wall": 45.108
+      },
+      {
+        "type": "seal-burst",
+        "t": 44.458,
+        "wall": 45.2,
+        "id": 1
+      },
+      {
+        "type": "hurt",
+        "t": 44.508,
+        "wall": 45.25,
+        "source": "莲焰飞弹",
+        "amount": 12
+      },
+      {
+        "type": "hit",
+        "t": 44.517,
+        "wall": 45.258,
+        "target": 7,
+        "kind": "shield",
+        "amount": 18,
+        "impact": "ring",
+        "x": 6328.16666666663,
+        "y": 418
+      },
+      {
+        "type": "kill",
+        "t": 44.517,
+        "wall": 45.258,
+        "kind": "shield"
+      },
+      {
+        "type": "drop",
+        "t": 44.517,
+        "wall": 45.258,
+        "id": 7,
+        "kind": "heal",
+        "x": 6320.16666666663,
+        "y": 420
+      },
+      {
+        "type": "ring-turn",
+        "t": 44.858,
+        "wall": 45.625,
+        "x": 6103.989291744004,
+        "y": 424.7671985950053
+      },
+      {
+        "type": "ring-catch",
+        "t": 45.25,
+        "wall": 46.017
+      },
+      {
+        "type": "hint",
+        "t": 45.367,
+        "wall": 46.133,
+        "text": "镇山魈王镇守山门：冲撞看路径跃过；震地看地线起跳。"
+      },
+      {
+        "type": "swing",
+        "t": 45.433,
+        "wall": 46.2,
+        "combo": 1,
+        "hero": "nezha"
+      },
+      {
+        "type": "ring-throw",
+        "t": 45.575,
+        "wall": 46.342
+      },
+      {
+        "type": "seal-hit",
+        "t": 45.575,
+        "wall": 46.342,
+        "id": 1
+      },
+      {
+        "type": "seal",
+        "t": 45.575,
+        "wall": 46.342,
+        "id": 1
+      },
+      {
+        "type": "ring-turn",
+        "t": 46.067,
+        "wall": 46.833,
+        "x": 6157.845908834804,
+        "y": 283.2637634065584
+      },
+      {
+        "type": "guardian-enter",
+        "t": 46.625,
+        "wall": 47.392,
+        "name": "镇山魈王"
+      },
+      {
+        "type": "ring-catch",
+        "t": 46.633,
+        "wall": 47.4
+      },
+      {
+        "type": "swing",
+        "t": 46.817,
+        "wall": 47.583,
+        "combo": 1,
+        "hero": "nezha"
+      },
+      {
+        "type": "silk",
+        "t": 46.892,
+        "wall": 47.658
+      },
+      {
+        "type": "ring-throw",
+        "t": 46.958,
+        "wall": 47.725
+      },
+      {
+        "type": "hit",
+        "t": 47.367,
+        "wall": 48.133,
+        "target": 900,
+        "kind": "warden",
+        "amount": 18,
+        "impact": "ring",
+        "x": 7049,
+        "y": 370
+      },
+      {
+        "type": "ring-turn",
+        "t": 47.45,
+        "wall": 48.242,
+        "x": 7060.291841002088,
+        "y": 384.1943871786789
+      },
+      {
+        "type": "hit",
+        "t": 47.458,
+        "wall": 48.25,
+        "target": 900,
+        "kind": "warden",
+        "amount": 22,
+        "impact": "ring",
+        "x": 7049,
+        "y": 370
+      },
+      {
+        "type": "ring-catch",
+        "t": 47.675,
+        "wall": 48.492
+      },
+      {
+        "type": "boss-warning",
+        "t": 47.825,
+        "wall": 48.642,
+        "attack": "charge",
+        "name": "镇山魈王"
+      },
+      {
+        "type": "swing",
+        "t": 47.858,
+        "wall": 48.675,
+        "combo": 1,
+        "hero": "nezha"
+      },
+      {
+        "type": "ring-throw",
+        "t": 48,
+        "wall": 48.817
+      },
+      {
+        "type": "hit",
+        "t": 48.1,
+        "wall": 48.917,
+        "target": 900,
+        "kind": "warden",
+        "amount": 18,
+        "impact": "ring",
+        "x": 7049,
+        "y": 370
+      },
+      {
+        "type": "dash",
+        "t": 48.242,
+        "wall": 49.083
+      },
+      {
+        "type": "ring-turn",
+        "t": 48.5,
+        "wall": 49.342,
+        "x": 7282.800441515095,
+        "y": 347.1038856829657
+      },
+      {
+        "type": "jump",
+        "t": 48.625,
+        "wall": 49.467,
+        "air": false
+      },
+      {
+        "type": "ring-catch",
+        "t": 48.675,
+        "wall": 49.517
+      },
+      {
+        "type": "enemy-attack",
+        "t": 48.733,
+        "wall": 49.575,
+        "kind": "warden",
+        "move": "charge"
+      },
+      {
+        "type": "swing",
+        "t": 48.858,
+        "wall": 49.7,
+        "combo": 1,
+        "hero": "nezha"
+      },
+      {
+        "type": "ring-throw",
+        "t": 49,
+        "wall": 49.842
+      },
+      {
+        "type": "silk",
+        "t": 49.025,
+        "wall": 49.867
+      },
+      {
+        "type": "ring-turn",
+        "t": 49.475,
+        "wall": 50.317,
+        "x": 6876.615471608461,
+        "y": 501.5527469221831
+      },
+      {
+        "type": "ring-catch",
+        "t": 49.65,
+        "wall": 50.492
+      },
+      {
+        "type": "swing",
+        "t": 49.833,
+        "wall": 50.675,
+        "combo": 1,
+        "hero": "nezha"
+      },
+      {
+        "type": "ring-throw",
+        "t": 49.975,
+        "wall": 50.817
+      },
+      {
+        "type": "hit",
+        "t": 50.175,
+        "wall": 51.017,
+        "target": 900,
+        "kind": "warden",
+        "amount": 18,
+        "impact": "ring",
+        "x": 6759.666666666648,
+        "y": 370
+      },
+      {
+        "type": "ring-turn",
+        "t": 50.467,
+        "wall": 51.333,
+        "x": 6576.294628371849,
+        "y": 370.1196418046329
+      },
+      {
+        "type": "hit",
+        "t": 50.625,
+        "wall": 51.492,
+        "target": 900,
+        "kind": "warden",
+        "amount": 22,
+        "impact": "ring",
+        "x": 6759.666666666648,
+        "y": 370
+      },
+      {
+        "type": "ring-catch",
+        "t": 50.708,
+        "wall": 51.6
+      },
+      {
+        "type": "swing",
+        "t": 50.892,
+        "wall": 51.783,
+        "combo": 1,
+        "hero": "nezha"
+      },
+      {
+        "type": "dash",
+        "t": 50.992,
+        "wall": 51.883
+      },
+      {
+        "type": "swing",
+        "t": 51.175,
+        "wall": 52.067,
+        "combo": 1,
+        "hero": "nezha"
+      },
+      {
+        "type": "silk",
+        "t": 51.233,
+        "wall": 52.125
+      },
+      {
+        "type": "boss-warning",
+        "t": 51.308,
+        "wall": 52.2,
+        "attack": "quake",
+        "name": "镇山魈王"
+      },
+      {
+        "type": "ring-throw",
+        "t": 51.317,
+        "wall": 52.208
+      },
+      {
+        "type": "hit",
+        "t": 51.55,
+        "wall": 52.442,
+        "target": 900,
+        "kind": "warden",
+        "amount": 18,
+        "impact": "ring",
+        "x": 6759.666666666648,
+        "y": 370
+      },
+      {
+        "type": "ultimate-ready",
+        "t": 51.55,
+        "wall": 52.442
+      },
+      {
+        "type": "ultimate",
+        "t": 51.758,
+        "wall": 52.675
+      },
+      {
+        "type": "ring-turn",
+        "t": 51.808,
+        "wall": 52.725,
+        "x": 6602.923148880173,
+        "y": 374.03305713646614
+      },
+      {
+        "type": "hit",
+        "t": 51.942,
+        "wall": 52.858,
+        "target": 900,
+        "kind": "warden",
+        "amount": 22,
+        "impact": "ring",
+        "x": 6759.666666666648,
+        "y": 370
+      },
+      {
+        "type": "interrupt",
+        "t": 51.958,
+        "wall": 52.9,
+        "target": 900
+      },
+      {
+        "type": "hit",
+        "t": 51.958,
+        "wall": 52.9,
+        "target": 900,
+        "kind": "warden",
+        "amount": 64,
+        "impact": "ultimate",
+        "x": 6759.666666666648,
+        "y": 370
+      },
+      {
+        "type": "kill",
+        "t": 51.958,
+        "wall": 52.9,
+        "kind": "warden"
+      },
+      {
+        "type": "guardian-defeat",
+        "t": 51.958,
+        "wall": 52.9,
+        "name": "镇山魈王"
+      },
+      {
+        "type": "ultimate-hit",
+        "t": 51.958,
+        "wall": 52.9,
+        "pulse": 1,
+        "box": {
+          "x": 6590.817728620349,
+          "y": 318,
+          "w": 600,
+          "h": 160
+        }
+      },
+      {
+        "type": "ring-catch",
+        "t": 52.125,
+        "wall": 53.125
+      },
+      {
+        "type": "swing",
+        "t": 52.658,
+        "wall": 53.658,
+        "combo": 1,
+        "hero": "nezha"
+      },
+      {
+        "type": "ring-throw",
+        "t": 52.8,
+        "wall": 53.8
+      },
+      {
+        "type": "ring-turn",
+        "t": 53.292,
+        "wall": 54.292,
+        "x": 7259.813470415873,
+        "y": 402
+      },
+      {
+        "type": "ring-catch",
+        "t": 53.517,
+        "wall": 54.517
+      },
+      {
+        "type": "swing",
+        "t": 53.7,
+        "wall": 54.7,
+        "combo": 1,
+        "hero": "nezha"
+      },
+      {
+        "type": "ring-throw",
+        "t": 53.842,
+        "wall": 54.842
+      },
+      {
+        "type": "ring-turn",
+        "t": 54.075,
+        "wall": 55.075,
+        "x": 7293.640641602811,
+        "y": 402.0000066300516
+      },
+      {
+        "type": "ring-catch",
+        "t": 54.192,
+        "wall": 55.192
+      },
+      {
+        "type": "swing",
+        "t": 54.375,
+        "wall": 55.375,
+        "combo": 1,
+        "hero": "nezha"
+      },
+      {
+        "type": "reward",
+        "t": 54.442,
+        "wall": 55.442,
+        "kind": "exit"
+      },
+      {
+        "type": "room",
+        "t": 54.442,
+        "wall": 55.442,
+        "stage": 1
+      },
+      {
+        "type": "warning",
+        "t": 54.45,
+        "wall": 55.45,
+        "kind": "blade",
+        "id": 0,
+        "move": "pursuit"
+      },
+      {
+        "type": "hint",
+        "t": 54.45,
+        "wall": 55.45,
+        "text": "空格长按高跳，松开短跳。"
+      },
+      {
+        "type": "swing",
+        "t": 55.075,
+        "wall": 56.075,
+        "combo": 1,
+        "hero": "nezha"
+      },
+      {
+        "type": "ring-throw",
+        "t": 55.217,
+        "wall": 56.217
+      },
+      {
+        "type": "enemy-attack",
+        "t": 55.408,
+        "wall": 56.408,
+        "kind": "blade",
+        "id": 0,
+        "move": "pursuit"
+      },
+      {
+        "type": "hit",
+        "t": 55.533,
+        "wall": 56.533,
+        "target": 0,
+        "kind": "blade",
+        "amount": 18,
+        "impact": "ring",
+        "x": 372.3333333333336,
+        "y": 418
+      },
+      {
+        "type": "hurt",
+        "t": 55.7,
+        "wall": 56.725,
+        "source": "执刃魔兵·逐影突刺",
+        "amount": 12
+      },
+      {
+        "type": "ring-turn",
+        "t": 55.708,
+        "wall": 56.733,
+        "x": 451.847265625,
+        "y": 402
+      },
+      {
+        "type": "hit",
+        "t": 56.083,
+        "wall": 57.108,
+        "target": 0,
+        "kind": "blade",
+        "amount": 22,
+        "impact": "ring",
+        "x": 115,
+        "y": 418
+      },
+      {
+        "type": "kill",
+        "t": 56.083,
+        "wall": 57.108,
+        "kind": "blade"
+      },
+      {
+        "type": "drop",
+        "t": 56.083,
+        "wall": 57.108,
+        "id": 0,
+        "kind": "focus",
+        "x": 107,
+        "y": 420
+      },
+      {
+        "type": "ring-catch",
+        "t": 56.117,
+        "wall": 57.167
+      },
+      {
+        "type": "swing",
+        "t": 56.3,
+        "wall": 57.35,
+        "combo": 1,
+        "hero": "nezha"
+      },
+      {
+        "type": "ring-throw",
+        "t": 56.442,
+        "wall": 57.492
+      },
+      {
+        "type": "ring-turn",
+        "t": 56.942,
+        "wall": 57.992,
+        "x": 519.5701608768026,
+        "y": 355.14293345263127
+      },
+      {
+        "type": "ring-catch",
+        "t": 57.175,
+        "wall": 58.225
+      },
+      {
+        "type": "hint",
+        "t": 57.225,
+        "wall": 58.275,
+        "text": "看到举刀再跳；连续轻棍不会冻结敌招。"
+      },
+      {
+        "type": "swing",
+        "t": 57.358,
+        "wall": 58.408,
+        "combo": 1,
+        "hero": "nezha"
+      },
+      {
+        "type": "ring-throw",
+        "t": 57.5,
+        "wall": 58.55
+      },
+      {
+        "type": "warning",
+        "t": 57.883,
+        "wall": 58.933,
+        "kind": "caster",
+        "id": 1,
+        "move": "orb",
+        "aimX": 464.5645883776342,
+        "aimY": 414
+      },
+      {
+        "type": "ring-turn",
+        "t": 57.992,
+        "wall": 59.042,
+        "x": 735.5674460664228,
+        "y": 340.4705231309363
+      },
+      {
+        "type": "ring-catch",
+        "t": 58.225,
+        "wall": 59.275
+      },
+      {
+        "type": "swing",
+        "t": 58.408,
+        "wall": 59.458,
+        "combo": 1,
+        "hero": "nezha"
+      },
+      {
+        "type": "ring-throw",
+        "t": 58.55,
+        "wall": 59.6
+      },
+      {
+        "type": "ring-turn",
+        "t": 59.05,
+        "wall": 60.1,
+        "x": 963.5541943953685,
+        "y": 338.4446374878927
+      },
+      {
+        "type": "ring-catch",
+        "t": 59.283,
+        "wall": 60.333
+      },
+      {
+        "type": "jump",
+        "t": 59.333,
+        "wall": 60.383,
+        "air": false
+      },
+      {
+        "type": "swing",
+        "t": 60.117,
+        "wall": 61.167,
+        "combo": 1,
+        "hero": "nezha"
+      },
+      {
+        "type": "warning",
+        "t": 60.233,
+        "wall": 61.283,
+        "kind": "shield",
+        "id": 2,
+        "move": "advance"
+      },
+      {
+        "type": "ring-throw",
+        "t": 60.258,
+        "wall": 61.308
+      },
+      {
+        "type": "warning",
+        "t": 60.35,
+        "wall": 61.4,
+        "kind": "caster",
+        "id": 1,
+        "move": "sigil",
+        "aimX": 1028.3982064692664,
+        "aimY": 440
+      },
+      {
+        "type": "silk",
+        "t": 60.558,
+        "wall": 61.608
+      },
+      {
+        "type": "blocked",
+        "t": 60.775,
+        "wall": 61.825,
+        "target": 2
+      },
+      {
+        "type": "ring-turn",
+        "t": 60.775,
+        "wall": 61.825,
+        "x": 1376.3471614282507,
+        "y": 397.04166666666663
+      },
+      {
+        "type": "jump",
+        "t": 60.792,
+        "wall": 61.842,
+        "air": false
+      },
+      {
+        "type": "ring-catch",
+        "t": 61.033,
+        "wall": 62.083
+      },
+      {
+        "type": "enemy-attack",
+        "t": 61.308,
+        "wall": 62.358,
+        "kind": "caster",
+        "move": "sigil"
+      },
+      {
+        "type": "swing",
+        "t": 61.358,
+        "wall": 62.408,
+        "combo": 1,
+        "hero": "nezha"
+      },
+      {
+        "type": "dash",
+        "t": 61.4,
+        "wall": 62.45
+      },
+      {
+        "type": "swing",
+        "t": 61.583,
+        "wall": 62.633,
+        "combo": 1,
+        "hero": "nezha"
+      },
+      {
+        "type": "ring-throw",
+        "t": 61.725,
+        "wall": 62.775
+      },
+      {
+        "type": "hit",
+        "t": 61.867,
+        "wall": 62.917,
+        "target": 2,
+        "kind": "shield",
+        "amount": 18,
+        "impact": "ring",
+        "x": 1337.5833333333237,
+        "y": 418
+      },
+      {
+        "type": "ring-turn",
+        "t": 62.042,
+        "wall": 63.117,
+        "x": 1263.7658386139565,
+        "y": 502.76417479693833
+      },
+      {
+        "type": "warning",
+        "t": 62.15,
+        "wall": 63.225,
+        "kind": "shield",
+        "id": 2,
+        "move": "advance"
+      },
+      {
+        "type": "ring-catch",
+        "t": 62.483,
+        "wall": 63.558
+      },
+      {
+        "type": "jump",
+        "t": 62.492,
+        "wall": 63.567,
+        "air": false
+      },
+      {
+        "type": "warning",
+        "t": 62.742,
+        "wall": 63.817,
+        "kind": "shield",
+        "id": 4,
+        "move": "advance"
+      },
+      {
+        "type": "warning",
+        "t": 63.15,
+        "wall": 64.225,
+        "kind": "caster",
+        "id": 5,
+        "move": "orb",
+        "aimX": 1813.2851275965893,
+        "aimY": 332.50416666666666
+      },
+      {
+        "type": "swing",
+        "t": 63.242,
+        "wall": 64.317,
+        "combo": 1,
+        "hero": "nezha"
+      },
+      {
+        "type": "warning",
+        "t": 63.242,
+        "wall": 64.317,
+        "kind": "blade",
+        "id": 3,
+        "move": "lunge-windup",
+        "x": 1913.6000000000058,
+        "y": 400,
+        "face": -1
+      },
+      {
+        "type": "ring-throw",
+        "t": 63.383,
+        "wall": 64.458
+      },
+      {
+        "type": "hit",
+        "t": 63.425,
+        "wall": 64.5,
+        "target": 3,
+        "kind": "blade",
+        "amount": 18,
+        "impact": "ring",
+        "x": 1938.6000000000058,
+        "y": 418
+      },
+      {
+        "type": "interrupt",
+        "t": 63.45,
+        "wall": 64.55,
+        "target": 3
+      },
+      {
+        "type": "hit",
+        "t": 63.45,
+        "wall": 64.55,
+        "target": 3,
+        "kind": "blade",
+        "amount": 12,
+        "impact": "heavy",
+        "x": 1950.6000000000058,
+        "y": 418
+      },
+      {
+        "type": "silk",
+        "t": 63.45,
+        "wall": 64.55
+      },
+      {
+        "type": "ring-turn",
+        "t": 63.975,
+        "wall": 65.133,
+        "x": 2289.4101275965495,
+        "y": 397.04166666666663
+      },
+      {
+        "type": "hit",
+        "t": 64.367,
+        "wall": 65.525,
+        "target": 3,
+        "kind": "blade",
+        "amount": 22,
+        "impact": "ring",
+        "x": 1938.6000000000058,
+        "y": 418
+      },
+      {
+        "type": "kill",
+        "t": 64.367,
+        "wall": 65.525,
+        "kind": "blade"
+      },
+      {
+        "type": "drop",
+        "t": 64.367,
+        "wall": 65.525,
+        "id": 3,
+        "kind": "focus",
+        "x": 1930.6000000000058,
+        "y": 420
+      },
+      {
+        "type": "pickup",
+        "t": 64.375,
+        "wall": 65.558,
+        "kind": "focus",
+        "amount": 20,
+        "sourceId": 3
+      },
+      {
+        "type": "ring-catch",
+        "t": 64.4,
+        "wall": 65.583
+      },
+      {
+        "type": "dash",
+        "t": 64.558,
+        "wall": 65.742
+      },
+      {
+        "type": "hint",
+        "t": 64.592,
+        "wall": 65.775,
+        "text": "阵眼破后可按F借灯整顿；山门在右方。"
+      },
+      {
+        "type": "swing",
+        "t": 64.742,
+        "wall": 65.925,
+        "combo": 1,
+        "hero": "nezha"
+      },
+      {
+        "type": "ring-throw",
+        "t": 64.883,
+        "wall": 66.067
+      },
+      {
+        "type": "jump",
+        "t": 64.95,
+        "wall": 66.133,
+        "air": false
+      },
+      {
+        "type": "seal-burst",
+        "t": 65.025,
+        "wall": 66.208,
+        "id": 0
+      },
+      {
+        "type": "hurt",
+        "t": 65.092,
+        "wall": 66.275,
+        "source": "莲焰飞弹",
+        "amount": 12
+      },
+      {
+        "type": "warning",
+        "t": 65.258,
+        "wall": 66.442,
+        "kind": "shield",
+        "id": 4,
+        "move": "rush-windup",
+        "x": 2072,
+        "y": 300,
+        "face": 1
+      },
+      {
+        "type": "ring-turn",
+        "t": 65.375,
+        "wall": 66.558,
+        "x": 2099.2660217336124,
+        "y": 42.20342469028844
+      },
+      {
+        "type": "warning",
+        "t": 65.617,
+        "wall": 66.8,
+        "kind": "caster",
+        "id": 5,
+        "move": "cross"
+      },
+      {
+        "type": "silk",
+        "t": 65.642,
+        "wall": 66.825
+      },
+      {
+        "type": "blocked",
+        "t": 65.658,
+        "wall": 66.842,
+        "target": 4
+      },
+      {
+        "type": "ring-catch",
+        "t": 65.783,
+        "wall": 66.967
+      },
+      {
+        "type": "jump",
+        "t": 65.95,
+        "wall": 67.133,
+        "air": false
+      },
+      {
+        "type": "enemy-attack",
+        "t": 66.117,
+        "wall": 67.3,
+        "kind": "shield",
+        "id": 4,
+        "move": "rush"
+      },
+      {
+        "type": "hurt",
+        "t": 66.125,
+        "wall": 67.308,
+        "source": "重盾兵·蓄势冲撞",
+        "amount": 16
+      },
+      {
+        "type": "swing",
+        "t": 66.533,
+        "wall": 67.717,
+        "combo": 1,
+        "hero": "nezha"
+      },
+      {
+        "type": "ring-throw",
+        "t": 66.675,
+        "wall": 67.858
+      },
+      {
+        "type": "enemy-attack",
+        "t": 66.775,
+        "wall": 67.958,
+        "kind": "caster",
+        "id": 5,
+        "move": "cross"
+      },
+      {
+        "type": "hurt",
+        "t": 67.133,
+        "wall": 68.317,
+        "source": "莲灯使·交叉封位",
+        "amount": 12
+      },
+      {
+        "type": "jump",
+        "t": 67.167,
+        "wall": 68.35,
+        "air": false
+      },
+      {
+        "type": "ring-turn",
+        "t": 67.167,
+        "wall": 68.35,
+        "x": 1835.6902670956174,
+        "y": 402
+      },
+      {
+        "type": "ring-catch",
+        "t": 67.458,
+        "wall": 68.642
+      },
+      {
+        "type": "swing",
+        "t": 67.758,
+        "wall": 68.942,
+        "combo": 1,
+        "hero": "nezha"
+      },
+      {
+        "type": "warning",
+        "t": 67.85,
+        "wall": 69.033,
+        "kind": "shield",
+        "id": 4,
+        "move": "windup",
+        "x": 2207.199999999995,
+        "y": 300,
+        "face": -1
+      },
+      {
+        "type": "ring-throw",
+        "t": 67.9,
+        "wall": 69.083
+      },
+      {
+        "type": "jump",
+        "t": 68.233,
+        "wall": 69.417,
+        "air": false
+      },
+      {
+        "type": "silk",
+        "t": 68.275,
+        "wall": 69.458
+      },
+      {
+        "type": "seal-burst",
+        "t": 68.433,
+        "wall": 69.617,
+        "id": 0
+      },
+      {
+        "type": "warning",
+        "t": 68.483,
+        "wall": 69.667,
+        "kind": "caster",
+        "id": 5,
+        "move": "orb",
+        "aimX": 2099.3061704635847,
+        "aimY": 315.66111111111115
+      },
+      {
+        "type": "ring-turn",
+        "t": 68.492,
+        "wall": 69.675,
+        "x": 2524.126353109798,
+        "y": 391.9402777777777
+      },
+      {
+        "type": "enemy-attack",
+        "t": 68.55,
+        "wall": 69.733,
+        "kind": "shield",
+        "id": 4,
+        "box": {
+          "x": 2161.199999999995,
+          "y": 306,
+          "w": 60,
+          "h": 32
+        }
+      },
+      {
+        "type": "ring-catch",
+        "t": 69.017,
+        "wall": 70.2
+      },
+      {
+        "type": "jump",
+        "t": 69.158,
+        "wall": 70.342,
+        "air": false
+      },
+      {
+        "type": "swing",
+        "t": 69.75,
+        "wall": 70.933,
+        "combo": 1,
+        "hero": "nezha"
+      },
+      {
+        "type": "warning",
+        "t": 69.85,
+        "wall": 71.033,
+        "kind": "shield",
+        "id": 4,
+        "move": "rush-windup",
+        "x": 2201.6,
+        "y": 300,
+        "face": -1
+      },
+      {
+        "type": "ring-throw",
+        "t": 69.892,
+        "wall": 71.075
+      },
+      {
+        "type": "ring-turn",
+        "t": 70.383,
+        "wall": 71.567,
+        "x": 1734.341637212533,
+        "y": 302
+      },
+      {
+        "type": "hurt",
+        "t": 70.408,
+        "wall": 71.592,
+        "source": "莲焰飞弹",
+        "amount": 12
+      },
+      {
+        "type": "jump",
+        "t": 70.592,
+        "wall": 71.775,
+        "air": true
+      },
+      {
+        "type": "enemy-attack",
+        "t": 70.708,
+        "wall": 71.892,
+        "kind": "shield",
+        "id": 4,
+        "move": "rush"
+      },
+      {
+        "type": "ring-catch",
+        "t": 70.817,
+        "wall": 72
+      },
+      {
+        "type": "warning",
+        "t": 70.95,
+        "wall": 72.133,
+        "kind": "caster",
+        "id": 5,
+        "move": "cross"
+      },
+      {
+        "type": "swing",
+        "t": 71.208,
+        "wall": 72.392,
+        "combo": 1,
+        "hero": "nezha"
+      },
+      {
+        "type": "ring-throw",
+        "t": 71.35,
+        "wall": 72.533
+      },
+      {
+        "type": "jump",
+        "t": 71.775,
+        "wall": 72.958,
+        "air": false
+      },
+      {
+        "type": "seal-burst",
+        "t": 71.842,
+        "wall": 73.025,
+        "id": 0
+      },
+      {
+        "type": "hurt",
+        "t": 71.917,
+        "wall": 73.1,
+        "source": "莲焰飞弹",
+        "amount": 12
+      },
+      {
+        "type": "ring-turn",
+        "t": 71.942,
+        "wall": 73.125,
+        "x": 2482.639426085014,
+        "y": 376.99236111111094
+      },
+      {
+        "type": "enemy-attack",
+        "t": 72.108,
+        "wall": 73.292,
+        "kind": "caster",
+        "id": 5,
+        "move": "cross"
+      },
+      {
+        "type": "ring-catch",
+        "t": 72.425,
+        "wall": 73.608
+      },
+      {
+        "type": "swing",
+        "t": 72.608,
+        "wall": 73.792,
+        "combo": 1,
+        "hero": "nezha"
+      },
+      {
+        "type": "jump",
+        "t": 72.742,
+        "wall": 73.925,
+        "air": false
+      },
+      {
+        "type": "ring-throw",
+        "t": 72.75,
+        "wall": 73.933
+      },
+      {
+        "type": "warning",
+        "t": 72.792,
+        "wall": 73.975,
+        "kind": "shield",
+        "id": 4,
+        "move": "windup",
+        "x": 2072,
+        "y": 300,
+        "face": 1
+      },
+      {
+        "type": "hit",
+        "t": 72.825,
+        "wall": 74.008,
+        "target": 4,
+        "kind": "shield",
+        "amount": 18,
+        "impact": "ring",
+        "x": 2085,
+        "y": 318
+      },
+      {
+        "type": "ring-turn",
+        "t": 73.3,
+        "wall": 74.508,
+        "x": 2056.2572062060717,
+        "y": -4.443780332102651
+      },
+      {
+        "type": "enemy-attack",
+        "t": 73.492,
+        "wall": 74.7,
+        "kind": "shield",
+        "id": 4,
+        "box": {
+          "x": 2086,
+          "y": 306,
+          "w": 60,
+          "h": 32
+        }
+      },
+      {
+        "type": "hurt",
+        "t": 73.5,
+        "wall": 74.708,
+        "source": "重盾兵·盾撞",
+        "amount": 16
+      },
+      {
+        "type": "ring-catch",
+        "t": 73.633,
+        "wall": 74.842
+      },
+      {
+        "type": "jump",
+        "t": 73.65,
+        "wall": 74.858,
+        "air": true
+      },
+      {
+        "type": "warning",
+        "t": 73.817,
+        "wall": 75.025,
+        "kind": "caster",
+        "id": 5,
+        "move": "orb",
+        "aimX": 2111,
+        "aimY": 241.78333333333327
+      },
+      {
+        "type": "swing",
+        "t": 74.233,
+        "wall": 75.442,
+        "combo": 1,
+        "hero": "nezha"
+      },
+      {
+        "type": "ring-throw",
+        "t": 74.375,
+        "wall": 75.583
+      },
+      {
+        "type": "hit",
+        "t": 74.375,
+        "wall": 75.583,
+        "target": 4,
+        "kind": "shield",
+        "amount": 18,
+        "impact": "ring",
+        "x": 2085,
+        "y": 318
+      },
+      {
+        "type": "warning",
+        "t": 74.792,
+        "wall": 76.025,
+        "kind": "shield",
+        "id": 4,
+        "move": "rush-windup",
+        "x": 2072,
+        "y": 300,
+        "face": 1
+      },
+      {
+        "type": "ring-turn",
+        "t": 74.867,
+        "wall": 76.1,
+        "x": 1740,
+        "y": 302
+      },
+      {
+        "type": "hit",
+        "t": 75.233,
+        "wall": 76.467,
+        "target": 4,
+        "kind": "shield",
+        "amount": 22,
+        "impact": "ring",
+        "x": 2097,
+        "y": 318
+      },
+      {
+        "type": "ultimate-ready",
+        "t": 75.233,
+        "wall": 76.467
+      },
+      {
+        "type": "seal-burst",
+        "t": 75.25,
+        "wall": 76.508,
+        "id": 0
+      },
+      {
+        "type": "ring-catch",
+        "t": 75.292,
+        "wall": 76.55
+      },
+      {
+        "type": "hurt",
+        "t": 75.367,
+        "wall": 76.625,
+        "source": "莲焰飞弹",
+        "amount": 12
+      },
+      {
+        "type": "jump",
+        "t": 75.517,
+        "wall": 76.775,
+        "air": true
+      },
+      {
+        "type": "enemy-attack",
+        "t": 75.65,
+        "wall": 76.908,
+        "kind": "shield",
+        "id": 4,
+        "move": "rush"
+      },
+      {
+        "type": "swing",
+        "t": 76.067,
+        "wall": 77.325,
+        "combo": 1,
+        "hero": "nezha"
+      },
+      {
+        "type": "ring-throw",
+        "t": 76.208,
+        "wall": 77.467
+      },
+      {
+        "type": "warning",
+        "t": 76.283,
+        "wall": 77.542,
+        "kind": "caster",
+        "id": 5,
+        "move": "cross"
+      },
+      {
+        "type": "seal-hit",
+        "t": 76.292,
+        "wall": 77.55,
+        "id": 0
+      },
+      {
+        "type": "hit",
+        "t": 76.392,
+        "wall": 77.65,
+        "target": 4,
+        "kind": "shield",
+        "amount": 18,
+        "impact": "ring",
+        "x": 2238.6,
+        "y": 318
+      },
+      {
+        "type": "kill",
+        "t": 76.392,
+        "wall": 77.65,
+        "kind": "shield"
+      },
+      {
+        "type": "ring-turn",
+        "t": 76.7,
+        "wall": 77.983,
+        "x": 2417.0988880068994,
+        "y": 302
+      },
+      {
+        "type": "seal-hit",
+        "t": 77,
+        "wall": 78.283,
+        "id": 0
+      },
+      {
+        "type": "ring-catch",
+        "t": 77.108,
+        "wall": 78.392
+      },
+      {
+        "type": "swing",
+        "t": 77.292,
+        "wall": 78.575,
+        "combo": 1,
+        "hero": "nezha"
+      },
+      {
+        "type": "ring-throw",
+        "t": 77.433,
+        "wall": 78.717
+      },
+      {
+        "type": "enemy-attack",
+        "t": 77.442,
+        "wall": 78.725,
+        "kind": "caster",
+        "id": 5,
+        "move": "cross"
+      },
+      {
+        "type": "hurt",
+        "t": 77.442,
+        "wall": 78.725,
+        "source": "莲灯使·交叉封位",
+        "amount": 12
+      },
+      {
+        "type": "death",
+        "t": 77.442,
+        "wall": 78.725,
+        "source": "莲灯使·交叉封位"
+      }
+    ]
+  },
+  "inputBoundaries": "evidence/ranged-v6/http-input-boundaries.json",
+  "video": "evidence/ranged-v6/video/page@b751229a4b689013c205b378141b8590.webm"
+}

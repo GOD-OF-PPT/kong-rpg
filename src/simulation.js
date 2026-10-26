@@ -1,14 +1,14 @@
 (function (K) {
   'use strict';
-  K.newRun = function (seed, first) {
-    const s = { version:5,rules:5,growth:{},talisman:null,casts:[],world:{rescue:false,bridge:false,bell:false},journal:[],dangers:[],seed:String(seed || 'BLACK-LOTUS'), stage:0, mode:'playing',time:0,elapsed:0,roomTime:0,relics:first?[first]:[],room:null,player:null,clone:null,projectiles:[],effects:[],events:[],log:[],reward:[],rewardKind:'exit',pendingRelic:null,kills:0,broken:0,damageTaken:0,lastDamage:'',hitstop:0,shake:0,checkpoint:90,combo:0,comboTime:0,serial:0,hints:[],stats:{swings:0,hits:0,blocks:0,jumps:0,dashes:0,clones:0,focusSpent:0,rests:0,ultimates:0,talismans:0,guardians:0,drops:0,camps:0,trials:0} };
+  K.newRun = function (seed, first, hero='wukong') {
+    const s = { version:6,rules:6,hero,ring:null,silk:null,growth:{},talisman:null,casts:[],world:{rescue:false,bridge:false,bell:false},journal:[],dangers:[],seed:String(seed || 'BLACK-LOTUS'), stage:0, mode:'playing',time:0,elapsed:0,roomTime:0,relics:first?[first]:[],room:null,player:null,clone:null,projectiles:[],effects:[],events:[],log:[],reward:[],rewardKind:'exit',pendingRelic:null,kills:0,broken:0,damageTaken:0,lastDamage:'',hitstop:0,shake:0,checkpoint:90,combo:0,comboTime:0,serial:0,hints:[],stats:{swings:0,hits:0,blocks:0,jumps:0,dashes:0,clones:0,focusSpent:0,rests:0,ultimates:0,talismans:0,guardians:0,drops:0,camps:0,trials:0,farHits:0} };
     K.enterRoom(s, 0, true); return s;
   };
   K.enterRoom = function (s, stage, initial) {
     const old = s.player;
     s.stage = stage; s.room = K.makeRoom(s.seed, stage); s.roomTime = 0; s.checkpoint = 90;
-    s.player = { x:90,y:380,w:24,h:44,vx:0,vy:0,face:1,hp:initial?K.maxHP(s):Math.min(K.maxHP(s),old.hp+18),focus:initial?65:Math.min(100,old.focus+20),rage:initial?25:old.rage,ultimate:0,ultimateStage:0,talismanCD:0,ward:0,dashTargets:[],grounded:false,coyote:0,buffer:0,airJumps:0,invuln:.8,dash:0,dashCD:0,attack:0,attackId:0,attackTargets:[],comboIndex:0,slam:false,landing:0,drop:0,hurt:0,attackBuffer:0 };
-    s.clone=null;s.projectiles=[];s.effects=[];s.dangers=[];s.casts=[];s.hitstop=0;s.mode='playing';s.pendingRelic=null;s.reward=[];K.applyWorld(s);
+    s.player = { x:90,y:380,w:24,h:44,vx:0,vy:0,face:1,hp:initial?K.maxHP(s):Math.min(K.maxHP(s),old.hp+18),focus:initial?65:Math.min(100,old.focus+20),rage:initial?25:old.rage,ringCD:0,ringAim:null,ultimate:0,ultimateStage:0,talismanCD:0,ward:0,dashTargets:[],grounded:false,coyote:0,buffer:0,airJumps:0,invuln:.8,dash:0,dashCD:0,attack:0,attackId:0,attackTargets:[],comboIndex:0,slam:false,landing:0,drop:0,hurt:0,attackBuffer:0 };
+    s.ring=null;s.silk=null;s.clone=null;s.projectiles=[];s.effects=[];s.dangers=[];s.casts=[];s.hitstop=0;s.mode='playing';s.pendingRelic=null;s.reward=[];K.applyWorld(s);
     K.event(s, 'room', { stage });
   };
   K.event = function(s,type,data={}){const e={type,t:+s.time.toFixed(3),wall:+(s.elapsed||0).toFixed(3),...data};s.events.push(e);s.log.push(e);if(s.log.length>400)s.log.shift();const stat={swing:'swings',hit:'hits',blocked:'blocks',jump:'jumps',dash:'dashes',clone:'clones'}[type];if(stat&&s.stats)s.stats[stat]++;};
@@ -24,13 +24,13 @@
     return true;
   };
   K.hitEnemy = function (s, e, amount, origin, pierce = false, impact='light') {
-    if (e.hp <= 0 || e.dormant) return false;
+    if (s.mode!=='playing' || e.hp <= 0 || e.dormant) return false;
     const front = (origin - (e.x + e.w / 2)) * e.face > 0;
     if(e.kind==='boss'&&e.phase!=='recover'&&front&&impact!=='ultimate'){amount=Math.ceil(amount*.4);K.effect(s,'block',e.x+24,e.y+20,{face:Math.sign(e.x-origin)||1});K.event(s,'boss-guard',{chip:amount});}
     if (e.kind === 'shield' && front && !pierce && e.stun <= 0 && e.phase !== 'recover') { K.effect(s,'block',e.x+(e.face>0?e.w:0),e.y+16,{text:'格挡',face:Math.sign(e.x-origin)||1});K.event(s,'blocked',{target:e.id});s.player.focus=Math.min(100,s.player.focus+3);return false; }
     e.hp=Math.max(0,e.hp-amount);e.flash=.08;e.stun=K.isMajor(e)?0:.065;e.recoil=.12;e.recoilFace=Math.sign(e.x-origin)||1;
     if((!K.isMajor(e)&&['heavy','thunder','ultimate'].includes(impact)&&e.phase.endsWith('windup')&&(e.interruptLock||0)<=0)||(e.kind==='warden'&&impact==='ultimate')){e.phase='recover';e.timer=.85;e.marks=[];e.interruptLock=1;K.event(s,'interrupt',{target:e.id});K.effect(s,'block',e.x+12,e.y+4,{text:'破势'});}
-    if(!K.isMajor(e)&&!(e.trait&&e.phase.endsWith('windup')&&impact==='light')){const bounds=K.patrolBounds(s,e);e.x=K.clamp(e.x+Math.sign(e.x-origin)*12,bounds.min,bounds.max);}
+    if(!K.isMajor(e)&&!((e.trait||e.phase==='pursuit-windup'||e.phase==='cross-windup')&&e.phase.endsWith('windup')&&['light','ring'].includes(impact))){const bounds=K.patrolBounds(s,e);e.x=K.clamp(e.x+Math.sign(e.x-origin)*12,bounds.min,bounds.max);}
     const heavy=['heavy','ultimate','thunder'].includes(impact);K.effect(s,heavy?'heavy-hit':'hit',e.x+e.w/2,e.y+18,{text:String(amount),face:Math.sign(e.x-origin)||1,impact,color:heavy?'#ffe9a8':'#fff1ce'});
     s.hitstop=Math.max(s.hitstop,heavy?.058:.018);s.shake=heavy?.18:.065;K.event(s,'hit',{target:e.id,kind:e.kind,amount,impact,x:e.x+e.w/2,y:e.y+18});if(impact!=='ultimate')K.gainRage(s,impact==='heavy'?14:8);
     if (e.hp === 0) { s.kills++;s.player.focus=Math.min(100,s.player.focus+10);K.effect(s,'kill',e.x+e.w/2,e.y+20,{face:Math.sign(e.x-origin)||1});K.event(s,'kill',{kind:e.kind});
@@ -41,6 +41,7 @@
     return true;
   };
   K.strike = function (s, box, amount, origin, pierce, targets, impact='light') {
+    if(s.mode!=='playing')return;
     for (const e of s.room.enemies) if (e.hp > 0 && K.overlap(box, e) && !targets.includes('e' + e.id)) {
       targets.push('e'+e.id);if(K.hitEnemy(s,e,amount,origin,pierce,impact))s.player.focus=Math.min(100,s.player.focus+12);
     }
@@ -62,7 +63,7 @@
     s.time += dt; s.roomTime += dt; s.shake = Math.max(0, s.shake - dt);
     const p = s.player; const oldY = p.y;
     K.updatePlatforms(s,dt);
-    for(const key of ['invuln','dashCD','landing','buffer','coyote','drop','hurt','attackBuffer','talismanCD','ward'])p[key]=Math.max(0,(p[key]||0)-dt);
+    for(const key of ['invuln','dashCD','landing','buffer','coyote','drop','hurt','attackBuffer','talismanCD','ward','ringCD'])p[key]=Math.max(0,(p[key]||0)-dt);
     if(a.ultimatePressed)K.startUltimate(s);if(a.talismanPressed)K.useTalisman(s);
     if(p.ultimate>0){K.stepUltimate(s,dt);a={};}K.stepCasts(s,dt);if(s.mode!=='playing')return;
     if(a.attackPressed)p.attackBuffer=.12;
@@ -71,14 +72,15 @@
     if (p.grounded) { p.coyote = .10; p.airJumps = 0; const safeGround=s.room.platforms.some(q=>q.solid&&Math.abs(p.y+p.h-q.y)<3&&p.x>q.x+60&&p.x<q.x+q.w-130);if(safeGround&&!s.room.hazards.some(h => Math.abs(h.x - p.x) < 120)) s.checkpoint = p.x; }
     if(a.down&&a.jumpPressed&&p.grounded&&s.room.platforms.some(q=>!q.solid&&Math.abs(p.y+p.h-q.y)<3&&p.x+p.w>q.x&&p.x<q.x+q.w)){p.drop=.28;p.y+=4;p.vy=90;p.buffer=0;p.coyote=0;p.grounded=false;K.event(s,'drop');}
     if (a.dashPressed && p.dashCD === 0 && !p.slam) { p.dash = .18; p.dashCD = .85; p.invuln = Math.max(p.invuln, .21); p.attack = 0; p.vy = 0;p.dashTargets=[]; K.event(s, 'dash'); }
-    if (a.clonePressed && !s.clone) {
+    if(a.clonePressed&&K.isRanged(s))K.castSilk(s);
+    if (a.clonePressed && !K.isRanged(s) && !s.clone) {
       const cost = K.has(s, 'echo') ? 50 : 40;
       if(p.focus>=cost){p.focus-=cost;s.stats.focusSpent+=cost;s.clone={x:p.x,y:p.y,w:24,h:44,face:p.face,life:K.has(s,'echo')?3:1.8,timer:.12};K.event(s,'clone',{cost});}
       else { K.event(s, 'empty-focus'); K.effect(s, 'notice', p.x, p.y - 14, { text: '定力不足' }); }
     }
     const moving = (a.right ? 1 : 0) - (a.left ? 1 : 0);
     if (moving && !p.dash && !p.slam) p.face = moving;
-    if (a.aimFace && a.attack && p.attack <= 0) p.face = a.aimFace;
+    if (a.aimFace && a.attack && p.attack <= 0 && p.dash<=0) p.face = a.aimFace;
     if (p.buffer > 0 && !p.slam && !p.dash && (p.coyote > 0 || (K.has(s, 'cloud') && p.airJumps < 1))) {
       const air = p.coyote === 0; p.vy = air ? -490 : -590; if (air) p.airJumps++; p.buffer = 0; p.coyote = 0; p.grounded = false; K.event(s, 'jump', { air }); K.effect(s, 'dust', p.x + 12, p.y + 44);
     }
@@ -86,9 +88,11 @@
     if((a.attack||p.attackBuffer>0)&&p.attack<=0&&p.landing===0&&p.dash<=0&&!p.slam){
       p.attackBuffer=0;
       if (a.down && !p.grounded) { p.slam = true; p.vy = 650; p.vx = 0; K.event(s, 'slam'); }
+      else if(K.isRanged(s))K.startRangedAttack(s,a);
       else { s.combo=s.combo%3+1;s.comboTime=.85;p.comboIndex=s.combo;p.attack=p.comboIndex===3?(K.has(s,'staff')?.52:.46):p.comboIndex===2?.31:.29;p.attackDuration=p.attack;p.attackTargets=[];p.attackId++;K.event(s,'swing',{combo:p.comboIndex}); }
     }
-    if (p.attack > 0) {
+    if(K.isRanged(s)&&p.attack>0)K.stepRangedAttack(s,dt);
+    else if (p.attack > 0) {
       const elapsed = p.attackDuration - p.attack;
       const timing=K.attackTiming(p);if(elapsed>=timing.start&&elapsed<timing.end){K.strike(s,K.attackBox(s),p.comboIndex===3?27:14,p.x+12,p.comboIndex===3&&K.has(s,'staff'),p.attackTargets,p.comboIndex===3?'heavy':'light');if(p.comboIndex===3&&K.rank(s,'staff-wave')&&!p.attackTargets.includes('wave')){p.attackTargets.push('wave');s.projectiles.push({x:p.x+12,y:p.y+18,vx:p.face*430,vy:0,w:30,h:17,life:1.05,friendly:true,damage:12});K.event(s,'staff-wave');}}
       p.attack = Math.max(0, p.attack - dt);
@@ -104,6 +108,7 @@
     if (p.y > 590) { p.invuln = 0; K.damage(s, 18, '坠入云渊'); p.x = K.clamp(s.checkpoint - 35, 30, s.room.width - 100); p.y = 396; p.vy = 0; p.vx = 0; p.slam = false; }
     for (const h of s.room.hazards) if(K.hazardPhase(s,h)==='active'&&K.overlap(p,h))K.damage(s,14,h.period?'灵山·地焰':'黑莲地刺',-p.face);
     for(const item of s.room.pickups)if(!item.used&&item.enabled!==false&&K.overlap(p,item))K.collectPickup(s,item);
+    K.stepRanged(s,dt);
     if (s.clone) {
       const c = s.clone; c.life -= dt; c.timer -= dt;
       if (c.timer <= 0) { c.timer = .52; const candidates = s.room.enemies.filter(e => e.hp > 0); const target = candidates.sort((a, b) => Math.abs(a.x - c.x) - Math.abs(b.x - c.x))[0]; c.face = target ? Math.sign(target.x - c.x) || 1 : c.face;
@@ -141,7 +146,8 @@
     if(e.kind==='caster')e.y=e.baseY+Math.sin(s.time*2+e.id)*4;
     const target=s.clone&&Math.abs(s.clone.x-e.x)<380?s.clone:p,dx=target.x-e.x,near=Math.abs(dx);
     e.timer=Math.max(-1,e.timer-dt);if(e.stun>0&&e.phase==='idle')return;
-    if(e.kind==='warden'){K.stepWarden(s,e,dt,target);}
+    if(K.stepCounter(s,e,dt,target)){}
+    else if(e.kind==='warden'){K.stepWarden(s,e,dt,target);}
     else if(e.kind==='boss'){
       if(e.phase==='idle'&&e.timer<=0){
         e.attacks++;e.phase=e.attacks%3===0?'rain-windup':e.attacks%2?'sweep-windup':'orb-windup';e.timer=e.phase==='rain-windup'?1.05:e.hp<135?.65:.9;e.face=Math.sign(target.x-e.x)||-1;
@@ -166,10 +172,10 @@
       if(e.phase==='idle'){
         const reach=e.style==='rush'?185:e.style==='lunge'?145:84;
         if(near<reach&&Math.abs(target.y-e.y)<65&&e.timer<=0){e.face=Math.sign(dx)||e.face;e.attacks++;e.followup=false;const special=e.trait!=='twin'&&e.attacks%2===1&&e.style!=='basic';e.phase=special?e.style+'-windup':'windup';e.timer=special?(e.style==='rush'?.85:.62):e.kind==='shield'?.7:.52;K.event(s,'warning',{kind:e.kind,id:e.id,move:e.phase,x:e.x,y:e.y,face:e.face});}
-        else if(near>50&&near<330){if(e.kind!=='shield'||e.timer<=0){e.face=Math.sign(dx);if(e.kind==='shield')e.timer=.6;}const bounds=K.patrolBounds(s,e);e.x=K.clamp(e.x+e.face*(e.kind==='shield'?28:53)*dt,bounds.min,bounds.max);}
+        else if(near>50&&near<330){if(e.kind!=='shield'||e.timer<=0){e.face=Math.sign(dx);if(e.kind==='shield')e.timer=.6;}const bounds=K.patrolBounds(s,e);e.x=K.clamp(e.x+e.face*(e.kind==='shield'?28:53)*dt*K.enemySpeed(s,e),bounds.min,bounds.max);}
       }else if(['rush-windup','lunge-windup'].includes(e.phase)&&e.timer<=0){e.phase=e.phase.split('-')[0];e.timer=e.phase==='rush'?.36:.24;K.event(s,'enemy-attack',{kind:e.kind,id:e.id,move:e.phase});}
       else if(['rush','lunge'].includes(e.phase)){
-        const bounds=K.patrolBounds(s,e);e.x=K.clamp(e.x+e.face*(e.phase==='rush'?360:285)*Math.min(dt,Math.max(0,e.timer+dt)),bounds.min,bounds.max);if(K.overlap(p,K.enemyAttackBox(e)))K.damage(s,e.kind==='shield'?16:12,e.kind==='shield'?'重盾兵·蓄势冲撞':'执刃魔兵·突进斩',e.face);
+        const bounds=K.patrolBounds(s,e);e.x=K.clamp(e.x+e.face*(e.phase==='rush'?360:285)*Math.min(dt,Math.max(0,e.timer+dt))*K.enemySpeed(s,e),bounds.min,bounds.max);if(K.overlap(p,K.enemyAttackBox(e)))K.damage(s,e.kind==='shield'?16:12,e.kind==='shield'?'重盾兵·蓄势冲撞':'执刃魔兵·突进斩',e.face);
         if(e.timer<=0){e.phase='recover';e.timer=1.15;}
       }else if(['windup','chain-windup'].includes(e.phase)&&e.timer<=0){e.phase='attack';e.timer=.18;K.event(s,'enemy-attack',{kind:e.kind,id:e.id,box:K.enemyAttackBox(e)});}
       else if(e.phase==='attack'){if(K.overlap(K.enemyAttackBox(e),p))K.damage(s,e.kind==='shield'?16:12,e.kind==='shield'?'重盾兵·盾撞':'执刃魔兵·斩击',e.face);if(e.timer<=0){if(e.trait==='twin'&&!e.followup){e.followup=true;e.phase='chain-windup';e.timer=.48;K.event(s,'warning',{kind:e.kind,id:e.id,move:'second-slash'});}else{if(e.trait==='pulse')s.projectiles.push({x:e.x+e.w/2,y:428,vx:e.face*175,vy:0,w:24,h:12,life:2.8,friendly:false,source:'震盾兵·地波'});e.phase='recover';e.timer=e.trait==='twin'?1.25:.9;}}}
@@ -179,7 +185,7 @@
     else if(e.kind!=='caster'&&p.dash<=0&&K.overlap(p,e)){if(e.kind==='boss'&&e.phase==='shift')K.damage(s,15,'无天·移形冲击',e.face);else{p.x=p.x+12<e.x+e.w/2?e.x-p.w-1:e.x+e.w+1;p.vx=0;}}
   };
   K.enemyAttackBox=function(e){if(e.trait==='twin'&&e.followup)return{x:e.face>0?e.x+14:e.x-80,y:e.y+6,w:94,h:32};return e.kind==='warden'?K.wardenAttackBox(e):e.kind==='boss'?{x:e.face>0?e.x+12:e.x-200,y:410,w:240,h:30}:{x:e.face>0?e.x+14:e.x-46,y:e.y+6,w:60,h:32};};
-  K.patrolBounds=function(s,e){const p=s.room.platforms.find(p=>Math.abs(p.y-e.baseY-e.h)<3&&e.origin>=p.x&&e.origin<p.x+p.w);return p?{min:Math.max(e.origin-100,p.x),max:Math.min(e.origin+100,p.x+p.w-e.w)}:{min:e.origin-100,max:e.origin+100};};
+  K.patrolBounds=function(s,e){const p=s.room.platforms.find(p=>Math.abs(p.y-e.baseY-e.h)<3&&e.origin>=p.x&&e.origin<p.x+p.w);return p?{min:Math.max(e.origin-(e.roamRange||100),p.x),max:Math.min(e.origin+(e.roamRange||100),p.x+p.w-e.w)}:{min:e.origin-(e.roamRange||100),max:e.origin+(e.roamRange||100)};};
   K.choose=function(s,id,replace){if(s.mode!=='reward'||!s.reward.includes(id))return false;
     if(id==='rest'){s.player.hp=Math.min(K.maxHP(s),s.player.hp+30);s.player.focus=Math.min(100,s.player.focus+35);s.stats.rests++;}
     else if(K.GROWTH.some(r=>r.id===id)){

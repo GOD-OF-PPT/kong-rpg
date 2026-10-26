@@ -1,0 +1,206 @@
+{
+  "kind": "file",
+  "version": "6.0.0",
+  "sha256": "2143784b6fd86f49fe9d5ef8ec0b8c2559b04ee68c8d03cc2676dcb05a0f79d5",
+  "method": "Real keyboard and mouse; targeted combat states explicitly imported through normal JSON UI, not a natural full run.",
+  "checks": [
+    {
+      "name": "two hero choices available",
+      "pass": true
+    },
+    {
+      "name": "AD Enter selects Nezha",
+      "pass": true
+    },
+    {
+      "name": "ranged relic copy fits paper",
+      "pass": true
+    },
+    {
+      "name": "new state and HUD use Nezha",
+      "pass": true
+    },
+    {
+      "name": "real mouse aims upward",
+      "pass": true
+    },
+    {
+      "name": "build pauses flying ring",
+      "pass": true
+    },
+    {
+      "name": "build describes actual ranged reward",
+      "pass": true
+    },
+    {
+      "name": "reward fixture imported",
+      "pass": true
+    },
+    {
+      "name": "all ranged growth copy fits paper",
+      "pass": true
+    },
+    {
+      "name": "skills fixture imported",
+      "pass": true
+    },
+    {
+      "name": "L is a real silk zone with focus cost",
+      "pass": true
+    },
+    {
+      "name": "R uses Nezha ultimate",
+      "pass": true
+    },
+    {
+      "name": "Nezha silk and active ultimate restore",
+      "pass": true
+    },
+    {
+      "name": "pursuit fixture imported",
+      "pass": true
+    },
+    {
+      "name": "pursuit counter starts at distance",
+      "pass": true,
+      "data": {
+        "id": 0,
+        "kind": "blade",
+        "x": 422,
+        "y": 400,
+        "w": 26,
+        "h": 40,
+        "hp": 38,
+        "maxHp": 38,
+        "face": -1,
+        "phase": "pursuit-windup",
+        "style": "basic",
+        "recoil": 0,
+        "recoilFace": 1,
+        "timer": 0.758333333333334,
+        "stun": 0,
+        "flash": 0,
+        "attacks": 0,
+        "struck": false,
+        "roamRange": 420,
+        "followup": false,
+        "origin": 422,
+        "baseY": 400,
+        "interruptLock": 0,
+        "counterTo": 144
+      }
+    },
+    {
+      "name": "advance fixture imported",
+      "pass": true
+    },
+    {
+      "name": "advance counter starts at distance",
+      "pass": true,
+      "data": {
+        "id": 1,
+        "kind": "shield",
+        "x": 996.7500000000008,
+        "y": 400,
+        "w": 26,
+        "h": 40,
+        "hp": 60,
+        "maxHp": 60,
+        "face": -1,
+        "phase": "advance",
+        "style": "basic",
+        "recoil": 0,
+        "recoilFace": 1,
+        "timer": 0.8750000000000007,
+        "stun": 0,
+        "flash": 0,
+        "attacks": 0,
+        "struck": false,
+        "roamRange": 420,
+        "followup": false,
+        "origin": 1016,
+        "baseY": 400,
+        "interruptLock": 0
+      }
+    },
+    {
+      "name": "cross fixture imported",
+      "pass": true
+    },
+    {
+      "name": "cross counter starts at distance",
+      "pass": true,
+      "data": {
+        "id": 2,
+        "kind": "caster",
+        "x": 1554,
+        "y": 329.75063477872965,
+        "w": 26,
+        "h": 40,
+        "hp": 38,
+        "maxHp": 38,
+        "face": -1,
+        "phase": "cross-windup",
+        "style": "basic",
+        "recoil": 0,
+        "recoilFace": 1,
+        "timer": 0.9666666666666672,
+        "stun": 0,
+        "flash": 0,
+        "attacks": 2,
+        "struck": false,
+        "roamRange": 420,
+        "followup": false,
+        "origin": 1554,
+        "baseY": 327,
+        "interruptLock": 0,
+        "marks": [
+          {
+            "x": 1138,
+            "y": 300,
+            "w": 68,
+            "h": 140
+          },
+          {
+            "x": 993,
+            "y": 300,
+            "w": 68,
+            "h": 140
+          }
+        ]
+      }
+    },
+    {
+      "name": "wukong fixture imported",
+      "pass": true
+    },
+    {
+      "name": "Wukong keeps melee combo",
+      "pass": true
+    },
+    {
+      "name": "v5 save routes to legacy",
+      "pass": true
+    },
+    {
+      "name": "preserved v5 opens",
+      "pass": true
+    },
+    {
+      "name": "storage-denied Nezha ring progress restores",
+      "pass": true
+    },
+    {
+      "name": "no runtime errors",
+      "pass": true
+    },
+    {
+      "name": "zero HTTP(S) requests",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "requests": [],
+  "browser": "156.0.4314.42",
+  "video": "evidence/ranged-v6/video/page@49f9e8072102b6ebb5db098d16d5353e.webm"
+}

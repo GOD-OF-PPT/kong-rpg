@@ -66,7 +66,7 @@
     K.effect(s,'drop-rise',item.x+8,item.y,{color:K.DROPS[item.kind].color});K.event(s,'drop',{id:e.id,kind:item.kind,x:item.x,y:item.y});
   };
   K.collectPickup=function(s,item){
-    if(item.used||item.enabled===false)return;const p=s.player,cap=item.kind==='heal'?K.maxHP(s):100,key={heal:'hp',focus:'focus',rage:'rage'}[item.kind];
+    if(s.mode!=='playing'||item.used||item.enabled===false)return;const p=s.player,cap=item.kind==='heal'?K.maxHP(s):100,key={heal:'hp',focus:'focus',rage:'rage'}[item.kind];
     if(p[key]>=cap)return;const amount=item.amount||(item.kind==='heal'?22:30);item.used=true;
     if(item.kind==='rage')K.gainRage(s,amount);else p[key]=Math.min(cap,p[key]+amount);
     s.stats.drops+=(item.sourceId!==undefined?1:0);K.event(s,'pickup',{kind:item.kind,amount,sourceId:item.sourceId});K.effect(s,'notice',p.x,p.y-5,{text:({heal:'生命',focus:'定力',rage:'战意'}[item.kind])+' +'+amount});

@@ -1,0 +1,2236 @@
+{
+  "version": "6.0.0",
+  "sha256": "2143784b6fd86f49fe9d5ef8ec0b8c2559b04ee68c8d03cc2676dcb05a0f79d5",
+  "seed": "V6-RANGE-COMPARE",
+  "method": "12-second VM shield+caster encounter on one existing ground span. Only two enemies enabled, fixed positions and resources. Counter ablation overrides stepCounter in an isolated VM, never in the shipped rules. Automated policies, not human evidence.",
+  "rows": [
+    {
+      "counters": false,
+      "relic": "cloud",
+      "policy": "stand-and-throw",
+      "damage": 48,
+      "remainingHp": 52,
+      "enemyHp": [
+        60,
+        38
+      ],
+      "focusSpent": 0,
+      "farHits": 0,
+      "seconds": 12,
+      "events": [
+        {
+          "type": "warning",
+          "t": 0.008,
+          "wall": 0.008,
+          "kind": "caster",
+          "id": 2,
+          "move": "orb",
+          "aimX": 1042,
+          "aimY": 414
+        },
+        {
+          "type": "ring-throw",
+          "t": 0.15,
+          "wall": 0.15
+        },
+        {
+          "type": "ring-turn",
+          "t": 0.433,
+          "wall": 0.433,
+          "x": 1240.9114728249322,
+          "y": 408.09701373350447
+        },
+        {
+          "type": "ring-throw",
+          "t": 0.992,
+          "wall": 0.992
+        },
+        {
+          "type": "ring-turn",
+          "t": 1.242,
+          "wall": 1.242,
+          "x": 1216.9036860151868,
+          "y": 407.9849416009788
+        },
+        {
+          "type": "ring-throw",
+          "t": 1.775,
+          "wall": 1.775
+        },
+        {
+          "type": "ring-turn",
+          "t": 1.992,
+          "wall": 1.992,
+          "x": 1192.8962542696227,
+          "y": 407.7967968280684
+        },
+        {
+          "type": "warning",
+          "t": 2.475,
+          "wall": 2.475,
+          "kind": "caster",
+          "id": 2,
+          "move": "orb",
+          "aimX": 1042,
+          "aimY": 414
+        },
+        {
+          "type": "ring-throw",
+          "t": 2.492,
+          "wall": 2.492
+        },
+        {
+          "type": "ring-turn",
+          "t": 2.683,
+          "wall": 2.683,
+          "x": 1174.8855051000537,
+          "y": 407.74120388960955
+        },
+        {
+          "type": "hurt",
+          "t": 3.083,
+          "wall": 3.083,
+          "source": "莲焰飞弹",
+          "amount": 12
+        },
+        {
+          "type": "ring-throw",
+          "t": 3.233,
+          "wall": 3.233
+        },
+        {
+          "type": "ring-turn",
+          "t": 3.417,
+          "wall": 3.417,
+          "x": 1155.0281704701013,
+          "y": 405.59420006269653
+        },
+        {
+          "type": "ring-throw",
+          "t": 3.892,
+          "wall": 3.892
+        },
+        {
+          "type": "ring-turn",
+          "t": 4.075,
+          "wall": 4.075,
+          "x": 1152.469632556522,
+          "y": 408.13139958249445
+        },
+        {
+          "type": "ring-throw",
+          "t": 4.55,
+          "wall": 4.55
+        },
+        {
+          "type": "ring-turn",
+          "t": 4.733,
+          "wall": 4.733,
+          "x": 1152.4696184433917,
+          "y": 408.13139903284184
+        },
+        {
+          "type": "warning",
+          "t": 4.942,
+          "wall": 4.942,
+          "kind": "caster",
+          "id": 2,
+          "move": "orb",
+          "aimX": 1025.6058960726727,
+          "aimY": 414
+        },
+        {
+          "type": "ring-throw",
+          "t": 5.208,
+          "wall": 5.208
+        },
+        {
+          "type": "ring-turn",
+          "t": 5.392,
+          "wall": 5.392,
+          "x": 1152.4696184433544,
+          "y": 408.13139903284053
+        },
+        {
+          "type": "hurt",
+          "t": 5.625,
+          "wall": 5.625,
+          "source": "莲焰飞弹",
+          "amount": 12
+        },
+        {
+          "type": "ring-throw",
+          "t": 5.867,
+          "wall": 5.867
+        },
+        {
+          "type": "ring-turn",
+          "t": 6.067,
+          "wall": 6.067,
+          "x": 1148.8718579042547,
+          "y": 407.74246399368394
+        },
+        {
+          "type": "ring-throw",
+          "t": 6.558,
+          "wall": 6.558
+        },
+        {
+          "type": "ring-turn",
+          "t": 6.758,
+          "wall": 6.758,
+          "x": 1148.0902619284534,
+          "y": 408.0369417479109
+        },
+        {
+          "type": "ring-throw",
+          "t": 7.242,
+          "wall": 7.242
+        },
+        {
+          "type": "warning",
+          "t": 7.408,
+          "wall": 7.408,
+          "kind": "caster",
+          "id": 2,
+          "move": "orb",
+          "aimX": 1009.2117921453458,
+          "aimY": 414
+        },
+        {
+          "type": "ring-turn",
+          "t": 7.442,
+          "wall": 7.442,
+          "x": 1148.0902606952025,
+          "y": 408.0369417050808
+        },
+        {
+          "type": "ring-throw",
+          "t": 7.925,
+          "wall": 7.925
+        },
+        {
+          "type": "ring-turn",
+          "t": 8.125,
+          "wall": 8.125,
+          "x": 1148.0902606952006,
+          "y": 408.0369417050808
+        },
+        {
+          "type": "hurt",
+          "t": 8.167,
+          "wall": 8.167,
+          "source": "莲焰飞弹",
+          "amount": 12
+        },
+        {
+          "type": "ring-throw",
+          "t": 8.625,
+          "wall": 8.625
+        },
+        {
+          "type": "ring-turn",
+          "t": 8.85,
+          "wall": 8.85,
+          "x": 1149.7170151331193,
+          "y": 408.1797787287571
+        },
+        {
+          "type": "ring-throw",
+          "t": 9.358,
+          "wall": 9.358
+        },
+        {
+          "type": "ring-turn",
+          "t": 9.583,
+          "wall": 9.583,
+          "x": 1149.7040055917773,
+          "y": 408.1793560641802
+        },
+        {
+          "type": "warning",
+          "t": 9.875,
+          "wall": 9.875,
+          "kind": "caster",
+          "id": 2,
+          "move": "orb",
+          "aimX": 992.8176882180188,
+          "aimY": 414
+        },
+        {
+          "type": "ring-throw",
+          "t": 10.092,
+          "wall": 10.092
+        },
+        {
+          "type": "ring-turn",
+          "t": 10.317,
+          "wall": 10.317,
+          "x": 1149.7040055837745,
+          "y": 408.17935606391916
+        },
+        {
+          "type": "hurt",
+          "t": 10.708,
+          "wall": 10.708,
+          "source": "莲焰飞弹",
+          "amount": 12
+        },
+        {
+          "type": "ring-throw",
+          "t": 10.858,
+          "wall": 10.858
+        },
+        {
+          "type": "ring-turn",
+          "t": 11.108,
+          "wall": 11.108,
+          "x": 1153.9128084978215,
+          "y": 407.3406380190984
+        },
+        {
+          "type": "ring-throw",
+          "t": 11.642,
+          "wall": 11.642
+        },
+        {
+          "type": "ring-turn",
+          "t": 11.892,
+          "wall": 11.892,
+          "x": 1151.316890604328,
+          "y": 408.2991369990707
+        }
+      ]
+    },
+    {
+      "counters": false,
+      "relic": "cloud",
+      "policy": "observe-and-reposition",
+      "damage": 24,
+      "remainingHp": 76,
+      "enemyHp": [
+        8,
+        38
+      ],
+      "focusSpent": 120,
+      "farHits": 1,
+      "seconds": 12,
+      "events": [
+        {
+          "type": "warning",
+          "t": 0.008,
+          "wall": 0.008,
+          "kind": "caster",
+          "id": 2,
+          "move": "orb",
+          "aimX": 1042.15625,
+          "aimY": 414
+        },
+        {
+          "type": "ring-throw",
+          "t": 0.15,
+          "wall": 0.15
+        },
+        {
+          "type": "silk",
+          "t": 0.417,
+          "wall": 0.417
+        },
+        {
+          "type": "ring-turn",
+          "t": 0.642,
+          "wall": 0.725,
+          "x": 1403.0097672790505,
+          "y": 413.0077823461222
+        },
+        {
+          "type": "ring-throw",
+          "t": 1.242,
+          "wall": 1.35
+        },
+        {
+          "type": "ring-turn",
+          "t": 1.35,
+          "wall": 1.458,
+          "x": 1238.5176184558384,
+          "y": 378.4324894083579
+        },
+        {
+          "type": "ring-throw",
+          "t": 1.758,
+          "wall": 1.867
+        },
+        {
+          "type": "ring-turn",
+          "t": 1.992,
+          "wall": 2.1,
+          "x": 1247.0794208678442,
+          "y": 381.8319902408208
+        },
+        {
+          "type": "silk",
+          "t": 2.425,
+          "wall": 2.533
+        },
+        {
+          "type": "ring-throw",
+          "t": 2.467,
+          "wall": 2.575
+        },
+        {
+          "type": "warning",
+          "t": 2.475,
+          "wall": 2.583,
+          "kind": "caster",
+          "id": 2,
+          "move": "orb",
+          "aimX": 1186.0602551586628,
+          "aimY": 254.14375
+        },
+        {
+          "type": "ring-turn",
+          "t": 2.658,
+          "wall": 2.767,
+          "x": 1234.8387395136467,
+          "y": 379.4100365649962
+        },
+        {
+          "type": "ring-throw",
+          "t": 3.175,
+          "wall": 3.283
+        },
+        {
+          "type": "ring-turn",
+          "t": 3.308,
+          "wall": 3.417,
+          "x": 1210.1332922056545,
+          "y": 379.88084658823186
+        },
+        {
+          "type": "ring-throw",
+          "t": 3.842,
+          "wall": 3.95
+        },
+        {
+          "type": "ring-turn",
+          "t": 3.983,
+          "wall": 4.092,
+          "x": 1192.9732710832097,
+          "y": 380.9746264439207
+        },
+        {
+          "type": "ring-throw",
+          "t": 4.5,
+          "wall": 4.608
+        },
+        {
+          "type": "ring-turn",
+          "t": 4.717,
+          "wall": 4.825,
+          "x": 1179.2877791826484,
+          "y": 379.0111023285494
+        },
+        {
+          "type": "silk",
+          "t": 4.725,
+          "wall": 4.833
+        },
+        {
+          "type": "warning",
+          "t": 4.942,
+          "wall": 5.05,
+          "kind": "caster",
+          "id": 2,
+          "move": "orb",
+          "aimX": 1117.4235034988205,
+          "aimY": 238.70833333333334
+        },
+        {
+          "type": "ring-throw",
+          "t": 5.208,
+          "wall": 5.317
+        },
+        {
+          "type": "hurt",
+          "t": 5.267,
+          "wall": 5.375,
+          "source": "莲焰飞弹",
+          "amount": 12
+        },
+        {
+          "type": "ring-turn",
+          "t": 5.45,
+          "wall": 5.558,
+          "x": 1161.4455631256671,
+          "y": 379.1746173903193
+        },
+        {
+          "type": "ring-throw",
+          "t": 5.933,
+          "wall": 6.042
+        },
+        {
+          "type": "ring-turn",
+          "t": 6.142,
+          "wall": 6.25,
+          "x": 1157.9781477361548,
+          "y": 378.39009816267287
+        },
+        {
+          "type": "ring-throw",
+          "t": 6.642,
+          "wall": 6.75
+        },
+        {
+          "type": "ring-turn",
+          "t": 6.808,
+          "wall": 6.917,
+          "x": 1156.1838891176715,
+          "y": 381.6906012461593
+        },
+        {
+          "type": "ring-throw",
+          "t": 7.333,
+          "wall": 7.442
+        },
+        {
+          "type": "warning",
+          "t": 7.408,
+          "wall": 7.517,
+          "kind": "caster",
+          "id": 2,
+          "move": "orb",
+          "aimX": 1104.0371640859923,
+          "aimY": 296.7895833333333
+        },
+        {
+          "type": "ring-turn",
+          "t": 7.45,
+          "wall": 7.558,
+          "x": 1149.855635575613,
+          "y": 381.7972871767169
+        },
+        {
+          "type": "hurt",
+          "t": 7.775,
+          "wall": 7.883,
+          "source": "莲焰飞弹",
+          "amount": 12
+        },
+        {
+          "type": "ring-throw",
+          "t": 7.975,
+          "wall": 8.083
+        },
+        {
+          "type": "ring-turn",
+          "t": 8.242,
+          "wall": 8.35,
+          "x": 1162.060573669879,
+          "y": 382.40540062654946
+        },
+        {
+          "type": "ring-throw",
+          "t": 8.708,
+          "wall": 8.817
+        },
+        {
+          "type": "ring-turn",
+          "t": 8.958,
+          "wall": 9.067,
+          "x": 1161.1227202729585,
+          "y": 379.2985377373494
+        },
+        {
+          "type": "ring-throw",
+          "t": 9.375,
+          "wall": 9.483
+        },
+        {
+          "type": "ring-turn",
+          "t": 9.617,
+          "wall": 9.725,
+          "x": 1161.151040134855,
+          "y": 380.475483542594
+        },
+        {
+          "type": "warning",
+          "t": 9.875,
+          "wall": 9.983,
+          "kind": "caster",
+          "id": 2,
+          "move": "orb",
+          "aimX": 1108.1621446582928,
+          "aimY": 324
+        },
+        {
+          "type": "ring-throw",
+          "t": 10.083,
+          "wall": 10.192
+        },
+        {
+          "type": "ring-turn",
+          "t": 10.292,
+          "wall": 10.4,
+          "x": 1159.2692016514557,
+          "y": 379.66635554566847
+        },
+        {
+          "type": "ring-throw",
+          "t": 10.792,
+          "wall": 10.9
+        },
+        {
+          "type": "ring-turn",
+          "t": 10.95,
+          "wall": 11.058,
+          "x": 1156.2080363584032,
+          "y": 381.0597607133989
+        },
+        {
+          "type": "ring-throw",
+          "t": 11.475,
+          "wall": 11.583
+        },
+        {
+          "type": "ring-turn",
+          "t": 11.583,
+          "wall": 11.692,
+          "x": 1148.4736253065385,
+          "y": 378.5066309028514
+        }
+      ]
+    },
+    {
+      "counters": false,
+      "relic": "staff",
+      "policy": "stand-and-throw",
+      "damage": 48,
+      "remainingHp": 52,
+      "enemyHp": [
+        60,
+        38
+      ],
+      "focusSpent": 0,
+      "farHits": 0,
+      "seconds": 12,
+      "events": [
+        {
+          "type": "warning",
+          "t": 0.008,
+          "wall": 0.008,
+          "kind": "caster",
+          "id": 2,
+          "move": "orb",
+          "aimX": 1042,
+          "aimY": 414
+        },
+        {
+          "type": "ring-throw",
+          "t": 0.15,
+          "wall": 0.15
+        },
+        {
+          "type": "ring-turn",
+          "t": 0.433,
+          "wall": 0.433,
+          "x": 1240.9114728249322,
+          "y": 408.09701373350447
+        },
+        {
+          "type": "ring-throw",
+          "t": 0.992,
+          "wall": 0.992
+        },
+        {
+          "type": "ring-turn",
+          "t": 1.242,
+          "wall": 1.242,
+          "x": 1216.9036860151868,
+          "y": 407.9849416009788
+        },
+        {
+          "type": "ring-throw",
+          "t": 1.775,
+          "wall": 1.775
+        },
+        {
+          "type": "ring-turn",
+          "t": 1.992,
+          "wall": 1.992,
+          "x": 1192.8962542696227,
+          "y": 407.7967968280684
+        },
+        {
+          "type": "warning",
+          "t": 2.475,
+          "wall": 2.475,
+          "kind": "caster",
+          "id": 2,
+          "move": "orb",
+          "aimX": 1042,
+          "aimY": 414
+        },
+        {
+          "type": "ring-throw",
+          "t": 2.492,
+          "wall": 2.492
+        },
+        {
+          "type": "ring-turn",
+          "t": 2.683,
+          "wall": 2.683,
+          "x": 1174.8855051000537,
+          "y": 407.74120388960955
+        },
+        {
+          "type": "hurt",
+          "t": 3.083,
+          "wall": 3.083,
+          "source": "莲焰飞弹",
+          "amount": 12
+        },
+        {
+          "type": "ring-throw",
+          "t": 3.233,
+          "wall": 3.233
+        },
+        {
+          "type": "ring-turn",
+          "t": 3.417,
+          "wall": 3.417,
+          "x": 1155.0281704701013,
+          "y": 405.59420006269653
+        },
+        {
+          "type": "ring-throw",
+          "t": 3.892,
+          "wall": 3.892
+        },
+        {
+          "type": "ring-turn",
+          "t": 4.075,
+          "wall": 4.075,
+          "x": 1152.469632556522,
+          "y": 408.13139958249445
+        },
+        {
+          "type": "ring-throw",
+          "t": 4.55,
+          "wall": 4.55
+        },
+        {
+          "type": "ring-turn",
+          "t": 4.733,
+          "wall": 4.733,
+          "x": 1152.4696184433917,
+          "y": 408.13139903284184
+        },
+        {
+          "type": "warning",
+          "t": 4.942,
+          "wall": 4.942,
+          "kind": "caster",
+          "id": 2,
+          "move": "orb",
+          "aimX": 1025.6058960726727,
+          "aimY": 414
+        },
+        {
+          "type": "ring-throw",
+          "t": 5.208,
+          "wall": 5.208
+        },
+        {
+          "type": "ring-turn",
+          "t": 5.392,
+          "wall": 5.392,
+          "x": 1152.4696184433544,
+          "y": 408.13139903284053
+        },
+        {
+          "type": "hurt",
+          "t": 5.625,
+          "wall": 5.625,
+          "source": "莲焰飞弹",
+          "amount": 12
+        },
+        {
+          "type": "ring-throw",
+          "t": 5.867,
+          "wall": 5.867
+        },
+        {
+          "type": "ring-turn",
+          "t": 6.067,
+          "wall": 6.067,
+          "x": 1148.8718579042547,
+          "y": 407.74246399368394
+        },
+        {
+          "type": "ring-throw",
+          "t": 6.558,
+          "wall": 6.558
+        },
+        {
+          "type": "ring-turn",
+          "t": 6.758,
+          "wall": 6.758,
+          "x": 1148.0902619284534,
+          "y": 408.0369417479109
+        },
+        {
+          "type": "ring-throw",
+          "t": 7.242,
+          "wall": 7.242
+        },
+        {
+          "type": "warning",
+          "t": 7.408,
+          "wall": 7.408,
+          "kind": "caster",
+          "id": 2,
+          "move": "orb",
+          "aimX": 1009.2117921453458,
+          "aimY": 414
+        },
+        {
+          "type": "ring-turn",
+          "t": 7.442,
+          "wall": 7.442,
+          "x": 1148.0902606952025,
+          "y": 408.0369417050808
+        },
+        {
+          "type": "ring-throw",
+          "t": 7.925,
+          "wall": 7.925
+        },
+        {
+          "type": "ring-turn",
+          "t": 8.125,
+          "wall": 8.125,
+          "x": 1148.0902606952006,
+          "y": 408.0369417050808
+        },
+        {
+          "type": "hurt",
+          "t": 8.167,
+          "wall": 8.167,
+          "source": "莲焰飞弹",
+          "amount": 12
+        },
+        {
+          "type": "ring-throw",
+          "t": 8.625,
+          "wall": 8.625
+        },
+        {
+          "type": "ring-turn",
+          "t": 8.85,
+          "wall": 8.85,
+          "x": 1149.7170151331193,
+          "y": 408.1797787287571
+        },
+        {
+          "type": "ring-throw",
+          "t": 9.358,
+          "wall": 9.358
+        },
+        {
+          "type": "ring-turn",
+          "t": 9.583,
+          "wall": 9.583,
+          "x": 1149.7040055917773,
+          "y": 408.1793560641802
+        },
+        {
+          "type": "warning",
+          "t": 9.875,
+          "wall": 9.875,
+          "kind": "caster",
+          "id": 2,
+          "move": "orb",
+          "aimX": 992.8176882180188,
+          "aimY": 414
+        },
+        {
+          "type": "ring-throw",
+          "t": 10.092,
+          "wall": 10.092
+        },
+        {
+          "type": "ring-turn",
+          "t": 10.317,
+          "wall": 10.317,
+          "x": 1149.7040055837745,
+          "y": 408.17935606391916
+        },
+        {
+          "type": "hurt",
+          "t": 10.708,
+          "wall": 10.708,
+          "source": "莲焰飞弹",
+          "amount": 12
+        },
+        {
+          "type": "ring-throw",
+          "t": 10.858,
+          "wall": 10.858
+        },
+        {
+          "type": "ring-turn",
+          "t": 11.108,
+          "wall": 11.108,
+          "x": 1153.9128084978215,
+          "y": 407.3406380190984
+        },
+        {
+          "type": "ring-throw",
+          "t": 11.642,
+          "wall": 11.642
+        },
+        {
+          "type": "ring-turn",
+          "t": 11.892,
+          "wall": 11.892,
+          "x": 1151.316890604328,
+          "y": 408.2991369990707
+        }
+      ]
+    },
+    {
+      "counters": false,
+      "relic": "staff",
+      "policy": "observe-and-reposition",
+      "damage": 24,
+      "remainingHp": 76,
+      "enemyHp": [
+        2,
+        38
+      ],
+      "focusSpent": 120,
+      "farHits": 1,
+      "seconds": 12,
+      "events": [
+        {
+          "type": "warning",
+          "t": 0.008,
+          "wall": 0.008,
+          "kind": "caster",
+          "id": 2,
+          "move": "orb",
+          "aimX": 1042.15625,
+          "aimY": 414
+        },
+        {
+          "type": "ring-throw",
+          "t": 0.15,
+          "wall": 0.15
+        },
+        {
+          "type": "silk",
+          "t": 0.417,
+          "wall": 0.417
+        },
+        {
+          "type": "ring-turn",
+          "t": 0.642,
+          "wall": 0.725,
+          "x": 1403.0097672790505,
+          "y": 413.0077823461222
+        },
+        {
+          "type": "ring-throw",
+          "t": 1.242,
+          "wall": 1.383
+        },
+        {
+          "type": "ring-turn",
+          "t": 1.35,
+          "wall": 1.492,
+          "x": 1238.5176184558384,
+          "y": 378.4324894083579
+        },
+        {
+          "type": "ring-throw",
+          "t": 1.758,
+          "wall": 1.9
+        },
+        {
+          "type": "ring-turn",
+          "t": 1.992,
+          "wall": 2.133,
+          "x": 1247.0794208678442,
+          "y": 381.8319902408208
+        },
+        {
+          "type": "silk",
+          "t": 2.425,
+          "wall": 2.567
+        },
+        {
+          "type": "ring-throw",
+          "t": 2.467,
+          "wall": 2.608
+        },
+        {
+          "type": "warning",
+          "t": 2.475,
+          "wall": 2.617,
+          "kind": "caster",
+          "id": 2,
+          "move": "orb",
+          "aimX": 1186.0602551586628,
+          "aimY": 254.14375
+        },
+        {
+          "type": "ring-turn",
+          "t": 2.658,
+          "wall": 2.8,
+          "x": 1234.8387395136467,
+          "y": 379.4100365649962
+        },
+        {
+          "type": "ring-throw",
+          "t": 3.175,
+          "wall": 3.317
+        },
+        {
+          "type": "ring-turn",
+          "t": 3.308,
+          "wall": 3.45,
+          "x": 1210.1332922056545,
+          "y": 379.88084658823186
+        },
+        {
+          "type": "ring-throw",
+          "t": 3.842,
+          "wall": 3.983
+        },
+        {
+          "type": "ring-turn",
+          "t": 3.983,
+          "wall": 4.125,
+          "x": 1192.9732710832097,
+          "y": 380.9746264439207
+        },
+        {
+          "type": "ring-throw",
+          "t": 4.5,
+          "wall": 4.642
+        },
+        {
+          "type": "ring-turn",
+          "t": 4.717,
+          "wall": 4.858,
+          "x": 1179.2877791826484,
+          "y": 379.0111023285494
+        },
+        {
+          "type": "silk",
+          "t": 4.725,
+          "wall": 4.867
+        },
+        {
+          "type": "warning",
+          "t": 4.942,
+          "wall": 5.083,
+          "kind": "caster",
+          "id": 2,
+          "move": "orb",
+          "aimX": 1117.4235034988205,
+          "aimY": 238.70833333333334
+        },
+        {
+          "type": "ring-throw",
+          "t": 5.208,
+          "wall": 5.35
+        },
+        {
+          "type": "hurt",
+          "t": 5.267,
+          "wall": 5.408,
+          "source": "莲焰飞弹",
+          "amount": 12
+        },
+        {
+          "type": "ring-turn",
+          "t": 5.45,
+          "wall": 5.592,
+          "x": 1161.4455631256671,
+          "y": 379.1746173903193
+        },
+        {
+          "type": "ring-throw",
+          "t": 5.933,
+          "wall": 6.075
+        },
+        {
+          "type": "ring-turn",
+          "t": 6.142,
+          "wall": 6.283,
+          "x": 1157.9781477361548,
+          "y": 378.39009816267287
+        },
+        {
+          "type": "ring-throw",
+          "t": 6.642,
+          "wall": 6.783
+        },
+        {
+          "type": "ring-turn",
+          "t": 6.808,
+          "wall": 6.95,
+          "x": 1156.1838891176715,
+          "y": 381.6906012461593
+        },
+        {
+          "type": "ring-throw",
+          "t": 7.333,
+          "wall": 7.475
+        },
+        {
+          "type": "warning",
+          "t": 7.408,
+          "wall": 7.55,
+          "kind": "caster",
+          "id": 2,
+          "move": "orb",
+          "aimX": 1104.0371640859923,
+          "aimY": 296.7895833333333
+        },
+        {
+          "type": "ring-turn",
+          "t": 7.45,
+          "wall": 7.592,
+          "x": 1149.855635575613,
+          "y": 381.7972871767169
+        },
+        {
+          "type": "hurt",
+          "t": 7.775,
+          "wall": 7.917,
+          "source": "莲焰飞弹",
+          "amount": 12
+        },
+        {
+          "type": "ring-throw",
+          "t": 7.975,
+          "wall": 8.117
+        },
+        {
+          "type": "ring-turn",
+          "t": 8.242,
+          "wall": 8.383,
+          "x": 1162.060573669879,
+          "y": 382.40540062654946
+        },
+        {
+          "type": "ring-throw",
+          "t": 8.708,
+          "wall": 8.85
+        },
+        {
+          "type": "ring-turn",
+          "t": 8.958,
+          "wall": 9.1,
+          "x": 1161.1227202729585,
+          "y": 379.2985377373494
+        },
+        {
+          "type": "ring-throw",
+          "t": 9.375,
+          "wall": 9.517
+        },
+        {
+          "type": "ring-turn",
+          "t": 9.617,
+          "wall": 9.758,
+          "x": 1161.151040134855,
+          "y": 380.475483542594
+        },
+        {
+          "type": "warning",
+          "t": 9.875,
+          "wall": 10.017,
+          "kind": "caster",
+          "id": 2,
+          "move": "orb",
+          "aimX": 1108.1621446582928,
+          "aimY": 324
+        },
+        {
+          "type": "ring-throw",
+          "t": 10.083,
+          "wall": 10.225
+        },
+        {
+          "type": "ring-turn",
+          "t": 10.292,
+          "wall": 10.433,
+          "x": 1159.2692016514557,
+          "y": 379.66635554566847
+        },
+        {
+          "type": "ring-throw",
+          "t": 10.792,
+          "wall": 10.933
+        },
+        {
+          "type": "ring-turn",
+          "t": 10.95,
+          "wall": 11.092,
+          "x": 1156.2080363584032,
+          "y": 381.0597607133989
+        },
+        {
+          "type": "ring-throw",
+          "t": 11.475,
+          "wall": 11.617
+        },
+        {
+          "type": "ring-turn",
+          "t": 11.583,
+          "wall": 11.725,
+          "x": 1148.4736253065385,
+          "y": 378.5066309028514
+        }
+      ]
+    },
+    {
+      "counters": true,
+      "relic": "cloud",
+      "policy": "stand-and-throw",
+      "damage": 52,
+      "remainingHp": 48,
+      "enemyHp": [
+        0,
+        38
+      ],
+      "focusSpent": 0,
+      "farHits": 1,
+      "seconds": 12,
+      "events": [
+        {
+          "type": "warning",
+          "t": 0.008,
+          "wall": 0.008,
+          "kind": "shield",
+          "id": 1,
+          "move": "advance"
+        },
+        {
+          "type": "warning",
+          "t": 0.008,
+          "wall": 0.008,
+          "kind": "caster",
+          "id": 2,
+          "move": "cross"
+        },
+        {
+          "type": "ring-throw",
+          "t": 0.15,
+          "wall": 0.15
+        },
+        {
+          "type": "ring-turn",
+          "t": 0.392,
+          "wall": 0.392,
+          "x": 1210.9241195642276,
+          "y": 407.22601177157526
+        },
+        {
+          "type": "ring-throw",
+          "t": 0.917,
+          "wall": 0.917
+        },
+        {
+          "type": "ring-turn",
+          "t": 1.058,
+          "wall": 1.058,
+          "x": 1138.8936035504316,
+          "y": 406.7927354300565
+        },
+        {
+          "type": "hurt",
+          "t": 1.167,
+          "wall": 1.167,
+          "source": "莲灯使·交叉封位",
+          "amount": 12
+        },
+        {
+          "type": "ring-throw",
+          "t": 1.492,
+          "wall": 1.492
+        },
+        {
+          "type": "ring-turn",
+          "t": 1.983,
+          "wall": 2.008,
+          "x": 1374.3372506734258,
+          "y": 419.87539403502706
+        },
+        {
+          "type": "ring-throw",
+          "t": 2.717,
+          "wall": 2.767
+        },
+        {
+          "type": "ring-turn",
+          "t": 2.833,
+          "wall": 2.883,
+          "x": 1104.450095837629,
+          "y": 407.29337024926747
+        },
+        {
+          "type": "warning",
+          "t": 2.875,
+          "wall": 2.925,
+          "kind": "caster",
+          "id": 2,
+          "move": "orb",
+          "aimX": 1025.6058960726727,
+          "aimY": 414
+        },
+        {
+          "type": "ring-throw",
+          "t": 3.25,
+          "wall": 3.3
+        },
+        {
+          "type": "ring-turn",
+          "t": 3.35,
+          "wall": 3.4,
+          "x": 1092.4293970936171,
+          "y": 407.2443006057192
+        },
+        {
+          "type": "ring-throw",
+          "t": 3.75,
+          "wall": 3.8
+        },
+        {
+          "type": "ring-turn",
+          "t": 3.825,
+          "wall": 3.875,
+          "x": 1074.4247430196165,
+          "y": 406.65892154239214
+        },
+        {
+          "type": "ring-throw",
+          "t": 4.208,
+          "wall": 4.258
+        },
+        {
+          "type": "ring-turn",
+          "t": 4.267,
+          "wall": 4.317,
+          "x": 1062.4089942219246,
+          "y": 406.3432484770083
+        },
+        {
+          "type": "warning",
+          "t": 4.325,
+          "wall": 4.375,
+          "kind": "shield",
+          "id": 1,
+          "move": "windup",
+          "x": 1082.4166666666524,
+          "y": 400,
+          "face": -1
+        },
+        {
+          "type": "ring-throw",
+          "t": 4.633,
+          "wall": 4.683
+        },
+        {
+          "type": "ring-turn",
+          "t": 4.692,
+          "wall": 4.742,
+          "x": 1062.3663977021804,
+          "y": 406.78899614718466
+        },
+        {
+          "type": "hurt",
+          "t": 5.033,
+          "wall": 5.083,
+          "source": "重盾兵·盾撞",
+          "amount": 16
+        },
+        {
+          "type": "ring-throw",
+          "t": 5.183,
+          "wall": 5.233
+        },
+        {
+          "type": "warning",
+          "t": 5.342,
+          "wall": 5.417,
+          "kind": "caster",
+          "id": 2,
+          "move": "cross"
+        },
+        {
+          "type": "ring-turn",
+          "t": 5.775,
+          "wall": 5.85,
+          "x": 1422.951983141828,
+          "y": 485.13402311102897
+        },
+        {
+          "type": "hurt",
+          "t": 6.1,
+          "wall": 6.175,
+          "source": "莲焰飞弹",
+          "amount": 12
+        },
+        {
+          "type": "kill",
+          "t": 6.142,
+          "wall": 6.217,
+          "kind": "shield"
+        },
+        {
+          "type": "ring-throw",
+          "t": 6.617,
+          "wall": 6.717
+        },
+        {
+          "type": "ring-turn",
+          "t": 7.108,
+          "wall": 7.208,
+          "x": 1339.70462613693,
+          "y": 363.01374016953514
+        },
+        {
+          "type": "ring-throw",
+          "t": 7.842,
+          "wall": 7.942
+        },
+        {
+          "type": "warning",
+          "t": 8.208,
+          "wall": 8.308,
+          "kind": "caster",
+          "id": 2,
+          "move": "orb",
+          "aimX": 992.8176882959627,
+          "aimY": 414
+        },
+        {
+          "type": "ring-turn",
+          "t": 8.333,
+          "wall": 8.433,
+          "x": 1339.2273216935678,
+          "y": 358.89137030022493
+        },
+        {
+          "type": "ring-throw",
+          "t": 9.067,
+          "wall": 9.167
+        },
+        {
+          "type": "ring-turn",
+          "t": 9.567,
+          "wall": 9.667,
+          "x": 1345.7010045460684,
+          "y": 362.6943750231414
+        },
+        {
+          "type": "ring-throw",
+          "t": 10.308,
+          "wall": 10.408
+        },
+        {
+          "type": "warning",
+          "t": 10.675,
+          "wall": 10.775,
+          "kind": "caster",
+          "id": 2,
+          "move": "orb",
+          "aimX": 992.8176882959627,
+          "aimY": 414
+        },
+        {
+          "type": "ring-turn",
+          "t": 10.8,
+          "wall": 10.9,
+          "x": 1339.4213292726301,
+          "y": 360.53150641472666
+        },
+        {
+          "type": "hurt",
+          "t": 11.5,
+          "wall": 11.6,
+          "source": "莲焰飞弹",
+          "amount": 12
+        },
+        {
+          "type": "ring-throw",
+          "t": 11.65,
+          "wall": 11.75
+        }
+      ]
+    },
+    {
+      "counters": true,
+      "relic": "cloud",
+      "policy": "observe-and-reposition",
+      "damage": 12,
+      "remainingHp": 88,
+      "enemyHp": [
+        0,
+        0
+      ],
+      "focusSpent": 120,
+      "farHits": 2,
+      "seconds": 9.6,
+      "events": [
+        {
+          "type": "warning",
+          "t": 0.008,
+          "wall": 0.008,
+          "kind": "shield",
+          "id": 1,
+          "move": "advance"
+        },
+        {
+          "type": "warning",
+          "t": 0.008,
+          "wall": 0.008,
+          "kind": "caster",
+          "id": 2,
+          "move": "cross"
+        },
+        {
+          "type": "ring-throw",
+          "t": 0.15,
+          "wall": 0.15
+        },
+        {
+          "type": "silk",
+          "t": 0.317,
+          "wall": 0.317
+        },
+        {
+          "type": "ring-turn",
+          "t": 0.392,
+          "wall": 0.45,
+          "x": 1223.0939336735726,
+          "y": 407.5038911730611
+        },
+        {
+          "type": "ring-throw",
+          "t": 0.833,
+          "wall": 0.892
+        },
+        {
+          "type": "ring-turn",
+          "t": 1.158,
+          "wall": 1.242,
+          "x": 1292.9093460359609,
+          "y": 503.9432310598593
+        },
+        {
+          "type": "ring-throw",
+          "t": 1.808,
+          "wall": 1.917
+        },
+        {
+          "type": "ring-turn",
+          "t": 2.05,
+          "wall": 2.158,
+          "x": 1220.1841059473359,
+          "y": 378.43414614095315
+        },
+        {
+          "type": "silk",
+          "t": 2.325,
+          "wall": 2.433
+        },
+        {
+          "type": "ring-throw",
+          "t": 2.467,
+          "wall": 2.575
+        },
+        {
+          "type": "ring-turn",
+          "t": 2.717,
+          "wall": 2.825,
+          "x": 1211.1725001286707,
+          "y": 382.7480294172693
+        },
+        {
+          "type": "warning",
+          "t": 2.875,
+          "wall": 2.983,
+          "kind": "caster",
+          "id": 2,
+          "move": "orb",
+          "aimX": 1147.9205928638519,
+          "aimY": 309.03958333333327
+        },
+        {
+          "type": "ring-throw",
+          "t": 3.175,
+          "wall": 3.283
+        },
+        {
+          "type": "ring-turn",
+          "t": 3.4,
+          "wall": 3.508,
+          "x": 1190.4760973697846,
+          "y": 382.9982430630524
+        },
+        {
+          "type": "ring-throw",
+          "t": 3.892,
+          "wall": 4
+        },
+        {
+          "type": "ring-turn",
+          "t": 4.075,
+          "wall": 4.183,
+          "x": 1167.774104163771,
+          "y": 382.29191165528806
+        },
+        {
+          "type": "ring-throw",
+          "t": 4.6,
+          "wall": 4.708
+        },
+        {
+          "type": "ring-turn",
+          "t": 4.725,
+          "wall": 4.833,
+          "x": 1142.6249264052985,
+          "y": 382.04822213861405
+        },
+        {
+          "type": "silk",
+          "t": 4.733,
+          "wall": 4.842
+        },
+        {
+          "type": "ring-throw",
+          "t": 5.258,
+          "wall": 5.367
+        },
+        {
+          "type": "warning",
+          "t": 5.342,
+          "wall": 5.45,
+          "kind": "caster",
+          "id": 2,
+          "move": "cross"
+        },
+        {
+          "type": "ring-turn",
+          "t": 5.417,
+          "wall": 5.525,
+          "x": 1127.3452148004671,
+          "y": 381.2857942411517
+        },
+        {
+          "type": "hurt",
+          "t": 5.625,
+          "wall": 5.733,
+          "source": "莲焰飞弹",
+          "amount": 12
+        },
+        {
+          "type": "ring-throw",
+          "t": 5.792,
+          "wall": 5.9
+        },
+        {
+          "type": "ring-turn",
+          "t": 5.883,
+          "wall": 5.992,
+          "x": 1127.5371919614809,
+          "y": 382.91041035726425
+        },
+        {
+          "type": "ring-throw",
+          "t": 6.275,
+          "wall": 6.383
+        },
+        {
+          "type": "ring-turn",
+          "t": 6.375,
+          "wall": 6.483,
+          "x": 1127.0053908801374,
+          "y": 379.354571032355
+        },
+        {
+          "type": "ring-throw",
+          "t": 6.9,
+          "wall": 7.008
+        },
+        {
+          "type": "ring-turn",
+          "t": 7.083,
+          "wall": 7.192,
+          "x": 1110.625265900889,
+          "y": 380.4962647074417
+        },
+        {
+          "type": "warning",
+          "t": 7.175,
+          "wall": 7.283,
+          "kind": "shield",
+          "id": 1,
+          "move": "windup",
+          "x": 1113.3283333333156,
+          "y": 400,
+          "face": -1
+        },
+        {
+          "type": "ring-throw",
+          "t": 7.475,
+          "wall": 7.583
+        },
+        {
+          "type": "ring-turn",
+          "t": 7.608,
+          "wall": 7.717,
+          "x": 1096.0008428043714,
+          "y": 379.55813991800466
+        },
+        {
+          "type": "ring-throw",
+          "t": 8.017,
+          "wall": 8.125
+        },
+        {
+          "type": "kill",
+          "t": 8.1,
+          "wall": 8.208,
+          "kind": "shield"
+        },
+        {
+          "type": "warning",
+          "t": 8.208,
+          "wall": 8.342,
+          "kind": "caster",
+          "id": 2,
+          "move": "orb",
+          "aimX": 1062.3503750496268,
+          "aimY": 311.7048611111111
+        },
+        {
+          "type": "ring-turn",
+          "t": 8.367,
+          "wall": 8.5,
+          "x": 1254.7356422540222,
+          "y": 501.87336594408805
+        },
+        {
+          "type": "ring-throw",
+          "t": 8.942,
+          "wall": 9.075
+        },
+        {
+          "type": "ring-turn",
+          "t": 9.433,
+          "wall": 9.592,
+          "x": 1569.2882833439867,
+          "y": 339.23161319604856
+        },
+        {
+          "type": "kill",
+          "t": 9.442,
+          "wall": 9.6,
+          "kind": "caster"
+        }
+      ]
+    },
+    {
+      "counters": true,
+      "relic": "staff",
+      "policy": "stand-and-throw",
+      "damage": 52,
+      "remainingHp": 48,
+      "enemyHp": [
+        0,
+        38
+      ],
+      "focusSpent": 0,
+      "farHits": 1,
+      "seconds": 12,
+      "events": [
+        {
+          "type": "warning",
+          "t": 0.008,
+          "wall": 0.008,
+          "kind": "shield",
+          "id": 1,
+          "move": "advance"
+        },
+        {
+          "type": "warning",
+          "t": 0.008,
+          "wall": 0.008,
+          "kind": "caster",
+          "id": 2,
+          "move": "cross"
+        },
+        {
+          "type": "ring-throw",
+          "t": 0.15,
+          "wall": 0.15
+        },
+        {
+          "type": "ring-turn",
+          "t": 0.392,
+          "wall": 0.392,
+          "x": 1210.9241195642276,
+          "y": 407.22601177157526
+        },
+        {
+          "type": "ring-throw",
+          "t": 0.917,
+          "wall": 0.917
+        },
+        {
+          "type": "ring-turn",
+          "t": 1.058,
+          "wall": 1.058,
+          "x": 1138.8936035504316,
+          "y": 406.7927354300565
+        },
+        {
+          "type": "hurt",
+          "t": 1.167,
+          "wall": 1.167,
+          "source": "莲灯使·交叉封位",
+          "amount": 12
+        },
+        {
+          "type": "ring-throw",
+          "t": 1.492,
+          "wall": 1.492
+        },
+        {
+          "type": "ring-turn",
+          "t": 1.983,
+          "wall": 2.008,
+          "x": 1374.3372506734258,
+          "y": 419.87539403502706
+        },
+        {
+          "type": "ring-throw",
+          "t": 2.717,
+          "wall": 2.8
+        },
+        {
+          "type": "ring-turn",
+          "t": 2.833,
+          "wall": 2.917,
+          "x": 1104.450095837629,
+          "y": 407.29337024926747
+        },
+        {
+          "type": "warning",
+          "t": 2.875,
+          "wall": 2.958,
+          "kind": "caster",
+          "id": 2,
+          "move": "orb",
+          "aimX": 1025.6058960726727,
+          "aimY": 414
+        },
+        {
+          "type": "ring-throw",
+          "t": 3.25,
+          "wall": 3.333
+        },
+        {
+          "type": "ring-turn",
+          "t": 3.35,
+          "wall": 3.433,
+          "x": 1092.4293970936171,
+          "y": 407.2443006057192
+        },
+        {
+          "type": "ring-throw",
+          "t": 3.75,
+          "wall": 3.833
+        },
+        {
+          "type": "ring-turn",
+          "t": 3.825,
+          "wall": 3.908,
+          "x": 1074.4247430196165,
+          "y": 406.65892154239214
+        },
+        {
+          "type": "ring-throw",
+          "t": 4.208,
+          "wall": 4.292
+        },
+        {
+          "type": "ring-turn",
+          "t": 4.267,
+          "wall": 4.35,
+          "x": 1062.4089942219246,
+          "y": 406.3432484770083
+        },
+        {
+          "type": "warning",
+          "t": 4.325,
+          "wall": 4.408,
+          "kind": "shield",
+          "id": 1,
+          "move": "windup",
+          "x": 1082.4166666666524,
+          "y": 400,
+          "face": -1
+        },
+        {
+          "type": "ring-throw",
+          "t": 4.633,
+          "wall": 4.717
+        },
+        {
+          "type": "ring-turn",
+          "t": 4.692,
+          "wall": 4.775,
+          "x": 1062.3663977021804,
+          "y": 406.78899614718466
+        },
+        {
+          "type": "hurt",
+          "t": 5.033,
+          "wall": 5.117,
+          "source": "重盾兵·盾撞",
+          "amount": 16
+        },
+        {
+          "type": "ring-throw",
+          "t": 5.183,
+          "wall": 5.267
+        },
+        {
+          "type": "kill",
+          "t": 5.267,
+          "wall": 5.35,
+          "kind": "shield"
+        },
+        {
+          "type": "warning",
+          "t": 5.342,
+          "wall": 5.45,
+          "kind": "caster",
+          "id": 2,
+          "move": "cross"
+        },
+        {
+          "type": "ring-turn",
+          "t": 5.683,
+          "wall": 5.792,
+          "x": 1358.5602559055922,
+          "y": 470.6528124042514
+        },
+        {
+          "type": "hurt",
+          "t": 6.1,
+          "wall": 6.208,
+          "source": "莲焰飞弹",
+          "amount": 12
+        },
+        {
+          "type": "ring-throw",
+          "t": 6.425,
+          "wall": 6.533
+        },
+        {
+          "type": "ring-turn",
+          "t": 6.925,
+          "wall": 7.033,
+          "x": 1345.8974483770746,
+          "y": 362.8895015824662
+        },
+        {
+          "type": "ring-throw",
+          "t": 7.667,
+          "wall": 7.775
+        },
+        {
+          "type": "ring-turn",
+          "t": 8.167,
+          "wall": 8.275,
+          "x": 1345.1914418003737,
+          "y": 358.23340013067497
+        },
+        {
+          "type": "warning",
+          "t": 8.208,
+          "wall": 8.317,
+          "kind": "caster",
+          "id": 2,
+          "move": "orb",
+          "aimX": 992.8176882959627,
+          "aimY": 414
+        },
+        {
+          "type": "ring-throw",
+          "t": 8.908,
+          "wall": 9.017
+        },
+        {
+          "type": "ring-turn",
+          "t": 9.408,
+          "wall": 9.517,
+          "x": 1345.6433375944828,
+          "y": 362.1641253075685
+        },
+        {
+          "type": "ring-throw",
+          "t": 10.15,
+          "wall": 10.258
+        },
+        {
+          "type": "ring-turn",
+          "t": 10.642,
+          "wall": 10.75,
+          "x": 1339.5082705942582,
+          "y": 361.28824082518076
+        },
+        {
+          "type": "warning",
+          "t": 10.675,
+          "wall": 10.783,
+          "kind": "caster",
+          "id": 2,
+          "move": "orb",
+          "aimX": 992.8176882959627,
+          "aimY": 414
+        },
+        {
+          "type": "ring-throw",
+          "t": 11.375,
+          "wall": 11.483
+        },
+        {
+          "type": "hurt",
+          "t": 11.5,
+          "wall": 11.608,
+          "source": "莲焰飞弹",
+          "amount": 12
+        },
+        {
+          "type": "ring-turn",
+          "t": 11.867,
+          "wall": 11.975,
+          "x": 1339.3327808465112,
+          "y": 359.77490558245404
+        }
+      ]
+    },
+    {
+      "counters": true,
+      "relic": "staff",
+      "policy": "observe-and-reposition",
+      "damage": 0,
+      "remainingHp": 100,
+      "enemyHp": [
+        0,
+        0
+      ],
+      "focusSpent": 160,
+      "farHits": 1,
+      "seconds": 7.708,
+      "events": [
+        {
+          "type": "warning",
+          "t": 0.008,
+          "wall": 0.008,
+          "kind": "shield",
+          "id": 1,
+          "move": "advance"
+        },
+        {
+          "type": "warning",
+          "t": 0.008,
+          "wall": 0.008,
+          "kind": "caster",
+          "id": 2,
+          "move": "cross"
+        },
+        {
+          "type": "ring-throw",
+          "t": 0.15,
+          "wall": 0.15
+        },
+        {
+          "type": "silk",
+          "t": 0.317,
+          "wall": 0.317
+        },
+        {
+          "type": "ring-turn",
+          "t": 0.392,
+          "wall": 0.45,
+          "x": 1223.0939336735726,
+          "y": 407.5038911730611
+        },
+        {
+          "type": "ring-throw",
+          "t": 0.833,
+          "wall": 0.892
+        },
+        {
+          "type": "ring-turn",
+          "t": 1.158,
+          "wall": 1.242,
+          "x": 1292.9093460359609,
+          "y": 503.9432310598593
+        },
+        {
+          "type": "ring-throw",
+          "t": 1.808,
+          "wall": 1.95
+        },
+        {
+          "type": "ring-turn",
+          "t": 2.05,
+          "wall": 2.192,
+          "x": 1220.1841059473359,
+          "y": 378.43414614095315
+        },
+        {
+          "type": "silk",
+          "t": 2.325,
+          "wall": 2.467
+        },
+        {
+          "type": "ring-throw",
+          "t": 2.467,
+          "wall": 2.608
+        },
+        {
+          "type": "ring-turn",
+          "t": 2.717,
+          "wall": 2.858,
+          "x": 1211.1725001286707,
+          "y": 382.7480294172693
+        },
+        {
+          "type": "warning",
+          "t": 2.875,
+          "wall": 3.017,
+          "kind": "caster",
+          "id": 2,
+          "move": "orb",
+          "aimX": 1147.9205928638519,
+          "aimY": 309.03958333333327
+        },
+        {
+          "type": "ring-throw",
+          "t": 3.175,
+          "wall": 3.317
+        },
+        {
+          "type": "ring-turn",
+          "t": 3.4,
+          "wall": 3.542,
+          "x": 1190.4760973697846,
+          "y": 382.9982430630524
+        },
+        {
+          "type": "ring-throw",
+          "t": 3.892,
+          "wall": 4.033
+        },
+        {
+          "type": "ring-turn",
+          "t": 4.075,
+          "wall": 4.217,
+          "x": 1167.774104163771,
+          "y": 382.29191165528806
+        },
+        {
+          "type": "ring-throw",
+          "t": 4.6,
+          "wall": 4.742
+        },
+        {
+          "type": "ring-turn",
+          "t": 4.725,
+          "wall": 4.867,
+          "x": 1142.6249264052985,
+          "y": 382.04822213861405
+        },
+        {
+          "type": "silk",
+          "t": 4.733,
+          "wall": 4.875
+        },
+        {
+          "type": "ring-throw",
+          "t": 5.258,
+          "wall": 5.4
+        },
+        {
+          "type": "warning",
+          "t": 5.342,
+          "wall": 5.483,
+          "kind": "caster",
+          "id": 2,
+          "move": "cross"
+        },
+        {
+          "type": "ring-turn",
+          "t": 5.417,
+          "wall": 5.558,
+          "x": 1127.3452148004671,
+          "y": 381.2857942411517
+        },
+        {
+          "type": "kill",
+          "t": 5.425,
+          "wall": 5.567,
+          "kind": "shield"
+        },
+        {
+          "type": "ring-throw",
+          "t": 5.792,
+          "wall": 5.992
+        },
+        {
+          "type": "ring-turn",
+          "t": 6.292,
+          "wall": 6.492,
+          "x": 1504.1937507077744,
+          "y": 347.3566238078098
+        },
+        {
+          "type": "ring-throw",
+          "t": 6.85,
+          "wall": 7.05
+        },
+        {
+          "type": "silk",
+          "t": 7.008,
+          "wall": 7.208
+        },
+        {
+          "type": "ring-turn",
+          "t": 7.342,
+          "wall": 7.567,
+          "x": 1708.2913845939727,
+          "y": 288.712255634269
+        },
+        {
+          "type": "kill",
+          "t": 7.483,
+          "wall": 7.708,
+          "kind": "caster"
+        }
+      ]
+    }
+  ]
+}
