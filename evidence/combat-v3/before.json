@@ -1,0 +1,593 @@
+{
+  "hash": "a2b22371d0815f88a58d3c96eb9450b29ba12346f03aff0d931d476ed6dc737e",
+  "state": {
+    "screen": "playing",
+    "state": {
+      "version": 2,
+      "rules": 2,
+      "seed": "V3-COMBAT",
+      "stage": 0,
+      "mode": "playing",
+      "time": 1.2333333333333314,
+      "elapsed": 1.358333333333331,
+      "roomTime": 1.2333333333333314,
+      "relics": [
+        "cloud"
+      ],
+      "room": {
+        "width": 5160,
+        "platforms": [
+          {
+            "x": 0,
+            "y": 440,
+            "w": 820,
+            "h": 110,
+            "solid": true
+          },
+          {
+            "x": 920,
+            "y": 440,
+            "w": 870,
+            "h": 110,
+            "solid": true
+          },
+          {
+            "x": 1900,
+            "y": 440,
+            "w": 850,
+            "h": 110,
+            "solid": true
+          },
+          {
+            "x": 2860,
+            "y": 440,
+            "w": 810,
+            "h": 110,
+            "solid": true
+          },
+          {
+            "x": 3780,
+            "y": 440,
+            "w": 1380,
+            "h": 110,
+            "solid": true
+          },
+          {
+            "x": 270,
+            "y": 350,
+            "w": 150,
+            "h": 16
+          },
+          {
+            "x": 480,
+            "y": 280,
+            "w": 140,
+            "h": 16
+          },
+          {
+            "x": 690,
+            "y": 350,
+            "w": 180,
+            "h": 16
+          },
+          {
+            "x": 1090,
+            "y": 350,
+            "w": 170,
+            "h": 16
+          },
+          {
+            "x": 1318,
+            "y": 280,
+            "w": 150,
+            "h": 16
+          },
+          {
+            "x": 1640,
+            "y": 350,
+            "w": 160,
+            "h": 16
+          },
+          {
+            "x": 2040,
+            "y": 350,
+            "w": 160,
+            "h": 16
+          },
+          {
+            "x": 2282,
+            "y": 275,
+            "w": 180,
+            "h": 16
+          },
+          {
+            "x": 2530,
+            "y": 350,
+            "w": 230,
+            "h": 16
+          },
+          {
+            "x": 3000,
+            "y": 350,
+            "w": 160,
+            "h": 16
+          },
+          {
+            "x": 3232,
+            "y": 280,
+            "w": 150,
+            "h": 16
+          },
+          {
+            "x": 3480,
+            "y": 350,
+            "w": 200,
+            "h": 16
+          },
+          {
+            "x": 3940,
+            "y": 350,
+            "w": 160,
+            "h": 16
+          },
+          {
+            "x": 4168,
+            "y": 280,
+            "w": 180,
+            "h": 16
+          },
+          {
+            "x": 4460,
+            "y": 350,
+            "w": 180,
+            "h": 16
+          }
+        ],
+        "hazards": [
+          {
+            "x": 1210,
+            "y": 427,
+            "w": 54,
+            "h": 13
+          },
+          {
+            "x": 2410,
+            "y": 427,
+            "w": 62,
+            "h": 13
+          },
+          {
+            "x": 4010,
+            "y": 427,
+            "w": 54,
+            "h": 13
+          }
+        ],
+        "enemies": [
+          {
+            "id": 0,
+            "kind": "blade",
+            "x": 458,
+            "y": 400,
+            "w": 26,
+            "h": 40,
+            "hp": 0,
+            "maxHp": 38,
+            "face": -1,
+            "phase": "attack",
+            "timer": 0.11333333333333334,
+            "stun": 0.065,
+            "flash": 0.13,
+            "attacks": 0,
+            "struck": false,
+            "origin": 422,
+            "baseY": 400,
+            "interruptLock": 0
+          },
+          {
+            "id": 1,
+            "kind": "shield",
+            "x": 1025,
+            "y": 400,
+            "w": 26,
+            "h": 40,
+            "hp": 60,
+            "maxHp": 60,
+            "face": -1,
+            "phase": "idle",
+            "timer": -1,
+            "stun": 0,
+            "flash": 0,
+            "attacks": 0,
+            "struck": false,
+            "origin": 1025,
+            "baseY": 400,
+            "interruptLock": 0
+          },
+          {
+            "id": 2,
+            "kind": "caster",
+            "x": 1557,
+            "y": 323.12015251940494,
+            "w": 26,
+            "h": 40,
+            "hp": 38,
+            "maxHp": 38,
+            "face": -1,
+            "phase": "idle",
+            "timer": -0.6433333333333339,
+            "stun": 0,
+            "flash": 0,
+            "attacks": 0,
+            "struck": false,
+            "origin": 1557,
+            "baseY": 327,
+            "interruptLock": 0
+          },
+          {
+            "id": 3,
+            "kind": "blade",
+            "x": 2150,
+            "y": 400,
+            "w": 26,
+            "h": 40,
+            "hp": 38,
+            "maxHp": 38,
+            "face": -1,
+            "phase": "idle",
+            "timer": -1,
+            "stun": 0,
+            "flash": 0,
+            "attacks": 0,
+            "struck": false,
+            "origin": 2150,
+            "baseY": 400,
+            "interruptLock": 0
+          },
+          {
+            "id": 4,
+            "kind": "shield",
+            "x": 2551,
+            "y": 400,
+            "w": 26,
+            "h": 40,
+            "hp": 60,
+            "maxHp": 60,
+            "face": -1,
+            "phase": "idle",
+            "timer": -1,
+            "stun": 0,
+            "flash": 0,
+            "attacks": 0,
+            "struck": false,
+            "origin": 2551,
+            "baseY": 400,
+            "interruptLock": 0
+          },
+          {
+            "id": 5,
+            "kind": "caster",
+            "x": 3113,
+            "y": 330.7037061717463,
+            "w": 26,
+            "h": 40,
+            "hp": 38,
+            "maxHp": 38,
+            "face": -1,
+            "phase": "idle",
+            "timer": -0.43333333333333346,
+            "stun": 0,
+            "flash": 0,
+            "attacks": 0,
+            "struck": false,
+            "origin": 3113,
+            "baseY": 327,
+            "interruptLock": 0
+          },
+          {
+            "id": 6,
+            "kind": "blade",
+            "x": 3504,
+            "y": 400,
+            "w": 26,
+            "h": 40,
+            "hp": 38,
+            "maxHp": 38,
+            "face": -1,
+            "phase": "idle",
+            "timer": -1,
+            "stun": 0,
+            "flash": 0,
+            "attacks": 0,
+            "struck": false,
+            "origin": 3504,
+            "baseY": 400,
+            "interruptLock": 0
+          },
+          {
+            "id": 7,
+            "kind": "shield",
+            "x": 4270,
+            "y": 400,
+            "w": 26,
+            "h": 40,
+            "hp": 60,
+            "maxHp": 60,
+            "face": -1,
+            "phase": "idle",
+            "timer": -1,
+            "stun": 0,
+            "flash": 0,
+            "attacks": 0,
+            "struck": false,
+            "origin": 4270,
+            "baseY": 400,
+            "interruptLock": 0
+          },
+          {
+            "id": 8,
+            "kind": "caster",
+            "x": 4585,
+            "y": 323.5465648413118,
+            "w": 26,
+            "h": 40,
+            "hp": 38,
+            "maxHp": 38,
+            "face": -1,
+            "phase": "idle",
+            "timer": -0.22333333333333222,
+            "stun": 0,
+            "flash": 0,
+            "attacks": 0,
+            "struck": false,
+            "origin": 4585,
+            "baseY": 327,
+            "interruptLock": 0
+          }
+        ],
+        "seals": [
+          {
+            "id": 0,
+            "x": 1480,
+            "y": 392,
+            "w": 28,
+            "h": 48,
+            "hp": 56,
+            "pulse": 2.2,
+            "warning": false
+          },
+          {
+            "id": 1,
+            "x": 4330,
+            "y": 392,
+            "w": 28,
+            "h": 48,
+            "hp": 56,
+            "pulse": 2.2,
+            "warning": false
+          }
+        ],
+        "pickups": [
+          {
+            "x": 545,
+            "y": 244,
+            "w": 16,
+            "h": 20,
+            "kind": "heal",
+            "used": false
+          },
+          {
+            "x": 2330,
+            "y": 239,
+            "w": 16,
+            "h": 20,
+            "kind": "focus",
+            "used": false
+          },
+          {
+            "x": 3280,
+            "y": 244,
+            "w": 16,
+            "h": 20,
+            "kind": "heal",
+            "used": false
+          }
+        ],
+        "exit": 5060,
+        "variant": 396,
+        "midClaimed": false,
+        "landmarks": [
+          700,
+          1770,
+          2740,
+          3680
+        ],
+        "signs": [
+          {
+            "x": 150,
+            "text": "空格长按高跳，松开短跳。"
+          },
+          {
+            "x": 390,
+            "text": "看到举刀再跳；连续轻棍不会冻结敌招。"
+          },
+          {
+            "x": 1380,
+            "text": "阵眼破后可按E借灯整顿；山门在右方。"
+          }
+        ]
+      },
+      "player": {
+        "x": 363.6060130038013,
+        "y": 396,
+        "w": 24,
+        "h": 44,
+        "vx": -0.002476188592040681,
+        "vy": 0,
+        "face": 1,
+        "hp": 88,
+        "focus": 100,
+        "grounded": true,
+        "coyote": 0.1,
+        "buffer": 0,
+        "airJumps": 0,
+        "invuln": 0.3083333333333345,
+        "dash": 0,
+        "dashCD": 0,
+        "attack": 0,
+        "attackId": 4,
+        "attackTargets": [],
+        "comboIndex": 1,
+        "slam": false,
+        "landing": 0,
+        "drop": 0,
+        "hurt": 0,
+        "attackBuffer": 0,
+        "attackDuration": 0.29
+      },
+      "clone": null,
+      "projectiles": [],
+      "effects": [],
+      "events": [],
+      "log": [
+        {
+          "type": "room",
+          "t": 0,
+          "wall": 0,
+          "stage": 0
+        },
+        {
+          "type": "room",
+          "t": 0,
+          "wall": 0,
+          "stage": 0
+        },
+        {
+          "type": "warning",
+          "t": 0.008,
+          "wall": 0.008,
+          "kind": "blade",
+          "id": 0,
+          "x": 422,
+          "y": 400,
+          "face": -1
+        },
+        {
+          "type": "hint",
+          "t": 0.008,
+          "wall": 0.008,
+          "text": "看到举刀再跳；连续轻棍不会冻结敌招。"
+        },
+        {
+          "type": "swing",
+          "t": 0.075,
+          "wall": 0.075,
+          "combo": 1
+        },
+        {
+          "type": "hit",
+          "t": 0.133,
+          "wall": 0.133,
+          "target": 0,
+          "kind": "blade",
+          "amount": 14
+        },
+        {
+          "type": "swing",
+          "t": 0.367,
+          "wall": 0.408,
+          "combo": 2
+        },
+        {
+          "type": "hit",
+          "t": 0.425,
+          "wall": 0.467,
+          "target": 0,
+          "kind": "blade",
+          "amount": 14
+        },
+        {
+          "type": "enemy-attack",
+          "t": 0.533,
+          "wall": 0.617,
+          "kind": "blade",
+          "id": 0,
+          "box": {
+            "x": 400,
+            "y": 406,
+            "w": 60,
+            "h": 32
+          }
+        },
+        {
+          "type": "hurt",
+          "t": 0.542,
+          "wall": 0.625,
+          "source": "执刃魔兵·斩击",
+          "amount": 12
+        },
+        {
+          "type": "swing",
+          "t": 0.55,
+          "wall": 0.633,
+          "combo": 3
+        },
+        {
+          "type": "hit",
+          "t": 0.608,
+          "wall": 0.692,
+          "target": 0,
+          "kind": "blade",
+          "amount": 27
+        },
+        {
+          "type": "kill",
+          "t": 0.608,
+          "wall": 0.692,
+          "kind": "blade"
+        },
+        {
+          "type": "swing",
+          "t": 0.933,
+          "wall": 1.058,
+          "combo": 1
+        }
+      ],
+      "reward": [],
+      "rewardKind": "exit",
+      "pendingRelic": null,
+      "kills": 1,
+      "broken": 0,
+      "damageTaken": 12,
+      "lastDamage": "执刃魔兵·斩击",
+      "hitstop": 0,
+      "shake": 0,
+      "checkpoint": 363.60603363870626,
+      "combo": 1,
+      "comboTime": 0.5000000000000011,
+      "serial": 0,
+      "hints": [
+        "0:1"
+      ],
+      "stats": {
+        "swings": 4,
+        "hits": 3,
+        "blocks": 0,
+        "jumps": 0,
+        "dashes": 0,
+        "clones": 0,
+        "focusSpent": 0,
+        "rests": 0
+      },
+      "runId": "V3-COMBAT:imported"
+    },
+    "meta": {
+      "runs": 0,
+      "wins": 0,
+      "best": 0,
+      "history": []
+    },
+    "camera": 63.60601300380131
+  },
+  "video": "E:\\githome\\kong-rpg\\evidence\\combat-v3\\video\\page@12ef7b189eab97173df2ce039464c58f.webm"
+}

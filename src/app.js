@@ -22,6 +22,8 @@
     rest:['恢复30生命与35定力，保留当前构筑。','放弃本次换舍利的机会。']
   };
   const equipped=ids=>`<div class="equipped-line"><small>此行携带</small>${ids.map(id=>`<span>${relicArt(id)}${K.relic(id).name}</span>`).join('')}</div>`;
+  const worldSummary=()=>state?['rescue','bridge','bell'].map(id=>state.world[id]?K.WORLD_STORIES[id].title:null).filter(Boolean).join(' · '):'';
+  const journal=()=>state?.journal.length?'<details class="run-journal"><summary>此行见闻 · '+state.journal.length+'</summary>'+state.journal.map(key=>{const[id,part]=key.split(':');return '<p><b>'+K.WORLD_STORIES[id].title+'</b> · '+K.WORLD_STORIES[id][part]+'</p>';}).join('')+'</details>':'';
   const panel=(label,eyebrow,title,body)=>{
     const choice=['start','reward','replace'].includes(screen),hint=choice?'<span><kbd>←</kbd><kbd>→</kbd> 选卷</span><span><kbd>Enter</kbd> 确认</span><span><kbd>1</kbd><kbd>2</kbd><kbd>3</kbd> 速选</span>':screen==='history'?'<span><kbd>↑</kbd><kbd>↓</kbd> 翻阅</span><span><kbd>Tab</kbd> 移步</span><span><kbd>Enter</kbd> 确认</span>':'<span><kbd>↑</kbd><kbd>↓</kbd> 移步</span><span><kbd>Enter</kbd> 确认</span>';
     const back=['paused','help','legacy','history','prologue','epilogue','start','replace','won','dead'].includes(screen)?`<span><kbd>Esc</kbd> ${screen==='paused'?'继续':screen==='replace'?'返回选择':'返回'}</span>`:'';
@@ -49,7 +51,7 @@
     on('random-seed',()=>$('seed').value='LOTUS-'+crypto.getRandomValues(new Uint32Array(1))[0].toString(36).slice(0,6).toUpperCase());
   }
   function prologue(){
-    $('overlay').innerHTML=panel('开篇','序 · 黑莲之劫','三界的灯，还没有熄',`<p class="story-copy">无天的黑莲遮住灵山。散落三境的舍利，仍映着众生的微光。<br><br>你是孙悟空。走过雾隐山道、悬灯古渡与灵山残庭，破除六处阵眼。<br>棍法挣来定力，神通打开空当；带哪三枚舍利，由你决定。</p><div class="journey-map"><span>壹<br><b>雾隐山道</b></span><i>―</i><span>贰<br><b>悬灯古渡</b></span><i>―</i><span>叁<br><b>灵山残庭</b></span><i>―</i><span>终<br><b>黑莲法界</b></span></div><div class="actions">${btn('begin-relic','握紧金箍棒',true)}${btn('back','返回')}</div>`);
+    $('overlay').innerHTML=panel('开篇','序 · 黑莲之劫','三界的灯，还没有熄',`<p class="story-copy">无天的黑莲遮住灵山。散落三境的舍利，仍映着众生的微光。<br><br>你是孙悟空。走过三境，破除六阵；也可破笼救困、燃灯接桥、叩钟破妄。<br>棍法挣来定力，神通打开空当。你救下的人、敲响的钟，也会改变此劫。</p><div class="journey-map"><span>壹<br><b>雾隐山道</b></span><i>―</i><span>贰<br><b>悬灯古渡</b></span><i>―</i><span>叁<br><b>灵山残庭</b></span><i>―</i><span>终<br><b>黑莲法界</b></span></div><div class="actions">${btn('begin-relic','握紧金箍棒',true)}${btn('back','返回')}</div>`);
     on('begin-relic',()=>show('start'));on('back',()=>show('menu'));
   }
   function cards(ids){return `<div class="cards">${ids.map((id,i)=>{const r=K.relic(id),copy=cardCopy[id],verb=screen==='replace'?'放下此物':id==='rest'?'借灯调息':'取此舍利';return `<button class="relic-card" data-relic="${id}" aria-label="${screen==='replace'?'放下':'选择'}${r.name}" aria-describedby="relic-detail-${id} relic-cost-${id}" style="--relic-tone:${r.color}"><span class="num" aria-hidden="true">${['壹','贰','叁'][i]}</span>${relicArt(id)}<h3>${r.name}</h3><span class="tag">${r.tag}</span><p id="relic-detail-${id}">${copy[0]}</p><span class="cost" id="relic-cost-${id}">${copy[1]}</span><span class="choice-verb" aria-hidden="true">${verb}</span></button>`;}).join('')}</div>`;}
@@ -63,7 +65,7 @@
   }
   function resume(){if(!state)return;audio.unlock();if(state.mode==='paused')state.mode='playing';show(state.mode==='reward'&&state.pendingRelic?'replace':state.mode);}
   function pauseMenu(){
-    $('overlay').innerHTML=panel('暂停菜单','暂歇 · 风停此刻','棍心未歇',`<p class="pause-place">${K.STAGES[state.stage].name} · 因缘 ${esc(state.seed)}</p><nav class="pause-nav" aria-label="暂歇选择">${btn('continue','继续前行 <span aria-hidden="true">ESC</span>',true)}${btn('help','行者手记 <span aria-hidden="true">招式与破局</span>')}${btn('main-menu','回到主菜单')}</nav><div class="setting-row"><label for="volume">声音</label><input id="volume" aria-label="音量" type="range" min="0" max="100" value="${settings.volume*100}"><label><input id="shake" type="checkbox" ${settings.shake?'checked':''}> 屏震</label></div><div class="pause-tools">${btn('export','导出存档')}${btn('import','导入存档')}</div><p class="notice">旅程已停。导出存档可将此行带往另一入口。</p>`);
+    $('overlay').innerHTML=panel('暂停菜单','暂歇 · 风停此刻','棍心未歇',`<p class="pause-place">${K.STAGES[state.stage].name} · 因缘 ${esc(state.seed)}</p><nav class="pause-nav" aria-label="暂歇选择">${btn('continue','继续前行 <span aria-hidden="true">ESC</span>',true)}${btn('help','行者手记 <span aria-hidden="true">招式与破局</span>')}${btn('main-menu','回到主菜单')}</nav><div class="setting-row"><label for="volume">声音</label><input id="volume" aria-label="音量" type="range" min="0" max="100" value="${settings.volume*100}"><label><input id="shake" type="checkbox" ${settings.shake?'checked':''}> 屏震</label></div><div class="pause-tools">${btn('export','导出存档')}${btn('import','导入存档')}</div><p class="notice">旅程已停。导出存档可将此行带往另一入口。</p>${journal()}`);
     on('continue',resume);on('help',()=>openHelp('paused'));on('export',exportSave);on('import',()=>$('import-file').click());on('main-menu',()=>{save();show('menu');});
     $('volume').oninput=e=>{settings.volume=Number(e.target.value)/100;audio.setVolume(settings.volume);storage.settings(settings);};
     $('shake').onchange=e=>{settings.shake=e.target.checked;renderer.shake=settings.shake;storage.settings(settings);};
@@ -74,9 +76,9 @@
       ['步法与落点','A D移动，空格/W跳。长按高跳、松开短跳；S＋空格下穿。踩敌反弹，腾云骨多一跳。'],
       ['棍法与下劈','J/左键三连，第三棍收招慢、可打断蓄力。空中S＋J下劈；盾兵须绕背、踩踏或借定海心破盾。'],
       ['闪避与分身','K/Shift闪避，0.85秒冷却。L/右键分身，耗40定力；照影珠耗50。棍击命中回定力。'],
-      ['危险如何表达','金色举刀后有红色斩击，轻棍不能冻结敌招。莲灯使锁定瞄准；阵眼预警后向两侧发弹。'],
-      ['舍利与借灯','每境破两阵。首阵后E借灯，右端山门E过境。舍利最多三枚，满位需替换；过境回18生命、20定力。'],
-      ['无天与重来','无天正面减伤，绕背与收招全伤。横扫可跳，移形先让路。死亡清空局内成长；同因缘可重试。']
+      ['识破新招','突进斩和盾冲先显示路径。锁地咒先锁定脚下，离开莲印可避。轻棍不冻结敌招，重棍与踩踏可打断。'],
+      ['三境与见闻','F借灯、过门或触发事件。救困解除地刺；燃灯接回断桥；叩钟削弱终战落火。裂台会坍，渡船可借力。'],
+      ['无天与重来','无天正面减伤，绕背与收招全伤。横扫可跳，落火须离开莲印；镇莲钟能减一处落火。失败可同缘再试。']
     ];
     $('overlay').innerHTML=panel('行者手记','手记 · 看清再出手','棍有尽处，变化无穷',`<div class="help-grid">${lessons.map(([title,text])=>`<div><h3>${title}</h3><p>${text}</p></div>`).join('')}</div><div class="actions">${btn('close-help','记下了',true)}${btn('import','导入存档')}${btn('old','原版旅程')}</div>`);
     on('close-help',()=>show(backScreen));on('import',()=>$('import-file').click());on('old',()=>show('legacy'));
@@ -96,19 +98,19 @@
   }
   function ending(){
     settle();const won=state.mode==='won',seconds=Math.floor(state.elapsed),time=Math.floor(seconds/60)+'分'+seconds%60+'秒';
-    $('overlay').innerHTML=panel(won?'胜利结算':'失败结算',won?'黑莲已散 · 此心长明':'劫途未尽 · 再起一念',won?'三界重见微光':'此身暂歇，棍心未折',`<p class="subtitle">${won?'无天的莲影终于落地。三境的灯火，正一盏一盏重新亮起。':'最后受伤：'+esc(state.lastDamage)+'。<br>记住刀光和落点，再次入劫时可以换一枚舍利。'}</p><div class="results"><div><small>此行</small><b>${time}</b></div><div><small>破阵</small><b>${state.broken} / 6</b></div><div><small>退敌</small><b>${state.kills}</b></div><div><small>承伤</small><b>${state.damageTaken}</b></div></div><div class="result-build">因缘 ${esc(state.seed)}${equipped(state.relics)}跃起 ${state.stats.jumps} 次 · 分身 ${state.stats.clones} 次 · 消耗定力 ${state.stats.focusSpent}</div><div class="actions">${won?btn('epilogue','走出黑莲',true):btn('retry','同缘再行',true)}${won?btn('retry','同缘再行'):btn('new-path','另启因缘')}${btn('export','导出此行')}</div>`);
+    $('overlay').innerHTML=panel(won?'胜利结算':'失败结算',won?'黑莲已散 · 此心长明':'劫途未尽 · 再起一念',won?'三界重见微光':'此身暂歇，棍心未折',`<p class="subtitle">${won?'无天的莲影终于落地。三境的灯火，正一盏一盏重新亮起。':'最后受伤：'+esc(state.lastDamage)+'。<br>记住刀光和落点，再次入劫时可以换一枚舍利。'}</p><div class="results"><div><small>此行</small><b>${time}</b></div><div><small>破阵</small><b>${state.broken} / 6</b></div><div><small>退敌</small><b>${state.kills}</b></div><div><small>承伤</small><b>${state.damageTaken}</b></div></div><div class="result-build">因缘 ${esc(state.seed)}${equipped(state.relics)}跃起 ${state.stats.jumps} 次 · 分身 ${state.stats.clones} 次 · 消耗定力 ${state.stats.focusSpent}<br>此行所护：${worldSummary()||'一路直抵黑莲，尚有未尽的归路'}</div><div class="actions">${won?btn('epilogue','走出黑莲',true):btn('retry','同缘再行',true)}${won?btn('retry','同缘再行'):btn('new-path','另启因缘')}${btn('export','导出此行')}</div>`);
     on('retry',()=>{K.pendingSeed=state.seed;show('start');});on('new-path',()=>show('menu'));on('export',exportSave);on('epilogue',()=>show('epilogue'));
   }
   function epilogue(){
-    $('overlay').innerHTML=panel('尾声','尾声 · 灯火人间','前路，还有众生',`<p class="story-copy">山道上的雾散了。渡口的灯，终于照见对岸的人。<br><br>你没有把胜利留在莲台之上。你收起金箍棒，走回那些还需要你的地方。<br>这一次的解法来自云、影与棍。下一次，也许不同。</p><div class="actions">${btn('again','再入因缘',true)}${btn('back-result','查看此行')}${btn('main-menu','回到主菜单')}</div>`);
+    $('overlay').innerHTML=panel('尾声','尾声 · 灯火人间','前路，还有众生',`<p class="story-copy">${state.world.rescue?'山道上的行者走出了牢笼，沿着归路点起灯火。':'山道雾散，旧寨仍有未解的牢笼。你记下了回去的路。'}<br>${state.world.bridge?'渡口的桥接回两岸，灯终于照见对岸的人。':'渡口的灯还在等人。灵山之外，也有你未走完的路。'}<br>${state.world.bell?'镇莲钟的余音里，众生的愿力托住了最后一棍。':'灵山残钟仍沉默。此劫已破，众生仍有未竟的愿。'}<br><br>你收起金箍棒，走回那些还需要你的地方。</p><div class="actions">${btn('again','再入因缘',true)}${btn('back-result','查看此行')}${btn('main-menu','回到主菜单')}</div>`);
     on('again',()=>{K.pendingSeed='LOTUS-'+crypto.getRandomValues(new Uint32Array(1))[0].toString(36).slice(0,6);show('start');});on('back-result',()=>show('won'));on('main-menu',()=>show('menu'));
   }
   function history(){
     $('overlay').innerHTML=panel('往昔旅程','因缘簿 · 留迹不留战力','你走过的路',`<div class="history-folio"><div class="history-list" tabindex="0" aria-label="旅程记录，可滚动">${meta.history.length?meta.history.slice().reverse().map(r=>`<div><b>${r.won?'破劫':'止步'+K.STAGES[r.stage].name}</b><span>${esc(r.seed)}</span><span>${Math.floor(r.seconds/60)}分${r.seconds%60}秒</span><small>${r.relics.map(id=>K.relic(id).name).join(' · ')}</small></div>`).join(''):`<div class="empty-history">${relicArt('rest')}<p>因缘簿尚未落墨。<br>握紧金箍棒，先走一程。</p></div>`}</div></div><p class="history-hint">${meta.history.length?'共 '+meta.history.length+' 行旅记 · 滚轮或 ↑ ↓ 翻阅':'行过之处，终会留下痕迹'}</p><div class="actions">${btn('back','返回',true)}</div>`);on('back',()=>show('menu'));
   }
   function legacyMenu(){
-    $('overlay').innerHTML=panel('原版旅程','存档保护 · 旧路仍在','在原来的规则中继续',`<p class="story-copy">v1的地图与规则和新版不同。你的旧旅程不会被覆盖，也不会被悄悄搬到另一张地图。<br><br>${storage.legacy?'可先下载旧档，再在打开的原版里通过「初行指南 → 导入存档」继续。':'保留的原版可直接打开；如果你有旧JSON文件，请在原版的指南中导入。'}</p><div class="actions">${btn('open-legacy',storage.legacy?'备份旧档并打开原版':'打开原版',true)}${btn('back','返回新版')}</div>`);
-    on('open-legacy',()=>{if(storage.legacy)K.download(JSON.stringify(storage.legacy),'劫后行-v1-旧旅程.json');const legacy=document.querySelector('meta[name="kong-package"]')?'legacy-v1.html':'release/legacy-v1.html';window.open(new URL(legacy,location.href).href,'_blank','noopener');toast('已打开保留的原版；可通过手记导入旧旅程。',4);});on('back',()=>show('menu'));
+    $('overlay').innerHTML=panel('原版旅程','存档保护 · 旧路仍在','在原来的规则中继续',`<p class="story-copy">旧版的地图与规则和新版不同。你的旧旅程不会被覆盖，也不会被悄悄搬到另一张地图。<br><br>${storage.legacy?'可先下载旧档，再在打开的原版里通过「初行指南 → 导入存档」继续。':'保留的原版可直接打开；如果你有旧JSON文件，请在原版的指南中导入。'}</p><div class="actions">${btn('open-legacy',storage.legacy?'备份旧档并打开原版':'打开原版',true)}${btn('back','返回新版')}</div>`);
+    on('open-legacy',()=>{if(storage.legacy)K.download(JSON.stringify(storage.legacy),'劫后行-v'+storage.legacy.state.version+'-旧旅程.json');const legacyName=storage.legacy?.state?.version===1?'legacy-v1.html':'legacy-v2.html';const legacy=document.querySelector('meta[name="kong-package"]')?legacyName:'release/'+legacyName;window.open(new URL(legacy,location.href).href,'_blank','noopener');toast('已打开保留的原版；可通过手记导入旧旅程。',4);});on('back',()=>show('menu'));
   }
   function exportSave(){save();storage.export(state,meta);toast('已导出整段旅程，含动态敌招与舍利选择。');}
   function control(action){
@@ -124,7 +126,7 @@
     const field=['INPUT','TEXTAREA','SELECT'].includes(e.target.tagName);
     if(!field&&['start','reward','replace'].includes(screen)&&/^Digit[123]$/.test(e.code)){e.preventDefault();if(e.repeat)return;const i=Number(e.code.slice(-1))-1;audio.unlock();audio.menu('confirm');if(screen==='start')startRun(['cloud','echo','staff'][i]);else if(screen==='replace')choose(state.pendingRelic,state.relics[i]);else choose(state.reward[i]);return;}
     if(screen!=='playing'){
-      const nodes=[...$('overlay').querySelectorAll('button:not(:disabled),input:not([hidden]),[tabindex="0"]')].filter(n=>n.getClientRects().length);
+      const nodes=[...$('overlay').querySelectorAll('button:not(:disabled),input:not([hidden]),summary,[tabindex="0"]')].filter(n=>n.getClientRects().length);
       if(e.code==='Tab'&&nodes.length){const first=nodes[0],last=nodes[nodes.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}}
       if(!field&&['ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(e.code)&&!e.target.classList.contains('history-list')&&nodes.length){e.preventDefault();const cards=[...$('overlay').querySelectorAll('.relic-card')],list=cards.includes(document.activeElement)&&['ArrowLeft','ArrowRight'].includes(e.code)?cards:nodes;const dir=['ArrowUp','ArrowLeft'].includes(e.code)?-1:1,index=list.indexOf(document.activeElement);list[(index+dir+list.length)%list.length].focus();audio.menu('move');}
       if(e.code==='Enter'&&e.repeat)e.preventDefault();
@@ -136,15 +138,15 @@
   K.pointerFace=x=>{if(!state)return 0;const r=world.getBoundingClientRect();return Math.sign((x-r.left)/r.width*960+renderer.camera-state.player.x-12);};
   function hud(){
     if(!state)return;const p=state.player;
-    $('hp-number').textContent=Math.ceil(p.hp)+' / 100';$('hp-fill').style.width=p.hp+'%';$('focus-number').textContent=Math.floor(p.focus);$('focus-fill').style.width=p.focus+'%';$('chapter').textContent=state.stage<3?'第'+['一','二','三'][state.stage]+'境':'终局';$('stage-name').textContent=K.STAGES[state.stage].name;
+    $('hp-number').textContent=Math.ceil(p.hp)+' / 100';$('hp-fill').style.width=p.hp+'%';$('focus-number').textContent=Math.floor(p.focus);$('focus-fill').style.width=p.focus+'%';$('chapter').textContent=state.stage<3?'第'+['一','二','三'][state.stage]+'境':'终局';$('stage-name').textContent=K.STAGES[state.stage].name;$('chapter').textContent+=' · '+K.region(state.stage,p.x);
     const left=state.room.seals.find(q=>q.hp>0);$('objective').textContent=state.stage<3?(left?'阵眼 '+(state.room.seals.filter(q=>q.hp===0).length+1)+' / 2 · 前方 '+Math.max(0,Math.ceil((left.x-p.x)/10))+'丈':'双阵已破 · 前往右侧山门'):'绕背破莲 · 金色收招全额受伤';
     $('run-seed').textContent=state.seed;$('relic-list').textContent=state.relics.map(id=>K.relic(id).name).join(' · ')+'  ['+state.relics.length+'/3]';$('dash-state').textContent=p.dashCD>0?'闪避恢复 '+p.dashCD.toFixed(1)+'s':'闪避就绪';$('boss-hud').hidden=state.stage!==3;
-    const boss=state.room.enemies.find(e=>e.kind==='boss');if(boss){$('boss-fill').style.width=boss.hp/boss.maxHp*100+'%';$('boss-phase').textContent=boss.phase==='recover'?'破绽已现':boss.phase==='sweep-windup'?'横扫将至 · 跳':boss.phase==='orb-windup'?'莲焰将至 · 闪':boss.phase==='shift-windup'?'移形将至 · 让路':'黑莲护在正面';}
-    const gate=state.stage<3&&Math.abs(p.x-state.room.exit)<85;const lamp=state.stage<3&&state.room.seals[0].hp===0&&!state.room.midClaimed&&Math.abs(p.x-state.room.seals[0].x)<85;
-    $('context-hint').hidden=screen!=='playing'||(!gate&&!lamp&&state.roomTime>9);
-    $('context-hint').textContent=lamp?'E 借灯整顿 · 可更换舍利或补给':gate?(left?'阵眼尚存，回身破阵':'E 穿过山门'):'A D 行走 · 空格跳 · J 棍击 · K 闪避 · L 分身';
+    const boss=state.room.enemies.find(e=>e.kind==='boss');if(boss){$('boss-fill').style.width=boss.hp/boss.maxHp*100+'%';$('boss-phase').textContent=boss.phase==='recover'?'破绽已现':boss.phase==='sweep-windup'?'横扫将至 · 跳':boss.phase==='orb-windup'?'莲焰将至 · 闪':boss.phase==='rain-windup'?'落火将至 · 离开莲印':boss.phase==='shift-windup'?'移形将至 · 让路':'黑莲护在正面';}
+    const node=state.room.node,nearNode=node&&Math.abs(p.x-node.x)<90&&Math.abs(p.y-396)<95;const gate=state.stage<3&&Math.abs(p.x-state.room.exit)<85;const lamp=state.stage<3&&state.room.seals[0].hp===0&&!state.room.midClaimed&&Math.abs(p.x-state.room.seals[0].x)<85;
+    $('context-hint').hidden=screen!=='playing'||(!gate&&!lamp&&!nearNode&&state.roomTime>9);
+    $('context-hint').textContent=nearNode?(node.state==='done'?'F 回看此地见闻':node.state==='active'?'守阵者尚在 · 可离开后返回':node.id==='bridge'?'F 燃灯接桥 · 消耗20定力':node.id==='rescue'?'F 破笼救困 · 会惊动守卒':'F 叩钟破妄 · 会惊动守钟众'):lamp?'F 借灯整顿 · 可更换舍利或补给':gate?(left?'阵眼尚存，回身破阵':'F 穿过山门'):'A D 行走 · 空格跳 · J 棍击 · K 闪避 · L 分身';
     const progress=$('journey-fill');if(progress)progress.style.width=Math.min(100,p.x/state.room.exit*100)+'%';
-    const labels=$('combat-labels');if(labels)labels.innerHTML=state.effects.filter(f=>f.text&&f.life>0).slice(-12).map(f=>`<span class="${f.kind==='hurt'?'hurt':''}" style="left:${(f.x-renderer.camera)/960*100}%;top:${(f.y-(.45-f.life)*45)/540*100}%">${esc(f.text)}</span>`).join('');
+    const labels=$('combat-labels');if(labels)labels.innerHTML=state.effects.filter(f=>f.text&&f.life>0).slice(-12).map(f=>`<span class="impact-number ${f.kind==='hurt'?'hurt':f.kind==='heavy-hit'?'heavy':f.kind==='block'?'block':''}" style="left:${(f.x-renderer.camera)/960*100}%;top:${(f.y-((f.duration||.42)-f.life)*65)/540*100}%">${esc(f.text)}</span>`).join('');
   }
   let previous=performance.now(),accumulator=0,lastHud=0;
   function frame(now){
@@ -153,7 +155,7 @@
       const willStep=screen==='playing'&&accumulator>=K.DT&&state.hitstop<=0;let actions=willStep?input.read():{},guard=0;
       if(screen==='playing')while(accumulator>=K.DT&&guard++<13){
         K.step(state,actions);actions={...actions,jumpPressed:false,attackPressed:false,dashPressed:false,clonePressed:false,interactPressed:false};
-        for(const event of state.events){audio.event(event);if(event.type==='hurt')toast(event.source+' · -'+event.amount+'生命');if(event.type==='seal')toast('阵眼已破 · '+state.room.seals.filter(q=>q.hp===0).length+' / 2');if(event.type==='empty-focus')toast('定力不足；棍击命中可积攒。');if(event.type==='gate-locked')toast('本境还有黑莲阵眼。');if(event.type==='hint')toast(event.text,3.5);}
+        for(const event of state.events){audio.event(event);if(event.type==='hurt')toast(event.source+' · -'+event.amount+'生命');if(event.type==='seal')toast('阵眼已破 · '+state.room.seals.filter(q=>q.hp===0).length+' / 2');if(event.type==='empty-focus')toast('定力不足；棍击命中可积攒。');if(event.type==='gate-locked')toast('本境还有黑莲阵眼。');if(event.type==='hint')toast(event.text,3.5);if(event.type==='story')toast(event.title+' · '+event.text,5);if(event.type==='world-note')toast(event.text,3.5);}
         accumulator-=K.DT;if(state.mode!=='playing'){show(state.mode);break;}
       }else accumulator=0;
       renderer.draw(state,screen,elapsed);const submitted=performance.now();if(willStep){for(const q of pendingInputs)metrics.inputs.push({code:q.code,ms:+(submitted-q.t).toFixed(3),eventMs:+(submitted-q.eventTime).toFixed(3)});pendingInputs=[];}if(metrics.inputs.length>1000)metrics.inputs.splice(0,metrics.inputs.length-1000);

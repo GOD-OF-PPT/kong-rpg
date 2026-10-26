@@ -1,6 +1,6 @@
 (function (K) {
   'use strict';
-  K.VERSION = '2.1.0';
+  K.VERSION = '3.0.0';
   K.W = 960; K.H = 540; K.DT = 1 / 120;
   K.clamp = (v, a, b) => Math.max(a, Math.min(b, v));
   K.overlap = (a, b) => a.x < b.x + b.w && a.x + a.w > b.x && a.y < b.y + b.h && a.y + a.h > b.y;
@@ -25,7 +25,7 @@
   K.has = (s,id) => s.relics.includes(id);
   K.enemy = function(kind,x,y,id) {
     const boss=kind==='boss'; const h=boss?72:40;
-    return {id,kind,x,y:y===undefined?(boss?368:kind==='caster'?327:400):y,w:boss?48:26,h,hp:boss?270:kind==='shield'?60:38,maxHp:boss?270:kind==='shield'?60:38,face:-1,phase:'idle',timer:kind==='caster'?.45+id*.07:boss?.8:0,stun:0,flash:0,attacks:0,struck:false,origin:x,baseY:y===undefined?(kind==='caster'?327:400):y,interruptLock:0};
+    return {id,kind,x,y:y===undefined?(boss?368:kind==='caster'?327:400):y,w:boss?48:26,h,hp:boss?270:kind==='shield'?60:38,maxHp:boss?270:kind==='shield'?60:38,face:-1,phase:'idle',style:'basic',recoil:0,recoilFace:1,timer:kind==='caster'?.45+id*.07:boss?.8:0,stun:0,flash:0,attacks:0,struck:false,origin:x,baseY:y===undefined?(kind==='caster'?327:400):y,interruptLock:0};
   };
   const BLUEPRINTS = [
     {ground:[[0,820],[920,870],[1900,850],[2860,810],[3780,1380]],
@@ -47,7 +47,7 @@
   K.makeRoom = function(seed,stage) {
     const random=K.rng(K.seedNumber(seed)+stage*9719),boss=stage===3;
     const room={width:boss?960:5160,platforms:[],hazards:[],enemies:[],seals:[],pickups:[],exit:boss?900:5060,variant:Math.floor(random()*1000),midClaimed:false,landmarks:[],signs:[]};
-    if(boss){room.platforms.push({x:0,y:440,w:960,h:110,solid:true},{x:120,y:345,w:150,h:16},{x:680,y:345,w:150,h:16});room.enemies.push(K.enemy('boss',710,368,0));return room;}
+    if(boss){room.platforms.push({x:0,y:440,w:960,h:110,solid:true},{x:120,y:345,w:150,h:16},{x:680,y:345,w:150,h:16});room.enemies.push(K.enemy('boss',710,368,0));return K.enrichRoom(room,stage);}
     const b=BLUEPRINTS[stage];
     b.ground.forEach(([x,w])=>room.platforms.push({x,y:440,w,h:110,solid:true}));
     b.ledges.forEach(([x,y,w],i)=>room.platforms.push({x:x+(i%3===1?(Math.floor(random()*3)-1)*12:0),y,w,h:16}));
@@ -58,8 +58,8 @@
       room.enemies.push(K.enemy(kind,x+(id===0?0:Math.floor(random()*21)-10),y,id));
     });
     b.supplies.forEach(([x,y,kind])=>room.pickups.push({x,y,w:16,h:20,kind,used:false}));
-    room.landmarks=b.landmarks;room.signs=[{x:150,text:'空格长按高跳，松开短跳。'},{x:390,text:'看到举刀再跳；连续轻棍不会冻结敌招。'},{x:room.seals[0].x-100,text:'阵眼破后可按E借灯整顿；山门在右方。'}];
-    return room;
+    room.landmarks=b.landmarks;room.signs=[{x:150,text:'空格长按高跳，松开短跳。'},{x:390,text:'看到举刀再跳；连续轻棍不会冻结敌招。'},{x:room.seals[0].x-100,text:'阵眼破后可按F借灯整顿；山门在右方。'}];
+    return K.enrichRoom(room,stage);
   };
   K.options = function(s) {
     const random=K.rng(K.seedNumber(s.seed)+s.stage*771+(s.rewardKind==='mid'?29:91));

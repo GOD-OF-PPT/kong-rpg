@@ -1,6 +1,6 @@
 const fs=require('fs'),path=require('path'),vm=require('vm'),crypto=require('crypto'),assert=require('assert/strict'),{chromium}=require('playwright');
-const root=path.resolve(__dirname,'..'),out=path.join(root,'evidence/dialog-ui'),kind=process.argv[2]||'file',ctx=vm.createContext({console});
-for(const file of ['content','simulation','storage'])vm.runInContext(fs.readFileSync(path.join(root,'src',file+'.js'),'utf8'),ctx);const K=ctx.Kong;
+const root=path.resolve(__dirname,'..'),out=path.join(root,process.env.EVIDENCE_DIR||'evidence/dialog-ui'),kind=process.argv[2]||'file',ctx=vm.createContext({console});
+for(const file of ['content','world','simulation','storage'])vm.runInContext(fs.readFileSync(path.join(root,'src',file+'.js'),'utf8'),ctx);const K=ctx.Kong;
 const report={version:K.VERSION,sha256:crypto.createHash('sha256').update(fs.readFileSync(path.join(root,'release/index.html'))).digest('hex'),kind,checks:[],layouts:[],errors:[],requests:[]};
 function check(name,pass,data={}){report.checks.push({name,pass:!!pass,...data});assert.ok(pass,name);}
 function scenario(seed='UI-SHRINE'){const s=K.newRun(seed,'cloud');s.runId=seed;return s;}

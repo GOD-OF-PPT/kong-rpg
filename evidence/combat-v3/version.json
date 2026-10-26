@@ -1,0 +1,40 @@
+{
+  "version": "3.0.0",
+  "baseline": "009303fff98f56284a4d2ae3ce08e6b629b32111",
+  "branch": "codex/combat-and-world-v3",
+  "release": {
+    "version": "3.0.0",
+    "entry": "index.html",
+    "sha256": "a284de700292d73c3972018f7318152e8661f2e78fe52077ca6ac2b09d39b5c3",
+    "bytes": 35884674,
+    "runtimeDependencies": [],
+    "legacyEntry": "legacy-v1.html",
+    "legacyEntries": [
+      "legacy-v1.html",
+      "legacy-v2.html"
+    ]
+  },
+  "sourceHashes": {
+    "src/content.js": "393be800e1c371ed6a1c8e0af7ef0edd37bdc927bbeb0dd537281cccbe68bafd",
+    "src/world.js": "d9c4d53bf1b4e999382d175284936e8bbecc9c338564c84e753613210b879ca8",
+    "src/simulation.js": "acbf243baf164523be4a82d0ca3b6dccd05c903e309c337a2a4c0b158691d7cf",
+    "src/storage.js": "f44c4d16f0c0749769c0050fcc34a2474558482ded22e7ea20175d1fa1132d69",
+    "src/input.js": "a952e4e82c9c35102fedd5691f969c3704c451dbaeeb13344b438346063585d6",
+    "src/renderer.js": "9539e19635fe1a9a852f11995e77695a5d360ba2eb35667a6611a44980350c84",
+    "src/combat-art.js": "ea4cf837bc91829eb18165d0fcb65f80a81e64476533859b9d91d2be67f2ddab",
+    "src/combat.css": "11a971d5cffd63b9f9b0f671663fa642c9bf150a947aba5944b218c63b29b152",
+    "src/audio.js": "75e53b36876da2afdba449bce6e31273c556109985fe91ff4685dad598970f4a",
+    "src/app.js": "5460fb42efa6824230565a38ae91dd7cfe7994f7567ce69bee150afac9138e8e"
+  },
+  "zipSha256": "229e7a0282dbfd8d0cd1e37a84e661dd8459d56300e869a7b28c2fa2c5bd8fc9",
+  "matchingEvidence": [
+    "http-playthrough",
+    "file-playthrough",
+    "browser-scenes",
+    "ui",
+    "file-dialogs",
+    "feedback",
+    "package-entry"
+  ],
+  "legacyV2SHA256": "a2b22371d0815f88a58d3c96eb9450b29ba12346f03aff0d931d476ed6dc737e"
+}

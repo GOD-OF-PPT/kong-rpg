@@ -1,8 +1,12 @@
 {
-  "version": "2.1.0",
+  "version": "3.0.0",
   "entry": "index.html",
-  "sha256": "a2b22371d0815f88a58d3c96eb9450b29ba12346f03aff0d931d476ed6dc737e",
-  "bytes": 27773450,
+  "sha256": "a284de700292d73c3972018f7318152e8661f2e78fe52077ca6ac2b09d39b5c3",
+  "bytes": 35884674,
   "runtimeDependencies": [],
-  "legacyEntry": "legacy-v1.html"
+  "legacyEntry": "legacy-v1.html",
+  "legacyEntries": [
+    "legacy-v1.html",
+    "legacy-v2.html"
+  ]
 }

@@ -52,7 +52,7 @@
       const out=document.createElement('canvas');out.width=192;out.height=144;const c=out.getContext('2d');c.imageSmoothingEnabled=false;
       const x=96+(sx-info.a[0])*scale,y=123+(sy-info.a[1])*scale;
       c.drawImage(image,sx,sy,sw,sh,Math.round(x),Math.round(y),Math.round(sw*scale),Math.round(sh*scale));
-      if(flash||ghost){c.globalCompositeOperation='source-atop';c.fillStyle=flash?'#f5e0ad':'#66d5cc';c.globalAlpha=flash?.68:.62;c.fillRect(0,0,out.width,out.height);}
+      if(flash||ghost){c.globalCompositeOperation='source-atop';c.fillStyle=flash?'#f5e0ad':'#66d5cc';c.globalAlpha=flash?.28:.62;c.fillRect(0,0,out.width,out.height);}
       const mask=document.createElement('canvas');mask.width=192;mask.height=144;const m=mask.getContext('2d');m.drawImage(out,0,0);m.globalCompositeOperation='source-in';m.fillStyle=kind==='monkey'?'#d9bd7a':'#b09ab6';m.fillRect(0,0,192,144);
       c.globalCompositeOperation='destination-over';c.globalAlpha=.25;for(const [dx,dy]of[[-1,0],[1,0],[0,-1],[0,1]])c.drawImage(mask,dx,dy);
       this.frameCache.set(key,out);return out;

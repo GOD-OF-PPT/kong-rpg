@@ -1,0 +1,85 @@
+{
+  "version": "3.0.0",
+  "results": [
+    {
+      "name": "every freshly entered stage can immediately be restored",
+      "pass": true
+    },
+    {
+      "name": "same seed and actions reproduce enriched run exactly",
+      "pass": true
+    },
+    {
+      "name": "light and heavy impacts differ without changing target HP scaling",
+      "pass": true
+    },
+    {
+      "name": "one actual swing cannot damage the same enemy every simulation tick",
+      "pass": true
+    },
+    {
+      "name": "third staff strike has deliberate preparation before damage",
+      "pass": true
+    },
+    {
+      "name": "blocked frontal light strike produces block feedback and no damage",
+      "pass": true
+    },
+    {
+      "name": "rescue starts optional guards and resolves into a persistent map change",
+      "pass": true
+    },
+    {
+      "name": "bridge trades twenty focus for three real collision surfaces, only once",
+      "pass": true
+    },
+    {
+      "name": "bridge cannot be lit without its resource cost",
+      "pass": true
+    },
+    {
+      "name": "bell completion changes actual final-boss rain coverage",
+      "pass": true
+    },
+    {
+      "name": "fragile ledge warns, collapses and returns without removing ground route",
+      "pass": true
+    },
+    {
+      "name": "moving ferry carries a standing player and survives save recovery",
+      "pass": true
+    },
+    {
+      "name": "shield charge has a warning and travels within its declared danger path",
+      "pass": true
+    },
+    {
+      "name": "lunge and normal melee alternate rather than only reskinning HP",
+      "pass": true
+    },
+    {
+      "name": "caster ground spell locks its point; leaving the marked area avoids it",
+      "pass": true
+    },
+    {
+      "name": "active ground spell and bell marks resume with their exact saved geometry",
+      "pass": true
+    },
+    {
+      "name": "legacy v2 data is routed to preserved rules and not silently migrated",
+      "pass": true
+    },
+    {
+      "name": "invalid world flags, unknown journal entries and attack areas are rejected",
+      "pass": true
+    },
+    {
+      "name": "pause freezes combat, world events and moving-platform clocks",
+      "pass": true
+    },
+    {
+      "name": "standalone distribution embeds all scripts and preserves both prior entries",
+      "pass": true
+    }
+  ]
+}
