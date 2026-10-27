@@ -31,7 +31,11 @@
     const angle=target?K.clamp(Math.atan2(target.y+8-(p.y-16),Math.abs(target.x+target.w/2-p.x-12)),-.38,.38):0;
     v.cast={id:a.id,age:0,x:p.x,y:p.y,face:p.face,viewX:K.clamp(Number.isFinite(viewX)?viewX:p.x-300,0,s.room.width-960),pulse:0,angle,echo:0};K.event(s,'art-start',{id:a.id});
   };
-  const hit=K.hitEnemy;K.hitEnemy=function(s,e,n,origin,pierce,impact){const landed=hit(s,e,n,origin,pierce,impact),c=s.celestial?.cast;if(landed&&c?.id==='six-arms'&&c.age>=.24&&['light','heavy'].includes(impact)&&e.hp>0){hit(s,e,8,origin,false,'six-arms');c.echo=.15;K.effect(s,'six-strike',e.x+e.w/2,e.y+18,{duration:.2,face:s.player.face});}return landed;};
+  // Main-weapon contact is an explicit strike context. Other abilities also
+  // use "heavy", so the impact label alone must not grant six-arm followups.
+  const mainStrikes=new WeakSet(),strike=K.strike;
+  K.strike=function(s,b,n,origin,pierce,targets,impact){const main=targets===s.player.attackTargets&&s.player.attack>0,already=mainStrikes.has(s);if(main)mainStrikes.add(s);try{return strike(s,b,n,origin,pierce,targets,impact);}finally{if(!already)mainStrikes.delete(s);}};
+  const hit=K.hitEnemy;K.hitEnemy=function(s,e,n,origin,pierce,impact){const landed=hit(s,e,n,origin,pierce,impact),c=s.celestial?.cast;if(landed&&c?.id==='six-arms'&&c.age>=.24&&mainStrikes.has(s)&&['light','heavy'].includes(impact)&&e.hp>0){K.hitEnemy(s,e,8,origin,false,'six-arms');c.echo=.15;K.effect(s,'six-strike',e.x+e.w/2,e.y+18,{duration:.2,face:s.player.face});}return landed;};
   const damage=K.damage;K.damage=function(s,...args){const yes=damage(s,...args);if(yes&&s.celestial&&(s.player.hp<=0||s.celestial.cast?.id!=='six-arms'))s.celestial.cast=null;return yes;};
   const signature=K.stepSignature;K.stepSignature=function(s,a,dt){if(s.celestial?.cast&&s.celestial.cast.id!=='six-arms'){K.cancelSignature(s);return;}return signature(s,a,dt);};
   const step=K.step;

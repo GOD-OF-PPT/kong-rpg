@@ -26,7 +26,7 @@
     staff:['第三棍更远、破正面盾；U伸棍的金色棍尖区更宽。','重棍可断蓄力，但第三棍与伸棍都有收招空当。'],
     mirror:['闪避无敌时接住莲焰，返向施法者，造成24伤害。','闪早会错失接弹，还要等待冷却。'],
     flame:['空中下＋攻击下劈，落地火环破盾并打断附近蓄力。','下劈不能转向，先看落点。'],
-    mercy:['破阵回12生命；分身结束返还15定力。','须主动破阵或等分身结束。'],
+    mercy:['击碎判牒、潮珠或塔基回12生命；分身结束返还15定力。','每关同一机关最多回复一次。'],
     rest:['恢复30生命与35定力，保留当前构筑。','放弃本次换舍利的机会。']
   };
   const equipped=ids=>`<div class="equipped-line"><small>此行携带</small>${ids.map(id=>`<span>${relicArt(id)}${rewardInfo(id).name}</span>`).join('')}</div>`;
@@ -106,7 +106,7 @@
       ['闪避与神通','K/Shift闪避。L：悟空分身、哪吒混天绫、杨戬天眼。普攻命中回定力。杨戬R召哮天犬协战8秒，需要你牵制目标；三角色详情按B。'],
       ['大招、符术与变化','命中积攒战意，满100按R释放大招：破盾、清近处敌弹。起势护体，收招仍有风险。Q使用限次符术，余量见左上。U：悟空按住蓄棍、松开伸刺；S松开撑地跃。哪吒按住驭轮，W升S降，松开落下；杨戬U为神行步。'],
       ['长路与成法','F借灯、触发见闻或过门。上路试炼可跳过，清场后回去领奖；归灯只用一次。补给满值留地。每次奖励择一：舍利最多三枚，法门本局保留，新符替换旧符；B查详情。'],
-      ['敌人战纹','头顶双刃为连刃、带翼盾为震盾、三焰为散焰；红色刃芒外圈表示正在起手，连招第二击会再次亮起。挑战强化融入朱红边；无特性强化兵为妖冠。具体避让方向仍看地面与弹道。'],
+      ['敌人战纹','头顶双刃为连刃、带翼盾为震盾、三束为散射；红色刃芒外圈表示正在起手，连招第二击会再次亮起。挑战强化融入朱红边；无特性强化兵为妖冠。具体避让方向仍看地面与弹道。'],
       ['识别与重来','敌人暗红细边，危险玫红预警；增益青绿底标加形状，满值变暗。领域锁定后移开，地面波跳避。五章十五关依序推进，前两关小首领、第三关大首领。每关击退首领后F过门；失败清空本局成长。']
     ];
     $('overlay').innerHTML=panel('行者手记','手记 · 看清再出手','棍有尽处，变化无穷',`<div class="help-grid">${lessons.map(([title,text])=>`<div><h3>${title}</h3><p>${text}</p></div>`).join('')}</div><div class="actions">${btn('close-help','记下了',true)}${btn('import','导入存档')}${btn('old','原版旅程')}</div>`);
@@ -205,7 +205,7 @@
       if(screen==='playing')while(accumulator>=K.DT&&guard++<13){
         K.step(state,actions);actions={...actions,jumpPressed:false,attackPressed:false,dashPressed:false,clonePressed:false,secondaryPressed:false,interactPressed:false,ultimatePressed:false,talismanPressed:false,signaturePressed:false,artPressed:false};
         audio.events(state.events);
-        for(const event of state.events){if(event.type==='boss-warning'||event.type==='guardian-enter')lastHud=0;if(event.type==='hurt')toast(event.source+' · -'+event.amount+'生命');if(event.type==='seal')toast('阵眼已破 · '+state.room.seals.filter(q=>q.hp===0).length+' / 2');if(event.type==='empty-focus')toast('定力不足；'+(K.isRanged(state)?'飞环':'棍击')+'命中可积攒。');if(event.type==='gate-locked')toast(state.room.seals.some(q=>q.hp>0)?'本关尚有机关。':'本关守关者尚在，先击退再过门。');if(event.type==='ability-note')toast(event.text,1.6);if(event.type==='ultimate-ready')toast('战意已满 · R '+K.heroDef(state).skill,1.8);if(event.type==='ultimate')toast(K.heroDef(state).skill+' · 镇劫',.9);if(event.type==='guardian-enter')toast(event.name+' · '+K.GUARDIANS[state.stage].lesson,3.5);if(event.type==='guardian-defeat')toast(event.name+'已退 · 生命+12 · 前往关门按F继续',3);if(event.type==='hint')toast(K.isRanged(state)&&event.text.includes('连续轻棍')?'J火尖枪近战，H掷环；看突刺预警横移或跃过路径。':event.text,3.5);if(event.type==='story')toast(event.title+' · '+(K.isRanged(state)?event.text.replace('大圣','三太子'):event.text),5);if(event.type==='world-note')toast(event.text,3.5);}
+        for(const event of state.events){if(event.type==='boss-warning'||event.type==='guardian-enter')lastHud=0;if(event.type==='hurt')toast(event.source+' · -'+event.amount+'生命');if(event.type==='seal')toast('阵眼已破 · '+state.room.seals.filter(q=>q.hp===0).length+' / 2');if(event.type==='empty-focus')toast('定力不足；主攻命中可积攒。');if(event.type==='gate-locked')toast(state.room.seals.some(q=>q.hp>0)?'本关尚有机关。':'本关守关者尚在，先击退再过门。');if(event.type==='ability-note')toast(event.text,1.6);if(event.type==='ultimate-ready')toast('战意已满 · R '+K.heroDef(state).skill,1.8);if(event.type==='ultimate')toast(K.heroDef(state).skill+' · 镇劫',.9);if(event.type==='guardian-enter')toast(event.name+' · '+K.GUARDIANS[state.stage].lesson,3.5);if(event.type==='guardian-defeat')toast(event.name+'已退 · 生命+12 · 前往关门按F继续',3);if(event.type==='hint')toast(K.isRanged(state)&&event.text.includes('连续轻棍')?'J火尖枪近战，H掷环；看突刺预警横移或跃过路径。':event.text,3.5);if(event.type==='story')toast(event.title+' · '+(K.isRanged(state)?event.text.replace('大圣','三太子'):event.text),5);if(event.type==='world-note')toast(event.text,3.5);}
         accumulator-=K.DT;if(state.mode!=='playing'){show(state.mode);break;}
       }else accumulator=0;
       renderer.draw(state,screen,elapsed);const submitted=performance.now();if(willStep){for(const q of pendingInputs)metrics.inputs.push({code:q.code,ms:+(submitted-q.t).toFixed(3),eventMs:+(submitted-q.eventTime).toFixed(3)});pendingInputs=[];}if(metrics.inputs.length>1000)metrics.inputs.splice(0,metrics.inputs.length-1000);

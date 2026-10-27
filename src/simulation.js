@@ -131,6 +131,7 @@
         for (const seal of s.room.seals) if (seal.hp > 0 && K.overlap(b,seal) && !(b.sealHits || []).includes(seal.id)) {
           if(K.hitSeal(s,seal,b.damage||18,b.x-b.vx))(b.sealHits ||= []).push(seal.id);
         }
+        K.friendlyAnchorContacts?.(s,b);
       }
       else if (K.overlap(b, p)) {
         if (p.dash > 0 && K.has(s, 'mirror')) { b.friendly=true;b.vx*=-1.25;b.vy*=-1;b.damage=24;b.life=2;K.effect(s,'reflect',b.x,b.y,{face:p.face});K.event(s,'reflect');K.gainRage(s,10); }

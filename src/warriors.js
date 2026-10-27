@@ -4,7 +4,7 @@
   K.HEROES.push({id:'erlang',name:'杨戬',title:'三尖刀破势 · 射雕弓点杀',text:'主副兵器安排距离，天眼识破，唤哮天犬协战。',skill:'哮天逐邪'});
   K.warriorGuide=function(s){
     if(s.hero==='erlang')return 'J/左键三尖刀三连；H/右键射雕弓，18定力，0.22秒引弦，0.8秒冷却。右键朝光标，H水平射击。<br>L天眼：30定力，锁定区域3秒（照妖眼5秒），区内可破盾。U神行步：12定力，1秒冷却。<br>R哮天逐邪：100战意，哮天犬协战8秒（灵犬追猎10秒），每次扑咬18伤害，0.85秒间隔。';
-    if(s.hero==='nezha')return 'J/左键火尖枪三连，第三枪重击；H/右键乾坤圈，12定力，一环在外不可再掷，但可以继续枪法。右键朝光标，H水平投掷。<br>L混天绫：40定力，缚莲绫为50；U按住驭风火轮，W/空格升、S降，落地松开回充。<br>R莲火轮阵：100战意，起势护体，后段仍可受伤。';
+    if(s.hero==='nezha')return 'J/左键火尖枪三连，第三枪重击；H/右键乾坤圈，12定力，一环在外不可再掷，但可以继续枪法。右键朝光标，H水平投掷。<br>L混天绫：40定力，缚莲绫为50；减缓普通敌人的游走和冲刺，首领不受减速；U按住驭风火轮，W/空格升、S降，落地松开回充。<br>R莲火轮阵：100战意，起势护体，后段仍可受伤。';
     return 'J/左键棍法三连；L或H/右键分身。U按住蓄棍、松开伸刺，S松U改撑地跃；K取消。<br>R法天象地：100战意，重击清近处飞弹。';
   };
   const newRun=K.newRun,enter=K.enterRoom;
@@ -59,7 +59,8 @@
     if(a.secondaryPressed)secondary(s,a);if(s.hero==='erlang'&&a.clonePressed&&p.hurt<=0&&p.ultimate===0)eye(s);
     if(s.bow){if(p.hurt>0)s.bow=null;else{s.bow.timer-=dt;if(s.bow.timer<=0){s.arrows.push({x:p.x+12,y:p.y+16,w:24,h:6,vx:s.bow.dx*720,vy:s.bow.dy*720,life:1.1});s.bow=null;K.event(s,'bow-fire');}}}
     for(const arrow of s.arrows){arrow.life-=dt;const old={ax:arrow.x,ay:arrow.y,bx:arrow.x+arrow.vx*dt,by:arrow.y+arrow.vy*dt};arrow.x=old.bx;arrow.y=old.by;
-      for(const e of s.room.enemies)if(e.hp>0&&!e.dormant&&K.lineHits(old,e,3)){K.hitEnemy(s,e,K.has(s,'staff')?42:32,old.ax,K.has(s,'staff'),'arrow');arrow.life=0;break;}
+      if(K.resolveArrowContact){if(K.resolveArrowContact(s,old))arrow.life=0;}
+      else for(const e of s.room.enemies)if(e.hp>0&&!e.dormant&&K.lineHits(old,e,3)){K.hitEnemy(s,e,K.has(s,'staff')?42:32,old.ax,K.has(s,'staff'),'arrow');arrow.life=0;break;}
       if(arrow.life>0)for(const q of s.room.seals)if(q.hp>0&&K.lineHits(old,q,3)){K.hitSeal(s,q,32,old.ax);arrow.life=0;break;}
     }s.arrows=s.arrows.filter(b=>b.life>0&&b.x>0&&b.x<s.room.width);
     if(s.eye){s.eye.life-=dt;if(s.eye.life<=0){if(K.has(s,'mercy'))p.focus=Math.min(100,p.focus+15);if(K.rank(s,'clone-burst'))K.strike(s,s.eye,24,p.x,true,[],'heavy');s.eye=null;}}

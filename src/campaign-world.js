@@ -1,5 +1,6 @@
 (function(K){
   'use strict';
+  K.TRAITS.volley={name:'散射',text:'一次起手发出三道弹幕，须辨认弹间空隙。'};
   K.realmAt=stage=>K.chapter(stage)?.id||'cloud';
   K.region=stage=>K.levelInfo(stage).name;
   K.makeRoom=function(seed,stage,difficulty='normal'){
@@ -14,7 +15,7 @@
     const arenaMin=part===2?1500:2180,arenaMax=width-130;
     room.arena={min:arenaMin,max:arenaMax,enter:arenaMin+15,checkpoint:arenaMin+55,offset:0};
     const count=part===2?4:part===0?7:8,spacing=part===2?225:220;
-    function add(role,x,id,reserve=false){const kind=['blade','caster','shield'][role],e=K.enemy(kind,x,400,id);Object.assign(e,{role,stage,realm:info.id,realmCD:1,challengeCD:1,signatureCD:0,move:'',marks:[],aimX:x-100,aimY:416,recoil:0,recoilFace:1,style:'campaign',trait:role===0&&part===1?'twin':role===2?'pulse':role===1&&part===2?'volley':'',dormant:reserve,hp:reserve?0:e.maxHp,scoreable:!reserve,chiefId:null,campChargeTo:x,repeat:0,anchorKey:null});if(role===1){e.y=part===1&&id%2===0?290:400;e.baseY=e.y;}
+    function add(role,x,id,reserve=false){const kind=['blade','caster','shield'][role],e=K.enemy(kind,x,400,id);Object.assign(e,{role,stage,realm:info.id,realmCD:1,challengeCD:1,signatureCD:0,move:'',marks:[],aimX:x-100,aimY:416,recoil:0,recoilFace:1,style:'campaign',trait:role===0&&part===1?'twin':role===2?'pulse':role===1&&(info.id==='water'||info.id==='cloud'&&part===2)?'volley':'',dormant:reserve,hp:reserve?0:e.maxHp,scoreable:!reserve,chiefId:null,campChargeTo:x,repeat:0,anchorKey:null});if(role===1){e.y=part===1&&id%2===0?290:400;e.baseY=e.y;}
       room.enemies.push(e);if(!reserve)room.pickups.push({x,y:420,w:16,h:20,kind:id%3===0?'heal':id%3===1?'focus':'rage',amount:id%3===0?12:20,sourceId:id,used:false,enabled:false});return e;}
     for(let i=0;i<count;i++){const role=part===0?[0,0,1,2,0,1,2][i]:part===1?[2,1,0,1,2,0,1,2][i]:[1,2,0,1][i];let x=470+i*spacing;if(part===2)x=400+i*225;const floor=room.platforms.find(p=>p.solid&&x>=p.x+25&&x<=p.x+p.w-70);if(!floor)x+=120;add(role,x,100+i);}
     if(hard)for(let i=0;i<3;i++)add((i+stage)%3,570+i*(part===2?260:475),300+i);
@@ -34,11 +35,12 @@
   K.gateInReach=s=>Math.abs(s.player.x-s.room.exit)<85&&Math.abs(s.player.y+s.player.h-440)<112;
   K.updateArena=function(s){const e=K.guardian(s),a=s.room.arena,p=s.player;if(!e||e.hp<=0)return;if(e.dormant&&p.x>=a.enter){e.dormant=false;e.phase='idle';e.timer=.85;s.checkpoint=a.checkpoint;K.event(s,'guardian-enter',{name:K.campaignName(e)});}if(!e.dormant){p.x=K.clamp(p.x,a.min,a.max);s.checkpoint=a.checkpoint;}};
   const run=K.newRun,enter=K.enterRoom;
-  K.newRun=function(seed,first,hero='wukong',difficulty='normal',meta){if(difficulty==='challenge'&&!K.canChallenge(meta))throw Error('挑战模式须普通十五关通关并取得S评级。');const s=run(seed,first,hero,difficulty);s.campaign={completed:[],killed:[],hits:0,access:difficulty==='challenge'?JSON.parse(JSON.stringify(meta.normalClear)):null,started:s.elapsed};return s;};
+  K.newRun=function(seed,first,hero='wukong',difficulty='normal',meta){if(difficulty==='challenge'&&!K.canChallenge(meta))throw Error('挑战模式须普通十五关通关并取得S评级。');const s=run(seed,first,hero,difficulty);s.campaign={completed:[],killed:[],hits:0,anchorHeals:[],access:difficulty==='challenge'?JSON.parse(JSON.stringify(meta.normalClear)):null,started:s.elapsed};return s;};
   K.enterRoom=function(s,stage,initial){enter(s,stage,initial);if(s.campaign)s.campaign.started=s.elapsed;};
   const journey=K.journeyInteract;
   K.journeyInteract=function(s){const manual=K.nearArtManual(s);if(manual)return journey(s)||true;if(K.gateInReach(s)){const g=K.guardian(s);if(g?.hp>0){K.event(s,'gate-locked');return true;}if(!s.campaign.completed.includes(s.stage))s.campaign.completed.push(s.stage);if(s.stage===14){s.mode='won';K.event(s,'victory');return true;}s.rewardKind='exit';s.reward=K.options(s);K.cancelSignature(s);s.mode='reward';K.event(s,'reward',{kind:'exit'});return true;}return journey(s)||true;};
   const damage=K.damage;K.damage=function(s,...args){const result=damage(s,...args);if(result&&s.campaign)s.campaign.hits++;return result;};
+  const reward=K.reward;K.reward=function(id,s){const r=reward(id,s);if(id!=='mercy')return r;const end=s?.hero==='erlang'?'天眼':s?.hero==='nezha'?'混天绫':'分身';return{...r,tag:'破械续航',text:'击碎判牒、潮珠或塔基恢复12生命；'+end+'结束返还15定力。',cost:'每关同一机关最多回复一次；神通仍有原本消耗。'};};
   const hit=K.hitEnemy;K.hitEnemy=function(s,e,n,origin,pierce,impact){const before=e.hp,anchors=s.room.anchors;
     if(e.chiefId&&s.stage%3===2&&K.chapter(s.stage).id==='underworld'&&e.phase!=='recover'&&anchors.some(q=>q.hp>0&&q.active))n=Math.max(1,Math.ceil(n*.55));
     const yes=hit(s,e,n,origin,pierce,impact);if(before>0&&e.hp===0&&e.scoreable&&s.campaign){const key=s.stage+':'+e.id;if(!s.campaign.killed.includes(key))s.campaign.killed.push(key);}return yes;};

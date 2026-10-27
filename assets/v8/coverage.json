@@ -211,6 +211,10 @@
     "campaignArmy-heaven": {
       "width": 960,
       "height": 128
+    },
+    "auditDevices": {
+      "width": 576,
+      "height": 96
     }
   },
   "frames": {
@@ -3557,16 +3561,16 @@
       },
       {
         "id": "underworld-device",
-        "image": "campaignArmy-underworld",
+        "image": "auditDevices",
         "r": [
-          800,
           0,
-          160,
-          128
+          0,
+          96,
+          96
         ],
         "anchor": [
-          80,
-          112
+          48,
+          80
         ]
       },
       {
@@ -3725,16 +3729,16 @@
       },
       {
         "id": "dragon-device",
-        "image": "campaignArmy-dragon",
+        "image": "auditDevices",
         "r": [
-          800,
+          96,
           0,
-          160,
-          128
+          96,
+          96
         ],
         "anchor": [
-          80,
-          112
+          48,
+          80
         ]
       },
       {
@@ -3809,19 +3813,61 @@
       },
       {
         "id": "heaven-device",
-        "image": "campaignArmy-heaven",
+        "image": "auditDevices",
         "r": [
-          800,
+          192,
           0,
-          160,
-          128
+          96,
+          96
         ],
         "anchor": [
-          80,
-          112
+          48,
+          80
+        ]
+      },
+      {
+        "id": "underworld-device-broken",
+        "image": "auditDevices",
+        "r": [
+          288,
+          0,
+          96,
+          96
+        ],
+        "anchor": [
+          48,
+          80
+        ]
+      },
+      {
+        "id": "dragon-device-broken",
+        "image": "auditDevices",
+        "r": [
+          384,
+          0,
+          96,
+          96
+        ],
+        "anchor": [
+          48,
+          80
+        ]
+      },
+      {
+        "id": "heaven-device-broken",
+        "image": "auditDevices",
+        "r": [
+          480,
+          0,
+          96,
+          96
+        ],
+        "anchor": [
+          48,
+          80
         ]
       }
     ]
   },
-  "total": 271
+  "total": 274
 }

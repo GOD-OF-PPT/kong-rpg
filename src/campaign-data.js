@@ -18,6 +18,7 @@
     'venom-fan':{name:'九首毒扇',hint:'弹间留隙 · 跳避或返弹',fx:'lotus-orb'},'venom-tide':{name:'污潮横涌',hint:'低潮波 · 跳过',fx:'water'},'head-dive':{name:'九首俯冲',hint:'锁定冲线 · 跃过或退让',fx:'void-slash'},
     'dragon-surge':{name:'东海潮涌',hint:'可破潮珠断招 · 或跳过潮线',fx:'water'},'dragon-column':{name:'双龙水柱',hint:'两个落点已定 · 横移',fx:'water'},'dragon-thunder':{name:'龙角雷诏',hint:'雷柱留隙 · 移出印区',fx:'lightning'},
     'tower-prison':{name:'七宝镇阵',hint:'破塔基可撤光柱 · 避开塔线',fx:'pillar'},'king-sword':{name:'天王断邪',hint:'剑锋锁向 · 绕背或跳避',fx:'silver-slash'},'king-fire':{name:'塔火轮潮',hint:'低位火轮 · 跃起或返弹',fx:'spear-flare'},
+    'shield-wave':{name:'震盾余波',hint:'盾冲后有低波 · 再看地线',fx:'void-slash'},
     'soldier-slash':{name:'近身斩击',hint:'看刀锋 · 换位',fx:'void-slash'},'soldier-bolt':{name:'锁向远射',hint:'射线已定 · 换高度',fx:'wind'},'soldier-rush':{name:'举盾突进',hint:'正面持盾 · 绕背或重击',fx:'quake'}
   };
   K.campaignName=e=>e.chiefId?K.GUARDIANS[e.stage].name:K.chapter(e.stage).roles[e.role];

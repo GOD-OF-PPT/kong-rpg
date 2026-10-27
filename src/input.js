@@ -8,8 +8,8 @@
       window.addEventListener('keydown',e=>{if(this.active&&e.code==='Tab'&&!e.ctrlKey&&!e.metaKey&&!e.altKey){e.preventDefault();this.clear();onControl('pause');}});
       // A release from combat must not become a click on a newly opened dialog.
       window.addEventListener('pointerdown',()=>{this.suppressClick=false;},true);
-      canvas.addEventListener('pointerdown',e=>{if(!this.active)return;e.preventDefault();this.combatButtons.add(e.button);canvas.focus({preventScroll:true});this.aimFace=K.pointerFace?K.pointerFace(e.clientX):0;this.aimPoint=K.pointerPoint?K.pointerPoint(e.clientX,e.clientY):null;if(e.button===0){this.mouse=true;this.pressed.add('MouseLeft');onInput(e.timeStamp,'MouseLeft');}if(e.button===2){this.pressed.add('MouseRight');onInput(e.timeStamp,'MouseRight');}});
-      window.addEventListener('pointerup',e=>{if(this.combatButtons.delete(e.button)&&!this.active)this.suppressClick=true;this.mouse=false;},true);
+      canvas.addEventListener('mousedown',e=>{if(!this.active)return;e.preventDefault();this.combatButtons.add(e.button);canvas.focus({preventScroll:true});this.aimFace=K.pointerFace?K.pointerFace(e.clientX):0;this.aimPoint=K.pointerPoint?K.pointerPoint(e.clientX,e.clientY):null;if(e.button===0){this.mouse=true;this.pressed.add('MouseLeft');onInput(e.timeStamp,'MouseLeft');}if(e.button===2){this.pressed.add('MouseRight');onInput(e.timeStamp,'MouseRight');}});
+      window.addEventListener('mouseup',e=>{if(this.combatButtons.delete(e.button)&&!this.active)this.suppressClick=true;if(e.button===0)this.mouse=false;},true);
       window.addEventListener('pointercancel',()=>{this.combatButtons.clear();this.mouse=false;},true);
       window.addEventListener('click',e=>{if(this.suppressClick&&e.detail>0){this.suppressClick=false;e.preventDefault();e.stopImmediatePropagation();}},true);
       window.addEventListener('contextmenu',e=>{if(this.suppressClick){this.suppressClick=false;e.preventDefault();}},true);canvas.addEventListener('contextmenu',e=>e.preventDefault());

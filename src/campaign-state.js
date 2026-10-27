@@ -8,6 +8,8 @@
     if(s.mode==='won'&&(s.stage!==14||q.completed.length!==15))fail();
     if(!Array.isArray(s.room.anchors)||s.room.anchors.length!==canonical.anchors.length)fail();
     for(const [i,a]of canonical.anchors.entries()){const x=s.room.anchors[i];if(!x||x.id!==a.id||x.kind!==a.kind||x.x!==a.x||x.y!==a.y||!number(x.hp,0,a.maxHp)||typeof x.active!=='boolean'||!Array.isArray(x.hits)||x.hits.length>30||x.hits.some(v=>typeof v!=='string'||v.length>200))fail();a.hp=x.hp;a.active=x.active;a.hits=x.hits.slice();}
-    return {completed:q.completed.slice(),killed:q.killed.slice(),hits:q.hits,started:q.started,access:s.difficulty==='challenge'?{...q.access}:null};
+    const heals=q.anchorHeals??[];
+    if(!Array.isArray(heals)||heals.length>4||new Set(heals).size!==heals.length||heals.some(key=>!['5:0','5:1','11:0','14:0'].includes(key)||Number(key.split(':')[0])>s.stage))fail();
+    return {completed:q.completed.slice(),killed:q.killed.slice(),hits:q.hits,anchorHeals:heals.slice(),started:q.started,access:s.difficulty==='challenge'?{...q.access}:null};
   };
 })(globalThis.Kong ||= {});
