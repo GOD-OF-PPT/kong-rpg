@@ -131,3 +131,10 @@ evidence/audit-v10/**/*.png
 evidence/audit-v10/**/*.mp4
 evidence/audit-v10/**/*.webm
 evidence/audit-v10/*.log
+
+# Full three-hero recordings and working captures stay local; report metadata is retained.
+evidence/heroes-v10/**/*.png
+evidence/heroes-v10/**/*.webm
+evidence/heroes-v10/**/*.mp4
+evidence/heroes-v10/**/*.log
+artifacts/portable-heroes-v10/
