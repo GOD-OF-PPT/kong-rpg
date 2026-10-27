@@ -2,6 +2,7 @@ const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypt
 require('./pack-art.cjs');
 require('./validate-art.cjs');
 require('./pack-audio.cjs');
+require('./pack-music.cjs');
 const root=path.resolve(__dirname,'..'),out=path.join(root,'release');fs.mkdirSync(out,{recursive:true});
 let html=fs.readFileSync(path.join(root,'index.html'),'utf8');
 html=html.replace('<head>','<head><meta name="kong-package" content="standalone">');
@@ -14,7 +15,7 @@ const temp=path.join(out,'.index-build-'+process.pid+'.html');fs.writeFileSync(t
 // Windows readers/AV can briefly hold a file handle during the atomic replace.
 for(let attempt=0;;attempt++){try{fs.renameSync(temp,path.join(out,'index.html'));break;}catch(error){if(attempt>=20||!['EPERM','EACCES','EBUSY'].includes(error.code))throw error;Atomics.wait(new Int32Array(new SharedArrayBuffer(4)),0,0,100);}}
 fs.copyFileSync(path.join(root,'README.md'),path.join(out,'README.md'));
-for(const folder of ['art-v1','readability','complete-v2','dialog-ui','combat-v3','progression-v4','journey-v5','ranged-v6','audio-v6','map-v6','flow-v6','signature-v7','ux-v7','challenge-v7','scene-v7','art-audit-v7']){fs.mkdirSync(path.join(out,'docs',folder),{recursive:true});for(const file of fs.readdirSync(path.join(root,'docs',folder)).filter(x=>x.endsWith('.md')))fs.copyFileSync(path.join(root,'docs',folder,file),path.join(out,'docs',folder,file));}
+for(const folder of ['art-v1','readability','complete-v2','dialog-ui','combat-v3','progression-v4','journey-v5','ranged-v6','audio-v6','map-v6','flow-v6','signature-v7','ux-v7','challenge-v7','scene-v7','art-audit-v7','music-v7']){fs.mkdirSync(path.join(out,'docs',folder),{recursive:true});for(const file of fs.readdirSync(path.join(root,'docs',folder)).filter(x=>x.endsWith('.md')))fs.copyFileSync(path.join(root,'docs',folder,file),path.join(out,'docs',folder,file));}
 if(!fs.existsSync(path.join(out,'legacy-v6.html')))throw new Error('Preserved v6 entry missing');
 if(!fs.existsSync(path.join(out,'legacy-v2.html')))throw new Error('Preserved v2.1 entry is missing');
 if(!fs.existsSync(path.join(out,'legacy-v5.html')))throw new Error('Preserved v5 entry is missing');

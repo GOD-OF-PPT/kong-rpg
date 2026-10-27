@@ -1,4 +1,6 @@
-# 大圣 · 劫后行 v7.1.2
+# 大圣 · 劫后行 v7.1.3
+
+v7.1.3：接入三首背景音乐：首页两首随机起播、轮换不连续重复；游戏中单曲循环，切换淡入淡出，暂停/奖励降低音乐音量。音乐随发行HTML内嵌，原打击与预警音效保留。首页首次点击或按键后启声。[接入与验收](docs/music-v7/VERIFICATION.md)。
 
 v7.1.2：全面美术资源巡查。补齐悟空/哪吒倒地姿态及哪吒大招起势/释放；修复护符在蓄棍/飞行中消失、哪吒下劈误用棍影、守关追击蓄力仍用待机姿态，以及三处棍法切片越界。角色、敌人、特效、物件与DOM图集共用切片清单并纳入打包检查。[完整巡查与验收](docs/art-audit-v7/REPORT.md)。
 
@@ -70,7 +72,7 @@ npm run dev
 
 局域网访问使用 `npm run dev:lan`，同一局域网设备打开 `http://这台电脑的IPv4地址:5188/`。该模式只提供 `release/` 中的游戏发行文件；默认 `npm run dev` 仍仅监听本机。
 
-完整离线包为 `artifacts/kong-rpg-offline-v7.1.2.zip`，含v1–v6原入口，约160MiB以上，超过GitHub单文件100MiB限制，因此作为本地交付物保留。Git仓库包含全部发行文件；需要重打包时执行 `python tools/package-release.py`。
+完整离线包为 `artifacts/kong-rpg-offline-v7.1.3.zip`，含v1–v6原入口，约160MiB以上，超过GitHub单文件100MiB限制，因此作为本地交付物保留。Git仓库包含全部发行文件；需要重打包时执行 `python tools/package-release.py`。
 
 `src/content.js` 内容与种子；`simulation.js` 固定120Hz模拟；`heroes.js` 角色、回环、绫缚与远距反制；`signature.js` 伸棍、撑跃、驭轮和锁空/破距响应；`signature-art.js` 对应姿态、棍身和双轮特效；`journey.js` 延长路线、强化怪、掉落、试炼与归灯；`progression.js` 成长、符术、大招与守关规则；`input.js` 键鼠与焦点；`storage.js` 版本存档；`renderer.js` 世界渲染；`visuals.js` 与 `progression-art.js` 图集和动作；`app.js` DOM界面；`audio.js` 本地声音。
 

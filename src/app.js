@@ -9,6 +9,11 @@
   const settings=storage.readSettings();renderer.shake=settings.shake;audio.setVolume(settings.volume);
   const metrics={frames:[],inputs:[],errors:[],started:performance.now()};
   const input=new K.Input(world,control,(t,code)=>pendingInputs.push({t:performance.now(),eventTime:t,code}));
+  // Browsers require a real gesture before sound. Any normal menu click or
+  // keyboard action unlocks the chosen homepage track without starting a run.
+  window.addEventListener('pointerdown',()=>audio.unlock(),{capture:true});
+  window.addEventListener('keydown',e=>{if(!e.ctrlKey&&!e.metaKey&&!e.altKey)audio.unlock();},{capture:true});
+  document.addEventListener('visibilitychange',()=>audio.music?.setHidden(document.hidden));
   const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const btn=(id,text,primary=false)=>`<button id="${id}" class="button ${primary?'primary':''}" aria-label="${esc(text.replace(/<span\b[^>]*>[\s\S]*?<\/span>/g,'').replace(/<[^>]*>/g,'').trim())}">${text}</button>`;
   const on=(id,fn)=>$(id)?.addEventListener('click',fn);
@@ -37,7 +42,7 @@
   function save(){if(!state)return;storage.write(state,meta);$('storage-status').textContent=storage.available?'独立离线版 · 旅程已保存':'自动存储不可用 · 请导出存档';lastSave=performance.now();}
   function show(next){
     const focused=document.activeElement;if($('overlay').contains(focused))rememberedFocus.set(screen,focused.id?{id:focused.id}:focused.dataset.relic?{relic:focused.dataset.relic}:null);
-    if(state&&next!=='playing'&&state.arm?.phase==='charge')K.cancelSignature(state,true);screen=next;input.setActive(next==='playing');if(next!=='playing')audio.stopImpacts();$('stage').dataset.mode=next;
+    if(state&&next!=='playing'&&state.arm?.phase==='charge')K.cancelSignature(state,true);screen=next;input.setActive(next==='playing');if(next!=='playing')audio.stopImpacts();audio.setScreen(next);$('stage').dataset.mode=next;
     const modal=!['menu','playing'].includes(next);document.querySelector('.masthead').inert=modal;document.querySelector('.footline').inert=modal;world.inert=modal;$('hud').inert=modal;
     if(next!=='playing'){pendingInputs=[];$('toast').hidden=true;toastUntil=0;}
     $('hud').hidden=!state||next!=='playing';$('overlay').innerHTML='';
@@ -195,7 +200,7 @@
         accumulator-=K.DT;if(state.mode!=='playing'){show(state.mode);break;}
       }else accumulator=0;
       renderer.draw(state,screen,elapsed);const submitted=performance.now();if(willStep){for(const q of pendingInputs)metrics.inputs.push({code:q.code,ms:+(submitted-q.t).toFixed(3),eventMs:+(submitted-q.eventTime).toFixed(3)});pendingInputs=[];}if(metrics.inputs.length>1000)metrics.inputs.splice(0,metrics.inputs.length-1000);
-      audio.tick(screen==='playing',state?.stage||0);if(now-lastHud>80){hud();lastHud=now;}if(now>toastUntil)$('toast').hidden=true;if(state&&screen==='playing'&&now-lastSave>3000)save();
+      audio.tick();if(now-lastHud>80){hud();lastHud=now;}if(now>toastUntil)$('toast').hidden=true;if(state&&screen==='playing'&&now-lastSave>3000)save();
     }catch(e){metrics.errors.push(String(e.stack||e));console.error(e);if(state){state.mode='paused';show('paused');}toast('运行异常，先导出旅程后重新打开。',5);}
     requestAnimationFrame(frame);
   }

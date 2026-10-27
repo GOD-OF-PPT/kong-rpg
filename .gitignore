@@ -13,6 +13,7 @@ evidence/**/*trace*.zip
 evidence/**/*progress.json
 src/generated-art.js
 src/generated-audio.js
+src/generated-music.js
 artifacts/portable-check/
 artifacts/portable-check-v4/
 # UI iterations remain local; representative comparison captures are force-added.
@@ -78,6 +79,10 @@ evidence/scene-v7/**/*.png
 evidence/scene-v7/**/*.mp4
 evidence/scene-v7/*.log
 artifacts/kong-rpg-offline-v7.1.2.zip
+artifacts/kong-rpg-offline-v7.1.3.zip
+artifacts/portable-music-v7/
+evidence/music-v7/**/*.png
+evidence/music-v7/*.log
 artifacts/portable-art-audit-v7/
 evidence/art-audit-v7/**/*.png
 evidence/art-audit-v7/**/*.mp4
