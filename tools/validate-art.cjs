@@ -10,9 +10,9 @@ for(const [id,asset]of Object.entries(manifest.assets)){
   dimensions[id]={width:data.readUInt32BE(16),height:data.readUInt32BE(20)};
 }
 const context=vm.createContext({});
-for(const file of ['art-catalog','map-data','signature-data','scene-data','actor-states-data','v8-art-data','enemy-marker-data'])vm.runInContext(fs.readFileSync(path.join(root,'src',file+'.js'),'utf8'),context);
+for(const file of ['art-catalog','map-data','signature-data','scene-data','actor-states-data','v8-art-data','enemy-marker-data','celestial-art-data'])vm.runInContext(fs.readFileSync(path.join(root,'src',file+'.js'),'utf8'),context);
 let count=0;const coverage={};
-for(const group of ['ArtFrames','MapFrames','SignatureFrames','SceneFrames','ActorStateFrames','V8Frames','EnemyMarkerFrames']){
+for(const group of ['ArtFrames','MapFrames','SignatureFrames','SceneFrames','ActorStateFrames','V8Frames','EnemyMarkerFrames','CelestialFrames']){
   coverage[group]=[];
   for(const [id,frame]of Object.entries(context.Kong[group])){
     const image=dimensions[frame.image],[x,y,w,h]=frame.r;

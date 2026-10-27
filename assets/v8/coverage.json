@@ -104,6 +104,18 @@
       "width": 512,
       "height": 128
     },
+    "celestialHeroes": {
+      "width": 1536,
+      "height": 192
+    },
+    "celestialBosses": {
+      "width": 1536,
+      "height": 192
+    },
+    "celestialFx": {
+      "width": 2048,
+      "height": 128
+    },
     "enemyBattleSeals": {
       "width": 1536,
       "height": 1024
@@ -2617,7 +2629,457 @@
           512
         ]
       }
+    ],
+    "CelestialFrames": [
+      {
+        "id": "pole",
+        "image": "celestialHeroes",
+        "r": [
+          0,
+          0,
+          192,
+          192
+        ],
+        "anchor": [
+          96,
+          176
+        ]
+      },
+      {
+        "id": "spin",
+        "image": "celestialHeroes",
+        "r": [
+          192,
+          0,
+          192,
+          192
+        ],
+        "anchor": [
+          96,
+          176
+        ]
+      },
+      {
+        "id": "avatar-rise",
+        "image": "celestialHeroes",
+        "r": [
+          384,
+          0,
+          192,
+          192
+        ],
+        "anchor": [
+          96,
+          176
+        ]
+      },
+      {
+        "id": "avatar-slam",
+        "image": "celestialHeroes",
+        "r": [
+          576,
+          0,
+          192,
+          192
+        ],
+        "anchor": [
+          96,
+          176
+        ]
+      },
+      {
+        "id": "six-ready",
+        "image": "celestialHeroes",
+        "r": [
+          768,
+          0,
+          192,
+          192
+        ],
+        "anchor": [
+          96,
+          176
+        ]
+      },
+      {
+        "id": "six-strike",
+        "image": "celestialHeroes",
+        "r": [
+          960,
+          0,
+          192,
+          192
+        ],
+        "anchor": [
+          96,
+          176
+        ]
+      },
+      {
+        "id": "beam-ready",
+        "image": "celestialHeroes",
+        "r": [
+          1152,
+          0,
+          192,
+          192
+        ],
+        "anchor": [
+          96,
+          176
+        ]
+      },
+      {
+        "id": "beam-release",
+        "image": "celestialHeroes",
+        "r": [
+          1344,
+          0,
+          192,
+          192
+        ],
+        "anchor": [
+          96,
+          176
+        ]
+      },
+      {
+        "id": "mountain-0",
+        "image": "celestialBosses",
+        "r": [
+          0,
+          0,
+          192,
+          192
+        ],
+        "anchor": [
+          96,
+          176
+        ]
+      },
+      {
+        "id": "ferry-0",
+        "image": "celestialBosses",
+        "r": [
+          192,
+          0,
+          192,
+          192
+        ],
+        "anchor": [
+          96,
+          176
+        ]
+      },
+      {
+        "id": "sanctuary-0",
+        "image": "celestialBosses",
+        "r": [
+          384,
+          0,
+          192,
+          192
+        ],
+        "anchor": [
+          96,
+          176
+        ]
+      },
+      {
+        "id": "wutian-0",
+        "image": "celestialBosses",
+        "r": [
+          576,
+          0,
+          192,
+          192
+        ],
+        "anchor": [
+          96,
+          176
+        ]
+      },
+      {
+        "id": "mountain-1",
+        "image": "celestialBosses",
+        "r": [
+          768,
+          0,
+          192,
+          192
+        ],
+        "anchor": [
+          96,
+          176
+        ]
+      },
+      {
+        "id": "ferry-1",
+        "image": "celestialBosses",
+        "r": [
+          960,
+          0,
+          192,
+          192
+        ],
+        "anchor": [
+          96,
+          176
+        ]
+      },
+      {
+        "id": "sanctuary-1",
+        "image": "celestialBosses",
+        "r": [
+          1152,
+          0,
+          192,
+          192
+        ],
+        "anchor": [
+          96,
+          176
+        ]
+      },
+      {
+        "id": "wutian-1",
+        "image": "celestialBosses",
+        "r": [
+          1344,
+          0,
+          192,
+          192
+        ],
+        "anchor": [
+          96,
+          176
+        ]
+      },
+      {
+        "id": "gold-slash",
+        "image": "celestialFx",
+        "r": [
+          0,
+          0,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          126
+        ]
+      },
+      {
+        "id": "silver-slash",
+        "image": "celestialFx",
+        "r": [
+          128,
+          0,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          126
+        ]
+      },
+      {
+        "id": "spear-flare",
+        "image": "celestialFx",
+        "r": [
+          256,
+          0,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          126
+        ]
+      },
+      {
+        "id": "laser",
+        "image": "celestialFx",
+        "r": [
+          384,
+          0,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          126
+        ]
+      },
+      {
+        "id": "impact",
+        "image": "celestialFx",
+        "r": [
+          512,
+          0,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          126
+        ]
+      },
+      {
+        "id": "injury",
+        "image": "celestialFx",
+        "r": [
+          640,
+          0,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          126
+        ]
+      },
+      {
+        "id": "void-slash",
+        "image": "celestialFx",
+        "r": [
+          768,
+          0,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          126
+        ]
+      },
+      {
+        "id": "water",
+        "image": "celestialFx",
+        "r": [
+          896,
+          0,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          126
+        ]
+      },
+      {
+        "id": "spin-ring",
+        "image": "celestialFx",
+        "r": [
+          1024,
+          0,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          126
+        ]
+      },
+      {
+        "id": "quake",
+        "image": "celestialFx",
+        "r": [
+          1152,
+          0,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          126
+        ]
+      },
+      {
+        "id": "pillar",
+        "image": "celestialFx",
+        "r": [
+          1280,
+          0,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          126
+        ]
+      },
+      {
+        "id": "lotus-orb",
+        "image": "celestialFx",
+        "r": [
+          1408,
+          0,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          126
+        ]
+      },
+      {
+        "id": "wind",
+        "image": "celestialFx",
+        "r": [
+          1536,
+          0,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          126
+        ]
+      },
+      {
+        "id": "meteor",
+        "image": "celestialFx",
+        "r": [
+          1664,
+          0,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          126
+        ]
+      },
+      {
+        "id": "silk",
+        "image": "celestialFx",
+        "r": [
+          1792,
+          0,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          126
+        ]
+      },
+      {
+        "id": "lightning",
+        "image": "celestialFx",
+        "r": [
+          1920,
+          0,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          126
+        ]
+      }
     ]
   },
-  "total": 189
+  "total": 221
 }

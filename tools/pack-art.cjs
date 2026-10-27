@@ -13,6 +13,7 @@ files.mapProps='../map-v6/props.png';files.mapTerrain='../map-v6/terrain.png';fi
 files.sigWukong='../signature-v7/wukong.png';files.sigNezha='../signature-v7/nezha.png';files.sigFx='../signature-v7/fx.png';
 files.sceneProps='../scene-v7/seal-states.png';
 files.actorStates='../art-audit-v7/actor-states.png';
+Object.assign(files,{celestialHeroes:'../celestial-v9/heroes.png',celestialBosses:'../celestial-v9/bosses.png',celestialFx:'../celestial-v9/effects.png'});
 files.enemyBattleSeals='../enemy-markers/battle-seals.png';
 Object.assign(files,{v8ErlangPortrait:'../v8/erlang-portrait.png',v8NezhaPortrait:'../v8/nezha-portrait.png',v8Erlang:'../v8/erlang.png',v8Nezha:'../v8/nezha.png',v8Companion:'../v8/companion.png',v8Fx:'../v8/fx.png',v8Enemies:'../v8/enemies.png',v8Terrain:'../v8/terrain.png',realmCloud:'../v8/cloud.png',realmHeaven:'../v8/heaven.png',realmWater:'../v8/water.png',realmDragon:'../v8/dragon.png',realmUnderworld:'../v8/underworld.png'});
 const manifest={tool:'built-in image_gen',runtime:'embedded data URLs; no network or fetch',assets:{}};

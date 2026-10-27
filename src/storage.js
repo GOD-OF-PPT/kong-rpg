@@ -1,6 +1,6 @@
 (function(K){
   'use strict';
-  const KEY='kong.black-lotus.v8',SEVENTH='kong.black-lotus.v7',LEGACY='kong.black-lotus.v1',PREVIOUS='kong.black-lotus.v2',THIRD='kong.black-lotus.v3',FOURTH='kong.black-lotus.v4',FIFTH='kong.black-lotus.v5',SIXTH='kong.black-lotus.v6',SETTINGS='kong.black-lotus.settings.v2';
+  const KEY='kong.black-lotus.v9',EIGHTH='kong.black-lotus.v8',SEVENTH='kong.black-lotus.v7',LEGACY='kong.black-lotus.v1',PREVIOUS='kong.black-lotus.v2',THIRD='kong.black-lotus.v3',FOURTH='kong.black-lotus.v4',FIFTH='kong.black-lotus.v5',SIXTH='kong.black-lotus.v6',SETTINGS='kong.black-lotus.settings.v2';
   const number=(v,a,b)=>typeof v==='number'&&Number.isFinite(v)&&v>=a&&v<=b;
   const fail=()=>{throw new Error('存档数据不完整或已损坏，请保留原文件。');};
   const count=v=>Number.isFinite(Number(v))?Math.max(0,Math.min(1e7,Math.floor(Number(v)))):0;
@@ -8,12 +8,12 @@
     return {runs:count(m?.runs),wins:count(m?.wins),best:Math.min(4,count(m?.best)),history:Array.isArray(m?.history)?m.history.filter(x=>x&&typeof x.id==='string'&&typeof x.seed==='string').slice(-8).map(x=>({id:x.id.slice(0,100),seed:x.seed.slice(0,32),won:!!x.won,stage:Math.min(3,count(x.stage)),hero:K.HEROES.some(h=>h.id===x.hero)?x.hero:'wukong',difficulty:x.difficulty==='challenge'?'challenge':'normal',seconds:count(x.seconds),damage:count(x.damage),relics:Array.isArray(x.relics)?x.relics.filter(id=>K.RELICS.some(r=>r.id===id)).slice(0,3):[]})):[]};
   };
   K.validSave=function(data){
-    if(data?.game==='black-lotus'&&[1,2,3,4,5,6,7].includes(data.schema)&&data.schema===data.state?.version){const error=new Error('这是旧版旅程，请在保留的原版中继续。');error.legacy=true;throw error;}
-    if(!data||data.schema!==8||data.game!=='black-lotus'||!data.state)throw new Error('这不是劫后行v8存档。');
+    if(data?.game==='black-lotus'&&[1,2,3,4,5,6,7,8].includes(data.schema)&&data.schema===data.state?.version){const error=new Error('这是旧版旅程，请在保留的原版中继续。');error.legacy=true;throw error;}
+    if(!data||data.schema!==9||data.game!=='black-lotus'||!data.state)throw new Error('这不是劫后行v9存档。');
     const s=data.state;if(!K.HEROES.some(h=>h.id===s.hero))fail();
     const difficulty=s.difficulty??'normal',challenging=difficulty==='challenge';
     if(!['normal','challenge'].includes(difficulty)||(challenging?s.challengeRules!==1:s.challengeRules!==undefined&&s.challengeRules!==0))fail();
-    if(s.version!==8||s.rules!==8||!Number.isInteger(s.stage)||s.stage<0||s.stage>3||typeof s.seed!=='string'||s.seed.length>32||!['playing','paused','reward','dead','won'].includes(s.mode))fail();
+    if(s.version!==9||s.rules!==9||!Number.isInteger(s.stage)||s.stage<0||s.stage>3||typeof s.seed!=='string'||s.seed.length>32||!['playing','paused','reward','dead','won','art-choice'].includes(s.mode))fail();
     if(!s.growth||typeof s.growth!=='object'||Array.isArray(s.growth)||Object.entries(s.growth).some(([id,n])=>{const r=K.GROWTH.find(r=>r.id===id&&!r.temporary);return !r||!Number.isInteger(n)||n<1||n>r.max;}))fail();
     if(s.talisman!==null&&(!s.talisman||!['thunder','ward'].includes(s.talisman.id)||!Number.isInteger(s.talisman.charges)||s.talisman.charges<1||s.talisman.charges>(s.talisman.id==='thunder'?3:2)))fail();
     if(!s.world||['rescue','bridge','bell'].some(key=>typeof s.world[key]!=='boolean')||!Array.isArray(s.journal)||s.journal.length>6||new Set(s.journal).size!==s.journal.length||s.journal.some(key=>!['rescue:start','rescue:done','bridge:done','bell:start','bell:done'].includes(key)))fail();
@@ -81,20 +81,21 @@
     if(s.silk!==null){const c=s.silk;if(!c||!K.isRanged(s)||!number(c.x,0,canonical.width)||!number(c.y,-1000,1000)||![180,240].includes(c.w)||!number(c.life,0,3)||![-1,1].includes(c.face))fail();silk={x:c.x,y:c.y,w:c.w,h:72,life:c.life,face:c.face};}
     const signature=K.readSignature(s,p,canonical,number,fail);
     const warrior=K.readWarrior(s,canonical,number,fail);
+    const celestial=K.readCelestial(s,canonical,number,fail);
     const restored=K.newRun(s.seed,null,s.hero,difficulty);K.enterRoom(restored,s.stage,true);
     for(const key of ['time','elapsed','roomTime','kills','broken','damageTaken','lastDamage','hitstop','shake','checkpoint','combo','comboTime','serial','rewardKind','pendingRelic'])restored[key]=s[key];
-    Object.assign(restored,warrior);restored.arm=signature.arm;restored.flight=signature.flight;restored.ring=ring;restored.silk=silk;restored.player={...p,w:24,h:44};restored.growth={...s.growth};restored.talisman=s.talisman?{id:s.talisman.id,charges:s.talisman.charges}:null;restored.casts=s.casts.map(c=>({x:c.x,y:c.y,w:c.w,h:c.h,timer:c.timer}));restored.room=canonical;restored.world={rescue:s.world.rescue,bridge:s.world.bridge,bell:s.world.bell};restored.journal=s.journal.slice();restored.dangers=s.dangers.map(d=>({x:d.x,y:d.y,w:d.w,h:d.h,life:d.life,damage:d.damage,source:d.source}));K.applyWorld(restored);restored.relics=s.relics.slice();restored.reward=s.reward.slice();restored.clone=clone;restored.projectiles=projectiles;restored.hints=s.hints.slice();restored.mode=s.mode==='playing'?'paused':s.mode;
+    Object.assign(restored,warrior);restored.celestial=celestial;restored.arm=signature.arm;restored.flight=signature.flight;restored.ring=ring;restored.silk=silk;restored.player={...p,w:24,h:44};restored.growth={...s.growth};restored.talisman=s.talisman?{id:s.talisman.id,charges:s.talisman.charges}:null;restored.casts=s.casts.map(c=>({x:c.x,y:c.y,w:c.w,h:c.h,timer:c.timer}));restored.room=canonical;restored.world={rescue:s.world.rescue,bridge:s.world.bridge,bell:s.world.bell};restored.journal=s.journal.slice();restored.dangers=s.dangers.map(d=>({x:d.x,y:d.y,w:d.w,h:d.h,life:d.life,damage:d.damage,source:d.source}));K.applyWorld(restored);restored.relics=s.relics.slice();restored.reward=s.reward.slice();restored.clone=clone;restored.projectiles=projectiles;restored.hints=s.hints.slice();restored.mode=s.mode==='playing'?'paused':s.mode;
     restored.runId=typeof s.runId==='string'?s.runId.slice(0,100):s.seed+':imported';
     for(const key of Object.keys(restored.stats)){if(!number(s.stats?.[key],0,1e7))fail();restored.stats[key]=s.stats[key];}
     return {state:restored,meta:K.cleanMeta(data.meta)};
   };
-  K.pack=(state,meta)=>JSON.stringify({game:'black-lotus',schema:8,build:K.VERSION,state,meta:K.cleanMeta(meta)});
+  K.pack=(state,meta)=>JSON.stringify({game:'black-lotus',schema:9,build:K.VERSION,state,meta:K.cleanMeta(meta)});
   K.download=function(raw,name){const url=URL.createObjectURL(new Blob([raw],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
   K.Storage=class{
-    constructor(){this.available=true;this.error='';this.legacy=null;try{for(const key of[LEGACY,PREVIOUS,THIRD,FOURTH,FIFTH,SIXTH,SEVENTH]){const raw=localStorage.getItem(key);if(raw&&raw.length<1000000){const x=JSON.parse(raw);if(x.game==='black-lotus'&&[1,2,3,4,5,6,7].includes(x.state?.version)&&x.schema===x.state.version)this.legacy=x;}}}catch{this.available=false;}}
+    constructor(){this.available=true;this.error='';this.legacy=null;try{for(const key of[LEGACY,PREVIOUS,THIRD,FOURTH,FIFTH,SIXTH,SEVENTH,EIGHTH]){const raw=localStorage.getItem(key);if(raw&&raw.length<1000000){const x=JSON.parse(raw);if(x.game==='black-lotus'&&[1,2,3,4,5,6,7,8].includes(x.state?.version)&&x.schema===x.state.version)this.legacy=x;}}}catch{this.available=false;}}
     read(){try{const raw=localStorage.getItem(KEY);if(!raw)return null;if(raw.length>1000000)fail();return K.validSave(JSON.parse(raw));}catch(e){this.error=e.message;return null;}}
     write(state,meta){try{localStorage.setItem(KEY,K.pack(state,meta));this.available=true;return true;}catch{this.available=false;return false;}}
-    export(state,meta){K.download(K.pack(state,meta),'劫后行-v8-'+(state.difficulty==='challenge'?'重劫-':'')+state.seed+'.json');}
+    export(state,meta){K.download(K.pack(state,meta),'劫后行-v9-'+(state.difficulty==='challenge'?'重劫-':'')+state.seed+'.json');}
     import(raw){if(raw.length>1000000)throw new Error('存档文件过大。');return K.validSave(JSON.parse(raw));}
     readSettings(){try{const x=JSON.parse(localStorage.getItem(SETTINGS)||'{}');return {volume:number(x.volume,0,1)?x.volume:.25,shake:typeof x.shake==='boolean'?x.shake:!matchMedia('(prefers-reduced-motion: reduce)').matches};}catch{return{volume:.25,shake:false};}}
     settings(value){try{localStorage.setItem(SETTINGS,JSON.stringify(value));}catch{}}

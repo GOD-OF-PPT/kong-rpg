@@ -22,7 +22,7 @@
         const powered=K.isChallenge(s)&&!K.isMajor(e),id=K.EnemyMarkerFrames[e.trait]?e.trait:powered?'empowered':warning?'intent':null;
         if(!id)continue;
         const size=warning?34:24,half=size/2;
-        items.push({enemy:e,id,warning,powered,size,x:Math.round(K.clamp(e.x+e.w/2-camera,half+3,957-half)),y:Math.round(K.clamp(e.y-43,half+3,537-half))});
+        items.push({enemy:e,id,warning,powered,size,x:Math.round(K.clamp(e.x+e.w/2-camera,half+3,957-half)),y:Math.round(K.clamp(K.enemyMarkerY?K.enemyMarkerY(e):e.y-43,half+3,537-half))});
       }
       // Prioritise a real attack over a persistent trait. Resolve nearby seals
       // within a short tether, keeping stable positions as the camera moves.

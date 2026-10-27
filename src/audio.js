@@ -64,6 +64,10 @@
       if(e.type==='staff-extend'){this.sweep(370,95,.13,.075);this.noise(.065,.04);}
       if(e.type==='staff-vault'){this.sweep(210,620,.2,.07);this.sample('ground-slam',.35,1);}
       if(e.type==='wheel-start'){this.noise(.12,.035);this.sweep(240,670,.18,.06);}
+      if(e.type==='art-learn'){[440,660,880].forEach((f,i)=>this.tone(f,.18,'sine',.07,i*.07));}
+      if(e.type==='art-start'){this.sweep(e.id==='eye-beam'?180:120,e.id==='eye-beam'?1200:520,.3,.08);this.noise(.08,.04);}
+      if(e.type==='art-impact'){this.sample('ultimate-hit',.85,3);this.sweep(180,32,.35,.12);}
+      if(e.type==='art-pulse'){if(e.id==='eye-beam')this.sweep(940,760,.12,.035);else this.noise(.075,.04);}
       if(e.type==='ultimate'){this.sweep(95,360,.2,.13);this.tone(146.83,.7,'triangle',.12);this.tone(293.66,.65,'sine',.1,.13);}
       if(e.type==='ultimate-hit'&&!this.sample('ultimate-hit',.85,3)){this.sweep(190,35,.3,.17);this.noise(.2,.16);}
       if(e.type==='ultimate-ready'){[440,660,880].forEach((f,i)=>this.tone(f,.17,'sine',.07,i*.08));}
@@ -89,7 +93,7 @@
     }
     setScreen(screen){
       this.screen=screen;
-      const mode=screen==='playing'?'playing':['dead','won','epilogue','legacy'].includes(screen)?'silent':['paused','build'].includes(screen)?'quiet':['reward','replace'].includes(screen)?'reading':screen==='help'&&this.music?.current?.id==='gameplay'?'quiet':'menu';
+      const mode=screen==='playing'?'playing':['dead','won','epilogue','legacy'].includes(screen)?'silent':['paused','build'].includes(screen)?'quiet':['reward','replace','art-choice'].includes(screen)?'reading':screen==='help'&&this.music?.current?.id==='gameplay'?'quiet':'menu';
       this.music?.setScene(mode);
     }
     tick(){this.music?.tick();}

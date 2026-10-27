@@ -1,7 +1,7 @@
 (function (K) {
   'use strict';
   K.newRun = function (seed, first, hero='wukong',difficulty='normal') {
-    const s = { version:8,rules:8,hero,ring:null,silk:null,arm:null,flight:null,growth:{},talisman:null,casts:[],world:{rescue:false,bridge:false,bell:false},journal:[],dangers:[],seed:String(seed || 'BLACK-LOTUS'), stage:0, mode:'playing',time:0,elapsed:0,roomTime:0,relics:first?[first]:[],room:null,player:null,clone:null,projectiles:[],effects:[],events:[],log:[],reward:[],rewardKind:'exit',pendingRelic:null,kills:0,broken:0,damageTaken:0,lastDamage:'',hitstop:0,shake:0,checkpoint:90,combo:0,comboTime:0,serial:0,hints:[],stats:{swings:0,hits:0,blocks:0,jumps:0,dashes:0,clones:0,focusSpent:0,rests:0,ultimates:0,talismans:0,guardians:0,drops:0,camps:0,trials:0,farHits:0,extends:0,tipHits:0,vaults:0,flights:0} };
+    const s = { version:9,rules:9,hero,ring:null,silk:null,arm:null,flight:null,growth:{},talisman:null,casts:[],world:{rescue:false,bridge:false,bell:false},journal:[],dangers:[],seed:String(seed || 'BLACK-LOTUS'), stage:0, mode:'playing',time:0,elapsed:0,roomTime:0,relics:first?[first]:[],room:null,player:null,clone:null,projectiles:[],effects:[],events:[],log:[],reward:[],rewardKind:'exit',pendingRelic:null,kills:0,broken:0,damageTaken:0,lastDamage:'',hitstop:0,shake:0,checkpoint:90,combo:0,comboTime:0,serial:0,hints:[],stats:{swings:0,hits:0,blocks:0,jumps:0,dashes:0,clones:0,focusSpent:0,rests:0,ultimates:0,talismans:0,guardians:0,drops:0,camps:0,trials:0,farHits:0,extends:0,tipHits:0,vaults:0,flights:0} };
     s.difficulty=difficulty==='challenge'?'challenge':'normal';s.challengeRules=s.difficulty==='challenge'?1:0;
     K.enterRoom(s, 0, true); return s;
   };
@@ -13,7 +13,7 @@
     K.event(s, 'room', { stage });
   };
   K.event = function(s,type,data={}){const e={type,t:+s.time.toFixed(3),wall:+(s.elapsed||0).toFixed(3),...data};s.events.push(e);s.log.push(e);if(s.log.length>400)s.log.shift();const stat={swing:'swings',hit:'hits',blocked:'blocks',jump:'jumps',dash:'dashes',clone:'clones'}[type];if(stat&&s.stats)s.stats[stat]++;};
-  const LIFETIMES={hit:.16,'heavy-hit':.26,block:.18,kill:.32,hurt:.3,ring:.28,reflect:.25,dust:.2,trail:.13,'clone-swing':.2,rubble:.38,'world-rise':.8,'ultimate-aura':.86,'ultimate-wave':.36,ward:1.6,'thunder-mark':.24,thunder:.3};
+  const LIFETIMES={'celestial-slam':.48,'six-strike':.2,hit:.16,'heavy-hit':.26,block:.18,kill:.32,hurt:.3,ring:.28,reflect:.25,dust:.2,trail:.13,'clone-swing':.2,rubble:.38,'world-rise':.8,'ultimate-aura':.86,'ultimate-wave':.36,ward:1.6,'thunder-mark':.24,thunder:.3};
   K.effect=function(s,kind,x,y,extra={}){const duration=LIFETIMES[kind]||.42;s.effects.push({kind,x,y,life:duration,duration,...extra});if(s.effects.length>120)s.effects.splice(0,s.effects.length-120);};
   K.attackTiming=p=>p.comboIndex===3?{start:.12,end:.255}:p.comboIndex===2?{start:.075,end:.195}:{start:.045,end:.145};
   K.damage = function (s, n, source, knock = 0) {
@@ -103,7 +103,7 @@
     }
     if (p.dash > 0) { p.dash = Math.max(0, p.dash - dt); p.vx = p.face * 650; p.vy = 0; if (Math.floor(s.time * 45) % 2 === 0) K.effect(s, 'trail', p.x, p.y, { face: p.face }); }
     else if(s.flight){K.driveFlight(s,a,dt);}
-    else if (!p.slam) { const target = moving * (s.arm?.phase==='charge'?.45:1) * (p.attack > .08 && p.grounded ? 125 : 245); p.vx += (target - p.vx) * Math.min(1, dt * (p.grounded ? 18 : 10)); p.vy = Math.min(p.vy + 1570 * dt, 800); }
+    else if (!p.slam) { const target = moving * (s.celestial?.cast?.id==='orbit-staff'?.5:1) * (s.arm?.phase==='charge'?.45:1) * (p.attack > .08 && p.grounded ? 125 : 245); p.vx += (target - p.vx) * Math.min(1, dt * (p.grounded ? 18 : 10)); p.vy = Math.min(p.vy + 1570 * dt, 800); }
     p.x = K.clamp(p.x + p.vx * dt, 8, s.room.width - p.w - 8); p.y += p.vy * dt; p.grounded = false;K.updateArena(s);
     if(p.dash>0&&K.rank(s,'dash-strike'))K.strike(s,{x:p.x-9,y:p.y-2,w:42,h:50},18,p.x+12,true,p.dashTargets,'heavy');
     for (const platform of s.room.platforms) if (K.platformEnabled(platform)&&(platform.solid||p.drop===0) && p.vy >= 0 && oldY + p.h <= platform.y + 5 && p.y + p.h >= platform.y && p.x + p.w > platform.x + 2 && p.x < platform.x + platform.w - 2) {

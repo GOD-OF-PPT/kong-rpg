@@ -1,19 +1,19 @@
-# 大圣 · 劫后行 v8.0.1
+# 大圣 · 劫后行 v9.0.0
 
 三兵与诸界：孙悟空、哪吒、杨戬可选的像素横版平台动作肉鸽。走过三境、破除八阵、击退三名守关者，最终挑战无天。玩法、角色和美术均基于用户设定创作，不宣称复刻电视剧中的具体战斗。
 
 ## 本版更新
 
-- 哪吒以火尖枪近战三连主攻，乾坤圈改为独立副武器，持环在外也能继续枪法。
-- 新增杨戬：三尖两刃刀、射雕弓、天眼识破、神行步，以及持续协战的哮天犬大招。
-- 沿原四境旅程加入云上断阶、天宫封廊、沉渊水道、龙宫珊庭、地府忘川五种连续作战区域，配套背景、地表和十种怪物主体。普通模式术士施放领域技能，近战守卫负责突刺/盾冲；挑战模式更多敌人参与施法。
-- 敌人采用暗红细轮廓，危险保持玫红预警；补给使用青绿底标、加号和不同物体形状，资源满时变暗。友方哮天犬有青色爪印，不靠红绿颜色单独传达关系。
+- 悟空新增两项可拾取秘技：撑天坠击升空后砸击当前画面；回身棍阵横向伸棍、多段周身控场。两式可学，当前只装备一式。
+- 哪吒新增三头六臂，杨戬新增三目神光。路边秘卷按F选择，按C释放，B查看代价并切换已学秘技；冷却共享，不因切换重置。
+- 强化三角色现有普攻、副武器、神通、变化、符术和大招的动作/能量/命中反馈；法天象地采用新的巨大金甲猴神姿态。
+- 三守关者和无天使用新的起手/释放精灵；普通怪、挑战招式、五领域技能、飞弹与地面危险增强材质，同时保留实际范围边界。
 
-制作目标与规则见[docs/v8/GOAL.md](docs/v8/GOAL.md)，实际验收与边界见[docs/v8/VERIFICATION.md](docs/v8/VERIFICATION.md)。
+制作目标见[docs/celestial-v9/GOAL.md](docs/celestial-v9/GOAL.md)，规则与美术依据见[docs/celestial-v9/DESIGN.md](docs/celestial-v9/DESIGN.md)，验收见[docs/celestial-v9/VERIFICATION.md](docs/celestial-v9/VERIFICATION.md)。
 
 ## 直接运行
 
-双击 `release/index.html`；或解压 `artifacts/kong-rpg-offline-v8.0.1.zip` 后双击包内 `index.html`。PC Edge / Chrome，无需网络、安装、CDN、字体下载或安全设置。保留同目录 `legacy-v1.html` 至 `legacy-v7.html`，供旧旅程继续。
+双击 `release/index.html`；或解压 `artifacts/kong-rpg-offline-v9.0.0.zip` 后双击包内 `index.html`。PC Edge / Chrome，无需网络、安装、CDN、字体下载或安全设置。保留同目录 `legacy-v1.html` 至 `legacy-v8.html`，供旧旅程继续。
 
 源码预览需要Node.js 18+，不需npm install：
 
@@ -32,6 +32,7 @@ npm run dev
 |H / 右键|分身（同L）|乾坤圈，12定力|射雕弓，18定力、0.22秒准备|
 |L|分身|混天绫|天眼识破，30定力|
 |U|按住蓄伸，松开刺；S松开撑跃|按住驭轮，W/空格升、S降|神行步，12定力|
+|C|撑天坠击 / 回身棍阵|三头六臂|三目神光|
 |R|法天象地|莲火轮阵|哮天逐邪，召犬协战8秒|
 
 右键朝光标投环/射箭，H水平出手。A/D或方向键移动；空格/W跳跃，长按高跳、松开短跳；S＋空格下穿；空中S＋J下劈。K/Shift闪避，Q使用携带符术，F交互/借灯/过门，B查看全部本局加成，Esc暂停。菜单可用鼠标、Tab/Enter，选人和奖励支持A/D、方向键与1/2/3。
@@ -48,16 +49,16 @@ npm run dev
 
 ## 保存与旧版
 
-v8使用schema8和独立键 `kong.black-lotus.v8`。每3秒及暂停/结算等时机自动保存；导出/导入可以恢复副武器、引弦、箭、天眼、哮天犬和敌招中间态。自动存储不可用时，用JSON导出保存进度。
+v9使用schema9和独立键 `kong.black-lotus.v9`。每3秒及暂停/结算等时机自动保存；导出/导入可以恢复秘技装备/共享冷却/施展中间态、参悟选择、副武器、引弦、箭、天眼、哮天犬和敌招中间态。自动存储不可用时，用JSON导出保存进度。
 
-v7.1.3原HTML已保留为 `legacy-v7.html`，旧v7存档走旧入口，不静默套用新武器或领域规则。更早版本入口也保留。HTTP与file自动存储按浏览器来源分开，可用JSON导出导入迁移同版本旅程。
+v8.0.1原HTML保留为 `legacy-v8.html`，旧v8存档走原规则入口，不会静默赋予新技能或改写旅程。更早版本入口也保留。HTTP与file自动存储按浏览器来源分开，可用JSON导出导入迁移同版本旅程。
 
 ## 美术、音乐与验证
 
-新增源图、归一图集、原始提示词和SHA记录在 `assets/v8/`。`tools/prepare-v8-art.py`仅进行明确裁切、共同比例、nearest-neighbour归一，保留真实RGBA。39张内嵌图、183条切片在打包时检查；关键姿态不等于完整手绘逐帧动画。
+新增源图、归一图集与SHA记录在 `assets/celestial-v9/`，完整提示词在 `docs/celestial-v9/PROMPTS.md`。`tools/prepare-celestial-art.py`仅进行明确裁切、共同比例、nearest-neighbour归一，保留真实RGBA。43张内嵌图、221条切片在打包时检查；关键姿态不等于完整手绘逐帧动画。
 
 背景音乐来自用户提供的 `assets/music/` 三首MP3：首次点击/按键后首页随机轮换，战斗单曲循环，切换淡变；原打击/预警音效继续使用。音乐和图像均内嵌发行HTML。
 
-`npm run verify`运行当前v8规则检查；`tools/browser-v8.cjs`为受控场景实机验收；`tools/playthrough-v8.cjs`为真实键鼠整局控制器。QA脚本需要Playwright，游戏发行包不需要。未取得真人试玩，不把自动操作或图片检查等同于主观乐趣认可。
+`npm run verify`运行当前v9规则检查；`tools/browser-celestial.cjs http|file`为本版受控场景与实际键鼠验收。旧v8工具和历史整局记录保留，不将其算作v9新通关证据。QA脚本需要Playwright，游戏发行包不需要。未取得真人试玩，不把自动操作或图片检查等同于主观乐趣认可。
 
 全量ZIP包含历史入口，超过GitHub单文件100MiB限制，作为本地交付物保留。重打包：`python tools/package-release.py`。

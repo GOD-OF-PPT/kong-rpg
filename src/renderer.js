@@ -88,7 +88,7 @@
       this.person('monkey',p.x,p.y,p.face,p.grounded?Math.abs(p.vx)>30?Math.floor(t*13)%4:0:2,p.invuln>0&&Math.floor(t*15)%2?.45:1,false);this.drawPlayerStatus?.(s);
       if(p.attack>0&&this.drawStaffArc){this.drawStaffArc(s);}else if(p.attack>0){const elapsed=p.attackDuration-p.attack;if(elapsed>=.055&&elapsed<.18){const b=K.attackBox(s);pixel(c,b.x,b.y+17,b.w,3,'#f4d296');pixel(c,p.face>0?b.x+b.w-4:b.x,b.y+7,4,22,'#e0ba77');}}
       if(p.slam)this.drawSlamTrail?.(s);
-      for(const b of s.projectiles){const col=b.friendly?'#95e0d3':'#da8ebc';pixel(c,b.x-3,b.y+3,b.w+6,b.h-6,col);pixel(c,b.x,b.y,b.w,b.h,col);pixel(c,b.x+3,b.y+3,b.w-6,b.h-6,b.friendly?'#e5f8cb':'#f5cae1');pixel(c,b.x-Math.sign(b.vx)*10,b.y+4,8,4,b.friendly?'#3d807e':'#75456e');}
+      for(const b of s.projectiles){if(this.drawProjectile){this.drawProjectile(b);continue;}const col=b.friendly?'#95e0d3':'#da8ebc';pixel(c,b.x-3,b.y+3,b.w+6,b.h-6,col);pixel(c,b.x,b.y,b.w,b.h,col);pixel(c,b.x+3,b.y+3,b.w-6,b.h-6,b.friendly?'#e5f8cb':'#f5cae1');pixel(c,b.x-Math.sign(b.vx)*10,b.y+4,8,4,b.friendly?'#3d807e':'#75456e');}
       for(const fx of s.effects)this.fx(fx,t);
       c.restore();
       // A sparse foreground particle layer, never the same colour as warnings.

@@ -1,12 +1,12 @@
 {
   "name": "kong-rpg",
-  "version": "8.0.1",
+  "version": "9.0.0",
   "private": true,
   "description": "大圣·劫后行 — standalone pixel action roguelite",
   "scripts": {
     "build": "node tools/build.cjs",
     "dev": "node tools/serve.cjs",
     "dev:lan": "node tools/serve.cjs --lan",
-    "verify": "node tools/verify-v8.cjs"
+    "verify": "node tools/verify-celestial.cjs"
   }
 }
