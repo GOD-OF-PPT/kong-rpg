@@ -1,0 +1,1063 @@
+{
+  "kind": "http",
+  "baseline": false,
+  "version": "8.0.1",
+  "sha256": "838c0660504d91acc5c380ba6a54d21710a14c55b17e13a02ae98aced2a300e6",
+  "seed": "MARKERS-1027",
+  "method": "canonical schema8 scene imports; real DOM, keyboard and mouse; canvas capture at native 960x540; controlled art states, not natural full playthrough",
+  "checks": [
+    {
+      "name": "embedded artwork decodes",
+      "pass": true
+    },
+    {
+      "name": "all six ImageGen glyphs survive actual small-size sampling",
+      "pass": true,
+      "data": [
+        {
+          "id": "twin",
+          "solid": 259
+        },
+        {
+          "id": "pulse",
+          "solid": 288
+        },
+        {
+          "id": "volley",
+          "solid": 260
+        },
+        {
+          "id": "empowered",
+          "solid": 240
+        },
+        {
+          "id": "intent",
+          "solid": 176
+        },
+        {
+          "id": "warning",
+          "solid": 174
+        }
+      ]
+    },
+    {
+      "name": "traits imports and runs",
+      "pass": true
+    },
+    {
+      "name": "windup imports and runs",
+      "pass": true
+    },
+    {
+      "name": "hurt imports and runs",
+      "pass": true
+    },
+    {
+      "name": "chain imports and runs",
+      "pass": true
+    },
+    {
+      "name": "challenge imports and runs",
+      "pass": true
+    },
+    {
+      "name": "guardian imports and runs",
+      "pass": true
+    },
+    {
+      "name": "boss imports and runs",
+      "pass": true
+    },
+    {
+      "name": "realm imports and runs",
+      "pass": true
+    },
+    {
+      "name": "edge and low-ceiling badges remain inside canvas",
+      "pass": true,
+      "data": [
+        {
+          "id": 1,
+          "x": 303,
+          "y": 20,
+          "size": 34,
+          "warning": true
+        },
+        {
+          "id": 2,
+          "x": 360,
+          "y": 21,
+          "size": 34,
+          "warning": true
+        },
+        {
+          "id": 3,
+          "x": 25,
+          "y": 357,
+          "size": 34,
+          "warning": true
+        },
+        {
+          "id": 4,
+          "x": 940,
+          "y": 357,
+          "size": 34,
+          "warning": true
+        }
+      ]
+    },
+    {
+      "name": "nearby badges do not overpaint each other 1:0",
+      "pass": true
+    },
+    {
+      "name": "nearby badges do not overpaint each other 2:0",
+      "pass": true
+    },
+    {
+      "name": "nearby badges do not overpaint each other 2:1",
+      "pass": true
+    },
+    {
+      "name": "nearby badges do not overpaint each other 3:0",
+      "pass": true
+    },
+    {
+      "name": "nearby badges do not overpaint each other 3:1",
+      "pass": true
+    },
+    {
+      "name": "nearby badges do not overpaint each other 3:2",
+      "pass": true
+    },
+    {
+      "name": "keyboard attack still operates",
+      "pass": true
+    }
+  ],
+  "scenes": [
+    {
+      "name": "traits",
+      "state": [
+        {
+          "id": 600,
+          "kind": "blade",
+          "trait": "twin",
+          "phase": "recover",
+          "x": 710,
+          "y": 400
+        },
+        {
+          "id": 601,
+          "kind": "shield",
+          "trait": "pulse",
+          "phase": "recover",
+          "x": 845,
+          "y": 400
+        },
+        {
+          "id": 602,
+          "kind": "caster",
+          "trait": "volley",
+          "phase": "recover",
+          "x": 980,
+          "y": 325.0736817203387
+        }
+      ],
+      "elapsed": 0.3416666666666669
+    },
+    {
+      "name": "windup",
+      "state": [
+        {
+          "id": 600,
+          "kind": "blade",
+          "trait": "twin",
+          "phase": "windup",
+          "x": 710,
+          "y": 400
+        },
+        {
+          "id": 601,
+          "kind": "shield",
+          "trait": "pulse",
+          "phase": "windup",
+          "x": 845,
+          "y": 400
+        },
+        {
+          "id": 602,
+          "kind": "caster",
+          "trait": "volley",
+          "phase": "windup",
+          "x": 980,
+          "y": 324.17046625522033
+        }
+      ],
+      "elapsed": 0.19999999999999998
+    },
+    {
+      "name": "hurt",
+      "state": [
+        {
+          "id": 600,
+          "kind": "blade",
+          "trait": "twin",
+          "phase": "recover",
+          "x": 710,
+          "y": 400
+        },
+        {
+          "id": 601,
+          "kind": "shield",
+          "trait": "pulse",
+          "phase": "recover",
+          "x": 845,
+          "y": 400
+        },
+        {
+          "id": 602,
+          "kind": "caster",
+          "trait": "volley",
+          "phase": "recover",
+          "x": 980,
+          "y": 324.2179790565704
+        }
+      ],
+      "elapsed": 0.20833333333333331
+    },
+    {
+      "name": "chain",
+      "state": [
+        {
+          "id": 600,
+          "kind": "blade",
+          "trait": "twin",
+          "phase": "chain-windup",
+          "x": 710,
+          "y": 400
+        },
+        {
+          "id": 601,
+          "kind": "shield",
+          "trait": "pulse",
+          "phase": "windup",
+          "x": 845,
+          "y": 400
+        },
+        {
+          "id": 602,
+          "kind": "caster",
+          "trait": "volley",
+          "phase": "windup",
+          "x": 980,
+          "y": 324.17046625522033
+        }
+      ],
+      "elapsed": 0.19999999999999998
+    },
+    {
+      "name": "challenge",
+      "state": [
+        {
+          "id": 600,
+          "kind": "blade",
+          "trait": "twin",
+          "phase": "windup",
+          "x": 710,
+          "y": 400
+        },
+        {
+          "id": 601,
+          "kind": "shield",
+          "trait": "pulse",
+          "phase": "windup",
+          "x": 845,
+          "y": 400
+        },
+        {
+          "id": 602,
+          "kind": "caster",
+          "trait": "volley",
+          "phase": "windup",
+          "x": 980,
+          "y": 324.17046625522033
+        }
+      ],
+      "elapsed": 0.19999999999999998
+    },
+    {
+      "name": "guardian",
+      "state": [
+        {
+          "id": 900,
+          "kind": "warden",
+          "phase": "warden-windup",
+          "x": 710,
+          "y": 400
+        }
+      ],
+      "elapsed": 0.20833333333333331
+    },
+    {
+      "name": "boss",
+      "state": [
+        {
+          "id": 0,
+          "kind": "boss",
+          "phase": "sweep-windup",
+          "x": 710,
+          "y": 400
+        }
+      ],
+      "elapsed": 0.20833333333333331
+    },
+    {
+      "name": "realm",
+      "state": [
+        {
+          "id": 7,
+          "kind": "caster",
+          "phase": "realm-echo",
+          "x": 780,
+          "y": 240.5948323832465
+        }
+      ],
+      "elapsed": 0.19999999999999998
+    }
+  ],
+  "errors": [],
+  "network": [
+    "http://127.0.0.1:5188/release/index.html?markers=1793093693842"
+  ],
+  "browser": "156.0.4314.42",
+  "failure": "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#overlay')\u001b[22m\n\u001b[2m    - locator resolved to <div id=\"overlay\">…</div>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <section id=\"stage\" data-mode=\"paused\" aria-label=\"横版游戏区域\">…</section> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <section id=\"stage\" data-mode=\"paused\" aria-label=\"横版游戏区域\">…</section> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    58 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <section id=\"stage\" data-mode=\"paused\" aria-label=\"横版游戏区域\">…</section> intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n    at E:\\githome\\kong-rpg\\tools\\browser-markers.cjs:47:289",
+  "recording": {
+    "file": "E:\\githome\\kong-rpg\\evidence\\enemy-markers\\http\\marker-states.mp4",
+    "fps": 5,
+    "frames": [
+      {
+        "index": 0,
+        "ms": 139.43
+      },
+      {
+        "index": 1,
+        "ms": 231.77
+      },
+      {
+        "index": 2,
+        "ms": 466.29
+      },
+      {
+        "index": 3,
+        "ms": 643.72
+      },
+      {
+        "index": 4,
+        "ms": 848.44
+      },
+      {
+        "index": 5,
+        "ms": 1053.78
+      },
+      {
+        "index": 6,
+        "ms": 1261.07
+      },
+      {
+        "index": 7,
+        "ms": 1468.39
+      },
+      {
+        "index": 8,
+        "ms": 1659.76
+      },
+      {
+        "index": 9,
+        "ms": 1869.19
+      },
+      {
+        "index": 10,
+        "ms": 2197.79
+      },
+      {
+        "index": 11,
+        "ms": 2285.27
+      },
+      {
+        "index": 12,
+        "ms": 2488.37
+      },
+      {
+        "index": 13,
+        "ms": 2690.25
+      },
+      {
+        "index": 14,
+        "ms": 2883.2
+      },
+      {
+        "index": 15,
+        "ms": 3092.83
+      },
+      {
+        "index": 16,
+        "ms": 3299.59
+      },
+      {
+        "index": 17,
+        "ms": 3527.13
+      },
+      {
+        "index": 18,
+        "ms": 3715.1
+      },
+      {
+        "index": 19,
+        "ms": 3928.57
+      },
+      {
+        "index": 20,
+        "ms": 4288.36
+      },
+      {
+        "index": 21,
+        "ms": 4315.13
+      },
+      {
+        "index": 22,
+        "ms": 4521.82
+      },
+      {
+        "index": 23,
+        "ms": 4731.24
+      },
+      {
+        "index": 24,
+        "ms": 5021.76
+      },
+      {
+        "index": 25,
+        "ms": 5137.52
+      },
+      {
+        "index": 26,
+        "ms": 5341.82
+      },
+      {
+        "index": 27,
+        "ms": 5556.99
+      },
+      {
+        "index": 28,
+        "ms": 5773.29
+      },
+      {
+        "index": 29,
+        "ms": 5950.06
+      },
+      {
+        "index": 30,
+        "ms": 6158.48
+      },
+      {
+        "index": 31,
+        "ms": 6369.35
+      },
+      {
+        "index": 32,
+        "ms": 6573.13
+      },
+      {
+        "index": 33,
+        "ms": 6779
+      },
+      {
+        "index": 34,
+        "ms": 6980.36
+      },
+      {
+        "index": 35,
+        "ms": 7183.56
+      },
+      {
+        "index": 36,
+        "ms": 7382.92
+      },
+      {
+        "index": 37,
+        "ms": 7589
+      },
+      {
+        "index": 38,
+        "ms": 7788.54
+      },
+      {
+        "index": 39,
+        "ms": 7992.55
+      },
+      {
+        "index": 40,
+        "ms": 8200.71
+      },
+      {
+        "index": 41,
+        "ms": 8398.8
+      },
+      {
+        "index": 42,
+        "ms": 8598.12
+      },
+      {
+        "index": 43,
+        "ms": 8805.81
+      },
+      {
+        "index": 44,
+        "ms": 9009.77
+      },
+      {
+        "index": 45,
+        "ms": 9209.13
+      },
+      {
+        "index": 46,
+        "ms": 9407.76
+      },
+      {
+        "index": 47,
+        "ms": 9611.21
+      },
+      {
+        "index": 48,
+        "ms": 9816.34
+      },
+      {
+        "index": 49,
+        "ms": 10017.84
+      },
+      {
+        "index": 50,
+        "ms": 10224.11
+      },
+      {
+        "index": 51,
+        "ms": 10422.09
+      },
+      {
+        "index": 52,
+        "ms": 10632.46
+      },
+      {
+        "index": 53,
+        "ms": 10827.3
+      },
+      {
+        "index": 54,
+        "ms": 11034.49
+      },
+      {
+        "index": 55,
+        "ms": 11233.74
+      },
+      {
+        "index": 56,
+        "ms": 11440.41
+      },
+      {
+        "index": 57,
+        "ms": 11638.83
+      },
+      {
+        "index": 58,
+        "ms": 11845.52
+      },
+      {
+        "index": 59,
+        "ms": 12049.93
+      },
+      {
+        "index": 60,
+        "ms": 12255.44
+      },
+      {
+        "index": 61,
+        "ms": 12454.87
+      },
+      {
+        "index": 62,
+        "ms": 12664.92
+      },
+      {
+        "index": 63,
+        "ms": 12860.17
+      },
+      {
+        "index": 64,
+        "ms": 13062.85
+      },
+      {
+        "index": 65,
+        "ms": 13265.88
+      },
+      {
+        "index": 66,
+        "ms": 13467.71
+      },
+      {
+        "index": 67,
+        "ms": 13671.68
+      },
+      {
+        "index": 68,
+        "ms": 13876.85
+      },
+      {
+        "index": 69,
+        "ms": 14076.33
+      },
+      {
+        "index": 70,
+        "ms": 14282.51
+      },
+      {
+        "index": 71,
+        "ms": 14480.85
+      },
+      {
+        "index": 72,
+        "ms": 14682.3
+      },
+      {
+        "index": 73,
+        "ms": 14886.46
+      },
+      {
+        "index": 74,
+        "ms": 15095.16
+      },
+      {
+        "index": 75,
+        "ms": 15292.32
+      },
+      {
+        "index": 76,
+        "ms": 15499.55
+      },
+      {
+        "index": 77,
+        "ms": 15706.24
+      },
+      {
+        "index": 78,
+        "ms": 15908.72
+      },
+      {
+        "index": 79,
+        "ms": 16109.46
+      },
+      {
+        "index": 80,
+        "ms": 16311.3
+      },
+      {
+        "index": 81,
+        "ms": 16514.59
+      },
+      {
+        "index": 82,
+        "ms": 16714.59
+      },
+      {
+        "index": 83,
+        "ms": 16913.79
+      },
+      {
+        "index": 84,
+        "ms": 17117.69
+      },
+      {
+        "index": 85,
+        "ms": 17318.95
+      },
+      {
+        "index": 86,
+        "ms": 17528.51
+      },
+      {
+        "index": 87,
+        "ms": 17726.58
+      },
+      {
+        "index": 88,
+        "ms": 17937.48
+      },
+      {
+        "index": 89,
+        "ms": 18135.48
+      },
+      {
+        "index": 90,
+        "ms": 18344.22
+      },
+      {
+        "index": 91,
+        "ms": 18542.05
+      },
+      {
+        "index": 92,
+        "ms": 18749.69
+      },
+      {
+        "index": 93,
+        "ms": 18951.72
+      },
+      {
+        "index": 94,
+        "ms": 19152.77
+      },
+      {
+        "index": 95,
+        "ms": 19357.56
+      },
+      {
+        "index": 96,
+        "ms": 19560.83
+      },
+      {
+        "index": 97,
+        "ms": 19766.75
+      },
+      {
+        "index": 98,
+        "ms": 19969.91
+      },
+      {
+        "index": 99,
+        "ms": 20179.06
+      },
+      {
+        "index": 100,
+        "ms": 20376.6
+      },
+      {
+        "index": 101,
+        "ms": 20582.12
+      },
+      {
+        "index": 102,
+        "ms": 20782.06
+      },
+      {
+        "index": 103,
+        "ms": 20986.13
+      },
+      {
+        "index": 104,
+        "ms": 21193.6
+      },
+      {
+        "index": 105,
+        "ms": 21397
+      },
+      {
+        "index": 106,
+        "ms": 21597.35
+      },
+      {
+        "index": 107,
+        "ms": 21802.99
+      },
+      {
+        "index": 108,
+        "ms": 22007.35
+      },
+      {
+        "index": 109,
+        "ms": 22207.56
+      },
+      {
+        "index": 110,
+        "ms": 22413.05
+      },
+      {
+        "index": 111,
+        "ms": 22617.16
+      },
+      {
+        "index": 112,
+        "ms": 22818.29
+      },
+      {
+        "index": 113,
+        "ms": 23022.48
+      },
+      {
+        "index": 114,
+        "ms": 23223.88
+      },
+      {
+        "index": 115,
+        "ms": 23428.16
+      },
+      {
+        "index": 116,
+        "ms": 23628.58
+      },
+      {
+        "index": 117,
+        "ms": 23832.53
+      },
+      {
+        "index": 118,
+        "ms": 24033.74
+      },
+      {
+        "index": 119,
+        "ms": 24242.54
+      },
+      {
+        "index": 120,
+        "ms": 24445.59
+      },
+      {
+        "index": 121,
+        "ms": 24646.12
+      },
+      {
+        "index": 122,
+        "ms": 24853.65
+      },
+      {
+        "index": 123,
+        "ms": 25053.51
+      },
+      {
+        "index": 124,
+        "ms": 25258.42
+      },
+      {
+        "index": 125,
+        "ms": 25455.32
+      },
+      {
+        "index": 126,
+        "ms": 25661.25
+      },
+      {
+        "index": 127,
+        "ms": 25865.54
+      },
+      {
+        "index": 128,
+        "ms": 26076.05
+      },
+      {
+        "index": 129,
+        "ms": 26271.25
+      },
+      {
+        "index": 130,
+        "ms": 26477.34
+      },
+      {
+        "index": 131,
+        "ms": 26678.61
+      },
+      {
+        "index": 132,
+        "ms": 26877.9
+      },
+      {
+        "index": 133,
+        "ms": 27082.37
+      },
+      {
+        "index": 134,
+        "ms": 27282.63
+      },
+      {
+        "index": 135,
+        "ms": 27487.2
+      },
+      {
+        "index": 136,
+        "ms": 27691.45
+      },
+      {
+        "index": 137,
+        "ms": 27887.01
+      },
+      {
+        "index": 138,
+        "ms": 28100.79
+      },
+      {
+        "index": 139,
+        "ms": 28304.62
+      },
+      {
+        "index": 140,
+        "ms": 28504.64
+      },
+      {
+        "index": 141,
+        "ms": 28710.94
+      },
+      {
+        "index": 142,
+        "ms": 28912.08
+      },
+      {
+        "index": 143,
+        "ms": 29114.82
+      },
+      {
+        "index": 144,
+        "ms": 29321.6
+      },
+      {
+        "index": 145,
+        "ms": 29521.96
+      },
+      {
+        "index": 146,
+        "ms": 29726.75
+      },
+      {
+        "index": 147,
+        "ms": 29933.1
+      },
+      {
+        "index": 148,
+        "ms": 30135.74
+      },
+      {
+        "index": 149,
+        "ms": 30340.94
+      },
+      {
+        "index": 150,
+        "ms": 30536.82
+      },
+      {
+        "index": 151,
+        "ms": 30744.71
+      },
+      {
+        "index": 152,
+        "ms": 30952.72
+      },
+      {
+        "index": 153,
+        "ms": 31154.17
+      },
+      {
+        "index": 154,
+        "ms": 31363.12
+      },
+      {
+        "index": 155,
+        "ms": 31562.8
+      },
+      {
+        "index": 156,
+        "ms": 31766.43
+      },
+      {
+        "index": 157,
+        "ms": 31968.98
+      },
+      {
+        "index": 158,
+        "ms": 32174.31
+      },
+      {
+        "index": 159,
+        "ms": 32377.27
+      },
+      {
+        "index": 160,
+        "ms": 32585.19
+      },
+      {
+        "index": 161,
+        "ms": 32790.43
+      },
+      {
+        "index": 162,
+        "ms": 32988.43
+      },
+      {
+        "index": 163,
+        "ms": 33193.36
+      },
+      {
+        "index": 164,
+        "ms": 33402.06
+      },
+      {
+        "index": 165,
+        "ms": 33608.11
+      },
+      {
+        "index": 166,
+        "ms": 33806.35
+      },
+      {
+        "index": 167,
+        "ms": 34010.56
+      },
+      {
+        "index": 168,
+        "ms": 34212.56
+      },
+      {
+        "index": 169,
+        "ms": 34415.99
+      },
+      {
+        "index": 170,
+        "ms": 34614.77
+      },
+      {
+        "index": 171,
+        "ms": 34822.59
+      },
+      {
+        "index": 172,
+        "ms": 35019.64
+      },
+      {
+        "index": 173,
+        "ms": 35229.14
+      },
+      {
+        "index": 174,
+        "ms": 35434.14
+      },
+      {
+        "index": 175,
+        "ms": 35633.32
+      },
+      {
+        "index": 176,
+        "ms": 35835.28
+      },
+      {
+        "index": 177,
+        "ms": 36039.05
+      },
+      {
+        "index": 178,
+        "ms": 36244.5
+      },
+      {
+        "index": 179,
+        "ms": 36672.02
+      }
+    ],
+    "method": "continuous page screenshots at requested 5Hz; JSON contains actual capture times",
+    "error": ""
+  }
+}

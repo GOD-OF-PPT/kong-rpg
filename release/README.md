@@ -1,4 +1,4 @@
-# 大圣 · 劫后行 v8.0.0
+# 大圣 · 劫后行 v8.0.1
 
 三兵与诸界：孙悟空、哪吒、杨戬可选的像素横版平台动作肉鸽。走过三境、破除八阵、击退三名守关者，最终挑战无天。玩法、角色和美术均基于用户设定创作，不宣称复刻电视剧中的具体战斗。
 
@@ -13,7 +13,7 @@
 
 ## 直接运行
 
-双击 `release/index.html`；或解压 `artifacts/kong-rpg-offline-v8.0.0.zip` 后双击包内 `index.html`。PC Edge / Chrome，无需网络、安装、CDN、字体下载或安全设置。保留同目录 `legacy-v1.html` 至 `legacy-v7.html`，供旧旅程继续。
+双击 `release/index.html`；或解压 `artifacts/kong-rpg-offline-v8.0.1.zip` 后双击包内 `index.html`。PC Edge / Chrome，无需网络、安装、CDN、字体下载或安全设置。保留同目录 `legacy-v1.html` 至 `legacy-v7.html`，供旧旅程继续。
 
 源码预览需要Node.js 18+，不需npm install：
 

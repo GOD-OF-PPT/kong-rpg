@@ -4,9 +4,7 @@
     combatCues(){
       super.combatCues();const s=this.scene;if(!s||!K.isChallenge(s))return;const c=this.c;
       for(const e of s.room.enemies)if(e.hp>0&&!e.dormant){
-        // A small split crest identifies empowered enemies without recoloring
-        // their bodies or disguising the existing hurt/warning silhouettes.
-        if(!K.isMajor(e)){c.fillStyle='#e8b675';c.fillRect(e.x+7,e.y-49,3,6);c.fillRect(e.x+14,e.y-49,3,6);c.fillRect(e.x+10,e.y-52,4,3);}
+        // Challenge power is integrated into the shared battle seal.
         for(const b of K.challengeWarningBoxes(e)){
           this.mark(b);if(b.h>40)this.sigFx('air-warning',b.x,b.y,b.w,b.h,.5);
           // The second lock has two tabs; it is a new warning, never a mark

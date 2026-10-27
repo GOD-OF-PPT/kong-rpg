@@ -18,12 +18,9 @@
       if(s.stage===3&&!this.image('mapTerrain')){const a=s.room.arena;for(let y=290;y<440;y+=15)rect(c,a.enter-3,y,3,7,s.room.seals.some(q=>q.hp>0)?'#b879b2':'#b7c6a1');}
       this.drawMapProps?.();
       for(const e of s.room.enemies)if(e.hp>0&&!e.dormant&&e.trait){
-        const col={twin:'#edb58c',pulse:'#e4cb89',volley:'#bcace4'}[e.trait],x=e.x+e.w/2,y=e.y-45;
-        // Shape signatures remain distinct even without colour.
-        if(e.trait==='twin'){for(const dx of[-5,3]){rect(c,x+dx,y,2,9,col);rect(c,x+dx-2,y+7,6,2,col);}}
-        if(e.trait==='pulse'){rect(c,x-7,y,14,2,col);rect(c,x-7,y+2,2,7,col);rect(c,x+5,y+2,2,7,col);rect(c,x-5,y+9,10,2,col);}
-        if(e.trait==='volley')for(const dx of[-7,0,7])rect(c,x+dx,y+Math.abs(dx)*.5,3,3,col);
-        if(e.phase==='chain-windup'){this.mark(K.enemyAttackBox(e));rect(c,x-5,y-7,3,4,'#ffe3a1');rect(c,x+2,y-7,3,4,'#ffe3a1');}
+        const col={twin:'#edb58c',pulse:'#e4cb89',volley:'#bcace4'}[e.trait];
+        // Overhead emblems are composited once by enemy-marker-art.js.
+        if(e.phase==='chain-windup')this.mark(K.enemyAttackBox(e));
         if(e.trait==='pulse'&&e.phase==='windup'){rect(c,e.face>0?e.x:e.x-250,435,250,2,'#d9bd80');}
         if(e.trait==='volley'&&e.phase==='windup'&&Number.isFinite(e.aimX)){
           const a=Math.atan2(e.aimY-e.y-16,e.aimX-e.x);for(const d of[-.24,0,.24])for(let i=1;i<9;i++)rect(c,e.x+Math.cos(a+d)*i*24,e.y+16+Math.sin(a+d)*i*24,2,2,col);

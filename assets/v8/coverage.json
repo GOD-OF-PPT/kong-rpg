@@ -104,6 +104,10 @@
       "width": 512,
       "height": 128
     },
+    "enemyBattleSeals": {
+      "width": 1536,
+      "height": 1024
+    },
     "v8ErlangPortrait": {
       "width": 299,
       "height": 417
@@ -2551,7 +2555,69 @@
           0
         ]
       }
+    ],
+    "EnemyMarkerFrames": [
+      {
+        "id": "twin",
+        "image": "enemyBattleSeals",
+        "r": [
+          0,
+          0,
+          512,
+          512
+        ]
+      },
+      {
+        "id": "pulse",
+        "image": "enemyBattleSeals",
+        "r": [
+          512,
+          0,
+          512,
+          512
+        ]
+      },
+      {
+        "id": "volley",
+        "image": "enemyBattleSeals",
+        "r": [
+          1024,
+          0,
+          512,
+          512
+        ]
+      },
+      {
+        "id": "empowered",
+        "image": "enemyBattleSeals",
+        "r": [
+          0,
+          512,
+          512,
+          512
+        ]
+      },
+      {
+        "id": "intent",
+        "image": "enemyBattleSeals",
+        "r": [
+          512,
+          512,
+          512,
+          512
+        ]
+      },
+      {
+        "id": "warning",
+        "image": "enemyBattleSeals",
+        "r": [
+          1024,
+          512,
+          512,
+          512
+        ]
+      }
     ]
   },
-  "total": 183
+  "total": 189
 }

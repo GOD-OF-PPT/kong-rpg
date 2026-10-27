@@ -26,7 +26,7 @@
     combatCues(){
       super.combatCues();const s=this.scene;if(!s)return;
       for(const e of s.room.enemies)if(e.hp>0&&!e.dormant){
-        if(e.phase==='break-windup'){this.mark(K.breakDistanceBox(e));this.sigFx('brace',e.x+3,e.y-45,24,26);}
+        if(e.phase==='break-windup')this.mark(K.breakDistanceBox(e));
         if(e.phase==='break-rush')this.mark(K.enemyAttackBox(e),true);
         if(e.phase==='air-windup')for(const b of e.marks){this.mark(b);this.sigFx('air-warning',b.x,b.y,b.w,b.h,.7);}
       }

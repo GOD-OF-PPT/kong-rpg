@@ -1,0 +1,242 @@
+{
+  "kind": "http",
+  "baseline": true,
+  "version": "8.0.0",
+  "sha256": "f69ba46a6906bde04f750b670dedbf8ac8402d9c0f7ff2d0af578fccaeecd168",
+  "seed": "MARKERS-1027",
+  "method": "canonical schema8 scene imports; real DOM, keyboard and mouse; canvas capture at native 960x540; controlled art states, not natural full playthrough",
+  "checks": [
+    {
+      "name": "embedded artwork decodes",
+      "pass": true
+    },
+    {
+      "name": "traits imports and runs",
+      "pass": true
+    },
+    {
+      "name": "windup imports and runs",
+      "pass": true
+    },
+    {
+      "name": "hurt imports and runs",
+      "pass": true
+    },
+    {
+      "name": "chain imports and runs",
+      "pass": true
+    },
+    {
+      "name": "challenge imports and runs",
+      "pass": true
+    },
+    {
+      "name": "guardian imports and runs",
+      "pass": true
+    },
+    {
+      "name": "boss imports and runs",
+      "pass": true
+    },
+    {
+      "name": "realm imports and runs",
+      "pass": true
+    }
+  ],
+  "scenes": [
+    {
+      "name": "traits",
+      "state": [
+        {
+          "id": 600,
+          "kind": "blade",
+          "trait": "twin",
+          "phase": "recover",
+          "x": 710,
+          "y": 400
+        },
+        {
+          "id": 601,
+          "kind": "shield",
+          "trait": "pulse",
+          "phase": "recover",
+          "x": 845,
+          "y": 400
+        },
+        {
+          "id": 602,
+          "kind": "caster",
+          "trait": "volley",
+          "phase": "recover",
+          "x": 980,
+          "y": 325.0736817203387
+        }
+      ],
+      "elapsed": 0.3416666666666669
+    },
+    {
+      "name": "windup",
+      "state": [
+        {
+          "id": 600,
+          "kind": "blade",
+          "trait": "twin",
+          "phase": "windup",
+          "x": 710,
+          "y": 400
+        },
+        {
+          "id": 601,
+          "kind": "shield",
+          "trait": "pulse",
+          "phase": "windup",
+          "x": 845,
+          "y": 400
+        },
+        {
+          "id": 602,
+          "kind": "caster",
+          "trait": "volley",
+          "phase": "windup",
+          "x": 980,
+          "y": 324.17046625522033
+        }
+      ],
+      "elapsed": 0.19999999999999998
+    },
+    {
+      "name": "hurt",
+      "state": [
+        {
+          "id": 600,
+          "kind": "blade",
+          "trait": "twin",
+          "phase": "recover",
+          "x": 710,
+          "y": 400
+        },
+        {
+          "id": 601,
+          "kind": "shield",
+          "trait": "pulse",
+          "phase": "recover",
+          "x": 845,
+          "y": 400
+        },
+        {
+          "id": 602,
+          "kind": "caster",
+          "trait": "volley",
+          "phase": "recover",
+          "x": 980,
+          "y": 324.2179790565704
+        }
+      ],
+      "elapsed": 0.20833333333333331
+    },
+    {
+      "name": "chain",
+      "state": [
+        {
+          "id": 600,
+          "kind": "blade",
+          "trait": "twin",
+          "phase": "chain-windup",
+          "x": 710,
+          "y": 400
+        },
+        {
+          "id": 601,
+          "kind": "shield",
+          "trait": "pulse",
+          "phase": "windup",
+          "x": 845,
+          "y": 400
+        },
+        {
+          "id": 602,
+          "kind": "caster",
+          "trait": "volley",
+          "phase": "windup",
+          "x": 980,
+          "y": 324.2179790565704
+        }
+      ],
+      "elapsed": 0.20833333333333331
+    },
+    {
+      "name": "challenge",
+      "state": [
+        {
+          "id": 600,
+          "kind": "blade",
+          "trait": "twin",
+          "phase": "windup",
+          "x": 710,
+          "y": 400
+        },
+        {
+          "id": 601,
+          "kind": "shield",
+          "trait": "pulse",
+          "phase": "windup",
+          "x": 845,
+          "y": 400
+        },
+        {
+          "id": 602,
+          "kind": "caster",
+          "trait": "volley",
+          "phase": "windup",
+          "x": 980,
+          "y": 324.17046625522033
+        }
+      ],
+      "elapsed": 0.19999999999999998
+    },
+    {
+      "name": "guardian",
+      "state": [
+        {
+          "id": 900,
+          "kind": "warden",
+          "phase": "warden-windup",
+          "x": 710,
+          "y": 400
+        }
+      ],
+      "elapsed": 0.20833333333333331
+    },
+    {
+      "name": "boss",
+      "state": [
+        {
+          "id": 0,
+          "kind": "boss",
+          "phase": "sweep-windup",
+          "x": 710,
+          "y": 400
+        }
+      ],
+      "elapsed": 0.19999999999999998
+    },
+    {
+      "name": "realm",
+      "state": [
+        {
+          "id": 7,
+          "kind": "caster",
+          "phase": "realm-echo",
+          "x": 780,
+          "y": 240.62356824751103
+        }
+      ],
+      "elapsed": 0.20833333333333331
+    }
+  ],
+  "errors": [],
+  "network": [
+    "http://127.0.0.1:5188/release/index.html?markers=1793093523333"
+  ],
+  "browser": "156.0.4314.42"
+}
