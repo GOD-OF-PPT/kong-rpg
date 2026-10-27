@@ -1,5 +1,5 @@
 const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),assert=require('node:assert/strict');
-const root=path.resolve(__dirname,'..'),ctx=vm.createContext({console});for(const name of ['content','world','progression','journey','heroes','signature','simulation','storage'])vm.runInContext(fs.readFileSync(path.join(root,'src',name+'.js'),'utf8'),ctx);
+const root=path.resolve(__dirname,'..'),ctx=vm.createContext({console});for(const name of ['content','world','progression','journey','heroes','signature','simulation','challenge','storage'])vm.runInContext(fs.readFileSync(path.join(root,'src',name+'.js'),'utf8'),ctx);
 const K=ctx.Kong,results=[],test=(name,fn)=>{try{fn();results.push({name,pass:true});}catch(e){results.push({name,pass:false,error:e.stack});}},advance=(s,n,a={})=>{for(let i=0;i<n;i++)K.step(s,typeof a==='function'?a(i):{...a});};
 function scene(hero='wukong',relic='staff'){const s=K.newRun('RUYI-TEST',relic,hero);Object.assign(s.player,{x:1100,y:396,grounded:true,invuln:0});for(const e of s.room.enemies){e.hp=0;}return s;}
 function target(s,kind,dx){const e=s.room.enemies.find(e=>e.kind===kind);Object.assign(e,{x:s.player.x+dx,y:400,hp:e.maxHp,face:-1,phase:'recover',timer:8,dormant:false});return e;}

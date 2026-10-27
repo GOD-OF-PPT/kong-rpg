@@ -1,5 +1,5 @@
 const {chromium}=require('playwright'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),crypto=require('node:crypto'),assert=require('node:assert/strict');
-const root=path.resolve(__dirname,'..'),out=path.resolve(process.env.EVIDENCE_DIR||path.join(root,'evidence/signature-v7')),kind=process.argv[2]||'http',c=vm.createContext({console});for(const name of ['content','world','progression','journey','heroes','signature','simulation','storage'])vm.runInContext(fs.readFileSync(path.join(root,'src',name+'.js'),'utf8'),c);const K=c.Kong;
+const root=path.resolve(__dirname,'..'),out=path.resolve(process.env.EVIDENCE_DIR||path.join(root,'evidence/signature-v7')),kind=process.argv[2]||'http',c=vm.createContext({console});for(const name of ['content','world','progression','journey','heroes','signature','simulation','challenge','storage'])vm.runInContext(fs.readFileSync(path.join(root,'src',name+'.js'),'utf8'),c);const K=c.Kong;
 const entry=path.resolve(process.env.GAME_ENTRY||path.join(root,'release/index.html'));
 const report={version:K.VERSION,sha256:crypto.createHash('sha256').update(fs.readFileSync(entry)).digest('hex'),kind,checks:[],errors:[],network:[],scenes:[]};
 function check(name,pass,data={}){report.checks.push({name,pass:!!pass,...data});assert.ok(pass,name);}

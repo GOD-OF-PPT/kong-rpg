@@ -1,6 +1,6 @@
 const fs=require('fs'),path=require('path'),vm=require('vm'),assert=require('assert/strict'),crypto=require('crypto');
 const root=path.resolve(__dirname,'..'),context=vm.createContext({console});
-for(const f of ['content','world','progression','journey','heroes','signature','simulation','storage'])vm.runInContext(fs.readFileSync(path.join(root,'src',f+'.js'),'utf8'),context);
+for(const f of ['content','world','progression','journey','heroes','signature','simulation','challenge','storage'])vm.runInContext(fs.readFileSync(path.join(root,'src',f+'.js'),'utf8'),context);
 const K=context.Kong,results=[];const plain=x=>JSON.parse(JSON.stringify(x));
 function test(name,fn){try{fn();results.push({name,pass:true});}catch(e){results.push({name,pass:false,error:e.stack});}}
 function scene(stage=0){const s=K.newRun('V6-VERIFY','cloud');if(stage)K.enterRoom(s,stage,true);return s;}

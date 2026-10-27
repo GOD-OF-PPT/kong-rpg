@@ -1,12 +1,13 @@
 (function (K) {
   'use strict';
-  K.newRun = function (seed, first, hero='wukong') {
+  K.newRun = function (seed, first, hero='wukong',difficulty='normal') {
     const s = { version:7,rules:7,hero,ring:null,silk:null,arm:null,flight:null,growth:{},talisman:null,casts:[],world:{rescue:false,bridge:false,bell:false},journal:[],dangers:[],seed:String(seed || 'BLACK-LOTUS'), stage:0, mode:'playing',time:0,elapsed:0,roomTime:0,relics:first?[first]:[],room:null,player:null,clone:null,projectiles:[],effects:[],events:[],log:[],reward:[],rewardKind:'exit',pendingRelic:null,kills:0,broken:0,damageTaken:0,lastDamage:'',hitstop:0,shake:0,checkpoint:90,combo:0,comboTime:0,serial:0,hints:[],stats:{swings:0,hits:0,blocks:0,jumps:0,dashes:0,clones:0,focusSpent:0,rests:0,ultimates:0,talismans:0,guardians:0,drops:0,camps:0,trials:0,farHits:0,extends:0,tipHits:0,vaults:0,flights:0} };
+    s.difficulty=difficulty==='challenge'?'challenge':'normal';s.challengeRules=s.difficulty==='challenge'?1:0;
     K.enterRoom(s, 0, true); return s;
   };
   K.enterRoom = function (s, stage, initial) {
     const old = s.player;
-    s.stage = stage; s.room = K.makeRoom(s.seed, stage); s.roomTime = 0; s.checkpoint = 90;
+    s.stage = stage; s.room = K.makeRoom(s.seed, stage,s.difficulty); s.roomTime = 0; s.checkpoint = 90;
     s.player = { x:90,y:380,w:24,h:44,vx:0,vy:0,face:1,hp:initial?K.maxHP(s):Math.min(K.maxHP(s),old.hp+18),focus:initial?65:Math.min(100,old.focus+20),rage:initial?25:old.rage,ringCD:0,ringAim:null,ultimate:0,ultimateStage:0,talismanCD:0,ward:0,dashTargets:[],grounded:false,coyote:0,buffer:0,airJumps:0,invuln:.8,dash:0,dashCD:0,attack:0,attackId:0,attackTargets:[],comboIndex:0,slam:false,landing:0,drop:0,hurt:0,attackBuffer:0,armCD:0,vaultTime:0,vaultUsed:false,groundTime:0,wheelFuel:K.has(s,'cloud')?1.5:1.25,wheelReady:true };
     s.ring=null;s.silk=null;s.arm=null;s.flight=null;s.clone=null;s.projectiles=[];s.effects=[];s.dangers=[];s.casts=[];s.hitstop=0;s.mode='playing';s.pendingRelic=null;s.reward=[];K.applyWorld(s);
     K.event(s, 'room', { stage });

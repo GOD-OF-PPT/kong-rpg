@@ -1,7 +1,7 @@
 // Cross-screen regressions at production DOM/input/storage seams.
 const {chromium}=require('playwright'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),crypto=require('node:crypto');
 const root=path.resolve(__dirname,'..'),dir=path.resolve(process.env.EVIDENCE_DIR||path.join(root,'evidence/signature-v7/ui')),kind=process.argv[2]||'http',ctx=vm.createContext({console}),viewWidth=Number(process.env.FLOW_WIDTH||1366),viewHeight=Number(process.env.FLOW_HEIGHT||768);
-for(const name of ['content','world','progression','journey','heroes','signature','simulation','storage'])vm.runInContext(fs.readFileSync(path.join(root,'src',name+'.js'),'utf8'),ctx);
+for(const name of ['content','world','progression','journey','heroes','signature','simulation','challenge','storage'])vm.runInContext(fs.readFileSync(path.join(root,'src',name+'.js'),'utf8'),ctx);
 const entry=path.resolve(process.env.FLOW_ENTRY||path.join(root,'release/index.html'));
 const K=ctx.Kong,report={version:K.VERSION,kind,entry,sha256:crypto.createHash('sha256').update(fs.readFileSync(entry)).digest('hex'),checks:[],layouts:[],errors:[],network:[]};
 function check(name,pass,data={}){report.checks.push({name,pass:!!pass,...data});}

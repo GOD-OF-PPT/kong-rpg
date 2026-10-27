@@ -180,6 +180,10 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
 .run-bottom #range-state{color:#e8cf91}
 @container(max-width:1000px){.hud-left .vitals{padding:8px}.equipped-hud{padding:6px 7px 7px 8px}.equipped-row{grid-template-columns:25px minmax(0,1fr);gap:3px;font-size:9px}.equipped-heading{font-size:9px}}
 </style><style>.signature-line{display:flex;align-items:center;gap:6px;background:#10202bd9;padding:6px 9px;border-left:2px solid #b69b6d;color:#e6c68a;font:9px/1.6 "Microsoft YaHei",sans-serif}.signature-line>span{white-space:nowrap}.signature-line .meter{flex:1;height:5px;border-color:#8e7650}.signature-line .meter i{background:#dda95a}.signature-line b{min-width:32px;text-align:right;font:9px/1.6 "Microsoft YaHei",sans-serif}.dialog-help .help-grid{padding-bottom:100px}@container(max-width:1200px){.dialog-help .help-grid{padding-bottom:90px}.signature-line{font-size:8px;gap:4px;padding-inline:6px}.signature-line b{font-size:8px}}
+</style><style>.hero.has-modes h1{margin-top:15px;margin-bottom:8px}.hero.has-modes .english-title{margin-bottom:12px}.hero.has-modes p{margin-bottom:10px}.hero.has-modes .seed-edit{margin:10px 0 6px}.hero.has-modes .hero-meta{margin-top:8px}
+.mode-picker{display:flex;gap:10px;margin:0 0 13px;max-width:440px}.mode-picker button{flex:1;min-height:36px;padding:7px 13px;border:1px solid #77664b;background:#13272ecc;color:#b6baab;font:13px/1.5 SimSun,serif;letter-spacing:2px}.mode-picker button[aria-pressed=true]{color:#f1d696;border-color:#d4b474;background:#3f342bc9;box-shadow:inset 0 -2px #b49358}.mode-picker button[data-difficulty=challenge][aria-pressed=true]{border-color:#d4927d;background:#472b30c9;color:#ffd1ad}.mode-picker button:focus-visible{outline:2px solid #eed296;outline-offset:3px}
+.mode-note{color:#d5bd8f}.run-difficulty{text-align:center;color:#d2b38a;font:11px/1.6 "Microsoft YaHei",sans-serif;margin:0 0 9px}.challenge-label{color:#efb48e}
+@container(max-width:1100px){.mode-picker{margin-bottom:9px;gap:7px}.mode-picker button{font-size:12px;min-height:32px;padding:5px 8px}.hero.has-modes p{font-size:11px;letter-spacing:1px}.hero.has-modes .seed-edit{gap:6px;margin:7px 0 3px}.hero.has-modes .hero-meta{gap:14px;margin-top:5px}.hero.has-modes h1{margin-top:10px}.run-difficulty{font-size:10px;margin-bottom:5px}}
 </style></head>
 <body>
   <main id="app">
@@ -210,13 +214,13 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
       <div id="toast" role="status" aria-live="polite" hidden></div>
       <div id="context-hint" hidden></div>
     </section>
-    <footer class="footline"><div><span class="status-dot"></span><span id="storage-status">离线可玩 · 进度自动保存</span></div><div class="keystrip"><span><kbd>A</kbd><kbd>D</kbd> 行走</span><span><kbd>SPACE</kbd> 跃起</span><span><kbd>J</kbd> 攻击</span><span><kbd>K</kbd> 闪避</span><span><kbd>L</kbd> 神通</span><span><kbd>R</kbd> 大招</span><span><kbd>Q</kbd> 符术</span><span><kbd>U</kbd> 变化</span></div><span class="build">v7.0.1 <span>／</span> 棍影 · 回环 · 应劫</span></footer>
+    <footer class="footline"><div><span class="status-dot"></span><span id="storage-status">离线可玩 · 进度自动保存</span></div><div class="keystrip"><span><kbd>A</kbd><kbd>D</kbd> 行走</span><span><kbd>SPACE</kbd> 跃起</span><span><kbd>J</kbd> 攻击</span><span><kbd>K</kbd> 闪避</span><span><kbd>L</kbd> 神通</span><span><kbd>R</kbd> 大招</span><span><kbd>Q</kbd> 符术</span><span><kbd>U</kbd> 变化</span></div><span class="build">v7.1.0 <span>／</span> 棍影 · 回环 · 应劫</span></footer>
     <input id="import-file" type="file" accept="application/json,.json" hidden>
   </main>
   <script>
 (function (K) {
   'use strict';
-  K.VERSION = '7.0.1';
+  K.VERSION = '7.1.0';
   K.W = 960; K.H = 540; K.DT = 1 / 120;
   K.clamp = (v, a, b) => Math.max(a, Math.min(b, v));
   K.overlap = (a, b) => a.x < b.x + b.w && a.x + a.w > b.x && a.y < b.y + b.h && a.y + a.h > b.y;
@@ -744,13 +748,14 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
 </script><script>
 (function (K) {
   'use strict';
-  K.newRun = function (seed, first, hero='wukong') {
+  K.newRun = function (seed, first, hero='wukong',difficulty='normal') {
     const s = { version:7,rules:7,hero,ring:null,silk:null,arm:null,flight:null,growth:{},talisman:null,casts:[],world:{rescue:false,bridge:false,bell:false},journal:[],dangers:[],seed:String(seed || 'BLACK-LOTUS'), stage:0, mode:'playing',time:0,elapsed:0,roomTime:0,relics:first?[first]:[],room:null,player:null,clone:null,projectiles:[],effects:[],events:[],log:[],reward:[],rewardKind:'exit',pendingRelic:null,kills:0,broken:0,damageTaken:0,lastDamage:'',hitstop:0,shake:0,checkpoint:90,combo:0,comboTime:0,serial:0,hints:[],stats:{swings:0,hits:0,blocks:0,jumps:0,dashes:0,clones:0,focusSpent:0,rests:0,ultimates:0,talismans:0,guardians:0,drops:0,camps:0,trials:0,farHits:0,extends:0,tipHits:0,vaults:0,flights:0} };
+    s.difficulty=difficulty==='challenge'?'challenge':'normal';s.challengeRules=s.difficulty==='challenge'?1:0;
     K.enterRoom(s, 0, true); return s;
   };
   K.enterRoom = function (s, stage, initial) {
     const old = s.player;
-    s.stage = stage; s.room = K.makeRoom(s.seed, stage); s.roomTime = 0; s.checkpoint = 90;
+    s.stage = stage; s.room = K.makeRoom(s.seed, stage,s.difficulty); s.roomTime = 0; s.checkpoint = 90;
     s.player = { x:90,y:380,w:24,h:44,vx:0,vy:0,face:1,hp:initial?K.maxHP(s):Math.min(K.maxHP(s),old.hp+18),focus:initial?65:Math.min(100,old.focus+20),rage:initial?25:old.rage,ringCD:0,ringAim:null,ultimate:0,ultimateStage:0,talismanCD:0,ward:0,dashTargets:[],grounded:false,coyote:0,buffer:0,airJumps:0,invuln:.8,dash:0,dashCD:0,attack:0,attackId:0,attackTargets:[],comboIndex:0,slam:false,landing:0,drop:0,hurt:0,attackBuffer:0,armCD:0,vaultTime:0,vaultUsed:false,groundTime:0,wheelFuel:K.has(s,'cloud')?1.5:1.25,wheelReady:true };
     s.ring=null;s.silk=null;s.arm=null;s.flight=null;s.clone=null;s.projectiles=[];s.effects=[];s.dangers=[];s.casts=[];s.hitstop=0;s.mode='playing';s.pendingRelic=null;s.reward=[];K.applyWorld(s);
     K.event(s, 'room', { stage });
@@ -960,23 +965,115 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
 </script><script>
 (function(K){
   'use strict';
+  K.isChallenge=s=>s?.difficulty==='challenge';
+  K.difficultyName=s=>(typeof s==='string'?s:s?.difficulty)==='challenge'?'挑战·黑莲重劫':'普通旅程';
+  K.CHALLENGE_PHASES=['challenge-bolt-windup','challenge-quake-windup','challenge-mark-windup','challenge-echo-windup','challenge-fan-windup','challenge-bell-windup','challenge-rain-windup'];
+  K.CHALLENGE_DANGERS=['重盾兵·崩盾震','莲灯使·追迹莲印','镇山魈王·回震','缄愿法使·余钟震','无天·追落莲印'];
+  K.CHALLENGE_PROJECTILES=['执刃魔兵·封路刀气','渡厄灯魁·对渡焰'];
+  const REINFORCEMENTS=[
+    [['blade',650],['caster',1320],['shield',2300],['blade',3210],['shield',4320],['caster',5990]],
+    [['blade',610],['shield',1330],['caster',2020],['blade',3200],['shield',4310],['caster',5390],['blade',5960]],
+    [['blade',680],['shield',1400],['blade',2070],['caster',3180],['blade',4310],['shield',2510],['caster',5990]],
+    [['caster',500],['blade',1110],['shield',1930]]
+  ];
+  const makeRoom=K.makeRoom;
+  K.makeRoom=function(seed,stage,difficulty='normal'){
+    const room=makeRoom(seed,stage);if(difficulty!=='challenge')return room;
+    for(const [i,[kind,desired]]of REINFORCEMENTS[stage].entries()){
+      const candidates=[desired];for(let d=24;d<=288;d+=24)candidates.push(desired+d,desired-d);
+      const x=candidates.find(x=>room.platforms.some(p=>p.solid&&p.y===440&&x>=p.x+64&&x+26<=p.x+p.w-64)&&room.hazards.every(h=>x+26<h.x-60||x>h.x+h.w+60)&&room.enemies.every(e=>Math.abs(e.x-x)>=74));
+      if(x===undefined)throw Error('No safe challenge reinforcement '+stage+':'+i);
+      const e=K.enemy(kind,x,400,1000+i);e.style=kind==='blade'?'lunge':kind==='shield'?'rush':'sigil';e.trait=({blade:'twin',shield:'pulse',caster:'volley'})[kind];e.timer=.75;e.challengeReinforcement=true;room.enemies.push(e);
+      const roll=K.rng(K.seedNumber(seed)+stage*119+e.id*977)(),type=roll<.29?'heal':roll<.55?'focus':'rage';
+      room.pickups.push({x,y:420,w:16,h:20,kind:type,used:false,enabled:false,sourceId:e.id,amount:K.DROPS[type].amount});
+    }
+    for(const e of room.enemies)e.challengeCD=.4+(e.id%4)*.35;
+    room.signs[0].text='黑莲重劫：援兵结阵。刀气可跳避或返弹，盾震可跃过，双印需两次判断。';
+    return room;
+  };
+  const isSpecial=e=>K.CHALLENGE_PHASES.includes(e.phase);
+  const targetMark=(s,target,w=80,h=80)=>({x:K.clamp(target.x+12-w/2,8,s.room.width-w-8),y:K.clamp(target.y-10,170,440-h),w,h});
+  const groundMark=(s,e,w=220)=>{const x=K.clamp(e.x+e.w/2-w/2,8,s.room.width-w-8);return{x,y:K.surfaceAt(s,e.x+e.w/2,e.y+e.h-4)-26,w,h:26};};
+  function begin(s,e,phase,time,marks=[]){e.phase=phase;e.timer=time;e.marks=marks;K.event(s,K.isMajor(e)?'boss-warning':'warning',{id:e.id,kind:e.kind,move:phase});}
+  function recover(e,time=1.3){e.phase='recover';e.timer=time;e.marks=[];}
+  K.challengeBladeRay=e=>{const ax=e.x+e.w/2,ay=e.y+18,dx=e.aimX-ax,dy=e.aimY-ay,n=Math.hypot(dx,dy)||1;return{ax,ay,bx:ax+dx/n*445.5,by:ay+dy/n*445.5,vx:dx/n*330,vy:dy/n*330};};
+  K.challengeWarningBoxes=e=>isSpecial(e)?(e.marks||[]):[];
+  K.challengePhaseText=e=>({
+    'challenge-bolt-windup':'封路刀气 · 跳避或返弹',
+    'challenge-quake-windup':e.kind==='warden'?'冲后回震 · 再看地线':'崩盾震 · 起跳或打断',
+    'challenge-mark-windup':'追迹一印 · 移开锁定区',
+    'challenge-echo-windup':'追迹二印 · 重新判断落点',
+    'challenge-fan-windup':'对渡焰 · 跃起或返弹',
+    'challenge-bell-windup':'余钟震 · 离地避浪',
+    'challenge-rain-windup':'追落莲印 · 再移出印区'
+  })[e.phase]||'';
+  const stepCounter=K.stepCounter;
+  K.stepCounter=function(s,e,dt,target){
+    if(!K.isChallenge(s))return stepCounter(s,e,dt,target);
+    e.challengeCD=Math.max(0,e.challengeCD-dt);
+    if(isSpecial(e)){
+      if(e.timer>0)return true;
+      const phase=e.phase,marks=e.marks||[];
+      if(phase==='challenge-bolt-windup'){
+        const r=K.challengeBladeRay(e);s.projectiles.push({x:r.ax-14,y:r.ay-6,vx:r.vx,vy:r.vy,w:28,h:12,life:1.35,friendly:false,source:'执刃魔兵·封路刀气'});recover(e,1.2);
+      }else if(phase==='challenge-fan-windup'){
+        for(const [i,b]of marks.entries())s.projectiles.push({x:i===0?b.x:b.x+b.w-18,y:b.y+2,w:18,h:12,vx:i===0?220:-220,vy:0,life:1.55,friendly:false,source:'渡厄灯魁·对渡焰'});recover(e,1.7);
+      }else{
+        const source=phase==='challenge-quake-windup'?(e.kind==='warden'?'镇山魈王·回震':'重盾兵·崩盾震'):phase==='challenge-bell-windup'?'缄愿法使·余钟震':phase==='challenge-rain-windup'?'无天·追落莲印':'莲灯使·追迹莲印';
+        for(const b of marks)s.dangers.push({...b,life:.3,damage:K.isMajor(e)?16:12,source});
+        if(phase==='challenge-mark-windup')begin(s,e,'challenge-echo-windup',.75,[targetMark(s,target)]);else recover(e,K.isMajor(e)?1.7:1.4);
+      }
+      K.event(s,'enemy-attack',{id:e.id,kind:e.kind,move:phase});return true;
+    }
+    const p=s.player,near=Math.abs(target.x-e.x),inView=e.x>=p.x-260&&e.x<=p.x+520;
+    // At most two new specials may wind up together. Ordinary attacks retain
+    // their own timings; every special commits its geometry before release.
+    if(!K.isMajor(e)&&e.phase==='idle'&&e.timer<=0&&e.challengeCD===0&&inView&&s.room.enemies.filter(q=>q!==e&&q.hp>0&&isSpecial(q)).length<2){
+      if(e.kind==='blade'&&near>=135&&near<470){e.aimX=target.x+12;e.aimY=target.y+20;e.face=Math.sign(target.x-e.x)||e.face;e.challengeCD=6;begin(s,e,'challenge-bolt-windup',.85);return true;}
+      if(e.kind==='shield'&&near<155&&Math.abs(target.y-e.y)<90){e.challengeCD=6;begin(s,e,'challenge-quake-windup',.95,[groundMark(s,e)]);return true;}
+      if(e.kind==='caster'&&near<500){e.challengeCD=7;begin(s,e,'challenge-mark-windup',.95,[targetMark(s,target)]);return true;}
+    }
+    return stepCounter(s,e,dt,target);
+  };
+  const stepEnemy=K.stepEnemy;
+  K.stepEnemy=function(s,e,dt,oldY){
+    const previous=e.phase;stepEnemy(s,e,dt,oldY);
+    if(!K.isChallenge(s)||e.hp<=0||e.dormant||s.mode!=='playing'||e.phase!=='recover')return;
+    if(e.kind==='warden'){
+      if(previous==='warden-rush'&&e.move==='charge')begin(s,e,'challenge-quake-windup',.7,[groundMark(s,e,240)]);
+      if(previous==='warden-windup'&&e.move==='fan'){
+        const a=s.room.arena;begin(s,e,'challenge-fan-windup',.85,[{x:a.min+8,y:408,w:359,h:16},{x:a.max-26-341,y:408,w:359,h:16}]);
+      }
+      if(previous==='warden-windup'&&e.move==='columns')begin(s,e,'challenge-bell-windup',.8,[groundMark(s,e,410)]);
+    }else if(e.kind==='boss'&&previous==='rain-windup'){
+      const target=s.clone&&Math.abs(s.clone.x-e.x)<380?s.clone:s.player,base=targetMark(s,target,80,60),offsets=s.world.bell?[0]:[0,e.face*130];
+      begin(s,e,'challenge-rain-windup',.8,offsets.map(dx=>({...base,x:K.clamp(base.x+dx,s.room.arena.min,s.room.arena.max-base.w)})));
+    }
+  };
+})(globalThis.Kong ||= {});
+
+</script><script>
+(function(K){
+  'use strict';
   const KEY='kong.black-lotus.v7',LEGACY='kong.black-lotus.v1',PREVIOUS='kong.black-lotus.v2',THIRD='kong.black-lotus.v3',FOURTH='kong.black-lotus.v4',FIFTH='kong.black-lotus.v5',SIXTH='kong.black-lotus.v6',SETTINGS='kong.black-lotus.settings.v2';
   const number=(v,a,b)=>typeof v==='number'&&Number.isFinite(v)&&v>=a&&v<=b;
   const fail=()=>{throw new Error('存档数据不完整或已损坏，请保留原文件。');};
   const count=v=>Number.isFinite(Number(v))?Math.max(0,Math.min(1e7,Math.floor(Number(v)))):0;
   K.cleanMeta=function(m){
-    return {runs:count(m?.runs),wins:count(m?.wins),best:Math.min(4,count(m?.best)),history:Array.isArray(m?.history)?m.history.filter(x=>x&&typeof x.id==='string'&&typeof x.seed==='string').slice(-8).map(x=>({id:x.id.slice(0,100),seed:x.seed.slice(0,32),won:!!x.won,stage:Math.min(3,count(x.stage)),hero:K.HEROES.some(h=>h.id===x.hero)?x.hero:'wukong',seconds:count(x.seconds),damage:count(x.damage),relics:Array.isArray(x.relics)?x.relics.filter(id=>K.RELICS.some(r=>r.id===id)).slice(0,3):[]})):[]};
+    return {runs:count(m?.runs),wins:count(m?.wins),best:Math.min(4,count(m?.best)),history:Array.isArray(m?.history)?m.history.filter(x=>x&&typeof x.id==='string'&&typeof x.seed==='string').slice(-8).map(x=>({id:x.id.slice(0,100),seed:x.seed.slice(0,32),won:!!x.won,stage:Math.min(3,count(x.stage)),hero:K.HEROES.some(h=>h.id===x.hero)?x.hero:'wukong',difficulty:x.difficulty==='challenge'?'challenge':'normal',seconds:count(x.seconds),damage:count(x.damage),relics:Array.isArray(x.relics)?x.relics.filter(id=>K.RELICS.some(r=>r.id===id)).slice(0,3):[]})):[]};
   };
   K.validSave=function(data){
     if(data?.game==='black-lotus'&&[1,2,3,4,5,6].includes(data.schema)&&data.schema===data.state?.version){const error=new Error('这是旧版旅程，请在保留的原版中继续。');error.legacy=true;throw error;}
     if(!data||data.schema!==7||data.game!=='black-lotus'||!data.state)throw new Error('这不是劫后行v7存档。');
     const s=data.state;if(!K.HEROES.some(h=>h.id===s.hero))fail();
+    const difficulty=s.difficulty??'normal',challenging=difficulty==='challenge';
+    if(!['normal','challenge'].includes(difficulty)||(challenging?s.challengeRules!==1:s.challengeRules!==undefined&&s.challengeRules!==0))fail();
     if(s.version!==7||s.rules!==7||!Number.isInteger(s.stage)||s.stage<0||s.stage>3||typeof s.seed!=='string'||s.seed.length>32||!['playing','paused','reward','dead','won'].includes(s.mode))fail();
     if(!s.growth||typeof s.growth!=='object'||Array.isArray(s.growth)||Object.entries(s.growth).some(([id,n])=>{const r=K.GROWTH.find(r=>r.id===id&&!r.temporary);return !r||!Number.isInteger(n)||n<1||n>r.max;}))fail();
     if(s.talisman!==null&&(!s.talisman||!['thunder','ward'].includes(s.talisman.id)||!Number.isInteger(s.talisman.charges)||s.talisman.charges<1||s.talisman.charges>(s.talisman.id==='thunder'?3:2)))fail();
     if(!s.world||['rescue','bridge','bell'].some(key=>typeof s.world[key]!=='boolean')||!Array.isArray(s.journal)||s.journal.length>6||new Set(s.journal).size!==s.journal.length||s.journal.some(key=>!['rescue:start','rescue:done','bridge:done','bell:start','bell:done'].includes(key)))fail();
     if(!Array.isArray(s.relics)||s.relics.length>3||new Set(s.relics).size!==s.relics.length||s.relics.some(id=>!K.RELICS.some(r=>r.id===id)))fail();
-    const canonical=K.makeRoom(s.seed,s.stage),p=s.player;
+    const canonical=K.makeRoom(s.seed,s.stage,difficulty),p=s.player;
     if(!p||!number(p.hp,0,K.maxHP(s))||!number(p.focus,0,100)||!number(p.rage,0,100)||!number(p.ultimate,0,.86)||!Number.isInteger(p.ultimateStage)||p.ultimateStage<0||p.ultimateStage>2||!number(p.x,0,canonical.width)||!number(p.y,-1000,1000)||!number(p.vx,-2000,2000)||!number(p.vy,-2000,2000)||![-1,1].includes(p.face))fail();
     for(const key of ['coyote','buffer','invuln','dash','dashCD','attack','landing','drop','hurt','attackBuffer','talismanCD','ward','ringCD'])if(!number(p[key],0,5))fail();
     if(!Array.isArray(p.dashTargets)||p.dashTargets.length>40||p.dashTargets.some(x=>typeof x!=='string'))fail();
@@ -986,9 +1083,11 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
     if(s.broken>8||s.checkpoint>canonical.width||s.combo>3||typeof s.lastDamage!=='string'||s.lastDamage.length>100||!Array.isArray(s.hints)||s.hints.length>30||s.hints.some(x=>typeof x!=='string'||x.length>50))fail();
     if(!s.room||!Array.isArray(s.room.enemies)||s.room.enemies.length!==canonical.enemies.length||!Array.isArray(s.room.seals)||s.room.seals.length!==canonical.seals.length||!Array.isArray(s.room.pickups)||s.room.pickups.length!==canonical.pickups.length||typeof s.room.midClaimed!=='boolean')fail();
     const phases=['idle','windup','attack','recover','sweep-windup','orb-windup','sweep','shift-windup','shift','lunge-windup','lunge','rush-windup','rush','sigil-windup','rain-windup','warden-windup','warden-rush','chain-windup','pursuit-windup','pursuit','advance','cross-windup','break-windup','break-rush','air-windup'];
+    if(challenging)phases.push(...K.CHALLENGE_PHASES);
     function validBox(b){return b&&number(b.x,-200,canonical.width+200)&&number(b.y,-1000,1000)&&number(b.w,1,620)&&number(b.h,1,200);}
     canonical.enemies.forEach((e,i)=>{
       const x=s.room.enemies[i];if(!x||x.id!==e.id||x.kind!==e.kind||!number(x.hp,0,e.maxHp)||!number(x.x,0,canonical.width)||!number(x.y,-200,540)||!number(x.timer,-2,10)||!number(x.stun,0,2)||!number(x.flash,0,2)||!number(x.interruptLock,0,2)||!number(x.attacks,0,1e7)||![-1,1].includes(x.face)||!phases.includes(x.phase))fail();
+      if(challenging){if(!number(x.challengeCD,0,7))fail();e.challengeCD=x.challengeCD;if(x.phase==='challenge-bolt-windup'&&(e.kind!=='blade'||x.aimX===undefined))fail();if(['challenge-mark-windup','challenge-echo-windup'].includes(x.phase)&&(e.kind!=='caster'||x.marks?.length!==1))fail();if(['challenge-quake-windup','challenge-bell-windup'].includes(x.phase)&&x.marks?.length!==1)fail();if(x.phase==='challenge-fan-windup'&&(e.kind!=='warden'||e.guardian!=='ferry'||x.marks?.length!==2))fail();if(x.phase==='challenge-rain-windup'&&(e.kind!=='boss'||![1,2].includes(x.marks?.length)))fail();}
       if(![100,420].includes(x.roamRange))fail();e.roamRange=x.roamRange;
       if(x.counterTo!==undefined){if(!number(x.counterTo,0,canonical.width))fail();e.counterTo=x.counterTo;}if(['pursuit','pursuit-windup'].includes(x.phase)&&!Number.isFinite(x.counterTo))fail();if(x.phase==='cross-windup'&&(!Array.isArray(x.marks)||x.marks.length!==2))fail();
       if(!number(x.signatureCD,0,4))fail();e.signatureCD=x.signatureCD;if(x.rushTo!==undefined){if(!number(x.rushTo,0,canonical.width))fail();e.rushTo=x.rushTo;}if(['break-windup','break-rush'].includes(x.phase)&&!Number.isFinite(x.rushTo))fail();if(x.phase==='air-windup'&&(!Array.isArray(x.marks)||x.marks.length!==1))fail();
@@ -1015,13 +1114,14 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
     canonical.platforms.forEach((q,i)=>{if(q.fragile){const x=s.room.platforms[i];if(!x||!number(x.crack,0,.65)||!number(x.cooldown,0,2.8))fail();q.crack=x.crack;q.cooldown=x.cooldown;}if(q.raft)q.x=q.originX+Math.sin(s.roomTime*.85)*65;});
     if(canonical.node){const n=s.room.node;if(!n||n.id!==canonical.node.id||!['ready','active','done'].includes(n.state)||(n.state==='done')!==s.world[n.id])fail();canonical.node.state=n.state;if(n.state==='ready'&&canonical.enemies.some(e=>canonical.node.guards.includes(e.id)&&e.hp>0))fail();}
     const dangerSources=['莲灯使·锁空莲印','莲灯使·锁地咒','莲灯使·交叉封位','无天·黑莲落火','镇山魈王·震地','渡厄灯魁·索灯','缄愿法使·封愿','缄愿法使·钟浪'];
+    if(challenging)dangerSources.push(...K.CHALLENGE_DANGERS);
     if(!Array.isArray(s.dangers)||s.dangers.length>20||s.dangers.some(d=>!validBox(d)||!number(d.life,0,1)||![12,16].includes(d.damage)||!dangerSources.includes(d.source)))fail();
     if(!Array.isArray(s.casts)||s.casts.length>3||s.casts.some(c=>!validBox(c)||!number(c.timer,0,.24)))fail();
     if(!Array.isArray(s.projectiles)||s.projectiles.length>100)fail();
     const projectiles=s.projectiles.map(b=>{
       for(const [key,min,max]of[['x',-200,canonical.width+200],['y',-2000,2000],['vx',-2000,2000],['vy',-2000,2000],['life',0,10],['w',1,100],['h',1,100]])if(!number(b[key],min,max))fail();
       if(typeof b.friendly!=='boolean'||(b.damage!==undefined&&!number(b.damage,1,100))||(b.hit!==undefined&&(!Array.isArray(b.hit)||b.hit.length>100||b.hit.some(x=>!Number.isInteger(x)))))fail();
-      if(b.source!==undefined&&!['渡厄灯魁·散焰','震盾兵·地波'].includes(b.source))fail();
+      if(b.source!==undefined&&!['渡厄灯魁·散焰','震盾兵·地波',...(challenging?K.CHALLENGE_PROJECTILES:[])].includes(b.source))fail();
       // Optional for existing schema6 saves; separate IDs avoid enemy 0 / seal 0 collisions.
       if(b.sealHits!==undefined&&(!Array.isArray(b.sealHits)||b.sealHits.length>canonical.seals.length||new Set(b.sealHits).size!==b.sealHits.length||b.sealHits.some(id=>!canonical.seals.some(q=>q.id===id))||(!b.friendly&&b.sealHits.length)))fail();
       return {x:b.x,y:b.y,vx:b.vx,vy:b.vy,life:b.life,w:b.w,h:b.h,friendly:b.friendly,damage:b.damage,hit:b.hit,sealHits:b.sealHits?.slice(),source:b.source};
@@ -1034,7 +1134,7 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
     if(s.ring!==null){const r=s.ring;if(!r||!K.isRanged(s)||!number(r.x,-100,canonical.width+100)||!number(r.y,-200,650)||!number(r.vx,-900,900)||!number(r.vy,-900,900)||!number(r.life,0,4)||!number(r.distance,0,5000)||!['out','back'].includes(r.phase)||![360,430].includes(r.range)||typeof r.flared!=='boolean')fail();for(const key of ['hitOut','hitBack'])if(!Array.isArray(r[key])||r[key].length>50||new Set(r[key]).size!==r[key].length||r[key].some(x=>typeof x!=='string'||!/^([es][0-9]+)$/.test(x)))fail();ring={x:r.x,y:r.y,w:22,h:22,vx:r.vx,vy:r.vy,life:r.life,distance:r.distance,phase:r.phase,range:r.range,flared:r.flared,hitOut:r.hitOut.slice(),hitBack:r.hitBack.slice()};}
     if(s.silk!==null){const c=s.silk;if(!c||!K.isRanged(s)||!number(c.x,0,canonical.width)||!number(c.y,-1000,1000)||![180,240].includes(c.w)||!number(c.life,0,3)||![-1,1].includes(c.face))fail();silk={x:c.x,y:c.y,w:c.w,h:72,life:c.life,face:c.face};}
     const signature=K.readSignature(s,p,canonical,number,fail);
-    const restored=K.newRun(s.seed,null,s.hero);K.enterRoom(restored,s.stage,true);
+    const restored=K.newRun(s.seed,null,s.hero,difficulty);K.enterRoom(restored,s.stage,true);
     for(const key of ['time','elapsed','roomTime','kills','broken','damageTaken','lastDamage','hitstop','shake','checkpoint','combo','comboTime','serial','rewardKind','pendingRelic'])restored[key]=s[key];
     restored.arm=signature.arm;restored.flight=signature.flight;restored.ring=ring;restored.silk=silk;restored.player={...p,w:24,h:44};restored.growth={...s.growth};restored.talisman=s.talisman?{id:s.talisman.id,charges:s.talisman.charges}:null;restored.casts=s.casts.map(c=>({x:c.x,y:c.y,w:c.w,h:c.h,timer:c.timer}));restored.room=canonical;restored.world={rescue:s.world.rescue,bridge:s.world.bridge,bell:s.world.bell};restored.journal=s.journal.slice();restored.dangers=s.dangers.map(d=>({x:d.x,y:d.y,w:d.w,h:d.h,life:d.life,damage:d.damage,source:d.source}));K.applyWorld(restored);restored.relics=s.relics.slice();restored.reward=s.reward.slice();restored.clone=clone;restored.projectiles=projectiles;restored.hints=s.hints.slice();restored.mode=s.mode==='playing'?'paused':s.mode;
     restored.runId=typeof s.runId==='string'?s.runId.slice(0,100):s.seed+':imported';
@@ -1047,7 +1147,7 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
     constructor(){this.available=true;this.error='';this.legacy=null;try{for(const key of[LEGACY,PREVIOUS,THIRD,FOURTH,FIFTH,SIXTH]){const raw=localStorage.getItem(key);if(raw&&raw.length<1000000){const x=JSON.parse(raw);if(x.game==='black-lotus'&&[1,2,3,4,5,6].includes(x.state?.version)&&x.schema===x.state.version)this.legacy=x;}}}catch{this.available=false;}}
     read(){try{const raw=localStorage.getItem(KEY);if(!raw)return null;if(raw.length>1000000)fail();return K.validSave(JSON.parse(raw));}catch(e){this.error=e.message;return null;}}
     write(state,meta){try{localStorage.setItem(KEY,K.pack(state,meta));this.available=true;return true;}catch{this.available=false;return false;}}
-    export(state,meta){K.download(K.pack(state,meta),'劫后行-v7-'+state.seed+'.json');}
+    export(state,meta){K.download(K.pack(state,meta),'劫后行-v7-'+(state.difficulty==='challenge'?'重劫-':'')+state.seed+'.json');}
     import(raw){if(raw.length>1000000)throw new Error('存档文件过大。');return K.validSave(JSON.parse(raw));}
     readSettings(){try{const x=JSON.parse(localStorage.getItem(SETTINGS)||'{}');return {volume:number(x.volume,0,1)?x.volume:.25,shake:typeof x.shake==='boolean'?x.shake:!matchMedia('(prefers-reduced-motion: reduce)').matches};}catch{return{volume:.25,shake:false};}}
     settings(value){try{localStorage.setItem(SETTINGS,JSON.stringify(value));}catch{}}
@@ -1688,6 +1788,31 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
 
 </script><script>
 (function(K){
+  'use strict';const Base=K.Renderer;
+  K.Renderer=class extends Base{
+    combatCues(){
+      super.combatCues();const s=this.scene;if(!s||!K.isChallenge(s))return;const c=this.c;
+      for(const e of s.room.enemies)if(e.hp>0&&!e.dormant){
+        // A small split crest identifies empowered enemies without recoloring
+        // their bodies or disguising the existing hurt/warning silhouettes.
+        if(!K.isMajor(e)){c.fillStyle='#e8b675';c.fillRect(e.x+7,e.y-49,3,6);c.fillRect(e.x+14,e.y-49,3,6);c.fillRect(e.x+10,e.y-52,4,3);}
+        for(const b of K.challengeWarningBoxes(e)){
+          this.mark(b);if(b.h>40)this.sigFx('air-warning',b.x,b.y,b.w,b.h,.5);
+          // The second lock has two tabs; it is a new warning, never a mark
+          // that follows the player after its geometry was committed.
+          c.fillStyle='#f1c48d';const tabs=e.phase==='challenge-echo-windup'?2:1;for(let i=0;i<tabs;i++)c.fillRect(b.x+b.w/2-3+i*7,b.y-7,4,4);
+        }
+        if(e.phase==='challenge-bolt-windup'){
+          const r=K.challengeBladeRay(e);c.save();c.strokeStyle='#e9b18e';c.lineWidth=2;c.setLineDash([6,6]);c.beginPath();c.moveTo(Math.round(r.ax),Math.round(r.ay));c.lineTo(Math.round(r.bx),Math.round(r.by));c.stroke();c.restore();
+        }
+      }
+      for(const d of s.dangers)if(d.source==='莲灯使·追迹莲印'||d.source==='无天·追落莲印')this.sigFx('air-active',d.x,d.y,d.w,d.h,.55);
+    }
+  };
+})(globalThis.Kong ||= {});
+
+</script><script>
+(function(K){
   'use strict';
   // Atlas extraction only: keep original generated PNGs and their transparency.
   K.DialogArtReady=K.ImageArt.ready.then(()=>{
@@ -1833,6 +1958,7 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
   const $=id=>document.getElementById(id),world=$('world');
   const renderer=new K.Renderer(world),audio=new K.Audio(),storage=new K.Storage();
   const loaded=storage.read();let state=loaded?.state||null,meta=loaded?.meta||K.cleanMeta();
+  let newDifficulty=state?.difficulty||'normal';
   let screen='menu',backScreen='menu',buildBack='playing',toastUntil=0,lastSave=0,pendingInputs=[];
   const rememberedFocus=new Map();let focusRevision=0;
   const settings=storage.readSettings();renderer.shake=settings.shake;audio.setVolume(settings.volume);
@@ -1874,12 +2000,13 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
     if(next==='playing'){world.focus({preventScroll:true});return;}
     const render={menu,prologue,heroes, start:starter,paused:pauseMenu,build:buildMenu,help,reward,replace:replaceRelic,dead:ending,won:ending,epilogue,legacy:legacyMenu,history};render[next]?.();
     const revision=++focusRevision;
-    requestAnimationFrame(()=>{if(revision!==focusRevision||screen!==next)return;const memory=rememberedFocus.get(next),node=memory?.id?$(memory.id):memory?.relic?$('overlay').querySelector('[data-relic="'+memory.relic+'"]'):null;(node||(['history','build'].includes(next)?$('overlay').querySelector('.history-list,.build-scroll'):$('overlay').querySelector('button:not(:disabled),input')))?.focus({preventScroll:true});});
+    requestAnimationFrame(()=>{if(revision!==focusRevision||screen!==next)return;const memory=rememberedFocus.get(next),node=memory?.id?$(memory.id):memory?.relic?$('overlay').querySelector('[data-relic="'+memory.relic+'"]'):null;(node||(next==='menu'?$('begin'):null)||(['history','build'].includes(next)?$('overlay').querySelector('.history-list,.build-scroll'):$('overlay').querySelector('button:not(:disabled),input')))?.focus({preventScroll:true});});
   }
   function menu(){
     const resumable=state&&['paused','playing','reward'].includes(state.mode);
-    $('overlay').innerHTML=`<div class="hero"><div class="eyebrow">西游记后传 · 像素横版肉鸽</div><h1><small>大 圣</small>劫后行</h1><div class="english-title">AFTER THE BLACK LOTUS</div><p>走过山道，渡过暗河，叩开灵山。<br>这一回，带着你的解法破局。</p><div class="actions">${btn('begin','踏上劫途 <small>→</small>',true)}${resumable?btn('resume','继续旅程'):btn('how','初行指南')}</div><div class="seed-edit"><label for="seed">本局因缘</label><input id="seed" aria-label="随机种子" maxlength="32" value="${esc(state?.seed||'LOTUS-1025')}"><button id="random-seed" class="text-button" aria-label="生成新种子">换一签 ↻</button></div><div class="hero-meta"><span><b>${meta.runs}</b> 次入劫</span><span><b>${meta.wins}</b> 次破局</span><button id="past" class="text-button">往昔旅程 ↗</button>${storage.legacy?'<button id="old" class="text-button">旧版旅程 ↗</button>':''}</div></div><div class="scene-label">三境六阵 · 舍利成法<span>棍可破莲 · 心不可折</span></div>`;
-    on('begin',()=>{K.pendingSeed=$('seed').value.trim()||'LOTUS-1025';audio.unlock();show(meta.runs===0?'prologue':'heroes');});
+    $('overlay').innerHTML=`<div class="hero has-modes"><div class="eyebrow">西游记后传 · 像素横版肉鸽</div><h1><small>大 圣</small>劫后行</h1><div class="english-title">AFTER THE BLACK LOTUS</div><p id="mode-note">${newDifficulty==='challenge'?'黑莲重劫：援兵结阵，敌招追击。<br>刀气、盾震与双印，考验换位和出手。':'走过山道，渡过暗河，叩开灵山。<br>这一回，带着你的解法破局。'}</p><div class="mode-picker" role="group" aria-label="新旅程难度">${['normal','challenge'].map(id=>`<button id="mode-${id}" data-difficulty="${id}" aria-pressed="${newDifficulty===id}">${id==='challenge'?'挑战 · 黑莲重劫':'普通旅程'}</button>`).join('')}</div><div class="actions">${btn('begin','踏上劫途 <small>→</small>',true)}${resumable?btn('resume','继续旅程 <span aria-hidden="true">'+K.difficultyName(state)+'</span>'):btn('how','初行指南')}</div><div class="seed-edit"><label for="seed">本局因缘</label><input id="seed" aria-label="随机种子" maxlength="32" value="${esc(state?.seed||'LOTUS-1025')}"><button id="random-seed" class="text-button" aria-label="生成新种子">换一签 ↻</button></div><div class="hero-meta"><span><b>${meta.runs}</b> 次入劫</span><span><b>${meta.wins}</b> 次破局</span><button id="past" class="text-button">往昔旅程 ↗</button>${storage.legacy?'<button id="old" class="text-button">旧版旅程 ↗</button>':''}</div></div><div class="scene-label">三境六阵 · 舍利成法<span>棍可破莲 · 心不可折</span></div>`;
+    on('begin',()=>{K.pendingSeed=$('seed').value.trim()||'LOTUS-1025';K.pendingDifficulty=newDifficulty;audio.unlock();show(meta.runs===0?'prologue':'heroes');});
+    for(const b of $('overlay').querySelectorAll('[data-difficulty]'))b.onclick=()=>{newDifficulty=b.dataset.difficulty;for(const q of $('overlay').querySelectorAll('[data-difficulty]'))q.setAttribute('aria-pressed',q.dataset.difficulty===newDifficulty);$('mode-note').innerHTML=newDifficulty==='challenge'?'黑莲重劫：援兵结阵，敌招追击。<br>刀气、盾震与双印，考验换位和出手。':'走过山道，渡过暗河，叩开灵山。<br>这一回，带着你的解法破局。';};
     on('resume',resume);on('how',()=>openHelp('menu'));on('past',()=>show('history'));on('old',()=>show('legacy'));
     on('random-seed',()=>$('seed').value='LOTUS-'+crypto.getRandomValues(new Uint32Array(1))[0].toString(36).slice(0,6).toUpperCase());
   }
@@ -1890,20 +2017,20 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
   function cards(ids){return `<div class="cards">${ids.map((id,i)=>{const r=rewardInfo(id),copy=K.isRanged(screen==='start'?{hero:K.pendingHero}:state||{})?[r.text,r.cost]:cardCopy[id]||[r.text,r.cost],verb=screen==='replace'?'放下此物':id==='rest'?'借灯调息':r.temporary?'携此符术':r.max?'悟此法门':'取此舍利',tag=r.max?r.tag+' · '+(K.rank(state,id)+1)+'/'+r.max:r.tag;return `<button class="relic-card" data-relic="${id}" aria-label="${screen==='replace'?'放下':'选择'}${r.name}" aria-describedby="relic-detail-${id} relic-cost-${id}" style="--relic-tone:${r.color}"><span class="num" aria-hidden="true">${['壹','贰','叁'][i]}</span>${relicArt(id)}<h3>${r.name}</h3><span class="tag">${tag}</span><p id="relic-detail-${id}">${copy[0]}</p><span class="cost" id="relic-cost-${id}">${copy[1]}</span><span class="choice-verb" aria-hidden="true">${verb}</span></button>`;}).join('')}</div>`;}
   function bindCards(fn){for(const b of $('overlay').querySelectorAll('[data-relic]'))b.onclick=()=>fn(b.dataset.relic);}
   function heroes(){
-    $('overlay').innerHTML=panel('选择应劫者','棍影与回环 · 同赴黑莲','此行，谁来应劫？',`<div class="hero-choices">${K.HEROES.map(h=>`<button id="choose-${h.id}" data-hero="${h.id}" class="hero-choice" aria-label="选择${h.name}"><span class="hero-portrait hero-${h.id}" aria-hidden="true"></span><h3>${h.name}</h3><b>${h.title}</b><p>${h.text}</p><small>${h.id==='nezha'?'J掷环 / 左键瞄准 · U风火轮 · L混天绫 · R莲火轮阵':'J三连棍 · U伸棍/撑跃 · L分身 · R法天象地'}</small></button>`).join('')}</div><div class="actions">${btn('back','返回')}</div>`);
+    $('overlay').innerHTML=panel('选择应劫者',K.difficultyName(K.pendingDifficulty)+' · 棍影与回环','此行，谁来应劫？',`<div class="hero-choices">${K.HEROES.map(h=>`<button id="choose-${h.id}" data-hero="${h.id}" class="hero-choice" aria-label="选择${h.name}"><span class="hero-portrait hero-${h.id}" aria-hidden="true"></span><h3>${h.name}</h3><b>${h.title}</b><p>${h.text}</p><small>${h.id==='nezha'?'J掷环 / 左键瞄准 · U风火轮 · L混天绫 · R莲火轮阵':'J三连棍 · U伸棍/撑跃 · L分身 · R法天象地'}</small></button>`).join('')}</div><div class="actions">${btn('back','返回')}</div>`);
     const paint=()=>{for(const h of K.HEROES){const im=K.ImageArt.images[h.id==='wukong'?'wukong':'nezha'];const n=$('overlay').querySelector('.hero-'+h.id);if(n&&im)n.style.backgroundImage='url("'+im.src+'")';}};paint();K.ImageArt.ready.then(()=>{if(screen==='heroes')paint();});
     for(const b of $('overlay').querySelectorAll('[data-hero]'))b.onclick=()=>{K.pendingHero=b.dataset.hero;show('start');};on('back',()=>show('menu'));
   }
   function starter(){
-    $('overlay').innerHTML=panel('选择初始舍利','启程 · 一念成法',K.heroDef({hero:K.pendingHero}).name+' · 带哪一念入劫？',`<p class="subtitle">择一舍利启程，途中可换法。最多携带三枚。</p>${cards(['cloud','echo','staff'])}<div class="actions">${btn('back','返回')}</div>`);
+    $('overlay').innerHTML=panel('选择初始舍利',K.difficultyName(K.pendingDifficulty)+' · 启程',K.heroDef({hero:K.pendingHero}).name+' · 带哪一念入劫？',`<p class="subtitle">择一舍利启程，途中可换法。最多携带三枚。</p>${cards(['cloud','echo','staff'])}<div class="actions">${btn('back','返回')}</div>`);
     bindCards(startRun);on('back',()=>show('heroes'));
   }
   function startRun(id){
-    state=K.newRun(K.pendingSeed||state?.seed||'LOTUS-1025',id,K.pendingHero||'wukong');meta.runs++;state.runId=state.seed+':'+meta.runs+':'+Date.now();renderer.camera=0;audio.unlock();show('playing');toast(K.STAGES[0].lore,4);save();
+    state=K.newRun(K.pendingSeed||state?.seed||'LOTUS-1025',id,K.pendingHero||'wukong',K.pendingDifficulty||'normal');meta.runs++;state.runId=state.seed+':'+meta.runs+':'+Date.now();renderer.camera=0;audio.unlock();show('playing');toast(K.isChallenge(state)?'挑战·黑莲重劫 · 援兵结阵，刀气可返弹，地震要离地，双印需再判断。':K.STAGES[0].lore,4);save();
   }
   function resume(){if(!state)return;audio.unlock();if(state.mode==='paused')state.mode='playing';show(state.mode==='reward'&&state.pendingRelic?'replace':state.mode);}
   function pauseMenu(){
-    $('overlay').innerHTML=panel('暂停菜单','暂歇 · 风停此刻','此心未歇',`<p class="pause-place">${K.heroDef(state).name} · ${K.STAGES[state.stage].name} · 因缘 ${esc(state.seed)}</p>${growthLine()}<nav class="pause-nav" aria-label="暂歇选择">${btn('continue','继续前行 <span aria-hidden="true">ESC</span>',true)}${btn('build-details','本局法门 <span aria-hidden="true">已选加成 · B</span>')}${btn('help','行者手记 <span aria-hidden="true">招式与破局</span>')}${btn('main-menu','回到主菜单')}</nav><div class="setting-row"><label for="volume">声音</label><input id="volume" aria-label="音量" type="range" min="0" max="100" value="${settings.volume*100}"><label><input id="shake" type="checkbox" ${settings.shake?'checked':''}> 屏震</label></div><div class="pause-tools">${btn('export','导出存档')}${btn('import','导入存档')}</div><p class="notice">旅程已停。导出存档可将此行带往另一入口。</p>${journal()}`);
+    $('overlay').innerHTML=panel('暂停菜单','暂歇 · 风停此刻','此心未歇',`<p class="pause-place">${K.heroDef(state).name} · ${K.difficultyName(state)} · ${K.STAGES[state.stage].name} · 因缘 ${esc(state.seed)}</p>${growthLine()}<nav class="pause-nav" aria-label="暂歇选择">${btn('continue','继续前行 <span aria-hidden="true">ESC</span>',true)}${btn('build-details','本局法门 <span aria-hidden="true">已选加成 · B</span>')}${btn('help','行者手记 <span aria-hidden="true">招式与破局</span>')}${btn('main-menu','回到主菜单')}</nav><div class="setting-row"><label for="volume">声音</label><input id="volume" aria-label="音量" type="range" min="0" max="100" value="${settings.volume*100}"><label><input id="shake" type="checkbox" ${settings.shake?'checked':''}> 屏震</label></div><div class="pause-tools">${btn('export','导出存档')}${btn('import','导入存档')}</div><p class="notice">旅程已停。导出存档可将此行带往另一入口。</p>${journal()}`);
     const portrait=()=>{const panel=$('overlay').querySelector('.dialog-paused');if(panel&&K.DialogPortraits?.[state.hero]){panel.dataset.hero=state.hero;panel.style.setProperty('--portrait-art',K.DialogPortraits[state.hero]);}};portrait();K.DialogArtReady.then(()=>{if(screen==='paused')portrait();});
     on('build-details',()=>openBuild('paused'));on('continue',resume);on('help',()=>openHelp('paused'));on('export',exportSave);on('import',()=>$('import-file').click());on('main-menu',()=>{save();show('menu');});
     $('volume').oninput=e=>{settings.volume=Number(e.target.value)/100;audio.setVolume(settings.volume);storage.settings(settings);};
@@ -1941,19 +2068,19 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
   function settle(){
     if(meta.history.some(x=>x.id===state.runId))return;
     const won=state.mode==='won';if(won)meta.wins++;meta.best=Math.max(meta.best,won?4:state.stage);
-    meta.history.push({id:state.runId,seed:state.seed,won,stage:state.stage,hero:state.hero,seconds:Math.floor(state.elapsed),damage:state.damageTaken,relics:state.relics.slice()});meta.history=meta.history.slice(-8);save();
+    meta.history.push({id:state.runId,seed:state.seed,won,stage:state.stage,hero:state.hero,difficulty:state.difficulty,seconds:Math.floor(state.elapsed),damage:state.damageTaken,relics:state.relics.slice()});meta.history=meta.history.slice(-8);save();
   }
   function ending(){
     settle();const won=state.mode==='won',seconds=Math.floor(state.elapsed),time=Math.floor(seconds/60)+'分'+seconds%60+'秒';
-    $('overlay').innerHTML=panel(won?'胜利结算':'失败结算',won?'黑莲已散 · 此心长明':'劫途未尽 · 再起一念',won?'三界重见微光':'此身暂歇，此心未折',`<p class="subtitle">${won?'无天的莲影终于落地。三境的灯火，正一盏一盏重新亮起。':'最后受伤：'+esc(state.lastDamage)+'。<br>记住刀光和落点，再次入劫时可以换一枚舍利。'}</p><div class="results"><div><small>此行</small><b>${time}</b></div><div><small>破阵</small><b>${state.broken} / 8</b></div><div><small>退敌</small><b>${state.kills}</b></div><div><small>承伤</small><b>${state.damageTaken}</b></div></div><div class="result-build">${K.heroDef(state).name} · 因缘 ${esc(state.seed)}${equipped(state.relics)}${growthLine()}${K.heroDef(state).skill} ${state.stats.ultimates} 次 · 符术 ${state.stats.talismans} 次 · 守关 ${state.stats.guardians}/3<br>跃起 ${state.stats.jumps} 次 · ${K.isRanged(state)?'绫缚':'分身'} ${state.stats.clones} 次 · 消耗定力 ${Math.round(state.stats.focusSpent)}<br>此行所护：${worldSummary()||'一路直抵黑莲，尚有未尽的归路'}</div><div class="actions">${won?btn('epilogue','走出黑莲',true):btn('retry','同缘再行',true)}${won?btn('retry','同缘再行'):btn('new-path','另启因缘')}${btn('export','导出此行')}</div>`);
-    on('retry',()=>{K.pendingSeed=state.seed;K.pendingHero=state.hero;show('heroes');});on('new-path',()=>show('menu'));on('export',exportSave);on('epilogue',()=>show('epilogue'));
+    $('overlay').innerHTML=panel(won?'胜利结算':'失败结算',won?'黑莲已散 · 此心长明':'劫途未尽 · 再起一念',won?'三界重见微光':'此身暂歇，此心未折',`<p class="subtitle">${won?'无天的莲影终于落地。三境的灯火，正一盏一盏重新亮起。':'最后受伤：'+esc(state.lastDamage)+'。<br>记住刀光和落点，再次入劫时可以换一枚舍利。'}</p><div class="results"><div><small>此行</small><b>${time}</b></div><div><small>破阵</small><b>${state.broken} / 8</b></div><div><small>退敌</small><b>${state.kills}</b></div><div><small>承伤</small><b>${state.damageTaken}</b></div></div><div class="result-build">${K.heroDef(state).name} · ${K.difficultyName(state)} · 因缘 ${esc(state.seed)}${equipped(state.relics)}${growthLine()}${K.heroDef(state).skill} ${state.stats.ultimates} 次 · 符术 ${state.stats.talismans} 次 · 守关 ${state.stats.guardians}/3<br>跃起 ${state.stats.jumps} 次 · ${K.isRanged(state)?'绫缚':'分身'} ${state.stats.clones} 次 · 消耗定力 ${Math.round(state.stats.focusSpent)}<br>此行所护：${worldSummary()||'一路直抵黑莲，尚有未尽的归路'}</div><div class="actions">${won?btn('epilogue','走出黑莲',true):btn('retry','同缘再行',true)}${won?btn('retry','同缘再行'):btn('new-path','另启因缘')}${btn('export','导出此行')}</div>`);
+    on('retry',()=>{K.pendingSeed=state.seed;K.pendingHero=state.hero;K.pendingDifficulty=newDifficulty=state.difficulty;show('heroes');});on('new-path',()=>show('menu'));on('export',exportSave);on('epilogue',()=>show('epilogue'));
   }
   function epilogue(){
     $('overlay').innerHTML=panel('尾声','尾声 · 灯火人间','前路，还有众生',`<p class="story-copy">${state.world.rescue?'山道上的行者走出了牢笼，沿着归路点起灯火。':'山道雾散，旧寨仍有未解的牢笼。你记下了回去的路。'}<br>${state.world.bridge?'渡口的桥接回两岸，灯终于照见对岸的人。':'渡口的灯还在等人。灵山之外，也有你未走完的路。'}<br>${state.world.bell?'镇莲钟的余音里，众生的愿力托住了最后一棍。':'灵山残钟仍沉默。此劫已破，众生仍有未竟的愿。'}<br><br>你收起兵器，走回那些还需要你的地方。</p><div class="actions">${btn('again','再入因缘',true)}${btn('back-result','查看此行')}${btn('main-menu','回到主菜单')}</div>`);
-    on('again',()=>{K.pendingSeed='LOTUS-'+crypto.getRandomValues(new Uint32Array(1))[0].toString(36).slice(0,6);show('heroes');});on('back-result',()=>show('won'));on('main-menu',()=>show('menu'));
+    on('again',()=>{K.pendingSeed='LOTUS-'+crypto.getRandomValues(new Uint32Array(1))[0].toString(36).slice(0,6);K.pendingDifficulty=newDifficulty=state.difficulty;show('heroes');});on('back-result',()=>show('won'));on('main-menu',()=>show('menu'));
   }
   function history(){
-    $('overlay').innerHTML=panel('往昔旅程','因缘簿 · 留迹不留战力','你走过的路',`<div class="history-folio"><div class="history-list" tabindex="0" aria-label="旅程记录，可滚动">${meta.history.length?meta.history.slice().reverse().map(r=>`<div><b>${r.won?'破劫':'止步'+K.STAGES[r.stage].name}</b><span>${esc(r.seed)}</span><span>${Math.floor(r.seconds/60)}分${r.seconds%60}秒</span><small>${K.heroDef(r).name} · ${r.relics.map(id=>K.reward(id,r).name).join(' · ')}</small></div>`).join(''):`<div class="empty-history">${relicArt('rest')}<p>因缘簿尚未落墨。<br>选择应劫者，先走一程。</p></div>`}</div></div><p class="history-hint">${meta.history.length?'共 '+meta.history.length+' 行旅记 · 滚轮或 ↑ ↓ 翻阅':'行过之处，终会留下痕迹'}</p><div class="actions">${btn('back','返回',true)}</div>`);on('back',()=>show('menu'));
+    $('overlay').innerHTML=panel('往昔旅程','因缘簿 · 留迹不留战力','你走过的路',`<div class="history-folio"><div class="history-list" tabindex="0" aria-label="旅程记录，可滚动">${meta.history.length?meta.history.slice().reverse().map(r=>`<div><b>${r.won?'破劫':'止步'+K.STAGES[r.stage].name}</b><span>${esc(r.seed)}</span><span>${Math.floor(r.seconds/60)}分${r.seconds%60}秒</span><small>${K.heroDef(r).name} · ${K.difficultyName(r)} · ${r.relics.map(id=>K.reward(id,r).name).join(' · ')}</small></div>`).join(''):`<div class="empty-history">${relicArt('rest')}<p>因缘簿尚未落墨。<br>选择应劫者，先走一程。</p></div>`}</div></div><p class="history-hint">${meta.history.length?'共 '+meta.history.length+' 行旅记 · 滚轮或 ↑ ↓ 翻阅':'行过之处，终会留下痕迹'}</p><div class="actions">${btn('back','返回',true)}</div>`);on('back',()=>show('menu'));
   }
   function legacyMenu(){
     $('overlay').innerHTML=panel('原版旅程','存档保护 · 旧路仍在','在原来的规则中继续',`<p class="story-copy">旧版的地图与规则和新版不同。你的旧旅程不会被覆盖，也不会被悄悄搬到另一张地图。<br><br>${storage.legacy?'可先下载旧档，再在打开的原版里通过「初行指南 → 导入存档」继续。':'保留的原版可直接打开；如果你有旧JSON文件，请在原版的指南中导入。'}</p><div class="actions">${btn('open-legacy',storage.legacy?'备份旧档并打开原版':'打开原版',true)}${btn('back','返回新版')}</div>`);
@@ -1967,7 +2094,7 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
   }
   on('build-open',()=>openBuild('playing'));on('pause',()=>control('pause'));on('guide-top',()=>{const back=screen==='playing'?'paused':screen;if(screen==='playing'){K.cancelSignature(state,true);state.mode='paused';save();}openHelp(back==='help'?backScreen:back);});
   on('brand',e=>{e.preventDefault();if(screen==='playing'){K.cancelSignature(state,true);state.mode='paused';save();}show('menu');});
-  $('import-file').onchange=async e=>{const file=e.target.files[0];if(!file)return;let raw='';try{raw=await file.text();const data=storage.import(raw);state=data.state;meta=data.meta;renderer.camera=K.clamp(state.player.x-300,0,state.room.width-960);save();show(state.mode==='reward'&&state.pendingRelic?'replace':state.mode);toast('旅程已恢复。',2);}catch(err){if(err.legacy){try{storage.legacy=JSON.parse(raw);show('legacy');}catch{toast('旧存档无法读取。');}}else toast('导入失败：'+err.message);}e.target.value='';};
+  $('import-file').onchange=async e=>{const file=e.target.files[0];if(!file)return;let raw='';try{raw=await file.text();const data=storage.import(raw);state=data.state;meta=data.meta;newDifficulty=state.difficulty;renderer.camera=K.clamp(state.player.x-300,0,state.room.width-960);save();show(state.mode==='reward'&&state.pendingRelic?'replace':state.mode);toast('旅程已恢复。',2);}catch(err){if(err.legacy){try{storage.legacy=JSON.parse(raw);show('legacy');}catch{toast('旧存档无法读取。');}}else toast('导入失败：'+err.message);}e.target.value='';};
   window.addEventListener('keydown',e=>{
     if(e.defaultPrevented||e.ctrlKey||e.metaKey||e.altKey)return;
     if(e.target.classList.contains('build-scroll')&&['ArrowDown','ArrowUp','PageDown','PageUp','Home','End'].includes(e.code)){e.preventDefault();const n=e.target;if(e.code==='Home')n.scrollTop=0;else if(e.code==='End')n.scrollTop=n.scrollHeight;else n.scrollTop+=(['ArrowUp','PageUp'].includes(e.code)?-1:1)*(e.code.startsWith('Page')?n.clientHeight*.8:45);return;}
@@ -1993,11 +2120,11 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
     if(!state)return;const p=state.player;$('player-name').textContent=K.heroDef(state).name;$('ultimate-name').textContent='R '+K.heroDef(state).skill;$('range-state').textContent=K.isRanged(state)?(state.ring?(state.ring.phase==='out'?'乾坤圈 · 去程':'乾坤圈 · 回收'):'乾坤圈 · 就绪'):'';
     const sig=K.isRanged(state),unavailable=p.hurt>0?'受击中':p.ultimate>0?'大招中':p.slam?'下劈中':p.dash>0?'闪避中':'';
     $('signature-name').textContent=sig?'U 风火轮':'U 如意伸缩';$('signature-fill').style.width=(sig?Math.min(100,p.wheelFuel/K.wheelMax(state)*100):state.arm?.phase==='charge'?state.arm.charge/.6*100:p.armCD>0||p.focus<10?0:100)+'%';$('signature-state').textContent=unavailable||(sig?(state.flight?'驭轮':p.focus<8?'定力不足':p.wheelFuel<=K.DT?'落地回充':!p.wheelReady?'松开 U':p.wheelFuel<=.08?'轮火不足':p.wheelFuel.toFixed(1)+'s'):state.arm?({charge:'蓄棍',thrust:'伸',recover:'收',vault:'撑'})[state.arm.phase]:p.armCD>0?'回气':p.focus<10?'定力不足':'就绪');
-    $('hp-number').textContent=Math.ceil(p.hp)+' / '+K.maxHP(state);$('hp-fill').style.width=(p.hp/K.maxHP(state)*100)+'%';$('focus-number').textContent=Math.floor(p.focus);$('focus-fill').style.width=p.focus+'%';$('rage-number').textContent=Math.floor(p.rage);$('rage-fill').style.width=p.rage+'%';$('rage-line').classList.toggle('ready',p.rage>=100);$('rage-line').title=p.rage>=100?'按 R 释放'+K.heroDef(state).skill:'命中积攒战意';$('talisman-state').textContent=state.talisman?'Q '+rewardInfo(state.talisman.id).name+' ×'+state.talisman.charges:'Q 未携符术';$('growth-state').textContent=Object.entries(state.growth).map(([id,n])=>rewardInfo(id).name+(n>1?'·'+n+'重':'')).join(' · ')||'暂无';$('chapter').textContent=state.stage<3?'第'+['一','二','三'][state.stage]+'境':'终局';$('stage-name').textContent=K.STAGES[state.stage].name;$('chapter').textContent+=' · '+K.region(state.stage,p.x);
+    $('hp-number').textContent=Math.ceil(p.hp)+' / '+K.maxHP(state);$('hp-fill').style.width=(p.hp/K.maxHP(state)*100)+'%';$('focus-number').textContent=Math.floor(p.focus);$('focus-fill').style.width=p.focus+'%';$('rage-number').textContent=Math.floor(p.rage);$('rage-fill').style.width=p.rage+'%';$('rage-line').classList.toggle('ready',p.rage>=100);$('rage-line').title=p.rage>=100?'按 R 释放'+K.heroDef(state).skill:'命中积攒战意';$('talisman-state').textContent=state.talisman?'Q '+rewardInfo(state.talisman.id).name+' ×'+state.talisman.charges:'Q 未携符术';$('growth-state').textContent=Object.entries(state.growth).map(([id,n])=>rewardInfo(id).name+(n>1?'·'+n+'重':'')).join(' · ')||'暂无';$('chapter').textContent=state.stage<3?'第'+['一','二','三'][state.stage]+'境':'终局';$('stage-name').textContent=K.STAGES[state.stage].name;$('chapter').textContent+=(K.isChallenge(state)?' · 重劫':'')+' · '+K.region(state.stage,p.x);
     const left=state.room.seals.find(q=>q.hp>0),guardian=K.guardian(state),direction=left?targetCue(p,left):'';$('objective').textContent=state.stage<3?(left?'阵眼 '+(state.room.seals.filter(q=>q.hp===0).length+1)+' / 2 · '+direction:guardian?.hp>0?'击退山门守关者 · '+K.GUARDIANS[state.stage].name:'双阵与守关已破 · F过门'):left?'破除法界双阵 · '+direction:state.room.enemies[0].dormant?'前往莲座 · 归灯可调息一次':'绕背或趁金色收招 · 全额伤敌';
     $('run-seed').textContent=state.seed;$('relic-list').textContent=state.relics.map(id=>rewardInfo(id).name).join(' · ')+'  ['+state.relics.length+'/3]';$('dash-state').textContent=p.dashCD>0?'闪避恢复 '+p.dashCD.toFixed(1)+'s':'闪避就绪';
     const boss=state.room.enemies.find(e=>(e.kind==='boss'||e.kind==='warden')&&!e.dormant&&e.hp>0);$('boss-hud').hidden=!boss;
-    if(boss){$('boss-name').textContent=boss.kind==='warden'?K.GUARDIANS[state.stage].name:'无天';$('boss-fill').style.width=boss.hp/boss.maxHp*100+'%';$('boss-hud').style.setProperty('--boss-color',boss.kind==='warden'?K.GUARDIANS[state.stage].color:'#ba77a3');$('boss-phase').textContent=boss.kind==='warden'?(boss.phase==='recover'?'收招破绽 · 出棍':boss.phase==='warden-windup'?({charge:'冲撞将至 · 跃过路径',quake:'震地将至 · 跳',fan:'散焰将至 · 跳或返弹',lantern:'索灯将至 · 离开莲印',columns:'封愿将至 · 横移',bell:'钟浪将至 · 跳'}[boss.move]):'看清下一招'):boss.phase==='recover'?'破绽已现':boss.phase==='sweep-windup'?'横扫将至 · 跳':boss.phase==='orb-windup'?'莲焰将至 · 闪':boss.phase==='rain-windup'?'落火将至 · 离开莲印':boss.phase==='shift-windup'?'移形将至 · 让路':'黑莲护在正面';}
+    if(boss){$('boss-name').textContent=boss.kind==='warden'?K.GUARDIANS[state.stage].name:'无天';$('boss-fill').style.width=boss.hp/boss.maxHp*100+'%';$('boss-hud').style.setProperty('--boss-color',boss.kind==='warden'?K.GUARDIANS[state.stage].color:'#ba77a3');$('boss-phase').textContent=K.challengePhaseText(boss)||(boss.kind==='warden'?(boss.phase==='recover'?'收招破绽 · 出棍':boss.phase==='warden-windup'?({charge:'冲撞将至 · 跃过路径',quake:'震地将至 · 跳',fan:'散焰将至 · 跳或返弹',lantern:'索灯将至 · 离开莲印',columns:'封愿将至 · 横移',bell:'钟浪将至 · 跳'}[boss.move]):'看清下一招'):boss.phase==='recover'?'破绽已现':boss.phase==='sweep-windup'?'横扫将至 · 跳':boss.phase==='orb-windup'?'莲焰将至 · 闪':boss.phase==='rain-windup'?'落火将至 · 离开莲印':boss.phase==='shift-windup'?'移形将至 · 让路':'黑莲护在正面');}
     const trial=state.room.trial,camp=state.room.camp,nearTrial=trial&&Math.abs(p.x-trial.x)<95&&Math.abs(p.y-trial.y)<75,nearCamp=camp&&Math.abs(p.x-camp.x)<75&&Math.abs(p.y-camp.y)<65;
     const node=state.room.node,nearNode=node&&Math.abs(p.x-node.x)<90&&Math.abs(p.y-396)<95;const gate=state.stage<3&&Math.abs(p.x-state.room.exit)<85;const lamp=state.stage<3&&state.room.seals[0].hp===0&&!state.room.midClaimed&&Math.abs(p.x-state.room.seals[0].x)<85;
     const pickup=state.room.pickups.filter(q=>!q.used&&q.enabled!==false&&Math.abs(p.x+p.w/2-q.x-q.w/2)<72&&Math.abs(p.y+p.h-q.y-q.h)<54).sort((a,b)=>Math.abs(p.x-a.x)-Math.abs(p.x-b.x))[0];
