@@ -58,6 +58,9 @@
     noise(length=.08,gain=.09){if(!this.ctx||!this.enabled)return;const count=Math.floor(this.ctx.sampleRate*length),buffer=this.ctx.createBuffer(1,count,this.ctx.sampleRate),samples=buffer.getChannelData(0);let n=73;for(let i=0;i<count;i++){n=(n*16807)%2147483647;samples[i]=(n/1073741824-1)*Math.pow(1-i/count,2);}const source=this.ctx.createBufferSource(),level=this.ctx.createGain();source.buffer=buffer;level.gain.value=gain;source.connect(level);level.connect(this.bus);source.start();}
     sweep(from,to,len=.1,gain=.1){if(!this.ctx||!this.enabled)return;const t=this.ctx.currentTime,o=this.ctx.createOscillator(),g=this.ctx.createGain();o.type='triangle';o.frequency.setValueAtTime(from,t);o.frequency.exponentialRampToValueAtTime(to,t+len);g.gain.setValueAtTime(gain,t);g.gain.exponentialRampToValueAtTime(.001,t+len);o.connect(g);g.connect(this.bus);o.start(t);o.stop(t+len+.01);}
     event(e){
+      if(e.type==='bow-draw')this.sweep(180,390,.18,.04);
+      if(e.type==='bow-fire')this.sweep(850,260,.1,.07);
+      if(e.type==='eye'){this.tone(660,.2,'sine',.08);this.tone(990,.2,'sine',.04,.05);}
       if(e.type==='staff-extend'){this.sweep(370,95,.13,.075);this.noise(.065,.04);}
       if(e.type==='staff-vault'){this.sweep(210,620,.2,.07);this.sample('ground-slam',.35,1);}
       if(e.type==='wheel-start'){this.noise(.12,.035);this.sweep(240,670,.18,.06);}

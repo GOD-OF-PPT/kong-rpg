@@ -1,7 +1,7 @@
 (function (K) {
   'use strict';
   K.newRun = function (seed, first, hero='wukong',difficulty='normal') {
-    const s = { version:7,rules:7,hero,ring:null,silk:null,arm:null,flight:null,growth:{},talisman:null,casts:[],world:{rescue:false,bridge:false,bell:false},journal:[],dangers:[],seed:String(seed || 'BLACK-LOTUS'), stage:0, mode:'playing',time:0,elapsed:0,roomTime:0,relics:first?[first]:[],room:null,player:null,clone:null,projectiles:[],effects:[],events:[],log:[],reward:[],rewardKind:'exit',pendingRelic:null,kills:0,broken:0,damageTaken:0,lastDamage:'',hitstop:0,shake:0,checkpoint:90,combo:0,comboTime:0,serial:0,hints:[],stats:{swings:0,hits:0,blocks:0,jumps:0,dashes:0,clones:0,focusSpent:0,rests:0,ultimates:0,talismans:0,guardians:0,drops:0,camps:0,trials:0,farHits:0,extends:0,tipHits:0,vaults:0,flights:0} };
+    const s = { version:8,rules:8,hero,ring:null,silk:null,arm:null,flight:null,growth:{},talisman:null,casts:[],world:{rescue:false,bridge:false,bell:false},journal:[],dangers:[],seed:String(seed || 'BLACK-LOTUS'), stage:0, mode:'playing',time:0,elapsed:0,roomTime:0,relics:first?[first]:[],room:null,player:null,clone:null,projectiles:[],effects:[],events:[],log:[],reward:[],rewardKind:'exit',pendingRelic:null,kills:0,broken:0,damageTaken:0,lastDamage:'',hitstop:0,shake:0,checkpoint:90,combo:0,comboTime:0,serial:0,hints:[],stats:{swings:0,hits:0,blocks:0,jumps:0,dashes:0,clones:0,focusSpent:0,rests:0,ultimates:0,talismans:0,guardians:0,drops:0,camps:0,trials:0,farHits:0,extends:0,tipHits:0,vaults:0,flights:0} };
     s.difficulty=difficulty==='challenge'?'challenge':'normal';s.challengeRules=s.difficulty==='challenge'?1:0;
     K.enterRoom(s, 0, true); return s;
   };
@@ -94,11 +94,9 @@
     if((a.attack||p.attackBuffer>0)&&p.attack<=0&&p.landing===0&&p.dash<=0&&!p.slam){
       p.attackBuffer=0;
       if (a.down && !p.grounded) { p.slam = true; p.vy = 650; p.vx = 0; K.event(s, 'slam'); }
-      else if(K.isRanged(s))K.startRangedAttack(s,a);
       else { s.combo=s.combo%3+1;s.comboTime=.85;p.comboIndex=s.combo;p.attack=p.comboIndex===3?(K.has(s,'staff')?.52:.46):p.comboIndex===2?.31:.29;p.attackDuration=p.attack;p.attackTargets=[];p.attackId++;K.event(s,'swing',{combo:p.comboIndex}); }
     }
-    if(K.isRanged(s)&&p.attack>0)K.stepRangedAttack(s,dt);
-    else if (p.attack > 0) {
+    if (p.attack > 0) {
       const elapsed = p.attackDuration - p.attack;
       const timing=K.attackTiming(p);if(elapsed>=timing.start&&elapsed<timing.end){K.strike(s,K.attackBox(s),p.comboIndex===3?27:14,p.x+12,p.comboIndex===3&&K.has(s,'staff'),p.attackTargets,p.comboIndex===3?'heavy':'light');if(p.comboIndex===3&&K.rank(s,'staff-wave')&&!p.attackTargets.includes('wave')){p.attackTargets.push('wave');s.projectiles.push({x:p.x+12,y:p.y+18,vx:p.face*430,vy:0,w:30,h:17,life:1.05,friendly:true,damage:12});K.event(s,'staff-wave');}}
       p.attack = Math.max(0, p.attack - dt);

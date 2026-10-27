@@ -1,0 +1,627 @@
+{
+  "version": "8.0.0",
+  "kind": "http",
+  "sha256": "f69ba46a6906bde04f750b670dedbf8ac8402d9c0f7ff2d0af578fccaeecd168",
+  "environment": {
+    "os": "10.0.26200",
+    "viewport": "1366x768",
+    "browser": "156.0.4314.42"
+  },
+  "checks": [
+    {
+      "name": "39 embedded image assets and 44 new frames decode",
+      "pass": true,
+      "count": 39,
+      "errors": [],
+      "frames": 44
+    },
+    {
+      "name": "all 44 new frames contain actual opaque pixels",
+      "pass": true,
+      "frames": [
+        {
+          "id": "erlang-0",
+          "pixels": 2782
+        },
+        {
+          "id": "erlang-1",
+          "pixels": 3000
+        },
+        {
+          "id": "erlang-2",
+          "pixels": 2878
+        },
+        {
+          "id": "erlang-3",
+          "pixels": 2987
+        },
+        {
+          "id": "erlang-4",
+          "pixels": 3496
+        },
+        {
+          "id": "erlang-5",
+          "pixels": 3163
+        },
+        {
+          "id": "erlang-6",
+          "pixels": 2658
+        },
+        {
+          "id": "erlang-7",
+          "pixels": 2169
+        },
+        {
+          "id": "nezha-0",
+          "pixels": 1704
+        },
+        {
+          "id": "nezha-1",
+          "pixels": 1701
+        },
+        {
+          "id": "nezha-2",
+          "pixels": 1557
+        },
+        {
+          "id": "nezha-3",
+          "pixels": 1655
+        },
+        {
+          "id": "nezha-4",
+          "pixels": 2016
+        },
+        {
+          "id": "nezha-5",
+          "pixels": 2075
+        },
+        {
+          "id": "nezha-6",
+          "pixels": 1729
+        },
+        {
+          "id": "nezha-7",
+          "pixels": 1216
+        },
+        {
+          "id": "hound-0",
+          "pixels": 716
+        },
+        {
+          "id": "hound-1",
+          "pixels": 645
+        },
+        {
+          "id": "hound-2",
+          "pixels": 571
+        },
+        {
+          "id": "hound-3",
+          "pixels": 571
+        },
+        {
+          "id": "arrow",
+          "pixels": 151
+        },
+        {
+          "id": "eye",
+          "pixels": 518
+        },
+        {
+          "id": "ring",
+          "pixels": 216
+        },
+        {
+          "id": "ally",
+          "pixels": 96
+        },
+        {
+          "id": "cloud-0",
+          "pixels": 1113
+        },
+        {
+          "id": "cloud-1",
+          "pixels": 1448
+        },
+        {
+          "id": "heaven-0",
+          "pixels": 1891
+        },
+        {
+          "id": "heaven-1",
+          "pixels": 1174
+        },
+        {
+          "id": "water-0",
+          "pixels": 1022
+        },
+        {
+          "id": "water-1",
+          "pixels": 1247
+        },
+        {
+          "id": "dragon-0",
+          "pixels": 2271
+        },
+        {
+          "id": "dragon-1",
+          "pixels": 1353
+        },
+        {
+          "id": "underworld-0",
+          "pixels": 1919
+        },
+        {
+          "id": "underworld-1",
+          "pixels": 1605
+        },
+        {
+          "id": "ledge-cloud",
+          "pixels": 1021
+        },
+        {
+          "id": "wall-cloud",
+          "pixels": 3843
+        },
+        {
+          "id": "ledge-heaven",
+          "pixels": 984
+        },
+        {
+          "id": "wall-heaven",
+          "pixels": 3846
+        },
+        {
+          "id": "ledge-water",
+          "pixels": 1142
+        },
+        {
+          "id": "wall-water",
+          "pixels": 3848
+        },
+        {
+          "id": "ledge-dragon",
+          "pixels": 1221
+        },
+        {
+          "id": "wall-dragon",
+          "pixels": 3825
+        },
+        {
+          "id": "ledge-underworld",
+          "pixels": 1275
+        },
+        {
+          "id": "wall-underworld",
+          "pixels": 4037
+        }
+      ]
+    },
+    {
+      "name": "all three hero cards are keyboard reachable",
+      "pass": true
+    },
+    {
+      "name": "D reaches Erlang",
+      "pass": true
+    },
+    {
+      "name": "Erlang reward copies describe blade and bow",
+      "pass": true
+    },
+    {
+      "name": "Erlang starts through normal UI",
+      "pass": true
+    },
+    {
+      "name": "Nezha J strikes with spear without throwing a ring",
+      "pass": true
+    },
+    {
+      "name": "Nezha has independent secondary resource cost",
+      "pass": true
+    },
+    {
+      "name": "real right mouse aims the independent ring upward and left",
+      "pass": true
+    },
+    {
+      "name": "real right mouse aims Erlang bow upward and left",
+      "pass": true
+    },
+    {
+      "name": "Erlang H creates an actual damaging arrow",
+      "pass": true
+    },
+    {
+      "name": "Erlang R summons the hound",
+      "pass": true
+    },
+    {
+      "name": "DOM pause freezes dog and secondary",
+      "pass": true
+    },
+    {
+      "name": "real export/import preserves dog and eye",
+      "pass": true
+    },
+    {
+      "name": "restored hound collaborates against a living enemy",
+      "pass": true
+    },
+    {
+      "name": "cloud warning stays locked after player moves",
+      "pass": true
+    },
+    {
+      "name": "cloud active warning restores",
+      "pass": true
+    },
+    {
+      "name": "heaven warning stays locked after player moves",
+      "pass": true
+    },
+    {
+      "name": "heaven active warning restores",
+      "pass": true
+    },
+    {
+      "name": "water warning stays locked after player moves",
+      "pass": true
+    },
+    {
+      "name": "water active warning restores",
+      "pass": true
+    },
+    {
+      "name": "dragon warning stays locked after player moves",
+      "pass": true
+    },
+    {
+      "name": "dragon active warning restores",
+      "pass": true
+    },
+    {
+      "name": "underworld warning stays locked after player moves",
+      "pass": true
+    },
+    {
+      "name": "underworld active warning restores",
+      "pass": true
+    },
+    {
+      "name": "marked pickup still uses the actual automatic interaction",
+      "pass": true
+    },
+    {
+      "name": "v7 saved journey is not silently migrated",
+      "pass": true
+    },
+    {
+      "name": "Erlang hound victory reaches epilogue",
+      "pass": true
+    },
+    {
+      "name": "no runtime exceptions",
+      "pass": true
+    },
+    {
+      "name": "music still routes after new scenes",
+      "pass": true
+    }
+  ],
+  "captures": [
+    "three-heroes.png",
+    "erlang-pause.png",
+    "nezha-spear.png",
+    "nezha-ring.png",
+    "erlang-arrow.png",
+    "erlang-eye.png",
+    "erlang-hound.png",
+    "realm-cloud.png",
+    "realm-heaven.png",
+    "realm-water.png",
+    "realm-dragon.png",
+    "realm-underworld.png",
+    "pickup-markers.png",
+    "legacy-protection.png",
+    "erlang-victory.png"
+  ],
+  "scenes": [
+    {
+      "key": "cloud",
+      "stage": 0,
+      "seed": "V8-PC-1027",
+      "enemy": 402,
+      "marks": "[{\"x\":4000,\"y\":414.1090277777778,\"w\":420,\"h\":12}]"
+    },
+    {
+      "key": "heaven",
+      "stage": 0,
+      "seed": "V8-PC-1027",
+      "enemy": 5,
+      "marks": "[{\"x\":5067,\"y\":350,\"w\":76,\"h\":90}]"
+    },
+    {
+      "key": "water",
+      "stage": 1,
+      "seed": "V8-PC-1027",
+      "enemy": 5,
+      "marks": "[{\"x\":2034,\"y\":416,\"w\":340,\"h\":12},{\"x\":2034,\"y\":370,\"w\":340,\"h\":12}]"
+    },
+    {
+      "key": "dragon",
+      "stage": 1,
+      "seed": "V8-PC-1027",
+      "enemy": 7,
+      "marks": "[{\"x\":5190,\"y\":304,\"w\":64,\"h\":136},{\"x\":5340,\"y\":304,\"w\":64,\"h\":136}]"
+    },
+    {
+      "key": "underworld",
+      "stage": 2,
+      "seed": "V8-PC-1027",
+      "enemy": 7,
+      "marks": "[{\"x\":5204,\"y\":350,\"w\":84,\"h\":90}]"
+    }
+  ],
+  "errors": [],
+  "requests": [
+    "http://127.0.0.1:5188/release/index.html?v=8.0.0"
+  ],
+  "recording": {
+    "file": "E:\\githome\\kong-rpg\\evidence\\v8\\http\\v8-actions.mp4",
+    "fps": 5,
+    "frames": [
+      {
+        "index": 0,
+        "ms": 40.46
+      },
+      {
+        "index": 1,
+        "ms": 232.13
+      },
+      {
+        "index": 2,
+        "ms": 440.01
+      },
+      {
+        "index": 3,
+        "ms": 643.71
+      },
+      {
+        "index": 4,
+        "ms": 879.07
+      },
+      {
+        "index": 5,
+        "ms": 1053.76
+      },
+      {
+        "index": 6,
+        "ms": 1337.9
+      },
+      {
+        "index": 7,
+        "ms": 1457.14
+      },
+      {
+        "index": 8,
+        "ms": 1665.52
+      },
+      {
+        "index": 9,
+        "ms": 1868.39
+      },
+      {
+        "index": 10,
+        "ms": 2075.17
+      },
+      {
+        "index": 11,
+        "ms": 2275.88
+      },
+      {
+        "index": 12,
+        "ms": 2478.13
+      },
+      {
+        "index": 13,
+        "ms": 2682.35
+      },
+      {
+        "index": 14,
+        "ms": 2894.11
+      },
+      {
+        "index": 15,
+        "ms": 3097.43
+      },
+      {
+        "index": 16,
+        "ms": 3306.86
+      },
+      {
+        "index": 17,
+        "ms": 3498.26
+      },
+      {
+        "index": 18,
+        "ms": 3710.08
+      },
+      {
+        "index": 19,
+        "ms": 4075.45
+      },
+      {
+        "index": 20,
+        "ms": 4115.63
+      },
+      {
+        "index": 21,
+        "ms": 4324.18
+      },
+      {
+        "index": 22,
+        "ms": 4524.84
+      },
+      {
+        "index": 23,
+        "ms": 4865.28
+      },
+      {
+        "index": 24,
+        "ms": 4935.25
+      },
+      {
+        "index": 25,
+        "ms": 5209.09
+      },
+      {
+        "index": 26,
+        "ms": 5339.62
+      },
+      {
+        "index": 27,
+        "ms": 5564.92
+      },
+      {
+        "index": 28,
+        "ms": 5748.89
+      },
+      {
+        "index": 29,
+        "ms": 5953.46
+      },
+      {
+        "index": 30,
+        "ms": 6207.37
+      },
+      {
+        "index": 31,
+        "ms": 6354.24
+      },
+      {
+        "index": 32,
+        "ms": 6552.32
+      },
+      {
+        "index": 33,
+        "ms": 6759.56
+      },
+      {
+        "index": 34,
+        "ms": 7158.75
+      },
+      {
+        "index": 35,
+        "ms": 7202.12
+      },
+      {
+        "index": 36,
+        "ms": 7399.81
+      },
+      {
+        "index": 37,
+        "ms": 7607
+      },
+      {
+        "index": 38,
+        "ms": 7812.89
+      },
+      {
+        "index": 39,
+        "ms": 8112.32
+      },
+      {
+        "index": 40,
+        "ms": 8217.88
+      },
+      {
+        "index": 41,
+        "ms": 8418.59
+      },
+      {
+        "index": 42,
+        "ms": 8623.47
+      },
+      {
+        "index": 43,
+        "ms": 8825.51
+      },
+      {
+        "index": 44,
+        "ms": 9056.9
+      },
+      {
+        "index": 45,
+        "ms": 9248.19
+      },
+      {
+        "index": 46,
+        "ms": 9438.74
+      },
+      {
+        "index": 47,
+        "ms": 9647.74
+      },
+      {
+        "index": 48,
+        "ms": 9978.9
+      },
+      {
+        "index": 49,
+        "ms": 10051.89
+      },
+      {
+        "index": 50,
+        "ms": 10260.22
+      },
+      {
+        "index": 51,
+        "ms": 10460.43
+      },
+      {
+        "index": 52,
+        "ms": 10656.71
+      },
+      {
+        "index": 53,
+        "ms": 10902.17
+      },
+      {
+        "index": 54,
+        "ms": 11067.37
+      },
+      {
+        "index": 55,
+        "ms": 11277.83
+      },
+      {
+        "index": 56,
+        "ms": 11646.62
+      },
+      {
+        "index": 57,
+        "ms": 11687.43
+      },
+      {
+        "index": 58,
+        "ms": 11880.91
+      },
+      {
+        "index": 59,
+        "ms": 12086.58
+      },
+      {
+        "index": 60,
+        "ms": 12290.06
+      },
+      {
+        "index": 61,
+        "ms": 12641.77
+      }
+    ],
+    "method": "continuous page screenshots at requested 5Hz; JSON contains actual capture times",
+    "error": ""
+  }
+}

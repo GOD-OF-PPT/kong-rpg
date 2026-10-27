@@ -1,0 +1,107 @@
+{
+  "version": "8.0.0",
+  "kind": "http",
+  "sha256": "c0aa145a5d6813333469975298bc08a79b9c0f5589cbb71df95d7de56dd3d9c3",
+  "environment": {
+    "os": "10.0.26200",
+    "viewport": "1366x768",
+    "browser": "156.0.4314.42"
+  },
+  "checks": [
+    {
+      "name": "37 embedded image assets and 44 new frames decode",
+      "pass": true,
+      "count": 37,
+      "errors": [],
+      "frames": 44
+    },
+    {
+      "name": "all three hero cards are keyboard reachable",
+      "pass": true
+    },
+    {
+      "name": "D reaches Erlang",
+      "pass": true
+    },
+    {
+      "name": "Erlang reward copies describe blade and bow",
+      "pass": true
+    },
+    {
+      "name": "Erlang starts through normal UI",
+      "pass": true
+    },
+    {
+      "name": "Nezha J strikes with spear without throwing a ring",
+      "pass": true
+    },
+    {
+      "name": "Nezha has independent secondary resource cost",
+      "pass": true
+    },
+    {
+      "name": "Erlang H creates an actual damaging arrow",
+      "pass": false
+    }
+  ],
+  "captures": [
+    "three-heroes.png",
+    "erlang-pause.png",
+    "nezha-spear.png",
+    "nezha-ring.png"
+  ],
+  "scenes": [],
+  "errors": [],
+  "requests": [
+    "http://127.0.0.1:5188/release/index.html?v=8.0.0"
+  ],
+  "failure": "AssertionError [ERR_ASSERTION]: Erlang H creates an actual damaging arrow\n    at check (E:\\githome\\kong-rpg\\tools\\browser-v8.cjs:4:89)\n    at E:\\githome\\kong-rpg\\tools\\browser-v8.cjs:16:298",
+  "recording": {
+    "file": "E:\\githome\\kong-rpg\\evidence\\v8\\http\\v8-actions.mp4",
+    "fps": 5,
+    "frames": [
+      {
+        "index": 0,
+        "ms": 56.43
+      },
+      {
+        "index": 1,
+        "ms": 226.79
+      },
+      {
+        "index": 2,
+        "ms": 428.97
+      },
+      {
+        "index": 3,
+        "ms": 658.54
+      },
+      {
+        "index": 4,
+        "ms": 895.85
+      },
+      {
+        "index": 5,
+        "ms": 1041.11
+      },
+      {
+        "index": 6,
+        "ms": 1248.12
+      },
+      {
+        "index": 7,
+        "ms": 1441.81
+      },
+      {
+        "index": 8,
+        "ms": 1654.28
+      },
+      {
+        "index": 9,
+        "ms": 1914.36
+      }
+    ],
+    "method": "continuous page screenshots at requested 5Hz; JSON contains actual capture times",
+    "error": ""
+  }
+}

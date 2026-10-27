@@ -1,0 +1,328 @@
+{
+  "version": "8.0.0",
+  "kind": "http",
+  "sha256": "c0aa145a5d6813333469975298bc08a79b9c0f5589cbb71df95d7de56dd3d9c3",
+  "environment": {
+    "os": "10.0.26200",
+    "viewport": "1366x768",
+    "browser": "156.0.4314.42"
+  },
+  "checks": [
+    {
+      "name": "37 embedded image assets and 44 new frames decode",
+      "pass": true,
+      "count": 37,
+      "errors": [],
+      "frames": 44
+    },
+    {
+      "name": "all three hero cards are keyboard reachable",
+      "pass": true
+    },
+    {
+      "name": "D reaches Erlang",
+      "pass": true
+    },
+    {
+      "name": "Erlang reward copies describe blade and bow",
+      "pass": true
+    },
+    {
+      "name": "Erlang starts through normal UI",
+      "pass": true
+    },
+    {
+      "name": "Nezha J strikes with spear without throwing a ring",
+      "pass": true
+    },
+    {
+      "name": "Nezha has independent secondary resource cost",
+      "pass": true
+    },
+    {
+      "name": "Erlang H creates an actual damaging arrow",
+      "pass": true
+    },
+    {
+      "name": "Erlang R summons the hound",
+      "pass": true
+    },
+    {
+      "name": "DOM pause freezes dog and secondary",
+      "pass": true
+    },
+    {
+      "name": "real export/import preserves dog and eye",
+      "pass": true
+    },
+    {
+      "name": "restored hound collaborates against a living enemy",
+      "pass": true
+    },
+    {
+      "name": "cloud warning stays locked after player moves",
+      "pass": true
+    },
+    {
+      "name": "cloud active warning restores",
+      "pass": true
+    },
+    {
+      "name": "heaven warning stays locked after player moves",
+      "pass": true
+    },
+    {
+      "name": "heaven active warning restores",
+      "pass": true
+    },
+    {
+      "name": "water warning stays locked after player moves",
+      "pass": true
+    },
+    {
+      "name": "water active warning restores",
+      "pass": true
+    },
+    {
+      "name": "dragon warning stays locked after player moves",
+      "pass": true
+    },
+    {
+      "name": "dragon active warning restores",
+      "pass": true
+    },
+    {
+      "name": "underworld warning stays locked after player moves",
+      "pass": true
+    },
+    {
+      "name": "underworld active warning restores",
+      "pass": true
+    },
+    {
+      "name": "marked pickup still uses the actual automatic interaction",
+      "pass": false
+    }
+  ],
+  "captures": [
+    "three-heroes.png",
+    "erlang-pause.png",
+    "nezha-spear.png",
+    "nezha-ring.png",
+    "erlang-arrow.png",
+    "erlang-eye.png",
+    "erlang-hound.png",
+    "realm-cloud.png",
+    "realm-heaven.png",
+    "realm-water.png",
+    "realm-dragon.png",
+    "realm-underworld.png",
+    "pickup-markers.png"
+  ],
+  "scenes": [
+    {
+      "key": "cloud",
+      "stage": 0,
+      "seed": "V8-PC-1027",
+      "enemy": 400,
+      "marks": "[{\"x\":2650,\"y\":414,\"w\":420,\"h\":12}]"
+    },
+    {
+      "key": "heaven",
+      "stage": 0,
+      "seed": "V8-PC-1027",
+      "enemy": 5,
+      "marks": "[{\"x\":5067,\"y\":350,\"w\":76,\"h\":90}]"
+    },
+    {
+      "key": "water",
+      "stage": 1,
+      "seed": "V8-PC-1027",
+      "enemy": 3,
+      "marks": "[{\"x\":1592,\"y\":416,\"w\":18,\"h\":12},{\"x\":1932,\"y\":370,\"w\":18,\"h\":12}]"
+    },
+    {
+      "key": "dragon",
+      "stage": 1,
+      "seed": "V8-PC-1027",
+      "enemy": 6,
+      "marks": "[{\"x\":4816,\"y\":304,\"w\":64,\"h\":136},{\"x\":4966,\"y\":304,\"w\":64,\"h\":136}]"
+    },
+    {
+      "key": "underworld",
+      "stage": 2,
+      "seed": "V8-PC-1027",
+      "enemy": 6,
+      "marks": "[{\"x\":4884,\"y\":350,\"w\":84,\"h\":90}]"
+    }
+  ],
+  "errors": [],
+  "requests": [
+    "http://127.0.0.1:5188/release/index.html?v=8.0.0"
+  ],
+  "failure": "AssertionError [ERR_ASSERTION]: marked pickup still uses the actual automatic interaction\n    at check (E:\\githome\\kong-rpg\\tools\\browser-v8.cjs:4:89)\n    at E:\\githome\\kong-rpg\\tools\\browser-v8.cjs:21:299",
+  "recording": {
+    "file": "E:\\githome\\kong-rpg\\evidence\\v8\\http\\v8-actions.mp4",
+    "fps": 5,
+    "frames": [
+      {
+        "index": 0,
+        "ms": 37.49
+      },
+      {
+        "index": 1,
+        "ms": 222.91
+      },
+      {
+        "index": 2,
+        "ms": 430.41
+      },
+      {
+        "index": 3,
+        "ms": 840.23
+      },
+      {
+        "index": 4,
+        "ms": 870.24
+      },
+      {
+        "index": 5,
+        "ms": 1072.53
+      },
+      {
+        "index": 6,
+        "ms": 1278.1
+      },
+      {
+        "index": 7,
+        "ms": 1481.34
+      },
+      {
+        "index": 8,
+        "ms": 1844.43
+      },
+      {
+        "index": 9,
+        "ms": 1894.32
+      },
+      {
+        "index": 10,
+        "ms": 2298.14
+      },
+      {
+        "index": 11,
+        "ms": 2330.83
+      },
+      {
+        "index": 12,
+        "ms": 2533.92
+      },
+      {
+        "index": 13,
+        "ms": 2850.02
+      },
+      {
+        "index": 14,
+        "ms": 2941.07
+      },
+      {
+        "index": 15,
+        "ms": 3205.41
+      },
+      {
+        "index": 16,
+        "ms": 3348.4
+      },
+      {
+        "index": 17,
+        "ms": 3582.04
+      },
+      {
+        "index": 18,
+        "ms": 3764.48
+      },
+      {
+        "index": 19,
+        "ms": 4008.56
+      },
+      {
+        "index": 20,
+        "ms": 4166.06
+      },
+      {
+        "index": 21,
+        "ms": 4373.3
+      },
+      {
+        "index": 22,
+        "ms": 4650.53
+      },
+      {
+        "index": 23,
+        "ms": 4789.7
+      },
+      {
+        "index": 24,
+        "ms": 4982.96
+      },
+      {
+        "index": 25,
+        "ms": 5407.74
+      },
+      {
+        "index": 26,
+        "ms": 5457.29
+      },
+      {
+        "index": 27,
+        "ms": 5647.9
+      },
+      {
+        "index": 28,
+        "ms": 5843.74
+      },
+      {
+        "index": 29,
+        "ms": 6124.16
+      },
+      {
+        "index": 30,
+        "ms": 6275.64
+      },
+      {
+        "index": 31,
+        "ms": 6463.34
+      },
+      {
+        "index": 32,
+        "ms": 6827.98
+      },
+      {
+        "index": 33,
+        "ms": 6877.13
+      },
+      {
+        "index": 34,
+        "ms": 7070.59
+      },
+      {
+        "index": 35,
+        "ms": 7284.68
+      },
+      {
+        "index": 36,
+        "ms": 7555.16
+      },
+      {
+        "index": 37,
+        "ms": 7694.3
+      },
+      {
+        "index": 38,
+        "ms": 8014.44
+      }
+    ],
+    "method": "continuous page screenshots at requested 5Hz; JSON contains actual capture times",
+    "error": ""
+  }
+}
