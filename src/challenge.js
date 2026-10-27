@@ -1,7 +1,7 @@
 (function(K){
   'use strict';
   K.isChallenge=s=>s?.difficulty==='challenge';
-  K.difficultyName=s=>(typeof s==='string'?s:s?.difficulty)==='challenge'?'挑战·黑莲重劫':'普通旅程';
+  K.difficultyName=s=>(typeof s==='string'?s:s?.difficulty)==='challenge'?'挑战·五界重劫':'普通旅程';
   K.CHALLENGE_PHASES=['challenge-bolt-windup','challenge-quake-windup','challenge-mark-windup','challenge-echo-windup','challenge-fan-windup','challenge-bell-windup','challenge-rain-windup'];
   K.CHALLENGE_DANGERS=['重盾兵·崩盾震','莲灯使·追迹莲印','镇山魈王·回震','缄愿法使·余钟震','无天·追落莲印'];
   K.CHALLENGE_PROJECTILES=['执刃魔兵·封路刀气','渡厄灯魁·对渡焰'];

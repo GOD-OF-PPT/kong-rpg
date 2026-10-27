@@ -171,6 +171,46 @@
     "realmUnderworld": {
       "width": 960,
       "height": 540
+    },
+    "campaign-juling": {
+      "width": 896,
+      "height": 192
+    },
+    "campaign-qinguang": {
+      "width": 896,
+      "height": 192
+    },
+    "campaign-ninehead": {
+      "width": 896,
+      "height": 192
+    },
+    "campaign-dragonking": {
+      "width": 896,
+      "height": 192
+    },
+    "campaign-litian": {
+      "width": 896,
+      "height": 192
+    },
+    "campaignArmy-cloud": {
+      "width": 960,
+      "height": 128
+    },
+    "campaignArmy-underworld": {
+      "width": 960,
+      "height": 128
+    },
+    "campaignArmy-water": {
+      "width": 960,
+      "height": 128
+    },
+    "campaignArmy-dragon": {
+      "width": 960,
+      "height": 128
+    },
+    "campaignArmy-heaven": {
+      "width": 960,
+      "height": 128
     }
   },
   "frames": {
@@ -3079,7 +3119,709 @@
           126
         ]
       }
+    ],
+    "CampaignFrames": [
+      {
+        "id": "juling-0",
+        "image": "campaign-juling",
+        "r": [
+          0,
+          0,
+          224,
+          192
+        ],
+        "anchor": [
+          112,
+          176
+        ]
+      },
+      {
+        "id": "juling-1",
+        "image": "campaign-juling",
+        "r": [
+          224,
+          0,
+          224,
+          192
+        ],
+        "anchor": [
+          112,
+          176
+        ]
+      },
+      {
+        "id": "juling-2",
+        "image": "campaign-juling",
+        "r": [
+          448,
+          0,
+          224,
+          192
+        ],
+        "anchor": [
+          112,
+          176
+        ]
+      },
+      {
+        "id": "juling-3",
+        "image": "campaign-juling",
+        "r": [
+          672,
+          0,
+          224,
+          192
+        ],
+        "anchor": [
+          112,
+          176
+        ]
+      },
+      {
+        "id": "qinguang-0",
+        "image": "campaign-qinguang",
+        "r": [
+          0,
+          0,
+          224,
+          192
+        ],
+        "anchor": [
+          112,
+          176
+        ]
+      },
+      {
+        "id": "qinguang-1",
+        "image": "campaign-qinguang",
+        "r": [
+          224,
+          0,
+          224,
+          192
+        ],
+        "anchor": [
+          112,
+          176
+        ]
+      },
+      {
+        "id": "qinguang-2",
+        "image": "campaign-qinguang",
+        "r": [
+          448,
+          0,
+          224,
+          192
+        ],
+        "anchor": [
+          112,
+          176
+        ]
+      },
+      {
+        "id": "qinguang-3",
+        "image": "campaign-qinguang",
+        "r": [
+          672,
+          0,
+          224,
+          192
+        ],
+        "anchor": [
+          112,
+          176
+        ]
+      },
+      {
+        "id": "ninehead-0",
+        "image": "campaign-ninehead",
+        "r": [
+          0,
+          0,
+          224,
+          192
+        ],
+        "anchor": [
+          112,
+          176
+        ]
+      },
+      {
+        "id": "ninehead-1",
+        "image": "campaign-ninehead",
+        "r": [
+          224,
+          0,
+          224,
+          192
+        ],
+        "anchor": [
+          112,
+          176
+        ]
+      },
+      {
+        "id": "ninehead-2",
+        "image": "campaign-ninehead",
+        "r": [
+          448,
+          0,
+          224,
+          192
+        ],
+        "anchor": [
+          112,
+          176
+        ]
+      },
+      {
+        "id": "ninehead-3",
+        "image": "campaign-ninehead",
+        "r": [
+          672,
+          0,
+          224,
+          192
+        ],
+        "anchor": [
+          112,
+          176
+        ]
+      },
+      {
+        "id": "dragonking-0",
+        "image": "campaign-dragonking",
+        "r": [
+          0,
+          0,
+          224,
+          192
+        ],
+        "anchor": [
+          112,
+          176
+        ]
+      },
+      {
+        "id": "dragonking-1",
+        "image": "campaign-dragonking",
+        "r": [
+          224,
+          0,
+          224,
+          192
+        ],
+        "anchor": [
+          112,
+          176
+        ]
+      },
+      {
+        "id": "dragonking-2",
+        "image": "campaign-dragonking",
+        "r": [
+          448,
+          0,
+          224,
+          192
+        ],
+        "anchor": [
+          112,
+          176
+        ]
+      },
+      {
+        "id": "dragonking-3",
+        "image": "campaign-dragonking",
+        "r": [
+          672,
+          0,
+          224,
+          192
+        ],
+        "anchor": [
+          112,
+          176
+        ]
+      },
+      {
+        "id": "litian-0",
+        "image": "campaign-litian",
+        "r": [
+          0,
+          0,
+          224,
+          192
+        ],
+        "anchor": [
+          112,
+          176
+        ]
+      },
+      {
+        "id": "litian-1",
+        "image": "campaign-litian",
+        "r": [
+          224,
+          0,
+          224,
+          192
+        ],
+        "anchor": [
+          112,
+          176
+        ]
+      },
+      {
+        "id": "litian-2",
+        "image": "campaign-litian",
+        "r": [
+          448,
+          0,
+          224,
+          192
+        ],
+        "anchor": [
+          112,
+          176
+        ]
+      },
+      {
+        "id": "litian-3",
+        "image": "campaign-litian",
+        "r": [
+          672,
+          0,
+          224,
+          192
+        ],
+        "anchor": [
+          112,
+          176
+        ]
+      },
+      {
+        "id": "cloud-role0",
+        "image": "campaignArmy-cloud",
+        "r": [
+          0,
+          0,
+          160,
+          128
+        ],
+        "anchor": [
+          80,
+          112
+        ]
+      },
+      {
+        "id": "cloud-role1",
+        "image": "campaignArmy-cloud",
+        "r": [
+          160,
+          0,
+          160,
+          128
+        ],
+        "anchor": [
+          80,
+          112
+        ]
+      },
+      {
+        "id": "cloud-role2",
+        "image": "campaignArmy-cloud",
+        "r": [
+          320,
+          0,
+          160,
+          128
+        ],
+        "anchor": [
+          80,
+          112
+        ]
+      },
+      {
+        "id": "cloud-mini0",
+        "image": "campaignArmy-cloud",
+        "r": [
+          480,
+          0,
+          160,
+          128
+        ],
+        "anchor": [
+          80,
+          112
+        ]
+      },
+      {
+        "id": "cloud-mini1",
+        "image": "campaignArmy-cloud",
+        "r": [
+          640,
+          0,
+          160,
+          128
+        ],
+        "anchor": [
+          80,
+          112
+        ]
+      },
+      {
+        "id": "cloud-device",
+        "image": "campaignArmy-cloud",
+        "r": [
+          800,
+          0,
+          160,
+          128
+        ],
+        "anchor": [
+          80,
+          112
+        ]
+      },
+      {
+        "id": "underworld-role0",
+        "image": "campaignArmy-underworld",
+        "r": [
+          0,
+          0,
+          160,
+          128
+        ],
+        "anchor": [
+          80,
+          112
+        ]
+      },
+      {
+        "id": "underworld-role1",
+        "image": "campaignArmy-underworld",
+        "r": [
+          160,
+          0,
+          160,
+          128
+        ],
+        "anchor": [
+          80,
+          112
+        ]
+      },
+      {
+        "id": "underworld-role2",
+        "image": "campaignArmy-underworld",
+        "r": [
+          320,
+          0,
+          160,
+          128
+        ],
+        "anchor": [
+          80,
+          112
+        ]
+      },
+      {
+        "id": "underworld-mini0",
+        "image": "campaignArmy-underworld",
+        "r": [
+          480,
+          0,
+          160,
+          128
+        ],
+        "anchor": [
+          80,
+          112
+        ]
+      },
+      {
+        "id": "underworld-mini1",
+        "image": "campaignArmy-underworld",
+        "r": [
+          640,
+          0,
+          160,
+          128
+        ],
+        "anchor": [
+          80,
+          112
+        ]
+      },
+      {
+        "id": "underworld-device",
+        "image": "campaignArmy-underworld",
+        "r": [
+          800,
+          0,
+          160,
+          128
+        ],
+        "anchor": [
+          80,
+          112
+        ]
+      },
+      {
+        "id": "water-role0",
+        "image": "campaignArmy-water",
+        "r": [
+          0,
+          0,
+          160,
+          128
+        ],
+        "anchor": [
+          80,
+          112
+        ]
+      },
+      {
+        "id": "water-role1",
+        "image": "campaignArmy-water",
+        "r": [
+          160,
+          0,
+          160,
+          128
+        ],
+        "anchor": [
+          80,
+          112
+        ]
+      },
+      {
+        "id": "water-role2",
+        "image": "campaignArmy-water",
+        "r": [
+          320,
+          0,
+          160,
+          128
+        ],
+        "anchor": [
+          80,
+          112
+        ]
+      },
+      {
+        "id": "water-mini0",
+        "image": "campaignArmy-water",
+        "r": [
+          480,
+          0,
+          160,
+          128
+        ],
+        "anchor": [
+          80,
+          112
+        ]
+      },
+      {
+        "id": "water-mini1",
+        "image": "campaignArmy-water",
+        "r": [
+          640,
+          0,
+          160,
+          128
+        ],
+        "anchor": [
+          80,
+          112
+        ]
+      },
+      {
+        "id": "water-device",
+        "image": "campaignArmy-water",
+        "r": [
+          800,
+          0,
+          160,
+          128
+        ],
+        "anchor": [
+          80,
+          112
+        ]
+      },
+      {
+        "id": "dragon-role0",
+        "image": "campaignArmy-dragon",
+        "r": [
+          0,
+          0,
+          160,
+          128
+        ],
+        "anchor": [
+          80,
+          112
+        ]
+      },
+      {
+        "id": "dragon-role1",
+        "image": "campaignArmy-dragon",
+        "r": [
+          160,
+          0,
+          160,
+          128
+        ],
+        "anchor": [
+          80,
+          112
+        ]
+      },
+      {
+        "id": "dragon-role2",
+        "image": "campaignArmy-dragon",
+        "r": [
+          320,
+          0,
+          160,
+          128
+        ],
+        "anchor": [
+          80,
+          112
+        ]
+      },
+      {
+        "id": "dragon-mini0",
+        "image": "campaignArmy-dragon",
+        "r": [
+          480,
+          0,
+          160,
+          128
+        ],
+        "anchor": [
+          80,
+          112
+        ]
+      },
+      {
+        "id": "dragon-mini1",
+        "image": "campaignArmy-dragon",
+        "r": [
+          640,
+          0,
+          160,
+          128
+        ],
+        "anchor": [
+          80,
+          112
+        ]
+      },
+      {
+        "id": "dragon-device",
+        "image": "campaignArmy-dragon",
+        "r": [
+          800,
+          0,
+          160,
+          128
+        ],
+        "anchor": [
+          80,
+          112
+        ]
+      },
+      {
+        "id": "heaven-role0",
+        "image": "campaignArmy-heaven",
+        "r": [
+          0,
+          0,
+          160,
+          128
+        ],
+        "anchor": [
+          80,
+          112
+        ]
+      },
+      {
+        "id": "heaven-role1",
+        "image": "campaignArmy-heaven",
+        "r": [
+          160,
+          0,
+          160,
+          128
+        ],
+        "anchor": [
+          80,
+          112
+        ]
+      },
+      {
+        "id": "heaven-role2",
+        "image": "campaignArmy-heaven",
+        "r": [
+          320,
+          0,
+          160,
+          128
+        ],
+        "anchor": [
+          80,
+          112
+        ]
+      },
+      {
+        "id": "heaven-mini0",
+        "image": "campaignArmy-heaven",
+        "r": [
+          480,
+          0,
+          160,
+          128
+        ],
+        "anchor": [
+          80,
+          112
+        ]
+      },
+      {
+        "id": "heaven-mini1",
+        "image": "campaignArmy-heaven",
+        "r": [
+          640,
+          0,
+          160,
+          128
+        ],
+        "anchor": [
+          80,
+          112
+        ]
+      },
+      {
+        "id": "heaven-device",
+        "image": "campaignArmy-heaven",
+        "r": [
+          800,
+          0,
+          160,
+          128
+        ],
+        "anchor": [
+          80,
+          112
+        ]
+      }
     ]
   },
-  "total": 221
+  "total": 271
 }

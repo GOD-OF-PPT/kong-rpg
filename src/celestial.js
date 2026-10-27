@@ -53,7 +53,7 @@
     }
     if(c.age>=def.duration)v.cast=null;
   };
-  K.readCelestial=function(s,room,number,fail){const v=s.celestial;if(!v||!Array.isArray(v.owned)||v.owned.length>2||new Set(v.owned).size!==v.owned.length||v.owned.some(id=>K.artDef(id)?.hero!==s.hero)||(v.equipped!==null&&!v.owned.includes(v.equipped))||!number(v.cooldown,0,20)||!Array.isArray(v.claimed)||v.claimed.length>8||new Set(v.claimed).size!==v.claimed.length||v.claimed.some(x=>typeof x!=='string'||!/^([0-3]):([01])$/.test(x)||(s.hero!=='wukong'&&x.endsWith(':1'))))fail();
+  K.readCelestial=function(s,room,number,fail){const v=s.celestial;if(!v||!Array.isArray(v.owned)||v.owned.length>2||new Set(v.owned).size!==v.owned.length||v.owned.some(id=>K.artDef(id)?.hero!==s.hero)||(v.equipped!==null&&!v.owned.includes(v.equipped))||!number(v.cooldown,0,20)||!Array.isArray(v.claimed)||v.claimed.length>30||new Set(v.claimed).size!==v.claimed.length||v.claimed.some(x=>typeof x!=='string'||!/^(?:[0-9]|1[0-4]):([01])$/.test(x)||(s.hero!=='wukong'&&x.endsWith(':1'))))fail();
     if(v.pending!==null&&(!K.artManuals(s).some(q=>q.id===v.pending&&!q.used)||s.mode!=='art-choice'))fail();if(s.mode==='art-choice'&&v.pending===null)fail();
     if(v.cast!==null){const c=v.cast,def=K.artDef(c?.id);if(!def||def.hero!==s.hero||!v.owned.includes(c.id)||!number(c.age,0,def.duration)||!number(c.x,0,room.width)||!number(c.y,-1000,1000)||!number(c.viewX,0,room.width-960)||![-1,1].includes(c.face)||!number(c.angle,-.38,.38)||!Number.isInteger(c.pulse)||c.pulse<0||c.pulse>(c.id==='orbit-staff'?5:c.id==='eye-beam'?4:1)||!number(c.echo,0,.15)||(s.player.hp===0))fail();}
     return JSON.parse(JSON.stringify(v));

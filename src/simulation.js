@@ -1,7 +1,7 @@
 (function (K) {
   'use strict';
   K.newRun = function (seed, first, hero='wukong',difficulty='normal') {
-    const s = { version:9,rules:9,hero,ring:null,silk:null,arm:null,flight:null,growth:{},talisman:null,casts:[],world:{rescue:false,bridge:false,bell:false},journal:[],dangers:[],seed:String(seed || 'BLACK-LOTUS'), stage:0, mode:'playing',time:0,elapsed:0,roomTime:0,relics:first?[first]:[],room:null,player:null,clone:null,projectiles:[],effects:[],events:[],log:[],reward:[],rewardKind:'exit',pendingRelic:null,kills:0,broken:0,damageTaken:0,lastDamage:'',hitstop:0,shake:0,checkpoint:90,combo:0,comboTime:0,serial:0,hints:[],stats:{swings:0,hits:0,blocks:0,jumps:0,dashes:0,clones:0,focusSpent:0,rests:0,ultimates:0,talismans:0,guardians:0,drops:0,camps:0,trials:0,farHits:0,extends:0,tipHits:0,vaults:0,flights:0} };
+    const s = { version:10,rules:10,hero,ring:null,silk:null,arm:null,flight:null,growth:{},talisman:null,casts:[],world:{rescue:false,bridge:false,bell:false},journal:[],dangers:[],seed:String(seed || 'BLACK-LOTUS'), stage:0, mode:'playing',time:0,elapsed:0,roomTime:0,relics:first?[first]:[],room:null,player:null,clone:null,projectiles:[],effects:[],events:[],log:[],reward:[],rewardKind:'exit',pendingRelic:null,kills:0,broken:0,damageTaken:0,lastDamage:'',hitstop:0,shake:0,checkpoint:90,combo:0,comboTime:0,serial:0,hints:[],stats:{swings:0,hits:0,blocks:0,jumps:0,dashes:0,clones:0,focusSpent:0,rests:0,ultimates:0,talismans:0,guardians:0,drops:0,camps:0,trials:0,farHits:0,extends:0,tipHits:0,vaults:0,flights:0} };
     s.difficulty=difficulty==='challenge'?'challenge':'normal';s.challengeRules=s.difficulty==='challenge'?1:0;
     K.enterRoom(s, 0, true); return s;
   };
