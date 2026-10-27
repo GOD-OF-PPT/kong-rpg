@@ -1,0 +1,1 @@
+(function(K){K.SceneFrames={"seal-intact":{"image":"sceneProps","r":[0,0,64,64],"anchor":[32,62]},"seal-ruined":{"image":"sceneProps","r":[64,0,64,64],"anchor":[32,62]},"seal-lamp-ready":{"image":"sceneProps","r":[128,0,64,64],"anchor":[32,62]},"seal-lamp-spent":{"image":"sceneProps","r":[192,0,64,64],"anchor":[32,62]}};})(globalThis.Kong ||= {});

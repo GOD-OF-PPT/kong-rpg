@@ -1,0 +1,664 @@
+{
+  "version": "7.1.1",
+  "base": "e6bc8515fc89ba266e7aeec40102aaea44cec613",
+  "kind": "http",
+  "entry": "E:\\githome\\kong-rpg\\release\\index.html",
+  "sha256": "585caf054cd5f5536ad72e5a1d1f260d41e7f6e838549539455ef47265cae233",
+  "method": "controlled save imports, real DOM/keyboard/mouse actions, render-only state catalogue, matched before/after captures",
+  "environment": {
+    "os": "10.0.26200",
+    "node": "v22.12.0",
+    "browser": "156.0.4314.42"
+  },
+  "checks": [
+    {
+      "name": "all 25 embedded PNGs decode",
+      "pass": true,
+      "images": [
+        "mountain",
+        "ferry",
+        "sanctuary",
+        "wukong",
+        "enemies",
+        "stone",
+        "run",
+        "props",
+        "uiScroll",
+        "uiIcons",
+        "uiFolio",
+        "combo",
+        "impacts",
+        "nodes",
+        "nodesDone",
+        "guardians",
+        "nezha",
+        "nezhaPortrait",
+        "mapProps",
+        "mapTerrain",
+        "mapDressing",
+        "sigWukong",
+        "sigNezha",
+        "sigFx",
+        "sceneProps"
+      ],
+      "errors": [],
+      "frames": [
+        {
+          "group": "MapFrames",
+          "id": "trial-ready",
+          "visible": 3370,
+          "minY": 30,
+          "maxY": 111,
+          "colors": 3195
+        },
+        {
+          "group": "MapFrames",
+          "id": "trial-active",
+          "visible": 3483,
+          "minY": 30,
+          "maxY": 111,
+          "colors": 3357
+        },
+        {
+          "group": "MapFrames",
+          "id": "trial-cleared",
+          "visible": 3417,
+          "minY": 30,
+          "maxY": 111,
+          "colors": 3303
+        },
+        {
+          "group": "MapFrames",
+          "id": "trial-claimed",
+          "visible": 3276,
+          "minY": 30,
+          "maxY": 111,
+          "colors": 2989
+        },
+        {
+          "group": "MapFrames",
+          "id": "camp-lit",
+          "visible": 1996,
+          "minY": 32,
+          "maxY": 111,
+          "colors": 1916
+        },
+        {
+          "group": "MapFrames",
+          "id": "camp-spent",
+          "visible": 2001,
+          "minY": 32,
+          "maxY": 111,
+          "colors": 1897
+        },
+        {
+          "group": "MapFrames",
+          "id": "pickup-heal",
+          "visible": 250,
+          "minY": 4,
+          "maxY": 27,
+          "colors": 248
+        },
+        {
+          "group": "MapFrames",
+          "id": "pickup-focus",
+          "visible": 250,
+          "minY": 10,
+          "maxY": 27,
+          "colors": 247
+        },
+        {
+          "group": "MapFrames",
+          "id": "pickup-rage",
+          "visible": 138,
+          "minY": 4,
+          "maxY": 27,
+          "colors": 138
+        },
+        {
+          "group": "MapFrames",
+          "id": "hazard-quiet",
+          "visible": 302,
+          "minY": 0,
+          "maxY": 15,
+          "colors": 298
+        },
+        {
+          "group": "MapFrames",
+          "id": "hazard-warning",
+          "visible": 310,
+          "minY": 0,
+          "maxY": 15,
+          "colors": 306
+        },
+        {
+          "group": "MapFrames",
+          "id": "hazard-active",
+          "visible": 291,
+          "minY": 0,
+          "maxY": 15,
+          "colors": 291
+        },
+        {
+          "group": "MapFrames",
+          "id": "ledge-mountain",
+          "visible": 1478,
+          "minY": 0,
+          "maxY": 28,
+          "colors": 1431
+        },
+        {
+          "group": "MapFrames",
+          "id": "ledge-ferry",
+          "visible": 1362,
+          "minY": 0,
+          "maxY": 29,
+          "colors": 1251
+        },
+        {
+          "group": "MapFrames",
+          "id": "ledge-temple",
+          "visible": 1490,
+          "minY": 0,
+          "maxY": 29,
+          "colors": 1442
+        },
+        {
+          "group": "MapFrames",
+          "id": "fragile-ready",
+          "visible": 1039,
+          "minY": 0,
+          "maxY": 29,
+          "colors": 1013
+        },
+        {
+          "group": "MapFrames",
+          "id": "fragile-cracking",
+          "visible": 1053,
+          "minY": 0,
+          "maxY": 29,
+          "colors": 1018
+        },
+        {
+          "group": "MapFrames",
+          "id": "raft",
+          "visible": 1861,
+          "minY": 0,
+          "maxY": 29,
+          "colors": 1801
+        },
+        {
+          "group": "MapFrames",
+          "id": "bridge-off",
+          "visible": 947,
+          "minY": 0,
+          "maxY": 21,
+          "colors": 914
+        },
+        {
+          "group": "MapFrames",
+          "id": "bridge-on",
+          "visible": 998,
+          "minY": 0,
+          "maxY": 22,
+          "colors": 985
+        },
+        {
+          "group": "MapFrames",
+          "id": "wall-mountain",
+          "visible": 3933,
+          "minY": 0,
+          "maxY": 63,
+          "colors": 3366
+        },
+        {
+          "group": "MapFrames",
+          "id": "wall-ferry",
+          "visible": 3951,
+          "minY": 0,
+          "maxY": 63,
+          "colors": 3534
+        },
+        {
+          "group": "MapFrames",
+          "id": "wall-temple",
+          "visible": 3970,
+          "minY": 0,
+          "maxY": 63,
+          "colors": 3530
+        },
+        {
+          "group": "MapFrames",
+          "id": "arena-pillar",
+          "visible": 1373,
+          "minY": 35,
+          "maxY": 111,
+          "colors": 1336
+        },
+        {
+          "group": "MapFrames",
+          "id": "dressing-mountain-a",
+          "visible": 3661,
+          "minY": 28,
+          "maxY": 111,
+          "colors": 3369
+        },
+        {
+          "group": "MapFrames",
+          "id": "dressing-ferry-a",
+          "visible": 3651,
+          "minY": 37,
+          "maxY": 111,
+          "colors": 3194
+        },
+        {
+          "group": "MapFrames",
+          "id": "dressing-temple-a",
+          "visible": 4400,
+          "minY": 30,
+          "maxY": 111,
+          "colors": 4155
+        },
+        {
+          "group": "MapFrames",
+          "id": "dressing-mountain-b",
+          "visible": 3164,
+          "minY": 57,
+          "maxY": 111,
+          "colors": 2932
+        },
+        {
+          "group": "MapFrames",
+          "id": "dressing-ferry-b",
+          "visible": 3174,
+          "minY": 53,
+          "maxY": 111,
+          "colors": 2828
+        },
+        {
+          "group": "MapFrames",
+          "id": "dressing-temple-b",
+          "visible": 3448,
+          "minY": 58,
+          "maxY": 111,
+          "colors": 3152
+        },
+        {
+          "group": "SignatureFrames",
+          "id": "wukong0",
+          "visible": 3633,
+          "minY": 28,
+          "maxY": 111,
+          "colors": 3459
+        },
+        {
+          "group": "SignatureFrames",
+          "id": "wukong1",
+          "visible": 3294,
+          "minY": 42,
+          "maxY": 111,
+          "colors": 3104
+        },
+        {
+          "group": "SignatureFrames",
+          "id": "wukong2",
+          "visible": 3655,
+          "minY": 31,
+          "maxY": 111,
+          "colors": 3441
+        },
+        {
+          "group": "SignatureFrames",
+          "id": "wukong3",
+          "visible": 3502,
+          "minY": 31,
+          "maxY": 111,
+          "colors": 3260
+        },
+        {
+          "group": "SignatureFrames",
+          "id": "nezha0",
+          "visible": 2596,
+          "minY": 45,
+          "maxY": 111,
+          "colors": 2521
+        },
+        {
+          "group": "SignatureFrames",
+          "id": "nezha1",
+          "visible": 2827,
+          "minY": 30,
+          "maxY": 111,
+          "colors": 2742
+        },
+        {
+          "group": "SignatureFrames",
+          "id": "nezha2",
+          "visible": 2928,
+          "minY": 39,
+          "maxY": 111,
+          "colors": 2832
+        },
+        {
+          "group": "SignatureFrames",
+          "id": "nezha3",
+          "visible": 2332,
+          "minY": 36,
+          "maxY": 111,
+          "colors": 2269
+        },
+        {
+          "group": "SignatureFrames",
+          "id": "shaft",
+          "visible": 220,
+          "minY": 0,
+          "maxY": 6,
+          "colors": 192
+        },
+        {
+          "group": "SignatureFrames",
+          "id": "cap",
+          "visible": 137,
+          "minY": 0,
+          "maxY": 7,
+          "colors": 136
+        },
+        {
+          "group": "SignatureFrames",
+          "id": "tip",
+          "visible": 362,
+          "minY": 3,
+          "maxY": 37,
+          "colors": 359
+        },
+        {
+          "group": "SignatureFrames",
+          "id": "wind",
+          "visible": 256,
+          "minY": 0,
+          "maxY": 15,
+          "colors": 256
+        },
+        {
+          "group": "SignatureFrames",
+          "id": "air-warning",
+          "visible": 908,
+          "minY": 0,
+          "maxY": 46,
+          "colors": 903
+        },
+        {
+          "group": "SignatureFrames",
+          "id": "air-active",
+          "visible": 1005,
+          "minY": 0,
+          "maxY": 47,
+          "colors": 998
+        },
+        {
+          "group": "SignatureFrames",
+          "id": "brace",
+          "visible": 303,
+          "minY": 0,
+          "maxY": 23,
+          "colors": 302
+        },
+        {
+          "group": "SignatureFrames",
+          "id": "charge",
+          "visible": 384,
+          "minY": 1,
+          "maxY": 23,
+          "colors": 376
+        },
+        {
+          "group": "SceneFrames",
+          "id": "seal-intact",
+          "visible": 2154,
+          "minY": 5,
+          "maxY": 61,
+          "colors": 2017
+        },
+        {
+          "group": "SceneFrames",
+          "id": "seal-ruined",
+          "visible": 1506,
+          "minY": 23,
+          "maxY": 61,
+          "colors": 1358
+        },
+        {
+          "group": "SceneFrames",
+          "id": "seal-lamp-ready",
+          "visible": 1866,
+          "minY": 6,
+          "maxY": 61,
+          "colors": 1638
+        },
+        {
+          "group": "SceneFrames",
+          "id": "seal-lamp-spent",
+          "visible": 1773,
+          "minY": 21,
+          "maxY": 61,
+          "colors": 1562
+        }
+      ]
+    },
+    {
+      "name": "all 50 scene / map / signature frames contain visible pixels",
+      "pass": true
+    },
+    {
+      "name": "four seal states have detail and one shared ground anchor",
+      "pass": true,
+      "seals": [
+        {
+          "group": "SceneFrames",
+          "id": "seal-intact",
+          "visible": 2154,
+          "minY": 5,
+          "maxY": 61,
+          "colors": 2017
+        },
+        {
+          "group": "SceneFrames",
+          "id": "seal-ruined",
+          "visible": 1506,
+          "minY": 23,
+          "maxY": 61,
+          "colors": 1358
+        },
+        {
+          "group": "SceneFrames",
+          "id": "seal-lamp-ready",
+          "visible": 1866,
+          "minY": 6,
+          "maxY": 61,
+          "colors": 1638
+        },
+        {
+          "group": "SceneFrames",
+          "id": "seal-lamp-spent",
+          "visible": 1773,
+          "minY": 21,
+          "maxY": 61,
+          "colors": 1562
+        }
+      ]
+    },
+    {
+      "name": "actual mouse attack destroys the seal",
+      "pass": true
+    },
+    {
+      "name": "destroyed first travelling seal shows an available lamp",
+      "pass": true
+    },
+    {
+      "name": "reward DOM gates combat inputs",
+      "pass": true
+    },
+    {
+      "name": "claiming the reward extinguishes rather than removes the bowl",
+      "pass": true
+    },
+    {
+      "name": "spent lamp does not give a second reward",
+      "pass": true
+    },
+    {
+      "name": "auto-save restores the spent state",
+      "pass": true
+    },
+    {
+      "name": "export/import preserves schema 7 and spent appearance",
+      "pass": true
+    },
+    {
+      "name": "elevated stage 1 reward still works for Nezha challenge",
+      "pass": true
+    },
+    {
+      "name": "elevated stage 2 reward still works for Nezha challenge",
+      "pass": true
+    },
+    {
+      "name": "final first seal is rubble and never offers midpoint reward",
+      "pass": true
+    },
+    {
+      "name": "ordinary second seal uses a textured ruined state",
+      "pass": true
+    },
+    {
+      "name": "existing camp texture follows its one-use interaction",
+      "pass": true
+    },
+    {
+      "name": "existing trial active artwork is reachable by F",
+      "pass": true
+    },
+    {
+      "name": "existing heal artwork remains collectible",
+      "pass": false
+    }
+  ],
+  "errors": [],
+  "requests": [
+    "http://127.0.0.1:5188/release/index.html?art=7.1.1",
+    "http://127.0.0.1:5188/release/index.html?art=7.1.1"
+  ],
+  "captures": [
+    "intact-in-game.png",
+    "lamp-ready-in-game.png",
+    "lamp-spent-in-game.png",
+    "final-seal-ruined.png",
+    "second-seal-ruined.png",
+    "camp-lit.png",
+    "camp-spent.png",
+    "trial-active.png"
+  ],
+  "inputs": [
+    {
+      "key": "Digit1",
+      "at": 1793075237107,
+      "screen": "heroes"
+    },
+    {
+      "key": "Digit1",
+      "at": 1793075237157,
+      "screen": "start"
+    },
+    {
+      "key": "Escape",
+      "at": 1793075237198,
+      "screen": "playing"
+    },
+    {
+      "mouse": "left",
+      "purpose": "strike the seal"
+    },
+    {
+      "key": "KeyF",
+      "at": 1793075238355,
+      "screen": "playing"
+    },
+    {
+      "key": "KeyJ",
+      "at": 1793075238421,
+      "screen": "reward"
+    },
+    {
+      "key": "KeyF",
+      "at": 1793075238965,
+      "screen": "playing"
+    },
+    {
+      "key": "Escape",
+      "at": 1793075239067,
+      "screen": "playing"
+    },
+    {
+      "key": "KeyF",
+      "at": 1793075241153,
+      "screen": "playing"
+    },
+    {
+      "key": "Escape",
+      "at": 1793075241441,
+      "screen": "playing"
+    },
+    {
+      "key": "KeyF",
+      "at": 1793075241871,
+      "screen": "playing"
+    },
+    {
+      "key": "Escape",
+      "at": 1793075242208,
+      "screen": "playing"
+    },
+    {
+      "key": "KeyJ",
+      "at": 1793075242606,
+      "screen": "playing"
+    },
+    {
+      "key": "KeyF",
+      "at": 1793075243303,
+      "screen": "playing"
+    },
+    {
+      "key": "Escape",
+      "at": 1793075243408,
+      "screen": "playing"
+    },
+    {
+      "key": "Escape",
+      "at": 1793075243995,
+      "screen": "playing"
+    },
+    {
+      "key": "KeyF",
+      "at": 1793075244603,
+      "screen": "playing"
+    },
+    {
+      "key": "Escape",
+      "at": 1793075244948,
+      "screen": "playing"
+    },
+    {
+      "key": "KeyF",
+      "at": 1793075245357,
+      "screen": "playing"
+    },
+    {
+      "key": "Escape",
+      "at": 1793075245543,
+      "screen": "playing"
+    }
+  ],
+  "failure": "AssertionError [ERR_ASSERTION]: existing heal artwork remains collectible\n    at check (E:\\githome\\kong-rpg\\tools\\verify-scene-art.cjs:9:89)\n    at E:\\githome\\kong-rpg\\tools\\verify-scene-art.cjs:57:301"
+}

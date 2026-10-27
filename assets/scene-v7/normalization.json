@@ -1,0 +1,163 @@
+{
+  "tool": "built-in image_gen",
+  "method": "RGBA alpha retained; crop, shared scale, nearest-neighbour, bottom-center anchor",
+  "source": {
+    "file": "assets/scene-v7/seal-states-source.png",
+    "sha256": "09ecf2865c539a3b73c1242a86a5ea0b67b5bc6d862bfed7088e12bbc65644b0",
+    "size": [
+      1254,
+      1254
+    ],
+    "transparentPixels": 915215
+  },
+  "output": {
+    "file": "assets/scene-v7/seal-states.png",
+    "sha256": "9a2534be7bbf8915c71b2b62db74f98ca746abe6826c436bd2df37c189a9239e"
+  },
+  "frames": {
+    "seal-intact": {
+      "cell": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "alphaBounds": [
+        58,
+        93,
+        609,
+        614
+      ],
+      "scale": 0.10869565217391304,
+      "size": [
+        60,
+        57
+      ],
+      "offset": [
+        2,
+        5
+      ],
+      "frame": {
+        "image": "sceneProps",
+        "r": [
+          0,
+          0,
+          64,
+          64
+        ],
+        "anchor": [
+          32,
+          62
+        ]
+      }
+    },
+    "seal-ruined": {
+      "cell": [
+        627,
+        0,
+        1254,
+        627
+      ],
+      "alphaBounds": [
+        36,
+        251,
+        572,
+        613
+      ],
+      "scale": 0.10869565217391304,
+      "size": [
+        58,
+        39
+      ],
+      "offset": [
+        3,
+        23
+      ],
+      "frame": {
+        "image": "sceneProps",
+        "r": [
+          64,
+          0,
+          64,
+          64
+        ],
+        "anchor": [
+          32,
+          62
+        ]
+      }
+    },
+    "seal-lamp-ready": {
+      "cell": [
+        0,
+        627,
+        627,
+        1254
+      ],
+      "alphaBounds": [
+        58,
+        65,
+        609,
+        580
+      ],
+      "scale": 0.10869565217391304,
+      "size": [
+        60,
+        56
+      ],
+      "offset": [
+        2,
+        6
+      ],
+      "frame": {
+        "image": "sceneProps",
+        "r": [
+          128,
+          0,
+          64,
+          64
+        ],
+        "anchor": [
+          32,
+          62
+        ]
+      }
+    },
+    "seal-lamp-spent": {
+      "cell": [
+        627,
+        627,
+        1254,
+        1254
+      ],
+      "alphaBounds": [
+        30,
+        207,
+        582,
+        581
+      ],
+      "scale": 0.10869565217391304,
+      "size": [
+        60,
+        41
+      ],
+      "offset": [
+        2,
+        21
+      ],
+      "frame": {
+        "image": "sceneProps",
+        "r": [
+          192,
+          0,
+          64,
+          64
+        ],
+        "anchor": [
+          32,
+          62
+        ]
+      }
+    }
+  }
+}
