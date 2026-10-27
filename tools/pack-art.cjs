@@ -8,6 +8,7 @@ files.uiIcons='../ui-v3/relic-icons.png';
 files.uiFolio='../ui-v3/field-folio.png';
 files.combo='../combat-v3/wukong-combo.png';files.impacts='../combat-v3/impact-atlas.png';files.nodes='../combat-v3/world-nodes.png';files.nodesDone='../combat-v3/world-nodes-done.png';
 files.guardians='../progression-v4/guardians.png';files.nezha='../ranged-v6/nezha-atlas.png';
+files.nezhaPortrait='../ranged-v6/nezha-empty-hands.png';
 files.mapProps='../map-v6/props.png';files.mapTerrain='../map-v6/terrain.png';files.mapDressing='../map-v6/dressing.png';
 files.sigWukong='../signature-v7/wukong.png';files.sigNezha='../signature-v7/nezha.png';files.sigFx='../signature-v7/fx.png';
 const manifest={tool:'built-in image_gen',runtime:'embedded data URLs; no network or fetch',assets:{}};

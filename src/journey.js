@@ -17,6 +17,11 @@
   const addEnemy=(room,kind,x,y,id,trait)=>{const e=K.enemy(kind,x,y,id);e.style=kind==='shield'?'rush':kind==='blade'?'lunge':'sigil';e.trait=trait||'';room.enemies.push(e);return e;};
   K.TRAITS={twin:{name:'连刃',text:'第一斩后有更远的二段斩；轻棍不推退蓄力，重棍可打断。'},pulse:{name:'震盾',text:'盾撞后发出低位盾波；跃过或用回锋返弹。'},volley:{name:'散焰',text:'长蓄力后扇射三焰；近身打断或寻找弹间空隙。'}};
   K.DROPS={heal:{name:'小还丹',amount:12,color:'#bcdb9b'},focus:{name:'定心光',amount:20,color:'#8edcd9'},rage:{name:'战意火',amount:14,color:'#f0c671'}};
+  // DOM hints and F interaction share the same distance to the object's base.
+  // One ledge of vertical tolerance keeps the elevated seals reachable from
+  // their adjacent ground route, without claiming from multiple levels away.
+  K.lampInReach=s=>{const p=s.player,q=s.room.seals[0];return s.stage<3&&q.hp===0&&!s.room.midClaimed&&Math.abs(p.x-q.x)<85&&Math.abs(p.y+p.h-q.y-q.h)<112;};
+  K.gateInReach=s=>s.stage<3&&Math.abs(s.player.x-s.room.exit)<85&&Math.abs(s.player.y+s.player.h-440)<112;
   K.enrichRoom=function(room,stage){
     baseEnrich(room,stage);
     room.trial=null;room.camp=null;
@@ -70,9 +75,10 @@
     const amount=item.amount||(item.kind==='heal'?22:30),current=s.player[key],full=current>=cap;
     return {name:K.DROPS[item.kind].name,key,label,cap,current,amount,full,gain:Math.min(amount,cap-current)};
   };
+  K.resourceGainText=n=>n>0&&n<.1?'<0.1':String(Math.round(n*10)/10);
   K.pickupHint=function(s,item){
     const q=K.pickupInfo(s,item);
-    if(!q.full)return q.name+' · '+q.label+' +'+q.gain+' · 走近自动拾取';
+    if(!q.full)return q.name+' · '+q.label+' +'+K.resourceGainText(q.gain)+' · 走近自动拾取';
     const action=item.kind==='rage'?'先用 R 大招':item.kind==='focus'?'神通消耗后可拾取':'暂留原地';
     return q.name+' · '+q.label+'已满（'+Math.ceil(q.current)+'/'+q.cap+'）· '+action;
   };
@@ -80,7 +86,7 @@
     if(s.mode!=='playing'||item.used||item.enabled===false)return;const p=s.player,q=K.pickupInfo(s,item);
     if(q.full)return;item.used=true;
     if(item.kind==='rage')K.gainRage(s,q.gain);else p[q.key]+=q.gain;
-    s.stats.drops+=(item.sourceId!==undefined?1:0);K.event(s,'pickup',{kind:item.kind,amount:q.gain,sourceId:item.sourceId});K.effect(s,'notice',p.x,p.y-5,{text:q.label+' +'+q.gain});
+    s.stats.drops+=(item.sourceId!==undefined?1:0);K.event(s,'pickup',{kind:item.kind,amount:q.gain,sourceId:item.sourceId});K.effect(s,'notice',p.x,p.y-5,{text:q.label+' +'+K.resourceGainText(q.gain)});
   };
   K.journeyInteract=function(s){
     const p=s.player,t=s.room.trial,c=s.room.camp;

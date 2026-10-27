@@ -13,6 +13,7 @@
   const on=(id,fn)=>$(id)?.addEventListener('click',fn);
   const relicArt=id=>`<span class="relic-art" style="--item-art:var(--icon-${K.reward(id)?.icon||id})" aria-hidden="true"></span>`;
   const rewardInfo=id=>K.reward(id,screen==='start'?{hero:K.pendingHero||'wukong'}:state);
+  const targetCue=(p,q)=>{const dx=q.x-p.x,dy=q.y+q.h-p.y-p.h;return Math.abs(dx)>65?(dx<0?'回身 ':'前方 ')+Math.ceil(Math.abs(dx)/10)+'丈':Math.abs(dy)>72?(dy<0?'上方 ':'下方 ')+Math.ceil(Math.abs(dy)/10)+'丈':'近旁';};
   const cardCopy={
     cloud:['空中可再跳一次，踩敌后重置。空中棍击更远。','空中仍会被莲焰命中。'],
     echo:['分身驻留3秒，发出穿透棍风。留影诱敌，本体绕背。','每次50定力；放错位置会浪费。'],
@@ -73,6 +74,7 @@
   function resume(){if(!state)return;audio.unlock();if(state.mode==='paused')state.mode='playing';show(state.mode==='reward'&&state.pendingRelic?'replace':state.mode);}
   function pauseMenu(){
     $('overlay').innerHTML=panel('暂停菜单','暂歇 · 风停此刻','此心未歇',`<p class="pause-place">${K.heroDef(state).name} · ${K.STAGES[state.stage].name} · 因缘 ${esc(state.seed)}</p>${growthLine()}<nav class="pause-nav" aria-label="暂歇选择">${btn('continue','继续前行 <span aria-hidden="true">ESC</span>',true)}${btn('build-details','本局法门 <span aria-hidden="true">已选加成 · B</span>')}${btn('help','行者手记 <span aria-hidden="true">招式与破局</span>')}${btn('main-menu','回到主菜单')}</nav><div class="setting-row"><label for="volume">声音</label><input id="volume" aria-label="音量" type="range" min="0" max="100" value="${settings.volume*100}"><label><input id="shake" type="checkbox" ${settings.shake?'checked':''}> 屏震</label></div><div class="pause-tools">${btn('export','导出存档')}${btn('import','导入存档')}</div><p class="notice">旅程已停。导出存档可将此行带往另一入口。</p>${journal()}`);
+    const portrait=()=>{const panel=$('overlay').querySelector('.dialog-paused');if(panel&&K.DialogPortraits?.[state.hero]){panel.dataset.hero=state.hero;panel.style.setProperty('--portrait-art',K.DialogPortraits[state.hero]);}};portrait();K.DialogArtReady.then(()=>{if(screen==='paused')portrait();});
     on('build-details',()=>openBuild('paused'));on('continue',resume);on('help',()=>openHelp('paused'));on('export',exportSave);on('import',()=>$('import-file').click());on('main-menu',()=>{save();show('menu');});
     $('volume').oninput=e=>{settings.volume=Number(e.target.value)/100;audio.setVolume(settings.volume);storage.settings(settings);};
     $('shake').onchange=e=>{settings.shake=e.target.checked;renderer.shake=settings.shake;storage.settings(settings);};
@@ -91,7 +93,7 @@
       ['步法与落点','A D移动，空格/W跳。长按高跳、松开短跳；S＋空格下穿。踩敌反弹，腾云骨多一跳。'],
       ['棍法与掷环','悟空J/左键三连，第三棍可打断；空中S＋J下劈。哪吒J水平掷环、左键瞄准，去程18/回程22；一环在外不能再掷。盾兵可绕背、踩踏或借破盾加成。'],
       ['闪避与神通','K/Shift闪避，0.85秒冷却。L/右键：悟空分身、哪吒混天绫，耗40定力；照影珠或缚莲绫耗50。普攻命中回定力。'],
-      ['法天象地与符术','命中积攒战意，满100按R释放大招：破盾、清近处敌弹。起势护体，收招仍有风险。Q使用限次符术，余量见左上。U：悟空按住蓄棍、松开伸刺；S松开撑地跃。哪吒按住驭轮，W升S降，松开落下。'],
+      ['大招、符术与变化','命中积攒战意，满100按R释放大招：破盾、清近处敌弹。起势护体，收招仍有风险。Q使用限次符术，余量见左上。U：悟空按住蓄棍、松开伸刺；S松开撑地跃。哪吒按住驭轮，W升S降，松开落下。'],
       ['长路与成法','F借灯、触发见闻或过门。上路试炼可跳过，清场后回去领奖；归灯只用一次。补给满值留地。每次奖励择一：舍利最多三枚，法门本局保留，新符替换旧符；B查详情。'],
       ['敌招与重来','突刺/盾冲按路径跳避；交叉印与锁空印锁定后移开，飞行时可收轮下降。三守关考跳跃和横移；三境均需破双阵、退守关者。无天绕背或趁收招。失败清空本局成长。']
     ];
@@ -137,7 +139,7 @@
   on('brand',e=>{e.preventDefault();if(screen==='playing'){K.cancelSignature(state,true);state.mode='paused';save();}show('menu');});
   $('import-file').onchange=async e=>{const file=e.target.files[0];if(!file)return;let raw='';try{raw=await file.text();const data=storage.import(raw);state=data.state;meta=data.meta;renderer.camera=K.clamp(state.player.x-300,0,state.room.width-960);save();show(state.mode==='reward'&&state.pendingRelic?'replace':state.mode);toast('旅程已恢复。',2);}catch(err){if(err.legacy){try{storage.legacy=JSON.parse(raw);show('legacy');}catch{toast('旧存档无法读取。');}}else toast('导入失败：'+err.message);}e.target.value='';};
   window.addEventListener('keydown',e=>{
-    if(e.defaultPrevented)return;
+    if(e.defaultPrevented||e.ctrlKey||e.metaKey||e.altKey)return;
     if(e.target.classList.contains('build-scroll')&&['ArrowDown','ArrowUp','PageDown','PageUp','Home','End'].includes(e.code)){e.preventDefault();const n=e.target;if(e.code==='Home')n.scrollTop=0;else if(e.code==='End')n.scrollTop=n.scrollHeight;else n.scrollTop+=(['ArrowUp','PageUp'].includes(e.code)?-1:1)*(e.code.startsWith('Page')?n.clientHeight*.8:45);return;}
     if(e.code==='KeyB'&&!e.repeat&&['paused','reward','build'].includes(screen)){e.preventDefault();if(screen==='build')closeBuild();else openBuild(screen);return;}
     if(e.code==='Escape'&&screen!=='playing'){e.preventDefault();if(!e.repeat)control('pause');return;}
@@ -159,20 +161,25 @@
   K.pointerFace=x=>{if(!state)return 0;const r=world.getBoundingClientRect();return Math.sign((x-r.left)/r.width*960+renderer.camera-state.player.x-12);};
   function hud(){
     if(!state)return;const p=state.player;$('player-name').textContent=K.heroDef(state).name;$('ultimate-name').textContent='R '+K.heroDef(state).skill;$('range-state').textContent=K.isRanged(state)?(state.ring?(state.ring.phase==='out'?'乾坤圈 · 去程':'乾坤圈 · 回收'):'乾坤圈 · 就绪'):'';
-    const sig=K.isRanged(state);$('signature-name').textContent=sig?'U 风火轮':'U 如意伸缩';$('signature-fill').style.width=(sig?Math.min(100,p.wheelFuel/K.wheelMax(state)*100):state.arm?.phase==='charge'?state.arm.charge/.6*100:p.armCD>0?0:100)+'%';$('signature-state').textContent=sig?(state.flight?'驭轮':p.wheelFuel<.08?'落地回充':p.wheelFuel.toFixed(1)+'s'):state.arm?({charge:'蓄棍',thrust:'伸',recover:'收',vault:'撑'})[state.arm.phase]:p.armCD>0?'回气':'就绪';
+    const sig=K.isRanged(state),unavailable=p.hurt>0?'受击中':p.ultimate>0?'大招中':p.slam?'下劈中':p.dash>0?'闪避中':'';
+    $('signature-name').textContent=sig?'U 风火轮':'U 如意伸缩';$('signature-fill').style.width=(sig?Math.min(100,p.wheelFuel/K.wheelMax(state)*100):state.arm?.phase==='charge'?state.arm.charge/.6*100:p.armCD>0||p.focus<10?0:100)+'%';$('signature-state').textContent=unavailable||(sig?(state.flight?'驭轮':p.focus<8?'定力不足':p.wheelFuel<=K.DT?'落地回充':!p.wheelReady?'松开 U':p.wheelFuel<=.08?'轮火不足':p.wheelFuel.toFixed(1)+'s'):state.arm?({charge:'蓄棍',thrust:'伸',recover:'收',vault:'撑'})[state.arm.phase]:p.armCD>0?'回气':p.focus<10?'定力不足':'就绪');
     $('hp-number').textContent=Math.ceil(p.hp)+' / '+K.maxHP(state);$('hp-fill').style.width=(p.hp/K.maxHP(state)*100)+'%';$('focus-number').textContent=Math.floor(p.focus);$('focus-fill').style.width=p.focus+'%';$('rage-number').textContent=Math.floor(p.rage);$('rage-fill').style.width=p.rage+'%';$('rage-line').classList.toggle('ready',p.rage>=100);$('rage-line').title=p.rage>=100?'按 R 释放'+K.heroDef(state).skill:'命中积攒战意';$('talisman-state').textContent=state.talisman?'Q '+rewardInfo(state.talisman.id).name+' ×'+state.talisman.charges:'Q 未携符术';$('growth-state').textContent=Object.entries(state.growth).map(([id,n])=>rewardInfo(id).name+(n>1?'·'+n+'重':'')).join(' · ')||'暂无';$('chapter').textContent=state.stage<3?'第'+['一','二','三'][state.stage]+'境':'终局';$('stage-name').textContent=K.STAGES[state.stage].name;$('chapter').textContent+=' · '+K.region(state.stage,p.x);
-    const left=state.room.seals.find(q=>q.hp>0),guardian=K.guardian(state);$('objective').textContent=state.stage<3?(left?'阵眼 '+(state.room.seals.filter(q=>q.hp===0).length+1)+' / 2 · 前方 '+Math.max(0,Math.ceil((left.x-p.x)/10))+'丈':guardian?.hp>0?'击退山门守关者 · '+K.GUARDIANS[state.stage].name:'双阵与守关已破 · F过门'):left?'破除法界双阵 · 前方 '+Math.max(0,Math.ceil((left.x-p.x)/10))+'丈':state.room.enemies[0].dormant?'前往莲座 · 归灯可调息一次':'绕背破莲 · 金色收招全额受伤';
+    const left=state.room.seals.find(q=>q.hp>0),guardian=K.guardian(state),direction=left?targetCue(p,left):'';$('objective').textContent=state.stage<3?(left?'阵眼 '+(state.room.seals.filter(q=>q.hp===0).length+1)+' / 2 · '+direction:guardian?.hp>0?'击退山门守关者 · '+K.GUARDIANS[state.stage].name:'双阵与守关已破 · F过门'):left?'破除法界双阵 · '+direction:state.room.enemies[0].dormant?'前往莲座 · 归灯可调息一次':'绕背或趁金色收招 · 全额伤敌';
     $('run-seed').textContent=state.seed;$('relic-list').textContent=state.relics.map(id=>rewardInfo(id).name).join(' · ')+'  ['+state.relics.length+'/3]';$('dash-state').textContent=p.dashCD>0?'闪避恢复 '+p.dashCD.toFixed(1)+'s':'闪避就绪';
     const boss=state.room.enemies.find(e=>(e.kind==='boss'||e.kind==='warden')&&!e.dormant&&e.hp>0);$('boss-hud').hidden=!boss;
     if(boss){$('boss-name').textContent=boss.kind==='warden'?K.GUARDIANS[state.stage].name:'无天';$('boss-fill').style.width=boss.hp/boss.maxHp*100+'%';$('boss-hud').style.setProperty('--boss-color',boss.kind==='warden'?K.GUARDIANS[state.stage].color:'#ba77a3');$('boss-phase').textContent=boss.kind==='warden'?(boss.phase==='recover'?'收招破绽 · 出棍':boss.phase==='warden-windup'?({charge:'冲撞将至 · 跃过路径',quake:'震地将至 · 跳',fan:'散焰将至 · 跳或返弹',lantern:'索灯将至 · 离开莲印',columns:'封愿将至 · 横移',bell:'钟浪将至 · 跳'}[boss.move]):'看清下一招'):boss.phase==='recover'?'破绽已现':boss.phase==='sweep-windup'?'横扫将至 · 跳':boss.phase==='orb-windup'?'莲焰将至 · 闪':boss.phase==='rain-windup'?'落火将至 · 离开莲印':boss.phase==='shift-windup'?'移形将至 · 让路':'黑莲护在正面';}
     const trial=state.room.trial,camp=state.room.camp,nearTrial=trial&&Math.abs(p.x-trial.x)<95&&Math.abs(p.y-trial.y)<75,nearCamp=camp&&Math.abs(p.x-camp.x)<75&&Math.abs(p.y-camp.y)<65;
     const node=state.room.node,nearNode=node&&Math.abs(p.x-node.x)<90&&Math.abs(p.y-396)<95;const gate=state.stage<3&&Math.abs(p.x-state.room.exit)<85;const lamp=state.stage<3&&state.room.seals[0].hp===0&&!state.room.midClaimed&&Math.abs(p.x-state.room.seals[0].x)<85;
     const pickup=state.room.pickups.filter(q=>!q.used&&q.enabled!==false&&Math.abs(p.x+p.w/2-q.x-q.w/2)<72&&Math.abs(p.y+p.h-q.y-q.h)<54).sort((a,b)=>Math.abs(p.x-a.x)-Math.abs(p.x-b.x))[0];
-    $('context-hint').hidden=screen!=='playing'||(!gate&&!lamp&&!nearNode&&!nearTrial&&!nearCamp&&!pickup&&state.roomTime>9);
-    $('context-hint').textContent=nearTrial?(trial.state==='ready'?'F 开启'+trial.name+' · 可跳过，胜后多选一项加成':trial.state==='cleared'?'F 领取试炼奖励':trial.state==='claimed'?'试炼奖励已取':'试炼进行中 · 可退回下路'):nearCamp?(camp.used?'归灯余温已尽':'F 归灯调息 · 生命+24 定力+20 · 仅一次'):nearNode?(node.state==='done'?'F 回看此地见闻':node.state==='active'?'守阵者尚在 · 可离开后返回':node.id==='bridge'?'F 燃灯接桥 · 消耗20定力':node.id==='rescue'?'F 破笼救困 · 会惊动守卒':'F 叩钟破妄 · 会惊动守钟众'):lamp?'F 借灯整顿 · 舍利、法门与符术':gate?(left?'阵眼尚存，回身破阵':guardian?.hp>0?'守关者尚在，击退后过门':'F 穿过山门'):(K.isRanged(state)?'左键瞄准掷环 · U驭轮 W升S降 · 松开落地回充':'J棍击 · U蓄放伸棍 / S松U撑跃 · L分身');
+    $('context-hint').hidden=screen!=='playing'||(!gate&&!lamp&&!nearNode&&!nearTrial&&!nearCamp&&!pickup&&state.arm?.phase!=='charge'&&state.roomTime>9);
+    $('context-hint').textContent=nearTrial?(trial.state==='ready'?'F 开启'+trial.name+' · 可跳过，胜后多选一项加成':trial.state==='cleared'?'F 领取试炼奖励':trial.state==='claimed'?'试炼奖励已取':'试炼进行中 · 可退回下路'):nearCamp?(camp.used?'归灯余温已尽':'F 归灯调息 · 生命+24 定力+20 · 仅一次'):nearNode?(node.state==='done'?'F 回看此地见闻':node.state==='active'?'守阵者尚在 · 可离开后返回':node.id==='bridge'?'F 燃灯接桥 · 消耗20定力':node.id==='rescue'?'F 破笼救困 · 会惊动守卒':'F 叩钟破妄 · 会惊动守钟众'):lamp?(K.lampInReach(state)?'F 借灯整顿 · 舍利、法门与符术':'靠近借灯落点后 F 整顿 · S＋跳可下穿悬台'):gate?(!K.gateInReach(state)?'靠近山门落点后 F 过门':left?'阵眼尚存，回身破阵':guardian?.hp>0?'守关者尚在，击退后过门':'F 穿过山门'):(K.isRanged(state)?'左键瞄准掷环 · U驭轮 W升S降 · 松开落地回充':state.arm?.phase==='charge'?'蓄棍中不能起跳 · 松 U 出刺 / S松U撑跃 · K取消':'J棍击 · U蓄放伸棍 / S松U撑跃 · L分身');
     if(pickup){const text=K.pickupHint(state,pickup);$('context-hint').textContent=nearTrial||nearCamp||nearNode||lamp||gate?$('context-hint').textContent+' · '+text:text;}
     const progress=$('journey-fill');if(progress)progress.style.width=Math.min(100,p.x/state.room.exit*100)+'%';
     const labels=$('combat-labels');if(labels)labels.innerHTML=state.effects.filter(f=>f.text&&f.life>0).slice(-12).map(f=>`<span class="impact-number ${f.kind==='hurt'?'hurt':f.kind==='heavy-hit'?'heavy':f.kind==='block'?'block':''}" style="left:${(f.x-renderer.camera)/960*100}%;top:${(f.y-((f.duration||.42)-f.life)*65)/540*100}%">${esc(f.text)}</span>`).join('');
+    // At the left edge the camera cannot center the actor. Yield the HUD while
+    // a jump/flight silhouette crosses it; preserve layout and chosen bonuses.
+    const cluster=document.querySelector('.hud-left'),r=world.getBoundingClientRect(),h=cluster.getBoundingClientRect(),actor={x:r.x+(p.x-renderer.camera-52)/960*r.width,y:r.y+(p.y-84)/540*r.height,w:128/960*r.width,h:128/540*r.height};
+    cluster.classList.toggle('obscures-player',screen==='playing'&&actor.x<h.right&&actor.x+actor.w>h.left&&actor.y<h.bottom&&actor.y+actor.h>h.top);
   }
   let previous=performance.now(),accumulator=0,lastHud=0;
   function frame(now){

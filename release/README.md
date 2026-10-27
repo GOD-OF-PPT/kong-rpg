@@ -1,4 +1,6 @@
-# 大圣 · 劫后行 v7.0.0
+# 大圣 · 劫后行 v7.0.1
+
+v7.0.1：界面与交互巡检。隔离进入奖励/恢复战斗时的长按按键，保留浏览器组合键；HUD在遮住空中角色时暂时淡出，已越过的阵眼提示回身；U显示定力不足、动作占用等原因，哪吒暂停采用自己的原画；补给提示不再暴露长小数。借灯和山门须靠近实际落点，奖励前收起未完成的变化，兼容现有v7存档。复现、对照与验收见 [本轮记录](docs/ux-v7/VERIFICATION.md)。
 
 v7.0.0：如意与风火。悟空U蓄伸金箍棒，棍尖破盾，S松U改撑地起跃；哪吒U短时驭风火轮、W升S降，飞行中可投环，落地松键回充。盾兵会预警锁线破距冲，法师会锁定空中莲印；新招与分身/绫缚竞争定力。原四关与构筑保留，规则隔离为schema7，v6.2.1入口原样保留。[研究依据](docs/signature-v7/RESEARCH.md) · [规则与取舍](docs/signature-v7/DESIGN.md) · [验收](docs/signature-v7/VERIFICATION.md)。
 
@@ -23,7 +25,7 @@ v6.0.1：已选舍利、法门等级与符术余量集中显示在左上生命�
 - A / D 或方向键行走；空格 / W 跳跃，长按高跳、松开短跳。
 - S + 空格下穿悬台；孙悟空 J / 左键棍法三连；哪吒 J 水平掷环 / 左键朝光标掷环；空中 S + J 下劈。
 - B 查看本局全部已选加成，再按 B / Esc 返回；滚轮、↑↓、Home / End 翻阅。
-- U 是角色变化：悟空按住蓄棍、松开伸刺，S松开撑跃；哪吒按住驭轮，W/空格升、S降，松开收轮。
+- U 是角色变化：悟空按住蓄棍、松开伸刺，S松开撑跃；蓄棍中不能起跳，K可取消。哪吒按住驭轮，W/空格升、S降，松开收轮。
 - K / Shift 闪避；L / 右键使用角色神通（悟空分身 / 哪吒混天绫）；F 借灯整顿或过山门；Esc 暂停。
 - 棍击、破阵与反击积攒战意，满100按 R 施展角色大招（悟空法天象地 / 哪吒莲火轮阵）；Q 使用携带的雷符或护符，次数用尽消失。
 - 舍利可用 A / D 或 ← / → 左右选取，Enter 确认，1 / 2 / 3 速选；菜单也可用鼠标、Tab / Enter。战斗中 Tab 先暂停再进入界面。
@@ -59,7 +61,7 @@ npm run dev
 
 预览 http://127.0.0.1:5188/release/index.html 。`build` 从 assets 中的 PNG 与已处理 WAV 重建内嵌素材脚本，再将脚本、CSS、图片与声音全部内联到发行 HTML。克隆源码后先 build；正式发行包可直接离线打开。
 
-完整离线包为 `artifacts/kong-rpg-offline-v7.0.0.zip`，含v1–v6原入口，约160MiB以上，超过GitHub单文件100MiB限制，因此作为本地交付物保留。Git仓库包含全部发行文件；需要重打包时执行 `python tools/package-release.py`。
+完整离线包为 `artifacts/kong-rpg-offline-v7.0.1.zip`，含v1–v6原入口，约160MiB以上，超过GitHub单文件100MiB限制，因此作为本地交付物保留。Git仓库包含全部发行文件；需要重打包时执行 `python tools/package-release.py`。
 
 `src/content.js` 内容与种子；`simulation.js` 固定120Hz模拟；`heroes.js` 角色、回环、绫缚与远距反制；`signature.js` 伸棍、撑跃、驭轮和锁空/破距响应；`signature-art.js` 对应姿态、棍身和双轮特效；`journey.js` 延长路线、强化怪、掉落、试炼与归灯；`progression.js` 成长、符术、大招与守关规则；`input.js` 键鼠与焦点；`storage.js` 版本存档；`renderer.js` 世界渲染；`visuals.js` 与 `progression-art.js` 图集和动作；`app.js` DOM界面；`audio.js` 本地声音。
 

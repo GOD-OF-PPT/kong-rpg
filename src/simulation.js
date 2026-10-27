@@ -145,9 +145,10 @@
     for(let i=0;i<s.room.signs.length;i++)if(Math.abs(s.room.signs[i].x-p.x)<65&&!s.hints.includes(s.stage+':'+i)){s.hints.push(s.stage+':'+i);K.event(s,'hint',{text:s.room.signs[i].text});}
     if(a.interactPressed&&s.mode==='playing'&&K.journeyInteract(s)){}
     else if(a.interactPressed&&s.mode==='playing'&&K.worldInteract(s)){}
-    else if(a.interactPressed&&s.mode==='playing'&&s.stage<3&&s.room.seals[0].hp===0&&!s.room.midClaimed&&Math.abs(p.x-s.room.seals[0].x)<85){s.rewardKind='mid';s.reward=K.options(s);s.mode='reward';K.event(s,'reward',{kind:'mid'});}
+    else if(a.interactPressed&&s.mode==='playing'&&s.stage<3&&s.room.seals[0].hp===0&&!s.room.midClaimed&&Math.abs(p.x-s.room.seals[0].x)<85){if(K.lampInReach(s)){K.cancelSignature(s);s.rewardKind='mid';s.reward=K.options(s);s.mode='reward';K.event(s,'reward',{kind:'mid'});}else K.event(s,'ability-note',{text:'靠近借灯的落点，再按 F 整顿。'});}
     else if (a.interactPressed && s.mode === 'playing' && s.stage < 3 && Math.abs(p.x - s.room.exit) < 85) {
-      if (s.room.seals.some(q => q.hp > 0)||K.guardian(s)?.hp>0) K.event(s, 'gate-locked');
+      if(!K.gateInReach(s))K.event(s,'ability-note',{text:'靠近山门的落点，再按 F 过门。'});
+      else if (s.room.seals.some(q => q.hp > 0)||K.guardian(s)?.hp>0) K.event(s, 'gate-locked');
       else{K.cancelSignature(s);s.mode='reward';s.rewardKind='exit';s.reward=K.options(s);K.event(s,'reward',{kind:'exit'});}
     }
   };

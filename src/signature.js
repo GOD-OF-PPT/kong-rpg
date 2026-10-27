@@ -40,6 +40,7 @@
     else p.groundTime=0;
     if(p.hurt>0||p.ultimate>0){K.cancelSignature(s);return;}
     if(K.isRanged(s)){
+      if(a.signaturePressed&&p.focus<8&&!s.flight)K.event(s,'empty-focus');
       if(!a.signature)p.wheelReady=true;
       if(s.flight&&(!a.signature||a.dashPressed||(a.down&&(a.attack||a.attackPressed))))K.cancelSignature(s);
       if(!s.flight&&a.signature&&p.wheelReady&&p.wheelFuel>.08&&p.focus>=8&&!p.slam&&!p.dash){p.focus-=8;s.stats.focusSpent+=8;p.wheelReady=false;s.flight={age:0};p.attackBuffer=0;if(p.grounded)p.vy=-240;K.event(s,'wheel-start');s.stats.flights++;}

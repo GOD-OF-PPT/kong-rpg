@@ -1,0 +1,30 @@
+{
+  "version": "7.0.1",
+  "checks": [
+    {
+      "name": "all three midpoint lamps reject remote F and accept a reachable body",
+      "pass": true
+    },
+    {
+      "name": "elevated first seals remain claimable from their adjacent ground route",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'playing'\n- 'reward'\n\n    at E:\\githome\\kong-rpg\\tools\\verify-ux-v7.cjs:7:228\n    at test (E:\\githome\\kong-rpg\\tools\\verify-ux-v7.cjs:4:49)\n    at Object.<anonymous> (E:\\githome\\kong-rpg\\tools\\verify-ux-v7.cjs:7:1)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+    },
+    {
+      "name": "a gateway requires a nearby landing even after the boss and seals are defeated",
+      "pass": true
+    },
+    {
+      "name": "entering a midpoint reward cancels unfinished signature actions without refund",
+      "pass": true
+    },
+    {
+      "name": "Nezha gives an explicit failure cue when U cannot start for lack of focus",
+      "pass": true
+    },
+    {
+      "name": "fractional focus pickup copy stays short while preserving the actual gain",
+      "pass": true
+    }
+  ]
+}

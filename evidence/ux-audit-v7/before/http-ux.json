@@ -1,0 +1,105 @@
+{
+  "version": "7.0.0",
+  "kind": "http",
+  "entry": "E:\\githome\\kong-rpg\\artifacts\\baseline-ux-v7\\index.html",
+  "sha256": "61c75b352dd4fe48a40a07021b642867bbf501553581ab41f4423c0f10a0775a",
+  "checks": [
+    {
+      "name": "left hold continues attacking after right-click skill",
+      "pass": true,
+      "first": 3,
+      "second": 6
+    },
+    {
+      "name": "held combat direction cannot navigate a new reward",
+      "pass": false,
+      "initial": "mercy",
+      "after": "clone-burst"
+    },
+    {
+      "name": "fresh D still selects next reward",
+      "pass": true
+    },
+    {
+      "name": "modified browser keys do not trigger combat",
+      "pass": false
+    },
+    {
+      "name": "Ctrl-Tab is not captured as game pause",
+      "pass": false
+    },
+    {
+      "name": "held movement does not restart after pause",
+      "pass": false
+    },
+    {
+      "name": "fresh movement works after pause",
+      "pass": true
+    },
+    {
+      "name": "Nezha pause uses her own portrait",
+      "pass": false,
+      "hero": null
+    },
+    {
+      "name": "wukong U HUD explains insufficient focus",
+      "pass": false,
+      "text": "就绪"
+    },
+    {
+      "name": "nezha U HUD explains insufficient focus",
+      "pass": false,
+      "text": "1.3s"
+    },
+    {
+      "name": "HUD yields visibility when player flies behind it",
+      "pass": false,
+      "hudOpacity": 1
+    },
+    {
+      "name": "passed objective points back instead of saying ahead zero",
+      "pass": false,
+      "objective": "阵眼 1 / 2 · 前方 0丈"
+    },
+    {
+      "name": "fractional focus hint does not expose floating point digits",
+      "pass": false,
+      "pickupText": "定心光 · 定力 +0.20000000000000284 · 走近自动拾取"
+    },
+    {
+      "name": "a distant lamp cannot be claimed through a platform",
+      "pass": false
+    },
+    {
+      "name": "midpoint reward ends an unlaunched pole vault",
+      "pass": false
+    },
+    {
+      "name": "choosing a reward cannot auto-launch the previous vault",
+      "pass": false
+    },
+    {
+      "name": "failed import preserves current run",
+      "pass": true
+    },
+    {
+      "name": "pause freezes signature and world",
+      "pass": true
+    },
+    {
+      "name": "actual v7.0.0 flight save preserves hero and remaining fuel",
+      "pass": true,
+      "build": "7.0.0"
+    },
+    {
+      "name": "no runtime errors",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "network": [
+    "http://127.0.0.1:5188/artifacts/baseline-ux-v7/index.html"
+  ],
+  "browser": "156.0.4314.42",
+  "video": "evidence/ux-audit-v7/before/video/page@5379ec19d5d7c730241582a70b5f2c82.webm"
+}
