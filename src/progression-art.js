@@ -2,15 +2,11 @@
   'use strict';
   const Base=K.Renderer,rect=(c,x,y,w,h,col)=>{c.fillStyle=col;c.fillRect(Math.round(x),Math.round(y),Math.round(w),Math.round(h));};
   // Shared scale and measured foot anchors. The overlapping third row is excluded.
-  const GUARDIAN_FRAMES=[
-    [{r:[33,85,399,297],a:[270,378]},{r:[94,430,356,375],a:[274,800]}],
-    [{r:[485,90,385,292],a:[675,378]},{r:[500,452,384,354],a:[690,800]}],
-    [{r:[885,82,325,300],a:[1076,378]},{r:[940,486,290,320],a:[1090,800]}]
-  ];
+  const GUARDIAN_FRAMES=K.ArtCatalog.guardians;
   K.Renderer=class extends Base{
     guardianFrame(e){
       const image=this.image('guardians');if(!image)return null;
-      const col=K.GUARDIANS.findIndex(d=>d.id===e.guardian),row=e.phase==='warden-windup'?1:0,key='guardian:'+col+':'+row+':'+(e.flash>0);
+      const col=K.GUARDIANS.findIndex(d=>d.id===e.guardian),row=e.phase.includes('windup')||e.phase==='warden-rush'?1:0,key='guardian:'+col+':'+row+':'+(e.flash>0);
       if(this.frameCache.has(key))return this.frameCache.get(key);
       const out=document.createElement('canvas');out.width=192;out.height=168;const c=out.getContext('2d');c.imageSmoothingEnabled=false;const info=GUARDIAN_FRAMES[col][row],[x,y,w,h]=info.r,scale=.34;
       c.drawImage(image,x,y,w,h,Math.round(96+(x-info.a[0])*scale),Math.round(145+(y-info.a[1])*scale),Math.round(w*scale),Math.round(h*scale));
@@ -28,7 +24,6 @@
         if(giant){c.save();c.translate(Math.round(x+12),Math.round(y+44));c.scale(face*2.25,2.25);c.globalAlpha=.26;c.drawImage(giant,-96,-123);c.restore();}
       }
       super.person(kind,x,y,face,frame,alpha,flash,scale);
-      if(kind==='monkey'&&p?.ward>0&&Math.abs(x-p.x)<.2&&Math.abs(y-p.y)<.2){for(let i=0;i<12;i++){const a=i*Math.PI/6+this.clock*1.3;rect(c,x+12+Math.cos(a)*26,y+23+Math.sin(a)*32,3,3,'#bce5c7');}}
     }
     drawGate(x,open){super.drawGate(x,open&&!(K.guardian(this.scene)?.hp>0));}
     combatCues(){

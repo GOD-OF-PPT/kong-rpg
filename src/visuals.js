@@ -2,30 +2,7 @@
   'use strict';
   const Base=K.Renderer;
   // The generated strip has gutters, not an exact grid. Keep the full staff.
-  const RUN=[
-    {r:[12,220,341,330],a:[257,548]}, {r:[370,220,323,330],a:[600,548]},
-    {r:[716,220,321,330],a:[944,548]}, {r:[1074,220,363,330],a:[1335,548]},
-    {r:[1446,220,332,330],a:[1684,548]}, {r:[1808,220,310,330],a:[2025,548]}
-  ];
-  const HERO={
-    idle:{r:[85,40,280,405],a:[218,427]},
-    run:{r:[430,90,400,355],a:[664,426]},
-    jump:{r:[905,60,400,360],a:[1108,384]},
-    fall:{r:[1365,90,390,360],a:[1564,443]},
-    windup:{r:[30,465,395,370],a:[248,815]},
-    attack:{r:[430,490,550,345],a:[651,816]},
-    heavy:{r:[430,490,550,345],a:[651,816]},
-    recover:{r:[980,495,393,340],a:[1118,816]},
-    hurt:{r:[1380,510,370,325],a:[1554,816]},
-    death:{r:[1380,510,370,325],a:[1554,816]},
-    dash:{r:[430,90,400,355],a:[664,426]}
-  };
-  const ENEMIES={
-    blade:[{r:[0,60,420,395],a:[238,447]},{r:[25,460,395,405],a:[245,852]}],
-    shield:[{r:[460,25,442,430],a:[688,447]},{r:[465,457,437,408],a:[688,852]}],
-    caster:[{r:[925,15,400,433],a:[1115,435]},{r:[920,450,405,405],a:[1115,840]}],
-    boss:[{r:[1350,0,410,453],a:[1558,447]},{r:[1335,447,439,420],a:[1560,852]}]
-  };
+  const {run:RUN,hero:HERO,enemies:ENEMIES}=K.ArtCatalog;
   const rect=(c,x,y,w,h,col)=>{c.fillStyle=col;c.fillRect(Math.round(x),Math.round(y),Math.round(w),Math.round(h));};
   K.Renderer=class extends Base{
     constructor(canvas){super(canvas);this.scene=null;this.ui='menu';this.imageBackgrounds={};this.frameCache=new Map();this.runCycle=0;}
@@ -75,7 +52,7 @@
       if(p.x+p.w<this.camera-30||p.x>this.camera+990)return;
       const c=this.c;
       if(p.solid){rect(c,p.x,p.y+24,p.w,p.h-24,'#14232c');rect(c,p.x,p.y+36,p.w,3,'#30404a');for(let x=p.x;x<p.x+p.w;x+=62){rect(c,x+31,p.y+45,2,28,'#23343e');rect(c,x+3,p.y+77,58,2,'#25343c');}}
-      const tileW=200,src={x:90,y:250,w:1990,h:260};
+      const tileW=200,[sx,sy,sw,sh]=K.ArtCatalog.stone.r,src={x:sx,y:sy,w:sw,h:sh};
       for(let x=p.x;x<p.x+p.w;x+=tileW){const w=Math.min(tileW,p.x+p.w-x);c.drawImage(image,src.x,src.y,src.w*w/tileW,src.h,Math.round(x),Math.round(p.y),Math.round(w),p.solid?30:25);}
       rect(c,p.x,p.y,p.w,1,'#d9c394');
     }
@@ -110,7 +87,7 @@
       if(q.warning){const radius=24+Math.sin(this.clock*23)*4;rect(c,q.x+14-radius,q.y+28,radius*2,2,'#f1b0d0');}
     }
     prop(kind,x,bottom,w,h){
-      const src=kind==='seal'?[75,188,620,495]:kind==='lamp'?[850,210,410,473]:[1390,25,765,658],c=this.c;
+      const src=K.ArtCatalog.props[kind].r,c=this.c;
       c.drawImage(this.image('props'),...src,Math.round(x-w/2),Math.round(bottom-h),w,h);
     }
     drawGate(x,open){
@@ -121,7 +98,7 @@
     }
     titleScene(t){
       const c=this.c;const g=c.createLinearGradient(0,0,730,0);g.addColorStop(0,'#0c1524e8');g.addColorStop(.6,'#142033a3');g.addColorStop(1,'#14203300');c.fillStyle=g;c.fillRect(0,0,960,540);
-      if(this.image('stone'))c.drawImage(this.image('stone'),90,250,1990,260,585,479,295,38);
+      if(this.image('stone'))c.drawImage(this.image('stone'),...K.ArtCatalog.stone.r,585,479,295,38);
       if(this.image('wukong')){const info=HERO.idle,[sx,sy,sw,sh]=info.r;c.save();c.translate(738,479);c.scale(-.64,.64);c.drawImage(this.image('wukong'),sx,sy,sw,sh,sx-info.a[0],sy-info.a[1],sw,sh);c.restore();}
       else this.person('monkey',714,435,-1,0,1,false,2.8);
       for(let i=0;i<14;i++){const x=620+(i*47)%280+Math.sin(t*.7+i)*5,y=220+(i*59+t*10)%260;rect(c,x,y,1,2,'#dab66d');}

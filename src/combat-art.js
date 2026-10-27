@@ -1,11 +1,7 @@
 (function(K){
   'use strict';
   const Base=K.Renderer,rect=(c,x,y,w,h,color)=>{c.fillStyle=color;c.fillRect(Math.round(x),Math.round(y),Math.round(w),Math.round(h));};
-  const COMBO=[
-    {r:[0,65,385,350],a:[202,401]},{r:[390,65,537,350],a:[600,401]},{r:[930,65,340,350],a:[1085,401]},
-    {r:[0,440,390,390],a:[205,819]},{r:[390,435,500,395],a:[600,819]},{r:[895,430,375,400],a:[1080,819]},
-    {r:[0,832,423,365],a:[202,1189]},{r:[425,855,477,342],a:[603,1189]},{r:[902,855,365,342],a:[1082,1189]}
-  ];
+  const COMBO=K.ArtCatalog.combo;
   K.Renderer=class extends Base{
     comboFrame(index,ghost=false){
       const key='combo:'+index+':'+ghost;if(this.frameCache.has(key))return this.frameCache.get(key);const image=this.image('combo');if(!image)return null;
@@ -33,7 +29,7 @@
     }
     impactFrame(row,col){
       const key='impact:'+row+':'+col;if(this.frameCache.has(key))return this.frameCache.get(key);const image=this.image('impacts');if(!image)return null;
-      const out=document.createElement('canvas');out.width=128;out.height=128;const c=out.getContext('2d');c.imageSmoothingEnabled=false;const w=image.width/4,h=image.height/4;c.drawImage(image,col*w,row*h,w,h,0,0,128,128);this.frameCache.set(key,out);return out;
+      const out=document.createElement('canvas');out.width=128;out.height=128;const c=out.getContext('2d');c.imageSmoothingEnabled=false;const r=K.ArtCatalog.impacts[row*4+col].r;c.drawImage(image,...r,0,0,128,128);this.frameCache.set(key,out);return out;
     }
     fx(f,t){
       const age=(f.duration||.42)-f.life,progress=K.clamp(age/(f.duration||.42),0,.999),c=this.c;
@@ -66,7 +62,7 @@
     combatCues(){
       super.combatCues();const s=this.scene;if(!s)return;const c=this.c,n=s.room.node;
       if(n&&Math.abs(n.x-this.camera)<1100&&this.image('nodes')){
-        const index=['rescue','bridge','bell'].indexOf(n.id),image=this.image(n.state==='done'?'nodesDone':'nodes')||this.image('nodes'),src=index===0?[0,0,690,724]:index===1?[700,0,710,724]:[1420,0,752,724],w=index===2?145:115,h=index===2?139:120;
+        const index=['rescue','bridge','bell'].indexOf(n.id),image=this.image(n.state==='done'?'nodesDone':'nodes')||this.image('nodes'),src=K.ArtCatalog.nodes[index].r,w=index===2?145:115,h=index===2?139:120;
         c.drawImage(image,...src,Math.round(n.x-w/2),440-h,w,h);rect(c,n.x-24,442,48,2,n.state==='done'?'#c7dca7':n.state==='active'?'#d993bf':'#d6b46f');
         if(n.state==='active')for(let i=0;i<n.guards.length;i++)rect(c,n.x-12+i*10,440-h-10,6,3,s.room.enemies.find(e=>e.id===n.guards[i])?.hp>0?'#dea1c8':'#565968');
       }

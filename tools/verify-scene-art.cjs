@@ -3,7 +3,7 @@
 const {chromium}=require('playwright'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),assert=require('node:assert/strict'),crypto=require('node:crypto'),os=require('node:os');
 const {execFileSync}=require('node:child_process');
 const recordPage=require('./record-page.cjs');
-const root=path.resolve(__dirname,'..'),kind=process.argv[2]||'http',entry=path.resolve(process.env.GAME_ENTRY||'release/index.html'),out=path.join(root,'evidence/scene-v7',kind),base='e6bc8515fc89ba266e7aeec40102aaea44cec613';
+const root=path.resolve(__dirname,'..'),kind=process.argv[2]||'http',entry=path.resolve(process.env.GAME_ENTRY||'release/index.html'),out=path.resolve(process.env.SCENE_EVIDENCE_DIR||path.join(root,'evidence/scene-v7',kind)),base='e6bc8515fc89ba266e7aeec40102aaea44cec613';
 fs.mkdirSync(out,{recursive:true});
 const sandbox=vm.createContext({console});for(const n of ['content','world','progression','journey','heroes','signature','simulation','challenge','storage'])vm.runInContext(fs.readFileSync(path.join(root,'src',n+'.js'),'utf8'),sandbox);const K=sandbox.Kong;
 const report={version:K.VERSION,base,kind,entry,sha256:crypto.createHash('sha256').update(fs.readFileSync(entry)).digest('hex'),method:'controlled save imports, real DOM/keyboard/mouse actions, render-only state catalogue, matched before/after captures',environment:{os:os.release(),node:process.version},checks:[],errors:[],requests:[],captures:[],inputs:[]};
@@ -33,7 +33,8 @@ function scene(stage=0,hero='wukong',difficulty='normal'){
         frames.push({group,id,visible,minY,maxY,colors:colors.size});
       }return{images:Object.keys(images),errors:Kong.ImageArt.errors,frames};
     });fs.writeFileSync(path.join(out,'asset-inventory.json'),JSON.stringify(assets,null,2));
-    check('all 25 embedded PNGs decode',assets.images.length===25&&!assets.errors.length,assets);
+    const expectedImages=Object.keys(JSON.parse(fs.readFileSync(path.join(root,'assets/signature-v7/pack-manifest.json'),'utf8')).assets).length;
+    check('all '+expectedImages+' embedded PNGs decode',assets.images.length===expectedImages&&!assets.errors.length,assets);
     check('all 50 scene / map / signature frames contain visible pixels',assets.frames.length===50&&assets.frames.every(f=>f.visible>10));
     const seals=assets.frames.filter(f=>f.group==='SceneFrames');check('four seal states have detail and one shared ground anchor',seals.length===4&&seals.every(f=>f.colors>30&&f.maxY===61),{seals});
     // First-use menus and pointer input stay on the normal public controls.

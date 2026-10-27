@@ -1,0 +1,13 @@
+{
+  "base": "f041955f42d65aff38e2485c259c744e5c760909",
+  "sourceAudit": [
+    {"issue": "combo-2 source crop exceeds 1254px image", "before": [930,65,340,350], "after": [930,65,324,350]},
+    {"issue": "combo-5 source crop exceeds 1254px image", "before": [895,430,375,400], "after": [895,430,359,400]},
+    {"issue": "combo-8 source crop exceeds 1254px image", "before": [902,855,365,342], "after": [902,855,352,342]},
+    {"issue": "Nezha death and ultimate use ordinary actor selection", "fix": "new defeated and two ultimate key poses"},
+    {"issue": "protection visual skipped by ranged and signature early returns", "fix": "one status pass after current player body"},
+    {"issue": "ranged slam shares melee shaft", "fix": "short dual fire trails"},
+    {"issue": "guardian challenge windups select idle", "fix": "existing exertion frame for all windups and rush"}
+  ],
+  "reviewPolicy": "bitmap sprites, intentional procedural combat signals, and DOM text are checked separately"
+}

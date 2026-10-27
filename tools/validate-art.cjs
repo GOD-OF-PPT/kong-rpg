@@ -10,14 +10,20 @@ for(const [id,asset]of Object.entries(manifest.assets)){
   dimensions[id]={width:data.readUInt32BE(16),height:data.readUInt32BE(20)};
 }
 const context=vm.createContext({});
-for(const file of ['map-data','signature-data','scene-data'])vm.runInContext(fs.readFileSync(path.join(root,'src',file+'.js'),'utf8'),context);
-let count=0;
-for(const group of ['MapFrames','SignatureFrames','SceneFrames']){
+for(const file of ['art-catalog','map-data','signature-data','scene-data','actor-states-data'])vm.runInContext(fs.readFileSync(path.join(root,'src',file+'.js'),'utf8'),context);
+let count=0;const coverage={};
+for(const group of ['ArtFrames','MapFrames','SignatureFrames','SceneFrames','ActorStateFrames']){
+  coverage[group]=[];
   for(const [id,frame]of Object.entries(context.Kong[group])){
-    const image=dimensions[frame.image],[x,y,w,h]=frame.r,[ax,ay]=frame.anchor;
-    if(!image||![x,y,w,h,ax,ay].every(Number.isFinite)||x<0||y<0||w<=0||h<=0||x+w>image.width||y+h>image.height||ax<0||ay<0||ax>w||ay>h)throw Error('Invalid atlas frame '+group+':'+id);
+    const image=dimensions[frame.image],[x,y,w,h]=frame.r;
+    if(!image||![x,y,w,h].every(Number.isFinite)||x<0||y<0||w<=0||h<=0||x+w>image.width||y+h>image.height)throw Error('Invalid atlas frame '+group+':'+id);
+    if(frame.anchor){const [ax,ay]=frame.anchor;if(![ax,ay].every(Number.isFinite)||ax<0||ay<0||ax>w||ay>h)throw Error('Invalid local anchor: '+id);}
+    if(frame.a){const [ax,ay]=frame.a;if(![ax,ay].every(Number.isFinite)||ax<x||ay<y||ax>x+w||ay>y+h)throw Error('Invalid source anchor: '+id);}
+    coverage[group].push({id,...frame});
     count++;
   }
 }
 for(const id of ['seal-intact','seal-ruined','seal-lamp-ready','seal-lamp-spent'])if(!context.Kong.SceneFrames[id])throw Error('Missing seal state: '+id);
+for(const id of ['wukong-dead','nezha-dead','nezha-ultimate-start','nezha-ultimate-release'])if(!context.Kong.ActorStateFrames[id])throw Error('Missing actor state: '+id);
+fs.writeFileSync(path.join(root,'assets/art-audit-v7/coverage.json'),JSON.stringify({images:dimensions,frames:coverage,total:count},null,2)+'\n');
 console.log('Art integrity:',Object.keys(dimensions).length,'PNG assets;',count,'bounded frames');

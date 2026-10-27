@@ -1,0 +1,1054 @@
+{
+  "images": [
+    "mountain",
+    "ferry",
+    "sanctuary",
+    "wukong",
+    "enemies",
+    "stone",
+    "run",
+    "props",
+    "uiScroll",
+    "uiIcons",
+    "uiFolio",
+    "combo",
+    "impacts",
+    "nodes",
+    "nodesDone",
+    "guardians",
+    "nezha",
+    "nezhaPortrait",
+    "mapProps",
+    "mapTerrain",
+    "mapDressing",
+    "sigWukong",
+    "sigNezha",
+    "sigFx",
+    "sceneProps",
+    "actorStates"
+  ],
+  "errors": [],
+  "frames": [
+    {
+      "group": "ArtFrames",
+      "id": "wukong-idle",
+      "visible": 44246,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "wukong-run",
+      "visible": 41989,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "wukong-jump",
+      "visible": 37769,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "wukong-fall",
+      "visible": 44960,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "wukong-windup",
+      "visible": 49870,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "wukong-attack",
+      "visible": 48506,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "wukong-heavy",
+      "visible": 48506,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "wukong-recover",
+      "visible": 46251,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "wukong-hurt",
+      "visible": 40693,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "wukong-death",
+      "visible": 40693,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "wukong-dash",
+      "visible": 41989,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "run-0",
+      "visible": 46058,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "run-1",
+      "visible": 40998,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "run-2",
+      "visible": 40362,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "run-3",
+      "visible": 47384,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "run-4",
+      "visible": 45763,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "run-5",
+      "visible": 41378,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "blade-0",
+      "visible": 57360,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "blade-1",
+      "visible": 69592,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "shield-0",
+      "visible": 104913,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "shield-1",
+      "visible": 102963,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "caster-0",
+      "visible": 46985,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "caster-1",
+      "visible": 61576,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "boss-0",
+      "visible": 88060,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "boss-1",
+      "visible": 100996,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "combo-0",
+      "visible": 56440,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "combo-1",
+      "visible": 58653,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "combo-2",
+      "visible": 53454,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "combo-3",
+      "visible": 52984,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "combo-4",
+      "visible": 58557,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "combo-5",
+      "visible": 55806,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "combo-6",
+      "visible": 62554,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "combo-7",
+      "visible": 56123,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "combo-8",
+      "visible": 47339,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "guardian-0-0",
+      "visible": 69615,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "guardian-0-1",
+      "visible": 73502,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "guardian-1-0",
+      "visible": 58661,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "guardian-1-1",
+      "visible": 80914,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "guardian-2-0",
+      "visible": 55350,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "guardian-2-1",
+      "visible": 60472,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "prop-seal",
+      "visible": 171212,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "prop-lamp",
+      "visible": 79036,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "prop-gate",
+      "visible": 233198,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "node-0",
+      "visible": 218284,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "node-done-0",
+      "visible": 260040,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "node-1",
+      "visible": 173392,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "node-done-1",
+      "visible": 183763,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "node-2",
+      "visible": 316004,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "node-done-2",
+      "visible": 323477,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "dialog-scroll",
+      "visible": 750016,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "dialog-folio",
+      "visible": 1235848,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "dialog-wukong",
+      "visible": 44246,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "dialog-nezha",
+      "visible": 73138,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "dialog-lamp",
+      "visible": 79036,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "icon-cloud",
+      "visible": 64300,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "icon-echo",
+      "visible": 83228,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "icon-staff",
+      "visible": 50765,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "icon-mirror",
+      "visible": 86490,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "icon-flame",
+      "visible": 67973,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "icon-mercy",
+      "visible": 58206,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "icon-rest",
+      "visible": 72349,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "icon-crest",
+      "visible": 99547,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "nezha-0",
+      "visible": 2110,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "nezha-1",
+      "visible": 2137,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "nezha-2",
+      "visible": 1841,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "nezha-3",
+      "visible": 2036,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "nezha-4",
+      "visible": 2114,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "nezha-5",
+      "visible": 1737,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "impact-0",
+      "visible": 4006,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "impact-1",
+      "visible": 9900,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "impact-2",
+      "visible": 4832,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "impact-3",
+      "visible": 1046,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "impact-4",
+      "visible": 10956,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "impact-5",
+      "visible": 19004,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "impact-6",
+      "visible": 10979,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "impact-7",
+      "visible": 1834,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "impact-8",
+      "visible": 7985,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "impact-9",
+      "visible": 16810,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "impact-10",
+      "visible": 6279,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "impact-11",
+      "visible": 1315,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "impact-12",
+      "visible": 10815,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "impact-13",
+      "visible": 22878,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "impact-14",
+      "visible": 10625,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "impact-15",
+      "visible": 3965,
+      "inBounds": true
+    },
+    {
+      "group": "ArtFrames",
+      "id": "stone",
+      "visible": 343885,
+      "inBounds": true
+    },
+    {
+      "group": "MapFrames",
+      "id": "trial-ready",
+      "visible": 3370,
+      "inBounds": true
+    },
+    {
+      "group": "MapFrames",
+      "id": "trial-active",
+      "visible": 3483,
+      "inBounds": true
+    },
+    {
+      "group": "MapFrames",
+      "id": "trial-cleared",
+      "visible": 3417,
+      "inBounds": true
+    },
+    {
+      "group": "MapFrames",
+      "id": "trial-claimed",
+      "visible": 3276,
+      "inBounds": true
+    },
+    {
+      "group": "MapFrames",
+      "id": "camp-lit",
+      "visible": 1996,
+      "inBounds": true
+    },
+    {
+      "group": "MapFrames",
+      "id": "camp-spent",
+      "visible": 2001,
+      "inBounds": true
+    },
+    {
+      "group": "MapFrames",
+      "id": "pickup-heal",
+      "visible": 250,
+      "inBounds": true
+    },
+    {
+      "group": "MapFrames",
+      "id": "pickup-focus",
+      "visible": 250,
+      "inBounds": true
+    },
+    {
+      "group": "MapFrames",
+      "id": "pickup-rage",
+      "visible": 138,
+      "inBounds": true
+    },
+    {
+      "group": "MapFrames",
+      "id": "hazard-quiet",
+      "visible": 302,
+      "inBounds": true
+    },
+    {
+      "group": "MapFrames",
+      "id": "hazard-warning",
+      "visible": 310,
+      "inBounds": true
+    },
+    {
+      "group": "MapFrames",
+      "id": "hazard-active",
+      "visible": 291,
+      "inBounds": true
+    },
+    {
+      "group": "MapFrames",
+      "id": "ledge-mountain",
+      "visible": 1478,
+      "inBounds": true
+    },
+    {
+      "group": "MapFrames",
+      "id": "ledge-ferry",
+      "visible": 1362,
+      "inBounds": true
+    },
+    {
+      "group": "MapFrames",
+      "id": "ledge-temple",
+      "visible": 1490,
+      "inBounds": true
+    },
+    {
+      "group": "MapFrames",
+      "id": "fragile-ready",
+      "visible": 1039,
+      "inBounds": true
+    },
+    {
+      "group": "MapFrames",
+      "id": "fragile-cracking",
+      "visible": 1053,
+      "inBounds": true
+    },
+    {
+      "group": "MapFrames",
+      "id": "raft",
+      "visible": 1861,
+      "inBounds": true
+    },
+    {
+      "group": "MapFrames",
+      "id": "bridge-off",
+      "visible": 947,
+      "inBounds": true
+    },
+    {
+      "group": "MapFrames",
+      "id": "bridge-on",
+      "visible": 998,
+      "inBounds": true
+    },
+    {
+      "group": "MapFrames",
+      "id": "wall-mountain",
+      "visible": 3933,
+      "inBounds": true
+    },
+    {
+      "group": "MapFrames",
+      "id": "wall-ferry",
+      "visible": 3951,
+      "inBounds": true
+    },
+    {
+      "group": "MapFrames",
+      "id": "wall-temple",
+      "visible": 3970,
+      "inBounds": true
+    },
+    {
+      "group": "MapFrames",
+      "id": "arena-pillar",
+      "visible": 1373,
+      "inBounds": true
+    },
+    {
+      "group": "MapFrames",
+      "id": "dressing-mountain-a",
+      "visible": 3661,
+      "inBounds": true
+    },
+    {
+      "group": "MapFrames",
+      "id": "dressing-ferry-a",
+      "visible": 3651,
+      "inBounds": true
+    },
+    {
+      "group": "MapFrames",
+      "id": "dressing-temple-a",
+      "visible": 4400,
+      "inBounds": true
+    },
+    {
+      "group": "MapFrames",
+      "id": "dressing-mountain-b",
+      "visible": 3164,
+      "inBounds": true
+    },
+    {
+      "group": "MapFrames",
+      "id": "dressing-ferry-b",
+      "visible": 3174,
+      "inBounds": true
+    },
+    {
+      "group": "MapFrames",
+      "id": "dressing-temple-b",
+      "visible": 3448,
+      "inBounds": true
+    },
+    {
+      "group": "SignatureFrames",
+      "id": "wukong0",
+      "visible": 3633,
+      "inBounds": true
+    },
+    {
+      "group": "SignatureFrames",
+      "id": "wukong1",
+      "visible": 3294,
+      "inBounds": true
+    },
+    {
+      "group": "SignatureFrames",
+      "id": "wukong2",
+      "visible": 3655,
+      "inBounds": true
+    },
+    {
+      "group": "SignatureFrames",
+      "id": "wukong3",
+      "visible": 3502,
+      "inBounds": true
+    },
+    {
+      "group": "SignatureFrames",
+      "id": "nezha0",
+      "visible": 2596,
+      "inBounds": true
+    },
+    {
+      "group": "SignatureFrames",
+      "id": "nezha1",
+      "visible": 2827,
+      "inBounds": true
+    },
+    {
+      "group": "SignatureFrames",
+      "id": "nezha2",
+      "visible": 2928,
+      "inBounds": true
+    },
+    {
+      "group": "SignatureFrames",
+      "id": "nezha3",
+      "visible": 2332,
+      "inBounds": true
+    },
+    {
+      "group": "SignatureFrames",
+      "id": "shaft",
+      "visible": 220,
+      "inBounds": true
+    },
+    {
+      "group": "SignatureFrames",
+      "id": "cap",
+      "visible": 137,
+      "inBounds": true
+    },
+    {
+      "group": "SignatureFrames",
+      "id": "tip",
+      "visible": 362,
+      "inBounds": true
+    },
+    {
+      "group": "SignatureFrames",
+      "id": "wind",
+      "visible": 256,
+      "inBounds": true
+    },
+    {
+      "group": "SignatureFrames",
+      "id": "air-warning",
+      "visible": 908,
+      "inBounds": true
+    },
+    {
+      "group": "SignatureFrames",
+      "id": "air-active",
+      "visible": 1005,
+      "inBounds": true
+    },
+    {
+      "group": "SignatureFrames",
+      "id": "brace",
+      "visible": 303,
+      "inBounds": true
+    },
+    {
+      "group": "SignatureFrames",
+      "id": "charge",
+      "visible": 384,
+      "inBounds": true
+    },
+    {
+      "group": "SceneFrames",
+      "id": "seal-intact",
+      "visible": 2154,
+      "inBounds": true
+    },
+    {
+      "group": "SceneFrames",
+      "id": "seal-ruined",
+      "visible": 1506,
+      "inBounds": true
+    },
+    {
+      "group": "SceneFrames",
+      "id": "seal-lamp-ready",
+      "visible": 1866,
+      "inBounds": true
+    },
+    {
+      "group": "SceneFrames",
+      "id": "seal-lamp-spent",
+      "visible": 1773,
+      "inBounds": true
+    },
+    {
+      "group": "ActorStateFrames",
+      "id": "wukong-dead",
+      "visible": 2602,
+      "inBounds": true
+    },
+    {
+      "group": "ActorStateFrames",
+      "id": "nezha-dead",
+      "visible": 1315,
+      "inBounds": true
+    },
+    {
+      "group": "ActorStateFrames",
+      "id": "nezha-ultimate-start",
+      "visible": 2010,
+      "inBounds": true
+    },
+    {
+      "group": "ActorStateFrames",
+      "id": "nezha-ultimate-release",
+      "visible": 2186,
+      "inBounds": true
+    }
+  ],
+  "cache": [
+    {
+      "id": "wukong-idle",
+      "edge": 0,
+      "visible": 1480
+    },
+    {
+      "id": "wukong-run",
+      "edge": 0,
+      "visible": 2228
+    },
+    {
+      "id": "wukong-jump",
+      "edge": 0,
+      "visible": 1276
+    },
+    {
+      "id": "wukong-fall",
+      "edge": 0,
+      "visible": 1499
+    },
+    {
+      "id": "wukong-windup",
+      "edge": 0,
+      "visible": 1673
+    },
+    {
+      "id": "wukong-attack",
+      "edge": 0,
+      "visible": 1637
+    },
+    {
+      "id": "wukong-heavy",
+      "edge": 0,
+      "visible": 1637
+    },
+    {
+      "id": "wukong-recover",
+      "edge": 0,
+      "visible": 1529
+    },
+    {
+      "id": "wukong-hurt",
+      "edge": 0,
+      "visible": 1316
+    },
+    {
+      "id": "wukong-dash",
+      "edge": 0,
+      "visible": 1399
+    },
+    {
+      "id": "combo-0",
+      "edge": 0,
+      "visible": 2235
+    },
+    {
+      "id": "combo-1",
+      "edge": 0,
+      "visible": 2295
+    },
+    {
+      "id": "combo-2",
+      "edge": 0,
+      "visible": 2111
+    },
+    {
+      "id": "combo-3",
+      "edge": 0,
+      "visible": 2113
+    },
+    {
+      "id": "combo-4",
+      "edge": 0,
+      "visible": 2315
+    },
+    {
+      "id": "combo-5",
+      "edge": 0,
+      "visible": 2224
+    },
+    {
+      "id": "combo-6",
+      "edge": 0,
+      "visible": 2470
+    },
+    {
+      "id": "combo-7",
+      "edge": 0,
+      "visible": 2175
+    },
+    {
+      "id": "combo-8",
+      "edge": 0,
+      "visible": 1848
+    },
+    {
+      "id": "blade-0",
+      "edge": 0,
+      "visible": 1524
+    },
+    {
+      "id": "blade-1",
+      "edge": 0,
+      "visible": 1832
+    },
+    {
+      "id": "shield-0",
+      "edge": 0,
+      "visible": 2644
+    },
+    {
+      "id": "shield-1",
+      "edge": 0,
+      "visible": 2590
+    },
+    {
+      "id": "caster-0",
+      "edge": 0,
+      "visible": 895
+    },
+    {
+      "id": "caster-1",
+      "edge": 0,
+      "visible": 1166
+    },
+    {
+      "id": "boss-0",
+      "edge": 0,
+      "visible": 3516
+    },
+    {
+      "id": "boss-1",
+      "edge": 0,
+      "visible": 4023
+    }
+  ],
+  "css": [
+    {
+      "id": "--scroll-art",
+      "loaded": true
+    },
+    {
+      "id": "--folio-art",
+      "loaded": true
+    },
+    {
+      "id": "--icon-cloud",
+      "loaded": true
+    },
+    {
+      "id": "--icon-echo",
+      "loaded": true
+    },
+    {
+      "id": "--icon-staff",
+      "loaded": true
+    },
+    {
+      "id": "--icon-mirror",
+      "loaded": true
+    },
+    {
+      "id": "--icon-flame",
+      "loaded": true
+    },
+    {
+      "id": "--icon-mercy",
+      "loaded": true
+    },
+    {
+      "id": "--icon-rest",
+      "loaded": true
+    },
+    {
+      "id": "--icon-crest",
+      "loaded": true
+    },
+    {
+      "id": "--portrait-art",
+      "loaded": true
+    },
+    {
+      "id": "--lamp-art",
+      "loaded": true
+    }
+  ]
+}
