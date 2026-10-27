@@ -61,6 +61,8 @@ npm run dev
 
 预览 http://127.0.0.1:5188/release/index.html 。`build` 从 assets 中的 PNG 与已处理 WAV 重建内嵌素材脚本，再将脚本、CSS、图片与声音全部内联到发行 HTML。克隆源码后先 build；正式发行包可直接离线打开。
 
+局域网访问使用 `npm run dev:lan`，同一局域网设备打开 `http://这台电脑的IPv4地址:5188/`。该模式只提供 `release/` 中的游戏发行文件；默认 `npm run dev` 仍仅监听本机。
+
 完整离线包为 `artifacts/kong-rpg-offline-v7.0.1.zip`，含v1–v6原入口，约160MiB以上，超过GitHub单文件100MiB限制，因此作为本地交付物保留。Git仓库包含全部发行文件；需要重打包时执行 `python tools/package-release.py`。
 
 `src/content.js` 内容与种子；`simulation.js` 固定120Hz模拟；`heroes.js` 角色、回环、绫缚与远距反制；`signature.js` 伸棍、撑跃、驭轮和锁空/破距响应；`signature-art.js` 对应姿态、棍身和双轮特效；`journey.js` 延长路线、强化怪、掉落、试炼与归灯；`progression.js` 成长、符术、大招与守关规则；`input.js` 键鼠与焦点；`storage.js` 版本存档；`renderer.js` 世界渲染；`visuals.js` 与 `progression-art.js` 图集和动作；`app.js` DOM界面；`audio.js` 本地声音。
