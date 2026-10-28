@@ -10,15 +10,15 @@
       const c=this.c;c.save();if(e.phase==='campaign-windup')c.translate(-e.face*2,-1);else if(e.phase==='campaign-charge')c.translate(0,Math.round(Math.sin(this.clock*27)));if(e.phase==='recover')c.translate(0,1);
       if(!this.campaignSprite(id,x+e.w/2,y+e.h,-face,alpha,e.flash>0,true))throw Error('Missing campaign sprite '+id);c.restore();
     }
-    combatCues(){super.combatCues();const s=this.scene;if(!s)return;for(const e of s.room.enemies)if(e.hp>0&&!e.dormant&&e.phase==='campaign-windup')for(const b of e.marks)this.mark(b);}
+    combatCues(){super.combatCues();const s=this.scene;if(!s)return;for(const e of s.room.enemies)if(e.hp>0&&!e.dormant&&e.phase==='campaign-windup')for(const b of e.marks){if(this.enemyTelegraph)this.enemyTelegraph(e,b);else this.mark(b);}}
     drawProjectile(b){const move=K.CAMPAIGN_MOVES[b.spell]||Object.values(K.CAMPAIGN_MOVES).find(m=>b.source?.endsWith('·'+m.name));if(!move)return super.drawProjectile(b);const c=this.c;c.save();c.beginPath();c.rect(b.x,b.y,b.w,b.h);c.clip();this.celestialStamp(move.fx,b.x+b.w/2,b.y+b.h/2,b.w,b.h,1);c.restore();}
-    draw(s,ui,dt){super.draw(s,ui,dt);if(!s||ui==='menu')return;const c=this.c;c.save();c.translate(-Math.round(this.camera),0);
+    draw(s,ui,dt){super.draw(s,ui,dt);if(!s||ui==='menu')return;const c=this.c;c.save();c.translate(-Math.round(this.camera)+(ui==='playing'&&s.shake>0&&this.shake!==false?Math.round(Math.sin(this.clock*140)*s.shake*13):0),0);
       for(const q of s.room.anchors){if(!q.active&&q.hp>0)continue;const realm=q.kind==='writ'?'underworld':q.kind==='pearl'?'dragon':'heaven';if(q.hp>0){this.campaignSprite(realm+'-device',q.x+q.w/2,q.y+q.h,1);c.fillStyle='#261b2f';c.fillRect(q.x-3,q.y-17,34,3);c.fillStyle='#e9bf85';c.fillRect(q.x-3,q.y-17,34*q.hp/q.maxHp,3);}else this.campaignSprite(realm+'-device-broken',q.x+q.w/2,q.y+q.h,1);}
       for(const e of s.room.enemies)if(e.hp>0&&!e.dormant&&Math.abs(e.x-this.camera)<1200){
-        if(e.phase==='campaign-windup'){const m=K.CAMPAIGN_MOVES[e.move];this.celestialStamp(m.fx,e.x+e.w/2+e.face*18,e.y+e.h*.35,28,28,.32);}
-        if(e.phase==='campaign-charge'){const b=K.enemyAttackBox(e);c.save();c.beginPath();c.rect(b.x,b.y,b.w,b.h);c.clip();this.celestialStamp(K.CAMPAIGN_MOVES[e.move].fx,b.x+b.w/2,b.y+b.h/2,b.w,b.h,.7);c.restore();}
+        if(e.phase==='campaign-windup'&&this.enemyChargeGlow)this.enemyChargeGlow(e);else if(e.phase==='campaign-windup'){const m=K.CAMPAIGN_MOVES[e.move];this.celestialStamp(m.fx,e.x+e.w/2+e.face*18,e.y+e.h*.35,28,28,.32);}
+        if(e.phase==='campaign-charge'&&this.enemyCharge)this.enemyCharge(e);else if(e.phase==='campaign-charge'){const b=K.enemyAttackBox(e);c.save();c.beginPath();c.rect(b.x,b.y,b.w,b.h);c.clip();this.celestialStamp(K.CAMPAIGN_MOVES[e.move].fx,b.x+b.w/2,b.y+b.h/2,b.w,b.h,.7);c.restore();}
       }
-      for(const d of s.dangers){const move=K.CAMPAIGN_MOVES[d.spell]||Object.values(K.CAMPAIGN_MOVES).find(m=>d.source.endsWith('·'+m.name));if(!move)continue;c.save();c.beginPath();c.rect(d.x,d.y,d.w,d.h);c.clip();this.celestialStamp(move.fx,d.x+d.w/2,d.y+d.h/2,d.w,d.h,.8);c.restore();}
+      for(const d of s.dangers){if(this.enemyDanger?.(d))continue;const move=K.CAMPAIGN_MOVES[d.spell]||Object.values(K.CAMPAIGN_MOVES).find(m=>d.source.endsWith('·'+m.name));if(!move)continue;c.save();c.beginPath();c.rect(d.x,d.y,d.w,d.h);c.clip();this.celestialStamp(move.fx,d.x+d.w/2,d.y+d.h/2,d.w,d.h,.8);c.restore();}
       c.restore();
     }
   };

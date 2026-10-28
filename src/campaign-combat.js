@@ -38,7 +38,7 @@
   function tick(s,e,dt,target){
     if(e.phase==='campaign-windup'){if(e.timer<=0)K.releaseCampaignMove(s,e);return true;}
     if(e.phase==='campaign-charge'){
-      const dx=e.campChargeTo-e.x;e.x+=Math.sign(dx)*Math.min(Math.abs(dx),490*K.enemySpeed(s,e)*dt);if(K.overlap(s.player,{x:e.x,y:e.y+8,w:e.w,h:e.h-10}))K.damage(s,K.campaignHitDamage(e,'charge'),K.campaignName(e)+'·'+moves[e.move].name,e.face);
+      const dx=e.campChargeTo-e.x;e.x+=Math.sign(dx)*Math.min(Math.abs(dx),490*K.enemySpeed(s,e)*dt);if(K.overlap(s.player,{x:e.x,y:e.y+8,w:e.w,h:e.h-10}))K.withHurtBox(s,{x:e.x,y:e.y+8,w:e.w,h:e.h-10},()=>K.damage(s,K.campaignHitDamage(e,'charge'),K.campaignName(e)+'·'+moves[e.move].name,e.face));
       if(e.timer<=0||Math.abs(e.campChargeTo-e.x)<1){e.phase='campaign-active';e.timer=.12;}return true;
     }
     if(e.phase==='campaign-active'){

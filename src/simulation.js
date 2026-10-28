@@ -16,11 +16,12 @@
   const LIFETIMES={'celestial-slam':.48,'six-strike':.2,hit:.16,'heavy-hit':.26,block:.18,kill:.32,hurt:.3,ring:.28,reflect:.25,dust:.2,trail:.13,'clone-swing':.2,rubble:.38,'world-rise':.8,'ultimate-aura':.86,'ultimate-wave':.36,ward:1.6,'thunder-mark':.24,thunder:.3};
   K.effect=function(s,kind,x,y,extra={}){const duration=LIFETIMES[kind]||.42;s.effects.push({kind,x,y,life:duration,duration,...extra});if(s.effects.length>120)s.effects.splice(0,s.effects.length-120);};
   K.attackTiming=p=>p.comboIndex===3?{start:.10,end:.20}:p.comboIndex===2?{start:.055,end:.15}:{start:.033,end:.105};
+  const hurtBoxes=new WeakMap();K.withHurtBox=function(s,box,fn){const old=hurtBoxes.get(s);hurtBoxes.set(s,box);try{return fn();}finally{if(old)hurtBoxes.set(s,old);else hurtBoxes.delete(s);}};
   K.damage = function (s, n, source, knock = 0) {
     const p = s.player; if (s.mode !== 'playing' || p.invuln > 0) return false;
     p.hp=Math.max(0,p.hp-n);p.invuln=1;p.hurt=.24;p.vx=knock*200;p.vy=-200;p.attack=0;p.attackBuffer=0;p.ultimate=0;p.slam=false;
     K.cancelSignature(s);s.damageTaken += n; s.lastDamage = source; s.shake = .18;
-    K.effect(s, 'hurt', p.x, p.y, { text: '-' + n }); K.event(s, 'hurt', { source, amount: n });
+    const box=hurtBoxes.get(s),x=box?K.clamp(p.x+p.w/2,Math.max(p.x,box.x),Math.min(p.x+p.w,box.x+box.w)):p.x+p.w/2,y=box?(Math.max(p.y,box.y)+Math.min(p.y+p.h,box.y+box.h))/2:p.y+p.h/2,enemyMaterial=K.enemyImpactFamily?.(source)||null;K.effect(s,'hurt',x,y,{text:'-'+n,enemyMaterial,face:Math.sign(knock)||1});K.event(s,'hurt',{source,amount:n,x,y,enemyMaterial});
     if (p.hp <= 0) { s.mode = 'dead'; K.event(s, 'death', { source }); }
     return true;
   };
@@ -139,11 +140,11 @@
       }
       else if (K.overlap(b, p)) {
         if (p.dash > 0 && K.has(s, 'mirror')) { b.friendly=true;b.vx*=-1.25;b.vy*=-1;b.damage=24;b.life=2;K.effect(s,'reflect',b.x,b.y,{face:p.face});K.event(s,'reflect');K.gainRage(s,10); }
-        else if (p.invuln <= 0) { K.damage(s, b.damage||12, b.source||'莲焰飞弹', Math.sign(b.vx)); b.life = 0; }
+        else if (p.invuln <= 0) { K.withHurtBox(s,b,()=>K.damage(s,b.damage||12,b.source||'莲焰飞弹',Math.sign(b.vx))); b.life = 0; }
       }
     }
     s.projectiles = s.projectiles.filter(b => b.life > 0 && b.x > -100 && b.x < s.room.width + 100);
-    for(const d of s.dangers){d.life-=dt;if(d.life>0&&K.overlap(p,d))K.damage(s,d.damage,d.source,Math.sign(p.x-d.x-d.w/2));}s.dangers=s.dangers.filter(d=>d.life>0);
+    for(const d of s.dangers){d.life-=dt;if(d.life>0&&K.overlap(p,d))K.withHurtBox(s,d,()=>K.damage(s,d.damage,d.source,Math.sign(p.x-d.x-d.w/2)));}s.dangers=s.dangers.filter(d=>d.life>0);
     K.updateWorld(s);K.updateJourney(s);
     for(const q of s.room.seals)if(q.hp>0&&Math.abs(q.x-p.x)<420){q.pulse=(q.pulse??2.2)-dt;q.warning=q.pulse<.65;if(q.pulse<=0){q.pulse=3.4;q.warning=false;for(const face of[-1,1])s.projectiles.push({x:q.x+14,y:q.y+25,vx:face*175,vy:0,w:12,h:12,life:2.5,friendly:false});K.event(s,'seal-burst',{id:q.id});}}
     for(let i=0;i<s.room.signs.length;i++)if(Math.abs(s.room.signs[i].x-p.x)<65&&!s.hints.includes(s.stage+':'+i)){s.hints.push(s.stage+':'+i);K.event(s,'hint',{text:s.room.signs[i].text});}

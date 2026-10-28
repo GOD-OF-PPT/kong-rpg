@@ -240,6 +240,14 @@
       "width": 512,
       "height": 64
     },
+    "enemy-contacts": {
+      "width": 384,
+      "height": 256
+    },
+    "enemy-materials": {
+      "width": 256,
+      "height": 256
+    },
     "motion-nezha": {
       "width": 768,
       "height": 640
@@ -7093,7 +7101,569 @@
           112
         ]
       }
+    ],
+    "EnemyEffectFrames": [
+      {
+        "id": "contacts:steel-0",
+        "image": "enemy-contacts",
+        "r": [
+          0,
+          0,
+          64,
+          64
+        ],
+        "anchor": [
+          32,
+          48
+        ]
+      },
+      {
+        "id": "contacts:steel-1",
+        "image": "enemy-contacts",
+        "r": [
+          64,
+          0,
+          64,
+          64
+        ],
+        "anchor": [
+          32,
+          48
+        ]
+      },
+      {
+        "id": "contacts:steel-2",
+        "image": "enemy-contacts",
+        "r": [
+          128,
+          0,
+          64,
+          64
+        ],
+        "anchor": [
+          32,
+          48
+        ]
+      },
+      {
+        "id": "contacts:stone-0",
+        "image": "enemy-contacts",
+        "r": [
+          192,
+          0,
+          64,
+          64
+        ],
+        "anchor": [
+          32,
+          48
+        ]
+      },
+      {
+        "id": "contacts:stone-1",
+        "image": "enemy-contacts",
+        "r": [
+          256,
+          0,
+          64,
+          64
+        ],
+        "anchor": [
+          32,
+          48
+        ]
+      },
+      {
+        "id": "contacts:stone-2",
+        "image": "enemy-contacts",
+        "r": [
+          320,
+          0,
+          64,
+          64
+        ],
+        "anchor": [
+          32,
+          48
+        ]
+      },
+      {
+        "id": "contacts:ink-0",
+        "image": "enemy-contacts",
+        "r": [
+          0,
+          64,
+          64,
+          64
+        ],
+        "anchor": [
+          32,
+          48
+        ]
+      },
+      {
+        "id": "contacts:ink-1",
+        "image": "enemy-contacts",
+        "r": [
+          64,
+          64,
+          64,
+          64
+        ],
+        "anchor": [
+          32,
+          48
+        ]
+      },
+      {
+        "id": "contacts:ink-2",
+        "image": "enemy-contacts",
+        "r": [
+          128,
+          64,
+          64,
+          64
+        ],
+        "anchor": [
+          32,
+          48
+        ]
+      },
+      {
+        "id": "contacts:venom-0",
+        "image": "enemy-contacts",
+        "r": [
+          192,
+          64,
+          64,
+          64
+        ],
+        "anchor": [
+          32,
+          48
+        ]
+      },
+      {
+        "id": "contacts:venom-1",
+        "image": "enemy-contacts",
+        "r": [
+          256,
+          64,
+          64,
+          64
+        ],
+        "anchor": [
+          32,
+          48
+        ]
+      },
+      {
+        "id": "contacts:venom-2",
+        "image": "enemy-contacts",
+        "r": [
+          320,
+          64,
+          64,
+          64
+        ],
+        "anchor": [
+          32,
+          48
+        ]
+      },
+      {
+        "id": "contacts:water-0",
+        "image": "enemy-contacts",
+        "r": [
+          0,
+          128,
+          64,
+          64
+        ],
+        "anchor": [
+          32,
+          48
+        ]
+      },
+      {
+        "id": "contacts:water-1",
+        "image": "enemy-contacts",
+        "r": [
+          64,
+          128,
+          64,
+          64
+        ],
+        "anchor": [
+          32,
+          48
+        ]
+      },
+      {
+        "id": "contacts:water-2",
+        "image": "enemy-contacts",
+        "r": [
+          128,
+          128,
+          64,
+          64
+        ],
+        "anchor": [
+          32,
+          48
+        ]
+      },
+      {
+        "id": "contacts:thunder-0",
+        "image": "enemy-contacts",
+        "r": [
+          192,
+          128,
+          64,
+          64
+        ],
+        "anchor": [
+          32,
+          48
+        ]
+      },
+      {
+        "id": "contacts:thunder-1",
+        "image": "enemy-contacts",
+        "r": [
+          256,
+          128,
+          64,
+          64
+        ],
+        "anchor": [
+          32,
+          48
+        ]
+      },
+      {
+        "id": "contacts:thunder-2",
+        "image": "enemy-contacts",
+        "r": [
+          320,
+          128,
+          64,
+          64
+        ],
+        "anchor": [
+          32,
+          48
+        ]
+      },
+      {
+        "id": "contacts:fire-0",
+        "image": "enemy-contacts",
+        "r": [
+          0,
+          192,
+          64,
+          64
+        ],
+        "anchor": [
+          32,
+          48
+        ]
+      },
+      {
+        "id": "contacts:fire-1",
+        "image": "enemy-contacts",
+        "r": [
+          64,
+          192,
+          64,
+          64
+        ],
+        "anchor": [
+          32,
+          48
+        ]
+      },
+      {
+        "id": "contacts:fire-2",
+        "image": "enemy-contacts",
+        "r": [
+          128,
+          192,
+          64,
+          64
+        ],
+        "anchor": [
+          32,
+          48
+        ]
+      },
+      {
+        "id": "contacts:wind-0",
+        "image": "enemy-contacts",
+        "r": [
+          192,
+          192,
+          64,
+          64
+        ],
+        "anchor": [
+          32,
+          48
+        ]
+      },
+      {
+        "id": "contacts:wind-1",
+        "image": "enemy-contacts",
+        "r": [
+          256,
+          192,
+          64,
+          64
+        ],
+        "anchor": [
+          32,
+          48
+        ]
+      },
+      {
+        "id": "contacts:wind-2",
+        "image": "enemy-contacts",
+        "r": [
+          320,
+          192,
+          64,
+          64
+        ],
+        "anchor": [
+          32,
+          48
+        ]
+      },
+      {
+        "id": "materials:bolt",
+        "image": "enemy-materials",
+        "r": [
+          0,
+          0,
+          64,
+          64
+        ],
+        "anchor": [
+          32,
+          32
+        ]
+      },
+      {
+        "id": "materials:chain",
+        "image": "enemy-materials",
+        "r": [
+          64,
+          0,
+          64,
+          64
+        ],
+        "anchor": [
+          32,
+          32
+        ]
+      },
+      {
+        "id": "materials:venom",
+        "image": "enemy-materials",
+        "r": [
+          128,
+          0,
+          64,
+          64
+        ],
+        "anchor": [
+          32,
+          32
+        ]
+      },
+      {
+        "id": "materials:fire-wheel",
+        "image": "enemy-materials",
+        "r": [
+          192,
+          0,
+          64,
+          64
+        ],
+        "anchor": [
+          32,
+          32
+        ]
+      },
+      {
+        "id": "materials:wave",
+        "image": "enemy-materials",
+        "r": [
+          0,
+          64,
+          64,
+          64
+        ],
+        "anchor": [
+          32,
+          32
+        ]
+      },
+      {
+        "id": "materials:foam",
+        "image": "enemy-materials",
+        "r": [
+          64,
+          64,
+          64,
+          64
+        ],
+        "anchor": [
+          32,
+          32
+        ]
+      },
+      {
+        "id": "materials:water-crown",
+        "image": "enemy-materials",
+        "r": [
+          128,
+          64,
+          64,
+          64
+        ],
+        "anchor": [
+          32,
+          32
+        ]
+      },
+      {
+        "id": "materials:water-shaft",
+        "image": "enemy-materials",
+        "r": [
+          192,
+          64,
+          64,
+          64
+        ],
+        "anchor": [
+          32,
+          32
+        ]
+      },
+      {
+        "id": "materials:ink-seal",
+        "image": "enemy-materials",
+        "r": [
+          0,
+          128,
+          64,
+          64
+        ],
+        "anchor": [
+          32,
+          32
+        ]
+      },
+      {
+        "id": "materials:tower-seal",
+        "image": "enemy-materials",
+        "r": [
+          64,
+          128,
+          64,
+          64
+        ],
+        "anchor": [
+          32,
+          32
+        ]
+      },
+      {
+        "id": "materials:stone-crack",
+        "image": "enemy-materials",
+        "r": [
+          128,
+          128,
+          64,
+          64
+        ],
+        "anchor": [
+          32,
+          32
+        ]
+      },
+      {
+        "id": "materials:dust",
+        "image": "enemy-materials",
+        "r": [
+          192,
+          128,
+          64,
+          64
+        ],
+        "anchor": [
+          32,
+          32
+        ]
+      },
+      {
+        "id": "materials:lightning",
+        "image": "enemy-materials",
+        "r": [
+          0,
+          192,
+          64,
+          64
+        ],
+        "anchor": [
+          32,
+          32
+        ]
+      },
+      {
+        "id": "materials:tower-beam",
+        "image": "enemy-materials",
+        "r": [
+          64,
+          192,
+          64,
+          64
+        ],
+        "anchor": [
+          32,
+          32
+        ]
+      },
+      {
+        "id": "materials:wind",
+        "image": "enemy-materials",
+        "r": [
+          128,
+          192,
+          64,
+          64
+        ],
+        "anchor": [
+          32,
+          32
+        ]
+      },
+      {
+        "id": "materials:cut",
+        "image": "enemy-materials",
+        "r": [
+          192,
+          192,
+          64,
+          64
+        ],
+        "anchor": [
+          32,
+          32
+        ]
+      }
     ]
   },
-  "total": 498
+  "total": 538
 }

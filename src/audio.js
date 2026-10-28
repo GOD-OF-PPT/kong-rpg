@@ -58,6 +58,9 @@
     tone(freq,len=.12,type='triangle',gain=.2,delay=0){if(!this.ctx||!this.enabled)return;const t=this.ctx.currentTime+delay;const osc=this.ctx.createOscillator(),g=this.ctx.createGain();osc.type=type;osc.frequency.setValueAtTime(freq,t);g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(gain,t+.006);g.gain.exponentialRampToValueAtTime(.001,t+len);osc.connect(g);g.connect(this.bus);osc.start(t);osc.stop(t+len+.02);}
     noise(length=.08,gain=.09){if(!this.ctx||!this.enabled)return;const count=Math.floor(this.ctx.sampleRate*length),buffer=this.ctx.createBuffer(1,count,this.ctx.sampleRate),samples=buffer.getChannelData(0);let n=73;for(let i=0;i<count;i++){n=(n*16807)%2147483647;samples[i]=(n/1073741824-1)*Math.pow(1-i/count,2);}const source=this.ctx.createBufferSource(),level=this.ctx.createGain();source.buffer=buffer;level.gain.value=gain;source.connect(level);level.connect(this.bus);source.start();}
     sweep(from,to,len=.1,gain=.1){if(!this.ctx||!this.enabled)return;const t=this.ctx.currentTime,o=this.ctx.createOscillator(),g=this.ctx.createGain();o.type='triangle';o.frequency.setValueAtTime(from,t);o.frequency.exponentialRampToValueAtTime(to,t+len);g.gain.setValueAtTime(gain,t);g.gain.exponentialRampToValueAtTime(.001,t+len);o.connect(g);g.connect(this.bus);o.start(t);o.stop(t+len+.01);}
+    enemySound(material,hit=false){
+      if(!this.ctx||!this.enabled)return;const p={steel:[730,210,.07],stone:[130,42,.17],ink:[360,110,.15],venom:[510,180,.11],water:[250,560,.1],thunder:[1180,75,.07],tower:[440,146,.18],fire:[620,90,.09],wind:[780,330,.06]}[material];if(!p)return;this.sweep(p[0],p[1],p[2],hit?.055:.035);this.noise(material==='stone'?.12:.045,hit?.045:.025);if(['ink','tower','steel'].includes(material))this.tone(p[0]*1.45,.09,'sine',.025,.012);
+    }
     event(e){
       if(e.type==='bow-draw')this.sweep(180,390,.18,.04);
       if(e.type==='staff-bolt')this.sweep(580,160,.12,.07);
@@ -82,12 +85,12 @@
       if(e.type==='strike-release'){this.noise(e.combo===3?.11:.055,e.combo===3?.075:.045);this.sweep(e.combo===3?300:620,e.combo===3?90:240,e.combo===3?.13:.07,.055);}
       if(e.type==='hit'&&e.impact!=='ultimate'){const heavy=['heavy','thunder'].includes(e.impact);if(!this.sample(e.impact==='ring'?'ring-hit':heavy?'staff-heavy':'staff-light',heavy?.8:.65,heavy?2:1)){this.sweep(heavy?150:330,heavy?48:130,heavy?.16:.075,heavy?.15:.09);this.noise(heavy?.09:.035,heavy?.12:.065);}}
       if(e.type==='seal-hit')this.sample('staff-light',.5);
-      if(e.type==='hurt'){this.tone(72,.2,'sawtooth',.12);this.noise(.16,.11);}
+      if(e.type==='hurt'){this.tone(72,.16,'triangle',.09);if(e.enemyMaterial)this.enemySound(e.enemyMaterial,true);else this.noise(.12,.075);}
       if(e.type==='jump'){this.tone(e.air?590:390,.1,'sine',.17);if(e.air)this.tone(780,.13,'sine',.08,.04);}
       if(e.type==='dash'){this.noise(.12,.08);this.tone(820,.06,'triangle',.06);}
       if(e.type==='clone'){this.tone(440,.3);this.tone(660,.4,'sine',.2,.1);}
       if(e.type==='warning'||e.type==='boss-warning'){this.tone(e.type==='boss-warning'?220:330,.15,'triangle',.09);this.tone(e.type==='boss-warning'?330:440,.1,'sine',.07,.10);}
-      if(e.type==='enemy-attack'){this.noise(.09,.1);this.tone(155,.08,'triangle',.11);}
+      if(e.type==='enemy-attack'){const profile=K.enemyEffectProfile?.(e.move);if(profile)this.enemySound(profile.material);else{this.noise(.09,.08);this.tone(155,.08,'triangle',.08);}}
       if(e.type==='interrupt'){this.tone(680,.15,'triangle',.15);this.tone(1040,.08,'sine',.08);}
       if(e.type==='slam-land'&&!this.sample('ground-slam',.8,2)){this.sweep(140,45,.22,.14);this.noise(.16,.13);}
       if(e.type==='reflect'){this.tone(880,.13,'sine',.09);this.tone(1320,.16,'sine',.05,.04);}

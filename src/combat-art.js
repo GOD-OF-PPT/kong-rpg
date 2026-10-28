@@ -72,7 +72,7 @@
         if(e.phase==='sigil-windup')this.mark(K.sigilBox(e));
         if(e.phase==='rain-windup')for(const box of e.marks||[])this.mark(box);
       }
-      for(const d of s.dangers)this.mark(d,true);
+      for(const d of s.dangers)if(!(this.modernEnemyFX&&K.enemySpell(d)))this.mark(d,true);
     }
   };
 })(globalThis.Kong ||= {});

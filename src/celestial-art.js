@@ -90,7 +90,7 @@
         }
       }
       // Enemy skill material never replaces its locked ground/path boundary.
-      for(const e of s.room.enemies){if(e.hp<=0||e.dormant||e.x<this.camera-200||e.x>this.camera+1160)continue;
+      for(const e of s.room.enemies){if(e.hp<=0||e.dormant||e.x<this.camera-200||e.x>this.camera+1160)continue;if(this.modernEnemyFX&&e.style==='campaign')continue;
         if(e.phase.includes('windup')||e.phase==='realm-echo'){
           const x=e.x+e.w/2+e.face*15,y=e.y+15;
           this.celestialStamp(e.kind==='caster'||e.kind==='boss'?'lotus-orb':e.guardian==='mountain'?'quake':'void-slash',x,y,e.kind==='boss'?42:25,e.kind==='boss'?42:25,.35+Math.sin(t*10)*.08);
@@ -99,7 +99,7 @@
           const b=e.phase==='shift'?e:K.enemyAttackBox(e);c.save();c.beginPath();c.rect(b.x,b.y,b.w,b.h);c.clip();this.celestialStamp(e.guardian==='mountain'?'quake':'void-slash',b.x+b.w/2,b.y+b.h/2,b.w,b.h,.8,e.face<0?Math.PI:0);c.restore();
         }
       }
-      for(const d of s.dangers){c.save();c.beginPath();c.rect(d.x,d.y,d.w,d.h);c.clip();const id=/潮|水|涌柱/.test(d.source)?'water':d.h>50?/雷/.test(d.source)?'lightning':'pillar':'void-slash';this.celestialStamp(id,d.x+d.w/2,d.y+d.h/2,d.w,d.h,.75);c.restore();}
+      for(const d of s.dangers){if(this.modernEnemyFX&&K.enemySpell(d))continue;c.save();c.beginPath();c.rect(d.x,d.y,d.w,d.h);c.clip();const id=/潮|水|涌柱/.test(d.source)?'water':d.h>50?/雷/.test(d.source)?'lightning':'pillar':'void-slash';this.celestialStamp(id,d.x+d.w/2,d.y+d.h/2,d.w,d.h,.75);c.restore();}
       for(const q of K.artManuals(s))if(!q.used){if(this.drawArtManual){this.drawArtManual(q);continue;}const im=this.image('uiScroll'),f=K.ArtCatalog.dialog.scroll;if(im)c.drawImage(im,...f.r,Math.round(q.x-14),Math.round(q.y-26),28,34);const icon=q.art==='sky-staff'?'gold-slash':q.art==='orbit-staff'?'spin-ring':q.art==='six-arms'?'spear-flare':'silver-slash';this.celestialStamp(icon,q.x,q.y-10,22,18,.95);c.fillStyle='#f3d486';c.fillRect(Math.round(q.x-11),Math.round(q.y+9),22,1);}
       c.restore();
     }
