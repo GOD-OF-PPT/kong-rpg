@@ -1,0 +1,207 @@
+{
+  "mode": "http",
+  "sha256": "821e5ab37cbfdb8a413eb2869138a3e6f3e9c88e15e2e949889f4f924e7f2c7b",
+  "method": "Canonical fixtures through public save import; actual PC keyboard transitions; read-only snapshots and render tracing. Not human preference or a natural full journey.",
+  "checks": [
+    {
+      "name": "bow-to-summon",
+      "pass": true,
+      "data": {
+        "attack": 0,
+        "bow": null,
+        "events": [
+          {
+            "type": "ultimate",
+            "t": 0.175,
+            "wall": 0.175
+          }
+        ]
+      }
+    },
+    {
+      "name": "bow-to-beam",
+      "pass": true,
+      "data": {
+        "attack": 0,
+        "bow": null,
+        "events": [
+          {
+            "type": "art-start",
+            "t": 0.05,
+            "wall": 0.05,
+            "id": "eye-beam"
+          }
+        ]
+      }
+    },
+    {
+      "name": "main-to-step",
+      "pass": true,
+      "data": {
+        "attack": 0,
+        "bow": null,
+        "events": [
+          {
+            "type": "dash",
+            "t": 0.05,
+            "wall": 0.05
+          }
+        ]
+      }
+    },
+    {
+      "name": "wukong-hurt-blocks-L",
+      "pass": true,
+      "data": {
+        "hurt": 0.20666666666666667,
+        "focus": 100
+      }
+    },
+    {
+      "name": "nezha-hurt-blocks-L",
+      "pass": true,
+      "data": {
+        "hurt": 0.215,
+        "focus": 100
+      }
+    },
+    {
+      "name": "staff-to-secondary",
+      "pass": true,
+      "data": {
+        "arm": null,
+        "pose": 0.2
+      }
+    },
+    {
+      "name": "step-to-summon",
+      "pass": true,
+      "data": {
+        "dash": 0,
+        "ultimate": 0.8100000000000002
+      }
+    },
+    {
+      "name": "six-arms-still-flies",
+      "pass": true
+    },
+    {
+      "name": "active-form-restores",
+      "pass": true
+    },
+    {
+      "name": "no-runtime-errors",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "network": [
+    "http://127.0.0.1:5188/?skill-audit=1"
+  ],
+  "inputs": [
+    {
+      "code": "KeyH",
+      "at": 1793193239015
+    },
+    {
+      "code": "KeyR",
+      "at": 1793193239061
+    },
+    {
+      "code": "Escape",
+      "at": 1793193239718
+    },
+    {
+      "code": "KeyH",
+      "at": 1793193240029
+    },
+    {
+      "code": "KeyC",
+      "at": 1793193240081
+    },
+    {
+      "code": "Escape",
+      "at": 1793193240715
+    },
+    {
+      "code": "KeyJ",
+      "at": 1793193241032
+    },
+    {
+      "code": "KeyU",
+      "at": 1793193241071
+    },
+    {
+      "code": "Escape",
+      "at": 1793193241422
+    },
+    {
+      "code": "KeyL",
+      "at": 1793193241745
+    },
+    {
+      "code": "Escape",
+      "at": 1793193242064
+    },
+    {
+      "code": "KeyL",
+      "at": 1793193242159
+    },
+    {
+      "code": "Escape",
+      "at": 1793193242488
+    },
+    {
+      "code": "KeyH",
+      "at": 1793193242878
+    },
+    {
+      "code": "Escape",
+      "at": 1793193243205
+    },
+    {
+      "code": "KeyU",
+      "at": 1793193243291
+    },
+    {
+      "code": "KeyR",
+      "at": 1793193243329
+    },
+    {
+      "code": "Escape",
+      "at": 1793193243645
+    },
+    {
+      "code": "Escape",
+      "at": 1793193244359
+    },
+    {
+      "code": "KeyC",
+      "at": 1793193244442
+    },
+    {
+      "code": "Escape",
+      "at": 1793193245310
+    }
+  ],
+  "captures": [
+    "menu.png",
+    "bow-to-summon.png",
+    "bow-to-beam.png",
+    "main-to-step.png",
+    "wukong-hurt-L.png",
+    "nezha-hurt-L.png",
+    "staff-to-secondary.png",
+    "step-to-summon.png",
+    "actual-injury.png",
+    "six-arms-flight.png"
+  ],
+  "browser": "156.0.4314.50",
+  "version": "12.1.2",
+  "recording": {
+    "file": "E:\\githome\\kong-rpg\\evidence\\mechanics-recheck-v12\\browser-after-http\\transitions.webm",
+    "mime": "video/webm;codecs=vp9",
+    "ms": 7209,
+    "method": "real Canvas captureStream at requested 30Hz, MediaRecorder VP9; ms is recording wall time, encoded frame rate not independently inspected"
+  }
+}

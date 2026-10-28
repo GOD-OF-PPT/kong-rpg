@@ -1,0 +1,46 @@
+{
+  "version": "12.1.1",
+  "method": "Real production K.step; fixed seed; no browser quality claims",
+  "rows": [
+    {
+      "name": "Erlang R cancels an unfinished bow rather than secretly firing during summon",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n\n1 !== 0\n"
+    },
+    {
+      "name": "Erlang U cancels an active main attack and its queued combo",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 0.21333333333333335\n- 0\n"
+    },
+    {
+      "name": "Erlang C cancels an unfinished bow before beam charge",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n\n1 !== 0\n"
+    },
+    {
+      "name": "Wukong cannot create a hidden clone during injury reaction",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ {\n+   face: 1,\n+   h: 44,\n+   life: 1.7916666666666667,\n+   timer: 0.11166666666666666,\n+   w: 24,\n+   x: 100,\n+   y: 396\n+ }\n- null\n"
+    },
+    {
+      "name": "Nezha cannot release hidden silk during injury reaction",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ {\n+   face: 1,\n+   h: 72,\n+   life: 1.7916666666666667,\n+   w: 180,\n+   x: 100,\n+   y: 384\n+ }\n- null\n"
+    },
+    {
+      "name": "Erlang cloud relic actually extends airborne main attack as its reward promises",
+      "pass": false,
+      "error": "The expression evaluated to a falsy value:\n\n  assert.ok(K.attackBox(s).w>normal)\n"
+    },
+    {
+      "name": "Erlang R takes over movement rather than sliding a previous dash",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 0.16333333333333333\n- 0\n"
+    },
+    {
+      "name": "Wukong H replaces an extending staff instead of stacking two weapon actions",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ {\n+   charge: 0.008333333333333333,\n+   contact: null,\n+   face: 1,\n+   launched: false,\n+   phase: 'thrust',\n+   requiresHold: false,\n+   targets: [],\n+   timer: 0.17166666666666666\n+ }\n- null\n"
+    }
+  ]
+}

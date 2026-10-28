@@ -26,7 +26,7 @@
   K.artOrbitBox=s=>({x:s.player.x-148,y:s.player.y+3,w:320,h:43});
   K.startArt=function(s,viewX){const p=s.player,v=s.celestial,a=K.artDef(v.equipped);if(!a){K.event(s,'ability-note',{text:'先走近秘技卷按F拾取，再按C施展。'});return;}if(v.cast||v.cooldown>0||p.hurt>0||p.ultimate>0||p.dash>0)return;
     if(['sky-staff','eye-beam'].includes(a.id)&&!p.grounded){K.event(s,'ability-note',{text:'这式须借实地，落稳后再按C。'});return;}if(p.focus<a.focus){K.event(s,'empty-focus');return;}
-    K.cancelSignature(s);p.focus-=a.focus;s.stats.focusSpent+=a.focus;p.attack=0;p.attackBuffer=0;p.slam=false;v.cooldown=a.cooldown;
+    K.cancelSignature(s);K.cancelWeaponAction(s);p.focus-=a.focus;s.stats.focusSpent+=a.focus;p.slam=false;v.cooldown=a.cooldown;
     const target=s.room.enemies.filter(e=>e.hp>0&&!e.dormant&&(e.x+e.w/2-p.x)*p.face>20&&Math.abs(e.x-p.x)<620).sort((a,b)=>Math.abs(a.x-p.x)-Math.abs(b.x-p.x))[0];
     const angle=target?K.clamp(Math.atan2(target.y+8-(p.y-16),Math.abs(target.x+target.w/2-p.x-12)),-.38,.38):0;
     v.cast={id:a.id,age:0,x:p.x,y:p.y,face:p.face,viewX:K.clamp(Number.isFinite(viewX)?viewX:p.x-300,0,s.room.width-960),pulse:0,angle,echo:0};K.event(s,'art-start',{id:a.id});

@@ -1,0 +1,226 @@
+{
+  "mode": "http",
+  "sha256": "997344df5b07f7bf29273d6b73cb96518aaf7cb23f138b7a3ce1ff50b2088d39",
+  "method": "Canonical fixtures through public save import; actual PC keyboard transitions; read-only snapshots and render tracing. Not human preference or a natural full journey.",
+  "checks": [
+    {
+      "name": "bow-to-summon",
+      "pass": false,
+      "data": {
+        "attack": 0,
+        "bow": null,
+        "events": [
+          {
+            "type": "ultimate",
+            "t": 0.175,
+            "wall": 0.175
+          },
+          {
+            "type": "bow-fire",
+            "t": 0.358,
+            "wall": 0.358
+          }
+        ]
+      }
+    },
+    {
+      "name": "bow-to-beam",
+      "pass": false,
+      "data": {
+        "attack": 0,
+        "bow": null,
+        "events": [
+          {
+            "type": "art-start",
+            "t": 0.042,
+            "wall": 0.042,
+            "id": "eye-beam"
+          },
+          {
+            "type": "bow-fire",
+            "t": 0.225,
+            "wall": 0.225
+          }
+        ]
+      }
+    },
+    {
+      "name": "main-to-step",
+      "pass": false,
+      "data": {
+        "attack": 0.10500000000000004,
+        "bow": null,
+        "events": [
+          {
+            "type": "dash",
+            "t": 0.05,
+            "wall": 0.05
+          }
+        ]
+      }
+    },
+    {
+      "name": "wukong-hurt-blocks-L",
+      "pass": false,
+      "data": {
+        "hurt": 0.215,
+        "focus": 60
+      }
+    },
+    {
+      "name": "nezha-hurt-blocks-L",
+      "pass": false,
+      "data": {
+        "hurt": 0.19833333333333333,
+        "focus": 60
+      }
+    },
+    {
+      "name": "staff-to-secondary",
+      "pass": false,
+      "data": {
+        "arm": {
+          "phase": "thrust",
+          "charge": 0.075,
+          "timer": 0.155,
+          "face": 1,
+          "targets": [],
+          "contact": null,
+          "launched": false,
+          "requiresHold": false
+        },
+        "pose": 0.225
+      }
+    },
+    {
+      "name": "step-to-summon",
+      "pass": false,
+      "data": {
+        "dash": 0.06500000000000003,
+        "ultimate": 0.8100000000000002
+      }
+    },
+    {
+      "name": "six-arms-still-flies",
+      "pass": true
+    },
+    {
+      "name": "active-form-restores",
+      "pass": true
+    },
+    {
+      "name": "no-runtime-errors",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "network": [
+    "http://127.0.0.1:5188/?skill-audit=1"
+  ],
+  "inputs": [
+    {
+      "code": "KeyH",
+      "at": 1793192965014
+    },
+    {
+      "code": "KeyR",
+      "at": 1793192965061
+    },
+    {
+      "code": "Escape",
+      "at": 1793192965718
+    },
+    {
+      "code": "KeyH",
+      "at": 1793192966024
+    },
+    {
+      "code": "KeyC",
+      "at": 1793192966061
+    },
+    {
+      "code": "Escape",
+      "at": 1793192966721
+    },
+    {
+      "code": "KeyJ",
+      "at": 1793192967031
+    },
+    {
+      "code": "KeyU",
+      "at": 1793192967077
+    },
+    {
+      "code": "Escape",
+      "at": 1793192967413
+    },
+    {
+      "code": "KeyL",
+      "at": 1793192967505
+    },
+    {
+      "code": "Escape",
+      "at": 1793192967819
+    },
+    {
+      "code": "KeyL",
+      "at": 1793192968130
+    },
+    {
+      "code": "Escape",
+      "at": 1793192968456
+    },
+    {
+      "code": "KeyH",
+      "at": 1793192968853
+    },
+    {
+      "code": "Escape",
+      "at": 1793192969160
+    },
+    {
+      "code": "KeyU",
+      "at": 1793192969473
+    },
+    {
+      "code": "KeyR",
+      "at": 1793192969510
+    },
+    {
+      "code": "Escape",
+      "at": 1793192969832
+    },
+    {
+      "code": "Escape",
+      "at": 1793192970305
+    },
+    {
+      "code": "KeyC",
+      "at": 1793192970630
+    },
+    {
+      "code": "Escape",
+      "at": 1793192971520
+    }
+  ],
+  "captures": [
+    "menu.png",
+    "bow-to-summon.png",
+    "bow-to-beam.png",
+    "main-to-step.png",
+    "wukong-hurt-L.png",
+    "nezha-hurt-L.png",
+    "staff-to-secondary.png",
+    "step-to-summon.png",
+    "actual-injury.png",
+    "six-arms-flight.png"
+  ],
+  "browser": "156.0.4314.50",
+  "version": "12.1.1",
+  "recording": {
+    "file": "E:\\githome\\kong-rpg\\evidence\\mechanics-recheck-v12\\browser-before-timed\\transitions.webm",
+    "mime": "video/webm;codecs=vp9",
+    "ms": 7399.599999904633,
+    "method": "real Canvas captureStream at requested 30Hz, MediaRecorder VP9; ms is recording wall time, encoded frame rate not independently inspected"
+  }
+}

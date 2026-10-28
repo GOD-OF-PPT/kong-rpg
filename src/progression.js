@@ -28,7 +28,7 @@
   K.startUltimate=function(s){
     const p=s.player;if(p.ultimate>0||p.hurt>0)return;
     if(p.rage<100){K.event(s,'ability-note',{text:'战意未满：棍击命中、破阵与反击可积攒。'});return;}
-    p.rage=0;p.ultimate=.86;p.ultimateStage=0;p.attack=0;p.attackBuffer=0;p.buffer=0;p.dash=0;p.slam=false;p.vx=0;p.vy=0;p.invuln=Math.max(p.invuln,.32);
+    K.cancelWeaponAction(s);p.rage=0;p.ultimate=.86;p.ultimateStage=0;p.buffer=0;p.dash=0;p.slam=false;p.vx=0;p.vy=0;p.invuln=Math.max(p.invuln,.32);
     s.stats.ultimates++;K.event(s,'ultimate');K.effect(s,'ultimate-aura',p.x+12,p.y+44,{face:p.face});
   };
   K.stepUltimate=function(s,dt){

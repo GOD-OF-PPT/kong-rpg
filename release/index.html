@@ -233,13 +233,13 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
       <div id="toast" role="status" aria-live="polite" hidden></div>
       <div id="context-hint" hidden></div>
     </section>
-    <footer class="footline"><div><span class="status-dot"></span><span id="storage-status">离线可玩 · 进度自动保存</span></div><div class="keystrip"><span><kbd>A</kbd><kbd>D</kbd> 行走</span><span><kbd>SPACE</kbd> 跃起</span><span><kbd>J</kbd> 攻击</span><span><kbd>K</kbd> 闪避</span><span><kbd>H</kbd> 副武器</span><span><kbd>L</kbd> 神通</span><span><kbd>R</kbd> 大招</span><span><kbd>C</kbd> 秘技</span><span><kbd>Q</kbd> 符术</span><span><kbd>U</kbd> 变化</span></div><span class="build">v12.1.1 <span>／</span> 棍影 · 回环 · 应劫</span></footer>
+    <footer class="footline"><div><span class="status-dot"></span><span id="storage-status">离线可玩 · 进度自动保存</span></div><div class="keystrip"><span><kbd>A</kbd><kbd>D</kbd> 行走</span><span><kbd>SPACE</kbd> 跃起</span><span><kbd>J</kbd> 攻击</span><span><kbd>K</kbd> 闪避</span><span><kbd>H</kbd> 副武器</span><span><kbd>L</kbd> 神通</span><span><kbd>R</kbd> 大招</span><span><kbd>C</kbd> 秘技</span><span><kbd>Q</kbd> 符术</span><span><kbd>U</kbd> 变化</span></div><span class="build">v12.1.2 <span>／</span> 棍影 · 回环 · 应劫</span></footer>
     <input id="import-file" type="file" accept="application/json,.json" hidden>
   </main>
   <script>
 (function (K) {
   'use strict';
-  K.VERSION = '12.1.1';
+  K.VERSION = '12.1.2';
   K.W = 960; K.H = 540; K.DT = 1 / 120;
   K.clamp = (v, a, b) => Math.max(a, Math.min(b, v));
   K.overlap = (a, b) => a.x < b.x + b.w && a.x + a.w > b.x && a.y < b.y + b.h && a.y + a.h > b.y;
@@ -409,7 +409,7 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
   K.startUltimate=function(s){
     const p=s.player;if(p.ultimate>0||p.hurt>0)return;
     if(p.rage<100){K.event(s,'ability-note',{text:'战意未满：棍击命中、破阵与反击可积攒。'});return;}
-    p.rage=0;p.ultimate=.86;p.ultimateStage=0;p.attack=0;p.attackBuffer=0;p.buffer=0;p.dash=0;p.slam=false;p.vx=0;p.vy=0;p.invuln=Math.max(p.invuln,.32);
+    K.cancelWeaponAction(s);p.rage=0;p.ultimate=.86;p.ultimateStage=0;p.buffer=0;p.dash=0;p.slam=false;p.vx=0;p.vy=0;p.invuln=Math.max(p.invuln,.32);
     s.stats.ultimates++;K.event(s,'ultimate');K.effect(s,'ultimate-aura',p.x+12,p.y+44,{face:p.face});
   };
   K.stepUltimate=function(s,dt){
@@ -791,10 +791,13 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
   const LIFETIMES={'celestial-slam':.48,'six-strike':.2,hit:.16,'heavy-hit':.26,block:.18,kill:.32,hurt:.3,ring:.28,reflect:.25,dust:.2,trail:.13,'clone-swing':.2,rubble:.38,'world-rise':.8,'ultimate-aura':.86,'ultimate-wave':.36,ward:1.6,'thunder-mark':.24,thunder:.3};
   K.effect=function(s,kind,x,y,extra={}){const duration=LIFETIMES[kind]||.42;s.effects.push({kind,x,y,life:duration,duration,...extra});if(s.effects.length>120)s.effects.splice(0,s.effects.length-120);};
   K.attackTiming=p=>p.comboIndex===3?{start:.10,end:.20}:p.comboIndex===2?{start:.055,end:.15}:{start:.033,end:.105};
+  // Cancel only the actor's unfinished weapon action. Released projectiles,
+  // rings, clones, eyes and allies keep their independent lifetime.
+  K.cancelWeaponAction=function(s){const p=s.player;p.attack=0;p.attackBuffer=0;p.secondaryPose=0;p.eyePose=0;if(s.bow)s.bow=null;};
   const hurtBoxes=new WeakMap();K.withHurtBox=function(s,box,fn){const old=hurtBoxes.get(s);hurtBoxes.set(s,box);try{return fn();}finally{if(old)hurtBoxes.set(s,old);else hurtBoxes.delete(s);}};
   K.damage = function (s, n, source, knock = 0) {
     const p = s.player; if (s.mode !== 'playing' || p.invuln > 0) return false;
-    p.hp=Math.max(0,p.hp-n);p.invuln=1;p.hurt=.24;p.vx=knock*200;p.vy=-200;p.attack=0;p.attackBuffer=0;p.ultimate=0;p.slam=false;
+    p.hp=Math.max(0,p.hp-n);p.invuln=1;p.hurt=.24;p.vx=knock*200;p.vy=-200;K.cancelWeaponAction(s);p.ultimate=0;p.slam=false;
     K.cancelSignature(s);s.damageTaken += n; s.lastDamage = source; s.shake = .18;
     const box=hurtBoxes.get(s),x=box?K.clamp(p.x+p.w/2,Math.max(p.x,box.x),Math.min(p.x+p.w,box.x+box.w)):p.x+p.w/2,y=box?(Math.max(p.y,box.y)+Math.min(p.y+p.h,box.y+box.h))/2:p.y+p.h/2,enemyMaterial=K.enemyImpactFamily?.(source)||null;K.effect(s,'hurt',x,y,{text:'-'+n,enemyMaterial,face:Math.sign(knock)||1});K.event(s,'hurt',{source,amount:n,x,y,enemyMaterial});
     if (p.hp <= 0) { s.mode = 'dead'; K.event(s, 'death', { source }); }
@@ -854,9 +857,9 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
     if (a.jumpPressed) p.buffer = .12;
     if (p.grounded) { p.coyote = .10; p.airJumps = 0; const safeGround=s.room.platforms.some(q=>q.solid&&Math.abs(p.y+p.h-q.y)<3&&p.x>q.x+60&&p.x<q.x+q.w-130);if(safeGround&&!s.room.hazards.some(h => Math.abs(h.x - p.x) < 120)) s.checkpoint = p.x; }
     if(a.down&&a.jumpPressed&&p.grounded&&s.room.platforms.some(q=>!q.solid&&Math.abs(p.y+p.h-q.y)<3&&p.x+p.w>q.x&&p.x<q.x+q.w)){p.drop=.28;p.y+=4;p.vy=90;p.buffer=0;p.coyote=0;p.grounded=false;K.event(s,'drop');}
-    if (a.dashPressed && p.dashCD === 0 && !p.slam) { if(a.left!==a.right)p.face=a.right?1:-1;p.hurt=0;p.secondaryPose=0;p.eyePose=0;if(s.bow)s.bow=null;p.dash = .18; p.dashCD = .85; p.invuln = Math.max(p.invuln, .21); p.attack = 0; p.vy = 0;p.dashTargets=[]; K.event(s, 'dash'); }
-    if(a.clonePressed&&K.isRanged(s))K.castSilk(s);
-    if (a.clonePressed && !K.isRanged(s) && !s.clone) {
+    if (a.dashPressed && p.dashCD === 0 && !p.slam) { if(a.left!==a.right)p.face=a.right?1:-1;p.hurt=0;K.cancelWeaponAction(s);p.dash = .18; p.dashCD = .85; p.invuln = Math.max(p.invuln, .21); p.vy = 0;p.dashTargets=[]; K.event(s, 'dash'); }
+    if(a.clonePressed&&p.hurt<=0&&K.isRanged(s))K.castSilk(s);
+    if (a.clonePressed && p.hurt<=0 && !K.isRanged(s) && !s.clone) {
       const cost = K.has(s, 'echo') ? 50 : 40;
       if(p.focus>=cost){p.focus-=cost;s.stats.focusSpent+=cost;s.clone={x:p.x,y:p.y,w:24,h:44,face:p.face,life:K.has(s,'echo')?3:1.8,timer:.12};K.event(s,'clone',{cost});}
       else { K.event(s, 'empty-focus'); K.effect(s, 'notice', p.x, p.y - 14, { text: '定力不足' }); }
@@ -1159,16 +1162,16 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
       if(c[id])return{...r,name:c[id][0],text:c[id][1],tag:id==='staff'?'刀箭破盾':id==='echo'?'天眼破妄':id==='cloud'?'空中取势':id==='staff-wave'?'三刀远袭':r.tag,cost:id==='staff'?'弓箭仍需18定力；第三刀收招较长。':id==='cloud'?'跳跃不能穿过飞弹或莲印。':id==='staff-wave'?'须完成第三刀，不改变射箭冷却。':['echo','mercy','clone-burst'].includes(id)?'须安排天眼的锁定位置；识破不会冻结敌人。':id==='ultimate-echo'?'哮天犬持续输出，需要你牵制目标。':r.cost};
     }return r;
   };
-  const box=K.attackBox;K.attackBox=function(s){if(s.hero==='wukong')return box(s);const p=s.player,range=s.hero==='erlang'?(p.comboIndex===2?68:82):p.comboIndex===3?118:!p.grounded&&K.has(s,'cloud')?110:p.comboIndex===2?72:92;return{x:p.face>0?p.x+10:p.x+14-range,y:p.y+2,w:range,h:42};};
+  const box=K.attackBox;K.attackBox=function(s){if(s.hero==='wukong')return box(s);const p=s.player,range=s.hero==='erlang'?(p.comboIndex===2?68:82)+(!p.grounded&&K.has(s,'cloud')?18:0):p.comboIndex===3?118:!p.grounded&&K.has(s,'cloud')?110:p.comboIndex===2?72:92;return{x:p.face>0?p.x+10:p.x+14-range,y:p.y+2,w:range,h:42};};
   const hit=K.hitEnemy;K.hitEnemy=function(s,e,n,origin,pierce,impact){const seen=s.eye&&K.overlap(s.eye,e);return hit(s,e,n,origin,pierce||!!seen,impact);};
   const signature=K.stepSignature;K.stepSignature=function(s,a,dt){
     if(s.hero!=='erlang')return signature(s,a,dt);
     const p=s.player;p.armCD=Math.max(0,p.armCD-dt);p.vaultTime=0;
-    if(a.signaturePressed&&p.armCD===0&&p.hurt<=0&&p.ultimate===0&&p.focus>=12){p.focus-=12;s.stats.focusSpent+=12;p.armCD=1;p.dash=.14;p.invuln=Math.max(p.invuln,.14);K.event(s,'dash');}
+    if(a.signaturePressed&&p.armCD===0&&p.hurt<=0&&p.ultimate===0&&p.focus>=12){K.cancelWeaponAction(s);if(a.left!==a.right)p.face=a.right?1:-1;p.focus-=12;s.stats.focusSpent+=12;p.armCD=1;p.dash=.14;p.dashTargets=[];p.vy=0;p.invuln=Math.max(p.invuln,.14);K.event(s,'dash');}
   };
   const startUlt=K.startUltimate,stepUlt=K.stepUltimate;
   K.startUltimate=function(s){if(s.hero!=='erlang')return startUlt(s);const p=s.player;if(p.hurt>0||p.ultimate>0)return;if(p.rage<100){K.event(s,'ability-note',{text:'战意未满，命中与破阵可积攒。'});return;}
-    p.rage=0;p.ultimate=.86;p.attack=0;p.invuln=Math.max(p.invuln,.32);s.hound={x:K.clamp(p.x-35,0,s.room.width-36),y:p.y+18,w:36,h:26,vx:0,vy:0,life:K.rank(s,'ultimate-echo')?10:8,cooldown:.15,pose:'run',face:p.face,target:null};s.stats.ultimates++;K.event(s,'ultimate');K.effect(s,'world-rise',p.x,p.y+44);
+    K.cancelSignature(s);K.cancelWeaponAction(s);p.rage=0;p.ultimate=.86;p.buffer=0;p.dash=0;p.slam=false;p.vx=0;p.vy=0;p.invuln=Math.max(p.invuln,.32);s.hound={x:K.clamp(p.x-35,0,s.room.width-36),y:p.y+18,w:36,h:26,vx:0,vy:0,life:K.rank(s,'ultimate-echo')?10:8,cooldown:.15,pose:'run',face:p.face,target:null};s.stats.ultimates++;K.event(s,'ultimate');K.effect(s,'world-rise',p.x,p.y+44);
   };
   K.stepUltimate=function(s,dt){if(s.hero==='erlang'){s.player.ultimate=Math.max(0,s.player.ultimate-dt);return;}if(s.hero!=='nezha')return stepUlt(s,dt);const p=s.player;if(p.ultimate<=0)return;p.ultimate=Math.max(0,p.ultimate-dt);const elapsed=.86-p.ultimate;
     const release=(amount,pulse)=>{const b=K.ultimateBox(s),hits=s.stats.hits;K.strike(s,b,amount,p.x+12,true,[],'ultimate');for(const q of s.projectiles)if(!q.friendly&&K.overlap(b,q))q.life=0;K.effect(s,'lotus-release',p.x+12,p.y+24,{duration:.24,pulse,box:{...b}});K.event(s,s.stats.hits>hits?'ultimate-hit':'ultimate-swing',{pulse,box:b});};
@@ -1179,7 +1182,7 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
     const p=s.player;if(p.secondaryCD>0||p.hurt>0||p.ultimate>0||p.slam||p.dash>0||s.bow||s.celestial?.cast&&s.celestial.cast.id!=='six-arms')return;
     const cost=s.hero==='wukong'?22:s.hero==='nezha'?12:18;if(p.focus<cost){K.event(s,'empty-focus');return;}
     if(s.hero==='nezha'&&s.ring)return;
-    p.attack=0;p.attackBuffer=0;p.focus-=cost;s.stats.focusSpent+=cost;p.secondaryPose=.25;p.secondaryCD=s.hero==='nezha'?.6:.8;
+    if(s.arm)K.cancelSignature(s);K.cancelWeaponAction(s);p.focus-=cost;s.stats.focusSpent+=cost;p.secondaryPose=.25;p.secondaryCD=s.hero==='nezha'?.6:.8;
     if(s.hero==='wukong'){let dx=p.face,dy=0;if(a.secondaryAim){dx=a.secondaryAim.x-p.x-12;dy=a.secondaryAim.y-p.y-18;const n=Math.hypot(dx,dy)||1;dx/=n;dy/=n;p.face=dx<0?-1:1;}s.projectiles.push({x:p.x+12,y:p.y+18,w:26,h:12,vx:dx*520,vy:dy*520,life:.78,friendly:true,damage:28,impact:'staff-bolt',pierce:false,hit:[],sealHits:[],anchorHits:[]});K.event(s,'staff-bolt');K.effect(s,'staff-bolt-launch',p.x+12,p.y+18,{duration:.18,face:p.face});}
     else if(s.hero==='nezha')K.newRing(s,{aimPoint:a.secondaryAim});
     else{let dx=p.face,dy=0;if(a.secondaryAim){dx=a.secondaryAim.x-p.x-12;dy=a.secondaryAim.y-p.y-16;const n=Math.hypot(dx,dy)||1;dx/=n;dy/=n;p.face=dx<0?-1:1;}s.bow={timer:.22,dx,dy};K.event(s,'bow-draw');}
@@ -1249,7 +1252,7 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
   K.artOrbitBox=s=>({x:s.player.x-148,y:s.player.y+3,w:320,h:43});
   K.startArt=function(s,viewX){const p=s.player,v=s.celestial,a=K.artDef(v.equipped);if(!a){K.event(s,'ability-note',{text:'先走近秘技卷按F拾取，再按C施展。'});return;}if(v.cast||v.cooldown>0||p.hurt>0||p.ultimate>0||p.dash>0)return;
     if(['sky-staff','eye-beam'].includes(a.id)&&!p.grounded){K.event(s,'ability-note',{text:'这式须借实地，落稳后再按C。'});return;}if(p.focus<a.focus){K.event(s,'empty-focus');return;}
-    K.cancelSignature(s);p.focus-=a.focus;s.stats.focusSpent+=a.focus;p.attack=0;p.attackBuffer=0;p.slam=false;v.cooldown=a.cooldown;
+    K.cancelSignature(s);K.cancelWeaponAction(s);p.focus-=a.focus;s.stats.focusSpent+=a.focus;p.slam=false;v.cooldown=a.cooldown;
     const target=s.room.enemies.filter(e=>e.hp>0&&!e.dormant&&(e.x+e.w/2-p.x)*p.face>20&&Math.abs(e.x-p.x)<620).sort((a,b)=>Math.abs(a.x-p.x)-Math.abs(b.x-p.x))[0];
     const angle=target?K.clamp(Math.atan2(target.y+8-(p.y-16),Math.abs(target.x+target.w/2-p.x-12)),-.38,.38):0;
     v.cast={id:a.id,age:0,x:p.x,y:p.y,face:p.face,viewX:K.clamp(Number.isFinite(viewX)?viewX:p.x-300,0,s.room.width-960),pulse:0,angle,echo:0};K.event(s,'art-start',{id:a.id});

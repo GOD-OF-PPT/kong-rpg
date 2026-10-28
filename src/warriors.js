@@ -23,16 +23,16 @@
       if(c[id])return{...r,name:c[id][0],text:c[id][1],tag:id==='staff'?'刀箭破盾':id==='echo'?'天眼破妄':id==='cloud'?'空中取势':id==='staff-wave'?'三刀远袭':r.tag,cost:id==='staff'?'弓箭仍需18定力；第三刀收招较长。':id==='cloud'?'跳跃不能穿过飞弹或莲印。':id==='staff-wave'?'须完成第三刀，不改变射箭冷却。':['echo','mercy','clone-burst'].includes(id)?'须安排天眼的锁定位置；识破不会冻结敌人。':id==='ultimate-echo'?'哮天犬持续输出，需要你牵制目标。':r.cost};
     }return r;
   };
-  const box=K.attackBox;K.attackBox=function(s){if(s.hero==='wukong')return box(s);const p=s.player,range=s.hero==='erlang'?(p.comboIndex===2?68:82):p.comboIndex===3?118:!p.grounded&&K.has(s,'cloud')?110:p.comboIndex===2?72:92;return{x:p.face>0?p.x+10:p.x+14-range,y:p.y+2,w:range,h:42};};
+  const box=K.attackBox;K.attackBox=function(s){if(s.hero==='wukong')return box(s);const p=s.player,range=s.hero==='erlang'?(p.comboIndex===2?68:82)+(!p.grounded&&K.has(s,'cloud')?18:0):p.comboIndex===3?118:!p.grounded&&K.has(s,'cloud')?110:p.comboIndex===2?72:92;return{x:p.face>0?p.x+10:p.x+14-range,y:p.y+2,w:range,h:42};};
   const hit=K.hitEnemy;K.hitEnemy=function(s,e,n,origin,pierce,impact){const seen=s.eye&&K.overlap(s.eye,e);return hit(s,e,n,origin,pierce||!!seen,impact);};
   const signature=K.stepSignature;K.stepSignature=function(s,a,dt){
     if(s.hero!=='erlang')return signature(s,a,dt);
     const p=s.player;p.armCD=Math.max(0,p.armCD-dt);p.vaultTime=0;
-    if(a.signaturePressed&&p.armCD===0&&p.hurt<=0&&p.ultimate===0&&p.focus>=12){p.focus-=12;s.stats.focusSpent+=12;p.armCD=1;p.dash=.14;p.invuln=Math.max(p.invuln,.14);K.event(s,'dash');}
+    if(a.signaturePressed&&p.armCD===0&&p.hurt<=0&&p.ultimate===0&&p.focus>=12){K.cancelWeaponAction(s);if(a.left!==a.right)p.face=a.right?1:-1;p.focus-=12;s.stats.focusSpent+=12;p.armCD=1;p.dash=.14;p.dashTargets=[];p.vy=0;p.invuln=Math.max(p.invuln,.14);K.event(s,'dash');}
   };
   const startUlt=K.startUltimate,stepUlt=K.stepUltimate;
   K.startUltimate=function(s){if(s.hero!=='erlang')return startUlt(s);const p=s.player;if(p.hurt>0||p.ultimate>0)return;if(p.rage<100){K.event(s,'ability-note',{text:'战意未满，命中与破阵可积攒。'});return;}
-    p.rage=0;p.ultimate=.86;p.attack=0;p.invuln=Math.max(p.invuln,.32);s.hound={x:K.clamp(p.x-35,0,s.room.width-36),y:p.y+18,w:36,h:26,vx:0,vy:0,life:K.rank(s,'ultimate-echo')?10:8,cooldown:.15,pose:'run',face:p.face,target:null};s.stats.ultimates++;K.event(s,'ultimate');K.effect(s,'world-rise',p.x,p.y+44);
+    K.cancelSignature(s);K.cancelWeaponAction(s);p.rage=0;p.ultimate=.86;p.buffer=0;p.dash=0;p.slam=false;p.vx=0;p.vy=0;p.invuln=Math.max(p.invuln,.32);s.hound={x:K.clamp(p.x-35,0,s.room.width-36),y:p.y+18,w:36,h:26,vx:0,vy:0,life:K.rank(s,'ultimate-echo')?10:8,cooldown:.15,pose:'run',face:p.face,target:null};s.stats.ultimates++;K.event(s,'ultimate');K.effect(s,'world-rise',p.x,p.y+44);
   };
   K.stepUltimate=function(s,dt){if(s.hero==='erlang'){s.player.ultimate=Math.max(0,s.player.ultimate-dt);return;}if(s.hero!=='nezha')return stepUlt(s,dt);const p=s.player;if(p.ultimate<=0)return;p.ultimate=Math.max(0,p.ultimate-dt);const elapsed=.86-p.ultimate;
     const release=(amount,pulse)=>{const b=K.ultimateBox(s),hits=s.stats.hits;K.strike(s,b,amount,p.x+12,true,[],'ultimate');for(const q of s.projectiles)if(!q.friendly&&K.overlap(b,q))q.life=0;K.effect(s,'lotus-release',p.x+12,p.y+24,{duration:.24,pulse,box:{...b}});K.event(s,s.stats.hits>hits?'ultimate-hit':'ultimate-swing',{pulse,box:b});};
@@ -43,7 +43,7 @@
     const p=s.player;if(p.secondaryCD>0||p.hurt>0||p.ultimate>0||p.slam||p.dash>0||s.bow||s.celestial?.cast&&s.celestial.cast.id!=='six-arms')return;
     const cost=s.hero==='wukong'?22:s.hero==='nezha'?12:18;if(p.focus<cost){K.event(s,'empty-focus');return;}
     if(s.hero==='nezha'&&s.ring)return;
-    p.attack=0;p.attackBuffer=0;p.focus-=cost;s.stats.focusSpent+=cost;p.secondaryPose=.25;p.secondaryCD=s.hero==='nezha'?.6:.8;
+    if(s.arm)K.cancelSignature(s);K.cancelWeaponAction(s);p.focus-=cost;s.stats.focusSpent+=cost;p.secondaryPose=.25;p.secondaryCD=s.hero==='nezha'?.6:.8;
     if(s.hero==='wukong'){let dx=p.face,dy=0;if(a.secondaryAim){dx=a.secondaryAim.x-p.x-12;dy=a.secondaryAim.y-p.y-18;const n=Math.hypot(dx,dy)||1;dx/=n;dy/=n;p.face=dx<0?-1:1;}s.projectiles.push({x:p.x+12,y:p.y+18,w:26,h:12,vx:dx*520,vy:dy*520,life:.78,friendly:true,damage:28,impact:'staff-bolt',pierce:false,hit:[],sealHits:[],anchorHits:[]});K.event(s,'staff-bolt');K.effect(s,'staff-bolt-launch',p.x+12,p.y+18,{duration:.18,face:p.face});}
     else if(s.hero==='nezha')K.newRing(s,{aimPoint:a.secondaryAim});
     else{let dx=p.face,dy=0;if(a.secondaryAim){dx=a.secondaryAim.x-p.x-12;dy=a.secondaryAim.y-p.y-16;const n=Math.hypot(dx,dy)||1;dx/=n;dy/=n;p.face=dx<0?-1:1;}s.bow={timer:.22,dx,dy};K.event(s,'bow-draw');}

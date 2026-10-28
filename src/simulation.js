@@ -16,10 +16,13 @@
   const LIFETIMES={'celestial-slam':.48,'six-strike':.2,hit:.16,'heavy-hit':.26,block:.18,kill:.32,hurt:.3,ring:.28,reflect:.25,dust:.2,trail:.13,'clone-swing':.2,rubble:.38,'world-rise':.8,'ultimate-aura':.86,'ultimate-wave':.36,ward:1.6,'thunder-mark':.24,thunder:.3};
   K.effect=function(s,kind,x,y,extra={}){const duration=LIFETIMES[kind]||.42;s.effects.push({kind,x,y,life:duration,duration,...extra});if(s.effects.length>120)s.effects.splice(0,s.effects.length-120);};
   K.attackTiming=p=>p.comboIndex===3?{start:.10,end:.20}:p.comboIndex===2?{start:.055,end:.15}:{start:.033,end:.105};
+  // Cancel only the actor's unfinished weapon action. Released projectiles,
+  // rings, clones, eyes and allies keep their independent lifetime.
+  K.cancelWeaponAction=function(s){const p=s.player;p.attack=0;p.attackBuffer=0;p.secondaryPose=0;p.eyePose=0;if(s.bow)s.bow=null;};
   const hurtBoxes=new WeakMap();K.withHurtBox=function(s,box,fn){const old=hurtBoxes.get(s);hurtBoxes.set(s,box);try{return fn();}finally{if(old)hurtBoxes.set(s,old);else hurtBoxes.delete(s);}};
   K.damage = function (s, n, source, knock = 0) {
     const p = s.player; if (s.mode !== 'playing' || p.invuln > 0) return false;
-    p.hp=Math.max(0,p.hp-n);p.invuln=1;p.hurt=.24;p.vx=knock*200;p.vy=-200;p.attack=0;p.attackBuffer=0;p.ultimate=0;p.slam=false;
+    p.hp=Math.max(0,p.hp-n);p.invuln=1;p.hurt=.24;p.vx=knock*200;p.vy=-200;K.cancelWeaponAction(s);p.ultimate=0;p.slam=false;
     K.cancelSignature(s);s.damageTaken += n; s.lastDamage = source; s.shake = .18;
     const box=hurtBoxes.get(s),x=box?K.clamp(p.x+p.w/2,Math.max(p.x,box.x),Math.min(p.x+p.w,box.x+box.w)):p.x+p.w/2,y=box?(Math.max(p.y,box.y)+Math.min(p.y+p.h,box.y+box.h))/2:p.y+p.h/2,enemyMaterial=K.enemyImpactFamily?.(source)||null;K.effect(s,'hurt',x,y,{text:'-'+n,enemyMaterial,face:Math.sign(knock)||1});K.event(s,'hurt',{source,amount:n,x,y,enemyMaterial});
     if (p.hp <= 0) { s.mode = 'dead'; K.event(s, 'death', { source }); }
@@ -79,9 +82,9 @@
     if (a.jumpPressed) p.buffer = .12;
     if (p.grounded) { p.coyote = .10; p.airJumps = 0; const safeGround=s.room.platforms.some(q=>q.solid&&Math.abs(p.y+p.h-q.y)<3&&p.x>q.x+60&&p.x<q.x+q.w-130);if(safeGround&&!s.room.hazards.some(h => Math.abs(h.x - p.x) < 120)) s.checkpoint = p.x; }
     if(a.down&&a.jumpPressed&&p.grounded&&s.room.platforms.some(q=>!q.solid&&Math.abs(p.y+p.h-q.y)<3&&p.x+p.w>q.x&&p.x<q.x+q.w)){p.drop=.28;p.y+=4;p.vy=90;p.buffer=0;p.coyote=0;p.grounded=false;K.event(s,'drop');}
-    if (a.dashPressed && p.dashCD === 0 && !p.slam) { if(a.left!==a.right)p.face=a.right?1:-1;p.hurt=0;p.secondaryPose=0;p.eyePose=0;if(s.bow)s.bow=null;p.dash = .18; p.dashCD = .85; p.invuln = Math.max(p.invuln, .21); p.attack = 0; p.vy = 0;p.dashTargets=[]; K.event(s, 'dash'); }
-    if(a.clonePressed&&K.isRanged(s))K.castSilk(s);
-    if (a.clonePressed && !K.isRanged(s) && !s.clone) {
+    if (a.dashPressed && p.dashCD === 0 && !p.slam) { if(a.left!==a.right)p.face=a.right?1:-1;p.hurt=0;K.cancelWeaponAction(s);p.dash = .18; p.dashCD = .85; p.invuln = Math.max(p.invuln, .21); p.vy = 0;p.dashTargets=[]; K.event(s, 'dash'); }
+    if(a.clonePressed&&p.hurt<=0&&K.isRanged(s))K.castSilk(s);
+    if (a.clonePressed && p.hurt<=0 && !K.isRanged(s) && !s.clone) {
       const cost = K.has(s, 'echo') ? 50 : 40;
       if(p.focus>=cost){p.focus-=cost;s.stats.focusSpent+=cost;s.clone={x:p.x,y:p.y,w:24,h:44,face:p.face,life:K.has(s,'echo')?3:1.8,timer:.12};K.event(s,'clone',{cost});}
       else { K.event(s, 'empty-focus'); K.effect(s, 'notice', p.x, p.y - 14, { text: '定力不足' }); }

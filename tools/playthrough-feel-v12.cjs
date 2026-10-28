@@ -64,7 +64,11 @@ const check=(name,yes,data)=>{report.checks.push({name,pass:!!yes,data});assert.
    if(foe&&Math.abs(foe.x-q.x)<550){const r=await p.locator('#world').boundingBox(),ax=foe.x+foe.w/2,ay=foe.y+foe.h*.4;await p.mouse.move(r.x+Math.min(r.width-5,Math.max(5,(ax-camera)/960*r.width)),r.y+ay/540*r.height);
     if((hero!=='wukong'||Math.abs(foe.x-q.x)>110)&&!s.ring&&!s.bow&&q.secondaryCD<=0&&q.focus>=30&&t-lastH>.9){await p.mouse.click(r.x+Math.min(r.width-5,Math.max(5,(ax-camera)/960*r.width)),r.y+ay/540*r.height,{button:'right'});lastH=t;}
     if(Math.abs(foe.x-q.x)<200&&q.focus>=45&&t-lastL>3&&!s.silk&&!s.eye&&!s.clone){want.add('KeyL');lastL=t;}
-    if(s.celestial.equipped&&!s.celestial.cast&&s.celestial.cooldown<=0&&q.focus>=40&&Math.abs(foe.x-q.x)<240&&t-lastC>1){want.add('KeyC');lastC=t;}
+    // A beam is a committed action, unlike the mobile six-arm form. The
+    // controller must seek a real recovery window instead of charging into
+    // an already telegraphed boss attack. This changes QA input, not game rules.
+    const beamWindow=hero!=='erlang'||!foe.chiefId||foe.phase==='recover'&&foe.timer>.35;
+    if(beamWindow&&s.celestial.equipped&&!s.celestial.cast&&s.celestial.cooldown<=0&&q.focus>=40&&Math.abs(foe.x-q.x)<240&&t-lastC>1){want.add('KeyC');lastC=t;}
     if((!foe.chiefId||foe.phase==='recover')&&q.rage>=100&&q.y>340&&Math.abs(foe.x-q.x)<200&&t-lastR>1){want.add('KeyR');lastR=t;}
     if(foe.chiefId&&foe.phase==='campaign-windup'&&foe.timer<.34&&Math.abs(foe.x-q.x)<90&&q.dashCD<=0&&t-lastK>1){want.add('KeyK');lastK=t;}
     if(foe.kind==='shield'&&Math.abs(foe.x-q.x)<100&&q.dashCD<=0&&t-lastK>1&&foe.phase!=='recover'){want.add('KeyK');lastK=t;}
@@ -77,6 +81,9 @@ const check=(name,yes,data)=>{report.checks.push({name,pass:!!yes,data});assert.
     if((gap||hazard||low.some(touch))&&q.focus>40&&q.wheelFuel>.35&&t-lastU>3&&!s.celestial.cast&&q.ultimate<=0){uUntil=t+.45;lastU=t;}
     if(t<uUntil){want.add('KeyU');want.add('KeyW');}
    }else if(foe&&Math.abs(foe.x-q.x)<160&&(incoming.length||low.some(touch)||vertical.some(touch))&&q.armCD<=0&&q.focus>25&&t-lastU>2&&!s.celestial.cast){want.add('KeyU');lastU=t;}
+   // Preserve the selected jump over a low attack. A dash flattens vertical
+   // velocity, so automatically combining both evades throws away the jump.
+   if(hero==='erlang'&&(want.has('KeyW')||!q.grounded)){want.delete('KeyK');want.delete('KeyU');}
    for(const [name,on]of [['ultimate',q.ultimate>0],['signature',hero==='wukong'?!!s.arm:hero==='nezha'?!!s.flight:q.dash>0],['secondary',hero==='nezha'?!!s.ring:hero==='erlang'?!!s.bow:s.projectiles.some(b=>b.impact==='staff-bolt')],['L',!!s.clone||!!s.silk||!!s.eye],['art-'+s.celestial.cast?.id,!!s.celestial.cast]])if(on&&!savedCaptures.has(name)){savedCaptures.add(name);await capture('action-'+name);}
    if(want.has('KeyF')&&held.has('KeyF')){await p.keyboard.up('KeyF');held.delete('KeyF');}await keys(want);await wait(60);
    const progress=[s.stage,Math.round(q.x/15),q.hp,s.kills].join(':');if(progress!==progressKey){progressKey=progress;progressAt=Date.now();}if(Date.now()-progressAt>18000){report.stalled={s,target,want:[...want]};throw Error('Stalled '+s.stage+' '+Math.round(q.x));}

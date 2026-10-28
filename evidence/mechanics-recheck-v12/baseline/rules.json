@@ -1,0 +1,57 @@
+{
+  "version": "12.1.1",
+  "checks": [
+    {
+      "name": "six arms adds damage to the main weapon, not unrelated heavy ability contacts",
+      "pass": true
+    },
+    {
+      "name": "twin battle seal actually starts a second wider slash with a fresh warning",
+      "pass": true
+    },
+    {
+      "name": "pulse shield seal actually warns the following low shield wave",
+      "pass": true
+    },
+    {
+      "name": "volley seal maps to actual three-shot moves and never labels a single ground mark",
+      "pass": true
+    },
+    {
+      "name": "new beam casts can damage a rebuilt device despite prior pulse keys",
+      "pass": true
+    },
+    {
+      "name": "a projectile consumed by a front enemy cannot also damage the device behind it",
+      "pass": true
+    },
+    {
+      "name": "mercy relic restores health on device destruction and cannot farm rebuilt devices",
+      "pass": true
+    },
+    {
+      "name": "uncharged staff does not get charged-tip damage or hit before its visible extension",
+      "pass": true
+    },
+    {
+      "name": "friendly weapon waves hit each device once, including after save restoration",
+      "pass": true
+    },
+    {
+      "name": "three-shot lane gaps can contain the actual full player body",
+      "pass": true
+    },
+    {
+      "name": "silk slows the actual ordinary charge, not only patrol walking",
+      "pass": true
+    },
+    {
+      "name": "six-arm followups obey Qin writ armour and record a lethal followup only once",
+      "pass": true
+    },
+    {
+      "name": "mini chief hints do not advertise devices missing from their map",
+      "pass": true
+    }
+  ]
+}
