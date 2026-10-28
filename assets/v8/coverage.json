@@ -248,6 +248,10 @@
       "width": 256,
       "height": 256
     },
+    "realmDressing": {
+      "width": 512,
+      "height": 256
+    },
     "motion-nezha": {
       "width": 768,
       "height": 640
@@ -1702,6 +1706,118 @@
         "image": "mapDressing",
         "r": [
           128,
+          128,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          112
+        ]
+      },
+      {
+        "id": "dressing-underworld-a",
+        "image": "realmDressing",
+        "r": [
+          0,
+          0,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          112
+        ]
+      },
+      {
+        "id": "dressing-underworld-b",
+        "image": "realmDressing",
+        "r": [
+          128,
+          0,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          112
+        ]
+      },
+      {
+        "id": "dressing-water-a",
+        "image": "realmDressing",
+        "r": [
+          256,
+          0,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          112
+        ]
+      },
+      {
+        "id": "dressing-water-b",
+        "image": "realmDressing",
+        "r": [
+          384,
+          0,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          112
+        ]
+      },
+      {
+        "id": "dressing-dragon-a",
+        "image": "realmDressing",
+        "r": [
+          0,
+          128,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          112
+        ]
+      },
+      {
+        "id": "dressing-dragon-b",
+        "image": "realmDressing",
+        "r": [
+          128,
+          128,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          112
+        ]
+      },
+      {
+        "id": "dressing-heaven-a",
+        "image": "realmDressing",
+        "r": [
+          256,
+          128,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          112
+        ]
+      },
+      {
+        "id": "dressing-heaven-b",
+        "image": "realmDressing",
+        "r": [
+          384,
           128,
           128,
           128
@@ -7665,5 +7781,5 @@
       }
     ]
   },
-  "total": 538
+  "total": 546
 }

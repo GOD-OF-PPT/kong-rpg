@@ -10,7 +10,7 @@ for(const [id,asset]of Object.entries(manifest.assets)){
   dimensions[id]={width:data.readUInt32BE(16),height:data.readUInt32BE(20)};
 }
 const context=vm.createContext({});
-for(const file of ['art-catalog','map-data','signature-data','scene-data','actor-states-data','actor-repair-data','v8-art-data','enemy-marker-data','celestial-art-data','campaign-art-data','audit-art-data','cloud-visual-data','combat-feedback-data','motion-data','enemy-effects-data'])vm.runInContext(fs.readFileSync(path.join(root,'src',file+'.js'),'utf8'),context);
+for(const file of ['art-catalog','map-data','realm-dressing-data','signature-data','scene-data','actor-states-data','actor-repair-data','v8-art-data','enemy-marker-data','celestial-art-data','campaign-art-data','audit-art-data','cloud-visual-data','combat-feedback-data','motion-data','enemy-effects-data'])vm.runInContext(fs.readFileSync(path.join(root,'src',file+'.js'),'utf8'),context);
 let count=0;const coverage={};
 for(const group of ['ArtFrames','MapFrames','SignatureFrames','SceneFrames','ActorStateFrames','V8Frames','EnemyMarkerFrames','CelestialFrames','CampaignFrames','CloudFrames','CombatFrames','MotionFrames','EnemyEffectFrames']){
   coverage[group]=[];
@@ -26,5 +26,23 @@ for(const group of ['ArtFrames','MapFrames','SignatureFrames','SceneFrames','Act
 for(const id of ['seal-intact','seal-ruined','seal-lamp-ready','seal-lamp-spent'])if(!context.Kong.SceneFrames[id])throw Error('Missing seal state: '+id);
 for(const id of ['wukong-dead','nezha-dead','nezha-ultimate-start','nezha-ultimate-release'])if(!context.Kong.ActorStateFrames[id])throw Error('Missing actor state: '+id);
 for(const id of ['erlang-heavy-windup','erlang-heavy-strike','erlang-hurt','nezha-hurt'])if(!context.Kong.ActorStateFrames[id])throw Error('Missing repair pose: '+id);
+// A valid atlas may still omit a live state. Check the campaign's required
+// actor families, not just whatever happened to be registered in the atlas.
+vm.runInContext(fs.readFileSync(path.join(root,'src/campaign-data.js'),'utf8'),context);
+const required=(group,id)=>{if(!context.Kong[group][id])throw Error('Missing live art state '+group+':'+id);};
+for(const chapter of context.Kong.CAMPAIGN){
+  for(let pose=0;pose<4;pose++)required('CampaignFrames',chapter.boss+'-'+pose);
+  for(let role=0;role<3;role++)required('CampaignFrames',chapter.id+'-role'+role);
+  for(let mini=0;mini<2;mini++)required('CampaignFrames',chapter.id+'-mini'+mini);
+  for(let row=0;row<5;row++)for(let pose=0;pose<6;pose++)required('MotionFrames',chapter.id+'-'+row+'-'+pose);
+}
+for(const hero of ['nezha','erlang']){
+  for(let row=0;row<5;row++)for(let pose=0;pose<4;pose++)required('MotionFrames',hero+'-'+row+'-'+pose);
+  required('V8Frames',hero+'-7');
+}
+for(const realm of ['underworld','dragon','heaven'])for(const suffix of ['device','device-broken'])required('CampaignFrames',realm+'-'+suffix);
+for(const kind of ['heal','focus','rage'])required('MapFrames','pickup-'+kind);
+for(const kind of ['quiet','warning','active'])required('MapFrames','hazard-'+kind);
+for(const realm of ['underworld','water','dragon','heaven'])for(const variant of ['a','b'])if(!context.Kong.MapFrames['dressing-'+realm+'-'+variant])throw Error('Missing realm dressing: '+realm+'-'+variant);
 fs.writeFileSync(path.join(root,'assets/v8/coverage.json'),JSON.stringify({images:dimensions,frames:coverage,total:count},null,2)+'\n');
 console.log('Art integrity:',Object.keys(dimensions).length,'PNG assets;',count,'bounded frames');

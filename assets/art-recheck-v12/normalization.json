@@ -1,0 +1,199 @@
+{
+  "tool": "built-in image_gen",
+  "sourceSHA256": "f65cb580ad1c623449429de7941d19de04da7d4c288a9e7159ae3d1a2ce97051",
+  "method": "alpha crop; shared uniform scale per realm pair; premultiplied-alpha Lanczos; bottom anchor [64,112]",
+  "frames": [
+    {
+      "id": "dressing-underworld-a",
+      "sourceCell": [
+        0,
+        0,
+        444,
+        444
+      ],
+      "alphaBounds": [
+        20,
+        16,
+        427,
+        437
+      ],
+      "scale": 0.2042755344418052,
+      "size": [
+        83,
+        86
+      ],
+      "offset": [
+        22,
+        26
+      ]
+    },
+    {
+      "id": "dressing-underworld-b",
+      "sourceCell": [
+        444,
+        0,
+        887,
+        444
+      ],
+      "alphaBounds": [
+        18,
+        190,
+        433,
+        433
+      ],
+      "scale": 0.2042755344418052,
+      "size": [
+        85,
+        50
+      ],
+      "offset": [
+        21,
+        62
+      ]
+    },
+    {
+      "id": "dressing-water-a",
+      "sourceCell": [
+        887,
+        0,
+        1330,
+        444
+      ],
+      "alphaBounds": [
+        21,
+        89,
+        401,
+        435
+      ],
+      "scale": 0.2386634844868735,
+      "size": [
+        91,
+        83
+      ],
+      "offset": [
+        18,
+        29
+      ]
+    },
+    {
+      "id": "dressing-water-b",
+      "sourceCell": [
+        1330,
+        0,
+        1774,
+        444
+      ],
+      "alphaBounds": [
+        13,
+        109,
+        432,
+        437
+      ],
+      "scale": 0.2386634844868735,
+      "size": [
+        100,
+        78
+      ],
+      "offset": [
+        14,
+        34
+      ]
+    },
+    {
+      "id": "dressing-dragon-a",
+      "sourceCell": [
+        0,
+        444,
+        444,
+        887
+      ],
+      "alphaBounds": [
+        26,
+        65,
+        409,
+        381
+      ],
+      "scale": 0.24509803921568626,
+      "size": [
+        94,
+        77
+      ],
+      "offset": [
+        17,
+        35
+      ]
+    },
+    {
+      "id": "dressing-dragon-b",
+      "sourceCell": [
+        444,
+        444,
+        887,
+        887
+      ],
+      "alphaBounds": [
+        16,
+        36,
+        424,
+        384
+      ],
+      "scale": 0.24509803921568626,
+      "size": [
+        100,
+        85
+      ],
+      "offset": [
+        14,
+        27
+      ]
+    },
+    {
+      "id": "dressing-heaven-a",
+      "sourceCell": [
+        887,
+        444,
+        1330,
+        887
+      ],
+      "alphaBounds": [
+        20,
+        70,
+        426,
+        376
+      ],
+      "scale": 0.24630541871921183,
+      "size": [
+        100,
+        75
+      ],
+      "offset": [
+        14,
+        37
+      ]
+    },
+    {
+      "id": "dressing-heaven-b",
+      "sourceCell": [
+        1330,
+        444,
+        1774,
+        887
+      ],
+      "alphaBounds": [
+        17,
+        55,
+        418,
+        395
+      ],
+      "scale": 0.24630541871921183,
+      "size": [
+        99,
+        84
+      ],
+      "offset": [
+        14,
+        28
+      ]
+    }
+  ]
+}

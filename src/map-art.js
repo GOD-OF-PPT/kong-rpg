@@ -67,7 +67,8 @@
         const ground=s.room.platforms.filter(p=>p.solid&&p.w>120).map(p=>({p,x:K.clamp(x,p.x+60,p.x+p.w-60)})).sort((a,b)=>Math.abs(a.x-x)-Math.abs(b.x-x))[0];if(!ground||Math.abs(ground.x-x)>160)continue;
         const at=ground.x;
         if([s.room.camp,s.room.trial,s.room.node,...s.room.seals].some(q=>q&&Math.abs(q.x-at)<135)||s.room.hazards.some(q=>Math.abs(q.x-at)<90))continue;
-        this.mapSprite('dressing-'+this.mapTheme()+'-'+(i%2?'b':'a'),at,ground.p.y+1,.73);
+        const theme=K.CAMPAIGN?K.chapter(s.stage).id:this.mapTheme();
+        this.mapSprite('dressing-'+theme+'-'+(i%2?'b':'a'),at,ground.p.y+1,.73);
       }
     }
     combatCues(){this.drawLandmarks();super.combatCues();}
