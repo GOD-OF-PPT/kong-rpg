@@ -1,8 +1,16 @@
-# 大圣 · 劫后行 v10.0.1
+# 大圣 · 劫后行 v10.0.2
 
 五界归途：孙悟空、哪吒、杨戬可选的像素横版平台动作肉鸽。依次走过五章十五关，击退十名小首领与五名大首领，最终迎战托塔天王。玩法、角色和美术均基于用户设定创作，不宣称复刻电视剧中的具体战斗。
 
-## 本轮审查修正
+## v10.0.2美术补检
+
+- 杨戬第三刀补独立重劈起手/释放帧，修正误用拉弓姿势；哪吒大招接回专用起势/释放姿势。
+- 哪吒、杨戬补独立受击姿势；战役普通怪、小首领和大首领补回统一暗红细描边，机关保留原来的中性轮廓。
+- 当前55张内嵌PNG、278个登记帧；素材解码、角色选帧、五界敌人/首领招式与机关破碎状态均有渲染检查。
+
+新源图、归一记录及提示词：`assets/art-completeness-v10/`、[美术补检](docs/art-completeness-v10/REVIEW.md)。
+
+## 先前机制审查修正
 
 - 修正连刃/震盾/散射战纹与实际招式不一致；弹幕留出可容纳角色身体的间隙。
 - 三头六臂仅追加枪法伤害；混天绫也能减缓普通敌人冲刺，首领仍不受减速。
@@ -25,7 +33,7 @@
 
 ## 直接运行
 
-双击 `release/index.html`；或解压 `artifacts/kong-rpg-offline-v10.0.1.zip` 后双击包内 `index.html`。PC Edge / Chrome，无需网络、安装、CDN、字体下载或安全设置。保留同目录 `legacy-v1.html` 至 `legacy-v9.html`，供旧旅程继续。
+双击 `release/index.html`；或解压 `artifacts/kong-rpg-offline-v10.0.2.zip` 后双击包内 `index.html`。PC Edge / Chrome，无需网络、安装、CDN、字体下载或安全设置。保留同目录 `legacy-v1.html` 至 `legacy-v9.html`，供旧旅程继续。
 
 源码预览需要Node.js 18+，不需npm install：
 
@@ -73,7 +81,7 @@ v9.0.0原HTML保留为 `legacy-v9.html`，旧v9存档走原规则入口，不会
 
 ## 美术、音乐与验证
 
-新增源图、归一图集与SHA记录在 `assets/campaign-v10/`，完整提示词在 `docs/campaign-v10/PROMPTS.md`。`tools/prepare-campaign-art.py`仅进行明确裁切、共同比例、nearest-neighbour归一，保留真实RGBA。53张内嵌图、271条切片在打包时检查；关键姿态不等于完整手绘逐帧动画。
+新增源图、归一图集与SHA记录在 `assets/campaign-v10/`、`assets/audit-v10/`、`assets/art-completeness-v10/`，对应目录的提示词在docs中保留。归一仅进行明确裁切、共同比例、nearest-neighbour处理，保留真实RGBA。55张内嵌图、278条切片在打包时检查；关键姿态不等于完整手绘逐帧动画。
 
 背景音乐来自用户提供的 `assets/music/` 三首MP3：首次点击/按键后首页随机轮换，战斗单曲循环，切换淡变；原打击/预警音效继续使用。音乐和图像均内嵌发行HTML。
 

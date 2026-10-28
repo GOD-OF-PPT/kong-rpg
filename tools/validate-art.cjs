@@ -10,7 +10,7 @@ for(const [id,asset]of Object.entries(manifest.assets)){
   dimensions[id]={width:data.readUInt32BE(16),height:data.readUInt32BE(20)};
 }
 const context=vm.createContext({});
-for(const file of ['art-catalog','map-data','signature-data','scene-data','actor-states-data','v8-art-data','enemy-marker-data','celestial-art-data','campaign-art-data','audit-art-data'])vm.runInContext(fs.readFileSync(path.join(root,'src',file+'.js'),'utf8'),context);
+for(const file of ['art-catalog','map-data','signature-data','scene-data','actor-states-data','actor-repair-data','v8-art-data','enemy-marker-data','celestial-art-data','campaign-art-data','audit-art-data'])vm.runInContext(fs.readFileSync(path.join(root,'src',file+'.js'),'utf8'),context);
 let count=0;const coverage={};
 for(const group of ['ArtFrames','MapFrames','SignatureFrames','SceneFrames','ActorStateFrames','V8Frames','EnemyMarkerFrames','CelestialFrames','CampaignFrames']){
   coverage[group]=[];
@@ -25,5 +25,6 @@ for(const group of ['ArtFrames','MapFrames','SignatureFrames','SceneFrames','Act
 }
 for(const id of ['seal-intact','seal-ruined','seal-lamp-ready','seal-lamp-spent'])if(!context.Kong.SceneFrames[id])throw Error('Missing seal state: '+id);
 for(const id of ['wukong-dead','nezha-dead','nezha-ultimate-start','nezha-ultimate-release'])if(!context.Kong.ActorStateFrames[id])throw Error('Missing actor state: '+id);
+for(const id of ['erlang-heavy-windup','erlang-heavy-strike','erlang-hurt','nezha-hurt'])if(!context.Kong.ActorStateFrames[id])throw Error('Missing repair pose: '+id);
 fs.writeFileSync(path.join(root,'assets/v8/coverage.json'),JSON.stringify({images:dimensions,frames:coverage,total:count},null,2)+'\n');
 console.log('Art integrity:',Object.keys(dimensions).length,'PNG assets;',count,'bounded frames');

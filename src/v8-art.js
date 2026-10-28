@@ -27,6 +27,8 @@
     person(kind,x,y,face=1,frame=0,alpha=1,flash=false,scale=1){
       const s=this.scene,p=s?.player,c=this.c;
       if(kind==='monkey'&&s&&s.hero!=='wukong'&&this.ui!=='menu'){
+        const elapsed=p.attackDuration-p.attack,repair=p.hp<=0?null:p.hurt>0?s.hero+'-hurt':s.hero==='nezha'&&p.ultimate>0?(p.ultimate>.66?'nezha-ultimate-start':'nezha-ultimate-release'):s.hero==='erlang'&&p.secondaryPose<=0&&p.attack>0&&p.comboIndex===3?(elapsed<K.attackTiming(p).start?'erlang-heavy-windup':'erlang-heavy-strike'):null;
+        if(repair){const im=this.actorStateFrame(repair),f=K.ActorStateFrames[repair];if(im){c.save();c.globalAlpha=alpha;c.translate(Math.round(x+12),Math.round(y+44));c.scale(face*scale,scale);c.drawImage(im,-f.anchor[0],-f.anchor[1]);c.restore();return;}}
         let i=p.hp<=0?7:p.ultimate>0?(s.hero==='erlang'?6:4):p.secondaryPose>0?6:p.attack>0?(p.comboIndex===3?5:p.comboIndex===2?4:3):p.slam?5:!p.grounded?2:Math.abs(p.vx)>35?1:0;
         if(s.hero==='erlang'&&p.secondaryPose>0)i=5;
         const id=(s.hero==='erlang'?'erlang-':'nezha-')+i,im=this.v8Frame(id),f=K.V8Frames[id];

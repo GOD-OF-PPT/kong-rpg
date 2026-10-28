@@ -215,6 +215,10 @@
     "auditDevices": {
       "width": 576,
       "height": 96
+    },
+    "actorRepair": {
+      "width": 640,
+      "height": 128
     }
   },
   "frames": {
@@ -1990,6 +1994,62 @@
         ],
         "anchor": [
           64,
+          112
+        ]
+      },
+      {
+        "id": "erlang-heavy-windup",
+        "image": "actorRepair",
+        "r": [
+          0,
+          0,
+          160,
+          128
+        ],
+        "anchor": [
+          80,
+          112
+        ]
+      },
+      {
+        "id": "erlang-heavy-strike",
+        "image": "actorRepair",
+        "r": [
+          160,
+          0,
+          160,
+          128
+        ],
+        "anchor": [
+          80,
+          112
+        ]
+      },
+      {
+        "id": "erlang-hurt",
+        "image": "actorRepair",
+        "r": [
+          320,
+          0,
+          160,
+          128
+        ],
+        "anchor": [
+          80,
+          112
+        ]
+      },
+      {
+        "id": "nezha-hurt",
+        "image": "actorRepair",
+        "r": [
+          480,
+          0,
+          160,
+          128
+        ],
+        "anchor": [
+          80,
           112
         ]
       }
@@ -3869,5 +3929,5 @@
       }
     ]
   },
-  "total": 274
+  "total": 278
 }
