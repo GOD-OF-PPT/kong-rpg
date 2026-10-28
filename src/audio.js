@@ -59,6 +59,9 @@
     sweep(from,to,len=.1,gain=.1){if(!this.ctx||!this.enabled)return;const t=this.ctx.currentTime,o=this.ctx.createOscillator(),g=this.ctx.createGain();o.type='triangle';o.frequency.setValueAtTime(from,t);o.frequency.exponentialRampToValueAtTime(to,t+len);g.gain.setValueAtTime(gain,t);g.gain.exponentialRampToValueAtTime(.001,t+len);o.connect(g);g.connect(this.bus);o.start(t);o.stop(t+len+.01);}
     event(e){
       if(e.type==='bow-draw')this.sweep(180,390,.18,.04);
+      if(e.type==='staff-bolt')this.sweep(580,160,.12,.07);
+      if(e.type==='boss-brace')this.sample('shield-block',.33,1);
+      if(e.type==='lotus-buff'){this.tone(880,.15,'sine',.05);this.tone(1320,.12,'sine',.035,.04);}
       if(e.type==='bow-fire')this.sweep(850,260,.1,.07);
       if(e.type==='eye'){this.tone(660,.2,'sine',.08);this.tone(990,.2,'sine',.04,.05);}
       if(e.type==='staff-extend'){this.sweep(370,95,.13,.075);this.noise(.065,.04);}

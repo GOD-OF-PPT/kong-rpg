@@ -1,0 +1,234 @@
+{
+  "version": "11.0.0",
+  "rows": [
+    {
+      "hero": "wukong",
+      "action": "secondaryPressed",
+      "clone": false,
+      "eye": false,
+      "bow": false,
+      "arrows": 0,
+      "projectiles": 0,
+      "events": [],
+      "focus": 78
+    },
+    {
+      "hero": "wukong",
+      "action": "clonePressed",
+      "clone": true,
+      "eye": false,
+      "bow": false,
+      "arrows": 0,
+      "projectiles": 0,
+      "events": [
+        "clone"
+      ],
+      "focus": 72
+    },
+    {
+      "hero": "erlang",
+      "action": "secondaryPressed",
+      "clone": false,
+      "eye": false,
+      "bow": false,
+      "arrows": 1,
+      "projectiles": 0,
+      "events": [
+        "bow-draw",
+        "bow-fire"
+      ],
+      "focus": 82
+    },
+    {
+      "hero": "erlang",
+      "action": "clonePressed",
+      "clone": false,
+      "eye": true,
+      "bow": false,
+      "arrows": 0,
+      "projectiles": 0,
+      "events": [
+        "eye"
+      ],
+      "focus": 70
+    },
+    {
+      "hero": "nezha",
+      "action": "ultimate",
+      "face": -1,
+      "damage": 64,
+      "events": [
+        {
+          "type": "ultimate",
+          "t": 0.008,
+          "wall": 0.008
+        },
+        {
+          "type": "hit",
+          "t": 0.208,
+          "wall": 0.208,
+          "target": 900,
+          "kind": "warden",
+          "amount": 36,
+          "impact": "ultimate",
+          "x": 2197.9999999999964,
+          "y": 368
+        },
+        {
+          "type": "ultimate-hit",
+          "t": 0.208,
+          "wall": 0.208,
+          "pulse": 1,
+          "box": {
+            "x": 1797,
+            "y": 318,
+            "w": 600,
+            "h": 160
+          }
+        },
+        {
+          "type": "hit",
+          "t": 0.508,
+          "wall": 0.558,
+          "target": 900,
+          "kind": "warden",
+          "amount": 28,
+          "impact": "ultimate",
+          "x": 2226.499999999991,
+          "y": 368
+        },
+        {
+          "type": "ultimate-hit",
+          "t": 0.508,
+          "wall": 0.558,
+          "pulse": 2,
+          "box": {
+            "x": 1797,
+            "y": 318,
+            "w": 600,
+            "h": 160
+          }
+        }
+      ],
+      "effects": []
+    },
+    {
+      "hero": "nezha",
+      "action": "ultimate",
+      "face": 1,
+      "damage": 64,
+      "events": [
+        {
+          "type": "ultimate",
+          "t": 0.008,
+          "wall": 0.008
+        },
+        {
+          "type": "hit",
+          "t": 0.208,
+          "wall": 0.208,
+          "target": 900,
+          "kind": "warden",
+          "amount": 36,
+          "impact": "ultimate",
+          "x": 2197.9999999999964,
+          "y": 368
+        },
+        {
+          "type": "ultimate-hit",
+          "t": 0.208,
+          "wall": 0.208,
+          "pulse": 1,
+          "box": {
+            "x": 1797,
+            "y": 318,
+            "w": 600,
+            "h": 160
+          }
+        },
+        {
+          "type": "hit",
+          "t": 0.508,
+          "wall": 0.558,
+          "target": 900,
+          "kind": "warden",
+          "amount": 28,
+          "impact": "ultimate",
+          "x": 2226.499999999991,
+          "y": 368
+        },
+        {
+          "type": "ultimate-hit",
+          "t": 0.508,
+          "wall": 0.558,
+          "pulse": 2,
+          "box": {
+            "x": 1797,
+            "y": 318,
+            "w": 600,
+            "h": 160
+          }
+        }
+      ],
+      "effects": []
+    },
+    {
+      "boss": "juling",
+      "seconds": 10.591666666666706,
+      "remaining": 31,
+      "playerDamage": 100,
+      "attacks": 4,
+      "ults": 1
+    },
+    {
+      "boss": "qinguang",
+      "seconds": 11.733333333333308,
+      "remaining": 201,
+      "playerDamage": 90,
+      "attacks": 4,
+      "ults": 1
+    },
+    {
+      "boss": "ninehead",
+      "seconds": 11.56666666666665,
+      "remaining": 113,
+      "playerDamage": 88,
+      "attacks": 4,
+      "ults": 1
+    },
+    {
+      "boss": "dragonking",
+      "seconds": 11.733333333333308,
+      "remaining": 192,
+      "playerDamage": 54,
+      "attacks": 4,
+      "ults": 1
+    },
+    {
+      "boss": "litian",
+      "seconds": 11.733333333333308,
+      "remaining": 210,
+      "playerDamage": 92,
+      "attacks": 4,
+      "ults": 1
+    }
+  ],
+  "checks": [
+    {
+      "name": "Wukong secondary is independent from clone",
+      "pass": true
+    },
+    {
+      "name": "Erlang secondary makes arrow and no eye",
+      "pass": true
+    },
+    {
+      "name": "Nezha grounded R damages an adjacent boss when facing it",
+      "pass": true
+    },
+    {
+      "name": "stationary J/R cannot clear every major boss in twelve seconds",
+      "pass": true
+    }
+  ]
+}

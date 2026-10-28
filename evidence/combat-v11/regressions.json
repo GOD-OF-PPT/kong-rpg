@@ -1,0 +1,49 @@
+{
+  "version": "11.0.0",
+  "checks": [
+    {
+      "name": "H and L independently create staff bolt/clone and arrow/eye, with correct costs",
+      "pass": true
+    },
+    {
+      "name": "Nezha R has actual two-pulse 64 damage and four-second empowerment, single rage spend",
+      "pass": true
+    },
+    {
+      "name": "lotus buff adds six only to actual main weapon, expires, and does not amplify silk",
+      "pass": true
+    },
+    {
+      "name": "new secondary, bow, eye, buff and in-flight projectile survive schema11 export/import",
+      "pass": true
+    },
+    {
+      "name": "boss life is unchanged, front stance reduces damage and recovery/back expose full damage",
+      "pass": true
+    },
+    {
+      "name": "R no longer cancels a boss locked warning; ordinary heavy interruption still works",
+      "pass": true
+    },
+    {
+      "name": "ordinary and challenge followups give a new locked warning before releasing",
+      "pass": true
+    },
+    {
+      "name": "hit spark stays in the real main-weapon/enemy intersection and a miss has no fake hit",
+      "pass": true
+    },
+    {
+      "name": "staff bolt cannot hit both a blocker and a device behind it, including save restoration",
+      "pass": true
+    },
+    {
+      "name": "live chapter-boss damage remains restorable in the middle of a released warning",
+      "pass": true
+    },
+    {
+      "name": "v10 real progress is protected in its original rules and the original entry is unchanged",
+      "pass": true
+    }
+  ]
+}

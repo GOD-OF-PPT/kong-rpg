@@ -34,7 +34,7 @@
   K.stepUltimate=function(s,dt){
     const p=s.player;if(p.ultimate<=0)return;
     p.ultimate=Math.max(0,p.ultimate-dt);const elapsed=.86-p.ultimate;
-    const strike=(amount,pulse)=>{const box=K.ultimateBox(s);K.strike(s,box,amount,p.x+12,true,[],'ultimate');for(const b of s.projectiles)if(!b.friendly&&K.overlap(box,b))b.life=0;K.effect(s,'ultimate-wave',p.x+12,p.y+15,{face:p.face,pulse});K.event(s,'ultimate-hit',{pulse,box});};
+    const strike=(amount,pulse)=>{const box=K.ultimateBox(s),hits=s.stats.hits;K.strike(s,box,amount,p.x+12,true,[],'ultimate');for(const b of s.projectiles)if(!b.friendly&&K.overlap(box,b))b.life=0;K.effect(s,'ultimate-wave',p.x+12,p.y+15,{face:p.face,pulse,box:{...box}});K.event(s,s.stats.hits>hits?'ultimate-hit':'ultimate-swing',{pulse,box});};
     if(elapsed>=.2&&p.ultimateStage===0){p.ultimateStage=1;strike(64,1);}
     if(elapsed>=.5&&p.ultimateStage===1&&K.rank(s,'ultimate-echo')){p.ultimateStage=2;strike(32,2);}
   };

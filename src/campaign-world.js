@@ -41,7 +41,9 @@
   K.journeyInteract=function(s){const manual=K.nearArtManual(s);if(manual)return journey(s)||true;if(K.gateInReach(s)){const g=K.guardian(s);if(g?.hp>0){K.event(s,'gate-locked');return true;}if(!s.campaign.completed.includes(s.stage))s.campaign.completed.push(s.stage);if(s.stage===14){s.mode='won';K.event(s,'victory');return true;}s.rewardKind='exit';s.reward=K.options(s);K.cancelSignature(s);s.mode='reward';K.event(s,'reward',{kind:'exit'});return true;}return journey(s)||true;};
   const damage=K.damage;K.damage=function(s,...args){const result=damage(s,...args);if(result&&s.campaign)s.campaign.hits++;return result;};
   const reward=K.reward;K.reward=function(id,s){const r=reward(id,s);if(id!=='mercy')return r;const end=s?.hero==='erlang'?'天眼':s?.hero==='nezha'?'混天绫':'分身';return{...r,tag:'破械续航',text:'击碎判牒、潮珠或塔基恢复12生命；'+end+'结束返还15定力。',cost:'每关同一机关最多回复一次；神通仍有原本消耗。'};};
+  K.bossBraced=e=>!!e.chiefId&&e.hp>0&&!e.dormant&&e.phase!=='recover';
   const hit=K.hitEnemy;K.hitEnemy=function(s,e,n,origin,pierce,impact){const before=e.hp,anchors=s.room.anchors;
+    if(K.bossBraced(e)&&(origin-e.x-e.w/2)*e.face>0&&impact!=='ultimate'){const original=n;n=Math.max(1,Math.ceil(n*(pierce?.6:.35)));K.event(s,'boss-brace',{target:e.id,chip:n,absorbed:original-n});K.effect(s,'brace-hit',e.x+(e.face>0?e.w:0),e.y+e.h*.45,{duration:.12,face:e.face});}
     if(e.chiefId&&s.stage%3===2&&K.chapter(s.stage).id==='underworld'&&e.phase!=='recover'&&anchors.some(q=>q.hp>0&&q.active))n=Math.max(1,Math.ceil(n*.55));
     const yes=hit(s,e,n,origin,pierce,impact);if(before>0&&e.hp===0&&e.scoreable&&s.campaign){const key=s.stage+':'+e.id;if(!s.campaign.killed.includes(key))s.campaign.killed.push(key);}return yes;};
 })(globalThis.Kong ||= {});

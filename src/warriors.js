@@ -4,11 +4,11 @@
   K.HEROES.push({id:'erlang',name:'杨戬',title:'三尖刀破势 · 射雕弓点杀',text:'主副兵器安排距离，天眼识破，唤哮天犬协战。',skill:'哮天逐邪'});
   K.warriorGuide=function(s){
     if(s.hero==='erlang')return 'J/左键三尖刀三连；H/右键射雕弓，18定力，0.22秒引弦，0.8秒冷却。右键朝光标，H水平射击。<br>L天眼：30定力，锁定区域3秒（照妖眼5秒），区内可破盾。U神行步：12定力，1秒冷却。<br>R哮天逐邪：100战意，哮天犬协战8秒（灵犬追猎10秒），每次扑咬18伤害，0.85秒间隔。';
-    if(s.hero==='nezha')return 'J/左键火尖枪三连，第三枪重击；H/右键乾坤圈，12定力，一环在外不可再掷，但可以继续枪法。右键朝光标，H水平投掷。<br>L混天绫：40定力，缚莲绫为50；减缓普通敌人的游走和冲刺，首领不受减速；U按住驭风火轮，W/空格升、S降，落地松开回充。<br>R莲火轮阵：100战意，起势护体，后段仍可受伤。';
-    return 'J/左键棍法三连；L或H/右键分身。U按住蓄棍、松开伸刺，S松U改撑地跃；K取消。<br>R法天象地：100战意，重击清近处飞弹。';
+    if(s.hero==='nezha')return 'J/左键火尖枪三连，第三枪重击；H/右键乾坤圈，12定力，一环在外不可再掷，但可以继续枪法。右键朝光标，H水平投掷。<br>L混天绫：40定力，缚莲绫为50；减缓普通敌人的游走和冲刺，首领不受减速；U按住驭风火轮，W/空格升、S降，落地松开回充。<br>R莲火轮阵：100战意，环身两击共64伤害，清近弹；起势后莲火附枪4秒，主攻命中追加6伤害，仍可受伤。';
+    return 'J/左键棍法三连；H/右键破空棍劲：22定力，0.8秒冷却，28伤害；右键朝光标，正面盾能挡。L分身：驻影诱敌、绕背。<br>U按住蓄棍、松开伸刺，S松U改撑地跃；K取消。R法天象地：100战意，重击清近处飞弹。';
   };
   const newRun=K.newRun,enter=K.enterRoom;
-  K.initWarrior=s=>{s.bow=null;s.arrows=[];s.hound=null;s.eye=null;s.player.secondaryCD=0;s.player.secondaryPose=0;};
+  K.initWarrior=s=>{s.bow=null;s.arrows=[];s.hound=null;s.eye=null;s.player.secondaryCD=0;s.player.secondaryPose=0;s.player.lotusBuff=0;s.player.eyePose=0;};
   K.newRun=function(...args){const s=newRun(...args);K.initWarrior(s);return s;};
   K.enterRoom=function(...args){enter(...args);K.initWarrior(args[0]);};
   const reward=K.reward;
@@ -34,28 +34,33 @@
   K.startUltimate=function(s){if(s.hero!=='erlang')return startUlt(s);const p=s.player;if(p.hurt>0||p.ultimate>0)return;if(p.rage<100){K.event(s,'ability-note',{text:'战意未满，命中与破阵可积攒。'});return;}
     p.rage=0;p.ultimate=.86;p.attack=0;p.invuln=Math.max(p.invuln,.32);s.hound={x:K.clamp(p.x-35,0,s.room.width-36),y:p.y+18,w:36,h:26,vx:0,vy:0,life:K.rank(s,'ultimate-echo')?10:8,cooldown:.15,pose:'run',face:p.face,target:null};s.stats.ultimates++;K.event(s,'ultimate');K.effect(s,'world-rise',p.x,p.y+44);
   };
-  K.stepUltimate=function(s,dt){if(s.hero!=='erlang')return stepUlt(s,dt);s.player.ultimate=Math.max(0,s.player.ultimate-dt);};
+  K.stepUltimate=function(s,dt){if(s.hero==='erlang'){s.player.ultimate=Math.max(0,s.player.ultimate-dt);return;}if(s.hero!=='nezha')return stepUlt(s,dt);const p=s.player;if(p.ultimate<=0)return;p.ultimate=Math.max(0,p.ultimate-dt);const elapsed=.86-p.ultimate;
+    const release=(amount,pulse)=>{const b=K.ultimateBox(s),hits=s.stats.hits;K.strike(s,b,amount,p.x+12,true,[],'ultimate');for(const q of s.projectiles)if(!q.friendly&&K.overlap(b,q))q.life=0;K.effect(s,'lotus-release',p.x+12,p.y+24,{duration:.24,pulse,box:{...b}});K.event(s,s.stats.hits>hits?'ultimate-hit':'ultimate-swing',{pulse,box:b});};
+    if(elapsed>=.2&&p.ultimateStage===0){p.ultimateStage=1;p.lotusBuff=4;release(36,1);K.event(s,'lotus-buff',{seconds:4});}
+    if(elapsed>=.5&&p.ultimateStage===1){p.ultimateStage=2;release(28+(K.rank(s,'ultimate-echo')?32:0),2);}
+  };
   function secondary(s,a){
-    const p=s.player;if(s.hero==='wukong')return;if(p.secondaryCD>0||p.hurt>0||p.ultimate>0||p.slam||p.dash>0||s.bow)return;
-    const cost=s.hero==='nezha'?12:18;if(p.focus<cost){K.event(s,'empty-focus');return;}
+    const p=s.player;if(p.secondaryCD>0||p.hurt>0||p.ultimate>0||p.slam||p.dash>0||s.bow||s.celestial?.cast&&s.celestial.cast.id!=='six-arms')return;
+    const cost=s.hero==='wukong'?22:s.hero==='nezha'?12:18;if(p.focus<cost){K.event(s,'empty-focus');return;}
     if(s.hero==='nezha'&&s.ring)return;
     p.focus-=cost;s.stats.focusSpent+=cost;p.secondaryPose=.35;p.secondaryCD=s.hero==='nezha'?.6:.8;
-    if(s.hero==='nezha')K.newRing(s,{aimPoint:a.secondaryAim});
+    if(s.hero==='wukong'){let dx=p.face,dy=0;if(a.secondaryAim){dx=a.secondaryAim.x-p.x-12;dy=a.secondaryAim.y-p.y-18;const n=Math.hypot(dx,dy)||1;dx/=n;dy/=n;p.face=dx<0?-1:1;}s.projectiles.push({x:p.x+12,y:p.y+18,w:26,h:12,vx:dx*520,vy:dy*520,life:.78,friendly:true,damage:28,impact:'staff-bolt',pierce:false,hit:[],sealHits:[],anchorHits:[]});K.event(s,'staff-bolt');K.effect(s,'staff-bolt-launch',p.x+12,p.y+18,{duration:.18,face:p.face});}
+    else if(s.hero==='nezha')K.newRing(s,{aimPoint:a.secondaryAim});
     else{let dx=p.face,dy=0;if(a.secondaryAim){dx=a.secondaryAim.x-p.x-12;dy=a.secondaryAim.y-p.y-16;const n=Math.hypot(dx,dy)||1;dx/=n;dy/=n;p.face=dx<0?-1:1;}s.bow={timer:.22,dx,dy};K.event(s,'bow-draw');}
   }
-  function eye(s){const p=s.player;if(s.eye||p.focus<30){if(p.focus<30)K.event(s,'empty-focus');return;}p.focus-=30;s.stats.focusSpent+=30;s.stats.clones++;s.eye={x:K.clamp(p.x+(p.face>0?0:-230),0,s.room.width-360),y:p.y-35,w:K.has(s,'echo')?360:280,h:105,life:K.has(s,'echo')?5:3};K.event(s,'eye');}
+  function eye(s){const p=s.player;if(s.eye||p.focus<30){if(p.focus<30)K.event(s,'empty-focus');return;}p.focus-=30;s.stats.focusSpent+=30;s.stats.clones++;p.eyePose=.45;p.attack=0;p.attackBuffer=0;s.eye={x:K.clamp(p.x+(p.face>0?0:-230),0,s.room.width-360),y:p.y-35,w:K.has(s,'echo')?360:280,h:105,life:K.has(s,'echo')?5:3};K.event(s,'eye');}
   function stepHound(s,dt){const h=s.hound;if(!h)return;h.life-=dt;h.cooldown=Math.max(0,h.cooldown-dt);if(h.life<=0||s.player.hp<=0){s.hound=null;return;}
     const target=s.room.enemies.filter(e=>e.hp>0&&!e.dormant&&Math.abs(e.x-s.player.x)<560).sort((a,b)=>Math.abs(a.x-h.x)-Math.abs(b.x-h.x))[0];h.target=target?.id??null;
     const tx=target?target.x+target.w/2:s.player.x-35,dx=tx-h.x;h.face=Math.sign(dx)||h.face;h.vx=Math.sign(dx)*Math.min(300,Math.abs(dx)*8);h.x=K.clamp(h.x+h.vx*dt,0,s.room.width-36);
     if(target&&h.cooldown===0&&Math.abs(dx)<130){h.vy=target.y<h.y-30?-420:-230;h.cooldown=.85;h.pose='bite';}
     h.vy=Math.min(480,h.vy+1200*dt);h.y+=h.vy*dt;const ground=K.surfaceAt(s,h.x+18,h.y+20);if(h.y+26>=ground&&h.vy>=0){h.y=ground-26;h.vy=0;}
     if(h.y>520||Math.abs(h.x-s.player.x)>650){h.x=s.player.x-30;h.y=s.player.y+18;h.vy=0;}
-    if(target&&h.pose==='bite'&&h.cooldown>.45&&K.overlap({x:h.x-9,y:h.y-10,w:65,h:55},target)){K.hitEnemy(s,target,18,h.x,false,'hound');h.pose='run';K.effect(s,'hit',target.x,target.y+15,{color:'#a8e6d7'});}
+    if(target&&h.pose==='bite'&&h.cooldown>.45&&K.overlap({x:h.x-9,y:h.y-10,w:65,h:55},target)){K.withContact(s,{x:h.x-9,y:h.y-10,w:65,h:55},()=>K.hitEnemy(s,target,18,h.x,false,'hound'));h.pose='run';}
   }
   const step=K.step;K.step=function(s,a={},dt=K.DT){
-    if(s.mode!=='playing')return step(s,a,dt);const ticking=s.hitstop<=0,action={...a};if(s.hero==='erlang'&&a.clonePressed)action.clonePressed=false;if(s.hero==='wukong'&&a.secondaryPressed)action.clonePressed=true;
+    if(s.mode!=='playing')return step(s,a,dt);const ticking=s.hitstop<=0,action={...a};if(s.hero==='erlang'&&a.clonePressed)action.clonePressed=false;
     step(s,action,dt);if(s.mode!=='playing'){if(s.player.hp<=0)s.hound=null;return;}if(!ticking)return;
-    const p=s.player;p.secondaryCD=Math.max(0,p.secondaryCD-dt);p.secondaryPose=Math.max(0,p.secondaryPose-dt);
+    const p=s.player;p.secondaryCD=Math.max(0,p.secondaryCD-dt);p.secondaryPose=Math.max(0,p.secondaryPose-dt);p.lotusBuff=Math.max(0,p.lotusBuff-dt);p.eyePose=Math.max(0,p.eyePose-dt);
     if(a.secondaryPressed)secondary(s,a);if(s.hero==='erlang'&&a.clonePressed&&p.hurt<=0&&p.ultimate===0)eye(s);
     if(s.bow){if(p.hurt>0)s.bow=null;else{s.bow.timer-=dt;if(s.bow.timer<=0){s.arrows.push({x:p.x+12,y:p.y+16,w:24,h:6,vx:s.bow.dx*720,vy:s.bow.dy*720,life:1.1});s.bow=null;K.event(s,'bow-fire');}}}
     for(const arrow of s.arrows){arrow.life-=dt;const old={ax:arrow.x,ay:arrow.y,bx:arrow.x+arrow.vx*dt,by:arrow.y+arrow.vy*dt};arrow.x=old.bx;arrow.y=old.by;
@@ -66,8 +71,10 @@
     if(s.eye){s.eye.life-=dt;if(s.eye.life<=0){if(K.has(s,'mercy'))p.focus=Math.min(100,p.focus+15);if(K.rank(s,'clone-burst'))K.strike(s,s.eye,24,p.x,true,[],'heavy');s.eye=null;}}
     stepHound(s,dt);
   };
+  const mainContacts=new WeakSet(),strike=K.strike;K.strike=function(s,b,n,o,p,targets,impact){const main=targets===s.player.attackTargets&&s.player.attack>0,active=mainContacts.has(s);if(main)mainContacts.add(s);try{return strike(s,b,n,o,p,targets,impact);}finally{if(!active)mainContacts.delete(s);}};
+  const weaponHit=K.hitEnemy;K.hitEnemy=function(s,e,n,o,p,impact){const yes=weaponHit(s,e,n,o,p,impact);if(yes&&s.hero==='nezha'&&s.player.lotusBuff>0&&mainContacts.has(s)&&['light','heavy'].includes(impact)&&e.hp>0)K.hitEnemy(s,e,6,o,p,'lotus-burn');return yes;};
   K.readWarrior=function(s,room,number,fail){
-    const p=s.player;if(!number(p.secondaryCD,0,1)||!number(p.secondaryPose,0,.4))fail();
+    const p=s.player;if(!number(p.secondaryCD,0,1)||!number(p.secondaryPose,0,.4)||!number(p.lotusBuff,0,4)||!number(p.eyePose,0,.45)||(s.hero!=='nezha'&&p.lotusBuff>0)||(s.hero!=='erlang'&&p.eyePose>0))fail();
     if(s.hero!=='wukong'&&s.arm!==null)fail();
     if(s.bow!==null&&(s.hero!=='erlang'||!s.bow||!number(s.bow.timer,0,.22)||!number(s.bow.dx,-1,1)||!number(s.bow.dy,-1,1)||Math.abs(Math.hypot(s.bow.dx,s.bow.dy)-1)>.001))fail();
     if(!Array.isArray(s.arrows)||s.arrows.length>3||s.arrows.some(b=>s.hero!=='erlang'||!number(b.x,-100,room.width+100)||!number(b.y,-1000,1000)||!number(b.vx,-720,720)||!number(b.vy,-720,720)||!number(b.life,0,1.1)||b.w!==24||b.h!==6))fail();

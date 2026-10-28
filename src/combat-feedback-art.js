@@ -1,0 +1,25 @@
+(function(K){
+ 'use strict';const Base=K.Renderer;
+ K.Renderer=class extends Base{
+  get modernCombatFX(){return true;}
+  combatFrame(id){const key='combat-v11:'+id;if(this.frameCache.has(key))return this.frameCache.get(key);const f=K.CombatFrames[id],im=f&&this.image(f.image);if(!im)return null;const c=document.createElement('canvas');c.width=c.height=64;c.getContext('2d').drawImage(im,...f.r,0,0,64,64);this.frameCache.set(key,c);return c;}
+  contact(id,x,y,size=28,alpha=1,face=1){const im=this.combatFrame(id),f=K.CombatFrames[id];if(!im)return;const c=this.c,scale=size/48;c.save();c.imageSmoothingEnabled=true;c.imageSmoothingQuality='high';c.globalAlpha*=alpha;c.translate(Math.round(x),Math.round(y));c.scale(face*scale,scale);c.drawImage(im,-f.anchor[0],-f.anchor[1]);c.restore();}
+  person(kind,x,y,face=1,frame=0,alpha=1,flash=false,scale=1){const s=this.scene,p=s?.player,isPlayer=kind==='monkey'&&s&&this.ui!=='menu'&&Math.abs(x-p.x)<.2&&Math.abs(y-p.y)<.2;
+   if(isPlayer&&s.hero==='wukong'&&p.secondaryPose>0&&p.attack<=0&&p.ultimate<=0&&!s.celestial.cast&&p.hp>0){const im=this.cloudFrame('orbit-forward');if(im){const c=this.c;c.save();c.globalAlpha=alpha;c.translate(Math.round(x+12),Math.round(y+44));c.scale(face,1);c.drawImage(im,-80,-112);c.restore();this.staffRod(x+12,y+20,x+12+face*54,y+18,4);return;}}
+   if(isPlayer&&s.hero==='erlang'&&p.eyePose>0&&p.hurt<=0&&p.ultimate<=0&&p.hp>0){const im=this.v8Frame('erlang-6'),c=this.c;if(im){c.save();c.globalAlpha=alpha;c.translate(Math.round(x+12),Math.round(y+44));c.scale(face,1);c.drawImage(im,-80,-112);c.restore();this.contact('eye',x+12+face*7,y-26,18,.9);return;}}
+   super.person(kind,x,y,face,frame,alpha,flash,scale);
+  }
+  drawProjectile(b){if(b.impact!=='staff-bolt')return super.drawProjectile(b);const c=this.c,x=b.x+b.w/2,y=b.y+b.h/2,a=Math.atan2(b.vy,b.vx);c.save();c.translate(Math.round(x),Math.round(y));c.rotate(a);c.strokeStyle='#f4d58d';c.lineWidth=2;c.beginPath();c.moveTo(-16,0);c.lineTo(10,0);c.stroke();c.strokeStyle='#a88245';c.lineWidth=1;c.beginPath();c.moveTo(-22,-3);c.quadraticCurveTo(-5,-8,10,0);c.moveTo(-22,3);c.quadraticCurveTo(-5,8,10,0);c.stroke();c.restore();}
+  fx(f,t){const s=this.scene,u=K.clamp(1-f.life/(f.duration||.42),0,1),fade=Math.min(1,(1-u)*1.6),face=f.face||1;
+   if(['hit','heavy-hit','hurt','six-strike','brace-hit','block','reflect'].includes(f.kind)){const guard=['brace-hit','block','reflect'].includes(f.kind),id=f.kind==='hurt'?'injury':guard?'guard':f.impact==='lotus-burn'?'lotus':f.impact==='arrow'||f.impact==='beam'||f.impact==='hound'?'blade':s?.hero==='nezha'?'spear':s?.hero==='erlang'?'blade':f.kind==='heavy-hit'?'staff-heavy':'staff-light',size=guard?24:f.kind==='heavy-hit'?40:f.impact==='lotus-burn'?17:25;this.contact(id,f.x,f.y,size*(.9+u*.18),fade,face);return;}
+   if(f.kind==='ultimate-aura'&&s.hero==='nezha'){const c=this.c;c.save();c.globalAlpha*=fade*.75;c.strokeStyle='#f6bd64';c.lineWidth=2;for(const dx of [-22,22]){c.beginPath();c.ellipse(f.x+dx,f.y-8,20,13,0,0,Math.PI*2);c.stroke();}c.restore();return;}
+   if(f.kind==='ultimate-wave'){const b=f.box||K.ultimateBox(s),c=this.c;c.save();c.globalAlpha*=fade;c.strokeStyle='#ebc472';c.lineWidth=4;c.beginPath();c.ellipse(f.x,f.y+12,Math.min(210,b.w*.48),26+u*10,0,0,Math.PI*2);c.stroke();c.restore();return;}
+   if(f.kind==='lotus-release'){const b=f.box,c=this.c;c.save();c.beginPath();c.rect(b.x,b.y,b.w,b.h);c.clip();c.globalAlpha*=fade*.85;c.strokeStyle='#f8dca0';c.lineWidth=3;const radius=100+u*190;c.beginPath();c.ellipse(f.x,f.y,radius,35+u*28,0,0,Math.PI*2);c.stroke();c.strokeStyle='#dc713d';c.lineWidth=2;c.beginPath();c.ellipse(f.x,f.y,radius-10,31+u*25,0,.25,Math.PI*1.8);c.stroke();for(const sign of [-1,1])this.contact('lotus',f.x+sign*radius,f.y,28,fade,sign);c.restore();return;}
+   if(f.kind==='staff-bolt-launch'){this.contact('staff-light',f.x,f.y,24,fade,face);return;}
+   if(f.kind==='ring-launch'||f.kind==='silk-cast')return;
+   super.fx(f,t);
+  }
+  drawPlayerOverlay(s){super.drawPlayerOverlay(s);const p=s.player;if(s.hero!=='nezha'||p.lotusBuff<=0||p.hp<=0)return;const c=this.c,t=this.clock;c.save();c.globalAlpha*=.6;for(const dx of [-12,15]){const x=p.x+12+dx,y=p.y+43;c.strokeStyle='#df8448';c.lineWidth=1;c.beginPath();c.ellipse(x,y,11,5,t*2,0,Math.PI*2);c.stroke();}c.restore();if(p.attack>0){const a=p.attackDuration-p.attack,timing=K.attackTiming(p);if(a>=timing.start&&a<timing.end){const b=K.attackBox(s);this.contact('lotus',p.face>0?b.x+b.w-5:b.x+5,p.y+22,15,.78,p.face);}}}
+  drawPlayerUnderlay(s){super.drawPlayerUnderlay(s);const c=this.c;for(const e of s.room.enemies)if(K.bossBraced(e)){const x=e.x+e.w/2+e.face*(e.w/2+8),y=e.y+e.h*.48;c.save();c.globalAlpha=.55;c.strokeStyle='#ceaa70';c.lineWidth=2;c.beginPath();c.ellipse(x,y,10,28,0,e.face>0?-Math.PI/2:Math.PI/2,e.face>0?Math.PI/2:Math.PI*1.5);c.stroke();c.restore();}}
+ };
+})(globalThis.Kong ||= {});

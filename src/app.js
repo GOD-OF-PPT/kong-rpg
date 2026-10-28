@@ -102,12 +102,12 @@
       ['通关评分与挑战','时间35分（25分钟内满）、受伤40分（每次扣0.5）、唯一敌人击杀率25分。S≥90、A≥75、B≥55。普通完整十五关通关S才解锁挑战；暂停和奖励阅读不计时。'],
       ['秘技与化身','路边带“秘技＋招式名”的兵器托座可按F参悟，可选择不学。竖棍为撑天坠击，环绕长棍为回身棍阵；按C释放，左上角显示技能和冷却。B查看与切换已学秘技，共享冷却不会重置。悟空撑天须落地，杨戬激光引导时不能移动；化身也会受伤。'],
       ['步法与落点','A D移动，空格/W跳。长按高跳、松开短跳；S＋空格下穿。踩敌反弹，腾云骨多一跳。'],
-      ['主副武器','J/左键主攻：悟空金箍棒、哪吒火尖枪、杨戬三尖两刃刀。H/右键副攻：哪吒掷环、杨戬射雕弓。右键朝光标，H水平出手；副武器消耗定力。'],
+      ['主副武器','J/左键主攻：悟空金箍棒、哪吒火尖枪、杨戬三尖两刃刀。H/右键副攻：悟空破空棍劲、哪吒乾坤圈、杨戬射雕弓。右键朝光标，H水平出手；H与L神通各自使用。副武器消耗定力。'],
       ['闪避与神通','K/Shift闪避。L：悟空分身、哪吒混天绫、杨戬天眼。普攻命中回定力。杨戬R召哮天犬协战8秒，需要你牵制目标；三角色详情按B。'],
       ['大招、符术与变化','命中积攒战意，满100按R释放大招：破盾、清近处敌弹。起势护体，收招仍有风险。Q使用限次符术，余量见左上。U：悟空按住蓄棍、松开伸刺；S松开撑地跃。哪吒按住驭轮，W升S降，松开落下；杨戬U为神行步。'],
       ['长路与成法','F借灯、触发见闻或过门。上路试炼可跳过，清场后回去领奖；归灯只用一次。补给满值留地。每次奖励择一：舍利最多三枚，法门本局保留，新符替换旧符；B查详情。'],
       ['敌人战纹','头顶双刃为连刃、带翼盾为震盾、三束为散射；红色刃芒外圈表示正在起手，连招第二击会再次亮起。挑战强化融入朱红边；无特性强化兵为妖冠。具体避让方向仍看地面与弹道。'],
-      ['识别与重来','敌人暗红细边，危险玫红预警；增益青绿底标加形状，满值变暗。领域锁定后移开，地面波跳避。五章十五关依序推进，前两关小首领、第三关大首领。每关击退首领后F过门；失败清空本局成长。']
+      ['首领与重来','首领正面架势会削减伤害，绕背或跟进收招撤步可全伤。追赶时松开攻击跑得更快。章末重招36伤、飞弹28、冲撞30，第二招重新预警；地波跳避、立柱移开。大招不能无限打断，破潮珠与塔基可主动中断。F过门；失败清空本局成长。']
     ];
     $('overlay').innerHTML=panel('行者手记','手记 · 看清再出手','棍有尽处，变化无穷',`<div class="help-grid">${lessons.map(([title,text])=>`<div><h3>${title}</h3><p>${text}</p></div>`).join('')}</div><div class="actions">${btn('close-help','记下了',true)}${btn('import','导入存档')}${btn('old','原版旅程')}</div>`);
     on('close-help',()=>show(backScreen));on('import',()=>$('import-file').click());on('old',()=>show('legacy'));
@@ -139,7 +139,7 @@
   }
   function legacyMenu(){
     $('overlay').innerHTML=panel('原版旅程','存档保护 · 旧路仍在','在原来的规则中继续',`<p class="story-copy">旧版的地图与规则和新版不同。你的旧旅程不会被覆盖，也不会被悄悄搬到另一张地图。<br><br>${storage.legacy?'可先下载旧档，再在打开的原版里通过「初行指南 → 导入存档」继续。':'保留的原版可直接打开；如果你有旧JSON文件，请在原版的指南中导入。'}</p><div class="actions">${btn('open-legacy',storage.legacy?'备份旧档并打开原版':'打开原版',true)}${btn('back','返回新版')}</div>`);
-    on('open-legacy',()=>{if(storage.legacy)K.download(JSON.stringify(storage.legacy),'劫后行-v'+storage.legacy.state.version+'-旧旅程.json');const version=storage.legacy?.state?.version||9,legacyName='legacy-v'+version+'.html';const legacy=document.querySelector('meta[name="kong-package"]')?legacyName:'release/'+legacyName;window.open(new URL(legacy,location.href).href,'_blank','noopener');toast('已打开保留的原版；可通过手记导入旧旅程。',4);});on('back',()=>show('menu'));
+    on('open-legacy',()=>{if(storage.legacy)K.download(JSON.stringify(storage.legacy),'劫后行-v'+storage.legacy.state.version+'-旧旅程.json');const version=storage.legacy?.state?.version||10,legacyName='legacy-v'+version+'.html';const legacy=document.querySelector('meta[name="kong-package"]')?legacyName:'release/'+legacyName;window.open(new URL(legacy,location.href).href,'_blank','noopener');toast('已打开保留的原版；可通过手记导入旧旅程。',4);});on('back',()=>show('menu'));
   }
   function exportSave(){save();storage.export(state,meta);toast('已导出整段旅程，含动态敌招与舍利选择。');}
   function control(action){
@@ -178,6 +178,7 @@
     $('hp-number').textContent=Math.ceil(p.hp)+' / '+K.maxHP(state);$('hp-fill').style.width=(p.hp/K.maxHP(state)*100)+'%';$('focus-number').textContent=Math.floor(p.focus);$('focus-fill').style.width=p.focus+'%';$('rage-number').textContent=Math.floor(p.rage);$('rage-fill').style.width=p.rage+'%';$('rage-line').classList.toggle('ready',p.rage>=100);$('rage-line').title=p.rage>=100?'按 R 释放'+K.heroDef(state).skill:'命中积攒战意';$('talisman-state').textContent=state.talisman?'Q '+rewardInfo(state.talisman.id).name+' ×'+state.talisman.charges:'Q 未携符术';$('growth-state').textContent=Object.entries(state.growth).map(([id,n])=>rewardInfo(id).name+(n>1?'·'+n+'重':'')).join(' · ')||'暂无';$('chapter').textContent='第'+(Math.floor(state.stage/3)+1)+'章 · 第'+(state.stage%3+1)+'关 / 3'+(K.isChallenge(state)?' · 挑战':'');$('stage-name').textContent=K.STAGES[state.stage].name;
     const left=null,guardian=K.guardian(state);$('objective').textContent=guardian?.hp>0?'击退'+K.GUARDIANS[state.stage].name+' · '+(state.stage%3===2?'章末大首领':'小首领'):'守关者已退 · F过门';
     const art=K.artDef(state.celestial.equipped);$('art-state').textContent=art?'C '+art.name+' · '+(state.celestial.cast?'施展中':state.celestial.cooldown>0?state.celestial.cooldown.toFixed(1)+'s':p.focus<art.focus?'定力不足':'就绪'):'C 未习秘技 · F拾卷';
+    $('combat-state').textContent=state.hero==='nezha'&&p.lotusBuff>0?'莲火附枪 '+p.lotusBuff.toFixed(1)+'s · 主攻命中 +6':state.hero==='wukong'?'H 破空棍劲 · L 分身':state.hero==='erlang'?'H 射雕弓 · L 天眼'+(state.eye?' '+state.eye.life.toFixed(1)+'s':''):'H 乾坤圈 · L 混天绫';$('combat-state').classList.toggle('empowered',state.hero==='nezha'&&p.lotusBuff>0);
     $('world-labels').innerHTML=K.artManualLabels(state,renderer.camera).map(q=>`<span class="world-art-label ${q.near?'near':''}" data-art="${q.art}" style="left:${q.sx/960*100}%;top:${q.sy/540*100}%"><small>秘技${q.owned?' · 已习':''}</small>${esc(q.name)}${q.near?'<kbd>F '+(q.owned?'换式':'参悟')+'</kbd>':''}</span>`).join('');
     const boss=state.room.enemies.find(e=>(e.kind==='boss'||e.kind==='warden')&&!e.dormant&&e.hp>0);$('boss-hud').hidden=!boss;
     if(boss){$('boss-name').textContent=boss.kind==='warden'?K.GUARDIANS[state.stage].name:'无天';$('boss-fill').style.width=boss.hp/boss.maxHp*100+'%';$('boss-hud').style.setProperty('--boss-color',boss.kind==='warden'?K.GUARDIANS[state.stage].color:'#ba77a3');$('boss-phase').textContent=K.challengePhaseText(boss)||(boss.kind==='warden'?(boss.phase==='recover'?'收招破绽 · 出棍':boss.phase==='warden-windup'?({charge:'冲撞将至 · 跃过路径',quake:'震地将至 · 跳',fan:'散焰将至 · 跳或返弹',lantern:'索灯将至 · 离开莲印',columns:'封愿将至 · 横移',bell:'钟浪将至 · 跳'}[boss.move]):'看清下一招'):boss.phase==='recover'?'破绽已现':boss.phase==='sweep-windup'?'横扫将至 · 跳':boss.phase==='orb-windup'?'莲焰将至 · 闪':boss.phase==='rain-windup'?'落火将至 · 离开莲印':boss.phase==='shift-windup'?'移形将至 · 让路':'黑莲护在正面');}

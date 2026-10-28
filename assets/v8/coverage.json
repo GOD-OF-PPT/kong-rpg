@@ -235,6 +235,10 @@
     "staffFx": {
       "width": 1920,
       "height": 112
+    },
+    "combatContacts": {
+      "width": 512,
+      "height": 64
     }
   },
   "frames": {
@@ -4285,7 +4289,121 @@
           75
         ]
       }
+    ],
+    "CombatFrames": [
+      {
+        "id": "staff-light",
+        "image": "combatContacts",
+        "r": [
+          0,
+          0,
+          64,
+          64
+        ],
+        "anchor": [
+          20,
+          32
+        ]
+      },
+      {
+        "id": "staff-heavy",
+        "image": "combatContacts",
+        "r": [
+          64,
+          0,
+          64,
+          64
+        ],
+        "anchor": [
+          29,
+          42
+        ]
+      },
+      {
+        "id": "spear",
+        "image": "combatContacts",
+        "r": [
+          128,
+          0,
+          64,
+          64
+        ],
+        "anchor": [
+          33,
+          32
+        ]
+      },
+      {
+        "id": "blade",
+        "image": "combatContacts",
+        "r": [
+          192,
+          0,
+          64,
+          64
+        ],
+        "anchor": [
+          32,
+          33
+        ]
+      },
+      {
+        "id": "guard",
+        "image": "combatContacts",
+        "r": [
+          256,
+          0,
+          64,
+          64
+        ],
+        "anchor": [
+          45,
+          34
+        ]
+      },
+      {
+        "id": "injury",
+        "image": "combatContacts",
+        "r": [
+          320,
+          0,
+          64,
+          64
+        ],
+        "anchor": [
+          35,
+          32
+        ]
+      },
+      {
+        "id": "lotus",
+        "image": "combatContacts",
+        "r": [
+          384,
+          0,
+          64,
+          64
+        ],
+        "anchor": [
+          31,
+          39
+        ]
+      },
+      {
+        "id": "eye",
+        "image": "combatContacts",
+        "r": [
+          448,
+          0,
+          64,
+          64
+        ],
+        "anchor": [
+          33,
+          40
+        ]
+      }
     ]
   },
-  "total": 300
+  "total": 308
 }

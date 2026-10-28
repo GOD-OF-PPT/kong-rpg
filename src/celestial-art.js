@@ -70,8 +70,8 @@
       if(p.ward>0)this.celestialStamp('spin-ring',p.x+12,p.y+22,68,70,.4);
       if(s.ring)this.celestialStamp('spin-ring',s.ring.x+11,s.ring.y+11,30,24,.95,t*7);
       if(s.silk){const b=s.silk;c.save();c.beginPath();c.rect(b.x,b.y,b.w,b.h);c.clip();this.celestialStamp('silk',b.x+b.w/2,b.y+b.h/2,b.w,b.h,.65);c.restore();}
-      if(s.eye){const b=s.eye;this.celestialStamp('silver-slash',b.x+b.w/2,b.y+2,55,24,.5);}
-      for(const arrow of s.arrows)this.celestialStamp('silver-slash',arrow.x-Math.sign(arrow.vx)*10,arrow.y,42,12,.65,Math.atan2(arrow.vy,arrow.vx));
+      if(s.eye&&!this.modernCombatFX){const b=s.eye;this.celestialStamp('silver-slash',b.x+b.w/2,b.y+2,55,24,.5);}
+      if(!this.modernCombatFX)for(const arrow of s.arrows)this.celestialStamp('silver-slash',arrow.x-Math.sign(arrow.vx)*10,arrow.y,42,12,.65,Math.atan2(arrow.vy,arrow.vx));
       if(s.hound){const h=s.hound;if(h.pose==='bite')this.celestialStamp('silver-slash',h.x+h.face*18,h.y+12,64,37,.7);else if(Math.abs(h.vx)>120)this.celestialStamp('wind',h.x-h.face*12,h.y+24,38,15,.35);}
       if(cast&&!(this.handlesStaffArts&&['sky-staff','orbit-staff'].includes(cast.id))){const age=cast.age;
         if(cast.id==='sky-staff'){
