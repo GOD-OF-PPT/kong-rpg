@@ -12,7 +12,7 @@
       const key=stage===0?'mountain':stage===1?'ferry':'sanctuary',image=this.image(key);
       if(!image)return super.background(stage);
       if(!this.imageBackgrounds[stage]){
-        const out=document.createElement('canvas');out.width=960;out.height=540;const c=out.getContext('2d');c.imageSmoothingEnabled=false;
+        const out=document.createElement('canvas');out.width=960;out.height=540;const c=out.getContext('2d');c.imageSmoothingEnabled=true;c.imageSmoothingQuality='high';
         c.fillStyle='#263e47';c.fillRect(0,0,960,540);c.globalAlpha=.83;c.drawImage(image,0,0,960,540);c.globalAlpha=1;
         c.fillStyle=stage===3?'#15102155':'#0d1d2330';c.fillRect(0,0,960,540);
         const g=c.createLinearGradient(0,220,0,540);g.addColorStop(0,'#0a182000');g.addColorStop(.52,'#0c1b2840');g.addColorStop(1,stage===3?'#1c1029c0':'#0c1c2bad');c.fillStyle=g;c.fillRect(0,220,960,320);
@@ -26,7 +26,7 @@
       const image=running||this.image(kind==='monkey'?'wukong':'enemies');if(!image)return null;
       const info=running?RUN[variant%6]:kind==='monkey'?HERO[pose]||HERO.idle:ENEMIES[kind][variant];
       const [sx,sy,sw,sh]=info.r,scale=running?.21:kind==='boss'?.19:kind==='caster'?.125:kind==='monkey'?.17:.153;
-      const out=document.createElement('canvas');out.width=192;out.height=144;const c=out.getContext('2d');c.imageSmoothingEnabled=false;
+      const out=document.createElement('canvas');out.width=192;out.height=144;const c=out.getContext('2d');c.imageSmoothingEnabled=true;c.imageSmoothingQuality='high';
       const x=96+(sx-info.a[0])*scale,y=123+(sy-info.a[1])*scale;
       c.drawImage(image,sx,sy,sw,sh,Math.round(x),Math.round(y),Math.round(sw*scale),Math.round(sh*scale));
       if(flash||ghost){c.globalCompositeOperation='source-atop';c.fillStyle=flash?'#f5e0ad':'#66d5cc';c.globalAlpha=flash?.28:.62;c.fillRect(0,0,out.width,out.height);}

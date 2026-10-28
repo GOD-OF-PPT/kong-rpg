@@ -45,7 +45,7 @@
     if(state&&next!=='playing'&&state.arm?.phase==='charge')K.cancelSignature(state,true);screen=next;input.setActive(next==='playing');if(next!=='playing')audio.stopImpacts();audio.setScreen(next);$('stage').dataset.mode=next;
     const modal=!['menu','playing'].includes(next);document.querySelector('.masthead').inert=modal;document.querySelector('.footline').inert=modal;world.inert=modal;$('hud').inert=modal;
     if(next!=='playing'){pendingInputs=[];$('toast').hidden=true;toastUntil=0;}
-    $('hud').hidden=!state||next!=='playing';$('overlay').innerHTML='';
+    $('hud').hidden=!state||next!=='playing';$('world-labels').hidden=next!=='playing';$('overlay').innerHTML='';
     $('pause').disabled=!['playing','paused'].includes(next);$('combat-labels').hidden=next!=='playing';
     if(next==='playing'){world.focus({preventScroll:true});return;}
     const render={menu,prologue,heroes, start:starter,paused:pauseMenu,build:buildMenu,help,'art-choice':artChoice,reward,replace:replaceRelic,dead:ending,won:ending,epilogue,legacy:legacyMenu,history};render[next]?.();
@@ -100,7 +100,7 @@
   function help(){
     const lessons=[
       ['通关评分与挑战','时间35分（25分钟内满）、受伤40分（每次扣0.5）、唯一敌人击杀率25分。S≥90、A≥75、B≥55。普通完整十五关通关S才解锁挑战；暂停和奖励阅读不计时。'],
-      ['秘技卷与化身','路边发光秘技卷按F参悟，可选择不学。按C释放，左上角显示技能和冷却；B查看与切换已学秘技，共享冷却不会重置。悟空撑天须落地，杨戬激光引导时不能移动；化身也会受伤。'],
+      ['秘技与化身','路边带“秘技＋招式名”的兵器托座可按F参悟，可选择不学。竖棍为撑天坠击，环绕长棍为回身棍阵；按C释放，左上角显示技能和冷却。B查看与切换已学秘技，共享冷却不会重置。悟空撑天须落地，杨戬激光引导时不能移动；化身也会受伤。'],
       ['步法与落点','A D移动，空格/W跳。长按高跳、松开短跳；S＋空格下穿。踩敌反弹，腾云骨多一跳。'],
       ['主副武器','J/左键主攻：悟空金箍棒、哪吒火尖枪、杨戬三尖两刃刀。H/右键副攻：哪吒掷环、杨戬射雕弓。右键朝光标，H水平出手；副武器消耗定力。'],
       ['闪避与神通','K/Shift闪避。L：悟空分身、哪吒混天绫、杨戬天眼。普攻命中回定力。杨戬R召哮天犬协战8秒，需要你牵制目标；三角色详情按B。'],
@@ -178,6 +178,7 @@
     $('hp-number').textContent=Math.ceil(p.hp)+' / '+K.maxHP(state);$('hp-fill').style.width=(p.hp/K.maxHP(state)*100)+'%';$('focus-number').textContent=Math.floor(p.focus);$('focus-fill').style.width=p.focus+'%';$('rage-number').textContent=Math.floor(p.rage);$('rage-fill').style.width=p.rage+'%';$('rage-line').classList.toggle('ready',p.rage>=100);$('rage-line').title=p.rage>=100?'按 R 释放'+K.heroDef(state).skill:'命中积攒战意';$('talisman-state').textContent=state.talisman?'Q '+rewardInfo(state.talisman.id).name+' ×'+state.talisman.charges:'Q 未携符术';$('growth-state').textContent=Object.entries(state.growth).map(([id,n])=>rewardInfo(id).name+(n>1?'·'+n+'重':'')).join(' · ')||'暂无';$('chapter').textContent='第'+(Math.floor(state.stage/3)+1)+'章 · 第'+(state.stage%3+1)+'关 / 3'+(K.isChallenge(state)?' · 挑战':'');$('stage-name').textContent=K.STAGES[state.stage].name;
     const left=null,guardian=K.guardian(state);$('objective').textContent=guardian?.hp>0?'击退'+K.GUARDIANS[state.stage].name+' · '+(state.stage%3===2?'章末大首领':'小首领'):'守关者已退 · F过门';
     const art=K.artDef(state.celestial.equipped);$('art-state').textContent=art?'C '+art.name+' · '+(state.celestial.cast?'施展中':state.celestial.cooldown>0?state.celestial.cooldown.toFixed(1)+'s':p.focus<art.focus?'定力不足':'就绪'):'C 未习秘技 · F拾卷';
+    $('world-labels').innerHTML=K.artManualLabels(state,renderer.camera).map(q=>`<span class="world-art-label ${q.near?'near':''}" data-art="${q.art}" style="left:${q.sx/960*100}%;top:${q.sy/540*100}%"><small>秘技${q.owned?' · 已习':''}</small>${esc(q.name)}${q.near?'<kbd>F '+(q.owned?'换式':'参悟')+'</kbd>':''}</span>`).join('');
     const boss=state.room.enemies.find(e=>(e.kind==='boss'||e.kind==='warden')&&!e.dormant&&e.hp>0);$('boss-hud').hidden=!boss;
     if(boss){$('boss-name').textContent=boss.kind==='warden'?K.GUARDIANS[state.stage].name:'无天';$('boss-fill').style.width=boss.hp/boss.maxHp*100+'%';$('boss-hud').style.setProperty('--boss-color',boss.kind==='warden'?K.GUARDIANS[state.stage].color:'#ba77a3');$('boss-phase').textContent=K.challengePhaseText(boss)||(boss.kind==='warden'?(boss.phase==='recover'?'收招破绽 · 出棍':boss.phase==='warden-windup'?({charge:'冲撞将至 · 跃过路径',quake:'震地将至 · 跳',fan:'散焰将至 · 跳或返弹',lantern:'索灯将至 · 离开莲印',columns:'封愿将至 · 横移',bell:'钟浪将至 · 跳'}[boss.move]):'看清下一招'):boss.phase==='recover'?'破绽已现':boss.phase==='sweep-windup'?'横扫将至 · 跳':boss.phase==='orb-windup'?'莲焰将至 · 闪':boss.phase==='rain-windup'?'落火将至 · 离开莲印':boss.phase==='shift-windup'?'移形将至 · 让路':'黑莲护在正面');}
     if(state.hero==='erlang'){$('signature-fill').style.width=p.armCD>0?'0%':'100%';$('signature-state').textContent=unavailable||(p.armCD>0?'回气':p.focus<12?'定力不足':'就绪');}

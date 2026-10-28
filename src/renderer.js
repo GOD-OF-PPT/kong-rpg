@@ -85,7 +85,8 @@
       const p=s.player;const below=s.room.platforms.filter(q=>q.y>=p.y+p.h-3&&p.x+p.w>q.x&&p.x<q.x+q.w).sort((a,b)=>a.y-b.y)[0];if(below){const w=K.clamp(34-(below.y-p.y-p.h)*.1,14,34);pixel(c,p.x+12-w/2,below.y-2,w,3,'#1d2532');}
       for(const fx of s.effects.filter(f=>f.kind==='trail').slice(-3))this.person('monkey',fx.x,fx.y,fx.face,0,.12,false);
       if(s.clone){c.save();c.globalAlpha=.4;pixel(c,s.clone.x-15,s.clone.y+45,60,3,'#79d9d2');c.restore();this.person('monkey',s.clone.x,s.clone.y,s.clone.face,Math.floor(t*8)%4,.52);}
-      this.person('monkey',p.x,p.y,p.face,p.grounded?Math.abs(p.vx)>30?Math.floor(t*13)%4:0:2,p.invuln>0&&Math.floor(t*15)%2?.45:1,false);this.drawPlayerStatus?.(s);
+      this.drawPlayerUnderlay?.(s);
+      this.person('monkey',p.x,p.y,p.face,p.grounded?Math.abs(p.vx)>30?Math.floor(t*13)%4:0:2,p.invuln>0&&Math.floor(t*15)%2?.45:1,false);this.drawPlayerStatus?.(s);this.drawPlayerOverlay?.(s);
       if(p.attack>0&&this.drawStaffArc){this.drawStaffArc(s);}else if(p.attack>0){const elapsed=p.attackDuration-p.attack;if(elapsed>=.055&&elapsed<.18){const b=K.attackBox(s);pixel(c,b.x,b.y+17,b.w,3,'#f4d296');pixel(c,p.face>0?b.x+b.w-4:b.x,b.y+7,4,22,'#e0ba77');}}
       if(p.slam)this.drawSlamTrail?.(s);
       for(const b of s.projectiles){if(this.drawProjectile){this.drawProjectile(b);continue;}const col=b.friendly?'#95e0d3':'#da8ebc';pixel(c,b.x-3,b.y+3,b.w+6,b.h-6,col);pixel(c,b.x,b.y,b.w,b.h,col);pixel(c,b.x+3,b.y+3,b.w-6,b.h-6,b.friendly?'#e5f8cb':'#f5cae1');pixel(c,b.x-Math.sign(b.vx)*10,b.y+4,8,4,b.friendly?'#3d807e':'#75456e');}

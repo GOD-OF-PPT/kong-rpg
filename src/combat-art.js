@@ -5,7 +5,7 @@
   K.Renderer=class extends Base{
     comboFrame(index,ghost=false){
       const key='combo:'+index+':'+ghost;if(this.frameCache.has(key))return this.frameCache.get(key);const image=this.image('combo');if(!image)return null;
-      const out=document.createElement('canvas');out.width=192;out.height=144;const c=out.getContext('2d');c.imageSmoothingEnabled=false;const f=COMBO[index],[x,y,w,h]=f.r,scale=.2;
+      const out=document.createElement('canvas');out.width=192;out.height=144;const c=out.getContext('2d');c.imageSmoothingEnabled=true;c.imageSmoothingQuality='high';const f=COMBO[index],[x,y,w,h]=f.r,scale=.2;
       c.drawImage(image,x,y,w,h,Math.round(96+(x-f.a[0])*scale),Math.round(123+(y-f.a[1])*scale),Math.round(w*scale),Math.round(h*scale));
       if(ghost){c.globalCompositeOperation='source-atop';c.fillStyle='#63ded4';c.globalAlpha=.7;c.fillRect(0,0,192,144);}this.frameCache.set(key,out);return out;
     }
@@ -29,7 +29,7 @@
     }
     impactFrame(row,col){
       const key='impact:'+row+':'+col;if(this.frameCache.has(key))return this.frameCache.get(key);const image=this.image('impacts');if(!image)return null;
-      const out=document.createElement('canvas');out.width=128;out.height=128;const c=out.getContext('2d');c.imageSmoothingEnabled=false;const r=K.ArtCatalog.impacts[row*4+col].r;c.drawImage(image,...r,0,0,128,128);this.frameCache.set(key,out);return out;
+      const out=document.createElement('canvas');out.width=128;out.height=128;const c=out.getContext('2d');c.imageSmoothingEnabled=true;c.imageSmoothingQuality='high';const r=K.ArtCatalog.impacts[row*4+col].r;c.drawImage(image,...r,0,0,128,128);this.frameCache.set(key,out);return out;
     }
     fx(f,t){
       const age=(f.duration||.42)-f.life,progress=K.clamp(age/(f.duration||.42),0,.999),c=this.c;

@@ -219,6 +219,22 @@
     "actorRepair": {
       "width": 640,
       "height": 128
+    },
+    "cloudEnvironment": {
+      "width": 1024,
+      "height": 288
+    },
+    "cloudFoundation": {
+      "width": 768,
+      "height": 88
+    },
+    "staffActors": {
+      "width": 1280,
+      "height": 128
+    },
+    "staffFx": {
+      "width": 1920,
+      "height": 112
     }
   },
   "frames": {
@@ -3927,7 +3943,349 @@
           80
         ]
       }
+    ],
+    "CloudFrames": [
+      {
+        "id": "cloud-ledge",
+        "image": "cloudEnvironment",
+        "r": [
+          0,
+          0,
+          128,
+          30
+        ],
+        "anchor": [
+          64,
+          30
+        ]
+      },
+      {
+        "id": "cloud-foundation",
+        "image": "cloudFoundation",
+        "r": [
+          0,
+          0,
+          768,
+          88
+        ],
+        "anchor": [
+          384,
+          88
+        ]
+      },
+      {
+        "id": "cloud-fragile",
+        "image": "cloudEnvironment",
+        "r": [
+          512,
+          0,
+          128,
+          30
+        ],
+        "anchor": [
+          64,
+          30
+        ]
+      },
+      {
+        "id": "cloud-beacon",
+        "image": "cloudEnvironment",
+        "r": [
+          768,
+          0,
+          48,
+          84
+        ],
+        "anchor": [
+          24,
+          84
+        ]
+      },
+      {
+        "id": "cloud-gate",
+        "image": "cloudEnvironment",
+        "r": [
+          0,
+          128,
+          146,
+          132
+        ],
+        "anchor": [
+          73,
+          132
+        ]
+      },
+      {
+        "id": "cloud-camp-lit",
+        "image": "cloudEnvironment",
+        "r": [
+          256,
+          128,
+          52,
+          60
+        ],
+        "anchor": [
+          26,
+          60
+        ]
+      },
+      {
+        "id": "cloud-camp-spent",
+        "image": "cloudEnvironment",
+        "r": [
+          512,
+          128,
+          52,
+          60
+        ],
+        "anchor": [
+          26,
+          60
+        ]
+      },
+      {
+        "id": "manual-plinth",
+        "image": "cloudEnvironment",
+        "r": [
+          768,
+          128,
+          32,
+          13
+        ],
+        "anchor": [
+          16,
+          13
+        ]
+      },
+      {
+        "id": "sky-plant",
+        "image": "staffActors",
+        "r": [
+          0,
+          0,
+          160,
+          128
+        ],
+        "anchor": [
+          80,
+          112
+        ],
+        "grip": [
+          85,
+          83
+        ]
+      },
+      {
+        "id": "sky-rise",
+        "image": "staffActors",
+        "r": [
+          160,
+          0,
+          160,
+          128
+        ],
+        "anchor": [
+          80,
+          112
+        ],
+        "grip": [
+          93,
+          63
+        ]
+      },
+      {
+        "id": "sky-fall",
+        "image": "staffActors",
+        "r": [
+          320,
+          0,
+          160,
+          128
+        ],
+        "anchor": [
+          80,
+          112
+        ],
+        "grip": [
+          92,
+          48
+        ]
+      },
+      {
+        "id": "sky-land",
+        "image": "staffActors",
+        "r": [
+          480,
+          0,
+          160,
+          128
+        ],
+        "anchor": [
+          80,
+          112
+        ],
+        "grip": [
+          97,
+          103
+        ]
+      },
+      {
+        "id": "orbit-ready",
+        "image": "staffActors",
+        "r": [
+          640,
+          0,
+          160,
+          128
+        ],
+        "anchor": [
+          80,
+          112
+        ],
+        "grip": [
+          82,
+          79
+        ]
+      },
+      {
+        "id": "orbit-forward",
+        "image": "staffActors",
+        "r": [
+          800,
+          0,
+          160,
+          128
+        ],
+        "anchor": [
+          80,
+          112
+        ],
+        "grip": [
+          71,
+          81
+        ]
+      },
+      {
+        "id": "orbit-back",
+        "image": "staffActors",
+        "r": [
+          960,
+          0,
+          160,
+          128
+        ],
+        "anchor": [
+          80,
+          112
+        ],
+        "grip": [
+          81,
+          79
+        ]
+      },
+      {
+        "id": "orbit-finish",
+        "image": "staffActors",
+        "r": [
+          1120,
+          0,
+          160,
+          128
+        ],
+        "anchor": [
+          80,
+          112
+        ],
+        "grip": [
+          83,
+          80
+        ]
+      },
+      {
+        "id": "slam-contact",
+        "image": "staffFx",
+        "r": [
+          0,
+          0,
+          184,
+          73
+        ],
+        "anchor": [
+          92,
+          73
+        ]
+      },
+      {
+        "id": "slam-pressure",
+        "image": "staffFx",
+        "r": [
+          320,
+          0,
+          184,
+          45
+        ],
+        "anchor": [
+          92,
+          45
+        ]
+      },
+      {
+        "id": "slam-dust",
+        "image": "staffFx",
+        "r": [
+          640,
+          0,
+          184,
+          41
+        ],
+        "anchor": [
+          92,
+          41
+        ]
+      },
+      {
+        "id": "orbit-trail0",
+        "image": "staffFx",
+        "r": [
+          960,
+          0,
+          320,
+          71
+        ],
+        "anchor": [
+          160,
+          71
+        ]
+      },
+      {
+        "id": "orbit-trail1",
+        "image": "staffFx",
+        "r": [
+          1280,
+          0,
+          265,
+          76
+        ],
+        "anchor": [
+          132,
+          76
+        ]
+      },
+      {
+        "id": "orbit-trail2",
+        "image": "staffFx",
+        "r": [
+          1600,
+          0,
+          320,
+          75
+        ],
+        "anchor": [
+          160,
+          75
+        ]
+      }
     ]
   },
-  "total": 278
+  "total": 300
 }

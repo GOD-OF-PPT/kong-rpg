@@ -11,7 +11,7 @@
   const run=K.newRun,enter=K.enterRoom;
   K.newRun=function(...args){const s=run(...args);K.initCelestial(s);return s;};
   K.enterRoom=function(s,...args){enter(s,...args);K.initCelestial(s);s.celestial.cast=null;s.celestial.pending=null;};
-  K.artManuals=s=>K.ARTS.filter(a=>a.hero===s.hero).map((a,i)=>({id:s.stage+':'+i,art:a.id,x:230+i*145,y:418,w:26,h:26,used:s.celestial.claimed.includes(s.stage+':'+i)}));
+  K.artManuals=s=>K.ARTS.filter(a=>a.hero===s.hero).map((a,i)=>({id:s.stage+':'+i,art:a.id,x:210+i*100,y:418,w:26,h:26,used:s.celestial.claimed.includes(s.stage+':'+i)}));
   K.nearArtManual=s=>K.artManuals(s).filter(q=>!q.used&&Math.abs(s.player.x+12-q.x)<58&&Math.abs(s.player.y+44-q.y)<65).sort((a,b)=>Math.abs(a.x-s.player.x)-Math.abs(b.x-s.player.x))[0];
   K.equipArt=function(s,id){const a=K.artDef(id);if(!a||a.hero!==s.hero||!s.celestial.owned.includes(id)||s.celestial.cast)return false;s.celestial.equipped=id;return true;};
   K.learnArt=function(s,id){const a=K.artDef(id);if(!a||a.hero!==s.hero)return false;if(!s.celestial.owned.includes(id))s.celestial.owned.push(id);s.celestial.equipped=id;K.event(s,'art-learn',{id});return true;};
@@ -49,7 +49,7 @@
     const c=v.cast;if(!c)return;c.age+=dt;c.echo=Math.max(0,c.echo-dt);const def=K.artDef(c.id);
     if(c.id==='sky-staff'){
       const u=K.clamp((c.age-.18)/.42,0,1),fall=K.clamp((c.age-.78)/.24,0,1);p.x=c.x;p.y=c.y-230*(1-(1-u)**3)*(1-fall*fall);p.vx=p.vy=0;p.grounded=c.age<.18||c.age>=1.02;
-      if(c.age>=1.02&&c.pulse===0){c.pulse=1;K.strike(s,{x:c.viewX,y:-200,w:960,h:1000},72,p.x+12,true,[],'ultimate');p.y=c.y;s.hitstop=Math.max(s.hitstop,.065);s.shake=.22;K.effect(s,'celestial-slam',c.viewX+480,p.y+44,{duration:.48,w:960});K.event(s,'art-impact',{id:c.id});}
+      if(c.age>=1.02&&c.pulse===0){c.pulse=1;K.strike(s,{x:c.viewX,y:-200,w:960,h:1000},72,p.x+12,true,[],'ultimate');p.y=c.y;s.hitstop=Math.max(s.hitstop,.065);s.shake=.22;K.effect(s,'celestial-slam',c.viewX+480,p.y+44,{duration:.48,w:960,originX:p.x+12});K.event(s,'art-impact',{id:c.id});}
     }else if(c.id==='orbit-staff'){
       if(c.age>=.22+c.pulse*.24&&c.pulse<5){c.pulse++;const b=K.artOrbitBox(s);K.strike(s,b,12,p.x+12,false,[],'art-spin');for(const bolt of s.projectiles)if(!bolt.friendly&&K.overlap(b,bolt))bolt.life=0;K.event(s,'art-pulse',{id:c.id});}
     }else if(c.id==='eye-beam'){

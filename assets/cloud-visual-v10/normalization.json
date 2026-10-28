@@ -1,0 +1,535 @@
+{
+  "method": "explicit source crops; shared actor scale; premultiplied-alpha Lanczos reduction; no pixel recolouring",
+  "sources": {
+    "background": {
+      "size": [
+        1672,
+        941
+      ],
+      "sha256": "e3efb24cf1d265a3e04911c289e366ac0d163d3625dde216298800d88c974359"
+    },
+    "environment": {
+      "size": [
+        1670,
+        941
+      ],
+      "sha256": "edccf0757b32736c68a67d2b6d1aa33a8a9a278a826c2d19db708b603c9f5856"
+    },
+    "foundation": {
+      "size": [
+        2143,
+        734
+      ],
+      "sha256": "151e5f057760334b5bcb571f386c898ec1cd67c99ce0a8b7572699eb82919ecf"
+    },
+    "staff-actors": {
+      "size": [
+        1536,
+        1024
+      ],
+      "sha256": "1810026e4c6d108e01f9c48b6c39d33aed9c66c3d965cb18275407e035b9d332"
+    },
+    "staff-fx": {
+      "size": [
+        2172,
+        724
+      ],
+      "sha256": "f8caaaddb62c10508884d3de6c12d7ed4499cd437415cbbc5c4cf820efa35ebc"
+    }
+  },
+  "frames": {
+    "cloud-ledge": {
+      "sourceBox": [
+        0,
+        225,
+        464,
+        400
+      ],
+      "alphaBounds": [
+        10,
+        36,
+        462,
+        148
+      ],
+      "size": [
+        128,
+        30
+      ],
+      "tileCentre": true
+    },
+    "cloud-foundation": {
+      "source": "foundation",
+      "alphaBounds": [
+        10,
+        276,
+        2133,
+        595
+      ],
+      "topCorrection": 0,
+      "size": [
+        768,
+        88
+      ]
+    },
+    "cloud-fragile": {
+      "sourceBox": [
+        946,
+        238,
+        1399,
+        389
+      ],
+      "alphaBounds": [
+        0,
+        23,
+        452,
+        142
+      ],
+      "size": [
+        128,
+        30
+      ],
+      "tileCentre": true
+    },
+    "cloud-beacon": {
+      "sourceBox": [
+        1392,
+        36,
+        1670,
+        495
+      ],
+      "alphaBounds": [
+        0,
+        16,
+        268,
+        453
+      ],
+      "size": [
+        48,
+        84
+      ],
+      "tileCentre": false
+    },
+    "cloud-gate": {
+      "sourceBox": [
+        15,
+        490,
+        493,
+        937
+      ],
+      "alphaBounds": [
+        15,
+        7,
+        444,
+        405
+      ],
+      "size": [
+        146,
+        132
+      ],
+      "tileCentre": false
+    },
+    "cloud-camp-lit": {
+      "sourceBox": [
+        504,
+        550,
+        827,
+        925
+      ],
+      "alphaBounds": [
+        20,
+        13,
+        300,
+        332
+      ],
+      "size": [
+        52,
+        60
+      ],
+      "tileCentre": false
+    },
+    "cloud-camp-spent": {
+      "sourceBox": [
+        888,
+        550,
+        1220,
+        925
+      ],
+      "alphaBounds": [
+        23,
+        13,
+        303,
+        332
+      ],
+      "size": [
+        52,
+        60
+      ],
+      "tileCentre": false
+    },
+    "manual-plinth": {
+      "sourceBox": [
+        1260,
+        741,
+        1670,
+        918
+      ],
+      "alphaBounds": [
+        25,
+        26,
+        386,
+        135
+      ],
+      "size": [
+        32,
+        13
+      ],
+      "tileCentre": false
+    },
+    "sky-plant": {
+      "sourceBox": [
+        0,
+        0,
+        384,
+        560
+      ],
+      "alphaBounds": [
+        76,
+        261,
+        354,
+        531
+      ],
+      "scale": 0.23,
+      "size": [
+        64,
+        62
+      ],
+      "placement": [
+        48,
+        50
+      ],
+      "grip": [
+        85,
+        83
+      ]
+    },
+    "sky-rise": {
+      "sourceBox": [
+        384,
+        0,
+        768,
+        560
+      ],
+      "alphaBounds": [
+        76,
+        97,
+        318,
+        449
+      ],
+      "scale": 0.23,
+      "size": [
+        56,
+        81
+      ],
+      "placement": [
+        45,
+        31
+      ],
+      "grip": [
+        93,
+        63
+      ]
+    },
+    "sky-fall": {
+      "sourceBox": [
+        768,
+        0,
+        1152,
+        560
+      ],
+      "alphaBounds": [
+        67,
+        63,
+        326,
+        452
+      ],
+      "scale": 0.23,
+      "size": [
+        60,
+        89
+      ],
+      "placement": [
+        51,
+        23
+      ],
+      "grip": [
+        92,
+        48
+      ]
+    },
+    "sky-land": {
+      "sourceBox": [
+        1152,
+        0,
+        1536,
+        560
+      ],
+      "alphaBounds": [
+        31,
+        289,
+        340,
+        531
+      ],
+      "scale": 0.23,
+      "size": [
+        71,
+        56
+      ],
+      "placement": [
+        39,
+        56
+      ],
+      "grip": [
+        97,
+        103
+      ]
+    },
+    "orbit-ready": {
+      "sourceBox": [
+        0,
+        600,
+        384,
+        1024
+      ],
+      "alphaBounds": [
+        66,
+        76,
+        362,
+        360
+      ],
+      "scale": 0.23,
+      "size": [
+        68,
+        65
+      ],
+      "placement": [
+        44,
+        47
+      ],
+      "grip": [
+        82,
+        79
+      ]
+    },
+    "orbit-forward": {
+      "sourceBox": [
+        384,
+        600,
+        768,
+        1024
+      ],
+      "alphaBounds": [
+        19,
+        74,
+        370,
+        361
+      ],
+      "scale": 0.23,
+      "size": [
+        81,
+        66
+      ],
+      "placement": [
+        33,
+        46
+      ],
+      "grip": [
+        71,
+        81
+      ]
+    },
+    "orbit-back": {
+      "sourceBox": [
+        768,
+        600,
+        1152,
+        1024
+      ],
+      "alphaBounds": [
+        80,
+        83,
+        380,
+        364
+      ],
+      "scale": 0.23,
+      "size": [
+        69,
+        65
+      ],
+      "placement": [
+        44,
+        47
+      ],
+      "grip": [
+        81,
+        79
+      ]
+    },
+    "orbit-finish": {
+      "sourceBox": [
+        1152,
+        600,
+        1536,
+        1024
+      ],
+      "alphaBounds": [
+        59,
+        76,
+        346,
+        361
+      ],
+      "scale": 0.23,
+      "size": [
+        66,
+        66
+      ],
+      "placement": [
+        44,
+        46
+      ],
+      "grip": [
+        83,
+        80
+      ]
+    },
+    "slam-contact": {
+      "sourceBox": [
+        0,
+        0,
+        724,
+        362
+      ],
+      "alphaBounds": [
+        92,
+        109,
+        639,
+        326
+      ],
+      "size": [
+        184,
+        73
+      ]
+    },
+    "slam-pressure": {
+      "sourceBox": [
+        724,
+        0,
+        1448,
+        362
+      ],
+      "alphaBounds": [
+        36,
+        170,
+        691,
+        331
+      ],
+      "size": [
+        184,
+        45
+      ]
+    },
+    "slam-dust": {
+      "sourceBox": [
+        1448,
+        0,
+        2172,
+        362
+      ],
+      "alphaBounds": [
+        60,
+        197,
+        663,
+        331
+      ],
+      "size": [
+        184,
+        41
+      ]
+    },
+    "orbit-trail0": {
+      "sourceBox": [
+        0,
+        390,
+        724,
+        724
+      ],
+      "alphaBounds": [
+        36,
+        77,
+        691,
+        222
+      ],
+      "size": [
+        320,
+        71
+      ]
+    },
+    "orbit-trail1": {
+      "sourceBox": [
+        724,
+        390,
+        1448,
+        724
+      ],
+      "alphaBounds": [
+        35,
+        65,
+        691,
+        253
+      ],
+      "size": [
+        265,
+        76
+      ]
+    },
+    "orbit-trail2": {
+      "sourceBox": [
+        1448,
+        390,
+        2172,
+        724
+      ],
+      "alphaBounds": [
+        33,
+        69,
+        688,
+        222
+      ],
+      "size": [
+        320,
+        75
+      ]
+    }
+  },
+  "outputs": {
+    "background.png": {
+      "bytes": 766605,
+      "sha256": "9ed3e52f715f3bb6718691636a1bcab6eaf2894f045f3f3b5db53f7c60be2051"
+    },
+    "environment.png": {
+      "bytes": 92591,
+      "sha256": "0c347f51f3b0aab9700e89365674a7588156022eb1f2f1bc6e9f9aa0e55114ef"
+    },
+    "foundation.png": {
+      "bytes": 120667,
+      "sha256": "7b43b3f0f1a331d5cf88f17a89eee943317ab7ff7a674639f4067211dc74f487"
+    },
+    "staff-actors.png": {
+      "bytes": 75104,
+      "sha256": "ba293bef4fb40b64d37e8414ce744ee6ca71e4847b47535beaf469ff04de7edd"
+    },
+    "staff-fx.png": {
+      "bytes": 123014,
+      "sha256": "8c255ac5c0f45d08206aac488f9c092ad061635a6185d42eb0e661a85581309a"
+    }
+  }
+}

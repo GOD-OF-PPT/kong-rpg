@@ -8,7 +8,7 @@
       const canvas=document.createElement('canvas');canvas.width=f.r[2];canvas.height=f.r[3];const c=canvas.getContext('2d');c.imageSmoothingEnabled=false;c.drawImage(im,...f.r,0,0,canvas.width,canvas.height);
       if(flash){c.globalCompositeOperation='source-atop';c.fillStyle='#fff3d0';c.globalAlpha=.5;c.fillRect(0,0,canvas.width,canvas.height);}this.frameCache.set(key,canvas);return canvas;
     }
-    celestialStamp(id,x,y,w,h,alpha=1,angle=0){const im=this.celestialFrame(id);if(!im)return;const c=this.c;c.save();c.globalAlpha*=alpha;c.translate(Math.round(x),Math.round(y));if(angle)c.rotate(angle);c.drawImage(im,-Math.round(w/2),-Math.round(h/2),Math.round(w),Math.round(h));c.restore();}
+    celestialStamp(id,x,y,w,h,alpha=1,angle=0){const im=this.celestialFrame(id);if(!im)return;const c=this.c;c.save();c.globalAlpha*=alpha;c.imageSmoothingEnabled=true;c.imageSmoothingQuality='high';c.translate(Math.round(x),Math.round(y));if(angle)c.rotate(angle);c.drawImage(im,-Math.round(w/2),-Math.round(h/2),Math.round(w),Math.round(h));c.restore();}
     celestialActor(id,x,feet,face=1,scale=1,alpha=1,flash=false){const im=this.celestialFrame(id,flash),f=K.CelestialFrames[id];if(!im)return false;const c=this.c;c.save();c.globalAlpha*=alpha;c.translate(Math.round(x),Math.round(feet));c.scale(face*scale,scale);c.drawImage(im,-f.anchor[0],-f.anchor[1]);c.restore();return true;}
     person(kind,x,y,face=1,frame=0,alpha=1,flash=false,scale=1){
       const s=this.scene,p=s?.player,c=this.c,isPlayer=kind==='monkey'&&s&&this.ui!=='menu'&&Math.abs(x-p.x)<.2&&Math.abs(y-p.y)<.2;
@@ -73,7 +73,7 @@
       if(s.eye){const b=s.eye;this.celestialStamp('silver-slash',b.x+b.w/2,b.y+2,55,24,.5);}
       for(const arrow of s.arrows)this.celestialStamp('silver-slash',arrow.x-Math.sign(arrow.vx)*10,arrow.y,42,12,.65,Math.atan2(arrow.vy,arrow.vx));
       if(s.hound){const h=s.hound;if(h.pose==='bite')this.celestialStamp('silver-slash',h.x+h.face*18,h.y+12,64,37,.7);else if(Math.abs(h.vx)>120)this.celestialStamp('wind',h.x-h.face*12,h.y+24,38,15,.35);}
-      if(cast){const age=cast.age;
+      if(cast&&!(this.handlesStaffArts&&['sky-staff','orbit-staff'].includes(cast.id))){const age=cast.age;
         if(cast.id==='sky-staff'){
           const top=p.y+25,bottom=cast.y+44,shaft=this.signatureFrame('shaft'),cap=this.signatureFrame('cap');if(shaft&&bottom>top){c.save();c.translate(Math.round(cast.x+10),Math.round(top));c.rotate(Math.PI/2);const len=bottom-top;for(let x=0;x<len;x+=shaft.width)c.drawImage(shaft,0,0,Math.min(shaft.width,len-x),shaft.height,x,-4,Math.min(shaft.width,len-x),8);if(cap)c.drawImage(cap,len-14,-5,18,10);c.restore();}
           if(age<1.02){this.celestialStamp('spin-ring',cast.x+12,cast.y+44,75,22,.7);if(age>.6)this.celestialStamp('gold-slash',p.x+12,p.y+24,90,120,.55,Math.PI/2);}
@@ -100,7 +100,7 @@
         }
       }
       for(const d of s.dangers){c.save();c.beginPath();c.rect(d.x,d.y,d.w,d.h);c.clip();const id=/潮|水|涌柱/.test(d.source)?'water':d.h>50?/雷/.test(d.source)?'lightning':'pillar':'void-slash';this.celestialStamp(id,d.x+d.w/2,d.y+d.h/2,d.w,d.h,.75);c.restore();}
-      for(const q of K.artManuals(s))if(!q.used){const im=this.image('uiScroll'),f=K.ArtCatalog.dialog.scroll;if(im)c.drawImage(im,...f.r,Math.round(q.x-14),Math.round(q.y-26),28,34);const icon=q.art==='sky-staff'?'gold-slash':q.art==='orbit-staff'?'spin-ring':q.art==='six-arms'?'spear-flare':'silver-slash';this.celestialStamp(icon,q.x,q.y-10,22,18,.95);c.fillStyle='#f3d486';c.fillRect(Math.round(q.x-11),Math.round(q.y+9),22,1);}
+      for(const q of K.artManuals(s))if(!q.used){if(this.drawArtManual){this.drawArtManual(q);continue;}const im=this.image('uiScroll'),f=K.ArtCatalog.dialog.scroll;if(im)c.drawImage(im,...f.r,Math.round(q.x-14),Math.round(q.y-26),28,34);const icon=q.art==='sky-staff'?'gold-slash':q.art==='orbit-staff'?'spin-ring':q.art==='six-arms'?'spear-flare':'silver-slash';this.celestialStamp(icon,q.x,q.y-10,22,18,.95);c.fillStyle='#f3d486';c.fillRect(Math.round(q.x-11),Math.round(q.y+9),22,1);}
       c.restore();
     }
   };
