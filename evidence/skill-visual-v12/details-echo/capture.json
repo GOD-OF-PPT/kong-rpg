@@ -1,0 +1,501 @@
+{
+  "version": "12.1.3",
+  "sha256": "c74eb204c90e9aa7d5ce7b1f6e6c5fb78ad1eb6404ae16b85b48587b4f5010fd",
+  "method": "Public-import training fixtures; actual input and runtime simulation; frame capture after production renderer. Raw Canvas 960x540, no graphics replacement. Not natural gameplay or human playtest.",
+  "cases": [
+    {
+      "id": "enemy-judge-echo",
+      "move": "judge-echo",
+      "kind": "enemy",
+      "hero": "wukong",
+      "title": "追魂复判",
+      "seed": "VISUAL-SKILLS-1028",
+      "target": 900,
+      "frames": [
+        {
+          "label": "预警",
+          "file": "frames/enemy-judge-echo-0.png",
+          "time": 0.21666666666666665,
+          "age": 0.19999999999999998,
+          "camera": 1560,
+          "player": {
+            "x": 2060,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 100,
+            "invuln": 0
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-windup",
+            "move": "judge-echo",
+            "hp": 318,
+            "face": -1
+          },
+          "boxes": [
+            {
+              "kind": "warning",
+              "x": 2034,
+              "y": 350,
+              "w": 76,
+              "h": 90
+            }
+          ],
+          "cast": null,
+          "effects": [],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 0
+            },
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 5
+            }
+          ]
+        },
+        {
+          "label": "释放",
+          "file": "frames/enemy-judge-echo-1.png",
+          "time": 0.5000000000000007,
+          "age": 0.483333333333334,
+          "camera": 1560,
+          "player": {
+            "x": 2060,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 64,
+            "invuln": 1
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-active",
+            "move": "judge-echo",
+            "hp": 318,
+            "face": -1
+          },
+          "boxes": [
+            {
+              "kind": "danger",
+              "x": 2034,
+              "y": 350,
+              "w": 76,
+              "h": 90
+            },
+            {
+              "kind": "locked",
+              "x": 2034,
+              "y": 350,
+              "w": 76,
+              "h": 90
+            }
+          ],
+          "cast": null,
+          "effects": [
+            {
+              "kind": "hurt",
+              "x": 2072,
+              "y": 418,
+              "life": 0.3
+            }
+          ],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 0
+            },
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 5
+            },
+            {
+              "type": "enemy-attack",
+              "t": 0.5,
+              "wall": 0.5,
+              "id": 900,
+              "kind": "warden",
+              "move": "judge-echo"
+            },
+            {
+              "type": "hurt",
+              "t": 0.5,
+              "wall": 0.5,
+              "source": "秦广王·追魂复判",
+              "amount": 36,
+              "x": 2072,
+              "y": 418,
+              "enemyMaterial": "ink"
+            }
+          ]
+        },
+        {
+          "label": "受击接触",
+          "file": "frames/enemy-judge-echo-2.png",
+          "time": 0.5000000000000007,
+          "age": 0.483333333333334,
+          "camera": 1560,
+          "player": {
+            "x": 2060,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 64,
+            "invuln": 1
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-active",
+            "move": "judge-echo",
+            "hp": 318,
+            "face": -1
+          },
+          "boxes": [
+            {
+              "kind": "danger",
+              "x": 2034,
+              "y": 350,
+              "w": 76,
+              "h": 90
+            },
+            {
+              "kind": "locked",
+              "x": 2034,
+              "y": 350,
+              "w": 76,
+              "h": 90
+            }
+          ],
+          "cast": null,
+          "effects": [
+            {
+              "kind": "hurt",
+              "x": 2072,
+              "y": 418,
+              "life": 0.3
+            }
+          ],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 0
+            },
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 5
+            },
+            {
+              "type": "enemy-attack",
+              "t": 0.5,
+              "wall": 0.5,
+              "id": 900,
+              "kind": "warden",
+              "move": "judge-echo"
+            },
+            {
+              "type": "hurt",
+              "t": 0.5,
+              "wall": 0.5,
+              "source": "秦广王·追魂复判",
+              "amount": 36,
+              "x": 2072,
+              "y": 418,
+              "enemyMaterial": "ink"
+            }
+          ]
+        },
+        {
+          "label": "二次预警",
+          "file": "frames/enemy-judge-echo-4.png",
+          "time": 1.2416666666666647,
+          "age": 1.224999999999998,
+          "camera": 1560,
+          "player": {
+            "x": 1959.8071930480628,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": -1,
+            "hp": 64,
+            "invuln": 0.25833333333333436
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-windup",
+            "move": "judge-echo",
+            "hp": 318,
+            "face": -1
+          },
+          "boxes": [
+            {
+              "kind": "warning",
+              "x": 2017,
+              "y": 350,
+              "w": 76,
+              "h": 90
+            }
+          ],
+          "cast": null,
+          "effects": [],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 0
+            },
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 5
+            },
+            {
+              "type": "enemy-attack",
+              "t": 0.5,
+              "wall": 0.5,
+              "id": 900,
+              "kind": "warden",
+              "move": "judge-echo"
+            },
+            {
+              "type": "hurt",
+              "t": 0.5,
+              "wall": 0.5,
+              "source": "秦广王·追魂复判",
+              "amount": 36,
+              "x": 2072,
+              "y": 418,
+              "enemyMaterial": "ink"
+            },
+            {
+              "type": "boss-warning",
+              "t": 0.85,
+              "wall": 0.85,
+              "id": 900,
+              "move": "judge-echo",
+              "name": "秦广王",
+              "box": {
+                "x": 2017,
+                "y": 350,
+                "w": 76,
+                "h": 90
+              }
+            }
+          ]
+        },
+        {
+          "label": "复判释放",
+          "file": "frames/enemy-judge-echo-5.png",
+          "time": 1.549999999999997,
+          "age": 1.5333333333333303,
+          "camera": 1560,
+          "player": {
+            "x": 1953.7873249337724,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": -1,
+            "hp": 64,
+            "invuln": 0
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-active",
+            "move": "judge-echo",
+            "hp": 318,
+            "face": -1
+          },
+          "boxes": [
+            {
+              "kind": "danger",
+              "x": 2017,
+              "y": 350,
+              "w": 76,
+              "h": 90
+            },
+            {
+              "kind": "locked",
+              "x": 2017,
+              "y": 350,
+              "w": 76,
+              "h": 90
+            }
+          ],
+          "cast": null,
+          "effects": [],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 5
+            },
+            {
+              "type": "enemy-attack",
+              "t": 0.5,
+              "wall": 0.5,
+              "id": 900,
+              "kind": "warden",
+              "move": "judge-echo"
+            },
+            {
+              "type": "hurt",
+              "t": 0.5,
+              "wall": 0.5,
+              "source": "秦广王·追魂复判",
+              "amount": 36,
+              "x": 2072,
+              "y": 418,
+              "enemyMaterial": "ink"
+            },
+            {
+              "type": "boss-warning",
+              "t": 0.85,
+              "wall": 0.85,
+              "id": 900,
+              "move": "judge-echo",
+              "name": "秦广王",
+              "box": {
+                "x": 2017,
+                "y": 350,
+                "w": 76,
+                "h": 90
+              }
+            },
+            {
+              "type": "enemy-attack",
+              "t": 1.533,
+              "wall": 1.533,
+              "id": 900,
+              "kind": "warden",
+              "move": "judge-echo"
+            }
+          ]
+        },
+        {
+          "label": "收招",
+          "file": "frames/enemy-judge-echo-3.png",
+          "time": 1.8916666666666624,
+          "age": 1.8749999999999958,
+          "camera": 1560,
+          "player": {
+            "x": 1953.7725815900144,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": -1,
+            "hp": 64,
+            "invuln": 0
+          },
+          "enemy": {
+            "x": 2152.8333333333335,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "recover",
+            "move": "judge-echo",
+            "hp": 318,
+            "face": -1
+          },
+          "boxes": [],
+          "cast": null,
+          "effects": [],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 5
+            },
+            {
+              "type": "enemy-attack",
+              "t": 0.5,
+              "wall": 0.5,
+              "id": 900,
+              "kind": "warden",
+              "move": "judge-echo"
+            },
+            {
+              "type": "hurt",
+              "t": 0.5,
+              "wall": 0.5,
+              "source": "秦广王·追魂复判",
+              "amount": 36,
+              "x": 2072,
+              "y": 418,
+              "enemyMaterial": "ink"
+            },
+            {
+              "type": "boss-warning",
+              "t": 0.85,
+              "wall": 0.85,
+              "id": 900,
+              "move": "judge-echo",
+              "name": "秦广王",
+              "box": {
+                "x": 2017,
+                "y": 350,
+                "w": 76,
+                "h": 90
+              }
+            },
+            {
+              "type": "enemy-attack",
+              "t": 1.533,
+              "wall": 1.533,
+              "id": 900,
+              "kind": "warden",
+              "move": "judge-echo"
+            }
+          ]
+        }
+      ],
+      "missing": [],
+      "review": {
+        "status": "待审",
+        "notes": []
+      }
+    }
+  ],
+  "errors": [],
+  "browser": "156.0.4314.50",
+  "servedVersion": "12.1.3",
+  "recording": {
+    "file": "E:\\githome\\kong-rpg\\evidence\\skill-visual-v12\\details-echo\\skills.webm",
+    "mime": "video/webm;codecs=vp9",
+    "ms": 2271.399999976158,
+    "method": "real Canvas captureStream at requested 30Hz, MediaRecorder VP9; ms is recording wall time, encoded frame rate not independently inspected"
+  }
+}

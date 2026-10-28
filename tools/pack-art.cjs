@@ -22,7 +22,7 @@ files['campaign-juling']='../audit-v10/juling.png';files.auditDevices='../audit-
 files.actorRepair='../art-completeness-v10/actor-repair.png';
 files.realmCloud='../cloud-visual-v10/background.png';
 files.cloudEnvironment='../cloud-visual-v10/environment.png';files.cloudFoundation='../cloud-visual-v10/foundation.png';files.staffActors='../cloud-visual-v10/staff-actors.png';files.staffFx='../cloud-visual-v10/staff-fx.png';
-files.combatContacts='../combat-v11/contacts.png';files['enemy-contacts']='../enemy-vfx-v12/contacts.png';files['enemy-materials']='../enemy-vfx-v12/materials.png';files.realmDressing='../art-recheck-v12/realm-dressing.png';
+files.combatContacts='../combat-v11/contacts.png';files['enemy-contacts']='../enemy-vfx-v12/contacts.png';files['enemy-materials']='../enemy-vfx-v12/materials-v2.png';files.realmDressing='../art-recheck-v12/realm-dressing.png';
 for(const name of ['nezha','erlang','cloud','underworld','water','dragon','heaven'])files['motion-'+name]='../motion-v12/'+name+'.png';
 const manifest={tool:'built-in image_gen',runtime:'embedded data URLs; no network or fetch',assets:{}};
 const encoded={};for(const[key,name]of Object.entries(files)){const file=path.resolve(dir,name),data=fs.readFileSync(file);manifest.assets[key]={file:path.relative(root,file).replace(/\\/g,'/'),bytes:data.length,sha256:crypto.createHash('sha256').update(data).digest('hex')};encoded[key]='data:image/png;base64,'+data.toString('base64');}
