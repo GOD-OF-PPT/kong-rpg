@@ -1,6 +1,6 @@
 const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),cp=require('node:child_process'),vm=require('node:vm'),util=require('node:util');
 const root=path.resolve(__dirname,'..'),dir=path.join(root,'evidence/heroes-v10'),sha=crypto.createHash('sha256').update(fs.readFileSync(path.join(root,'release/index.html'))).digest('hex');
-const context=vm.createContext({console});for(const name of ['content','world','progression','journey','heroes','signature','simulation','challenge','realms','warriors','celestial','campaign-data','campaign-world','campaign-combat','campaign-state','storage'])vm.runInContext(fs.readFileSync(path.join(root,'src',name+'.js'),'utf8'),context);
+const context=vm.createContext({console});for(const name of ['content','world','progression','journey','heroes','signature','simulation','challenge','realms','warriors','celestial','campaign-data','route-layouts','campaign-world','campaign-combat','campaign-state','storage'])vm.runInContext(fs.readFileSync(path.join(root,'src',name+'.js'),'utf8'),context);
 const percentile=(a,p)=>a.length?a.slice().sort((x,y)=>x-y)[Math.floor((a.length-1)*p)]:null;
 const runs=[];
 for(const entry of fs.readdirSync(dir,{withFileTypes:true}).filter(x=>x.isDirectory())){

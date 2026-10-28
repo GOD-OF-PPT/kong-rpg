@@ -1,0 +1,33 @@
+{
+  "version": "12.0.0",
+  "rows": [
+    {
+      "name": "all actors start with feet on their authored ground/ledge; layouts and counts deterministic",
+      "pass": true
+    },
+    {
+      "name": "solid steps stop horizontal penetration; landing and fall recovery use local surface height",
+      "pass": true
+    },
+    {
+      "name": "one main attack has one release sound event and cannot change direction mid-contact",
+      "pass": true
+    },
+    {
+      "name": "enemy recoil and attack phases choose different sprites; hero attack stages use shared timing",
+      "pass": true
+    },
+    {
+      "name": "grounded committed contact plants the supporting foot while recovery/dash restores control",
+      "pass": true
+    },
+    {
+      "name": "moving recovery uses locomotion pose without reopening the hit window",
+      "pass": true
+    },
+    {
+      "name": "schema12 restores an active buffered attack and protects a real v11 journey",
+      "pass": true
+    }
+  ]
+}

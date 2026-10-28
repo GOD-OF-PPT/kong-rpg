@@ -1,6 +1,6 @@
 (function(K){
   'use strict';
-  const KEY='kong.black-lotus.v11',TENTH='kong.black-lotus.v10',NINTH='kong.black-lotus.v9',EIGHTH='kong.black-lotus.v8',SEVENTH='kong.black-lotus.v7',LEGACY='kong.black-lotus.v1',PREVIOUS='kong.black-lotus.v2',THIRD='kong.black-lotus.v3',FOURTH='kong.black-lotus.v4',FIFTH='kong.black-lotus.v5',SIXTH='kong.black-lotus.v6',SETTINGS='kong.black-lotus.settings.v2';
+  const KEY='kong.black-lotus.v12',ELEVENTH='kong.black-lotus.v11',TENTH='kong.black-lotus.v10',NINTH='kong.black-lotus.v9',EIGHTH='kong.black-lotus.v8',SEVENTH='kong.black-lotus.v7',LEGACY='kong.black-lotus.v1',PREVIOUS='kong.black-lotus.v2',THIRD='kong.black-lotus.v3',FOURTH='kong.black-lotus.v4',FIFTH='kong.black-lotus.v5',SIXTH='kong.black-lotus.v6',SETTINGS='kong.black-lotus.settings.v2';
   const number=(v,a,b)=>typeof v==='number'&&Number.isFinite(v)&&v>=a&&v<=b;
   const fail=()=>{throw new Error('存档数据不完整或已损坏，请保留原文件。');};
   const count=v=>Number.isFinite(Number(v))?Math.max(0,Math.min(1e7,Math.floor(Number(v)))):0;
@@ -8,12 +8,12 @@
     return {normalClear:K.validClear(m?.normalClear)?{...m.normalClear}:null,runs:count(m?.runs),wins:count(m?.wins),best:Math.min(15,count(m?.best)),history:Array.isArray(m?.history)?m.history.filter(x=>x&&typeof x.id==='string'&&typeof x.seed==='string').slice(-8).map(x=>({id:x.id.slice(0,100),seed:x.seed.slice(0,32),won:!!x.won,grade:['S','A','B','C'].includes(x.grade)?x.grade:null,score:count(x.score),stage:Math.min(14,count(x.stage)),hero:K.HEROES.some(h=>h.id===x.hero)?x.hero:'wukong',difficulty:x.difficulty==='challenge'?'challenge':'normal',seconds:count(x.seconds),damage:count(x.damage),relics:Array.isArray(x.relics)?x.relics.filter(id=>K.RELICS.some(r=>r.id===id)).slice(0,3):[]})):[]};
   };
   K.validSave=function(data){
-    if(data?.game==='black-lotus'&&[1,2,3,4,5,6,7,8,9,10].includes(data.schema)&&data.schema===data.state?.version){const error=new Error('这是旧版旅程，请在保留的原版中继续。');error.legacy=true;throw error;}
-    if(!data||data.schema!==11||data.game!=='black-lotus'||!data.state)throw new Error('这不是劫后行v11存档。');
+    if(data?.game==='black-lotus'&&[1,2,3,4,5,6,7,8,9,10,11].includes(data.schema)&&data.schema===data.state?.version){const error=new Error('这是旧版旅程，请在保留的原版中继续。');error.legacy=true;throw error;}
+    if(!data||data.schema!==12||data.game!=='black-lotus'||!data.state)throw new Error('这不是劫后行v12存档。');
     const s=data.state;if(!K.HEROES.some(h=>h.id===s.hero))fail();
     const difficulty=s.difficulty??'normal',challenging=difficulty==='challenge';
     if(!['normal','challenge'].includes(difficulty)||(challenging?s.challengeRules!==1:s.challengeRules!==undefined&&s.challengeRules!==0))fail();
-    if(s.version!==11||s.rules!==11||!Number.isInteger(s.stage)||s.stage<0||s.stage>14||typeof s.seed!=='string'||s.seed.length>32||!['playing','paused','reward','dead','won','art-choice'].includes(s.mode))fail();
+    if(s.version!==12||s.rules!==12||!Number.isInteger(s.stage)||s.stage<0||s.stage>14||typeof s.seed!=='string'||s.seed.length>32||!['playing','paused','reward','dead','won','art-choice'].includes(s.mode))fail();
     if(!s.growth||typeof s.growth!=='object'||Array.isArray(s.growth)||Object.entries(s.growth).some(([id,n])=>{const r=K.GROWTH.find(r=>r.id===id&&!r.temporary);return !r||!Number.isInteger(n)||n<1||n>r.max;}))fail();
     if(s.talisman!==null&&(!s.talisman||!['thunder','ward'].includes(s.talisman.id)||!Number.isInteger(s.talisman.charges)||s.talisman.charges<1||s.talisman.charges>(s.talisman.id==='thunder'?3:2)))fail();
     if(!s.world||['rescue','bridge','bell'].some(key=>typeof s.world[key]!=='boolean')||!Array.isArray(s.journal)||s.journal.length>6||new Set(s.journal).size!==s.journal.length||s.journal.some(key=>!['rescue:start','rescue:done','bridge:done','bell:start','bell:done'].includes(key)))fail();
@@ -94,14 +94,14 @@
     for(const key of Object.keys(restored.stats)){if(!number(s.stats?.[key],0,1e7))fail();restored.stats[key]=s.stats[key];}
     return {state:restored,meta:K.cleanMeta(data.meta)};
   };
-  K.pack=(state,meta)=>JSON.stringify({game:'black-lotus',schema:11,build:K.VERSION,state,meta:K.cleanMeta(meta)});
+  K.pack=(state,meta)=>JSON.stringify({game:'black-lotus',schema:12,build:K.VERSION,state,meta:K.cleanMeta(meta)});
   K.download=function(raw,name){const url=URL.createObjectURL(new Blob([raw],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
   K.Storage=class{
-    constructor(){this.available=true;this.error='';this.legacy=null;try{for(const key of[LEGACY,PREVIOUS,THIRD,FOURTH,FIFTH,SIXTH,SEVENTH,EIGHTH,NINTH,TENTH]){const raw=localStorage.getItem(key);if(raw&&raw.length<1000000){const x=JSON.parse(raw);if(x.game==='black-lotus'&&[1,2,3,4,5,6,7,8,9,10].includes(x.state?.version)&&x.schema===x.state.version)this.legacy=x;}}}catch{this.available=false;}}
+    constructor(){this.available=true;this.error='';this.legacy=null;try{for(const key of[LEGACY,PREVIOUS,THIRD,FOURTH,FIFTH,SIXTH,SEVENTH,EIGHTH,NINTH,TENTH,ELEVENTH]){const raw=localStorage.getItem(key);if(raw&&raw.length<1000000){const x=JSON.parse(raw);if(x.game==='black-lotus'&&[1,2,3,4,5,6,7,8,9,10,11].includes(x.state?.version)&&x.schema===x.state.version)this.legacy=x;}}}catch{this.available=false;}}
     read(){try{const raw=localStorage.getItem(KEY);if(!raw)return null;if(raw.length>1000000)fail();return K.validSave(JSON.parse(raw));}catch(e){this.error=e.message;return null;}}
-    profile(){try{const current=K.cleanMeta(JSON.parse(localStorage.getItem(KEY+'.profile')||'{}')),old=K.cleanMeta(JSON.parse(localStorage.getItem(TENTH+'.profile')||'{}'));if(!K.canChallenge(current)&&K.canChallenge(old))current.normalClear=old.normalClear;return current;}catch{return K.cleanMeta();}}
+    profile(){let current=K.cleanMeta();for(const key of [KEY,ELEVENTH,TENTH]){try{const value=K.cleanMeta(JSON.parse(localStorage.getItem(key+'.profile')||'{}'));if(key===KEY)current=value;else if(!K.canChallenge(current)&&K.canChallenge(value))current.normalClear=value.normalClear;}catch{}}return current;}
     write(state,meta){try{localStorage.setItem(KEY,K.pack(state,meta));localStorage.setItem(KEY+'.profile',JSON.stringify(K.cleanMeta(meta)));this.available=true;return true;}catch{this.available=false;return false;}}
-    export(state,meta){K.download(K.pack(state,meta),'劫后行-v11-'+(state.difficulty==='challenge'?'重劫-':'')+state.seed+'.json');}
+    export(state,meta){K.download(K.pack(state,meta),'劫后行-v12-'+(state.difficulty==='challenge'?'重劫-':'')+state.seed+'.json');}
     import(raw){if(raw.length>1000000)throw new Error('存档文件过大。');return K.validSave(JSON.parse(raw));}
     readSettings(){try{const x=JSON.parse(localStorage.getItem(SETTINGS)||'{}');return {volume:number(x.volume,0,1)?x.volume:.25,shake:typeof x.shake==='boolean'?x.shake:!matchMedia('(prefers-reduced-motion: reduce)').matches};}catch{return{volume:.25,shake:false};}}
     settings(value){try{localStorage.setItem(SETTINGS,JSON.stringify(value));}catch{}}

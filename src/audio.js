@@ -47,6 +47,7 @@
     events(events){
       const slam=events.some(e=>e.type==='slam-land'),guard=events.some(e=>e.type==='boss-guard'),thunder=events.some(e=>e.type==='thunder-hit'),contact=events.some(e=>['hit','blocked','boss-guard','slam-land','ultimate-hit','thunder-hit'].includes(e.type));
       for(const e of events){
+        if(e.type==='hit'&&['lotus-burn','six-arms'].includes(e.impact))continue;
         // One sound per resolved action, including area attacks and guard chip.
         if(e.type==='hit'&&(e.impact==='ultimate'||(slam&&e.impact==='heavy')||(guard&&e.kind==='boss')||(thunder&&e.impact==='thunder')))continue;
         if(e.type==='seal-hit'&&contact)continue;
@@ -78,7 +79,7 @@
       if(e.type==='thunder-hit'){this.noise(.13,.12);this.sweep(900,70,.13,.12);}
       if(e.type==='guardian-enter'){this.tone(82,.7,'triangle',.15);this.noise(.2,.08);}
       if(e.type==='guardian-defeat'){[220,330,440,660].forEach((f,i)=>this.tone(f,.4,'triangle',.11,i*.1));}
-      if(e.type==='swing'){this.noise(e.combo===3?.11:.055,e.combo===3?.075:.045);this.sweep(e.combo===3?300:620,e.combo===3?90:240,e.combo===3?.13:.07,.055);}
+      if(e.type==='strike-release'){this.noise(e.combo===3?.11:.055,e.combo===3?.075:.045);this.sweep(e.combo===3?300:620,e.combo===3?90:240,e.combo===3?.13:.07,.055);}
       if(e.type==='hit'&&e.impact!=='ultimate'){const heavy=['heavy','thunder'].includes(e.impact);if(!this.sample(e.impact==='ring'?'ring-hit':heavy?'staff-heavy':'staff-light',heavy?.8:.65,heavy?2:1)){this.sweep(heavy?150:330,heavy?48:130,heavy?.16:.075,heavy?.15:.09);this.noise(heavy?.09:.035,heavy?.12:.065);}}
       if(e.type==='seal-hit')this.sample('staff-light',.5);
       if(e.type==='hurt'){this.tone(72,.2,'sawtooth',.12);this.noise(.16,.11);}

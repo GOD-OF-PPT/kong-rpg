@@ -1,6 +1,15 @@
-# 大圣 · 劫后行 v11.0.0
+# 大圣 · 劫后行 v12.0.0
 
 五界归途：孙悟空、哪吒、杨戬可选的像素横版平台动作肉鸽。依次走过五章十五关，击退十名小首领与五名大首领，最终迎战托塔天王。玩法、角色和美术均基于用户设定创作，不宣称复刻电视剧中的具体战斗。
+
+## v12.0.0 响应、动作与路线
+
+- 缩短轻击起手和收招，保留一次220ms连击缓冲。攻击中移动不再瞬间反转武器判定；K/Shift可主动取消并选方向。受伤不暗中出招，附加伤害不重复播放撞击，挥击声音跟随实际释放。
+- 哪吒/杨戬补步行、三连起手/生效/收回、空中与受伤序列；五区三类普通敌人及两名小首领补动作。章末首领改短促撤步后停稳，怪物按实际支撑站立。
+- 十五关重排：云上浮岛接力，地府上下廊与锁区阵，水下升降礁台，龙宫双层回廊，天宫交错空桥。保留关卡数量和首领；高低台阶补实体侧碰撞，坠落后按检查点实际高度复位。
+- 三尖刀近身上挑和火尖枪横扫范围与动作相符，前刺、横扫和重击的覆盖不再完全相同；用H处理高台/远距目标，仍可跳上平台或用已有秘技。
+
+目标与证据见 [本轮修订](docs/feel-v12/REVIEW.md)，原始生成提示词与资源见 [动作资源](docs/feel-v12/PROMPTS.md)。
 
 ## v11.0.0战斗修订
 
@@ -52,7 +61,7 @@
 
 ## 直接运行
 
-双击 `release/index.html`；或解压 `artifacts/kong-rpg-offline-v11.0.0.zip` 后双击包内 `index.html`。PC Edge / Chrome，无需网络、安装、CDN、字体下载或安全设置。保留同目录 `legacy-v1.html` 至 `legacy-v10.html`，供旧旅程继续。
+双击 `release/index.html`；或解压 `artifacts/kong-rpg-offline-v12.0.0.zip` 后双击包内 `index.html`。PC Edge / Chrome，无需网络、安装、CDN、字体下载或安全设置。保留同目录 `legacy-v1.html` 至 `legacy-v11.html`，供旧旅程继续。
 
 源码预览需要Node.js 18+，不需npm install：
 
@@ -94,16 +103,16 @@ npm run dev
 
 ## 保存与旧版
 
-v11使用schema11和独立键 `kong.black-lotus.v11`。每3秒及暂停/结算等时机自动保存；导出/导入可以恢复秘技装备/共享冷却/施展中间态、参悟选择、副武器、引弦、箭、天眼、哮天犬、莲火附枪及敌招中间态。自动存储不可用时，用JSON导出保存进度。
+v12使用schema12和独立键 `kong.black-lotus.v12`。每3秒及暂停/结算等时机自动保存；导出/导入可以恢复秘技装备/共享冷却/施展中间态、参悟选择、副武器、引弦、箭、天眼、哮天犬、莲火附枪及敌招中间态。自动存储不可用时，用JSON导出保存进度。
 
-v10.0.3原HTML保留为 `legacy-v10.html`，旧v10存档走原规则入口，不会静默改变战斗；v10普通S的本地资格可延续。更早版本入口也保留。HTTP与file自动存储按浏览器来源分开，可用JSON导出导入迁移同版本旅程。
+v11.0.0原HTML保留为 `legacy-v11.html`，旧旅程走原规则入口，不会静默搬到新地形；v11/v10普通S的本地资格可延续。更早版本入口也保留。HTTP与file自动存储按浏览器来源分开，可用JSON导出导入迁移同版本旅程。
 
 ## 美术、音乐与验证
 
-新增源图、归一图集与SHA记录在 `assets/combat-v11/` 及既有版本美术目录，对应提示词在docs中保留。接触效果用预乘alpha的Lanczos降采样，登记独立热点，减少低alpha彩边。60张内嵌图、308条切片在打包时检查；关键姿态不等于完整手绘逐帧动画。
+新增源图、归一图集与SHA记录在 `assets/combat-v11/` 及既有版本美术目录，对应提示词在docs中保留。接触效果用预乘alpha的Lanczos降采样，登记独立热点，减少低alpha彩边。67张内嵌图、498条切片在打包时检查；关键姿态不等于完整手绘逐帧动画。
 
 背景音乐来自用户提供的 `assets/music/` 三首MP3：首次点击/按键后首页随机轮换，战斗单曲循环，切换淡变；原打击/预警音效继续使用。音乐和图像均内嵌发行HTML。
 
-`npm run verify`与`npm run verify:audit`检查既有规则；`node tools/verify-combat-v11.cjs`检查本轮修订。`tools/browser-combat-v11.cjs http|file`为动作/存档验收，`tools/browser-boss-v11.cjs http|file`为固定首领场景对照，`tools/playthrough-combat-v11.cjs http|file`通过公开输入完成十五关。复现环境变量见战斗修订记录。旧版历史证据不计作本版新通关。QA脚本需要Playwright，游戏发行包不需要。未取得真人试玩，不把自动操作或图片检查等同于主观乐趣认可。
+`npm run verify`与`npm run verify:audit`检查既有规则；`node tools/verify-feel-v12.cjs`和`node tools/probe-feel-v12.cjs`检查本轮修订。`tools/browser-feel-v12.cjs http|file`为动作/存档验收，`tools/browser-boss-v11.cjs http|file`为固定首领场景对照，`tools/playthrough-feel-v12.cjs http|file`通过公开输入完成十五关。复现环境变量见战斗修订记录。旧版历史证据不计作本版新通关。QA脚本需要Playwright，游戏发行包不需要。未取得真人试玩，不把自动操作或图片检查等同于主观乐趣认可。
 
 全量ZIP包含历史入口，超过GitHub单文件100MiB限制，作为本地交付物保留。重打包：`python tools/package-release.py`。

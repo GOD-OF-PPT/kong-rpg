@@ -139,7 +139,7 @@
   }
   function legacyMenu(){
     $('overlay').innerHTML=panel('原版旅程','存档保护 · 旧路仍在','在原来的规则中继续',`<p class="story-copy">旧版的地图与规则和新版不同。你的旧旅程不会被覆盖，也不会被悄悄搬到另一张地图。<br><br>${storage.legacy?'可先下载旧档，再在打开的原版里通过「初行指南 → 导入存档」继续。':'保留的原版可直接打开；如果你有旧JSON文件，请在原版的指南中导入。'}</p><div class="actions">${btn('open-legacy',storage.legacy?'备份旧档并打开原版':'打开原版',true)}${btn('back','返回新版')}</div>`);
-    on('open-legacy',()=>{if(storage.legacy)K.download(JSON.stringify(storage.legacy),'劫后行-v'+storage.legacy.state.version+'-旧旅程.json');const version=storage.legacy?.state?.version||10,legacyName='legacy-v'+version+'.html';const legacy=document.querySelector('meta[name="kong-package"]')?legacyName:'release/'+legacyName;window.open(new URL(legacy,location.href).href,'_blank','noopener');toast('已打开保留的原版；可通过手记导入旧旅程。',4);});on('back',()=>show('menu'));
+    on('open-legacy',()=>{if(storage.legacy)K.download(JSON.stringify(storage.legacy),'劫后行-v'+storage.legacy.state.version+'-旧旅程.json');const version=storage.legacy?.state?.version||11,legacyName='legacy-v'+version+'.html';const legacy=document.querySelector('meta[name="kong-package"]')?legacyName:'release/'+legacyName;window.open(new URL(legacy,location.href).href,'_blank','noopener');toast('已打开保留的原版；可通过手记导入旧旅程。',4);});on('back',()=>show('menu'));
   }
   function exportSave(){save();storage.export(state,meta);toast('已导出整段旅程，含动态敌招与舍利选择。');}
   function control(action){

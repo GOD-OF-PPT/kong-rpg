@@ -11,7 +11,7 @@
     e.face=face;e.move=move;e.phase='campaign-windup';e.timer=major?(echo?.68:e.stage%3===2?.84:.92):.85;if(!major&&echo)e.timer*=.75;e.aimX=px;e.aimY=target.y+18;e.marks=[];
     const local=(range,h=40,y=e.y+e.h-42)=>clampBox(s,face>0?e.x+e.w-5:e.x-range,y,range,h);
     if(['axe-cleave','king-sword','soldier-slash'].includes(move))e.marks=[local(major?190:e.trait==='twin'&&echo?132:100,major?50:38)];
-    else if(['axe-rush','head-dive','soldier-rush'].includes(move)){e.campChargeTo=K.clamp(e.x+face*(major?300:175),major?a.min:e.origin-100,major?a.max-e.w:e.origin+100);e.marks=[clampBox(s,Math.min(e.x,e.campChargeTo)-4,e.y+8,Math.abs(e.campChargeTo-e.x)+e.w+8,e.h-10)];}
+    else if(['axe-rush','head-dive','soldier-rush'].includes(move)){e.campChargeTo=K.clamp(e.x+face*(major?300:175),major?a.min:K.patrolBounds(s,e).min,major?a.max-e.w:K.patrolBounds(s,e).max);e.marks=[clampBox(s,Math.min(e.x,e.campChargeTo)-4,e.y+8,Math.abs(e.campChargeTo-e.x)+e.w+8,e.h-10)];}
     else if(['axe-quake','venom-tide','king-fire','shield-wave'].includes(move))e.marks=[clampBox(s,e.x-(major?290:130),418,major?580:260,22)];
     else if(['judge-mark','judge-echo','dragon-column','dragon-thunder','judge-chain','tower-prison'].includes(move)){
       const count=move==='dragon-column'?2:move==='judge-chain'?2:move==='dragon-thunder'&&major?3:1,w=move==='dragon-column'?66:move==='judge-chain'?38:76,h=move==='judge-chain'?190:move==='dragon-column'?160:90;
@@ -47,7 +47,7 @@
         else{e.phase='recover';e.timer=major?(e.stage%3===2?.55:1.25):1.05;e.marks=[];}}
       return true;
     }
-    if(e.phase==='recover'){if(e.chiefId&&e.stage%3===2){const speed=e.chiefId==='ninehead'?230:e.chiefId==='qinguang'?170:200;e.x=K.clamp(e.x-e.face*speed*dt,s.room.arena.min,s.room.arena.max-e.w);}if(e.timer<=0){e.phase='idle';e.timer=K.isMajor(e)?.18:.5;}return true;}
+    if(e.phase==='recover'){if(e.chiefId&&e.stage%3===2){const speed=e.timer>.40?(e.chiefId==='ninehead'?440:e.chiefId==='qinguang'?340:400):0;e.x=K.clamp(e.x-e.face*speed*dt,s.room.arena.min,s.room.arena.max-e.w);}if(e.timer<=0){e.phase='idle';e.timer=K.isMajor(e)?.18:.5;}return true;}
     if(e.phase==='idle'){
       const dx=target.x-e.x,near=Math.abs(dx),max=K.isMajor(e)?1050:550;
       if(near>max)return true;

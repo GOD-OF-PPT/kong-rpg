@@ -1,0 +1,19 @@
+{
+  "fullJourneyEntrySHA256": "2781098fdcab3880c8526721fa05e9b6ea2d2282e8540a64708f916e01f55643",
+  "releaseEntrySHA256": "e67973b6e01e413e2dee3a1c813e6ae69ad518e5dc875901ed33565b30a34b76",
+  "sameScriptCount": 59,
+  "changedScripts": [
+    {
+      "source": "src/motion.js",
+      "beforeSHA256": "05b40f09b8a304fb9111b31cb32aa470b39d43674879ff1f9f9ce89082f11bba",
+      "afterSHA256": "1a8f71ad7f860d3fe46c65628d05ff1579f53ee850f7645822473d9576ffc2fa"
+    },
+    {
+      "source": "src/motion-art.js",
+      "beforeSHA256": "d55ef9cfa9fa5065eb9cb44a5b13fd9608f23f56ea554efcac1089e86b88c464",
+      "afterSHA256": "5b6777fb4bfe0733a636bf71ad544f4dbd099dfb149ff6250f5411befc608cca"
+    }
+  ],
+  "allSimulationInputStorageContentAudioAndAssetScriptsIdentical": true,
+  "reason": "Final visual-only recovery-to-running pose transition; does not change simulation timing, damage, movement, input, saves or content. Full run preserved at its original path/hash."
+}
