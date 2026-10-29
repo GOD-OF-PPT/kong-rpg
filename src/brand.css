@@ -1,0 +1,54 @@
+/* Five broken arcs and a rekindled ember: an original shared identity. */
+:root{--brand-gold:#edce92;--brand-ember:#c76e48;--brand-mist:#a5b7b5}
+.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+.masthead #brand{gap:12px;letter-spacing:3px}
+.brand-emblem{display:block;width:42px;height:42px;flex:none}
+.brand-type{display:flex;align-items:baseline;gap:12px;font-family:SimSun,"Songti SC",serif}
+.brand-type small{font-size:14px;letter-spacing:3px;color:#aeb9b0}
+.brand-type strong{font-size:24px;font-weight:500;color:var(--brand-gold);letter-spacing:5px}
+.masthead .edition{font-size:9px;letter-spacing:2.5px;color:#a0afa8}
+#stage[data-mode=menu] .hero{left:6%;top:5.5%;width:45%;max-width:600px}
+.hero.has-modes .brand-kicker{display:flex;align-items:center;gap:12px;font-size:10px;letter-spacing:2px;color:#b7c3b6}
+.brand-kicker::before{content:"";width:25px;height:1px;background:var(--brand-ember)}
+.hero.has-modes .brand-title{width:470px;max-width:100%;height:175px;margin:12px 0 3px;line-height:1;position:relative;font-size:76px}
+.brand-title .brand-fallback{display:block;color:var(--brand-gold);font-size:66px;font-weight:500;letter-spacing:5px;padding:32px 0}
+.brand-fallback small{font-size:26px!important;line-height:1.3!important;margin:0!important}
+.brand-wordmark{position:absolute;inset:0;background:var(--brand-wordmark) left center/contain no-repeat;pointer-events:none}
+.brand-art-ready .brand-fallback{position:absolute!important;width:1px!important;height:1px!important;overflow:hidden;clip:rect(0,0,0,0)}
+.hero.has-modes .brand-english{font:9px/1.5 "Microsoft YaHei",sans-serif;letter-spacing:3.5px;color:#9baea9;margin:0 0 14px}
+.hero.has-modes .brand-slogan{font:21px/1.4 SimSun,"Songti SC",serif;letter-spacing:4px;color:#f0d29c;margin:0 0 12px}
+.hero.has-modes #mode-note{font-size:12px;line-height:1.85;letter-spacing:1px;color:#b8c2b9;max-width:430px;margin:0 0 15px}
+.hero.has-modes .mode-picker{max-width:420px;margin-bottom:9px}
+.hero.has-modes .unlock-note{max-width:420px;color:#beae8c!important;font-size:10px!important;line-height:1.65!important;margin-bottom:13px!important}
+.hero.has-modes .seed-edit{margin-top:13px}
+.hero.has-modes .hero-meta{margin-top:8px}
+.scene-label.brand-scene{top:6%;right:4%;color:#cdb486;letter-spacing:3px;font-size:10px;line-height:1.9}
+.scene-label.brand-scene span{margin-right:12px;color:#96b3b2}
+@media(max-height:850px){
+  #stage[data-mode=menu] .hero{top:4.5%}
+  .hero.has-modes .brand-title{width:400px;height:149px;margin:8px 0 2px}
+  .hero.has-modes .brand-english{font-size:8px;letter-spacing:2.5px;margin-bottom:10px}
+  .hero.has-modes .brand-slogan{font-size:18px;margin-bottom:8px;letter-spacing:3px}
+  .hero.has-modes #mode-note{font-size:11px;line-height:1.6;margin-bottom:10px}
+  .hero.has-modes .mode-picker{margin-bottom:6px}
+  .hero.has-modes .unlock-note{margin:5px 0 9px!important}
+  .hero.has-modes .seed-edit{margin-top:9px}
+}
+@media(max-height:760px){
+  .hero.has-modes .brand-kicker{font-size:9px}
+  .hero.has-modes .brand-title{width:370px;height:138px;margin:5px 0 1px}
+  .hero.has-modes .brand-english{margin-bottom:7px}
+  .hero.has-modes .brand-slogan{font-size:17px;margin-bottom:7px}
+  .hero.has-modes #mode-note{line-height:1.55;margin-bottom:8px}
+  .hero.has-modes .mode-picker button{min-height:30px;padding:4px 8px}
+  .hero.has-modes .unlock-note{line-height:1.55!important;margin-bottom:8px!important}
+  .hero.has-modes .actions .button{padding:11px 20px}
+  .hero.has-modes .seed-edit{margin-top:7px}
+  .hero.has-modes .hero-meta{margin-top:5px}
+}
+@media(max-width:1100px){
+  .brand-emblem{width:34px;height:34px}.brand-type strong{font-size:21px}.brand-type small{font-size:12px}
+  #stage[data-mode=menu] .hero{width:49%}
+  .hero.has-modes .brand-title{width:370px;height:138px}
+  .hero.has-modes .brand-slogan{font-size:17px;letter-spacing:2px}
+}

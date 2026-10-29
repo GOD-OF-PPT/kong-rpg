@@ -9,7 +9,7 @@
   };
   K.validSave=function(data){
     if(data?.game==='black-lotus'&&[1,2,3,4,5,6,7,8,9,10,11].includes(data.schema)&&data.schema===data.state?.version){const error=new Error('这是旧版旅程，请在保留的原版中继续。');error.legacy=true;throw error;}
-    if(!data||data.schema!==12||data.game!=='black-lotus'||!data.state)throw new Error('这不是劫后行v12存档。');
+    if(!data||data.schema!==12||data.game!=='black-lotus'||!data.state)throw new Error('这不是劫火重燃的有效旅程存档。');
     const s=data.state;if(!K.HEROES.some(h=>h.id===s.hero))fail();
     const difficulty=s.difficulty??'normal',challenging=difficulty==='challenge';
     if(!['normal','challenge'].includes(difficulty)||(challenging?s.challengeRules!==1:s.challengeRules!==undefined&&s.challengeRules!==0))fail();
@@ -101,7 +101,7 @@
     read(){try{const raw=localStorage.getItem(KEY);if(!raw)return null;if(raw.length>1000000)fail();return K.validSave(JSON.parse(raw));}catch(e){this.error=e.message;return null;}}
     profile(){let current=K.cleanMeta();for(const key of [KEY,ELEVENTH,TENTH]){try{const value=K.cleanMeta(JSON.parse(localStorage.getItem(key+'.profile')||'{}'));if(key===KEY)current=value;else if(!K.canChallenge(current)&&K.canChallenge(value))current.normalClear=value.normalClear;}catch{}}return current;}
     write(state,meta){try{localStorage.setItem(KEY,K.pack(state,meta));localStorage.setItem(KEY+'.profile',JSON.stringify(K.cleanMeta(meta)));this.available=true;return true;}catch{this.available=false;return false;}}
-    export(state,meta){K.download(K.pack(state,meta),'劫后行-v12-'+(state.difficulty==='challenge'?'重劫-':'')+state.seed+'.json');}
+    export(state,meta){K.download(K.pack(state,meta),'劫火重燃-v12-'+(state.difficulty==='challenge'?'重劫-':'')+state.seed+'.json');}
     import(raw){if(raw.length>1000000)throw new Error('存档文件过大。');return K.validSave(JSON.parse(raw));}
     readSettings(){try{const x=JSON.parse(localStorage.getItem(SETTINGS)||'{}');return {volume:number(x.volume,0,1)?x.volume:.25,shake:typeof x.shake==='boolean'?x.shake:!matchMedia('(prefers-reduced-motion: reduce)').matches};}catch{return{volume:.25,shake:false};}}
     settings(value){try{localStorage.setItem(SETTINGS,JSON.stringify(value));}catch{}}
