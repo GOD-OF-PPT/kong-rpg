@@ -12,7 +12,7 @@
     const local=(range,h=40,y=e.y+e.h-42)=>clampBox(s,face>0?e.x+e.w-5:e.x-range,y,range,h);
     if(['axe-cleave','king-sword','soldier-slash'].includes(move))e.marks=[local(major?190:e.trait==='twin'&&echo?132:100,major?50:38)];
     else if(['axe-rush','head-dive','soldier-rush'].includes(move)){e.campChargeTo=K.clamp(e.x+face*(major?300:175),major?a.min:K.patrolBounds(s,e).min,major?a.max-e.w:K.patrolBounds(s,e).max);e.marks=[clampBox(s,Math.min(e.x,e.campChargeTo)-4,e.y+8,Math.abs(e.campChargeTo-e.x)+e.w+8,e.h-10)];}
-    else if(['axe-quake','venom-tide','king-fire','shield-wave'].includes(move))e.marks=[clampBox(s,e.x-(major?290:130),418,major?580:260,22)];
+    else if(['axe-quake','venom-tide','king-fire','shield-wave'].includes(move))e.marks=move==='axe-quake'?[clampBox(s,e.x-(major?290:130),418,major?580:260,22)]:[local(Math.max(18,Math.min(major?580:260,face>0?s.room.width-8-(e.x+e.w-5):e.x-8)),22,418)];
     else if(['judge-mark','judge-echo','dragon-column','dragon-thunder','judge-chain','tower-prison'].includes(move)){
       const count=move==='dragon-column'?2:move==='judge-chain'?2:move==='dragon-thunder'&&major?3:1,w=move==='dragon-column'?66:move==='judge-chain'?38:76,h=move==='judge-chain'?190:move==='dragon-column'?160:90;
       for(let i=0;i<count;i++){const off=move==='judge-chain'?(i===0?-115:125):(i-(count-1)/2)*150;e.marks.push(clampBox(s,px-w/2+off,440-h,w,h));}
@@ -42,19 +42,19 @@
       if(e.timer<=0||Math.abs(e.campChargeTo-e.x)<1){e.phase='campaign-active';e.timer=.12;}return true;
     }
     if(e.phase==='campaign-active'){
-      if(e.timer<=0){if(e.trait==='pulse'&&e.move==='soldier-rush'&&e.repeat===0){e.repeat=1;K.beginCampaignMove(s,e,'shield-wave',target,true);return true;}const major=K.isMajor(e),needsEcho=e.trait==='twin'&&e.move==='soldier-slash'||e.move==='judge-echo'||major&&(K.isChallenge(s)&&e.attacks%2===0||e.stage%3===2&&e.attacks%2===1);
+      if(e.timer<=0){if(K.campaignFollowup){const follow=K.campaignFollowup(s,e,target);if(follow){e.repeat=1;K.beginCampaignMove(s,e,follow,target,true);}else{e.phase='recover';e.timer=K.campaignRecovery(e);e.marks=[];K.event(s,'enemy-opening',{id:e.id,move:e.move,seconds:e.timer});}return true;}if(e.trait==='pulse'&&e.move==='soldier-rush'&&e.repeat===0){e.repeat=1;K.beginCampaignMove(s,e,'shield-wave',target,true);return true;}const major=K.isMajor(e),needsEcho=e.trait==='twin'&&e.move==='soldier-slash'||e.move==='judge-echo'||major&&(K.isChallenge(s)&&e.attacks%2===0||e.stage%3===2&&e.attacks%2===1);
         if(needsEcho&&e.repeat===0){const next=major?({'axe-cleave':'axe-quake','axe-quake':'axe-rush','axe-rush':'axe-cleave','venom-fan':'venom-tide','venom-tide':'head-dive','head-dive':'venom-fan','dragon-column':'dragon-surge','dragon-surge':'dragon-thunder','dragon-thunder':'dragon-column','king-sword':'king-fire','king-fire':'tower-prison','tower-prison':'king-sword'}[e.move]||e.move):e.move;e.repeat=1;K.beginCampaignMove(s,e,next,target,true);}
         else{e.phase='recover';e.timer=major?(e.stage%3===2?.55:1.25):1.05;e.marks=[];}}
       return true;
     }
-    if(e.phase==='recover'){if(e.chiefId&&e.stage%3===2){const speed=e.timer>.40?(e.chiefId==='ninehead'?440:e.chiefId==='qinguang'?340:400):0;e.x=K.clamp(e.x-e.face*speed*dt,s.room.arena.min,s.room.arena.max-e.w);}if(e.timer<=0){e.phase='idle';e.timer=K.isMajor(e)?.18:.5;}return true;}
+    if(e.phase==='recover'){if(!K.campaignRecovery&&e.chiefId&&e.stage%3===2){const speed=e.timer>.40?(e.chiefId==='ninehead'?440:e.chiefId==='qinguang'?340:400):0;e.x=K.clamp(e.x-e.face*speed*dt,s.room.arena.min,s.room.arena.max-e.w);}if(e.timer<=0){e.phase='idle';e.timer=K.isMajor(e)?.18:.5;}return true;}
     if(e.phase==='idle'){
       const dx=target.x-e.x,near=Math.abs(dx),max=K.isMajor(e)?1050:550;
       if(near>max)return true;
       if(!K.isMajor(e)&&e.role!==1&&near>110){const bounds=K.patrolBounds(s,e);e.face=Math.sign(dx)||e.face;e.x=K.clamp(e.x+e.face*(e.role===2?47:75)*K.enemySpeed(s,e)*dt,bounds.min,bounds.max);}
       if(e.timer<=0&&(K.isMajor(e)||near<(e.role===1?550:e.role===2?330:150))){
         if(!K.isMajor(e)&&s.room.enemies.filter(q=>q.hp>0&&!K.isMajor(q)&&q.phase==='campaign-windup'&&Math.abs(q.x-s.player.x)<600).length>=(K.isChallenge(s)?3:2))return true;
-        const seq=K.campaignMoveSet(e);let move=seq[e.attacks%seq.length];if(e.stage%3===2&&near>320)move=({juling:'axe-rush',qinguang:'judge-echo',ninehead:'head-dive',dragonking:'dragon-column',litian:'tower-prison'}[e.chiefId])||move;e.attacks++;e.repeat=0;K.beginCampaignMove(s,e,move,target);
+        const seq=K.campaignMoveSet(e);let move=K.chooseCampaignMove?K.chooseCampaignMove(s,e,target):seq[e.attacks%seq.length];if(!K.chooseCampaignMove&&e.stage%3===2&&near>320)move=({juling:'axe-rush',qinguang:'judge-echo',ninehead:'head-dive',dragonking:'dragon-column',litian:'tower-prison'}[e.chiefId])||move;e.attacks++;e.repeat=0;K.beginCampaignMove(s,e,move,target);
         if(e.chiefId==='litian'&&e.attacks===2)for(const q of s.room.enemies)if(q.id>=950&&q.id<960){q.hp=q.maxHp;q.dormant=false;q.phase='idle';q.timer=.9;K.event(s,'world-note',{text:'塔兵应召，先辨近刀与远射；召兵不计歼敌分。'});}
       }return true;
     }

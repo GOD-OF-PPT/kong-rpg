@@ -82,8 +82,8 @@
       if(e.type==='thunder-hit'){this.noise(.13,.12);this.sweep(900,70,.13,.12);}
       if(e.type==='guardian-enter'){this.tone(82,.7,'triangle',.15);this.noise(.2,.08);}
       if(e.type==='guardian-defeat'){[220,330,440,660].forEach((f,i)=>this.tone(f,.4,'triangle',.11,i*.1));}
-      if(e.type==='strike-release'){this.noise(e.combo===3?.11:.055,e.combo===3?.075:.045);this.sweep(e.combo===3?300:620,e.combo===3?90:240,e.combo===3?.13:.07,.055);}
-      if(e.type==='hit'&&e.impact!=='ultimate'){const heavy=['heavy','thunder'].includes(e.impact);if(!this.sample(e.impact==='ring'?'ring-hit':heavy?'staff-heavy':'staff-light',heavy?.8:.65,heavy?2:1)){this.sweep(heavy?150:330,heavy?48:130,heavy?.16:.075,heavy?.15:.09);this.noise(heavy?.09:.035,heavy?.12:.065);}}
+      if(e.type==='strike-release'){const heavy=e.combo===3;if(e.hero==='nezha'){this.sweep(heavy?780:1180,heavy?190:410,heavy?.10:.045,.045);this.noise(.03,.025);}else if(e.hero==='erlang'){this.sweep(heavy?490:880,heavy?115:260,heavy?.15:.08,.05);this.tone(heavy?270:590,.04,'triangle',.025);}else{this.noise(heavy?.11:.055,heavy?.075:.045);this.sweep(heavy?300:620,heavy?90:240,heavy?.13:.07,.055);}}
+      if(e.type==='hit'&&e.impact!=='ultimate'){const heavy=['heavy','thunder'].includes(e.impact);if(e.hero==='nezha'&&['light','heavy'].includes(e.impact)){this.sweep(heavy?650:940,160,heavy?.08:.045,.065);this.noise(.025,.04);}else if(e.hero==='erlang'&&['light','heavy','arrow','beam','hound'].includes(e.impact)){this.sweep(e.impact==='arrow'?1300:heavy?520:860,180,heavy?.12:.055,.055);this.noise(.028,.045);}else if(!this.sample(e.impact==='ring'?'ring-hit':heavy?'staff-heavy':'staff-light',heavy?.8:.65,heavy?2:1)){this.sweep(heavy?150:330,heavy?48:130,heavy?.16:.075,heavy?.15:.09);this.noise(heavy?.09:.035,heavy?.12:.065);}}
       if(e.type==='seal-hit')this.sample('staff-light',.5);
       if(e.type==='hurt'){this.tone(72,.16,'triangle',.09);if(e.enemyMaterial)this.enemySound(e.enemyMaterial,true);else this.noise(.12,.075);}
       if(e.type==='jump'){this.tone(e.air?590:390,.1,'sine',.17);if(e.air)this.tone(780,.13,'sine',.08,.04);}

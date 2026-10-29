@@ -9,6 +9,7 @@
     const old = s.player;
     s.stage = stage; s.room = K.makeRoom(s.seed, stage,s.difficulty); s.roomTime = 0; s.checkpoint = 90;
     s.player = { x:90,y:380,w:24,h:44,vx:0,vy:0,face:1,hp:initial?K.maxHP(s):Math.min(K.maxHP(s),old.hp+18),focus:initial?65:Math.min(100,old.focus+20),rage:initial?25:old.rage,ringCD:0,ringAim:null,ultimate:0,ultimateStage:0,talismanCD:0,ward:0,dashTargets:[],grounded:false,coyote:0,buffer:0,airJumps:0,invuln:.8,dash:0,dashCD:0,attack:0,attackId:0,attackTargets:[],comboIndex:0,slam:false,landing:0,drop:0,hurt:0,attackBuffer:0,armCD:0,vaultTime:0,vaultUsed:false,groundTime:0,wheelFuel:K.has(s,'cloud')?1.5:1.25,wheelReady:true };
+    s.player.hero=s.hero;
     s.ring=null;s.silk=null;s.arm=null;s.flight=null;s.clone=null;s.projectiles=[];s.effects=[];s.dangers=[];s.casts=[];s.hitstop=0;s.mode='playing';s.pendingRelic=null;s.reward=[];K.applyWorld(s);
     K.event(s, 'room', { stage });
   };
@@ -37,7 +38,7 @@
     e.hp=Math.max(0,e.hp-amount);e.flash=.08;e.stun=K.isMajor(e)?0:.065;e.recoil=.12;e.recoilFace=Math.sign(e.x-origin)||1;
     if(!K.isMajor(e)&&['heavy','thunder','ultimate'].includes(impact)&&e.phase.endsWith('windup')&&(e.interruptLock||0)<=0){e.phase='recover';e.timer=.85;e.marks=[];e.interruptLock=1;K.event(s,'interrupt',{target:e.id});K.effect(s,'block',e.x+12,e.y+4,{text:'破势'});}
     if(!K.isMajor(e)&&!((e.trait||e.phase==='pursuit-windup'||e.phase==='cross-windup')&&e.phase.endsWith('windup')&&['light','ring'].includes(impact))){const bounds=K.patrolBounds(s,e);e.x=K.clamp(e.x+Math.sign(e.x-origin)*12,bounds.min,bounds.max);}
-    const heavy=['heavy','ultimate','thunder'].includes(impact);K.effect(s,heavy?'heavy-hit':'hit',ix,iy,{text:String(amount),face:Math.sign(e.x-origin)||1,impact,color:heavy?'#ffe9a8':'#fff1ce'});
+    const heavy=['heavy','ultimate','thunder'].includes(impact);K.effect(s,heavy?'heavy-hit':'hit',ix,iy,{text:String(amount),face:Math.sign(e.x-origin)||1,impact,weapon:s.hero,combo:s.player.comboIndex,color:heavy?'#ffe9a8':'#fff1ce'});
     s.hitstop=Math.max(s.hitstop,heavy?.045:impact==='lotus-burn'?0:.02);s.shake=Math.max(s.shake,heavy?.14:.045);K.event(s,'hit',{target:e.id,kind:e.kind,amount,impact,hero:s.hero,x:ix,y:iy});if(!['ultimate','lotus-burn','six-arms'].includes(impact))K.gainRage(s,(impact==='heavy'?14:8)*(K.isMajor(e)?.5:1));
     if (e.hp === 0) { s.kills++;s.player.focus=Math.min(100,s.player.focus+10);K.effect(s,'kill',e.x+e.w/2,e.y+20,{face:Math.sign(e.x-origin)||1});K.event(s,'kill',{kind:e.kind});
       if(K.dropEnemy)K.dropEnemy(s,e);
@@ -99,11 +100,11 @@
     if((a.attack||p.attackBuffer>0)&&p.hurt<=0&&p.eyePose<=0&&p.secondaryPose<=0&&p.attack<=0&&p.landing===0&&p.dash<=0&&!p.slam){
       p.attackBuffer=0;
       if (a.down && !p.grounded) { p.slam = true; p.vy = 650; p.vx = 0; K.event(s, 'slam'); }
-      else { s.combo=s.combo%3+1;s.comboTime=.85;p.comboIndex=s.combo;p.attack=p.comboIndex===3?(K.has(s,'staff')?.40:.36):p.comboIndex===2?.25:.23;p.attackDuration=p.attack;if(p.grounded)p.vx=0;p.attackTargets=[];p.attackId++;K.event(s,'swing',{combo:p.comboIndex}); }
+      else { s.combo=s.combo%3+1;s.comboTime=.85;p.comboIndex=s.combo;p.attack=K.attackDuration?K.attackDuration(s):p.comboIndex===3?(K.has(s,'staff')?.40:.36):p.comboIndex===2?.25:.23;p.attackDuration=p.attack;if(p.grounded)p.vx=0;p.attackTargets=[];p.attackId++;K.event(s,'swing',{combo:p.comboIndex,hero:s.hero}); }
     }
     if (p.attack > 0) {
       const elapsed = p.attackDuration - p.attack;
-      const timing=K.attackTiming(p);if(elapsed>=timing.start&&elapsed<timing.end){if(!p.attackTargets.includes('release')){p.attackTargets.push('release');K.event(s,'strike-release',{combo:p.comboIndex,hero:s.hero});}K.strike(s,K.attackBox(s),p.comboIndex===3?27:14,p.x+12,p.comboIndex===3&&K.has(s,'staff'),p.attackTargets,p.comboIndex===3?'heavy':'light');if(p.comboIndex===3&&K.rank(s,'staff-wave')&&!p.attackTargets.includes('wave')){p.attackTargets.push('wave');s.projectiles.push({x:p.x+12,y:p.y+18,vx:p.face*430,vy:0,w:30,h:17,life:1.05,friendly:true,damage:12});K.event(s,'staff-wave');}}
+      const timing=K.attackTiming(p);if(elapsed>=timing.start&&elapsed<timing.end){if(!p.attackTargets.includes('release')){p.attackTargets.push('release');K.event(s,'strike-release',{combo:p.comboIndex,hero:s.hero});}K.strike(s,K.attackBox(s),K.attackDamage?K.attackDamage(s):p.comboIndex===3?27:14,p.x+12,p.comboIndex===3&&K.has(s,'staff'),p.attackTargets,p.comboIndex===3?'heavy':'light');if(p.comboIndex===3&&K.rank(s,'staff-wave')&&!p.attackTargets.includes('wave')){p.attackTargets.push('wave');s.projectiles.push({x:p.x+12,y:p.y+18,vx:p.face*430,vy:0,w:30,h:17,life:1.05,friendly:true,damage:12});K.event(s,'staff-wave');}}
       p.attack = Math.max(0, p.attack - dt);
     }
     if (p.dash > 0) { p.dash = Math.max(0, p.dash - dt); p.vx = p.face * 650; p.vy = 0; if (Math.floor(s.time * 45) % 2 === 0) K.effect(s, 'trail', p.x, p.y, { face: p.face }); }

@@ -2,7 +2,7 @@
 // prepare a training fixture; keyboard input and normal simulation drive it.
 const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),crypto=require('node:crypto'),{chromium}=require('playwright');
 const root=path.resolve(__dirname,'..'),out=path.resolve(root,process.env.SKILL_REVIEW_DIR||'evidence/skill-visual-v12/before');fs.mkdirSync(path.join(out,'frames'),{recursive:true});
-const c=vm.createContext({console});for(const n of ['content','motion','world','progression','journey','heroes','signature','simulation','challenge','realms','warriors','celestial','campaign-data','enemy-effects','route-layouts','campaign-world','campaign-combat','campaign-state','storage'])vm.runInContext(fs.readFileSync(path.join(root,'src',n+'.js'),'utf8'),c);const K=c.Kong;
+const c=vm.createContext({console});for(const n of ['content','motion','world','progression','journey','heroes','signature','simulation','challenge','realms','warriors','celestial','campaign-data','enemy-effects','route-layouts','campaign-world','campaign-combat','campaign-state','combat-identity','storage'])vm.runInContext(fs.readFileSync(path.join(root,'src',n+'.js'),'utf8'),c);const K=c.Kong;
 const specs=[];
 const names={wukong:'孙悟空',nezha:'哪吒',erlang:'杨戬'};
 for(const hero of Object.keys(names)){

@@ -1,6 +1,10 @@
-# 大圣 · 劫后行 v12.1.4
+# 大圣 · 劫后行 v12.2.0
 
 五界归途：孙悟空、哪吒、杨戬可选的像素横版平台动作肉鸽。依次走过五章十五关，击退十名小首领与五名大首领，最终迎战托塔天王。玩法、角色和美术均基于用户设定创作，不宣称复刻电视剧中的具体战斗。
+
+## v12.2.0 兵器动作与首领交锋
+
+三英雄主攻重绘为独立动作，棍扫、枪刺与刀劈使用各自时序、空间范围、命中反馈和挥击音色；五大首领每招分别准备、释放和收招，并依距离、高度与上一招选招。低血和挑战的连式最多追加一次，追加仍预警，结束停势供反击。没有增加地图、血量倍率或永久成长，schema12存档继续兼容。[设计与验收](docs/combat-identities/REVIEW.md) · [生成提示词](docs/combat-identities/PROMPTS.json)。
 
 ## v12.1.4 地图截图检查
 
@@ -85,7 +89,7 @@
 
 ## 直接运行
 
-双击 `release/index.html`；或解压 `artifacts/kong-rpg-offline-v12.1.4.zip` 后双击包内 `index.html`。PC Edge / Chrome，无需网络、安装、CDN、字体下载或安全设置。保留同目录 `legacy-v1.html` 至 `legacy-v11.html`，供旧旅程继续。
+双击 `release/index.html`；或解压 `artifacts/kong-rpg-offline-v12.2.0.zip` 后双击包内 `index.html`。PC Edge / Chrome，无需网络、安装、CDN、字体下载或安全设置。保留同目录 `legacy-v1.html` 至 `legacy-v11.html`，供旧旅程继续。
 
 源码预览需要Node.js 18+，不需npm install：
 

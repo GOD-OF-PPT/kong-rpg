@@ -1,0 +1,35 @@
+{
+  "checks": [
+    {
+      "name": "DOM pause click enters pause without leaking attack",
+      "pass": true
+    },
+    {
+      "name": "J on paused DOM cannot advance simulation",
+      "pass": true
+    },
+    {
+      "name": "storage-denied state exports real progress",
+      "pass": true
+    },
+    {
+      "name": "export restores after a fresh load with storage still denied",
+      "pass": true
+    },
+    {
+      "name": "DOM resume does not trigger an extra attack",
+      "pass": true
+    },
+    {
+      "name": "Canvas keyboard control resumes after DOM interaction",
+      "pass": true
+    },
+    {
+      "name": "no remote requests or runtime errors",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "requests": [],
+  "version": "12.2.0"
+}
