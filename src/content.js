@@ -1,6 +1,6 @@
 (function (K) {
   'use strict';
-  K.VERSION = '12.1.3';
+  K.VERSION = '12.1.4';
   K.W = 960; K.H = 540; K.DT = 1 / 120;
   K.clamp = (v, a, b) => Math.max(a, Math.min(b, v));
   K.overlap = (a, b) => a.x < b.x + b.w && a.x + a.w > b.x && a.y < b.y + b.h && a.y + a.h > b.y;

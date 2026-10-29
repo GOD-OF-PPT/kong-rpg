@@ -233,13 +233,13 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
       <div id="toast" role="status" aria-live="polite" hidden></div>
       <div id="context-hint" hidden></div>
     </section>
-    <footer class="footline"><div><span class="status-dot"></span><span id="storage-status">离线可玩 · 进度自动保存</span></div><div class="keystrip"><span><kbd>A</kbd><kbd>D</kbd> 行走</span><span><kbd>SPACE</kbd> 跃起</span><span><kbd>J</kbd> 攻击</span><span><kbd>K</kbd> 闪避</span><span><kbd>H</kbd> 副武器</span><span><kbd>L</kbd> 神通</span><span><kbd>R</kbd> 大招</span><span><kbd>C</kbd> 秘技</span><span><kbd>Q</kbd> 符术</span><span><kbd>U</kbd> 变化</span></div><span class="build">v12.1.3 <span>／</span> 棍影 · 回环 · 应劫</span></footer>
+    <footer class="footline"><div><span class="status-dot"></span><span id="storage-status">离线可玩 · 进度自动保存</span></div><div class="keystrip"><span><kbd>A</kbd><kbd>D</kbd> 行走</span><span><kbd>SPACE</kbd> 跃起</span><span><kbd>J</kbd> 攻击</span><span><kbd>K</kbd> 闪避</span><span><kbd>H</kbd> 副武器</span><span><kbd>L</kbd> 神通</span><span><kbd>R</kbd> 大招</span><span><kbd>C</kbd> 秘技</span><span><kbd>Q</kbd> 符术</span><span><kbd>U</kbd> 变化</span></div><span class="build">v12.1.4 <span>／</span> 棍影 · 回环 · 应劫</span></footer>
     <input id="import-file" type="file" accept="application/json,.json" hidden>
   </main>
   <script>
 (function (K) {
   'use strict';
-  K.VERSION = '12.1.3';
+  K.VERSION = '12.1.4';
   K.W = 960; K.H = 540; K.DT = 1 / 120;
   K.clamp = (v, a, b) => Math.max(a, Math.min(b, v));
   K.overlap = (a, b) => a.x < b.x + b.w && a.x + a.w > b.x && a.y < b.y + b.h && a.y + a.h > b.y;
@@ -1390,8 +1390,11 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
     if(part===2&&info.id==='heaven')for(let i=0;i<2;i++)add(i===0?0:1,arenaMin+170+i*250,950+i,true);
     if(part===2&&['underworld','dragon','heaven'].includes(info.id)){const kind=info.id==='underworld'?'writ':info.id==='dragon'?'pearl':'tower';for(let i=0;i<(kind==='writ'?2:1);i++)room.anchors.push({id:i,kind,x:arenaMin+160+i*440,y:400,w:28,h:40,hp:kind==='pearl'?28:36,maxHp:kind==='pearl'?28:36,active:false,hits:[]});}
     for(const [x,w]of layout.hazards||[])room.hazards.push({x,y:427,w,h:13,period:info.id==='underworld'?4.2:4.8,offset:stage*.43});
-    room.camp={x:arenaMin-95,y:396,used:false};
-    room.pickups.push({x:1350,y:420,w:16,h:20,kind:'heal',amount:18,used:false});
+    // Place fixed supplies on complete supporting feet, not on an old flat
+    // y=440 assumption. The same coordinates drive drawing, F and pickups.
+    const supportedPoint=(preferred,halfWidth,before=room.width)=>room.platforms.filter(p=>p.solid&&p.w>=halfWidth*2+16&&p.x+halfWidth+6<=before-halfWidth-6).map(p=>{const x=K.clamp(preferred,p.x+halfWidth+6,Math.min(p.x+p.w-halfWidth-6,before-halfWidth-6));return{x,y:p.y,distance:Math.abs(x-preferred)};}).sort((a,b)=>a.distance-b.distance||a.x-b.x)[0];
+    const campGround=supportedPoint(arenaMin-95,26,arenaMin);room.camp={x:campGround.x,y:campGround.y-44,used:false};
+    const medicineGround=supportedPoint(1358,8);room.pickups.push({x:medicineGround.x-8,y:medicineGround.y-20,w:16,h:20,kind:'heal',amount:18,used:false});
     room.signs=[{x:140,text:'第'+(Math.floor(stage/3)+1)+'章 第'+(part+1)+'关 · '+info.name+'。F拾卷，C秘技；击退'+info.chief+'后F过门。'},
       {x:arenaMin-200,text:info.lesson}];room.landmarks=[700,arenaMin];return room;
   };
@@ -2229,7 +2232,7 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
     drawMapProps(){
       const s=this.scene;if(!s)return;const c=this.c,t=s.room.trial,cm=s.room.camp;
       if(t){this.mapSprite('trial-'+t.state,t.x,280);if(t.state==='cleared')for(let i=0;i<4;i++)rect(c,t.x-18+i*12,190-Math.sin(this.clock*3+i)*3,2,2,'#dce9bb');}
-      if(cm){this.mapSprite(cm.used?'camp-spent':'camp-lit',cm.x,440);if(!cm.used&&Math.floor(this.clock*6)%3!==0)rect(c,cm.x,392,1,2,'#ffedb6');}
+      if(cm){const foot=cm.y+44;this.mapSprite(cm.used?'camp-spent':'camp-lit',cm.x,foot);if(!cm.used&&Math.floor(this.clock*6)%3!==0)rect(c,cm.x,foot-48,1,2,'#ffedb6');}
       if(!K.CAMPAIGN&&s.stage===3){const open=s.room.seals.every(q=>q.hp===0);this.mapSprite('arena-pillar',s.room.arena.enter-17,440,open?.38:.9);}
       const guardian=K.guardian(s);if(guardian?.hp>0&&!guardian.dormant)this.mapSprite('arena-pillar',s.room.arena.min-17,440,.8);
     }
@@ -2708,7 +2711,7 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
       const s=this.scene;if(!s||K.chapter(s.stage).id!=='cloud')return super.drawLandmarks();
       for(const x of s.room.landmarks){if(x<this.camera-80||x>this.camera+1040)continue;const p=s.room.platforms.find(p=>p.solid&&x>p.x+30&&x<p.x+p.w-30);if(!p||s.room.camp&&Math.abs(s.room.camp.x-x)<130)continue;this.cloudStamp('cloud-beacon',x,p.y,.57);}
     }
-    drawMapProps(){const s=this.scene;if(!s||K.chapter(s.stage).id!=='cloud')return super.drawMapProps();if(s.room.camp)this.cloudStamp(s.room.camp.used?'cloud-camp-spent':'cloud-camp-lit',s.room.camp.x,440);const chief=K.guardian(s);if(chief?.hp>0&&!chief.dormant)this.cloudStamp('cloud-beacon',s.room.arena.min-12,440,.7);}
+    drawMapProps(){const s=this.scene;if(!s||K.chapter(s.stage).id!=='cloud')return super.drawMapProps();if(s.room.camp)this.cloudStamp(s.room.camp.used?'cloud-camp-spent':'cloud-camp-lit',s.room.camp.x,s.room.camp.y+44);const chief=K.guardian(s);if(chief?.hp>0&&!chief.dormant)this.cloudStamp('cloud-beacon',s.room.arena.min-12,440,.7);}
     drawGate(x,open){if(K.chapter(this.scene.stage).id!=='cloud')return super.drawGate(x,open);this.cloudStamp('cloud-gate',x+7,440);const c=this.c;c.save();if(!open){c.strokeStyle='#e9d5a2';c.lineWidth=1;c.globalAlpha=.5;for(let i=0;i<3;i++){c.beginPath();c.moveTo(x-30,352+i*25);c.quadraticCurveTo(x+7,335+i*25,x+43,360+i*25);c.stroke();}}else{c.fillStyle='#b9e8dc';for(let i=0;i<5;i++)c.fillRect(Math.round(x+Math.sin(this.clock+i)*23),Math.round(370+(i*13+this.clock*14)%58),1,2);}c.restore();}
     drawArtManual(q){
       const c=this.c,near=K.nearArtManual(this.scene)?.id===q.id;this.cloudStamp('manual-plinth',q.x,440,near?1:.88);c.save();c.imageSmoothingEnabled=true;c.imageSmoothingQuality='high';

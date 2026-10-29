@@ -1,0 +1,46 @@
+{
+  "version": "12.1.4",
+  "branch": "codex/v12-map-visual-review",
+  "baseHEAD": "88649f741367bfabdd073effa096f2d57567b8f7",
+  "entrySHA256": "d837b01aacee590ced313f19358538c38c371c7a2627b0d05cc88a1be4706182",
+  "maps": 15,
+  "screenshotsPerVersion": 126,
+  "gallery": "after/review.html",
+  "reviewCounts": {
+    "通过": 10,
+    "已修复": 4,
+    "可优化": 1
+  },
+  "fixed": [
+    "Cloud second level lamp over gap",
+    "Heaven second level lamp over gap",
+    "Underwater second level medicine buried in raised floor",
+    "Dragon first level medicine over gap"
+  ],
+  "httpFileIdenticalImages": 126,
+  "fileActions": {
+    "checks": 10,
+    "errors": 0,
+    "HTTPRequests": 0
+  },
+  "oldSaveCompatibility": "rules/old-save-rebase.json",
+  "traversal": "rules/traversal.json",
+  "package": {
+    "version": "12.1.4",
+    "archive": "E:\\githome\\kong-rpg\\artifacts\\kong-rpg-offline-v12.1.4.zip",
+    "bytes": 446357504,
+    "zipSHA256": "f9324313fae9ffa4a58f3863c687e6f5be9c1b7568c26f4093e1501bfb84e173",
+    "entrySHA256": "d837b01aacee590ced313f19358538c38c371c7a2627b0d05cc88a1be4706182",
+    "allCRCsValid": true,
+    "extractedEntryMatches": true,
+    "entry": "E:\\githome\\kong-rpg\\artifacts\\portable-map-visual-v12\\index.html",
+    "hasNewReview": true,
+    "hasPrompts": false
+  },
+  "limitations": [
+    "Frozen map review, not natural combat completion",
+    "Cloud ranged foe suspended after fragile platform breaks remains an explicit follow-up observation",
+    "Environment tombstone can resemble a collision support; repeated textures and bright Heaven background remain refinements",
+    "No external human first-read or aesthetic study"
+  ]
+}

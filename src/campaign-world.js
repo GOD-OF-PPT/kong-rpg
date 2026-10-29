@@ -21,8 +21,11 @@
     if(part===2&&info.id==='heaven')for(let i=0;i<2;i++)add(i===0?0:1,arenaMin+170+i*250,950+i,true);
     if(part===2&&['underworld','dragon','heaven'].includes(info.id)){const kind=info.id==='underworld'?'writ':info.id==='dragon'?'pearl':'tower';for(let i=0;i<(kind==='writ'?2:1);i++)room.anchors.push({id:i,kind,x:arenaMin+160+i*440,y:400,w:28,h:40,hp:kind==='pearl'?28:36,maxHp:kind==='pearl'?28:36,active:false,hits:[]});}
     for(const [x,w]of layout.hazards||[])room.hazards.push({x,y:427,w,h:13,period:info.id==='underworld'?4.2:4.8,offset:stage*.43});
-    room.camp={x:arenaMin-95,y:396,used:false};
-    room.pickups.push({x:1350,y:420,w:16,h:20,kind:'heal',amount:18,used:false});
+    // Place fixed supplies on complete supporting feet, not on an old flat
+    // y=440 assumption. The same coordinates drive drawing, F and pickups.
+    const supportedPoint=(preferred,halfWidth,before=room.width)=>room.platforms.filter(p=>p.solid&&p.w>=halfWidth*2+16&&p.x+halfWidth+6<=before-halfWidth-6).map(p=>{const x=K.clamp(preferred,p.x+halfWidth+6,Math.min(p.x+p.w-halfWidth-6,before-halfWidth-6));return{x,y:p.y,distance:Math.abs(x-preferred)};}).sort((a,b)=>a.distance-b.distance||a.x-b.x)[0];
+    const campGround=supportedPoint(arenaMin-95,26,arenaMin);room.camp={x:campGround.x,y:campGround.y-44,used:false};
+    const medicineGround=supportedPoint(1358,8);room.pickups.push({x:medicineGround.x-8,y:medicineGround.y-20,w:16,h:20,kind:'heal',amount:18,used:false});
     room.signs=[{x:140,text:'第'+(Math.floor(stage/3)+1)+'章 第'+(part+1)+'关 · '+info.name+'。F拾卷，C秘技；击退'+info.chief+'后F过门。'},
       {x:arenaMin-200,text:info.lesson}];room.landmarks=[700,arenaMin];return room;
   };

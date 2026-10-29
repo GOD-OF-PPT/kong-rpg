@@ -1,0 +1,18 @@
+{
+  "mode": "http",
+  "sha256": "d837b01aacee590ced313f19358538c38c371c7a2627b0d05cc88a1be4706182",
+  "method": "Public save imports prepare four modified map locations; actual keyboard collects medicine and activates rest lamp; actual export/import preserves consumption.",
+  "checks": [],
+  "errors": [],
+  "network": [
+    "http://127.0.0.1:5188/?map-actions=1"
+  ],
+  "browser": "156.0.4314.50",
+  "failure": "page.waitForFunction: Timeout 30000ms exceeded.\n    at E:\\githome\\kong-rpg\\tools\\browser-map-support.cjs:9:1023",
+  "recording": {
+    "file": "E:\\githome\\kong-rpg\\evidence\\map-visual-v12\\actions-http\\supports.webm",
+    "mime": "video/webm;codecs=vp9",
+    "ms": 31024,
+    "method": "real Canvas captureStream at requested 30Hz, MediaRecorder VP9; ms is recording wall time, encoded frame rate not independently inspected"
+  }
+}

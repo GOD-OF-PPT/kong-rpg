@@ -56,7 +56,7 @@
     drawMapProps(){
       const s=this.scene;if(!s)return;const c=this.c,t=s.room.trial,cm=s.room.camp;
       if(t){this.mapSprite('trial-'+t.state,t.x,280);if(t.state==='cleared')for(let i=0;i<4;i++)rect(c,t.x-18+i*12,190-Math.sin(this.clock*3+i)*3,2,2,'#dce9bb');}
-      if(cm){this.mapSprite(cm.used?'camp-spent':'camp-lit',cm.x,440);if(!cm.used&&Math.floor(this.clock*6)%3!==0)rect(c,cm.x,392,1,2,'#ffedb6');}
+      if(cm){const foot=cm.y+44;this.mapSprite(cm.used?'camp-spent':'camp-lit',cm.x,foot);if(!cm.used&&Math.floor(this.clock*6)%3!==0)rect(c,cm.x,foot-48,1,2,'#ffedb6');}
       if(!K.CAMPAIGN&&s.stage===3){const open=s.room.seals.every(q=>q.hp===0);this.mapSprite('arena-pillar',s.room.arena.enter-17,440,open?.38:.9);}
       const guardian=K.guardian(s);if(guardian?.hp>0&&!guardian.dormant)this.mapSprite('arena-pillar',s.room.arena.min-17,440,.8);
     }

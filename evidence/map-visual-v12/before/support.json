@@ -1,0 +1,24 @@
+{
+  "version": "12.1.3",
+  "rows": [
+    {
+      "name": "each rest lamp has its entire base on ground before boss entry",
+      "pass": false,
+      "error": "unsupported camp 1:normal"
+    },
+    {
+      "name": "every fixed visible pickup rests above a full supporting surface",
+      "pass": false,
+      "error": "unsupported fixed pickup 7"
+    },
+    {
+      "name": "raised underwater medicine can be collected by standing on its actual ledge",
+      "pass": false,
+      "error": "The expression evaluated to a falsy value:\n\n  assert.ok(q.used)\n"
+    },
+    {
+      "name": "rest interaction uses the rendered supported position and survives save restore",
+      "pass": true
+    }
+  ]
+}
