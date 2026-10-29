@@ -44,11 +44,44 @@
     combatCues(){
       super.combatCues();const s=this.scene;if(!s)return;const c=this.c;
       for(const e of s.room.enemies)if(e.hp>0&&!e.dormant&&K.REALM_PHASES.includes(e.phase))for(const b of e.marks||[])this.mark(b);
-      if(s.eye){const b=s.eye;c.save();c.strokeStyle='#90dfe4';c.lineWidth=1;c.setLineDash([5,5]);c.strokeRect(Math.round(b.x),Math.round(b.y),b.w,b.h);c.restore();const im=this.v8Frame('eye');if(im)c.drawImage(im,Math.round(b.x+b.w/2-14),Math.round(b.y-18),28,22);}
+      if(s.eye)this.drawEyeField(s);
+    }
+    drawEyeField(s){
+      const b=s.eye;if(!b)return;const c=this.c,t=s.time,age=Math.max(0,(K.has(s,'echo')?5:3)-b.life),fade=Math.min(1,age/.12,b.life/.35);
+      // The locked rectangle remains simulation data only. Soft, separated
+      // shafts of light have no enclosing border, hard fill or floating icon.
+      c.save();c.beginPath();c.rect(b.x,b.y,b.w,b.h);c.clip();
+      const light=c.createLinearGradient(0,b.y,0,b.y+b.h);
+      light.addColorStop(0,'#ffe3a000');light.addColorStop(.28,'#ffe3a014');light.addColorStop(.65,'#fff0bb35');light.addColorStop(1,'#e8c47300');
+      c.fillStyle=light;
+      for(let i=0;i<7;i++){
+        const q=(i+.6)/7.4+Math.sin(i*2)*.025,x=b.x+b.w*q,drift=Math.sin(t*2+i*.9)*12,top=b.y+6+i%3*11,bottom=b.y+b.h-5-i%2*13;
+        c.globalAlpha=fade*Math.sin(q*Math.PI)*(.55+.35*Math.sin(t*3+i)**2);
+        c.beginPath();c.moveTo(x-7,top);c.bezierCurveTo(x+drift-19,b.y+b.h*.35,x+drift+13,b.y+b.h*.65,x+5,bottom);c.bezierCurveTo(x+drift+24,b.y+b.h*.6,x+drift-7,b.y+b.h*.3,x-7,top);c.closePath();c.fill();
+      }
+      // A moving glint reads as a scan, not a damaging beam. It never changes
+      // the already locked area or tracks the player's later movement.
+      const scan=b.x+b.w*(.5+.47*Math.sin(age*2.5-1.5));
+      c.globalAlpha=fade*.75;c.fillStyle='#ffe7a6';
+      for(let i=0;i<7;i++){const y=b.y+10+((i*13+age*18)%(b.h-20)),x=scan+Math.sin(i*1.8+age*2)*10;c.fillRect(Math.round(x),Math.round(y),i%3===0?2:1,2);}
+      c.restore();
+    }
+    eyeTargets(s){return s.eye?s.room.enemies.filter(e=>e.hp>0&&!e.dormant&&K.overlap(s.eye,e)):[];}
+    drawEyeTargets(s){
+      if(!s.eye)return;const c=this.c,fade=Math.min(1,s.eye.life/.35),pulse=.7+Math.sin(s.time*7)*.15;
+      c.save();c.strokeStyle='#ffe4a0';c.fillStyle='#fff4ce';c.lineWidth=1;
+      for(const e of this.eyeTargets(s)){
+        if(e.x+e.w<this.camera||e.x>this.camera+960)continue;
+        const x=Math.round(e.x+e.w/2),y=Math.round(e.y+e.h*.4),r=K.isMajor(e)?11:8;
+        c.globalAlpha=fade*pulse;c.beginPath();c.moveTo(x-r,y);c.quadraticCurveTo(x,y-7,x+r,y);c.quadraticCurveTo(x,y+6,x-r,y);c.stroke();c.fillRect(x-1,y-2,2,4);
+        c.globalAlpha=fade*.5;for(const sign of [-1,1]){c.beginPath();c.moveTo(x+sign*(r+3),y-5);c.lineTo(x+sign*(r+6),y-8);c.stroke();}
+      }
+      c.restore();
     }
     draw(s,ui,dt){super.draw(s,ui,dt);if(!s||ui==='menu')return;const c=this.c;c.save();c.translate(-Math.round(this.camera),0);
       for(const b of s.arrows){const im=this.v8Frame('arrow');if(im){c.save();c.translate(Math.round(b.x),Math.round(b.y));c.rotate(Math.atan2(b.vy,b.vx));c.drawImage(im,-16,-5,32,10);c.restore();}}
       if(s.hound){const h=s.hound,im=this.v8Frame('hound-'+(h.pose==='bite'?3:h.vy<0?2:Math.abs(h.vx)>20?1:0));if(im){c.save();c.translate(Math.round(h.x+18),Math.round(h.y+26));c.scale(h.face,1);c.drawImage(im,-40,-56);c.restore();const badge=this.v8Frame('ally');if(badge)c.drawImage(badge,Math.round(h.x+11),Math.round(h.y-17),14,14);}}
+      this.drawEyeTargets(s);
       c.restore();
     }
   };

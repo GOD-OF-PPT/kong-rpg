@@ -1,0 +1,121 @@
+{
+  "mode": "http",
+  "version": "12.2.2",
+  "sha256": "73ff2ee661cde735ebde34071b61c8eec15ec1276f33e055d4d3b7da6c88244d",
+  "checks": [
+    {
+      "name": "ordinary front shield blocks before the eye false",
+      "pass": true
+    },
+    {
+      "name": "L costs 30 and keeps canonical range/duration false",
+      "pass": true
+    },
+    {
+      "name": "L reveals without dealing immediate damage false",
+      "pass": true
+    },
+    {
+      "name": "an attack pierces the revealed ordinary shield false",
+      "pass": true
+    },
+    {
+      "name": "ordinary front shield blocks before the eye true",
+      "pass": true
+    },
+    {
+      "name": "L costs 30 and keeps canonical range/duration true",
+      "pass": true
+    },
+    {
+      "name": "L reveals without dealing immediate damage true",
+      "pass": true
+    },
+    {
+      "name": "an attack pierces the revealed ordinary shield true",
+      "pass": true
+    },
+    {
+      "name": "eye field is visible without a dashed/rectangular outline",
+      "pass": true,
+      "data": {
+        "boxes": 0,
+        "dashes": 0,
+        "painted": 4052,
+        "outside": 0,
+        "expired": 0
+      }
+    },
+    {
+      "name": "light stays in the real area and fades out at expiry",
+      "pass": true,
+      "data": {
+        "boxes": 0,
+        "dashes": 0,
+        "painted": 4052,
+        "outside": 0,
+        "expired": 0
+      }
+    },
+    {
+      "name": "normal false actual L creates the eye and explains its effect",
+      "pass": true
+    },
+    {
+      "name": "normal false locked light does not follow movement",
+      "pass": true
+    },
+    {
+      "name": "normal false active eye restores unchanged",
+      "pass": true
+    },
+    {
+      "name": "normal true actual L creates the eye and explains its effect",
+      "pass": true
+    },
+    {
+      "name": "normal true locked light does not follow movement",
+      "pass": true
+    },
+    {
+      "name": "normal true active eye restores unchanged",
+      "pass": true
+    },
+    {
+      "name": "challenge false actual L creates the eye and explains its effect",
+      "pass": true
+    },
+    {
+      "name": "challenge false locked light does not follow movement",
+      "pass": true
+    },
+    {
+      "name": "challenge false active eye restores unchanged",
+      "pass": true
+    },
+    {
+      "name": "challenge true actual L creates the eye and explains its effect",
+      "pass": true
+    },
+    {
+      "name": "challenge true locked light does not follow movement",
+      "pass": true
+    },
+    {
+      "name": "challenge true active eye restores unchanged",
+      "pass": true
+    },
+    {
+      "name": "C remains the separate damaging eye-beam art",
+      "pass": true
+    },
+    {
+      "name": "no browser errors",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "network": [
+    "http://127.0.0.1:5188/?v=12.2.2"
+  ]
+}

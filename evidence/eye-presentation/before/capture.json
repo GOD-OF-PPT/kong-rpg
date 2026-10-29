@@ -1,0 +1,316 @@
+{
+  "version": "12.2.1",
+  "sha256": "565d8ad824c2386ec4012e12909f5b6c170edf4dc095bac8abc23abb9a217f64",
+  "method": "Public-import training fixtures; actual input and runtime simulation; frame capture after production renderer. Raw Canvas 960x540, no graphics replacement. Not natural gameplay or human playtest.",
+  "cases": [
+    {
+      "id": "erlang-ability",
+      "hero": "erlang",
+      "kind": "ability",
+      "title": "杨戬 · 天眼",
+      "distance": 65,
+      "seed": "VISUAL-SKILLS-1028",
+      "target": 900,
+      "frames": [
+        {
+          "label": "施放",
+          "file": "frames/erlang-ability-0.png",
+          "time": 0.15,
+          "age": 0,
+          "camera": 1560,
+          "player": {
+            "x": 2085,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 100,
+            "invuln": 0
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-active",
+            "move": "",
+            "hp": 300,
+            "face": -1
+          },
+          "boxes": [
+            {
+              "kind": "eye",
+              "x": 2085,
+              "y": 361,
+              "w": 280,
+              "h": 105,
+              "life": 2.9916666666666667
+            }
+          ],
+          "cast": null,
+          "effects": [],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 0
+            },
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 2
+            },
+            {
+              "type": "eye",
+              "t": 0.15,
+              "wall": 0.15
+            }
+          ]
+        },
+        {
+          "label": "持续",
+          "file": "frames/erlang-ability-1.png",
+          "time": 0.5000000000000007,
+          "age": 0.35000000000000064,
+          "camera": 1560,
+          "player": {
+            "x": 2085,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 100,
+            "invuln": 0
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-active",
+            "move": "",
+            "hp": 300,
+            "face": -1
+          },
+          "boxes": [
+            {
+              "kind": "eye",
+              "x": 2085,
+              "y": 361,
+              "w": 280,
+              "h": 105,
+              "life": 2.641666666666668
+            }
+          ],
+          "cast": null,
+          "effects": [],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 0
+            },
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 2
+            },
+            {
+              "type": "eye",
+              "t": 0.15,
+              "wall": 0.15
+            }
+          ]
+        },
+        {
+          "label": "交互",
+          "file": "frames/erlang-ability-2.png",
+          "time": 0.6833333333333333,
+          "age": 0.5333333333333333,
+          "camera": 1560,
+          "player": {
+            "x": 2085,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 100,
+            "invuln": 0
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-active",
+            "move": "",
+            "hp": 294,
+            "face": -1
+          },
+          "boxes": [
+            {
+              "kind": "attack",
+              "x": 2095,
+              "y": 370,
+              "w": 98,
+              "h": 65
+            },
+            {
+              "kind": "eye",
+              "x": 2085,
+              "y": 361,
+              "w": 280,
+              "h": 105,
+              "life": 2.4583333333333353
+            }
+          ],
+          "cast": null,
+          "effects": [
+            {
+              "kind": "brace-hit",
+              "x": 2150,
+              "y": 390.5,
+              "life": 0.42
+            },
+            {
+              "kind": "hit",
+              "x": 2150,
+              "y": 402.5,
+              "life": 0.16,
+              "impact": "light"
+            }
+          ],
+          "events": [
+            {
+              "type": "eye",
+              "t": 0.15,
+              "wall": 0.15
+            },
+            {
+              "type": "swing",
+              "t": 0.608,
+              "wall": 0.608,
+              "combo": 1,
+              "hero": "erlang"
+            },
+            {
+              "type": "strike-release",
+              "t": 0.683,
+              "wall": 0.683,
+              "combo": 1,
+              "hero": "erlang"
+            },
+            {
+              "type": "boss-brace",
+              "t": 0.683,
+              "wall": 0.683,
+              "target": 900,
+              "chip": 6,
+              "absorbed": 10
+            },
+            {
+              "type": "hit",
+              "t": 0.683,
+              "wall": 0.683,
+              "target": 900,
+              "kind": "warden",
+              "amount": 6,
+              "impact": "light",
+              "hero": "erlang",
+              "x": 2150,
+              "y": 402.5
+            }
+          ]
+        },
+        {
+          "label": "结束",
+          "file": "frames/erlang-ability-3.png",
+          "time": 3.2583333333333244,
+          "age": 3.1083333333333245,
+          "camera": 1560,
+          "player": {
+            "x": 2085,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 100,
+            "invuln": 0
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-active",
+            "move": "",
+            "hp": 294,
+            "face": -1
+          },
+          "boxes": [],
+          "cast": null,
+          "effects": [],
+          "events": [
+            {
+              "type": "eye",
+              "t": 0.15,
+              "wall": 0.15
+            },
+            {
+              "type": "swing",
+              "t": 0.608,
+              "wall": 0.608,
+              "combo": 1,
+              "hero": "erlang"
+            },
+            {
+              "type": "strike-release",
+              "t": 0.683,
+              "wall": 0.683,
+              "combo": 1,
+              "hero": "erlang"
+            },
+            {
+              "type": "boss-brace",
+              "t": 0.683,
+              "wall": 0.683,
+              "target": 900,
+              "chip": 6,
+              "absorbed": 10
+            },
+            {
+              "type": "hit",
+              "t": 0.683,
+              "wall": 0.683,
+              "target": 900,
+              "kind": "warden",
+              "amount": 6,
+              "impact": "light",
+              "hero": "erlang",
+              "x": 2150,
+              "y": 402.5
+            }
+          ]
+        }
+      ],
+      "missing": [],
+      "review": {
+        "status": "待审",
+        "notes": []
+      }
+    }
+  ],
+  "errors": [],
+  "browser": "156.0.4314.50",
+  "servedVersion": "12.2.1",
+  "recording": {
+    "file": "E:\\githome\\kong-rpg\\evidence\\eye-presentation\\before\\skills.webm",
+    "mime": "video/webm;codecs=vp9",
+    "ms": 3667.600000023842,
+    "method": "real Canvas captureStream at requested 30Hz, MediaRecorder VP9; ms is recording wall time, encoded frame rate not independently inspected"
+  }
+}

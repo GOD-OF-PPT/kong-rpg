@@ -233,13 +233,13 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
       <div id="toast" role="status" aria-live="polite" hidden></div>
       <div id="context-hint" hidden></div>
     </section>
-    <footer class="footline"><div><span class="status-dot"></span><span id="storage-status">离线可玩 · 进度自动保存</span></div><div class="keystrip"><span><kbd>A</kbd><kbd>D</kbd> 行走</span><span><kbd>SPACE</kbd> 跃起</span><span><kbd>J</kbd> 攻击</span><span><kbd>K</kbd> 闪避</span><span><kbd>H</kbd> 副武器</span><span><kbd>L</kbd> 神通</span><span><kbd>R</kbd> 大招</span><span><kbd>C</kbd> 秘技</span><span><kbd>Q</kbd> 符术</span><span><kbd>U</kbd> 变化</span></div><span class="build">v12.2.1 <span>／</span> 棍影 · 回环 · 应劫</span></footer>
+    <footer class="footline"><div><span class="status-dot"></span><span id="storage-status">离线可玩 · 进度自动保存</span></div><div class="keystrip"><span><kbd>A</kbd><kbd>D</kbd> 行走</span><span><kbd>SPACE</kbd> 跃起</span><span><kbd>J</kbd> 攻击</span><span><kbd>K</kbd> 闪避</span><span><kbd>H</kbd> 副武器</span><span><kbd>L</kbd> 神通</span><span><kbd>R</kbd> 大招</span><span><kbd>C</kbd> 秘技</span><span><kbd>Q</kbd> 符术</span><span><kbd>U</kbd> 变化</span></div><span class="build">v12.2.2 <span>／</span> 棍影 · 回环 · 应劫</span></footer>
     <input id="import-file" type="file" accept="application/json,.json" hidden>
   </main>
   <script>
 (function (K) {
   'use strict';
-  K.VERSION = '12.2.1';
+  K.VERSION = '12.2.2';
   K.W = 960; K.H = 540; K.DT = 1 / 120;
   K.clamp = (v, a, b) => Math.max(a, Math.min(b, v));
   K.overlap = (a, b) => a.x < b.x + b.w && a.x + a.w > b.x && a.y < b.y + b.h && a.y + a.h > b.y;
@@ -2524,11 +2524,44 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
     combatCues(){
       super.combatCues();const s=this.scene;if(!s)return;const c=this.c;
       for(const e of s.room.enemies)if(e.hp>0&&!e.dormant&&K.REALM_PHASES.includes(e.phase))for(const b of e.marks||[])this.mark(b);
-      if(s.eye){const b=s.eye;c.save();c.strokeStyle='#90dfe4';c.lineWidth=1;c.setLineDash([5,5]);c.strokeRect(Math.round(b.x),Math.round(b.y),b.w,b.h);c.restore();const im=this.v8Frame('eye');if(im)c.drawImage(im,Math.round(b.x+b.w/2-14),Math.round(b.y-18),28,22);}
+      if(s.eye)this.drawEyeField(s);
+    }
+    drawEyeField(s){
+      const b=s.eye;if(!b)return;const c=this.c,t=s.time,age=Math.max(0,(K.has(s,'echo')?5:3)-b.life),fade=Math.min(1,age/.12,b.life/.35);
+      // The locked rectangle remains simulation data only. Soft, separated
+      // shafts of light have no enclosing border, hard fill or floating icon.
+      c.save();c.beginPath();c.rect(b.x,b.y,b.w,b.h);c.clip();
+      const light=c.createLinearGradient(0,b.y,0,b.y+b.h);
+      light.addColorStop(0,'#ffe3a000');light.addColorStop(.28,'#ffe3a014');light.addColorStop(.65,'#fff0bb35');light.addColorStop(1,'#e8c47300');
+      c.fillStyle=light;
+      for(let i=0;i<7;i++){
+        const q=(i+.6)/7.4+Math.sin(i*2)*.025,x=b.x+b.w*q,drift=Math.sin(t*2+i*.9)*12,top=b.y+6+i%3*11,bottom=b.y+b.h-5-i%2*13;
+        c.globalAlpha=fade*Math.sin(q*Math.PI)*(.55+.35*Math.sin(t*3+i)**2);
+        c.beginPath();c.moveTo(x-7,top);c.bezierCurveTo(x+drift-19,b.y+b.h*.35,x+drift+13,b.y+b.h*.65,x+5,bottom);c.bezierCurveTo(x+drift+24,b.y+b.h*.6,x+drift-7,b.y+b.h*.3,x-7,top);c.closePath();c.fill();
+      }
+      // A moving glint reads as a scan, not a damaging beam. It never changes
+      // the already locked area or tracks the player's later movement.
+      const scan=b.x+b.w*(.5+.47*Math.sin(age*2.5-1.5));
+      c.globalAlpha=fade*.75;c.fillStyle='#ffe7a6';
+      for(let i=0;i<7;i++){const y=b.y+10+((i*13+age*18)%(b.h-20)),x=scan+Math.sin(i*1.8+age*2)*10;c.fillRect(Math.round(x),Math.round(y),i%3===0?2:1,2);}
+      c.restore();
+    }
+    eyeTargets(s){return s.eye?s.room.enemies.filter(e=>e.hp>0&&!e.dormant&&K.overlap(s.eye,e)):[];}
+    drawEyeTargets(s){
+      if(!s.eye)return;const c=this.c,fade=Math.min(1,s.eye.life/.35),pulse=.7+Math.sin(s.time*7)*.15;
+      c.save();c.strokeStyle='#ffe4a0';c.fillStyle='#fff4ce';c.lineWidth=1;
+      for(const e of this.eyeTargets(s)){
+        if(e.x+e.w<this.camera||e.x>this.camera+960)continue;
+        const x=Math.round(e.x+e.w/2),y=Math.round(e.y+e.h*.4),r=K.isMajor(e)?11:8;
+        c.globalAlpha=fade*pulse;c.beginPath();c.moveTo(x-r,y);c.quadraticCurveTo(x,y-7,x+r,y);c.quadraticCurveTo(x,y+6,x-r,y);c.stroke();c.fillRect(x-1,y-2,2,4);
+        c.globalAlpha=fade*.5;for(const sign of [-1,1]){c.beginPath();c.moveTo(x+sign*(r+3),y-5);c.lineTo(x+sign*(r+6),y-8);c.stroke();}
+      }
+      c.restore();
     }
     draw(s,ui,dt){super.draw(s,ui,dt);if(!s||ui==='menu')return;const c=this.c;c.save();c.translate(-Math.round(this.camera),0);
       for(const b of s.arrows){const im=this.v8Frame('arrow');if(im){c.save();c.translate(Math.round(b.x),Math.round(b.y));c.rotate(Math.atan2(b.vy,b.vx));c.drawImage(im,-16,-5,32,10);c.restore();}}
       if(s.hound){const h=s.hound,im=this.v8Frame('hound-'+(h.pose==='bite'?3:h.vy<0?2:Math.abs(h.vx)>20?1:0));if(im){c.save();c.translate(Math.round(h.x+18),Math.round(h.y+26));c.scale(h.face,1);c.drawImage(im,-40,-56);c.restore();const badge=this.v8Frame('ally');if(badge)c.drawImage(badge,Math.round(h.x+11),Math.round(h.y-17),14,14);}}
+      this.drawEyeTargets(s);
       c.restore();
     }
   };
@@ -3395,7 +3428,7 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
     $('hp-number').textContent=Math.ceil(p.hp)+' / '+K.maxHP(state);$('hp-fill').style.width=(p.hp/K.maxHP(state)*100)+'%';$('focus-number').textContent=Math.floor(p.focus);$('focus-fill').style.width=p.focus+'%';$('rage-number').textContent=Math.floor(p.rage);$('rage-fill').style.width=p.rage+'%';$('rage-line').classList.toggle('ready',p.rage>=100);$('rage-line').title=p.rage>=100?'按 R 释放'+K.heroDef(state).skill:'命中积攒战意';$('talisman-state').textContent=state.talisman?'Q '+rewardInfo(state.talisman.id).name+' ×'+state.talisman.charges:'Q 未携符术';$('growth-state').textContent=Object.entries(state.growth).map(([id,n])=>rewardInfo(id).name+(n>1?'·'+n+'重':'')).join(' · ')||'暂无';$('chapter').textContent='第'+(Math.floor(state.stage/3)+1)+'章 · 第'+(state.stage%3+1)+'关 / 3'+(K.isChallenge(state)?' · 挑战':'');$('stage-name').textContent=K.STAGES[state.stage].name;
     const left=null,guardian=K.guardian(state);$('objective').textContent=guardian?.hp>0?'击退'+K.GUARDIANS[state.stage].name+' · '+(state.stage%3===2?'章末大首领':'小首领'):'守关者已退 · F过门';
     const art=K.artDef(state.celestial.equipped);$('art-state').textContent=art?'C '+art.name+' · '+(state.celestial.cast?'施展中':state.celestial.cooldown>0?state.celestial.cooldown.toFixed(1)+'s':p.focus<art.focus?'定力不足':'就绪'):'C 未习秘技 · F拾卷';
-    $('combat-state').textContent=state.hero==='nezha'&&p.lotusBuff>0?'莲火附枪 '+p.lotusBuff.toFixed(1)+'s · 主攻命中 +6':state.hero==='wukong'?'H 破空棍劲 · L 分身':state.hero==='erlang'?'H 射雕弓 · L 天眼'+(state.eye?' '+state.eye.life.toFixed(1)+'s':''):'H 乾坤圈 · L 混天绫';$('combat-state').classList.toggle('empowered',state.hero==='nezha'&&p.lotusBuff>0);
+    $('combat-state').textContent=state.hero==='nezha'&&p.lotusBuff>0?'莲火附枪 '+p.lotusBuff.toFixed(1)+'s · 主攻命中 +6':state.hero==='wukong'?'H 破空棍劲 · L 分身':state.hero==='erlang'?'H 射雕弓 · L 天眼'+(state.eye?' '+state.eye.life.toFixed(1)+'s · 域内破盾':''):'H 乾坤圈 · L 混天绫';$('combat-state').classList.toggle('empowered',state.hero==='nezha'&&p.lotusBuff>0);
     $('world-labels').innerHTML=K.artManualLabels(state,renderer.camera).map(q=>`<span class="world-art-label ${q.near?'near':''}" data-art="${q.art}" style="left:${q.sx/960*100}%;top:${q.sy/540*100}%"><small>秘技${q.owned?' · 已习':''}</small>${esc(q.name)}${q.near?'<kbd>F '+(q.owned?'换式':'参悟')+'</kbd>':''}</span>`).join('');
     const boss=state.room.enemies.find(e=>(e.kind==='boss'||e.kind==='warden')&&!e.dormant&&e.hp>0);$('boss-hud').hidden=!boss;
     if(boss){$('boss-name').textContent=boss.kind==='warden'?K.GUARDIANS[state.stage].name:'无天';$('boss-fill').style.width=boss.hp/boss.maxHp*100+'%';$('boss-hud').style.setProperty('--boss-color',boss.kind==='warden'?K.GUARDIANS[state.stage].color:'#ba77a3');$('boss-phase').textContent=K.challengePhaseText(boss)||(boss.kind==='warden'?(boss.phase==='recover'?'收招破绽 · 出棍':boss.phase==='warden-windup'?({charge:'冲撞将至 · 跃过路径',quake:'震地将至 · 跳',fan:'散焰将至 · 跳或返弹',lantern:'索灯将至 · 离开莲印',columns:'封愿将至 · 横移',bell:'钟浪将至 · 跳'}[boss.move]):'看清下一招'):boss.phase==='recover'?'破绽已现':boss.phase==='sweep-windup'?'横扫将至 · 跳':boss.phase==='orb-windup'?'莲焰将至 · 闪':boss.phase==='rain-windup'?'落火将至 · 离开莲印':boss.phase==='shift-windup'?'移形将至 · 让路':'黑莲护在正面');}
