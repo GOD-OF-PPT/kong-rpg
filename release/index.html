@@ -233,13 +233,13 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
       <div id="toast" role="status" aria-live="polite" hidden></div>
       <div id="context-hint" hidden></div>
     </section>
-    <footer class="footline"><div><span class="status-dot"></span><span id="storage-status">离线可玩 · 进度自动保存</span></div><div class="keystrip"><span><kbd>A</kbd><kbd>D</kbd> 行走</span><span><kbd>SPACE</kbd> 跃起</span><span><kbd>J</kbd> 攻击</span><span><kbd>K</kbd> 闪避</span><span><kbd>H</kbd> 副武器</span><span><kbd>L</kbd> 神通</span><span><kbd>R</kbd> 大招</span><span><kbd>C</kbd> 秘技</span><span><kbd>Q</kbd> 符术</span><span><kbd>U</kbd> 变化</span></div><span class="build">v12.2.0 <span>／</span> 棍影 · 回环 · 应劫</span></footer>
+    <footer class="footline"><div><span class="status-dot"></span><span id="storage-status">离线可玩 · 进度自动保存</span></div><div class="keystrip"><span><kbd>A</kbd><kbd>D</kbd> 行走</span><span><kbd>SPACE</kbd> 跃起</span><span><kbd>J</kbd> 攻击</span><span><kbd>K</kbd> 闪避</span><span><kbd>H</kbd> 副武器</span><span><kbd>L</kbd> 神通</span><span><kbd>R</kbd> 大招</span><span><kbd>C</kbd> 秘技</span><span><kbd>Q</kbd> 符术</span><span><kbd>U</kbd> 变化</span></div><span class="build">v12.2.1 <span>／</span> 棍影 · 回环 · 应劫</span></footer>
     <input id="import-file" type="file" accept="application/json,.json" hidden>
   </main>
   <script>
 (function (K) {
   'use strict';
-  K.VERSION = '12.2.0';
+  K.VERSION = '12.2.1';
   K.W = 960; K.H = 540; K.DT = 1 / 120;
   K.clamp = (v, a, b) => Math.max(a, Math.min(b, v));
   K.overlap = (a, b) => a.x < b.x + b.w && a.x + a.w > b.x && a.y < b.y + b.h && a.y + a.h > b.y;
@@ -1001,6 +1001,9 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
 (function(K){
   'use strict';
   K.isChallenge=s=>s?.difficulty==='challenge';
+  // Challenge is read from the enemy's pose and real spell effects, without
+  // predictive range/path overlays, intent badges or HUD move instructions.
+  K.showEnemyGuides=s=>!K.isChallenge(s);
   K.difficultyName=s=>(typeof s==='string'?s:s?.difficulty)==='challenge'?'挑战·五界重劫':'普通旅程';
   K.CHALLENGE_PHASES=['challenge-bolt-windup','challenge-quake-windup','challenge-mark-windup','challenge-echo-windup','challenge-fan-windup','challenge-bell-windup','challenge-rain-windup'];
   K.CHALLENGE_DANGERS=['重盾兵·崩盾震','莲灯使·追迹莲印','镇山魈王·回震','缄愿法使·余钟震','无天·追落莲印'];
@@ -1973,7 +1976,7 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
       rect(c,p.x,p.y,p.w,1,'#d9c394');
     }
     combatCues(){
-      const s=this.scene;if(!s)return;const c=this.c;
+      const s=this.scene;if(!s||!K.showEnemyGuides(s))return;const c=this.c;
       for(const e of s.room.enemies){
         if(e.hp<=0)continue;
         if(e.kind==='caster'&&e.phase==='windup'&&Number.isFinite(e.aimX)){
@@ -2378,7 +2381,7 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
     }
     combatCues(){
       super.combatCues();const s=this.scene;if(!s)return;
-      for(const e of s.room.enemies)if(e.hp>0&&!e.dormant){
+      for(const e of s.room.enemies)if(K.showEnemyGuides(s)&&e.hp>0&&!e.dormant){
         if(e.phase==='break-windup')this.mark(K.breakDistanceBox(e));
         if(e.phase==='break-rush')this.mark(K.enemyAttackBox(e),true);
         if(e.phase==='air-windup')for(const b of e.marks){this.mark(b);this.sigFx('air-warning',b.x,b.y,b.w,b.h,.7);}
@@ -2395,7 +2398,7 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
   K.Renderer=class extends Base{
     combatCues(){
       super.combatCues();const s=this.scene;if(!s||!K.isChallenge(s))return;const c=this.c;
-      for(const e of s.room.enemies)if(e.hp>0&&!e.dormant){
+      for(const e of s.room.enemies)if(K.showEnemyGuides(s)&&e.hp>0&&!e.dormant){
         // Challenge power is integrated into the shared battle seal.
         for(const b of K.challengeWarningBoxes(e)){
           this.mark(b);if(b.h>40)this.sigFx('air-warning',b.x,b.y,b.w,b.h,.5);
@@ -2703,6 +2706,7 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
       this.frameCache.set(key,glyph);return glyph;
     }
     enemyMarkerLayout(s){
+      if(!K.showEnemyGuides(s))return [];
       const items=[],camera=Math.round(this.camera);
       for(const e of s.room.enemies){
         if(e.hp<=0||e.dormant||e.x+e.w<camera||e.x>camera+960)continue;
@@ -2855,7 +2859,7 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
     enemyEffectFrame(id){const key='enemy-fx:'+id;if(this.frameCache.has(key))return this.frameCache.get(key);const f=K.EnemyEffectFrames[id]||(id==='materials:venom-wave'?K.EnemyEffectFrames['materials:wave']:null),im=f&&this.image(f.image);if(!im)return null;const c=document.createElement('canvas');c.width=c.height=64;const g=c.getContext('2d');g.drawImage(im,...f.r,0,0,64,64);if(id==='materials:venom-wave'){g.globalCompositeOperation='source-atop';g.globalAlpha=.67;g.fillStyle='#83a23f';g.fillRect(0,0,64,64);}this.frameCache.set(key,c);return c;}
     enemyStamp(id,x,y,size=32,alpha=1,face=1,angle=0){const im=this.enemyEffectFrame(id),f=K.EnemyEffectFrames[id]||K.EnemyEffectFrames['materials:wave'];if(!im)return;const c=this.c;c.save();c.imageSmoothingEnabled=true;c.imageSmoothingQuality='high';c.globalAlpha*=alpha;c.translate(Math.round(x),Math.round(y));c.rotate(angle);c.scale(face*size/64,size/64);c.drawImage(im,-f.anchor[0],-f.anchor[1]);c.restore();}
     enemyProfile(o){const spell=typeof o==='string'?o:K.enemySpell(o);return K.enemyEffectProfile(spell,K.chapter(this.scene.stage).id);}
-    enemyBoundary(b,profile,active=false){const c=this.c,tall=['column','chain','stamp','thunder'].includes(profile.shape),rise=tall?b.h-4:Math.min(6,b.h);c.save();c.lineWidth=1;c.strokeStyle=active?'#ffe6cd':'#e59ab4';c.globalAlpha=active?.7:.6;c.beginPath();c.moveTo(b.x,b.y+b.h-rise);c.lineTo(b.x,b.y+b.h);c.lineTo(b.x+b.w,b.y+b.h);c.lineTo(b.x+b.w,b.y+b.h-rise);c.stroke();c.globalAlpha=active?.35:.25;c.strokeStyle=profile.colors[0];if(tall){c.beginPath();c.moveTo(b.x,b.y);c.lineTo(b.x+6,b.y);c.moveTo(b.x+b.w-6,b.y);c.lineTo(b.x+b.w,b.y);c.stroke();}c.restore();}
+    enemyBoundary(b,profile,active=false){if(!K.showEnemyGuides(this.scene))return;const c=this.c,tall=['column','chain','stamp','thunder'].includes(profile.shape),rise=tall?b.h-4:Math.min(6,b.h);c.save();c.lineWidth=1;c.strokeStyle=active?'#ffe6cd':'#e59ab4';c.globalAlpha=active?.7:.6;c.beginPath();c.moveTo(b.x,b.y+b.h-rise);c.lineTo(b.x,b.y+b.h);c.lineTo(b.x+b.w,b.y+b.h);c.lineTo(b.x+b.w,b.y+b.h-rise);c.stroke();c.globalAlpha=active?.35:.25;c.strokeStyle=profile.colors[0];if(tall){c.beginPath();c.moveTo(b.x,b.y);c.lineTo(b.x+6,b.y);c.moveTo(b.x+b.w-6,b.y);c.lineTo(b.x+b.w,b.y);c.stroke();}c.restore();}
     enemyTelegraph(e,b){const p=this.enemyProfile(e.move);if(!p)return this.mark(b);const c=this.c,progress=K.clamp(1-e.timer/(e.repeat?.68:K.isMajor(e)?.84:.85),0,1),cy=b.y+b.h;
       c.save();this.enemyBoundary(b,p);c.strokeStyle=p.colors[0];c.fillStyle=p.colors[0];c.lineWidth=1;c.globalAlpha=.3+progress*.5;
       if(p.shape==='shot'){c.setLineDash([4,8]);c.beginPath();c.moveTo(b.x,b.y+b.h/2);c.lineTo(b.x+b.w,b.y+b.h/2);c.stroke();c.setLineDash([]);const x=e.face>0?b.x+b.w-12:b.x+12;c.beginPath();c.moveTo(x-e.face*5,b.y+2);c.lineTo(x,b.y+b.h/2);c.lineTo(x-e.face*5,b.y+b.h-2);c.stroke();}
@@ -2949,7 +2953,8 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
       }
       super.fx(f,t);
     }
-    enemyTelegraph(e,b){super.enemyTelegraph(e,b);const s=this.scene,profile=this.enemyProfile(e.move);if(!profile)return;const c=this.c,u=K.clamp(1-e.timer/K.campaignWindup(s,e,e.move,e.repeat>0),0,1);
+    mark(b,active=false){if(K.showEnemyGuides(this.scene))super.mark(b,active);}
+    enemyTelegraph(e,b){if(!K.showEnemyGuides(this.scene))return;super.enemyTelegraph(e,b);const s=this.scene,profile=this.enemyProfile(e.move);if(!profile)return;const c=this.c,u=K.clamp(1-e.timer/K.campaignWindup(s,e,e.move,e.repeat>0),0,1);
       c.save();c.globalAlpha=.04+u*.045;c.fillStyle='#efb7a4';c.fillRect(b.x,b.y,b.w,b.h);c.globalAlpha=.5+u*.3;c.strokeStyle='#ffe5bc';c.lineWidth=1;
       // A compact closing chevron means release is approaching, never an
       // unrelated icon above an enemy. The exact damage footprint stays shown.
@@ -3266,9 +3271,9 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
   }
   function menu(){
     if(!K.canChallenge(meta))newDifficulty='normal';const resumable=state&&['paused','playing','reward','art-choice'].includes(state.mode);
-    $('overlay').innerHTML=`<div class="hero has-modes"><div class="eyebrow">西游记后传 · 像素横版肉鸽</div><h1><small>大 圣</small>劫后行</h1><div class="english-title">AFTER THE BLACK LOTUS</div><p id="mode-note">${newDifficulty==='challenge'?'五界重劫：援兵结阵，首领追加二段预警。<br>破牒、破珠、破塔，考验换位和出手。':'云上、地府、水下、龙宫、天宫。<br>十五关，每章三战，各有守关者。'}</p><div class="mode-picker" role="group" aria-label="新旅程难度">${['normal','challenge'].map(id=>`<button id="mode-${id}" data-difficulty="${id}" aria-pressed="${newDifficulty===id}" ${id==='challenge'&&!K.canChallenge(meta)?'disabled title="普通十五关S评级后解锁"':''}>${id==='challenge'?'挑战 · 五界重劫':'普通旅程'}</button>`).join('')}</div><p class="unlock-note">${K.canChallenge(meta)?'挑战已解锁 · 普通十五关S评级已达成':'挑战未解锁 · 普通十五关完整通关且评级S（高于A）'}</p><div class="actions">${btn('begin','踏上劫途 <small>→</small>',true)}${resumable?btn('resume','继续旅程 <span aria-hidden="true">'+K.difficultyName(state)+'</span>'):btn('how','初行指南')}</div><div class="seed-edit"><label for="seed">本局因缘</label><input id="seed" aria-label="随机种子" maxlength="32" value="${esc(state?.seed||'LOTUS-1025')}"><button id="random-seed" class="text-button" aria-label="生成新种子">换一签 ↻</button></div><div class="hero-meta"><span><b>${meta.runs}</b> 次入劫</span><span><b>${meta.wins}</b> 次破局</span><button id="past" class="text-button">往昔旅程 ↗</button>${storage.legacy?'<button id="old" class="text-button">旧版旅程 ↗</button>':''}</div></div><div class="scene-label">五章十五关 · 舍利成法<span>兵可破阵 · 心不可折</span></div>`;
+    $('overlay').innerHTML=`<div class="hero has-modes"><div class="eyebrow">西游记后传 · 像素横版肉鸽</div><h1><small>大 圣</small>劫后行</h1><div class="english-title">AFTER THE BLACK LOTUS</div><p id="mode-note">${newDifficulty==='challenge'?'五界重劫：援兵结阵，首领连式。<br>隐藏招式指示，观察敌人动作与技能。':'云上、地府、水下、龙宫、天宫。<br>十五关，每章三战，各有守关者。'}</p><div class="mode-picker" role="group" aria-label="新旅程难度">${['normal','challenge'].map(id=>`<button id="mode-${id}" data-difficulty="${id}" aria-pressed="${newDifficulty===id}" ${id==='challenge'&&!K.canChallenge(meta)?'disabled title="普通十五关S评级后解锁"':''}>${id==='challenge'?'挑战 · 五界重劫':'普通旅程'}</button>`).join('')}</div><p class="unlock-note">${K.canChallenge(meta)?'挑战已解锁 · 普通十五关S评级已达成':'挑战未解锁 · 普通十五关完整通关且评级S（高于A）'}</p><div class="actions">${btn('begin','踏上劫途 <small>→</small>',true)}${resumable?btn('resume','继续旅程 <span aria-hidden="true">'+K.difficultyName(state)+'</span>'):btn('how','初行指南')}</div><div class="seed-edit"><label for="seed">本局因缘</label><input id="seed" aria-label="随机种子" maxlength="32" value="${esc(state?.seed||'LOTUS-1025')}"><button id="random-seed" class="text-button" aria-label="生成新种子">换一签 ↻</button></div><div class="hero-meta"><span><b>${meta.runs}</b> 次入劫</span><span><b>${meta.wins}</b> 次破局</span><button id="past" class="text-button">往昔旅程 ↗</button>${storage.legacy?'<button id="old" class="text-button">旧版旅程 ↗</button>':''}</div></div><div class="scene-label">五章十五关 · 舍利成法<span>兵可破阵 · 心不可折</span></div>`;
     on('begin',()=>{K.pendingSeed=$('seed').value.trim()||'LOTUS-1025';K.pendingDifficulty=newDifficulty;audio.unlock();show(meta.runs===0?'prologue':'heroes');});
-    for(const b of $('overlay').querySelectorAll('[data-difficulty]'))b.onclick=()=>{if(b.dataset.difficulty==='challenge'&&!K.canChallenge(meta))return;newDifficulty=b.dataset.difficulty;for(const q of $('overlay').querySelectorAll('[data-difficulty]'))q.setAttribute('aria-pressed',q.dataset.difficulty===newDifficulty);$('mode-note').innerHTML=newDifficulty==='challenge'?'五界重劫：援兵结阵，首领追加二段预警。<br>破牒、破珠、破塔，考验换位和出手。':'云上、地府、水下、龙宫、天宫。<br>十五关，每章三战，各有守关者。';};
+    for(const b of $('overlay').querySelectorAll('[data-difficulty]'))b.onclick=()=>{if(b.dataset.difficulty==='challenge'&&!K.canChallenge(meta))return;newDifficulty=b.dataset.difficulty;for(const q of $('overlay').querySelectorAll('[data-difficulty]'))q.setAttribute('aria-pressed',q.dataset.difficulty===newDifficulty);$('mode-note').innerHTML=newDifficulty==='challenge'?'五界重劫：援兵结阵，首领连式。<br>隐藏招式指示，观察敌人动作与技能。':'云上、地府、水下、龙宫、天宫。<br>十五关，每章三战，各有守关者。';};
     on('resume',resume);on('how',()=>openHelp('menu'));on('past',()=>show('history'));on('old',()=>show('legacy'));
     on('random-seed',()=>$('seed').value='LOTUS-'+crypto.getRandomValues(new Uint32Array(1))[0].toString(36).slice(0,6).toUpperCase());
   }
@@ -3288,7 +3293,7 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
     bindCards(startRun);on('back',()=>show('heroes'));
   }
   function startRun(id){
-    state=K.newRun(K.pendingSeed||state?.seed||'LOTUS-1025',id,K.pendingHero||'wukong',K.pendingDifficulty||'normal',meta);meta.runs++;state.runId=state.seed+':'+meta.runs+':'+Date.now();renderer.camera=0;audio.unlock();show('playing');toast(K.isChallenge(state)?'挑战·五界重劫 · 敌阵加密，首领二段预警须重新判断。':K.STAGES[0].lore,4);save();
+    state=K.newRun(K.pendingSeed||state?.seed||'LOTUS-1025',id,K.pendingHero||'wukong',K.pendingDifficulty||'normal',meta);meta.runs++;state.runId=state.seed+':'+meta.runs+':'+Date.now();renderer.camera=0;audio.unlock();show('playing');toast(K.isChallenge(state)?'挑战·五界重劫 · 隐藏招式指示，观察敌人动作辨招。':K.STAGES[0].lore,4);save();
   }
   function resume(){if(!state)return;audio.unlock();if(state.mode==='paused')state.mode='playing';show(state.mode==='reward'&&state.pendingRelic?'replace':state.mode);}
   function pauseMenu(){
@@ -3394,6 +3399,7 @@ body{background:radial-gradient(ellipse at 50% 40%,#24333b 0,#111b24 62%,#0c141d
     $('world-labels').innerHTML=K.artManualLabels(state,renderer.camera).map(q=>`<span class="world-art-label ${q.near?'near':''}" data-art="${q.art}" style="left:${q.sx/960*100}%;top:${q.sy/540*100}%"><small>秘技${q.owned?' · 已习':''}</small>${esc(q.name)}${q.near?'<kbd>F '+(q.owned?'换式':'参悟')+'</kbd>':''}</span>`).join('');
     const boss=state.room.enemies.find(e=>(e.kind==='boss'||e.kind==='warden')&&!e.dormant&&e.hp>0);$('boss-hud').hidden=!boss;
     if(boss){$('boss-name').textContent=boss.kind==='warden'?K.GUARDIANS[state.stage].name:'无天';$('boss-fill').style.width=boss.hp/boss.maxHp*100+'%';$('boss-hud').style.setProperty('--boss-color',boss.kind==='warden'?K.GUARDIANS[state.stage].color:'#ba77a3');$('boss-phase').textContent=K.challengePhaseText(boss)||(boss.kind==='warden'?(boss.phase==='recover'?'收招破绽 · 出棍':boss.phase==='warden-windup'?({charge:'冲撞将至 · 跃过路径',quake:'震地将至 · 跳',fan:'散焰将至 · 跳或返弹',lantern:'索灯将至 · 离开莲印',columns:'封愿将至 · 横移',bell:'钟浪将至 · 跳'}[boss.move]):'看清下一招'):boss.phase==='recover'?'破绽已现':boss.phase==='sweep-windup'?'横扫将至 · 跳':boss.phase==='orb-windup'?'莲焰将至 · 闪':boss.phase==='rain-windup'?'落火将至 · 离开莲印':boss.phase==='shift-windup'?'移形将至 · 让路':'黑莲护在正面');}
+    $('boss-phase').hidden=!K.showEnemyGuides(state);if(!K.showEnemyGuides(state))$('boss-phase').textContent='';
     if(state.hero==='erlang'){$('signature-fill').style.width=p.armCD>0?'0%':'100%';$('signature-state').textContent=unavailable||(p.armCD>0?'回气':p.focus<12?'定力不足':'就绪');}
     const trial=state.room.trial,camp=state.room.camp,nearTrial=trial&&Math.abs(p.x-trial.x)<95&&Math.abs(p.y-trial.y)<75,nearCamp=camp&&Math.abs(p.x-camp.x)<75&&Math.abs(p.y-camp.y)<65;
     $('stage-name').textContent=K.region(state.stage,p.x);

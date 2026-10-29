@@ -57,7 +57,7 @@
       rect(c,p.x,p.y,p.w,1,'#d9c394');
     }
     combatCues(){
-      const s=this.scene;if(!s)return;const c=this.c;
+      const s=this.scene;if(!s||!K.showEnemyGuides(s))return;const c=this.c;
       for(const e of s.room.enemies){
         if(e.hp<=0)continue;
         if(e.kind==='caster'&&e.phase==='windup'&&Number.isFinite(e.aimX)){

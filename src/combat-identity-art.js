@@ -61,7 +61,8 @@
       }
       super.fx(f,t);
     }
-    enemyTelegraph(e,b){super.enemyTelegraph(e,b);const s=this.scene,profile=this.enemyProfile(e.move);if(!profile)return;const c=this.c,u=K.clamp(1-e.timer/K.campaignWindup(s,e,e.move,e.repeat>0),0,1);
+    mark(b,active=false){if(K.showEnemyGuides(this.scene))super.mark(b,active);}
+    enemyTelegraph(e,b){if(!K.showEnemyGuides(this.scene))return;super.enemyTelegraph(e,b);const s=this.scene,profile=this.enemyProfile(e.move);if(!profile)return;const c=this.c,u=K.clamp(1-e.timer/K.campaignWindup(s,e,e.move,e.repeat>0),0,1);
       c.save();c.globalAlpha=.04+u*.045;c.fillStyle='#efb7a4';c.fillRect(b.x,b.y,b.w,b.h);c.globalAlpha=.5+u*.3;c.strokeStyle='#ffe5bc';c.lineWidth=1;
       // A compact closing chevron means release is approaching, never an
       // unrelated icon above an enemy. The exact damage footprint stays shown.

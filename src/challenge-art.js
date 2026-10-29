@@ -3,7 +3,7 @@
   K.Renderer=class extends Base{
     combatCues(){
       super.combatCues();const s=this.scene;if(!s||!K.isChallenge(s))return;const c=this.c;
-      for(const e of s.room.enemies)if(e.hp>0&&!e.dormant){
+      for(const e of s.room.enemies)if(K.showEnemyGuides(s)&&e.hp>0&&!e.dormant){
         // Challenge power is integrated into the shared battle seal.
         for(const b of K.challengeWarningBoxes(e)){
           this.mark(b);if(b.h>40)this.sigFx('air-warning',b.x,b.y,b.w,b.h,.5);

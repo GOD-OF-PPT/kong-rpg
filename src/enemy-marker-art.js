@@ -13,6 +13,7 @@
       this.frameCache.set(key,glyph);return glyph;
     }
     enemyMarkerLayout(s){
+      if(!K.showEnemyGuides(s))return [];
       const items=[],camera=Math.round(this.camera);
       for(const e of s.room.enemies){
         if(e.hp<=0||e.dormant||e.x+e.w<camera||e.x>camera+960)continue;
