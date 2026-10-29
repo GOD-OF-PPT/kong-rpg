@@ -8,6 +8,6 @@
 
 标题使用金色干笔字形、古铜阴面和末笔余烬，保持四字在笔记本显示宽度下可辨。顶栏与favicon采用五段断环包围重新升起的火种，五段代表五界，火种强调战意重燃；不使用人物名字或特定角色兵器。背景与角色仍沿用当前游戏素材。
 
-字标使用内置image_gen生成透明原图，assets/brand-rekindled/wordmark.png为等比归一后的1200×407发行图；原图、alpha裁边及来源SHA同目录。完整提示词在PROMPT.json。SVG小标记为原生绘制，直接内嵌。
+字标使用内置image_gen生成透明原图，assets/brand-rekindled/wordmark.png为等比归一后的1200×407发行图；alpha裁边及来源SHA同目录。原图在资源清理中删除，可从清理前Git版本恢复；发行图继续保留。完整提示词在PROMPT.json。SVG小标记为原生绘制，直接内嵌。
 
 替换首页标题字标、标语、顶栏、英文识别名、浏览器标题/描述/favicon和当前存档下载文件名。文字标题和标语仍为DOM，图像缺失时保留文本后备。black-lotus内部ID、localStorage键、schema12、种子和旧入口维持兼容，既有旅程与S资格继续可用。
