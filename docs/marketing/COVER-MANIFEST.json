@@ -1,0 +1,30 @@
+{
+  "version": "12.3.0",
+  "baseCommit": "abe909b",
+  "tool": "built-in image_gen",
+  "source": {
+    "path": "assets/marketing/rekindled-embers-cover-source.png",
+    "width": 1672,
+    "height": 941,
+    "sha256": "4b91eb04f7d11e8edb3fd51a720667841f3106b1a989464e554a0f4152f4d6fb"
+  },
+  "export": "Resolution normalization only to requested 1920x1080; proportional Lanczos3 resize, centered subpixel aspect adjustment. No creative retouching, compositing or content replacement.",
+  "files": [
+    {
+      "path": "assets/marketing/rekindled-embers-cover-1920x1080.png",
+      "width": 1920,
+      "height": 1080,
+      "format": "png",
+      "bytes": 5675364,
+      "sha256": "2210ec93e8ca1d066fec77a630e4b085da2f891f34311f976000c936c25682c8"
+    },
+    {
+      "path": "assets/marketing/rekindled-embers-cover-1920x1080.jpg",
+      "width": 1920,
+      "height": 1080,
+      "format": "jpeg",
+      "bytes": 1581580,
+      "sha256": "e392182cb4b1cddfd5f7386d3648cea41580bb5544685c9c085f5847e08ca084"
+    }
+  ]
+}
