@@ -5,7 +5,7 @@
   const loaded=storage.read();let state=loaded?.state||null,meta=loaded?.meta||storage.profile();
   let newDifficulty=state?.difficulty||'normal';
   let screen='menu',backScreen='menu',buildBack='playing',toastUntil=0,lastSave=0,pendingInputs=[];
-  const rememberedFocus=new Map();let focusRevision=0;
+  const rememberedFocus=new Map();let focusRevision=0,sceneLoadRevision=0;
   const settings=storage.readSettings();renderer.shake=settings.shake;audio.setVolume(settings.volume);
   const metrics={frames:[],inputs:[],errors:[],started:performance.now()};
   const input=new K.Input(world,control,(t,code)=>pendingInputs.push({t:performance.now(),eventTime:t,code}));
@@ -41,6 +41,11 @@
   function toast(text,seconds=2.8){$('toast').textContent=text;$('toast').hidden=false;toastUntil=performance.now()+seconds*1000;}
   function save(){if(!state)return;storage.write(state,meta);$('storage-status').textContent=storage.available?'独立离线版 · 旅程已保存':'自动存储不可用 · 请导出存档';lastSave=performance.now();}
   function show(next){
+    const loadTicket=++sceneLoadRevision;
+    if(next!=='menu'){
+      const selection=['prologue','heroes','start','legacy','history'].includes(next),keys=state&&!selection?K.ImageArt.forRun(state):[...K.ImageArt.bootIds,...K.ImageArt.uiIds];
+      if(!K.ImageArt.has(keys)||!K.DialogArtLoaded){prepareScene(next,keys,loadTicket);return;}
+    }
     const focused=document.activeElement;if($('overlay').contains(focused))rememberedFocus.set(screen,focused.id?{id:focused.id}:focused.dataset.relic?{relic:focused.dataset.relic}:null);
     if(state&&next!=='playing'&&state.arm?.phase==='charge')K.cancelSignature(state,true);screen=next;input.setActive(next==='playing');if(next!=='playing')audio.stopImpacts();audio.setScreen(next);$('stage').dataset.mode=next;
     const modal=!['menu','playing'].includes(next);document.querySelector('.masthead').inert=modal;document.querySelector('.footline').inert=modal;world.inert=modal;$('hud').inert=modal;
@@ -51,6 +56,16 @@
     const render={menu,prologue,heroes, start:starter,paused:pauseMenu,build:buildMenu,help,'art-choice':artChoice,reward,replace:replaceRelic,dead:ending,won:ending,epilogue,legacy:legacyMenu,history};render[next]?.();
     const revision=++focusRevision;
     requestAnimationFrame(()=>{if(revision!==focusRevision||screen!==next)return;const memory=rememberedFocus.get(next),node=memory?.id?$(memory.id):memory?.relic?$('overlay').querySelector('[data-relic="'+memory.relic+'"]'):null;(node||(next==='menu'?$('begin'):null)||(['history','build'].includes(next)?$('overlay').querySelector('.history-list,.build-scroll'):$('overlay').querySelector('button:not(:disabled),input')))?.focus({preventScroll:true});});
+  }
+  function cancelSceneLoad(){sceneLoadRevision++;if(state&&state.mode==='playing'){state.mode='paused';save();}show('menu');}
+  function prepareScene(next,keys,ticket){
+    screen='loading';input.setActive(false);pendingInputs=[];audio.stopImpacts();audio.setScreen('loading');
+    document.querySelector('.masthead').inert=true;document.querySelector('.footline').inert=true;world.inert=true;$('hud').hidden=true;$('hud').inert=true;$('world-labels').hidden=true;$('combat-labels').hidden=true;$('context-hint').hidden=true;$('toast').hidden=true;$('stage').dataset.mode='loading';
+    $('overlay').innerHTML=panel('准备行程','行装 · 蓄势','稍候，前路将明',`<p class="subtitle">正在准备本段画面，完成后继续。</p><div class="asset-progress" role="progressbar" aria-label="画面资源加载" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i id="asset-progress-fill"></i></div><p id="asset-progress-text" role="status" aria-live="polite"></p><p id="asset-load-error" class="notice" hidden>画面未能载入，请检查连接后重试。</p><div class="actions">${btn('asset-retry','重新载入',true)}${btn('asset-cancel','返回首页')}</div>`);
+    $('asset-retry').hidden=true;on('asset-cancel',cancelSceneLoad);on('asset-retry',()=>show(next));
+    const update=()=>{if(ticket!==sceneLoadRevision)return;const q=K.ImageArt.progress(keys),percent=Math.round(q.loaded/q.total*100);$('asset-progress-fill').style.width=percent+'%';$('overlay').querySelector('[role="progressbar"]').setAttribute('aria-valuenow',percent);$('asset-progress-text').textContent=percent+'% · '+q.loaded+' / '+q.total;};
+    const unsubscribe=K.ImageArt.subscribe(update);update();requestAnimationFrame(()=>$('asset-cancel')?.focus());
+    Promise.all([K.ImageArt.load(keys),K.ensureDialogArt()]).then(()=>{unsubscribe();if(ticket===sceneLoadRevision)show(next);}).catch(()=>{unsubscribe();if(ticket!==sceneLoadRevision)return;$('asset-load-error').hidden=false;$('asset-retry').hidden=false;$('asset-retry').focus();});
   }
   function menu(){
     if(!K.canChallenge(meta))newDifficulty='normal';const resumable=state&&['paused','playing','reward','art-choice'].includes(state.mode);
@@ -69,7 +84,7 @@
   function bindCards(fn){for(const b of $('overlay').querySelectorAll('[data-relic]'))b.onclick=()=>fn(b.dataset.relic);}
   function heroes(){
     $('overlay').innerHTML=panel('选择应劫者',K.difficultyName(K.pendingDifficulty)+' · 棍影与回环','此行，谁来应劫？',`<div class="hero-choices">${K.HEROES.map(h=>`<button id="choose-${h.id}" data-hero="${h.id}" class="hero-choice" aria-label="选择${h.name}"><span class="hero-portrait hero-${h.id}" aria-hidden="true"></span><h3>${h.name}</h3><b>${h.title}</b><p>${h.text}</p><small>${h.id==='nezha'?'J火尖枪 · H/右键乾坤圈 · U驭轮 · R莲火轮阵':h.id==='erlang'?'J三尖刀 · H/右键射雕弓 · L天眼 · R哮天犬':'J三连棍 · U伸棍/撑跃 · L分身 · R法天象地'}</small></button>`).join('')}</div><div class="actions">${btn('back','返回')}</div>`);
-    const paint=()=>{for(const h of K.HEROES){const im=K.ImageArt.images[h.id==='wukong'?'wukong':h.id==='nezha'?'v8NezhaPortrait':'v8ErlangPortrait'];const n=$('overlay').querySelector('.hero-'+h.id);if(n&&im){n.style.backgroundImage='url("'+im.src+'")';if(h.id!=='wukong'){n.style.backgroundSize='contain';n.style.backgroundPosition='bottom center';}};}};paint();K.ImageArt.ready.then(()=>{if(screen==='heroes')paint();});
+    const paint=()=>{for(const h of K.HEROES){const im=K.ImageArt.images[h.id==='wukong'?'wukong':h.id==='nezha'?'v8NezhaPortrait':'v8ErlangPortrait'];const n=$('overlay').querySelector('.hero-'+h.id);if(n&&im){n.style.backgroundImage='url("'+im.src+'")';if(h.id!=='wukong'){n.style.backgroundSize='contain';n.style.backgroundPosition='bottom center';}};}};paint();K.ImageArt.load(['wukong','v8NezhaPortrait','v8ErlangPortrait']).then(()=>{if(screen==='heroes')paint();});
     for(const b of $('overlay').querySelectorAll('[data-hero]'))b.onclick=()=>{K.pendingHero=b.dataset.hero;show('start');};on('back',()=>show('menu'));
   }
   function starter(){
@@ -144,6 +159,7 @@
   }
   function exportSave(){save();storage.export(state,meta);toast('已导出整段旅程，含动态敌招与舍利选择。');}
   function control(action){
+    if(screen==='loading'&&action==='pause'){cancelSceneLoad();return;}
     if(action==='build'&&screen==='playing')openBuild('playing');
     if(action==='pause'){if(screen==='playing'){K.cancelSignature(state,true);state.mode='paused';save();show('paused');}else if(screen==='paused')resume();else if(screen==='build')closeBuild();else if(screen==='help')show(backScreen);else if(screen==='replace'){state.pendingRelic=null;show('reward');save();}else if(screen==='art-choice'){K.chooseManual(state,false);save();show('playing');}else if(screen==='epilogue')show('won');else if(screen==='start')show('heroes');else if(['heroes','prologue','legacy','history','won','dead','art-choice'].includes(screen))show('menu');}
     if(action==='blur'&&screen==='playing'){K.cancelSignature(state,true);state.mode='paused';save();show('paused');}
@@ -212,8 +228,8 @@
         for(const event of state.events){if(event.type==='boss-warning'||event.type==='guardian-enter')lastHud=0;if(event.type==='hurt')toast(event.source+' · -'+event.amount+'生命');if(event.type==='seal')toast('阵眼已破 · '+state.room.seals.filter(q=>q.hp===0).length+' / 2');if(event.type==='empty-focus')toast('定力不足；主攻命中可积攒。');if(event.type==='gate-locked')toast(state.room.seals.some(q=>q.hp>0)?'本关尚有机关。':'本关守关者尚在，先击退再过门。');if(event.type==='ability-note')toast(event.text,1.6);if(event.type==='ultimate-ready')toast('战意已满 · R '+K.heroDef(state).skill,1.8);if(event.type==='ultimate')toast(K.heroDef(state).skill+' · 镇劫',.9);if(event.type==='guardian-enter')toast(event.name+' · '+K.GUARDIANS[state.stage].lesson,3.5);if(event.type==='guardian-defeat')toast(event.name+'已退 · 生命+12 · 前往关门按F继续',3);if(event.type==='hint')toast(K.isRanged(state)&&event.text.includes('连续轻棍')?'J火尖枪近战，H掷环；看突刺预警横移或跃过路径。':event.text,3.5);if(event.type==='story')toast(event.title+' · '+(K.isRanged(state)?event.text.replace('大圣','三太子'):event.text),5);if(event.type==='world-note')toast(event.text,3.5);}
         accumulator-=K.DT;if(state.mode!=='playing'){show(state.mode);break;}
       }else accumulator=0;
-      renderer.draw(state,screen,elapsed);const submitted=performance.now();if(willStep){for(const q of pendingInputs)metrics.inputs.push({code:q.code,ms:+(submitted-q.t).toFixed(3),eventMs:+(submitted-q.eventTime).toFixed(3)});pendingInputs=[];}if(metrics.inputs.length>1000)metrics.inputs.splice(0,metrics.inputs.length-1000);
-      audio.tick();if(now-lastHud>80){hud();lastHud=now;}if(now>toastUntil)$('toast').hidden=true;if(state&&screen==='playing'&&now-lastSave>3000)save();
+      renderer.draw(screen==='loading'?null:state,screen==='loading'?'menu':screen,elapsed);const submitted=performance.now();if(willStep){for(const q of pendingInputs)metrics.inputs.push({code:q.code,ms:+(submitted-q.t).toFixed(3),eventMs:+(submitted-q.eventTime).toFixed(3)});pendingInputs=[];}if(metrics.inputs.length>1000)metrics.inputs.splice(0,metrics.inputs.length-1000);
+      audio.tick();if(now-lastHud>80){if(screen!=='loading')hud();lastHud=now;}if(now>toastUntil)$('toast').hidden=true;if(state&&screen==='playing'&&now-lastSave>3000)save();
     }catch(e){metrics.errors.push(String(e.stack||e));console.error(e);if(state){state.mode='paused';show('paused');}toast('运行异常，先导出旅程后重新打开。',5);}
     requestAnimationFrame(frame);
   }

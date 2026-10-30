@@ -1,13 +1,20 @@
 {
   "name": "kong-rpg",
-  "version": "12.3.0",
+  "version": "12.4.0",
   "private": true,
   "description": "劫火重燃 — Rekindled Embers",
   "scripts": {
-    "build": "node tools/build.cjs",
+    "build": "node tools/build.cjs && node tools/build-web.cjs",
     "dev": "node tools/serve.cjs",
     "dev:lan": "node tools/serve.cjs --lan",
     "verify": "node tools/verify-campaign.cjs",
-    "verify:audit": "node tools/audit-v10-rules.cjs"
+    "verify:audit": "node tools/audit-v10-rules.cjs",
+    "build:offline": "node tools/build.cjs",
+    "build:web": "node tools/build-web.cjs",
+    "predev": "node tools/pack-art.cjs && node tools/pack-audio.cjs && node tools/pack-music.cjs",
+    "predev:lan": "npm run build"
+  },
+  "devDependencies": {
+    "sharp": "^0.35.5"
   }
 }

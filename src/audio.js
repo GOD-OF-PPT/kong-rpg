@@ -18,7 +18,7 @@
           if(K.Music&&K.MusicTracks)this.music=new K.Music(this.ctx,compressor,K.MusicTracks);
           this.setScreen(this.screen);
           this.ready=Promise.all(Object.entries(K.ImpactSamples||{}).map(async([id,data])=>{
-            try{const bytes=Uint8Array.from(atob(data),c=>c.charCodeAt(0));this.buffers[id]=await this.ctx.decodeAudioData(bytes.buffer);}
+            try{let buffer;if(typeof data==='string')buffer=Uint8Array.from(atob(data),c=>c.charCodeAt(0)).buffer;else{const response=await fetch(data.src);if(!response.ok)throw Error('Sound unavailable');buffer=await response.arrayBuffer();}this.buffers[id]=await this.ctx.decodeAudioData(buffer);}
             catch{this.stats.decodeErrors.push(id);}
           }));
         }

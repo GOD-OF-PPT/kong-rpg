@@ -1,7 +1,8 @@
 (function(K){
   'use strict';
   // Atlas extraction only: keep original generated PNGs and their transparency.
-  K.DialogArtReady=K.ImageArt.ready.then(()=>{
+  let ready;
+  K.ensureDialogArt=()=>ready||(ready=K.ImageArt.load(K.ImageArt.uiIds).then(()=>{
     const root=document.documentElement;
     function crop(image,box,w,h,exclude){const c=document.createElement('canvas');c.width=w;c.height=h;const x=c.getContext('2d');x.imageSmoothingEnabled=false;x.drawImage(image,...box,0,0,w,h);if(exclude)x.clearRect(...exclude);return 'url("'+c.toDataURL()+'")';}
     const scroll=K.ImageArt.images.uiScroll,icons=K.ImageArt.images.uiIcons;
@@ -14,5 +15,8 @@
     // gutter; exclude that fragment, outside the idle figure's silhouette.
     const nezha=K.ImageArt.images.nezhaPortrait;if(nezha)K.DialogPortraits.nezha=crop(nezha,K.ArtCatalog.dialog.nezha.r,260,346,[246,135,14,42]);
     const props=K.ImageArt.images.props;if(props)root.style.setProperty('--lamp-art',crop(props,K.ArtCatalog.dialog.lamp.r,164,190));
-  });
+    for(const [hero,key]of [['erlang','v8ErlangPortrait'],['nezha','v8NezhaPortrait']]){const im=K.ImageArt.images[key];if(im)K.DialogPortraits[hero]='url("'+im.src+'")';}
+    K.DialogArtLoaded=true;
+  }).catch(error=>{ready=null;throw error;}));
+  Object.defineProperty(K,'DialogArtReady',{get:()=>K.ensureDialogArt()});
 })(globalThis.Kong ||= {});

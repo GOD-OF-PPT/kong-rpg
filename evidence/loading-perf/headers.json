@@ -1,0 +1,58 @@
+{
+  "script": {
+    "status": 200,
+    "headers": {
+      "content-type": "text/javascript; charset=utf-8",
+      "cache-control": "public, max-age=31536000, immutable",
+      "etag": "\"67eb6-1a18adca0ff-br\"",
+      "x-content-type-options": "nosniff",
+      "vary": "Accept-Encoding",
+      "content-encoding": "br",
+      "content-length": "115917",
+      "date": "Fri, 30 Oct 2026 03:31:24 GMT",
+      "connection": "keep-alive",
+      "keep-alive": "timeout=5"
+    },
+    "bytes": 115917
+  },
+  "image": {
+    "status": 200,
+    "headers": {
+      "cache-control": "public, max-age=31536000, immutable"
+    },
+    "bytes": 559238
+  },
+  "unchanged": {
+    "status": 304,
+    "headers": {
+      "content-type": "image/webp",
+      "cache-control": "public, max-age=31536000, immutable",
+      "etag": "\"88886-1a18ac53caa\"",
+      "x-content-type-options": "nosniff",
+      "date": "Fri, 30 Oct 2026 03:31:24 GMT",
+      "connection": "keep-alive",
+      "keep-alive": "timeout=5"
+    },
+    "bytes": 0
+  },
+  "partial": {
+    "status": 206,
+    "headers": {
+      "content-type": "audio/mpeg",
+      "cache-control": "public, max-age=31536000, immutable",
+      "etag": "\"2fd9be-1a18adca0ee\"",
+      "x-content-type-options": "nosniff",
+      "accept-ranges": "bytes",
+      "content-range": "bytes 0-1023/3135934",
+      "content-length": "1024",
+      "date": "Fri, 30 Oct 2026 03:31:24 GMT",
+      "connection": "keep-alive",
+      "keep-alive": "timeout=5"
+    },
+    "bytes": 1024
+  },
+  "legacy": {
+    "status": 200,
+    "bytes": "68903412"
+  }
+}

@@ -85,7 +85,4 @@
       c.restore();
     }
   };
-  K.DialogArtReady=K.DialogArtReady.then(()=>{
-    for(const [hero,key]of [['erlang','v8ErlangPortrait'],['nezha','v8NezhaPortrait']]){const im=K.ImageArt.images[key];if(!im)continue;K.DialogPortraits[hero]='url("'+im.src+'")';}
-  });
 })(globalThis.Kong ||= {});

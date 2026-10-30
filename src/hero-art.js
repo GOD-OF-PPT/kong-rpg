@@ -3,7 +3,7 @@
   const Base=K.Renderer,rect=(c,x,y,w,h,color)=>{c.fillStyle=color;c.fillRect(Math.round(x),Math.round(y),Math.round(w),Math.round(h));};
   K.Renderer=class extends Base{
     person(kind,x,y,face=1,frame=0,alpha=1,flash=false,scale=1){
-      const s=this.scene,p=s?.player,im=this.image('nezha');if(kind!=='monkey'||!s||!K.isRanged(s)||this.ui==='menu'||!im)return super.person(kind,x,y,face,frame,alpha,flash,scale);
+      const s=this.scene,p=s?.player;if(kind!=='monkey'||!s||!K.isRanged(s)||this.ui==='menu')return super.person(kind,x,y,face,frame,alpha,flash,scale);const im=this.image('nezha');if(!im)return super.person(kind,x,y,face,frame,alpha,flash,scale);
       const elapsed=p.attackDuration-p.attack,index=p.hurt>0?5:p.attack>0?(elapsed<.14?3:4):!p.grounded?2:Math.abs(p.vx)>30?1:s.ring?4:0,c=this.c;
       c.save();c.translate(Math.round(x+12),Math.round(y+44));c.scale(face*scale,scale);c.globalAlpha=alpha;const bob=index===1?Math.sin(this.runCycle*2)*2:0;c.drawImage(im,...K.ArtCatalog.nezha[index].r,-64,-128+bob,128,128);c.restore();
     }

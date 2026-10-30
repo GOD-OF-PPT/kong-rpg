@@ -12,7 +12,7 @@ target = root / 'artifacts' / ('kong-rpg-offline-v' + manifest['version'] + '.zi
 temporary = target.with_suffix('.zip.tmp')
 with zipfile.ZipFile(temporary, 'w', zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
     for file in sorted(release.rglob('*')):
-        if file.is_file() and not file.name.startswith('.') and file.suffix in ('.html', '.md', '.json'):
+        if file.is_file() and not file.is_relative_to(release / 'web') and not file.name.startswith('.') and file.suffix in ('.html', '.md', '.json'):
             info = zipfile.ZipInfo(file.relative_to(release).as_posix(), (2026, 10, 26, 0, 0, 0))
             info.compress_type = zipfile.ZIP_DEFLATED
             archive.writestr(info, file.read_bytes(), compresslevel=9)

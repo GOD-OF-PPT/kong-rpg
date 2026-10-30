@@ -1,5 +1,9 @@
 /* Five broken arcs and a rekindled ember: an original shared identity. */
 :root{--brand-gold:#edce92;--brand-ember:#c76e48;--brand-mist:#a5b7b5}
+.asset-progress{height:5px;max-width:440px;margin:24px auto 12px;background:#101d25;border:1px solid #8d7145}
+.asset-progress i{display:block;height:100%;width:0;background:#dfbd7f;transition:width .15s linear}
+#asset-progress-text{text-align:center;color:#c9bc9c;font-size:12px;letter-spacing:2px}
+.dialog-loading .actions{justify-content:center}
 .sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
 .masthead #brand{gap:12px;letter-spacing:3px}
 .brand-emblem{display:block;width:42px;height:42px;flex:none}

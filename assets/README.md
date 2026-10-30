@@ -12,4 +12,4 @@
 
 `node tools/build.cjs`直接使用保留的成品，不需要生成原图。历史`tools/prepare-*.py`和`normalize-nezha.py`用于重新制作素材，执行前需要从清理前Git版本恢复相应输入；它们不属于日常构建链。删除清单及逐文件SHA见`evidence/assets-cleanup/plan.json`，清理前提交为`37a3bd758fb053e955f6f6b3a1d9e3407e631b51`，可用Git按需找回已跟踪文件。
 
-Vite主要管理开发服务和构建产物，不会自动删除仓库中的原图/草稿。当前统一嵌入管线明确读取的资源也不会因引入Vite自动消失。本次保留现有`file://`离线入口，按真实构建引用清理目录。
+Vite主要管理开发服务和构建产物，不会自动删除仓库中的原图/草稿。当前网络版通过小URL清单、按界面/角色/区域准备资源，网络无损WebP导出位于`release/web/`，不在本目录重复堆放。`npm run build`构建网络版及独立单HTML离线版；离线版仍使用完整data URL，不需要网络或缓存。

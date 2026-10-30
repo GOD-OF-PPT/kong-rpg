@@ -1,6 +1,6 @@
 {
   "tool": "built-in image_gen",
-  "runtime": "embedded data URLs; no network or fetch",
+  "runtime": "HTTP: staged external files; standalone: embedded data URLs",
   "assets": {
     "mountain": {
       "file": "assets/art-v1/mountain-approach.png",

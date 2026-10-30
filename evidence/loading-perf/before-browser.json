@@ -1,0 +1,513 @@
+{
+  "kind": "before",
+  "url": "http://127.0.0.1:5187/",
+  "browser": "156.0.4314.50",
+  "network": {
+    "downloadMiBps": 2,
+    "uploadMiBps": 1,
+    "latencyMs": 20,
+    "cache": "disabled"
+  },
+  "menuReadyMs": 38636,
+  "resources": [
+    {
+      "name": "http://127.0.0.1:5187/src/style.css",
+      "bytes": 12982,
+      "transfer": 13282,
+      "ms": 49.300000071525574
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/v2.css",
+      "bytes": 2217,
+      "transfer": 2517,
+      "ms": 42.39999997615814
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/combat.css",
+      "bytes": 1068,
+      "transfer": 1368,
+      "ms": 33.5
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/dialogs.css",
+      "bytes": 18582,
+      "transfer": 18882,
+      "ms": 66.20000004768372
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/progression.css",
+      "bytes": 1185,
+      "transfer": 1485,
+      "ms": 84.5
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/heroes.css",
+      "bytes": 1552,
+      "transfer": 1852,
+      "ms": 86.20000004768372
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/journey.css",
+      "bytes": 2397,
+      "transfer": 2697,
+      "ms": 87.89999997615814
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/equipped-hud.css",
+      "bytes": 1368,
+      "transfer": 1668,
+      "ms": 115.60000002384186
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/signature.css",
+      "bytes": 626,
+      "transfer": 926,
+      "ms": 85.79999995231628
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/realms.css",
+      "bytes": 839,
+      "transfer": 1139,
+      "ms": 115.29999995231628
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/challenge.css",
+      "bytes": 1329,
+      "transfer": 1629,
+      "ms": 115.5
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/campaign.css",
+      "bytes": 1606,
+      "transfer": 1906,
+      "ms": 125.39999997615814
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/celestial.css",
+      "bytes": 1047,
+      "transfer": 1347,
+      "ms": 125.39999997615814
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/cloud-visual.css",
+      "bytes": 1068,
+      "transfer": 1368,
+      "ms": 134.10000002384186
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/combat-feedback.css",
+      "bytes": 219,
+      "transfer": 519,
+      "ms": 145.5
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/brand.css",
+      "bytes": 4084,
+      "transfer": 4384,
+      "ms": 145.69999992847443
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/content.js",
+      "bytes": 7748,
+      "transfer": 8048,
+      "ms": 148.69999992847443
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/motion.js",
+      "bytes": 1039,
+      "transfer": 1339,
+      "ms": 148.30000007152557
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/world.js",
+      "bytes": 5584,
+      "transfer": 5884,
+      "ms": 155.90000009536743
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/progression.js",
+      "bytes": 8929,
+      "transfer": 9229,
+      "ms": 167.80000007152557
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/journey.js",
+      "bytes": 9075,
+      "transfer": 9375,
+      "ms": 187
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/heroes.js",
+      "bytes": 7597,
+      "transfer": 7897,
+      "ms": 186.80000007152557
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/signature.js",
+      "bytes": 9809,
+      "transfer": 10109,
+      "ms": 196
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/challenge.js",
+      "bytes": 7259,
+      "transfer": 7559,
+      "ms": 196.79999995231628
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/realms.js",
+      "bytes": 3834,
+      "transfer": 4134,
+      "ms": 196.70000004768372
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/simulation.js",
+      "bytes": 26920,
+      "transfer": 27220,
+      "ms": 205
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/celestial.js",
+      "bytes": 9795,
+      "transfer": 10095,
+      "ms": 217.89999997615814
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/warriors.js",
+      "bytes": 12678,
+      "transfer": 12978,
+      "ms": 228.39999997615814
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/campaign-data.js",
+      "bytes": 6274,
+      "transfer": 6574,
+      "ms": 238.10000002384186
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/enemy-effects.js",
+      "bytes": 2263,
+      "transfer": 2563,
+      "ms": 225.69999992847443
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/route-layouts.js",
+      "bytes": 3326,
+      "transfer": 3626,
+      "ms": 225.70000004768372
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/campaign-world.js",
+      "bytes": 7922,
+      "transfer": 8222,
+      "ms": 238.40000009536743
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/campaign-combat.js",
+      "bytes": 12603,
+      "transfer": 12903,
+      "ms": 249.20000004768372
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/campaign-state.js",
+      "bytes": 2100,
+      "transfer": 2400,
+      "ms": 254.30000007152557
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/combat-identity.js",
+      "bytes": 5479,
+      "transfer": 5779,
+      "ms": 256.7000000476837
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/storage.js",
+      "bytes": 19407,
+      "transfer": 19707,
+      "ms": 269.3000000715256
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/art.js",
+      "bytes": 5285,
+      "transfer": 5585,
+      "ms": 287.60000002384186
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/art-catalog.js",
+      "bytes": 3606,
+      "transfer": 3906,
+      "ms": 288
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/renderer.js",
+      "bytes": 14721,
+      "transfer": 15021,
+      "ms": 290.7000000476837
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/visuals.js",
+      "bytes": 8682,
+      "transfer": 8982,
+      "ms": 301.7999999523163
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/generated-art.js",
+      "bytes": 59853498,
+      "transfer": 59853798,
+      "ms": 37198.60000002384
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/combat-art.js",
+      "bytes": 6658,
+      "transfer": 6958,
+      "ms": 301.89999997615814
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/progression-art.js",
+      "bytes": 4130,
+      "transfer": 4430,
+      "ms": 320.39999997615814
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/journey-art.js",
+      "bytes": 3043,
+      "transfer": 3343,
+      "ms": 320.1999999284744
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/hero-art.js",
+      "bytes": 2481,
+      "transfer": 2781,
+      "ms": 320
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/map-data.js",
+      "bytes": 2278,
+      "transfer": 2578,
+      "ms": 358.1999999284744
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/realm-dressing-data.js",
+      "bytes": 753,
+      "transfer": 1053,
+      "ms": 328.7000000476837
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/map-art.js",
+      "bytes": 5938,
+      "transfer": 6238,
+      "ms": 358.40000009536743
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/scene-art.js",
+      "bytes": 1572,
+      "transfer": 1872,
+      "ms": 350.7000000476837
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/scene-data.js",
+      "bytes": 351,
+      "transfer": 651,
+      "ms": 350.39999997615814
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/signature-data.js",
+      "bytes": 1091,
+      "transfer": 1391,
+      "ms": 358.7000000476837
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/challenge-art.js",
+      "bytes": 1270,
+      "transfer": 1570,
+      "ms": 385.39999997615814
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/actor-repair-data.js",
+      "bytes": 395,
+      "transfer": 695,
+      "ms": 386.39999997615814
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/signature-art.js",
+      "bytes": 3048,
+      "transfer": 3348,
+      "ms": 385.7999999523163
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/actor-states-data.js",
+      "bytes": 384,
+      "transfer": 684,
+      "ms": 399.7999999523163
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/actor-state-art.js",
+      "bytes": 2295,
+      "transfer": 2595,
+      "ms": 386.6999999284744
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/dialog-art.js",
+      "bytes": 1659,
+      "transfer": 1959,
+      "ms": 417.1999999284744
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/celestial-art-data.js",
+      "bytes": 2472,
+      "transfer": 2772,
+      "ms": 417.59999990463257
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/v8-art-data.js",
+      "bytes": 3043,
+      "transfer": 3343,
+      "ms": 427.59999990463257
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/v8-art.js",
+      "bytes": 9883,
+      "transfer": 10183,
+      "ms": 432.39999997615814
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/celestial-art.js",
+      "bytes": 12113,
+      "transfer": 12413,
+      "ms": 451.8000000715256
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/campaign-art-data.js",
+      "bytes": 4244,
+      "transfer": 4544,
+      "ms": 452.2000000476837
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/audit-art-data.js",
+      "bytes": 558,
+      "transfer": 858,
+      "ms": 441.7000000476837
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/campaign-art.js",
+      "bytes": 4102,
+      "transfer": 4402,
+      "ms": 458.60000002384186
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/enemy-marker-data.js",
+      "bytes": 402,
+      "transfer": 702,
+      "ms": 458.39999997615814
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/enemy-marker-art.js",
+      "bytes": 3723,
+      "transfer": 4023,
+      "ms": 466.7000000476837
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/cloud-visuals.js",
+      "bytes": 7876,
+      "transfer": 8176,
+      "ms": 496.10000002384186
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/cloud-visual-data.js",
+      "bytes": 1853,
+      "transfer": 2153,
+      "ms": 518.5
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/combat-feedback-art.js",
+      "bytes": 5056,
+      "transfer": 5356,
+      "ms": 495.60000002384186
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/combat-feedback-data.js",
+      "bytes": 627,
+      "transfer": 927,
+      "ms": 512.3999999761581
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/motion-data.js",
+      "bytes": 15003,
+      "transfer": 15303,
+      "ms": 568.7999999523163
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/motion-art.js",
+      "bytes": 3905,
+      "transfer": 4205,
+      "ms": 523.7999999523163
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/enemy-effects-data.js",
+      "bytes": 3357,
+      "transfer": 3657,
+      "ms": 528.8000000715256
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/enemy-effects-art.js",
+      "bytes": 8294,
+      "transfer": 8594,
+      "ms": 552
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/combat-identity-data.js",
+      "bytes": 6685,
+      "transfer": 6985,
+      "ms": 568.8000000715256
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/combat-identity-art.js",
+      "bytes": 11840,
+      "transfer": 12140,
+      "ms": 578.4000000953674
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/input.js",
+      "bytes": 4378,
+      "transfer": 4678,
+      "ms": 569.2000000476837
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/generated-audio.js",
+      "bytes": 229435,
+      "transfer": 229735,
+      "ms": 953.3999999761581
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/generated-music.js",
+      "bytes": 15855390,
+      "transfer": 15855690,
+      "ms": 15997.299999952316
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/music.js",
+      "bytes": 5650,
+      "transfer": 5950,
+      "ms": 613.1000000238419
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/audio.js",
+      "bytes": 12147,
+      "transfer": 12447,
+      "ms": 628.2999999523163
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/brand.js",
+      "bytes": 591,
+      "transfer": 891,
+      "ms": 613.5
+    },
+    {
+      "name": "http://127.0.0.1:5187/src/app.js",
+      "bytes": 47951,
+      "transfer": 48251,
+      "ms": 746.7999999523163
+    }
+  ],
+  "errors": []
+}

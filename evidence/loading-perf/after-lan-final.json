@@ -1,0 +1,145 @@
+{
+  "url": "http://10.11.177.26:5188/",
+  "browser": "156.0.4314.50",
+  "network": {
+    "downloadMiBps": 2,
+    "uploadMiBps": 1,
+    "latencyMs": 20,
+    "cache": "disabled"
+  },
+  "menuReadyMs": 2347,
+  "menuBytes": 4320092,
+  "firstPlayMs": 13577,
+  "menu": {
+    "ids": [
+      "brandWordmark",
+      "stone",
+      "wukong",
+      "mountain"
+    ],
+    "resources": [
+      {
+        "name": "http://10.11.177.26:5188/game.76544aee5645924b.css",
+        "bytes": 13001,
+        "decoded": 52479,
+        "transfer": 13301,
+        "ms": 34.699999928474426
+      },
+      {
+        "name": "http://10.11.177.26:5188/game.37a703d59b2cf286.js",
+        "bytes": 130605,
+        "decoded": 425654,
+        "transfer": 130905,
+        "ms": 93.70000004768372
+      },
+      {
+        "name": "http://10.11.177.26:5188/assets/images/brandWordmark.d5323c1b198b2397.webp",
+        "bytes": 559238,
+        "decoded": 559238,
+        "transfer": 559538,
+        "ms": 1104.7999999523163
+      },
+      {
+        "name": "http://10.11.177.26:5188/assets/images/mountain.296d70c71773dacb.webp",
+        "bytes": 1936944,
+        "decoded": 1936944,
+        "transfer": 1937244,
+        "ms": 2076.4000000953674
+      },
+      {
+        "name": "http://10.11.177.26:5188/assets/images/stone.7b443d9e58c0ea25.webp",
+        "bytes": 712750,
+        "decoded": 712750,
+        "transfer": 713050,
+        "ms": 1336.8999999761581
+      },
+      {
+        "name": "http://10.11.177.26:5188/assets/images/wukong.9ed9b0f96501d7a7.webp",
+        "bytes": 967554,
+        "decoded": 967554,
+        "transfer": 967854,
+        "ms": 1587.3000000715256
+      }
+    ]
+  },
+  "firstRoom": {
+    "ids": [
+      "brandWordmark",
+      "stone",
+      "wukong",
+      "mountain",
+      "uiScroll",
+      "props",
+      "v8ErlangPortrait",
+      "uiFolio",
+      "uiIcons",
+      "v8NezhaPortrait",
+      "nezhaPortrait",
+      "impacts",
+      "nodes",
+      "mapProps",
+      "nodesDone",
+      "mapTerrain",
+      "mapDressing",
+      "sigFx",
+      "sceneProps",
+      "actorStates",
+      "enemies",
+      "celestialHeroes",
+      "celestialBosses",
+      "v8Fx",
+      "celestialFx",
+      "v8Enemies",
+      "auditDevices",
+      "v8Terrain",
+      "combatContacts",
+      "actorRepair",
+      "enemy-materials",
+      "enemy-contacts",
+      "guardians",
+      "realmDressing",
+      "enemyBattleSeals",
+      "identity-qinguang",
+      "identity-ninehead",
+      "identity-juling",
+      "identity-dragonking",
+      "identity-litian",
+      "sigWukong",
+      "staffActors",
+      "identity-wukong",
+      "staffFx",
+      "campaign-juling",
+      "campaignArmy-cloud",
+      "run",
+      "cloudEnvironment",
+      "cloudFoundation",
+      "motion-cloud",
+      "realmCloud",
+      "combo"
+    ],
+    "metrics": []
+  },
+  "errors": [],
+  "checks": [
+    {
+      "name": "menu ready within six seconds on cold 2 MiB/s, 20ms network",
+      "pass": true
+    },
+    {
+      "name": "menu requests only its four image assets",
+      "pass": true
+    },
+    {
+      "name": "no individual JavaScript response exceeds 512 KiB decoded",
+      "pass": true
+    },
+    {
+      "name": "web homepage transfers at most 5 MB before interaction",
+      "pass": true
+    },
+    {
+      "name": "real input reaches first playable fight without art exceptions",
+      "pass": true
+    }
+  ]
+}

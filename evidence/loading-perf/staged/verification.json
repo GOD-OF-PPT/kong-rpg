@@ -1,0 +1,206 @@
+{
+  "url": "http://127.0.0.1:5188/",
+  "method": "Production staged loader. Public imported fixtures, real keys/menu, forced one-shot fetch failure and delayed realm, warm-cache reload. Not natural campaign or human evidence.",
+  "checks": [
+    {
+      "name": "initial boot decodes only the four menu images",
+      "pass": true
+    },
+    {
+      "name": "failed image displays retry without entering gameplay",
+      "pass": true
+    },
+    {
+      "name": "loading screen does not accept combat inputs",
+      "pass": true
+    },
+    {
+      "name": "retry loads the failed image and clears its error",
+      "pass": true
+    },
+    {
+      "name": "first room excludes other realm backgrounds",
+      "pass": true
+    },
+    {
+      "name": "simulated time is frozen during a delayed new realm",
+      "pass": true
+    },
+    {
+      "name": "cancelled loading cannot later replace the homepage",
+      "pass": true
+    },
+    {
+      "name": "wukong stage 0 enters with all declared assets ready",
+      "pass": true
+    },
+    {
+      "name": "wukong stage 3 enters with all declared assets ready",
+      "pass": true
+    },
+    {
+      "name": "wukong stage 6 enters with all declared assets ready",
+      "pass": true
+    },
+    {
+      "name": "wukong stage 9 enters with all declared assets ready",
+      "pass": true
+    },
+    {
+      "name": "wukong stage 12 enters with all declared assets ready",
+      "pass": true
+    },
+    {
+      "name": "nezha stage 0 enters with all declared assets ready",
+      "pass": true
+    },
+    {
+      "name": "nezha stage 3 enters with all declared assets ready",
+      "pass": true
+    },
+    {
+      "name": "nezha stage 6 enters with all declared assets ready",
+      "pass": true
+    },
+    {
+      "name": "nezha stage 9 enters with all declared assets ready",
+      "pass": true
+    },
+    {
+      "name": "nezha stage 12 enters with all declared assets ready",
+      "pass": true
+    },
+    {
+      "name": "erlang stage 0 enters with all declared assets ready",
+      "pass": true
+    },
+    {
+      "name": "erlang stage 3 enters with all declared assets ready",
+      "pass": true
+    },
+    {
+      "name": "erlang stage 6 enters with all declared assets ready",
+      "pass": true
+    },
+    {
+      "name": "erlang stage 9 enters with all declared assets ready",
+      "pass": true
+    },
+    {
+      "name": "erlang stage 12 enters with all declared assets ready",
+      "pass": true
+    },
+    {
+      "name": "no gameplay renderer requests an unloaded registered asset",
+      "pass": true,
+      "data": []
+    },
+    {
+      "name": "network WAV samples decode and selected music plays",
+      "pass": true
+    },
+    {
+      "name": "real export/import continues its existing hero and stage",
+      "pass": true
+    },
+    {
+      "name": "no browser or runtime exception",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "unresolved": [],
+  "scenes": [
+    {
+      "hero": "wukong",
+      "stage": 0,
+      "swings": 1,
+      "loaded": 60
+    },
+    {
+      "hero": "wukong",
+      "stage": 3,
+      "swings": 1,
+      "loaded": 60
+    },
+    {
+      "hero": "wukong",
+      "stage": 6,
+      "swings": 1,
+      "loaded": 64
+    },
+    {
+      "hero": "wukong",
+      "stage": 9,
+      "swings": 1,
+      "loaded": 68
+    },
+    {
+      "hero": "wukong",
+      "stage": 12,
+      "swings": 1,
+      "loaded": 72
+    },
+    {
+      "hero": "nezha",
+      "stage": 0,
+      "swings": 1,
+      "loaded": 77
+    },
+    {
+      "hero": "nezha",
+      "stage": 3,
+      "swings": 1,
+      "loaded": 77
+    },
+    {
+      "hero": "nezha",
+      "stage": 6,
+      "swings": 1,
+      "loaded": 77
+    },
+    {
+      "hero": "nezha",
+      "stage": 9,
+      "swings": 1,
+      "loaded": 77
+    },
+    {
+      "hero": "nezha",
+      "stage": 12,
+      "swings": 1,
+      "loaded": 77
+    },
+    {
+      "hero": "erlang",
+      "stage": 0,
+      "swings": 1,
+      "loaded": 77
+    },
+    {
+      "hero": "erlang",
+      "stage": 3,
+      "swings": 1,
+      "loaded": 77
+    },
+    {
+      "hero": "erlang",
+      "stage": 6,
+      "swings": 1,
+      "loaded": 77
+    },
+    {
+      "hero": "erlang",
+      "stage": 9,
+      "swings": 1,
+      "loaded": 77
+    },
+    {
+      "hero": "erlang",
+      "stage": 12,
+      "swings": 1,
+      "loaded": 77
+    }
+  ],
+  "browser": "156.0.4314.50"
+}
