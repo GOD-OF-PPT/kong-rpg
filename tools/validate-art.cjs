@@ -1,3 +1,4 @@
+const writeGenerated=require('./write-generated.cjs');
 // Build-time atlas integrity gate: missing assets or out-of-bounds frames must
 // fail packaging, rather than silently ship a geometric fallback.
 const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
@@ -10,9 +11,9 @@ for(const [id,asset]of Object.entries(manifest.assets)){
   dimensions[id]={width:data.readUInt32BE(16),height:data.readUInt32BE(20)};
 }
 const context=vm.createContext({});
-for(const file of ['art-catalog','map-data','realm-dressing-data','signature-data','scene-data','actor-states-data','actor-repair-data','v8-art-data','enemy-marker-data','celestial-art-data','campaign-art-data','audit-art-data','cloud-visual-data','combat-feedback-data','motion-data','enemy-effects-data','combat-identity-data'])vm.runInContext(fs.readFileSync(path.join(root,'src',file+'.js'),'utf8'),context);
+for(const file of ['art-catalog','map-data','realm-dressing-data','signature-data','scene-data','actor-states-data','actor-repair-data','v8-art-data','enemy-marker-data','celestial-art-data','campaign-art-data','audit-art-data','cloud-visual-data','combat-feedback-data','motion-data','enemy-effects-data','combat-identity-data','boss-fx-data'])vm.runInContext(fs.readFileSync(path.join(root,'src',file+'.js'),'utf8'),context);
 let count=0;const coverage={};
-for(const group of ['ArtFrames','MapFrames','SignatureFrames','SceneFrames','ActorStateFrames','V8Frames','EnemyMarkerFrames','CelestialFrames','CampaignFrames','CloudFrames','CombatFrames','MotionFrames','EnemyEffectFrames','IdentityFrames']){
+for(const group of ['ArtFrames','MapFrames','SignatureFrames','SceneFrames','ActorStateFrames','V8Frames','EnemyMarkerFrames','CelestialFrames','CampaignFrames','CloudFrames','CombatFrames','MotionFrames','EnemyEffectFrames','IdentityFrames','BossEffectFrames']){
   coverage[group]=[];
   for(const [id,frame]of Object.entries(context.Kong[group])){
     const image=dimensions[frame.image],[x,y,w,h]=frame.r;
@@ -44,7 +45,7 @@ for(const realm of ['underworld','dragon','heaven'])for(const suffix of ['device
 for(const kind of ['heal','focus','rage'])required('MapFrames','pickup-'+kind);
 for(const kind of ['quiet','warning','active'])required('MapFrames','hazard-'+kind);
 for(const realm of ['underworld','water','dragon','heaven'])for(const variant of ['a','b'])if(!context.Kong.MapFrames['dressing-'+realm+'-'+variant])throw Error('Missing realm dressing: '+realm+'-'+variant);
-fs.writeFileSync(path.join(root,'assets/v8/coverage.json'),JSON.stringify({images:dimensions,frames:coverage,total:count},null,2)+'\n');
+writeGenerated(path.join(root,'assets/v8/coverage.json'),JSON.stringify({images:dimensions,frames:coverage,total:count},null,2)+'\n');
 console.log('Art integrity:',Object.keys(dimensions).length,'PNG assets;',count,'bounded frames');
 
 for(const name of ['wukong','nezha','erlang'])for(let row=0;row<3;row++)for(let col=0;col<4;col++)required('IdentityFrames',name+'-'+row+'-'+col);

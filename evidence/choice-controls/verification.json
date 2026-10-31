@@ -1,0 +1,95 @@
+{
+  "kind": "http",
+  "checks": [
+    {
+      "name": "reward initially selects exactly one card",
+      "pass": true
+    },
+    {
+      "name": "selected card has a prominent outline and explicit label",
+      "pass": true
+    },
+    {
+      "name": "1074: selection outline and label fit without covering the icon",
+      "pass": true
+    },
+    {
+      "name": "1024: selection outline and label fit without covering the icon",
+      "pass": true
+    },
+    {
+      "name": "dialog explains J confirmation",
+      "pass": true
+    },
+    {
+      "name": "arrow key moves selection to the second card",
+      "pass": true
+    },
+    {
+      "name": "J confirms exactly the highlighted reward",
+      "pass": true
+    },
+    {
+      "name": "confirmation J does not leak into a combat attack",
+      "pass": true
+    },
+    {
+      "name": "a fresh J still attacks in gameplay",
+      "pass": true
+    },
+    {
+      "name": "mouse and keyboard share the same selected card",
+      "pass": true
+    },
+    {
+      "name": "J confirms the mouse-highlighted choice",
+      "pass": true
+    },
+    {
+      "name": "replacement selection supports D",
+      "pass": true
+    },
+    {
+      "name": "J replaces only the selected relic",
+      "pass": true
+    },
+    {
+      "name": "a held combat J cannot accept a reward",
+      "pass": true
+    },
+    {
+      "name": "release and press J accepts the reward normally",
+      "pass": true
+    },
+    {
+      "name": "typing j in the seed field does not confirm a menu",
+      "pass": true
+    },
+    {
+      "name": "holding J cannot skip another selection screen",
+      "pass": true
+    },
+    {
+      "name": "J confirms the highlighted hero",
+      "pass": true
+    },
+    {
+      "name": "J confirms the highlighted starting relic",
+      "pass": true
+    },
+    {
+      "name": "Enter still confirms choices",
+      "pass": true
+    },
+    {
+      "name": "J also confirms learning the focused skill",
+      "pass": true
+    },
+    {
+      "name": "no browser or game-loop errors",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "pass": true
+}

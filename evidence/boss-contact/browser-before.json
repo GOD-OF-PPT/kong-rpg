@@ -1,0 +1,12 @@
+{
+  "kind": "http",
+  "checks": [
+    {
+      "name": "wukong 2: real jump reaches the boss head height",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "scenes": [],
+  "failure": "page.waitForFunction: Timeout 2500ms exceeded.\n    at E:\\githome\\kong-rpg\\tools\\verify-boss-contact-browser.cjs:21:18"
+}

@@ -30,8 +30,10 @@
     return id||seq[0];
   };
   K.campaignWindup=function(s,e,move,echo=false){
+    const signature=K.bossSignatureFor(e,move);
+    if(signature)return signature.windup*(echo?.95:1)*(K.isChallenge(s)?.95:1);
     const base={'axe-cleave':.72,'axe-quake':.84,'axe-rush':.78,'judge-mark':.76,'judge-chain':.90,'judge-echo':.78,'venom-fan':.72,'venom-tide':.80,'head-dive':.86,'dragon-column':.88,'dragon-surge':.86,'dragon-thunder':.95,'tower-prison':.94,'king-sword':.68,'king-fire':.82,'soldier-slash':.60,'soldier-bolt':.82,'soldier-rush':.76,'shield-wave':.72}[move]||.85;
-    return base*(major(e)?1:K.isMajor(e)?1.08:1)*(echo?.9:1)*(K.isChallenge(s)?.92:1);
+    return Math.max(base,major(e)&&['dragon-column','venom-fan','king-fire','judge-mark','judge-echo'].includes(move)?1.15:0)*(major(e)?1:K.isMajor(e)?1.08:1)*(echo?.9:1)*(K.isChallenge(s)?.92:1);
   };
   K.campaignRecovery=e=>major(e)?.62*({'axe-cleave':.90,'axe-quake':1.02,'axe-rush':1.12,'judge-mark':.74,'judge-chain':.88,'judge-echo':1.02,'venom-fan':.78,'venom-tide':.82,'head-dive':1.10,'dragon-column':.82,'dragon-surge':.92,'dragon-thunder':.96,'tower-prison':.98,'king-sword':.86,'king-fire':.88}[e.move]||.90):K.isMajor(e)?1.25:1.05;
   K.campaignFollowup=function(s,e,target){

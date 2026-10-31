@@ -1,0 +1,167 @@
+{
+  "entry": "E:\\githome\\kong-rpg\\release\\index.html",
+  "sha256": "ce42baa0643574662046081b1c1bad6d2b3739be9cac7a1bebd2b8a48f31345c",
+  "method": "Installed Google Chrome (headless), fresh offline browser context with HTTP(S) blocked, no file-access/security overrides; real menu/input/export/import. No injected combat state or natural full campaign claim.",
+  "checks": [
+    {
+      "name": "lightweight direct file entry boots only four images",
+      "pass": true
+    },
+    {
+      "name": "孙悟空 enters a playable scene with responsive movement/attack/jump",
+      "pass": true,
+      "data": {
+        "hero": "wukong",
+        "stage": 0
+      }
+    },
+    {
+      "name": "孙悟空 can pause and preserve its state",
+      "pass": true
+    },
+    {
+      "name": "哪吒 enters a playable scene with responsive movement/attack/jump",
+      "pass": true,
+      "data": {
+        "hero": "nezha",
+        "stage": 0
+      }
+    },
+    {
+      "name": "哪吒 can pause and preserve its state",
+      "pass": true
+    },
+    {
+      "name": "杨戬 enters a playable scene with responsive movement/attack/jump",
+      "pass": true,
+      "data": {
+        "hero": "erlang",
+        "stage": 0
+      }
+    },
+    {
+      "name": "杨戬 can pause and preserve its state",
+      "pass": true
+    },
+    {
+      "name": "local music transport produces actual WebAudio signal",
+      "pass": true,
+      "data": {
+        "maxRms": 0.049567,
+        "errors": []
+      }
+    },
+    {
+      "name": "all eight effects decode without fetch/CORS errors",
+      "pass": true
+    },
+    {
+      "name": "real export/import resumes the same hero, stage and progress",
+      "pass": true
+    },
+    {
+      "name": "menus can safely crop local art into DOM portraits",
+      "pass": true
+    },
+    {
+      "name": "no remote network requests or runtime errors",
+      "pass": true,
+      "data": {
+        "errors": [],
+        "console": []
+      }
+    }
+  ],
+  "errors": [],
+  "network": [],
+  "console": [],
+  "browser": "156.0.8078.47",
+  "version": "12.4.1",
+  "audio": {
+    "context": "running",
+    "sampleRate": 48000,
+    "baseLatencyMs": 10,
+    "outputLatencyMs": 40,
+    "volume": 0.25,
+    "masterGain": 0.25,
+    "music": {
+      "scene": "playing",
+      "current": "gameplay",
+      "hidden": false,
+      "rms": 0.015249,
+      "starts": [
+        {
+          "id": "menu-01",
+          "time": 0.421
+        },
+        {
+          "id": "gameplay",
+          "time": 1.461
+        },
+        {
+          "id": "menu-02",
+          "time": 2.061
+        },
+        {
+          "id": "menu-01",
+          "time": 3.021
+        }
+      ],
+      "errors": [],
+      "blocked": 0,
+      "loops": 0,
+      "menuChanges": 0,
+      "voices": [
+        {
+          "id": "menu-01",
+          "paused": true,
+          "position": 1.01,
+          "duration": 97.907,
+          "readyState": 4,
+          "loop": false,
+          "gain": 0,
+          "fading": false
+        },
+        {
+          "id": "gameplay",
+          "paused": false,
+          "position": 3.962,
+          "duration": 147.069,
+          "readyState": 4,
+          "loop": true,
+          "gain": 0.3,
+          "fading": false
+        },
+        {
+          "id": "menu-02",
+          "paused": true,
+          "position": 0.88,
+          "duration": 126.354,
+          "readyState": 4,
+          "loop": false,
+          "gain": 0,
+          "fading": false
+        }
+      ]
+    },
+    "decoded": [
+      "staff-light-a",
+      "staff-light-b",
+      "staff-heavy",
+      "shield-block",
+      "ring-hit-a",
+      "ring-hit-b",
+      "ground-slam",
+      "ultimate-hit"
+    ],
+    "activeVoices": 0,
+    "played": {},
+    "fallbacks": 0,
+    "coalesced": 0,
+    "stolen": 0,
+    "maxVoices": 0,
+    "decodeErrors": [],
+    "recent": []
+  },
+  "pass": true
+}

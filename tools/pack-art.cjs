@@ -1,3 +1,4 @@
+const writeGenerated=require('./write-generated.cjs');
 const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
 const root=path.resolve(__dirname,'..'),dir=path.join(root,'assets/art-v1');
 const files={mountain:'mountain-approach.png',ferry:'lantern-ferry.png',sanctuary:'ruined-sanctuary.png',wukong:'wukong-atlas.png',enemies:'enemy-atlas.png',stone:'stone-platform.png'};
@@ -26,8 +27,11 @@ files.combatContacts='../combat-v11/contacts.png';files['enemy-contacts']='../en
 for(const name of ['nezha','erlang','cloud','underworld','water','dragon','heaven'])files['motion-'+name]='../motion-v12/'+name+'.png';
 for(const name of ['wukong','nezha','erlang','juling','qinguang','ninehead','dragonking','litian'])files['identity-'+name]='../combat-identities/'+name+'.png';
 files.brandWordmark='../brand-rekindled/wordmark.png';
+files.bossFX='../boss-fx-v13/atlas.png';
+files.bossHud='../boss-hud-v13/frame.png';
+files.settlementBackdrop='../settlement-v14/return-gate.png';
 const manifest={tool:'built-in image_gen',runtime:'HTTP: staged external files; standalone: embedded data URLs',assets:{}};
 const encoded={},external={};for(const[key,name]of Object.entries(files)){const file=path.resolve(dir,name),data=fs.readFileSync(file),relative=path.relative(root,file).replace(/\\/g,'/'),sha256=crypto.createHash('sha256').update(data).digest('hex');manifest.assets[key]={file:relative,bytes:data.length,sha256};encoded[key]='data:image/png;base64,'+data.toString('base64');external[key]='../'+relative+'?v='+sha256.slice(0,16);}
 const network=`/* Generated network image URL manifest; no embedded pixels. */\n(function(K){const base=document.currentScript.src;K.ArtDelivery='network';K.ArtSources=Object.fromEntries(Object.entries(${JSON.stringify(external)}).map(([id,url])=>[id,new URL(url,base).href]));})(globalThis.Kong ||= {});\n`;
 const inline=`/* Standalone-only embedded image catalogue. */\n(function(K){K.ArtDelivery='inline';K.ArtSources=${JSON.stringify(encoded)};})(globalThis.Kong ||= {});\n`;
-fs.writeFileSync(path.join(root,'src/generated-art.js'),network);fs.writeFileSync(path.join(root,'src/generated-art-inline.js'),inline);fs.writeFileSync(path.join(root,'assets/v8/pack-manifest.json'),JSON.stringify(manifest,null,2));console.log('Images:',Object.keys(encoded).length,'network manifest',Buffer.byteLength(network),'bytes; standalone catalogue',Buffer.byteLength(inline),'bytes');
+writeGenerated(path.join(root,'src/generated-art.js'),network);writeGenerated(path.join(root,'src/generated-art-inline.js'),inline);writeGenerated(path.join(root,'assets/v8/pack-manifest.json'),JSON.stringify(manifest,null,2));console.log('Images:',Object.keys(encoded).length,'network manifest',Buffer.byteLength(network),'bytes; standalone catalogue',Buffer.byteLength(inline),'bytes');

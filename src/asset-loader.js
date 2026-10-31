@@ -16,11 +16,11 @@
     nezha:['nezha','sigNezha','v8Nezha','motion-nezha','identity-nezha'],
     erlang:['v8Erlang','motion-erlang','identity-erlang','v8Companion']
   };
-  const specialized=new Set([...boot,...ui,...Object.values(realms).flat(),...Object.values(heroes).flat(),'ferry','sanctuary']);
+  const specialized=new Set([...boot,...ui,...Object.values(realms).flat(),...Object.values(heroes).flat(),'ferry','sanctuary','settlementBackdrop']);
   const common=Object.keys(sources).filter(id=>!specialized.has(id));
   const unique=ids=>[...new Set(ids)];
   const notify=()=>{for(const fn of listeners)fn();};
-  function pump(){while(active<4&&queue.length){const task=queue.shift(),id=task.id;active++;const im=new Image();im.onload=()=>{images[id]=im;const old=errors.indexOf(id);if(old>=0)errors.splice(old,1);active--;task.resolve(im);notify();pump();};im.onerror=()=>{active--;jobs.delete(id);if(!errors.includes(id))errors.push(id);task.reject(Error('Image unavailable: '+id));notify();pump();};im.src=sources[id];}}
+  function pump(){while(active<4&&queue.length){const task=queue.shift(),id=task.id;active++;const im=new Image();let finished=false;const fail=()=>{if(finished)return;finished=true;active--;jobs.delete(id);if(!errors.includes(id))errors.push(id);task.reject(Error('Image unavailable: '+id));notify();pump();};im.onload=()=>{if(finished)return;finished=true;images[id]=im;const old=errors.indexOf(id);if(old>=0)errors.splice(old,1);active--;task.resolve(im);notify();pump();};im.onerror=fail;const source=sources[id];if(typeof source==='string')im.src=source;else{const script=document.createElement('script');script.async=true;script.src=source.script;script.onload=()=>{script.remove();const data=K.LocalArt?.[id];if(!data){fail();return;}im.src=data;delete K.LocalArt[id];};script.onerror=()=>{script.remove();fail();};document.head.append(script);}}}
   function loadOne(id){
     if(!Object.hasOwn(sources,id))return Promise.reject(Error('Unknown image: '+id));
     if(images[id])return Promise.resolve(images[id]);if(jobs.has(id))return jobs.get(id);
@@ -32,6 +32,9 @@
     progress:ids=>({loaded:unique(ids).filter(id=>!!images[id]).length,total:unique(ids).length}),
     subscribe(fn){listeners.add(fn);return()=>listeners.delete(fn);},
     forRun(s){const realm=['cloud','underworld','water','dragon','heaven'][Math.floor(s.stage/3)];return unique([...boot,...ui,...common,...heroes[s.hero],...realms[realm]]);},
+    // Prepare the selection UI and every selectable hero's first-room assets
+    // together. The completed bar must also mean the new run can begin.
+    forNewRun:()=>unique(Object.keys(heroes).flatMap(hero=>api.forRun({hero,stage:0}))),
     loadAll:()=>api.load(Object.keys(sources))
   };
   // Historical QA consumers explicitly awaiting .ready still ask for the whole

@@ -1,0 +1,18 @@
+/* Use the available window instead of the original fixed 1504px page. */
+:root{--page-chrome:164px}
+#app{width:100%;max-width:none;height:100vh;height:100dvh;display:flex;flex-direction:column}
+.masthead,.footline{flex-shrink:0}
+:root #stage{flex-shrink:0;width:min(100%,calc((100vh - var(--page-chrome))*16/9));width:min(100%,calc((100dvh - var(--page-chrome))*16/9));max-height:none;min-height:0;margin:auto}
+#fullscreen{position:absolute;right:3%;top:5%;z-index:10;min-width:64px;min-height:32px;border:1px solid #8f7656;background:#13242bdc;color:var(--paper);font:12px/1.5 "Microsoft YaHei",sans-serif;padding:6px 9px;cursor:pointer}
+#fullscreen:hover{background:#344347;border-color:#e7c38a}
+#fullscreen:focus-visible{outline:2px solid #eed296;outline-offset:3px}
+.hud-actions{right:calc(3% + 76px)}
+#stage[data-mode=menu] .brand-scene{top:calc(6% + 40px)}
+@media(max-width:1100px){:root{--page-chrome:140px}}
+@media(max-height:760px){:root{--page-chrome:120px}}
+/* Browser fullscreen and the fallback share the same frame. Letterboxing
+   preserves gameplay coordinates on ultrawide and taller displays. */
+#app.game-fullscreen{position:fixed;inset:0;z-index:1000;max-width:none;width:100vw;height:100vh;height:100dvh;margin:0;padding:0;background:#080f15;overflow:hidden}
+#app.game-fullscreen .masthead,#app.game-fullscreen .footline{display:none}
+:root #app.game-fullscreen #stage{width:min(100vw,calc(100vh*16/9));width:min(100vw,calc(100dvh*16/9));max-height:none;margin:auto;border:0;box-shadow:none}
+@container(max-width:900px){.hud-actions{top:14%}#fullscreen{font-size:11px}}

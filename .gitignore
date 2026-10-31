@@ -230,3 +230,38 @@ artifacts/loading-baseline/
 
 evidence/loading-perf/**/*.png
 evidence/loading-perf/**/*.webm
+
+# Dedicated Vite runtime outputs and preserved pre-migration build archives.
+/dist/
+/dist-offline/
+/artifacts/build-output-backups/
+
+# Local distribution copies and archives are reproducible from Vite sources.
+/artifacts/chrome-offline-check-12.4.0/
+/artifacts/offline-chrome-12.4.1/
+/artifacts/offline-first-paint-before/
+/artifacts/kong-rpg-offline-v12.4.*.zip
+/release/.vite/
+/release/assets/
+/release/game.*.js
+/release/game.*.css
+
+# Keep full recordings and iterative screenshots local; selected review captures
+# are explicitly versioned alongside the JSON reports and capture controllers.
+evidence/art-audit-20261030/**/*.png
+evidence/art-audit-20261030/**/*.webm
+evidence/clear-matrix-20261031/**/*.png
+evidence/clear-matrix-20261031/**/*.webm
+evidence/clear-matrix-20261031/probe/
+evidence/boss-contact/**/*.png
+evidence/boss-health/**/*.png
+evidence/boss-hud/**/*.png
+evidence/choice-controls/**/*.png
+evidence/chrome-offline-12.4.0/**/*.png
+evidence/cloud-facing/**/*.png
+evidence/fullscreen/**/*.png
+evidence/offline-first-paint/**/*.png
+evidence/settlement-v14/**/*.png
+evidence/skill-origins/**/*.png
+evidence/start-loading/**/*.png
+evidence/vite/**/*.png

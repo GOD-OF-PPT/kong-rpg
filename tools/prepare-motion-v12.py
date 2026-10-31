@@ -5,6 +5,18 @@ from scipy.ndimage import label, binary_dilation, find_objects
 import json, hashlib
 
 root=Path(__file__).resolve().parents[1]; base=root/'assets/motion-v12';frames={};records=[]
+# Visually reviewed native directions of the shipped source frames, by row
+# and pose (walk A/B, windup, release, recover, hurt). Some rows consistently
+# face right; the fish and clam do not reverse on release. Do not infer a
+# direction from the column number or flip every enemy sheet alike.
+default_facing=[-1,-1,-1,1,-1,-1]
+enemy_facing={
+    'cloud':[default_facing,[1]*6,[1]*6,default_facing,default_facing],
+    'underworld':[[-1,1,-1,1,1,1],default_facing,[-1,1,-1,1,-1,-1],[-1,1,-1,1,-1,-1],default_facing],
+    'water':[default_facing,[-1]*6,[-1]*6,default_facing,default_facing],
+    'dragon':[default_facing,[-1,-1,1,1,-1,-1],default_facing,default_facing,default_facing],
+    'heaven':[[-1,-1,-1,1,1,-1],[-1]*6,default_facing,default_facing,default_facing]
+}
 for name in ['nezha','erlang','cloud','underworld','water','dragon','heaven']:
     source=base/(name+'-source.png')
     if not source.exists(): continue
@@ -30,7 +42,10 @@ for name in ['nezha','erlang','cloud','underworld','water','dragon','heaven']:
             size=(round(crop.width*scale),round(crop.height*scale));px=72-round(ax*scale);py=112-round(ay*scale)
             assert px>=0 and px+size[0]<=192 and py>=0 and py+size[1]<=128,(name,row,col,size,px,py)
             atlas.alpha_composite(crop.convert('RGBa').resize(size,Image.Resampling.LANCZOS).convert('RGBA'),(col*192+px,row*128+py))
-            key=f'{name}-{row}-{col}';frames[key]={'image':'motion-'+name,'r':[col*192,row*128,192,128],'anchor':[72,112]};records.append({'id':key,'component':i,'sourceBounds':[int(x0),int(y0),int(x1),int(y1)],'scale':scale,'root':[ax,ay]})
+            # Enemy sheets mix left-facing preparation with right-facing
+            # release poses. Preserve source pixels and record their direction.
+            facing=1 if cols==4 else enemy_facing[name][row][col]
+            key=f'{name}-{row}-{col}';frames[key]={'image':'motion-'+name,'r':[col*192,row*128,192,128],'anchor':[72,112],'facing':facing};records.append({'id':key,'component':i,'sourceBounds':[int(x0),int(y0),int(x1),int(y1)],'scale':scale,'root':[ax,ay],'facing':facing})
     atlas.save(base/(name+'.png'),optimize=True)
 (base/'normalization.json').write_text(json.dumps({'method':'whole-strip connected components; one scale per hero / enemy row; measured foot anchors; premultiplied alpha Lanczos','sources':{p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in base.glob('*-source.png')},'frames':records},indent=2),encoding='utf8')
 (root/'src/motion-data.js').write_text('(function(K){K.MotionFrames='+json.dumps(frames,separators=(',',':'))+';})(globalThis.Kong ||= {});\n',encoding='utf8')

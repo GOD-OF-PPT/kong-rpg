@@ -202,8 +202,24 @@
       else if(e.phase==='attack'){if(K.overlap(K.enemyAttackBox(e),p))K.damage(s,e.kind==='shield'?16:12,e.kind==='shield'?'重盾兵·盾撞':'执刃魔兵·斩击',e.face);if(e.timer<=0){if(e.trait==='twin'&&!e.followup){e.followup=true;e.phase='chain-windup';e.timer=.48;K.event(s,'warning',{kind:e.kind,id:e.id,move:'second-slash'});}else{if(e.trait==='pulse')s.projectiles.push({x:e.x+e.w/2,y:428,vx:e.face*175,vy:0,w:24,h:12,life:2.8,friendly:false,source:'震盾兵·地波'});e.phase='recover';e.timer=e.trait==='twin'?1.25:.9;}}}
       else if(e.phase==='recover'&&e.timer<=0){e.phase='idle';e.timer=.2;}
     }
-    if(p.vy>70&&oldY+p.h<=e.y+12&&K.overlap(p,e)){K.hitEnemy(s,e,p.slam?30:19,p.x,true,'heavy');p.vy=-380;p.y=e.y-p.h;p.airJumps=0;p.slam=false;K.event(s,'stomp',{kind:e.kind});}
-    else if(e.kind!=='caster'&&p.dash<=0&&K.overlap(p,e)){if(e.kind==='boss'&&e.phase==='shift')K.damage(s,15,'无天·移形冲击',e.face);else{p.x=p.x+12<e.x+e.w/2?e.x-p.w-1:e.x+e.w+1;p.vx=0;}}
+    const fromAbove=p.vy>70&&oldY+p.h<=e.y+12;
+    if(!K.isMajor(e)&&fromAbove&&K.overlap(p,e)){K.hitEnemy(s,e,p.slam?30:19,p.x,true,'heavy');p.vy=-380;p.y=e.y-p.h;p.airJumps=0;p.slam=false;K.event(s,'stomp',{kind:e.kind});}
+    else if(e.kind!=='caster'&&p.dash<=0&&K.overlap(p,e)){
+      if(K.isMajor(e)){
+        if(e.kind==='boss'&&e.phase==='shift')K.damage(s,15,'无天·移形冲击',e.face);
+        // A boss is not a jump platform. Intentional slams still connect,
+        // but neither normal contact nor a slam creates another free bounce.
+        if(fromAbove&&p.slam){K.hitEnemy(s,e,30,p.x,true,'heavy');p.slam=false;}
+        if(e.hp<=0)return;
+        const arena=s.room.arena||{},min=Number.isFinite(arena.min)?arena.min:8,max=Number.isFinite(arena.max)?arena.max-p.w:s.room.width-p.w-8;
+        const left=e.x-p.w-1,right=e.x+e.w+1,preferLeft=p.x+p.w/2<e.x+e.w/2;
+        let next=preferLeft?left:right;
+        // At an arena wall, send the actor towards the open side instead of
+        // repeatedly clamping them back into the boss on the following step.
+        if(next<min||next>max)next=preferLeft?right:left;
+        p.x=K.clamp(next,min,max);p.vx=0;
+      }else{p.x=p.x+12<e.x+e.w/2?e.x-p.w-1:e.x+e.w+1;p.vx=0;}
+    }
   };
   K.enemyAttackBox=function(e){if(e.trait==='twin'&&e.followup)return{x:e.face>0?e.x+14:e.x-80,y:e.y+6,w:94,h:32};return e.kind==='warden'?K.wardenAttackBox(e):e.kind==='boss'?{x:e.face>0?e.x+12:e.x-200,y:410,w:240,h:30}:{x:e.face>0?e.x+14:e.x-46,y:e.y+6,w:60,h:32};};
   K.patrolBounds=function(s,e){const p=s.room.platforms.find(p=>Math.abs(p.y-e.baseY-e.h)<3&&e.origin>=p.x&&e.origin<p.x+p.w);return p?{min:Math.max(e.origin-(e.roamRange||100),p.x),max:Math.min(e.origin+(e.roamRange||100),p.x+p.w-e.w)}:{min:e.origin-(e.roamRange||100),max:e.origin+(e.roamRange||100)};};

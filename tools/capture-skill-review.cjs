@@ -30,7 +30,8 @@ function fixture(spec){
  }
  return {s,target:e.id};
 }
-const report={version:K.VERSION,sha256:crypto.createHash('sha256').update(fs.readFileSync(path.join(root,'release/index.html'))).digest('hex'),method:'Public-import training fixtures; actual input and runtime simulation; frame capture after production renderer. Raw Canvas 960x540, no graphics replacement. Not natural gameplay or human playtest.',cases:[],errors:[]};
+const entry=path.resolve(root,process.env.GAME_ENTRY||'dist/index.html');
+const report={version:K.VERSION,entry,sha256:crypto.createHash('sha256').update(fs.readFileSync(entry)).digest('hex'),method:'Public-import training fixtures; actual input and runtime simulation; frame capture after production renderer. Raw Canvas 960x540, no graphics replacement. Not natural gameplay or human playtest.',cases:[],errors:[]};
 (async()=>{const browser=await chromium.launch({channel:'msedge',headless:true}),ctx=await browser.newContext({viewport:{width:1440,height:1000}}),p=await ctx.newPage();report.browser=browser.version();p.on('pageerror',e=>report.errors.push(e.message));const snap=()=>p.evaluate(()=>__KONG__.snapshot());let serial=0,recording;
  try{
   await p.goto(process.env.SKILL_REVIEW_URL||'http://127.0.0.1:5188/?skill-visual-review=1');await p.evaluate(()=>Promise.all([Kong.ImageArt.ready,Kong.DialogArtReady]));report.servedVersion=await p.evaluate(()=>Kong.VERSION);

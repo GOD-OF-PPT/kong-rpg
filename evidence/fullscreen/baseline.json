@@ -1,0 +1,44 @@
+{
+  "kind": "http",
+  "checks": [
+    {
+      "name": "large window uses its available width",
+      "pass": false
+    }
+  ],
+  "layouts": [
+    {
+      "name": "large-window",
+      "viewport": {
+        "w": 2560,
+        "h": 1439
+      },
+      "app": {
+        "x": 528,
+        "y": 0,
+        "w": 1504,
+        "h": 963
+      },
+      "stage": {
+        "x": 568,
+        "y": 96,
+        "w": 1424,
+        "h": 801
+      },
+      "world": {
+        "x": 569,
+        "y": 97,
+        "w": 1422,
+        "h": 799
+      },
+      "fullscreen": null,
+      "scroll": {
+        "w": 2560,
+        "h": 1439
+      }
+    }
+  ],
+  "errors": [],
+  "browser": "156.0.4314.50",
+  "failure": "AssertionError [ERR_ASSERTION]: large window uses its available width\n    at check (E:\\githome\\kong-rpg\\tools\\verify-fullscreen.cjs:6:73)\n    at E:\\githome\\kong-rpg\\tools\\verify-fullscreen.cjs:23:5"
+}

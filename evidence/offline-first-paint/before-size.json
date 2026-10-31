@@ -1,0 +1,10 @@
+{
+  "entry": "release/index.html",
+  "bytes": 76416495,
+  "sha256": "e8b26ad5b53e6d880c8fc00f69be0da50782ca4052704858c5620b2f0cf2f924",
+  "status": " M index.html\n M release/index.html\n M release/manifest.json\n M src/app.js\n M src/campaign-data.js\n?? artifacts/chrome-offline-check-12.4.0/\n?? artifacts/kong-rpg-offline-v12.4.0.zip\n?? artifacts/offline-first-paint-before/\n?? dist/\n?? evidence/chrome-offline-12.4.0/\n?? src/ui.js\n?? tools/verify-ui-security.cjs\n",
+  "check": {
+    "name": "offline root entry is at most 1 MiB instead of an all-assets inline bundle",
+    "pass": false
+  }
+}

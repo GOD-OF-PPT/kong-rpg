@@ -1,0 +1,139 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "name": "normal chapter 1: increased boss health survives save and real damage",
+      "pass": true
+    },
+    {
+      "name": "normal chapter 2: increased boss health survives save and real damage",
+      "pass": true
+    },
+    {
+      "name": "normal chapter 3: increased boss health survives save and real damage",
+      "pass": true
+    },
+    {
+      "name": "normal chapter 4: increased boss health survives save and real damage",
+      "pass": true
+    },
+    {
+      "name": "normal chapter 5: increased boss health survives save and real damage",
+      "pass": true
+    },
+    {
+      "name": "challenge chapter 1: increased boss health survives save and real damage",
+      "pass": true
+    },
+    {
+      "name": "challenge chapter 2: increased boss health survives save and real damage",
+      "pass": true
+    },
+    {
+      "name": "challenge chapter 3: increased boss health survives save and real damage",
+      "pass": true
+    },
+    {
+      "name": "challenge chapter 4: increased boss health survives save and real damage",
+      "pass": true
+    },
+    {
+      "name": "challenge chapter 5: increased boss health survives save and real damage",
+      "pass": true
+    },
+    {
+      "name": "old boss saves preserve remaining health proportion and keep dead bosses dead",
+      "pass": true
+    },
+    {
+      "name": "old maximum cannot be forged to load excessive remaining health",
+      "pass": true
+    },
+    {
+      "name": "chapter 1: public old-save import shows upgraded half health",
+      "pass": true
+    },
+    {
+      "name": "chapter 2: public old-save import shows upgraded half health",
+      "pass": true
+    },
+    {
+      "name": "chapter 3: public old-save import shows upgraded half health",
+      "pass": true
+    },
+    {
+      "name": "chapter 4: public old-save import shows upgraded half health",
+      "pass": true
+    },
+    {
+      "name": "chapter 5: public old-save import shows upgraded half health",
+      "pass": true
+    },
+    {
+      "name": "old-save imports cause no browser or game-loop exceptions",
+      "pass": true
+    }
+  ],
+  "results": [
+    {
+      "difficulty": "normal",
+      "name": "巨灵神",
+      "hp": 600,
+      "unarmoured30DamageHits": 20
+    },
+    {
+      "difficulty": "normal",
+      "name": "秦广王",
+      "hp": 800,
+      "unarmoured30DamageHits": 27
+    },
+    {
+      "difficulty": "normal",
+      "name": "九头虫",
+      "hp": 1000,
+      "unarmoured30DamageHits": 34
+    },
+    {
+      "difficulty": "normal",
+      "name": "东海龙王",
+      "hp": 1250,
+      "unarmoured30DamageHits": 42
+    },
+    {
+      "difficulty": "normal",
+      "name": "托塔天王",
+      "hp": 1500,
+      "unarmoured30DamageHits": 50
+    },
+    {
+      "difficulty": "challenge",
+      "name": "巨灵神",
+      "hp": 600,
+      "unarmoured30DamageHits": 20
+    },
+    {
+      "difficulty": "challenge",
+      "name": "秦广王",
+      "hp": 800,
+      "unarmoured30DamageHits": 27
+    },
+    {
+      "difficulty": "challenge",
+      "name": "九头虫",
+      "hp": 1000,
+      "unarmoured30DamageHits": 34
+    },
+    {
+      "difficulty": "challenge",
+      "name": "东海龙王",
+      "hp": 1250,
+      "unarmoured30DamageHits": 42
+    },
+    {
+      "difficulty": "challenge",
+      "name": "托塔天王",
+      "hp": 1500,
+      "unarmoured30DamageHits": 50
+    }
+  ]
+}

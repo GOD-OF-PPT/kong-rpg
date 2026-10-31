@@ -30,9 +30,14 @@
     if(!s.room||!Array.isArray(s.room.enemies)||s.room.enemies.length!==canonical.enemies.length||!Array.isArray(s.room.seals)||s.room.seals.length!==canonical.seals.length||!Array.isArray(s.room.pickups)||s.room.pickups.length!==canonical.pickups.length||typeof s.room.midClaimed!=='boolean')fail();
     const phases=['campaign-windup','campaign-active','campaign-charge','idle','windup','attack','recover','sweep-windup','orb-windup','sweep','shift-windup','shift','lunge-windup','lunge','rush-windup','rush','sigil-windup','rain-windup','warden-windup','warden-rush','chain-windup','pursuit-windup','pursuit','advance','cross-windup','break-windup','break-rush','air-windup'];
     if(challenging)phases.push(...K.CHALLENGE_PHASES);phases.push(...K.REALM_PHASES);
-    function validBox(b){return b&&number(b.x,-200,canonical.width+200)&&number(b.y,-1000,1000)&&number(b.w,1,1100)&&number(b.h,1,250);}
+    function validBox(b,maxHeight=250){return b&&number(b.x,-200,canonical.width+200)&&number(b.y,-1000,1000)&&number(b.w,1,1100)&&number(b.h,1,maxHeight);}
     canonical.enemies.forEach((e,i)=>{
-      const x=s.room.enemies[i];if(!x||x.id!==e.id||x.kind!==e.kind||!number(x.hp,0,e.maxHp)||!number(x.x,0,canonical.width)||!number(x.y,-200,540)||!number(x.timer,-2,10)||!number(x.stun,0,2)||!number(x.flash,0,2)||!number(x.interruptLock,0,2)||!number(x.attacks,0,1e7)||![-1,1].includes(x.face)||!phases.includes(x.phase))fail();
+      const x=s.room.enemies[i],previousMax=e.chiefId&&e.stage%3===2?300+Math.floor(e.stage/3)*18:0;
+      // Schema12 saves before the boss-health rebalance carry their original
+      // maximum. Scale that one known profile once; preserve defeated bosses
+      // and the player's progress through an ongoing fight.
+      const previous=previousMax>0&&x?.maxHp===previousMax,max=previous?previousMax:e.maxHp;
+      if(!x||x.id!==e.id||x.kind!==e.kind||!number(x.hp,0,max)||!number(x.x,0,canonical.width)||!number(x.y,-200,540)||!number(x.timer,-2,10)||!number(x.stun,0,2)||!number(x.flash,0,2)||!number(x.interruptLock,0,2)||!number(x.attacks,0,1e7)||![-1,1].includes(x.face)||!phases.includes(x.phase))fail();
       if(challenging){if(!number(x.challengeCD,0,7))fail();e.challengeCD=x.challengeCD;if(x.phase==='challenge-bolt-windup'&&(e.kind!=='blade'||x.aimX===undefined))fail();if(['challenge-mark-windup','challenge-echo-windup'].includes(x.phase)&&(e.kind!=='caster'||x.marks?.length!==1))fail();if(['challenge-quake-windup','challenge-bell-windup'].includes(x.phase)&&x.marks?.length!==1)fail();if(x.phase==='challenge-fan-windup'&&(e.kind!=='warden'||e.guardian!=='ferry'||x.marks?.length!==2))fail();if(x.phase==='challenge-rain-windup'&&(e.kind!=='boss'||![1,2].includes(x.marks?.length)))fail();}
       if(e.realm){if(x.realm!==e.realm||!number(x.realmCD,0,4.5))fail();e.realmCD=x.realmCD;if(K.REALM_PHASES.includes(x.phase)&&(!Array.isArray(x.marks)||x.marks.length<1||x.marks.length>2))fail();}
       if(![100,420].includes(x.roamRange))fail();e.roamRange=x.roamRange;
@@ -42,11 +47,12 @@
       if(e.kind==='boss'){if(typeof x.dormant!=='boolean')fail();e.dormant=x.dormant;}
       if(x.stage!==e.stage||x.role!==e.role||x.chiefId!==e.chiefId||typeof x.dormant!=='boolean'||!Number.isInteger(x.repeat)||x.repeat<0||x.repeat>1||!number(x.campChargeTo,0,canonical.width)||!['',...Object.keys(K.CAMPAIGN_MOVES)].includes(x.move))fail();e.dormant=x.dormant;e.repeat=x.repeat;e.campChargeTo=x.campChargeTo;e.move=x.move;
       for(const key of ['hp','x','y','timer','stun','flash','interruptLock','attacks','face','phase','struck'])e[key]=x[key];
+      if(previous)e.hp=Math.ceil(x.hp/previousMax*e.maxHp);
       if(e.kind==='warden'){if(x.guardian!==e.guardian||typeof x.dormant!=='boolean'||!['',...Object.keys(K.CAMPAIGN_MOVES)].includes(x.move))fail();e.dormant=x.dormant;e.move=x.move;if(x.chargeTo!==undefined){if(!number(x.chargeTo,4430+canonical.arena.offset,5140+canonical.arena.offset))fail();e.chargeTo=x.chargeTo;}if(e.phase==='warden-rush'&&(e.move!=='charge'||!Number.isFinite(e.chargeTo)))fail();}
       if(x.shiftTo!==undefined){if(!number(x.shiftTo,canonical.arena.offset,canonical.width))fail();e.shiftTo=x.shiftTo;}
       if(x.aimX!==undefined){if(!number(x.aimX,-200,canonical.width+200)||!number(x.aimY,-1000,1000))fail();e.aimX=x.aimX;e.aimY=x.aimY;}
       if(!number(x.recoil,0,1)||![-1,1].includes(x.recoilFace))fail();e.recoil=x.recoil;e.recoilFace=x.recoilFace;
-      if(x.marks!==undefined){if(!Array.isArray(x.marks)||x.marks.length>4||x.marks.some(b=>!validBox(b)))fail();e.marks=x.marks.map(b=>({x:b.x,y:b.y,w:b.w,h:b.h}));}
+      if(x.marks!==undefined){const shot=['venom-fan','soldier-bolt','king-fire'].includes(x.move),tall=x.move==='dragon-thunder'||K.bossSignatureFor(e,x.move)?.origin==='sky',limit=e.chiefId&&e.stage%3===2&&x.move==='venom-fan'?5:4;if(!Array.isArray(x.marks)||x.marks.length>limit||x.marks.some(b=>!validBox(b,shot||tall?540:250)))fail();e.marks=x.marks.map(b=>({x:b.x,y:b.y,w:b.w,h:b.h}));}
       if(e.phase==='rain-windup'&&(!e.marks||e.marks.length<2))fail();
       if(e.phase==='sigil-windup'&&x.aimX===undefined)fail();
     });
@@ -63,7 +69,7 @@
     if(canonical.node){const n=s.room.node;if(!n||n.id!==canonical.node.id||!['ready','active','done'].includes(n.state)||(n.state==='done')!==s.world[n.id])fail();canonical.node.state=n.state;if(n.state==='ready'&&canonical.enemies.some(e=>canonical.node.guards.includes(e.id)&&e.hp>0))fail();}
     const dangerSources=[...K.CAMPAIGN_SOURCES,...K.REALM_SOURCES,'莲灯使·锁空莲印','莲灯使·锁地咒','莲灯使·交叉封位','无天·黑莲落火','镇山魈王·震地','渡厄灯魁·索灯','缄愿法使·封愿','缄愿法使·钟浪'];
     if(challenging)dangerSources.push(...K.CHALLENGE_DANGERS);
-    if(!Array.isArray(s.dangers)||s.dangers.length>20||s.dangers.some(d=>!validBox(d)||!number(d.life,0,1)||![10,12,15,16,18,36].includes(d.damage)||!dangerSources.includes(d.source)))fail();
+    if(!Array.isArray(s.dangers)||s.dangers.length>20||s.dangers.some(d=>{const spell=Object.keys(K.CAMPAIGN_MOVES).find(id=>d.source?.endsWith('·'+K.CAMPAIGN_MOVES[id].name)),tall=spell==='dragon-thunder'||canonical.enemies.some(e=>K.bossSignatureFor(e,spell)?.origin==='sky'&&d.source===K.campaignName(e)+'·'+K.CAMPAIGN_MOVES[spell]?.name);return !validBox(d,tall?540:250)||!number(d.life,0,1)||![10,12,15,16,18,36].includes(d.damage)||!dangerSources.includes(d.source);}))fail();
     if(!Array.isArray(s.casts)||s.casts.length>3||s.casts.some(c=>!validBox(c)||!number(c.timer,0,.24)))fail();
     if(!Array.isArray(s.projectiles)||s.projectiles.length>100)fail();
     const projectiles=s.projectiles.map(b=>{

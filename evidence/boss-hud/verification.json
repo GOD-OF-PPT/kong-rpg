@@ -1,0 +1,245 @@
+{
+  "kind": "http",
+  "checks": [
+    {
+      "name": "boss HUD art does not join the four homepage images",
+      "pass": true
+    },
+    {
+      "name": "visible boss health slot is at least 18px thick",
+      "pass": true
+    },
+    {
+      "name": "imagegen frame is actually applied",
+      "pass": true
+    },
+    {
+      "name": "health meter exposes actual maximum HP",
+      "pass": true
+    },
+    {
+      "name": "half health updates width and numeric display",
+      "pass": true
+    },
+    {
+      "name": "combat input still works with the new HUD",
+      "pass": true
+    },
+    {
+      "name": "1024: HUD fits inside the game view",
+      "pass": true
+    },
+    {
+      "name": "1024: thicker bar does not overlap vital stats or controls",
+      "pass": true
+    },
+    {
+      "name": "1024: health fill stays at least as wide as the previous half-screen bar",
+      "pass": true
+    },
+    {
+      "name": "1366: HUD fits inside the game view",
+      "pass": true
+    },
+    {
+      "name": "1366: thicker bar does not overlap vital stats or controls",
+      "pass": true
+    },
+    {
+      "name": "1366: health fill stays at least as wide as the previous half-screen bar",
+      "pass": true
+    },
+    {
+      "name": "1920: HUD fits inside the game view",
+      "pass": true
+    },
+    {
+      "name": "1920: thicker bar does not overlap vital stats or controls",
+      "pass": true
+    },
+    {
+      "name": "1920: health fill stays at least as wide as the previous half-screen bar",
+      "pass": true
+    },
+    {
+      "name": "2560: HUD fits inside the game view",
+      "pass": true
+    },
+    {
+      "name": "2560: thicker bar does not overlap vital stats or controls",
+      "pass": true
+    },
+    {
+      "name": "2560: health fill stays at least as wide as the previous half-screen bar",
+      "pass": true
+    },
+    {
+      "name": "native fullscreen keeps HUD clear of controls",
+      "pass": true
+    },
+    {
+      "name": "low health remains legible",
+      "pass": true
+    },
+    {
+      "name": "stage 5 shows the correct guardian name",
+      "pass": true
+    },
+    {
+      "name": "stage 8 shows the correct guardian name",
+      "pass": true
+    },
+    {
+      "name": "stage 14 shows the correct guardian name",
+      "pass": true
+    },
+    {
+      "name": "pause hides the combat health HUD",
+      "pass": true
+    },
+    {
+      "name": "no browser or game-loop errors",
+      "pass": true
+    }
+  ],
+  "layouts": [
+    {
+      "bar": {
+        "x": 321.15625,
+        "y": 156.375,
+        "w": 1037.109375,
+        "h": 110.59375
+      },
+      "stage": {
+        "x": 40,
+        "y": 132.5,
+        "w": 1360,
+        "h": 765
+      },
+      "meter": {
+        "x": 466.34375,
+        "y": 209.953125,
+        "w": 746.734375,
+        "h": 23.375
+      },
+      "overlapsLeft": false,
+      "overlapsActions": false,
+      "overlapsFullscreen": false,
+      "background": "url(\"http://127.0.0.1:58756/assets/images/bossHud.98d7e0dafce051b9.webp\")"
+    },
+    {
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "bar": {
+        "x": 284.5,
+        "y": 131.78125,
+        "w": 689.046875,
+        "h": 97
+      },
+      "stage": {
+        "x": 20,
+        "y": 114.25,
+        "w": 984,
+        "h": 553.5
+      },
+      "meter": {
+        "x": 380.953125,
+        "y": 176.90625,
+        "w": 496.140625,
+        "h": 20.703125
+      },
+      "overlapsLeft": false,
+      "overlapsActions": false,
+      "overlapsFullscreen": false,
+      "background": "url(\"http://127.0.0.1:58756/assets/images/bossHud.98d7e0dafce051b9.webp\")"
+    },
+    {
+      "viewport": {
+        "width": 1366,
+        "height": 850
+      },
+      "bar": {
+        "x": 351.5625,
+        "y": 118.53125,
+        "w": 903.6875,
+        "h": 108.90625
+      },
+      "stage": {
+        "x": 73.21875,
+        "y": 97.015625,
+        "w": 1219.546875,
+        "h": 685.984375
+      },
+      "meter": {
+        "x": 478.078125,
+        "y": 170.421875,
+        "w": 650.65625,
+        "h": 23.375
+      },
+      "overlapsLeft": false,
+      "overlapsActions": false,
+      "overlapsFullscreen": false,
+      "background": "url(\"http://127.0.0.1:58756/assets/images/bossHud.98d7e0dafce051b9.webp\")"
+    },
+    {
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "bar": {
+        "x": 432.296875,
+        "y": 125.421875,
+        "w": 1292.140625,
+        "h": 110.59375
+      },
+      "stage": {
+        "x": 145.78125,
+        "y": 97.015625,
+        "w": 1628.4375,
+        "h": 915.984375
+      },
+      "meter": {
+        "x": 613.1875,
+        "y": 179,
+        "w": 930.359375,
+        "h": 23.375
+      },
+      "overlapsLeft": false,
+      "overlapsActions": false,
+      "overlapsFullscreen": false,
+      "background": "url(\"http://127.0.0.1:58756/assets/images/bossHud.98d7e0dafce051b9.webp\")"
+    },
+    {
+      "viewport": {
+        "width": 2560,
+        "height": 1439
+      },
+      "bar": {
+        "x": 445.953125,
+        "y": 136.203125,
+        "w": 1800,
+        "h": 110.59375
+      },
+      "stage": {
+        "x": 146.671875,
+        "y": 97.015625,
+        "w": 2266.65625,
+        "h": 1274.984375
+      },
+      "meter": {
+        "x": 697.953125,
+        "y": 189.78125,
+        "w": 1296,
+        "h": 23.375
+      },
+      "overlapsLeft": false,
+      "overlapsActions": false,
+      "overlapsFullscreen": false,
+      "background": "url(\"http://127.0.0.1:58756/assets/images/bossHud.98d7e0dafce051b9.webp\")"
+    }
+  ],
+  "errors": [],
+  "pass": true
+}

@@ -6,22 +6,44 @@
   K.campaignMoveSet=e=>e.stage%3===2&&e.chiefId?chiefMoves[e.chiefId]:e.chiefId?[
     ['axe-cleave','axe-quake'],['soldier-bolt','axe-rush'],['judge-mark','judge-chain'],['judge-echo','soldier-bolt'],['soldier-rush','venom-tide'],['venom-fan','head-dive'],['soldier-rush','dragon-column'],['dragon-surge','dragon-thunder'],['soldier-bolt','king-fire'],['king-sword','tower-prison']
   ][Math.floor(e.stage/3)*2+e.stage%3]:e.role===0?[K.chapter(e.stage).id==='underworld'?'judge-chain':'soldier-slash']:e.role===1?[{cloud:'soldier-bolt',underworld:'judge-mark',water:'venom-fan',dragon:'dragon-column',heaven:'dragon-thunder'}[e.realm]]:['soldier-rush'];
+  K.campaignShotPaths=function(s,e){
+    const big=!!e.chiefId&&e.stage%3===2,fan=e.move==='venom-fan',fire=e.move==='king-fire',size=big&&fire?56:big&&fan?30:18,h=big&&fire?56:big&&fan?26:14;
+    const x=e.x+e.w/2+e.face*(e.chiefId?e.w*.5:16),y=big&&fan?e.y-12:big&&fire?e.y+e.h*.18:e.y+e.h*(fan?.3:.4),range=fan?(K.isMajor(e)?530:390):fire?580:450,speed=fan?245:fire?210:290;
+    const base=K.clamp(Math.atan2(e.aimY-y,Math.max(60,Math.abs(e.aimX-x))),-.75,.75),spread=fan?(big?[-.3,-.15,0,.15,.3]:[-.23,0,.23]):fire?[-.28,0,.28]:e.trait==='volley'?[-.15,0,.15]:[0];
+    const floor=K.surfaceAt(s,e.aimX,e.aimY+24);
+    return spread.map(offset=>{
+      const slope=Math.tan(K.clamp(base+offset,-.95,.95));let reach=Math.min(range,e.face>0?s.room.width-8-x-size/2:x-size/2-8);
+      if(slope>0&&floor-h/2-2>y)reach=Math.min(reach,(floor-h/2-2-y)/slope);
+      if(slope<0)reach=Math.min(reach,(30+h/2-y)/slope);
+      reach=Math.max(12,reach);const dx=e.face*reach,dy=slope*reach,length=Math.hypot(dx,dy);
+      return{x:x-size/2,y:y-h/2,w:size,h,vx:dx/length*speed,vy:dy/length*speed,life:length/speed,ex:x+dx,ey:y+dy};
+    });
+  };
   K.beginCampaignMove=function(s,e,move,target=s.player,echo=false){
     const major=K.isMajor(e),a=s.room.arena,px=target.x+12,face=Math.sign(px-e.x-e.w/2)||e.face;
     e.face=face;e.move=move;e.phase='campaign-windup';e.timer=major?(echo?.68:e.stage%3===2?.84:.92):.85;if(!major&&echo)e.timer*=.75;e.aimX=px;e.aimY=target.y+18;e.marks=[];
+    const big=!!e.chiefId&&e.stage%3===2,signature=K.bossSignatureFor(e,move),ground=K.surfaceAt(s,e.x+e.w/2,e.y+e.h-2);
     const local=(range,h=40,y=e.y+e.h-42)=>clampBox(s,face>0?e.x+e.w-5:e.x-range,y,range,h);
-    if(['axe-cleave','king-sword','soldier-slash'].includes(move))e.marks=[local(major?190:e.trait==='twin'&&echo?132:100,major?50:38)];
-    else if(['axe-rush','head-dive','soldier-rush'].includes(move)){e.campChargeTo=K.clamp(e.x+face*(major?300:175),major?a.min:K.patrolBounds(s,e).min,major?a.max-e.w:K.patrolBounds(s,e).max);e.marks=[clampBox(s,Math.min(e.x,e.campChargeTo)-4,e.y+8,Math.abs(e.campChargeTo-e.x)+e.w+8,e.h-10)];}
+    if(signature){
+      const width=128,side=(K.seedNumber(s.seed)+e.stage+e.attacks+(echo?1:0))%2?1:-1;
+      const center=K.clamp(s.player.x+12+side*180,a.min+width/2+32,a.max-width/2-32),left=Math.round(center-width/2),right=left+width;
+      const top=signature.origin==='sky'?0:ground-signature.height;
+      e.marks=[clampBox(s,a.min,top,left-a.min,ground-top),clampBox(s,right,top,a.max-right,ground-top)];
+      if(move==='tower-prison')for(const q of s.room.anchors){q.active=true;q.hp=q.maxHp;q.hits=[];}
+    }
+    else if(['axe-cleave','king-sword','soldier-slash'].includes(move))e.marks=[local(big?330:major?190:e.trait==='twin'&&echo?132:100,big?130:major?50:38,big?ground-130:e.y+e.h-42)];
+    else if(['axe-rush','head-dive','soldier-rush'].includes(move)){e.campChargeTo=K.clamp(e.x+face*(big?440:major?300:175),major?a.min:K.patrolBounds(s,e).min,major?a.max-e.w:K.patrolBounds(s,e).max);e.marks=[clampBox(s,Math.min(e.x,e.campChargeTo)-4,e.y+8,Math.abs(e.campChargeTo-e.x)+e.w+8,e.h-10)];}
     else if(['axe-quake','venom-tide','king-fire','shield-wave'].includes(move))e.marks=move==='axe-quake'?[clampBox(s,e.x-(major?290:130),418,major?580:260,22)]:[local(Math.max(18,Math.min(major?580:260,face>0?s.room.width-8-(e.x+e.w-5):e.x-8)),22,418)];
     else if(['judge-mark','judge-echo','dragon-column','dragon-thunder','judge-chain','tower-prison'].includes(move)){
-      const count=move==='dragon-column'?2:move==='judge-chain'?2:move==='dragon-thunder'&&major?3:1,w=move==='dragon-column'?66:move==='judge-chain'?38:76,h=move==='judge-chain'?190:move==='dragon-column'?160:90;
-      for(let i=0;i<count;i++){const off=move==='judge-chain'?(i===0?-115:125):(i-(count-1)/2)*150;e.marks.push(clampBox(s,px-w/2+off,440-h,w,h));}
+      const count=move==='dragon-column'?(big?3:2):move==='judge-chain'?2:1,w=move==='dragon-column'?(big?96:66):move==='judge-chain'?38:big?140:76,h=move==='judge-chain'?190:move==='dragon-column'?(big?240:160):big?160:90;
+      for(let i=0;i<count;i++){const off=move==='judge-chain'?(i===0?-115:125):(i-(count-1)/2)*150,x=K.clamp(px-w/2+off,8,s.room.width-w-8),floor=K.surfaceAt(s,x+w/2,target.y+(target.h||44)-2);e.marks.push(clampBox(s,x,move==='dragon-thunder'?0:floor-h,w,move==='dragon-thunder'?floor:h));}
       if(move==='tower-prison'&&s.room.anchors.length){const q=s.room.anchors[0];q.active=true;q.hp=q.maxHp;q.hits=[];e.marks=[clampBox(s,q.x-30,260,90,180),clampBox(s,q.x+350,260,80,180)];}
     }else if(move==='dragon-surge'){
-      e.marks=[clampBox(s,major?a.min:e.x-200,419,major?a.max-a.min:400,21)];const q=s.room.anchors.find(q=>q.kind==='pearl');if(q){q.active=true;q.hp=q.maxHp;q.hits=[];}
-    }else if(move==='venom-fan'){
-      const width=major?530:390;for(const y of [292,358,424])e.marks.push(clampBox(s,face>0?e.x+e.w:e.x-width,y,width,12));
-    }else if(move==='soldier-bolt'){const ys=e.trait==='volley'?[-62,0,62]:[0],center=e.trait==='volley'?K.clamp(target.y+12,312,360):K.clamp(target.y+12,250,423);e.marks=ys.map(dy=>clampBox(s,face>0?e.x+e.w:e.x-450,center+dy,450,14));}
+      const height=big?95:21;e.marks=[clampBox(s,major?a.min:e.x-200,ground-height,major?a.max-a.min:400,height)];const q=s.room.anchors.find(q=>q.kind==='pearl');if(q){q.active=true;q.hp=q.maxHp;q.hits=[];}
+    }else if(move==='venom-fan'||move==='soldier-bolt'){
+      e.marks=K.campaignShotPaths(s,e).map(p=>({x:Math.min(p.x,p.ex-p.w/2),y:Math.min(p.y,p.ey-p.h/2),w:Math.abs(p.ex-p.x-p.w/2)+p.w,h:Math.abs(p.ey-p.y-p.h/2)+p.h}));
+    }
+    if(big&&move==='king-fire')e.marks=K.campaignShotPaths(s,e).map(p=>({x:Math.min(p.x,p.ex-p.w/2),y:Math.min(p.y,p.ey-p.h/2),w:Math.abs(p.ex-p.x-p.w/2)+p.w,h:Math.abs(p.ey-p.y-p.h/2)+p.h}));
     if(e.chiefId&&e.stage%3===2&&e.realm==='underworld')for(const q of s.room.anchors)if(e.attacks<=1)q.active=true;
     K.event(s,major?'boss-warning':'warning',{id:e.id,move,name:K.campaignName(e),box:e.marks[0]});
   };
@@ -30,7 +52,11 @@
   K.releaseCampaignMove=function(s,e){
     K.event(s,'enemy-attack',{id:e.id,kind:e.kind,move:e.move});
     if(['axe-rush','head-dive','soldier-rush'].includes(e.move)){e.phase='campaign-charge';e.timer=.6;return;}
-    if(['venom-fan','soldier-bolt','venom-tide','king-fire','shield-wave'].includes(e.move)){
+    if(K.bossSafeLane(s,e)){
+      for(const b of e.marks)addDanger(s,e,b);s.shake=Math.max(s.shake,.28);
+    }else if(e.move==='venom-fan'||e.move==='soldier-bolt'||e.move==='king-fire'&&e.chiefId&&e.stage%3===2){
+      for(const p of K.campaignShotPaths(s,e)){const{ex,ey,...body}=p;s.projectiles.push({...body,damage:K.campaignHitDamage(e,'projectile'),friendly:false,source:K.campaignName(e)+'·'+moves[e.move].name,spell:e.move});}
+    }else if(['venom-tide','king-fire','shield-wave'].includes(e.move)){
       for(const b of e.marks){const speed=e.move==='soldier-bolt'?290:e.move==='venom-fan'?245:210;const face=e.face,x=face>0?b.x:b.x+b.w-18;s.projectiles.push({x,y:b.y,w:18,h:Math.min(14,b.h),vx:face*speed,vy:0,life:Math.max(.4,(b.w-18)/speed),damage:K.campaignHitDamage(e,'projectile'),friendly:false,source:K.campaignName(e)+'·'+moves[e.move].name,spell:e.move});}
     }else for(const b of e.marks)addDanger(s,e,b);
     e.phase='campaign-active';e.timer=.35;
@@ -51,6 +77,9 @@
     if(e.phase==='idle'){
       const dx=target.x-e.x,near=Math.abs(dx),max=K.isMajor(e)?1050:550;
       if(near>max)return true;
+      // Face the current target while deciding the next attack. Once a move
+      // commits, keep its announced direction and hit area unchanged.
+      e.face=Math.sign(target.x+(target.w||24)/2-e.x-e.w/2)||e.face;
       if(!K.isMajor(e)&&e.role!==1&&near>110){const bounds=K.patrolBounds(s,e);e.face=Math.sign(dx)||e.face;e.x=K.clamp(e.x+e.face*(e.role===2?47:75)*K.enemySpeed(s,e)*dt,bounds.min,bounds.max);}
       if(e.timer<=0&&(K.isMajor(e)||near<(e.role===1?550:e.role===2?330:150))){
         if(!K.isMajor(e)&&s.room.enemies.filter(q=>q.hp>0&&!K.isMajor(q)&&q.phase==='campaign-windup'&&Math.abs(q.x-s.player.x)<600).length>=(K.isChallenge(s)?3:2))return true;

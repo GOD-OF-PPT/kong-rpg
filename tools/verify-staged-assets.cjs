@@ -1,5 +1,5 @@
 const {chromium}=require('playwright'),fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict'),http=require('node:http'),K=require('./combat-identity-runtime.cjs')();
-const url=process.env.LOADING_URL||'http://127.0.0.1:5188/',out=path.resolve('evidence/loading-perf/staged');fs.mkdirSync(out,{recursive:true});
+const url=process.env.LOADING_URL||'http://127.0.0.1:5188/',out=path.resolve(process.env.STAGED_OUT||'evidence/loading-perf/staged');fs.mkdirSync(out,{recursive:true});
 const report={url,method:'Production staged loader. Public imported fixtures, real keys/menu, forced one-shot fetch failure and delayed realm, warm-cache reload. Not natural campaign or human evidence.',checks:[],errors:[],unresolved:[],scenes:[]},check=(name,pass,data)=>{report.checks.push({name,pass:!!pass,data});assert.ok(pass,name);};
 const license={normalClear:{difficulty:'normal',complete:true,levels:15,seconds:1000,hits:0,killed:110,total:110}};
 function fixture(hero,stage,difficulty='normal'){const s=K.newRun('STAGED-1030','staff',hero,difficulty,license);K.enterRoom(s,stage,true);s.campaign.completed=Array.from({length:stage},(_,i)=>i);Object.assign(s.player,{x:550,y:396,focus:100,rage:100,grounded:true,invuln:2});return s;}

@@ -1,20 +1,44 @@
 {
   "name": "kong-rpg",
-  "version": "12.4.0",
+  "version": "12.4.1",
   "private": true,
   "description": "劫火重燃 — Rekindled Embers",
   "scripts": {
-    "build": "node tools/build.cjs && node tools/build-web.cjs",
-    "dev": "node tools/serve.cjs",
-    "dev:lan": "node tools/serve.cjs --lan",
+    "build": "npm run prepare:assets && vite build",
+    "dev": "vite",
+    "dev:lan": "vite --host 0.0.0.0",
     "verify": "node tools/verify-campaign.cjs",
     "verify:audit": "node tools/audit-v10-rules.cjs",
-    "build:offline": "node tools/build.cjs",
-    "build:web": "node tools/build-web.cjs",
-    "predev": "node tools/pack-art.cjs && node tools/pack-audio.cjs && node tools/pack-music.cjs",
-    "predev:lan": "npm run build"
+    "build:offline": "npm run prepare:assets && vite build --mode offline",
+    "build:web": "npm run prepare:assets && vite build",
+    "predev": "npm run prepare:assets",
+    "predev:lan": "npm run prepare:assets",
+    "preview": "vite preview",
+    "preview:lan": "vite preview --host 0.0.0.0",
+    "prepare:assets": "node tools/prepare-assets.cjs",
+    "verify:ui-security": "node tools/verify-ui-security.cjs",
+    "verify:startup": "node tools/verify-startup.cjs",
+    "verify:build": "node tools/verify-vite-build.cjs",
+    "package:offline": "npm run build:offline && python tools/package-release.py",
+    "verify:release": "npm run verify && npm run verify:boss-health && npm run verify:boss-contact && npm run verify:build && npm run verify:enemy-facing && npm run verify:skill-origins && npm run verify:ui-security && npm run verify:choices && npm run verify:boss-hud && npm run verify:start-loading && npm run verify:fullscreen && npm run verify:startup",
+    "build:all": "npm run prepare:assets && vite build && vite build --mode offline",
+    "verify:fullscreen": "node tools/verify-fullscreen.cjs",
+    "verify:start-loading": "node tools/verify-start-loading.cjs",
+    "verify:enemy-facing": "node tools/verify-enemy-facing-rules.cjs && node tools/verify-enemy-facing.cjs",
+    "verify:choices": "node tools/verify-choice-controls.cjs",
+    "verify:skill-origins": "node tools/verify-skill-origins.cjs --browser",
+    "prepare:boss-fx": "node tools/prepare-boss-fx.cjs",
+    "prepare:boss-hud": "node tools/prepare-boss-hud.cjs",
+    "verify:boss-hud": "node tools/verify-boss-hud.cjs",
+    "verify:boss-health": "node tools/verify-boss-health.cjs --browser",
+    "verify:boss-contact": "node tools/verify-boss-contact.cjs && node tools/verify-boss-contact-browser.cjs"
   },
   "devDependencies": {
-    "sharp": "^0.35.5"
+    "playwright": "1.64.1",
+    "sharp": "^0.35.5",
+    "vite": "8.3.5"
+  },
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
   }
 }

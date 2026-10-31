@@ -1,4 +1,4 @@
-# 劫火重燃 v12.4.0
+# 劫火重燃 v12.4.1
 
 **踏破五界，此战再起。**
 
@@ -6,9 +6,17 @@
 
 资源目录已清理未使用的原图、草稿和废弃版本；当前构建只依赖保留的成品。来源记录与历史素材恢复方法见[资源保留规则](assets/README.md)。
 
+## v12.4.1 战斗与结算
+
+- 引入 Vite，网络版输出到 `dist/`，独立离线版输出到 `dist-offline/`；保留首页四张图片和分段加载。构建及预览用法见 [Vite 构建说明](docs/loading-perf/VITE.md)。
+- 五名大首领增加生命和大范围招式，校准施法朝向、雷电起点与地刺接地；移除敌方技能边界指示器，并修复角色在首领头顶持续弹跳的问题。
+- 加强选择状态，支持 J 确认、原生全屏及窗口回退；重设计胜败结算，使用五界云门背景、角色立绘、集中战绩和可展开详情，操作按钮独立显示。
+- 三名角色的普通与挑战模式均有从第一关到十五关结算的自动化键鼠记录。该验证使用只读状态辅助策略和虚拟时钟，不等同于普通玩家难度评估；具体边界见 [通关报告](evidence/clear-matrix-20261031/report.md)。完整截图与录像保留在本地，仓库保留结果记录和代表性截图。
+- 美术截图审查仍有后续打磨项，见 [美术审查报告](evidence/art-audit-20261030/report.md)；本次结算页更新不代表这些问题已全部修复。
+
 ## v12.4.0 加载优化
 
-网络入口采用独立缓存图片、分段准备和按需音乐，首页只加载四张必要图片；网络图片使用逐像素等价验证的无损WebP。保留单HTML离线发行，避免网络访问先下载约76MB的完整离线包。[加载测量与验收](docs/loading-perf/REVIEW.md)。
+网络入口采用独立缓存图片、分段准备和按需音乐，首页只加载四张必要图片；网络图片使用逐像素等价验证的无损WebP。默认构建为带独立图片、音效和音乐的干净网络目录；离线兼容包通过单独命令生成。[加载测量与验收](docs/loading-perf/REVIEW.md)。
 
 五界归途：孙悟空、哪吒、杨戬可选的像素横版平台动作肉鸽。依次走过五章十五关，击退十名小首领与五名大首领，最终迎战托塔天王。玩法、角色和美术均基于用户设定创作，不宣称复刻电视剧中的具体战斗。
 
@@ -99,7 +107,7 @@
 
 ## 直接运行
 
-双击 `release/index.html`；或解压 `artifacts/kong-rpg-offline-v12.2.0.zip` 后双击包内 `index.html`。PC Edge / Chrome，无需网络、安装、CDN、字体下载或安全设置。保留同目录 `legacy-v1.html` 至 `legacy-v11.html`，供旧旅程继续。
+执行 `npm run build:offline` 后双击 `dist-offline/index.html`。PC Edge / Chrome，无需网络、安装、CDN、字体下载或安全设置。必须保留整个 `dist-offline/`；历史 `release/legacy-v*.html` 作为仓库档案保留，不进入当前构建。
 
 网络预览/构建需要Node.js 20.9+，首次安装开发依赖：
 
@@ -109,7 +117,21 @@ npm run build
 npm run dev
 ```
 
-源码入口：`http://127.0.0.1:5188/`。局域网执行 `npm run dev:lan`，同网络访问 `http://本机IPv4:5188/`，提供优化后的`release/web/`网络包。直接双击离线入口仍为`release/index.html`；`npm run build:offline`仅构建单文件离线版，`npm run build:web`仅构建网络版。
+Boss 和小首领头部按身体碰撞处理，接触后角色侧向分离并继续下落；普通怪仍可踩踏反弹。主动下劈与正常空中攻击照常结算。详见 [Boss 头顶反弹修复](docs/combat-identities/BOSS-CONTACT.md)。
+
+五个章末 Boss 血量现为：巨灵神 600、秦广王 800、九头虫 1000、东海龙王 1250、托塔天王 1500。旧存档按剩余血量比例衔接，已击败的 Boss 保持死亡。详见 [Boss 血量调整](docs/combat-identities/BOSS-HEALTH.md)。
+
+Boss 血条使用新设计的透明青铜云纹外框，生命槽加厚至约 20–23px，显示剩余/最大生命及低血量高亮；与左侧角色状态、右侧操作按钮错开，并随窗口和全屏适配。
+
+Boss 技能已按元素来源重做：落雷与魂链从上方释放，石刺扎入地形，水柱向上喷发，毒液和火轮从口部/武器发射。五个 Boss 各有封场招式及可达空隙；技能边界框和落点线已移除。大面积效果位于人物后方，石刺根部由地形遮挡。详见 [Boss 技能与美术](docs/combat-identities/BOSS-SKILLS.md)。
+
+选择角色、舍利或奖励时，用 A/D 或方向键切换，按 J 或 Enter 确认；鼠标移到卡片上也会选中。当前项显示金色边框和「✓ 当前选择」，战斗中按住的 J 必须松开再按才能确认奖励。
+
+游戏画面右上角的「全屏」按钮或 F10 可进入/退出全屏，Esc 退出全屏；浏览器禁止全屏时会改为铺满当前窗口。画面保持 16:9，宽屏或竖向屏幕可能留有黑边。
+
+开发服务由 Vite 管理，`npm run dev` 默认打开 `http://127.0.0.1:5173/`；`npm run dev:lan` 将开发服务开放到局域网。正式网络包使用 `npm run build`（或 `npm run build:web`）生成 `dist/`，随后 `npm run preview` 在 `http://127.0.0.1:4173/` 预览，或 `npm run preview:lan` 供同网络设备访问。`dist/` 只包含当前游戏入口、脚本、样式、清单以及 `assets/images/*.webp`、`assets/audio/*.wav`、`assets/music/*.mp3`，不会复制 docs、历史 HTML、试听页或旧哈希文件。`npm run build:offline` 单独生成可双击的 `dist-offline/`，其中部分资源采用本地数据脚本兼容 file 协议；`npm run build:all` 可同时生成两种产物。
+
+需要 Node.js 20.19+ 或 22.12+。`npm run verify:startup` 自动启动临时 Vite 预览，使用新浏览器上下文、禁用缓存、2 MiB/s 与 20 ms 延迟，连续检查三次首屏；首页完整准备需 ≤6 秒、FCP ≤1.8 秒、首屏传输 ≤5 MB，且只下载四张首页图、音乐等待用户操作。构建时也限制入口脚本、HTML、CSS 和首屏总字节数。`npm run verify:build` 核对发行清单、独立资源数量与哈希、产物清理、Brotli/gzip、缓存与音频 Range。详见 [Vite 构建与首屏验收](docs/loading-perf/VITE.md)。
 
 ## PC操作
 
@@ -154,4 +176,4 @@ v11.0.0原HTML保留为 `legacy-v11.html`，旧旅程走原规则入口，不会
 
 `npm run verify`与`npm run verify:audit`检查既有规则；`node tools/verify-feel-v12.cjs`和`node tools/probe-feel-v12.cjs`检查本轮修订。`tools/browser-feel-v12.cjs http|file`为动作/存档验收，`tools/browser-boss-v11.cjs http|file`为固定首领场景对照，`tools/playthrough-feel-v12.cjs http|file`通过公开输入完成十五关。复现环境变量见战斗修订记录。旧版历史证据不计作本版新通关。QA脚本需要Playwright，游戏发行包不需要。未取得真人试玩，不把自动操作或图片检查等同于主观乐趣认可。
 
-全量ZIP包含历史入口，超过GitHub单文件100MiB限制，作为本地交付物保留。重打包：`python tools/package-release.py`。
+当前离线 ZIP 只包含运行所需文件，通过 `npm run package:offline` 构建和打包；历史大包与旧版入口留作档案。

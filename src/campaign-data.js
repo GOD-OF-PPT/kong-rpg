@@ -8,10 +8,25 @@
     {id:'heaven',name:'天宫',image:'realmHeaven',color:'#edce8a',boss:'litian',bossName:'托塔天王',levels:['雷诏封阶','天王戍廊','七宝镇天'],minis:['雷诏监军','镇殿天将'],roles:['天戟兵','雷诏使','塔盾禁军'],lesson:'击碎塔基撤去镇压柱；看剑势换位，火轮波可跃过。'}
   ];
   K.CAMPAIGN_LEVELS=15;
+  K.BOSS_SIGNATURES={
+    'axe-quake':{origin:'ground',height:150,windup:1.8},
+    'judge-chain':{origin:'sky',height:440,windup:2},
+    'venom-tide':{origin:'ground',height:130,windup:1.9},
+    'dragon-thunder':{origin:'sky',height:440,windup:2},
+    'tower-prison':{origin:'sky',height:440,windup:2.1}
+  };
+  K.bossSignatureFor=(e,move=e?.move)=>e?.chiefId&&e.stage%3===2?K.BOSS_SIGNATURES[move]||null:null;
+  K.bossSafeLane=(s,e,move=e.move,boxes=e.marks)=>{
+    const spec=K.bossSignatureFor(e,move),a=s.room.arena;if(!spec||boxes?.length!==2)return null;
+    const [left,right]=boxes.slice().sort((a,b)=>a.x-b.x),x=left.x+left.w,w=right.x-x;
+    if(Math.abs(left.x-a.min)>1||Math.abs(right.x+right.w-a.max)>1||w<80||boxes.some(b=>b.h<spec.height))return null;
+    return{x,y:0,w,h:Math.max(left.y+left.h,right.y+right.h)};
+  };
   K.chapter=stage=>K.CAMPAIGN[Math.floor(stage/3)];
   K.levelInfo=stage=>{const q=K.chapter(stage),part=stage%3;return{...q,part,name:q.name+' · '+q.levels[part],major:part===2,chief:part===2?q.bossName:q.minis[part],chiefId:part===2?q.boss:q.id+'-mini'+part};};
   K.STAGES=Array.from({length:15},(_,i)=>{const q=K.levelInfo(i);return{name:q.name,subtitle:q.major?q.bossName+'镇守本章':q.minis[q.part]+'镇守关门',sky:'#152332',mist:'#4a5e72',accent:q.color,lore:q.name+'：'+q.lesson};});
-  K.GUARDIANS=Array.from({length:15},(_,i)=>{const q=K.levelInfo(i);return{id:q.chiefId,name:q.chief,title:q.name,hp:q.major?300+(Math.floor(i/3)*18):108+Math.floor(i/3)*8,color:q.color,lesson:q.lesson};});
+  K.BOSS_MAX_HP=Object.freeze({juling:600,qinguang:800,ninehead:1000,dragonking:1250,litian:1500});
+  K.GUARDIANS=Array.from({length:15},(_,i)=>{const q=K.levelInfo(i);return{id:q.chiefId,name:q.chief,title:q.name,hp:q.major?K.BOSS_MAX_HP[q.boss]:108+Math.floor(i/3)*8,color:q.color,lesson:q.lesson};});
   K.CAMPAIGN_MOVES={
     'axe-cleave':{name:'断云重斧',hint:'方向已定 · 跃起或绕背',fx:'gold-slash'},'axe-quake':{name:'踏云震',hint:'低震将至 · 起跳',fx:'quake'},'axe-rush':{name:'横斧冲阵',hint:'让出冲斧路径',fx:'wind'},
     'judge-mark':{name:'朱笔定罪',hint:'魂印锁定 · 移开落点',fx:'pillar'},'judge-chain':{name:'缚魂锁道',hint:'避开锁链立柱',fx:'pillar'},'judge-echo':{name:'追魂复判',hint:'第二判重新锁定 · 再移位',fx:'meteor'},
@@ -26,5 +41,10 @@
   K.validClear=r=>!!r&&r.difficulty==='normal'&&r.complete===true&&r.levels===15&&Number.isFinite(r.seconds)&&r.seconds>=0&&Number.isInteger(r.hits)&&r.hits>=0&&Number.isInteger(r.killed)&&Number.isInteger(r.total)&&r.total>0&&r.killed>=0&&r.killed<=r.total&&35-Math.max(0,r.seconds-1500)/30+Math.max(0,40-r.hits*.5)+25*r.killed/r.total>=89.95;
   K.canChallenge=meta=>K.validClear(meta?.normalClear);
   K.recordClear=function(meta,s){const r=K.rating(s);if(r.complete&&s.difficulty==='normal'&&r.grade==='S')meta.normalClear={difficulty:'normal',complete:true,levels:15,seconds:r.seconds,hits:r.hits,killed:r.killed,total:r.total};return r;};
-  K.ratingPanel=(s,meta)=>{const r=K.rating(s),minutes=Math.floor(r.seconds/60),seconds=r.seconds%60;return `<section class="campaign-rating" aria-label="${r.complete?'通关评级':'当前表现估分'}"><b class="rating-grade">${r.grade}</b><div class="rating-breakdown"><strong>${r.complete?'通关评级':'未通关 · 当前估分'} ${r.score} / 100</strong><br>用时 ${minutes}分${seconds}秒 · ${r.time}/35　受伤 ${r.hits}次 · ${r.care}/40<br>计分击杀 ${r.killed}/${r.total} · ${r.kills}/25<br><small>S≥90 · A≥75 · B≥55 · 其余C</small></div><p class="rating-unlock">${K.canChallenge(meta)?'挑战模式已解锁 · 普通十五关S评级已达成':r.complete&&r.difficulty==='normal'?'通关已记录 · 取得S（高于A）可解锁挑战':'普通完整通关且取得S（高于A）后解锁挑战'}</p></section>`;};
+  K.ratingPanel=(s,meta)=>{
+    const r=K.rating(s),minutes=Math.floor(r.seconds/60),seconds=r.seconds%60,el=K.UI.el,br=()=>el('br');
+    return el('section',{class:'campaign-rating','aria-label':r.complete?'通关评级':'当前表现估分'},
+      el('b',{class:'rating-grade'},r.grade),el('div',{class:'rating-breakdown'},el('strong',{},(r.complete?'通关评级':'未通关 · 当前估分')+' '+r.score+' / 100'),br(),'用时 '+minutes+'分'+seconds+'秒 · '+r.time+'/35　受伤 '+r.hits+'次 · '+r.care+'/40',br(),'计分击杀 '+r.killed+'/'+r.total+' · '+r.kills+'/25',br(),el('small',{},'S≥90 · A≥75 · B≥55 · 其余C')),
+      el('p',{class:'rating-unlock'},K.canChallenge(meta)?'挑战模式已解锁 · 普通十五关S评级已达成':r.complete&&r.difficulty==='normal'?'通关已记录 · 取得S（高于A）可解锁挑战':'普通完整通关且取得S（高于A）后解锁挑战'));
+  };
 })(globalThis.Kong ||= {});

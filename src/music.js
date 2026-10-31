@@ -20,12 +20,23 @@
     voice(id){
       if(this.voices.has(id))return this.voices.get(id);
       const track=this.tracks[id];if(!track)return null;
-      const media=new Audio();media.preload='none';media.src=track.src;media.loop=id==='gameplay';
+      const media=new Audio();media.preload='none';if(track.src)media.src=track.src;media.loop=id==='gameplay';
       const source=this.ctx.createMediaElementSource(media),gain=this.ctx.createGain();gain.gain.value=0;source.connect(gain);gain.connect(this.bus);
-      const voice={id,media,source,gain,fade:null,lastPosition:0,pending:false};this.voices.set(id,voice);
+      const voice={id,media,source,gain,fade:null,lastPosition:0,pending:false,sourceReady:!!track.src,sourceLoading:false};this.voices.set(id,voice);
       media.addEventListener('ended',()=>{if(this.current!==voice||this.scene!=='menu'||this.hidden)return;this.stats.menuChanges++;this.switchTo(this.menuTrack(),true);});
       media.addEventListener('error',()=>{this.stats.errors.push({id,code:media.error?.code||0});});
       return voice;
+    }
+    prepareSource(voice){
+      if(voice.sourceReady||voice.sourceLoading)return;
+      const track=this.tracks[voice.id];if(!track.script)return;
+      const apply=()=>{voice.media.src=K.LocalMusic[voice.id];voice.sourceReady=true;voice.sourceLoading=false;this.play(voice);};
+      if(K.LocalMusic?.[voice.id]){apply();return;}
+      // Classic local script tags work under file:// without fetch/CORS flags.
+      // Load only the selected song after a gesture, not all music at first paint.
+      voice.sourceLoading=true;const script=document.createElement('script');script.src=track.script;script.async=true;
+      script.onload=()=>{script.remove();if(K.LocalMusic?.[voice.id])apply();else{voice.sourceLoading=false;this.stats.errors.push({id:voice.id,name:'MusicDataMissing'});}};
+      script.onerror=()=>{script.remove();voice.sourceLoading=false;this.stats.errors.push({id:voice.id,name:'MusicFileUnavailable'});};document.head.append(script);
     }
     target(){return this.scene==='playing'?1:this.scene==='quiet'?.28:this.scene==='reading'?.48:this.scene==='menu'?1:0;}
     ramp(voice,target,seconds=.65){
@@ -36,7 +47,8 @@
       voice.fade={from:start,to:target,at:now,seconds};
     }
     play(voice){
-      if(!voice||this.hidden||this.scene==='silent'||(!voice.media.paused&&!voice.media.ended)||voice.pending)return;
+      if(!voice||this.current!==voice||this.hidden||this.scene==='silent'||(!voice.media.paused&&!voice.media.ended)||voice.pending)return;
+      if(!voice.sourceReady){this.prepareSource(voice);return;}
       voice.pending=true;
       const attempt=voice.media.play();
       Promise.resolve(attempt).then(()=>{
