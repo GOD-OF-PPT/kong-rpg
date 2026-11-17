@@ -1,26 +1,153 @@
 <!doctype html>
 <html lang="zh-CN">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>大圣 · 劫后行 | Black Lotus</title><meta name="description" content="一棍破局，一念重来。可离线运行的像素横版动作肉鸽。"><link rel="stylesheet" href="src/style.css"><link rel="stylesheet" href="src/v2.css"></head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>大圣 · 劫后行 | 法天象地</title>
+  <meta name="description" content="三势如意，神通破妄。以《西游记后传》孙悟空为主角的独立离线像素动作肉鸽。">
+  <link rel="stylesheet" href="src/style.css">
+  <link rel="stylesheet" href="src/v2.css">
+</head>
 <body>
   <main id="app">
-    <header class="masthead"><a href="#" id="brand" aria-label="大圣劫后行主菜单"><span class="brand-seal">悟</span><span>大圣 <i>／</i> 劫后行</span></a><span class="edition">A PIXEL PILGRIMAGE <span class="tiny-star">✦</span> 独立离线版</span><button id="guide-top" class="text-button">行者手记 <span>↗</span></button></header>
-    <section id="stage" aria-label="横版游戏区域">
-      <canvas id="world" width="960" height="540" tabindex="0" aria-label="游戏世界。A D移动，空格跳跃，J棍击，K闪避，L分身，E过关，Escape暂停。"></canvas>
-      <div id="vignette" aria-hidden="true"></div>
-      <div id="hud" hidden>
-        <div class="vitals"><div class="vital-head"><strong>孙悟空</strong><span id="hp-number">100 / 100</span></div><div class="meter hp"><i id="hp-fill"></i></div><div class="focus-line"><span>定力</span><div class="meter focus"><i id="focus-fill"></i></div><b id="focus-number">65</b></div></div>
-        <div class="journey"><small id="chapter">第一境</small><strong id="stage-name">雾隐山道</strong><span id="objective">破除黑莲阵眼 0 / 2</span><div class="journey-progress"><i id="journey-fill"></i></div></div>
-        <div class="hud-actions"><span id="run-seed"></span><button id="pause" aria-label="暂停游戏">Ⅱ <span>ESC</span></button></div>
-        <div id="boss-hud" hidden><span>无天 <em id="boss-phase">黑莲横世</em></span><div class="meter"><i id="boss-fill"></i></div></div>
-        <div class="run-bottom"><span id="relic-list"></span><span id="dash-state"></span></div>
+    <header class="masthead">
+      <button type="button" id="brand" class="brand-link" aria-label="大圣劫后行主菜单">
+        <span class="brand-seal">悟</span>
+        <span>大圣 <i>／</i> 劫后行</span>
+      </button>
+      <span class="edition">A PIXEL PILGRIMAGE <span class="tiny-star">✦</span> 法天象地</span>
+      <div class="mast-tools">
+        <button type="button" id="mute-top" class="chip-button" aria-label="切换声音">音律 · 启</button>
+        <button type="button" id="codex-top" class="chip-button">法相录</button>
+        <button type="button" id="guide-top" class="text-button">行者手记 <span>↗</span></button>
       </div>
+    </header>
+
+    <section id="stage" aria-label="横版游戏区域">
+      <canvas id="world" width="960" height="540" tabindex="0" aria-label="游戏世界。A D移动，空格跳跃，J棍击，Q切换三棍势，F定身法，C铜头铁臂，K闪避识破，L毫毛群猿，U耗势绝技，E互动，Escape暂停。"></canvas>
+      <div id="vignette" aria-hidden="true"></div>
+
+      <div id="hud" hidden>
+        <div class="vitals">
+          <div class="vital-head">
+            <strong>孙悟空</strong>
+            <span id="hp-number">100 / 100</span>
+          </div>
+          <div class="meter hp"><b id="hp-trail" class="meter-trail"></b><i id="hp-fill"></i><em id="ward-fill"></em></div>
+          <div class="focus-line">
+            <span>定力</span>
+            <div class="meter focus"><i id="focus-fill"></i></div>
+            <b id="focus-number">65</b>
+          </div>
+          <div class="stance-line">
+            <button type="button" id="stance-btn" class="stance-pill smash" title="按 Q 即时切换劈/立/戳三棍势">Q 劈棍势</button>
+            <div class="stance-pips" id="stance-pips">
+              <i class="pip"></i><i class="pip"></i><i class="pip"></i>
+            </div>
+            <button type="button" id="pillar-btn" class="pillar-badge" disabled title="积满棍势按 U 施展当前棍势绝技">U 千钧</button>
+          </div>
+        </div>
+
+        <div class="journey">
+          <small id="chapter">第一境</small>
+          <strong id="stage-name">雾隐山道</strong>
+          <span id="objective">破除黑莲阵眼 0 / 2</span>
+          <div class="journey-progress"><i id="journey-fill"></i></div>
+        </div>
+
+        <div class="hud-actions">
+          <span id="essence-pill" class="essence-pill" title="击退魔众或开启金匮获取灵蕴，可在淬棒神龛强化">灵蕴 <b>20</b></span>
+          <span id="run-seed"></span>
+          <button type="button" id="touch-btn" class="hud-mini" aria-label="切换触控按键">触控</button>
+          <button type="button" id="pause" aria-label="暂停游戏">Ⅱ <span>ESC</span></button>
+        </div>
+
+        <div id="cutin-banner" class="cutin-banner" hidden>
+          <span id="cutin-text">毫巅识破</span>
+        </div>
+
+        <div id="combo-stamp" class="combo-stamp" hidden>
+          <b id="combo-count">x5</b>
+          <small id="combo-title">破妄</small>
+        </div>
+
+        <div id="warden-hud" class="sub-boss-hud" hidden>
+          <span id="warden-name">守阵魔将</span>
+          <div class="meter"><b id="warden-trail" class="meter-trail"></b><i id="warden-fill"></i></div>
+        </div>
+
+        <div id="boss-hud" hidden>
+          <span>无天 <em id="boss-phase">黑莲横世</em></span>
+          <div class="meter"><b id="boss-trail" class="meter-trail"></b><i id="boss-fill"></i></div>
+        </div>
+
+        <div class="run-bottom">
+          <div class="relic-dock">
+            <div id="relic-list" class="relic-slots"></div>
+            <div id="synergy-list" class="synergy-tags"></div>
+          </div>
+          <div class="combat-states">
+            <span id="riposte-state" class="riposte-pill" hidden>破妄追击 [J]</span>
+            <div id="spell-bar" class="spell-bar">
+              <button type="button" id="spell-immob" class="spell-slot" title="F 定身法 (25定力)"><b>定</b><small id="cd-immob">F</small></button>
+              <button type="button" id="spell-rock" class="spell-slot" title="C 铜头铁臂 (弹反震岳)"><b>铜</b><small id="cd-rock">C</small></button>
+              <button type="button" id="spell-clone" class="spell-slot" title="L 身外身·毫毛群猿"><b>毛</b><small id="cd-clone">L</small></button>
+            </div>
+            <span id="dash-state"></span>
+          </div>
+        </div>
+
+        <div id="touch-controls" class="touch-pad" hidden>
+          <div class="touch-left">
+            <button type="button" data-key="KeyA" aria-label="左移">◀</button>
+            <button type="button" data-key="KeyS" aria-label="下蹲下穿">▼</button>
+            <button type="button" data-key="KeyD" aria-label="右移">▶</button>
+          </div>
+          <div class="touch-right">
+            <button type="button" data-key="KeyQ" class="t-sub">势 Q</button>
+            <button type="button" data-key="KeyF" class="t-gold">定 F</button>
+            <button type="button" data-key="KeyC" class="t-sub">铜 C</button>
+            <button type="button" data-key="KeyE" class="t-sub">互 E</button>
+            <button type="button" data-key="KeyL" class="t-sub">影 L</button>
+            <button type="button" data-key="KeyU" class="t-gold">破 U</button>
+            <button type="button" data-key="KeyK" class="t-act">闪 K</button>
+            <button type="button" data-key="Space" class="t-act">跃</button>
+            <button type="button" data-key="KeyJ" class="t-main">棍 J</button>
+          </div>
+        </div>
+      </div>
+
       <div id="overlay"></div>
       <div id="combat-labels" aria-hidden="true"></div>
       <div id="toast" role="status" aria-live="polite" hidden></div>
       <div id="context-hint" hidden></div>
     </section>
-    <footer class="footline"><div><span class="status-dot"></span><span id="storage-status">离线可玩 · 进度自动保存</span></div><div class="keystrip"><span><kbd>A</kbd><kbd>D</kbd> 行走</span><span><kbd>SPACE</kbd> 跃起</span><span><kbd>J</kbd> 棍击</span><span><kbd>K</kbd> 闪避</span><span><kbd>L</kbd> 分身</span></div><span class="build">v2.0 <span>／</span> 三境六阵 · 舍利成法</span></footer>
+
+    <footer class="footline">
+      <div><span class="status-dot"></span><span id="storage-status">离线可玩 · 进度自动保存</span></div>
+      <div class="keystrip">
+        <span><kbd>Q</kbd> 切三势</span>
+        <span><kbd>J</kbd> 棍击</span>
+        <span><kbd>U</kbd> 绝技</span>
+        <span><kbd>F</kbd> 定身</span>
+        <span><kbd>C</kbd> 铜头</span>
+        <span><kbd>K</kbd> 识破</span>
+        <span><kbd>L</kbd> 群猿</span>
+        <span><kbd>E</kbd> 淬炼/互动</span>
+      </div>
+      <span class="build">v4.0 <span>／</span> 三势如意 · 七十二变</span>
+    </footer>
     <input id="import-file" type="file" accept="application/json,.json" hidden>
   </main>
-  <script src="src/content.js"></script><script src="src/simulation.js"></script><script src="src/storage.js"></script><script src="src/renderer.js"></script><script src="src/art.js"></script><script src="src/generated-art.js"></script><script src="src/visuals.js"></script><script src="src/input.js"></script><script src="src/audio.js"></script><script src="src/app.js"></script>
-</body></html>
+  <script src="src/content.js"></script>
+  <script src="src/simulation.js"></script>
+  <script src="src/storage.js"></script>
+  <script src="src/renderer.js"></script>
+  <script src="src/art.js"></script>
+  <script src="src/generated-art.js"></script>
+  <script src="src/visuals.js"></script>
+  <script src="src/input.js"></script>
+  <script src="src/audio.js"></script>
+  <script src="src/app.js"></script>
+</body>
+</html>

@@ -1,5 +1,5 @@
 {
-  "version": "2.0.0",
+  "version": "4.0.0",
   "results": [
     {
       "name": "same seed and input replay produce identical state",
@@ -131,6 +131,62 @@
     },
     {
       "name": "pause freezes gameplay including wall elapsed",
+      "pass": true
+    },
+    {
+      "name": "perfect dodge insight grants focus, stance pip and riposte window",
+      "pass": true
+    },
+    {
+      "name": "stance pillar cleave consumes pips and pierces frontal shield",
+      "pass": true
+    },
+    {
+      "name": "golden ward absorbs incoming hit before touching player hp",
+      "pass": true
+    },
+    {
+      "name": "dual and trinity relic synergies activate accurately",
+      "pass": true
+    },
+    {
+      "name": "stele shrine awakens carried relic and fills stance meter",
+      "pass": true
+    },
+    {
+      "name": "golden lotus bounce pad vaults player skyward",
+      "pass": true
+    },
+    {
+      "name": "wutian phase 2 summons telegraphed sky-lotus pillars and arch form awakens",
+      "pass": true
+    },
+    {
+      "name": "three staff stances switch cleanly and trigger flow-switch strike mid-combo",
+      "pass": true
+    },
+    {
+      "name": "immobilize spell freezes enemy and 3 hits trigger shatter burst",
+      "pass": true
+    },
+    {
+      "name": "rock solid parry negates damage, staggers attacker, and grants 2 stance pips",
+      "pass": true
+    },
+    {
+      "name": "explosive firejar detonates on strike and damages nearby enemies",
+      "pass": true
+    },
+    {
+      "name": "forge shrine upgrades weapon damage and max hp using essence",
+      "pass": true
+    },
+    {
+      "name": "defeating six-eared macaque unlocks 4th relic slot and corpse ragdoll",
+      "pass": true
+    },
+    {
+      "name": "mastery seals unlock cleanly without mutating combat stats",
       "pass": true
     },
     {
