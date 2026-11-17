@@ -13,3 +13,7 @@ evidence/**/*trace*.zip
 evidence/**/*progress.json
 src/generated-art.js
 artifacts/portable-check/
+
+# Generated screenshots and packaged archives are kept outside the main tree.
+/evidence/**/*.png
+/artifacts/**/*.zip

@@ -43,3 +43,7 @@ npm run dev
 当前依据与验收见 `docs/complete-v2/`；原始 ImageGen 美术记录在 `docs/art-v1/`。素材源在 `assets/art-v1/`、`assets/art-v2/`，均随包嵌入，运行时不调用生成接口。
 
 已完成功能和发行验证不等于真人体验认可；原剧逐帧研究、真人首次体验与试听仍未取得。具体证据与限制见当前验收记录。历史文档中的旧结论不作当前版本验收。
+
+## 仓库体积与历史资料
+
+main 保留游戏源码、原始素材、离线入口、验收文档和 JSON 记录；生成的截图与发行 ZIP 不再提交。清理前的完整内容保存在 GitHub 分支 [`backup/main-before-size-reduction-20261117`](https://github.com/GOD-OF-PPT/kong-rpg/tree/backup/main-before-size-reduction-20261117)，历史文档引用的截图和 ZIP 可在该分支按原路径查看。范围和体积检查见 [仓库存储说明](https://github.com/GOD-OF-PPT/kong-rpg/blob/main/docs/repository-storage.md)。
