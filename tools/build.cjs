@@ -1,6 +1,15 @@
 const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
 require('./pack-art.cjs');
 const root=path.resolve(__dirname,'..'),out=path.join(root,'release');fs.mkdirSync(out,{recursive:true});
+const safeDOM=fs.readFileSync(path.join(root,'src/safe-dom.js'),'utf8');
+const safeBlock='<!-- kong-safe-dom:start -->\n<script>\n'+safeDOM.replace(/<\/script/gi,'<\\/script')+'\n</script>\n<!-- kong-safe-dom:end -->';
+for(const file of ['release/legacy-v1.html','evidence/readability/baseline.html']){
+  const target=path.join(root,file),before=fs.readFileSync(target,'utf8');
+  const after=before.includes('<!-- kong-safe-dom:start -->')
+    ? before.replace(/<!-- kong-safe-dom:start -->[\s\S]*?<!-- kong-safe-dom:end -->/,()=>safeBlock)
+    : before.replace('<head>','<head>\n'+safeBlock);
+  if(after!==before)fs.writeFileSync(target,after);
+}
 let html=fs.readFileSync(path.join(root,'index.html'),'utf8');
 html=html.replace('<head>','<head><meta name="kong-package" content="standalone">');
 html=html.replace(/<link rel="stylesheet" href="(src\/[^"]+)">/g,(_,file)=>'<style>'+fs.readFileSync(path.join(root,file),'utf8')+'</style>');
