@@ -1,0 +1,131 @@
+{
+  "baseline": "4fc77ec9fe29803565ccce054a01edf3bec6b93c",
+  "version": "10.0.3",
+  "entrySHA256": "249bfb53be5263c95ce973f578569724d72be6d23c1cf1527274ec1e540fa7b3",
+  "allFinalPassed": true,
+  "reports": [
+    {
+      "file": "before-comparison/review.json",
+      "version": "10.0.2",
+      "sha256": "67e20df4cce0b4e38d80f23af38f7c21129df9d5b2f3a51fea87dfcdd30b6b40",
+      "checks": 12,
+      "failed": [
+        "fractional display no longer forces nearest-neighbour magnification",
+        "two named secret-art labels are visible"
+      ],
+      "errors": [],
+      "requests": 0,
+      "shots": 8
+    },
+    {
+      "file": "final-http/review.json",
+      "version": "10.0.3",
+      "sha256": "249bfb53be5263c95ce973f578569724d72be6d23c1cf1527274ec1e540fa7b3",
+      "checks": 12,
+      "failed": [],
+      "errors": [],
+      "requests": 1,
+      "shots": 8
+    },
+    {
+      "file": "final-file/review.json",
+      "version": "10.0.3",
+      "sha256": "249bfb53be5263c95ce973f578569724d72be6d23c1cf1527274ec1e540fa7b3",
+      "checks": 13,
+      "failed": [],
+      "errors": [],
+      "requests": 0,
+      "shots": 8
+    },
+    {
+      "file": "catalog-http/review.json",
+      "version": "10.0.3",
+      "sha256": "249bfb53be5263c95ce973f578569724d72be6d23c1cf1527274ec1e540fa7b3",
+      "checks": 11,
+      "failed": [],
+      "errors": [],
+      "requests": 1,
+      "scenes": 352
+    },
+    {
+      "file": "catalog-file/review.json",
+      "version": "10.0.3",
+      "sha256": "249bfb53be5263c95ce973f578569724d72be6d23c1cf1527274ec1e540fa7b3",
+      "checks": 12,
+      "failed": [],
+      "errors": [],
+      "requests": 0,
+      "scenes": 352
+    },
+    {
+      "file": "dual-mode-http/verification.json",
+      "version": "10.0.3",
+      "sha256": "249bfb53be5263c95ce973f578569724d72be6d23c1cf1527274ec1e540fa7b3",
+      "checks": 58,
+      "failed": [],
+      "errors": [],
+      "requests": 1,
+      "scenes": 56
+    },
+    {
+      "file": "dual-mode-file/verification.json",
+      "version": "10.0.3",
+      "sha256": "249bfb53be5263c95ce973f578569724d72be6d23c1cf1527274ec1e540fa7b3",
+      "checks": 59,
+      "failed": [],
+      "errors": [],
+      "requests": 0,
+      "scenes": 56
+    }
+  ],
+  "videos": {
+    "before-comparison": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "vp9",
+          "width": 960,
+          "height": 540
+        }
+      ],
+      "format": {
+        "size": "7151856"
+      },
+      "frames": 651,
+      "seconds": 22.114
+    },
+    "final-http": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "vp9",
+          "width": 960,
+          "height": 540
+        }
+      ],
+      "format": {
+        "size": "6289140"
+      },
+      "frames": 651,
+      "seconds": 22.513
+    },
+    "final-file": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "vp9",
+          "width": 960,
+          "height": 540
+        }
+      ],
+      "format": {
+        "size": "6427533"
+      },
+      "frames": 657,
+      "seconds": 22.768
+    }
+  }
+}

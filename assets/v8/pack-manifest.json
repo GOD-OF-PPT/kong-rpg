@@ -1,0 +1,416 @@
+{
+  "tool": "built-in image_gen",
+  "runtime": "HTTP: staged external files; standalone: embedded data URLs",
+  "assets": {
+    "mountain": {
+      "file": "assets/art-v1/mountain-approach.png",
+      "bytes": 2593019,
+      "sha256": "57e9513653529b4825a2a406b6c64775de29ba4dddbcb9ff3be6406c5c168e56"
+    },
+    "ferry": {
+      "file": "assets/art-v1/lantern-ferry.png",
+      "bytes": 2645367,
+      "sha256": "be12588fb7f74815f79f48a77a8e8b1147cbfb6201b585a56fc60eb9a03e4c49"
+    },
+    "sanctuary": {
+      "file": "assets/art-v1/ruined-sanctuary.png",
+      "bytes": 2979693,
+      "sha256": "867935f592dfb15b8b3ff4bc9d05c779c147ec2a9ea489dc11611a6873b6046a"
+    },
+    "wukong": {
+      "file": "assets/art-v1/wukong-atlas.png",
+      "bytes": 1269917,
+      "sha256": "ce37326df844b464a177a956ae165e91560a7af5f65d4bb1a99b2978485b22c1"
+    },
+    "enemies": {
+      "file": "assets/art-v1/enemy-atlas.png",
+      "bytes": 2389650,
+      "sha256": "a3226339999519e17fdafed08bfa01bf9b85e4c0db87cf097534b9f3ef805fa1"
+    },
+    "stone": {
+      "file": "assets/art-v1/stone-platform.png",
+      "bytes": 946448,
+      "sha256": "0e6e36cd6a30ce74c4ea3a1bb2a6096bd3ae65e868b2715fbec0c65e25aa09de"
+    },
+    "run": {
+      "file": "assets/art-v2/wukong-run.png",
+      "bytes": 860700,
+      "sha256": "0a2de6e34eb2e3c101fe9a609e6faa5d3a943e1c83583387d6681b784a521c8d"
+    },
+    "props": {
+      "file": "assets/art-v2/journey-props.png",
+      "bytes": 1265179,
+      "sha256": "56e3b8c4f4537c3a1d88b3d9d0d6667fcb314aedfb803ab0b6438631025880d4"
+    },
+    "uiScroll": {
+      "file": "assets/ui-v3/pilgrim-scroll.png",
+      "bytes": 1617682,
+      "sha256": "45960432047946fd390e83d12ceeec907e8bd2a08af6459f313c4d68690e9388"
+    },
+    "uiIcons": {
+      "file": "assets/ui-v3/relic-icons.png",
+      "bytes": 2261550,
+      "sha256": "474240ea1bb2d07a0290da25985b680e5d08179bea3cffc8d23b36270a4ccfbc"
+    },
+    "uiFolio": {
+      "file": "assets/ui-v3/field-folio.png",
+      "bytes": 1901827,
+      "sha256": "c50cda5a0e6677b632301559070720df70b4330db61381a7f2620b071a2ef1fa"
+    },
+    "combo": {
+      "file": "assets/combat-v3/wukong-combo.png",
+      "bytes": 1541974,
+      "sha256": "916ecdf22c1aeebc0c7bab45667af90b849b4ba979ce229221b4d244d6074739"
+    },
+    "impacts": {
+      "file": "assets/combat-v3/impact-atlas.png",
+      "bytes": 817199,
+      "sha256": "e33e7a9af59ec152cefe564a414cc81c40fc6bed9a89a7d57cacd5ead51f9b85"
+    },
+    "nodes": {
+      "file": "assets/combat-v3/world-nodes.png",
+      "bytes": 1782220,
+      "sha256": "54a20d33776de30d81233c2cdbe6303ddbdc28ffd71f70cbfbcdfedff86d92b5"
+    },
+    "nodesDone": {
+      "file": "assets/combat-v3/world-nodes-done.png",
+      "bytes": 1926106,
+      "sha256": "d4eb0446b4d6aa6b6f0368ee06f422e11702790f8cdfc24dbc1e04205e7eaf62"
+    },
+    "guardians": {
+      "file": "assets/progression-v4/guardians.png",
+      "bytes": 2264115,
+      "sha256": "f3af8dc6426668042fb2c9657e6755fbd0d8e8cb118361e4dcc3767f8b32e7a1"
+    },
+    "nezha": {
+      "file": "assets/ranged-v6/nezha-atlas.png",
+      "bytes": 50835,
+      "sha256": "20b30dee9c9a9282a318231366ede36ba84112552d98bb6ca99d3adfa00fa24b"
+    },
+    "nezhaPortrait": {
+      "file": "assets/ranged-v6/nezha-empty-hands.png",
+      "bytes": 1207129,
+      "sha256": "23a70c0e7d874df4277855634a2f61db28bd0caf947608cf56f1faa4b853b2af"
+    },
+    "mapProps": {
+      "file": "assets/map-v6/props.png",
+      "bytes": 77284,
+      "sha256": "9545a161e530ad5438cd7784f1a79e4ed1b9575a05d42cd917851306eb2539ae"
+    },
+    "mapTerrain": {
+      "file": "assets/map-v6/terrain.png",
+      "bytes": 82908,
+      "sha256": "13b199e9eb6b90b5c13a7bb247c6e4b0ba07cac93494f466d9b68b35251499e9"
+    },
+    "mapDressing": {
+      "file": "assets/map-v6/dressing.png",
+      "bytes": 83405,
+      "sha256": "56ff6dede4ac1aacef74286d175f5690c766d607ad01d9a65ae77ecb274557bc"
+    },
+    "sigWukong": {
+      "file": "assets/signature-v7/wukong.png",
+      "bytes": 52462,
+      "sha256": "b7d4e9b75e805d5a0e86d2c4fbb63f516177c7df68738579f314d020f0348611"
+    },
+    "sigNezha": {
+      "file": "assets/signature-v7/nezha.png",
+      "bytes": 47154,
+      "sha256": "9723cb3bb797431c56bb76512f7e027f81caf92d76d084c7c5f5b7e7bd629b91"
+    },
+    "sigFx": {
+      "file": "assets/signature-v7/fx.png",
+      "bytes": 22304,
+      "sha256": "e78659c43b73062bc294bf267365a5389fb7e8fa78e765190a6016dc5da3d26e"
+    },
+    "sceneProps": {
+      "file": "assets/scene-v7/seal-states.png",
+      "bytes": 25195,
+      "sha256": "9a2534be7bbf8915c71b2b62db74f98ca746abe6826c436bd2df37c189a9239e"
+    },
+    "actorStates": {
+      "file": "assets/art-audit-v7/actor-states.png",
+      "bytes": 33384,
+      "sha256": "6c87afd7f8d848629a076dc88edf17313e38d4feb2a8ee4413e8f8e6a2377534"
+    },
+    "celestialHeroes": {
+      "file": "assets/celestial-v9/heroes.png",
+      "bytes": 157800,
+      "sha256": "d16f456ab62259766d32feac05d12ddcd4a4d60efded7eb12d200fdd5fdb3741"
+    },
+    "celestialBosses": {
+      "file": "assets/celestial-v9/bosses.png",
+      "bytes": 264429,
+      "sha256": "216da291124e852dd638c8867c0092ab5114fbdc1af639ea0bc3ed9898f4572e"
+    },
+    "celestialFx": {
+      "file": "assets/celestial-v9/effects.png",
+      "bytes": 328198,
+      "sha256": "4d31f879d35216fbcea5104c8e91440d40fc313eb4da16407beb9c118e0a04c8"
+    },
+    "enemyBattleSeals": {
+      "file": "assets/enemy-markers/battle-seals.png",
+      "bytes": 1477185,
+      "sha256": "8cad641a5c1035663e52ef36f6fee04f0ad72ccf946c20759a2e194d298fbcb2"
+    },
+    "v8ErlangPortrait": {
+      "file": "assets/v8/erlang-portrait.png",
+      "bytes": 243846,
+      "sha256": "f82e4fdf5579bc84034543cec20176e1ffa8a3a7707fe92eb61149d7667ca9fc"
+    },
+    "v8NezhaPortrait": {
+      "file": "assets/v8/nezha-portrait.png",
+      "bytes": 153573,
+      "sha256": "9615d0758d646361b90d2246bb64719230c85d3ad21de4d26433d1bf2adb471b"
+    },
+    "v8Erlang": {
+      "file": "assets/v8/erlang.png",
+      "bytes": 99850,
+      "sha256": "4f88f6376c911a2716ecd300e3fa7b7e4c3f63f88c04f8312b99a1191e220ad2"
+    },
+    "v8Nezha": {
+      "file": "assets/v8/nezha.png",
+      "bytes": 70013,
+      "sha256": "087d13c2a979dae72306aeaff88356580ecc5472e73b0599d3ccf2cd2cbc9c59"
+    },
+    "v8Companion": {
+      "file": "assets/v8/companion.png",
+      "bytes": 12027,
+      "sha256": "fdecc6c1695642a3e441882005e10a87541e40ef8643e6a33cbf638b56596c97"
+    },
+    "v8Fx": {
+      "file": "assets/v8/fx.png",
+      "bytes": 5285,
+      "sha256": "6c1d2068258977cbf96f3023bf0bbb553faa3acc8ee8dfc7c5bdcb1a0a65a2fe"
+    },
+    "v8Enemies": {
+      "file": "assets/v8/enemies.png",
+      "bytes": 75347,
+      "sha256": "9bcf0cfbe65806ea39d8200d3897cf5db4447a258e38243417b74ce53074efbd"
+    },
+    "v8Terrain": {
+      "file": "assets/v8/terrain.png",
+      "bytes": 79557,
+      "sha256": "071b3caa5a9582564e3b85d9c8b192494edfae128f9619bc00f60861bf84a6ee"
+    },
+    "realmCloud": {
+      "file": "assets/cloud-visual-v10/background.png",
+      "bytes": 766605,
+      "sha256": "9ed3e52f715f3bb6718691636a1bcab6eaf2894f045f3f3b5db53f7c60be2051"
+    },
+    "realmHeaven": {
+      "file": "assets/v8/heaven.png",
+      "bytes": 897958,
+      "sha256": "a471217b963a079e8dfe9db8c939bc159c66effc96098298eb9f9364110c5c1c"
+    },
+    "realmWater": {
+      "file": "assets/v8/water.png",
+      "bytes": 826553,
+      "sha256": "650725e4f8fbb02c7bd3cfae6edb8d28e029525b528f5293b8f7a79b6304a4c0"
+    },
+    "realmDragon": {
+      "file": "assets/v8/dragon.png",
+      "bytes": 978827,
+      "sha256": "cec510c91e9c39ea0c8f38f29e71efa7e8dc106c1506a3d876600d2a353707ae"
+    },
+    "realmUnderworld": {
+      "file": "assets/v8/underworld.png",
+      "bytes": 877781,
+      "sha256": "ec5d812252459da2633ef90ef6168734d29c93690bf40932a10fedf04be3b2a4"
+    },
+    "campaign-juling": {
+      "file": "assets/audit-v10/juling.png",
+      "bytes": 97732,
+      "sha256": "fa24fe81f63ee1ef5a64ee0a43af504ae876aef8035db935ded4b810ef04fcd4"
+    },
+    "campaign-qinguang": {
+      "file": "assets/campaign-v10/qinguang.png",
+      "bytes": 86711,
+      "sha256": "5357221ca9773110f9f4f1220a1d816d4ea33cc080eae4c905597c7858fd941b"
+    },
+    "campaign-ninehead": {
+      "file": "assets/campaign-v10/ninehead.png",
+      "bytes": 105664,
+      "sha256": "22e66871a8bf066df2bce1b3eaed6a49e88a3d6f50975dbedd61c27251ed43fc"
+    },
+    "campaign-dragonking": {
+      "file": "assets/campaign-v10/dragonking.png",
+      "bytes": 76685,
+      "sha256": "16b99f3ad57e192d912e020e49722ecd0fc81135b4890a49591722f4bab735d5"
+    },
+    "campaign-litian": {
+      "file": "assets/campaign-v10/litian.png",
+      "bytes": 69817,
+      "sha256": "f097b83ff5baacba0bf9c65b58ad98d1f1565d0b841a2520fd689dab09ccf1b3"
+    },
+    "campaignArmy-cloud": {
+      "file": "assets/campaign-v10/army-cloud.png",
+      "bytes": 59370,
+      "sha256": "1da531501650ca5493c418b8c44cac6740c5c2300502850b1d06ca481304a2f6"
+    },
+    "campaignArmy-underworld": {
+      "file": "assets/campaign-v10/army-underworld.png",
+      "bytes": 53861,
+      "sha256": "bacf7a6b74a85d7161bcd8813b4ff8f84beceb4e1d1992e6f9e2008a82a8aaf7"
+    },
+    "campaignArmy-water": {
+      "file": "assets/campaign-v10/army-water.png",
+      "bytes": 62019,
+      "sha256": "d6651ffff7e4b1fef6eea6c7ffa0c4b4f43dd02c0f140bab9d69c2d11b4d4ee6"
+    },
+    "campaignArmy-dragon": {
+      "file": "assets/campaign-v10/army-dragon.png",
+      "bytes": 68683,
+      "sha256": "5d922fba45988ee8366ef711be725d0ae4776d469456bafe49bf84ddb2d47d23"
+    },
+    "campaignArmy-heaven": {
+      "file": "assets/campaign-v10/army-heaven.png",
+      "bytes": 57895,
+      "sha256": "ecb2c2f1164e481b3a22a0e89db9fc5413634ee05d5d84bccf0554b4b5f0b767"
+    },
+    "auditDevices": {
+      "file": "assets/audit-v10/devices.png",
+      "bytes": 23474,
+      "sha256": "4d001a2a1073440efbfb846826a74a807e3d950b95196c7f8538252f3c6d133a"
+    },
+    "actorRepair": {
+      "file": "assets/art-completeness-v10/actor-repair.png",
+      "bytes": 51339,
+      "sha256": "c6ccc56d293e7bafc2676c00ffdee8019a30d7a4763c9590f0598f82bc0edc7b"
+    },
+    "cloudEnvironment": {
+      "file": "assets/cloud-visual-v10/environment.png",
+      "bytes": 92591,
+      "sha256": "0c347f51f3b0aab9700e89365674a7588156022eb1f2f1bc6e9f9aa0e55114ef"
+    },
+    "cloudFoundation": {
+      "file": "assets/cloud-visual-v10/foundation.png",
+      "bytes": 120667,
+      "sha256": "7b43b3f0f1a331d5cf88f17a89eee943317ab7ff7a674639f4067211dc74f487"
+    },
+    "staffActors": {
+      "file": "assets/cloud-visual-v10/staff-actors.png",
+      "bytes": 75104,
+      "sha256": "ba293bef4fb40b64d37e8414ce744ee6ca71e4847b47535beaf469ff04de7edd"
+    },
+    "staffFx": {
+      "file": "assets/cloud-visual-v10/staff-fx.png",
+      "bytes": 123014,
+      "sha256": "8c255ac5c0f45d08206aac488f9c092ad061635a6185d42eb0e661a85581309a"
+    },
+    "combatContacts": {
+      "file": "assets/combat-v11/contacts.png",
+      "bytes": 30826,
+      "sha256": "ec567c477709e2f32f94043b20bc38c584baf55fadfb63fd2acbdfd97b2bd129"
+    },
+    "enemy-contacts": {
+      "file": "assets/enemy-vfx-v12/contacts.png",
+      "bytes": 86967,
+      "sha256": "1c60d776ed5a03467050600dc3bd1d356396634b82bfe0d26d4fbe434aefdd3e"
+    },
+    "enemy-materials": {
+      "file": "assets/enemy-vfx-v12/materials-v2.png",
+      "bytes": 53055,
+      "sha256": "9dda9eae97ff26bad076b954b83a8135f0f343afe391e4fda1b1edb1f4fdef0c"
+    },
+    "realmDressing": {
+      "file": "assets/art-recheck-v12/realm-dressing.png",
+      "bytes": 114290,
+      "sha256": "f57d704dddffcf3bd15a7304315338a9277ce7efdeb56e87879e6721057b802a"
+    },
+    "motion-nezha": {
+      "file": "assets/motion-v12/nezha.png",
+      "bytes": 223543,
+      "sha256": "5cb6122e664d9a46f03481ac81ffcfb778ed3dabb5785705e07e315bede7ed5e"
+    },
+    "motion-erlang": {
+      "file": "assets/motion-v12/erlang.png",
+      "bytes": 207128,
+      "sha256": "af09aca639c72e8ec0a207444b9d0b59cbe49bcf18ae4c8d864f8fd00216a86e"
+    },
+    "motion-cloud": {
+      "file": "assets/motion-v12/cloud.png",
+      "bytes": 354604,
+      "sha256": "95c743950ba74b754a1e5b43bc486ebdaa9c54f21e4b3ff42d8bb884ea3f5479"
+    },
+    "motion-underworld": {
+      "file": "assets/motion-v12/underworld.png",
+      "bytes": 295722,
+      "sha256": "8b993fccf5493eece4e255908f50885a759717d7a9dccf7b88436fe87a6a7f83"
+    },
+    "motion-water": {
+      "file": "assets/motion-v12/water.png",
+      "bytes": 338045,
+      "sha256": "96ab9fc3e6adff34a62e0a4aad3ecc34b57dc63454d567a385de1cc71fb25d52"
+    },
+    "motion-dragon": {
+      "file": "assets/motion-v12/dragon.png",
+      "bytes": 371822,
+      "sha256": "35c4bfb53bf49666d39505df269f08f556fff0d753c8483ba12fed8996c3086f"
+    },
+    "motion-heaven": {
+      "file": "assets/motion-v12/heaven.png",
+      "bytes": 343689,
+      "sha256": "39a66eefe6e69018457921fa69705ab02994c9c036b1b2a6c90db6dd46629844"
+    },
+    "identity-wukong": {
+      "file": "assets/combat-identities/wukong.png",
+      "bytes": 176811,
+      "sha256": "10970a543d8aa149816550aa370816e17f90aaafddd050d7c300fc060014eba0"
+    },
+    "identity-nezha": {
+      "file": "assets/combat-identities/nezha.png",
+      "bytes": 196842,
+      "sha256": "3ceed6a165bbae583f6c99ee75260bc4986bc2f75966fee5f7ac40c047a19345"
+    },
+    "identity-erlang": {
+      "file": "assets/combat-identities/erlang.png",
+      "bytes": 197673,
+      "sha256": "eb22c2a91fa7145366424e9cf531dd4b0f10e8b8fcdf41ffd41d15a43f32d766"
+    },
+    "identity-juling": {
+      "file": "assets/combat-identities/juling.png",
+      "bytes": 508267,
+      "sha256": "658a4804f2bdc2aec16371b3a1e1cca2928454232607abc6a7a262e8a318c9ab"
+    },
+    "identity-qinguang": {
+      "file": "assets/combat-identities/qinguang.png",
+      "bytes": 296779,
+      "sha256": "bbff122e4ce1b156f1535d74df3f7f973862180524e2e09067462bd57d2e44b4"
+    },
+    "identity-ninehead": {
+      "file": "assets/combat-identities/ninehead.png",
+      "bytes": 348565,
+      "sha256": "648afd17c37e81ad33cee6e3d64c69bb1feeb78dd84e4aa1c7d6f597fe2ac1ce"
+    },
+    "identity-dragonking": {
+      "file": "assets/combat-identities/dragonking.png",
+      "bytes": 390008,
+      "sha256": "e71b7af97d535acdc0761749e094d2f58bc17bfa8efe803c06cc0f2dddfe2bb7"
+    },
+    "identity-litian": {
+      "file": "assets/combat-identities/litian.png",
+      "bytes": 348646,
+      "sha256": "20225d9ee15ebad20ffeb0284b9b72ecc23d44906d94df04d604b9ba535e0cd9"
+    },
+    "brandWordmark": {
+      "file": "assets/brand-rekindled/wordmark.png",
+      "bytes": 719926,
+      "sha256": "e703efa5ab2a14ceb99bfeb55506ba39350ffa1736ce0e5266ff9c3ab42470ae"
+    },
+    "bossFX": {
+      "file": "assets/boss-fx-v13/atlas.png",
+      "bytes": 1338005,
+      "sha256": "fe0906279d5df91ccdec51394906e76eb16db2c5373aec32defc063fb629dd85"
+    },
+    "bossHud": {
+      "file": "assets/boss-hud-v13/frame.png",
+      "bytes": 408931,
+      "sha256": "79806514d6d691cafb7d2c4041a8e0f458a75792b7def96e9e8ed33ca63752b5"
+    },
+    "settlementBackdrop": {
+      "file": "assets/settlement-v14/return-gate.png",
+      "bytes": 3018279,
+      "sha256": "dfed5ff25f71df4429600c1ef2b7a4e97908a3e7ccbf1995b492d16a5191010a"
+    }
+  }
+}

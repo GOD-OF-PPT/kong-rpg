@@ -1,0 +1,106 @@
+{
+  "version": "12.1.3",
+  "method": "Observed pixels in production effect renderer; previous effect layer git-pinned to 9e7708d; actor alpha observed during a full render.",
+  "before": {
+    "wukong": {
+      "box": {
+        "x": 355,
+        "y": 331,
+        "w": 355,
+        "h": 130
+      },
+      "count": 3406,
+      "outside": 1162,
+      "span": 346
+    },
+    "nezha": {
+      "box": {
+        "x": 112,
+        "y": 318,
+        "w": 600,
+        "h": 160
+      },
+      "count": 3031,
+      "outside": 0,
+      "span": 226
+    }
+  },
+  "after": {
+    "wukong": {
+      "box": {
+        "x": 355,
+        "y": 331,
+        "w": 355,
+        "h": 130
+      },
+      "count": 3436,
+      "outside": 0,
+      "span": 345
+    },
+    "nezha": {
+      "box": {
+        "x": 112,
+        "y": 318,
+        "w": 600,
+        "h": 160
+      },
+      "count": 7620,
+      "outside": 0,
+      "span": 560
+    }
+  },
+  "alpha": [
+    {
+      "status": "ultimate",
+      "alpha": 1
+    },
+    {
+      "status": "ward",
+      "alpha": 1
+    },
+    {
+      "status": "dash",
+      "alpha": 1
+    },
+    {
+      "status": "hurt",
+      "alpha": 0.45
+    }
+  ],
+  "materials": [
+    {
+      "id": "ink-seal",
+      "foreignCyanPixels": 0
+    },
+    {
+      "id": "tower-seal",
+      "foreignCyanPixels": 0
+    },
+    {
+      "id": "stone-crack",
+      "foreignCyanPixels": 0
+    },
+    {
+      "id": "dust",
+      "foreignCyanPixels": 0
+    }
+  ],
+  "checks": [
+    {
+      "name": "Wukong wave stays within actual directional damage box",
+      "pass": true
+    },
+    {
+      "name": "Nezha first pulse visibly reaches its immediately applied range",
+      "pass": true
+    },
+    {
+      "name": "active protection actions keep actor opaque; injury still blinks",
+      "pass": true
+    },
+    {
+      "name": "ink/tower/stone/dust no longer contain cyan water strips",
+      "pass": true
+    }
+  ]
+}

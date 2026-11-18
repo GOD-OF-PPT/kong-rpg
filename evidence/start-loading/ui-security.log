@@ -1,0 +1,126 @@
+PASS src/main.js has no HTML parsing sink
+PASS src/content.js has no HTML parsing sink
+PASS src/motion.js has no HTML parsing sink
+PASS src/world.js has no HTML parsing sink
+PASS src/progression.js has no HTML parsing sink
+PASS src/journey.js has no HTML parsing sink
+PASS src/heroes.js has no HTML parsing sink
+PASS src/signature.js has no HTML parsing sink
+PASS src/simulation.js has no HTML parsing sink
+PASS src/challenge.js has no HTML parsing sink
+PASS src/realms.js has no HTML parsing sink
+PASS src/warriors.js has no HTML parsing sink
+PASS src/celestial.js has no HTML parsing sink
+PASS src/campaign-data.js has no HTML parsing sink
+PASS src/enemy-effects.js has no HTML parsing sink
+PASS src/route-layouts.js has no HTML parsing sink
+PASS src/campaign-world.js has no HTML parsing sink
+PASS src/campaign-combat.js has no HTML parsing sink
+PASS src/campaign-state.js has no HTML parsing sink
+PASS src/combat-identity.js has no HTML parsing sink
+PASS src/storage.js has no HTML parsing sink
+PASS src/renderer.js has no HTML parsing sink
+PASS src/art.js has no HTML parsing sink
+PASS src/art-catalog.js has no HTML parsing sink
+PASS src/asset-loader.js has no HTML parsing sink
+PASS src/visuals.js has no HTML parsing sink
+PASS src/combat-art.js has no HTML parsing sink
+PASS src/progression-art.js has no HTML parsing sink
+PASS src/journey-art.js has no HTML parsing sink
+PASS src/hero-art.js has no HTML parsing sink
+PASS src/map-data.js has no HTML parsing sink
+PASS src/realm-dressing-data.js has no HTML parsing sink
+PASS src/map-art.js has no HTML parsing sink
+PASS src/scene-data.js has no HTML parsing sink
+PASS src/scene-art.js has no HTML parsing sink
+PASS src/signature-data.js has no HTML parsing sink
+PASS src/signature-art.js has no HTML parsing sink
+PASS src/challenge-art.js has no HTML parsing sink
+PASS src/actor-states-data.js has no HTML parsing sink
+PASS src/actor-repair-data.js has no HTML parsing sink
+PASS src/actor-state-art.js has no HTML parsing sink
+PASS src/dialog-art.js has no HTML parsing sink
+PASS src/v8-art-data.js has no HTML parsing sink
+PASS src/v8-art.js has no HTML parsing sink
+PASS src/celestial-art-data.js has no HTML parsing sink
+PASS src/celestial-art.js has no HTML parsing sink
+PASS src/campaign-art-data.js has no HTML parsing sink
+PASS src/audit-art-data.js has no HTML parsing sink
+PASS src/campaign-art.js has no HTML parsing sink
+PASS src/enemy-marker-data.js has no HTML parsing sink
+PASS src/enemy-marker-art.js has no HTML parsing sink
+PASS src/cloud-visual-data.js has no HTML parsing sink
+PASS src/cloud-visuals.js has no HTML parsing sink
+PASS src/combat-feedback-data.js has no HTML parsing sink
+PASS src/combat-feedback-art.js has no HTML parsing sink
+PASS src/motion-data.js has no HTML parsing sink
+PASS src/motion-art.js has no HTML parsing sink
+PASS src/enemy-effects-data.js has no HTML parsing sink
+PASS src/enemy-effects-art.js has no HTML parsing sink
+PASS src/combat-identity-data.js has no HTML parsing sink
+PASS src/combat-identity-art.js has no HTML parsing sink
+PASS src/input.js has no HTML parsing sink
+PASS src/music.js has no HTML parsing sink
+PASS src/audio.js has no HTML parsing sink
+PASS src/brand.js has no HTML parsing sink
+PASS src/ui.js has no HTML parsing sink
+PASS src/fullscreen.js has no HTML parsing sink
+PASS src/app.js has no HTML parsing sink
+PASS built HTML has no HTML parsing sink
+PASS built HTML hash and byte count match its manifest
+PASS dist/game.ba787fdf0c8154d9.js has no HTML parsing sink
+PASS dist-offline/assets/music/menu-01.6445171b29975a97.js has no HTML parsing sink
+PASS dist-offline/assets/music/menu-02.2dd127ad9b7d29a1.js has no HTML parsing sink
+PASS dist-offline/assets/music/gameplay.124af4acc7187463.js has no HTML parsing sink
+PASS dist-offline/game.e5cb67909a47e1bb.js has no HTML parsing sink
+PASS renders menu
+PASS challenge starts locked
+PASS renders loading
+PASS loading progress retains its accessible range
+PASS renders menu
+PASS renders help
+PASS help retains nine lessons
+PASS clean package offers no missing original-game link
+PASS renders legacy
+PASS old saves can be backed up without a missing HTML dependency
+PASS renders history
+PASS empty history renders artwork
+PASS renders prologue
+PASS prologue retains five chapters
+PASS renders heroes
+PASS all three hero choices render
+PASS renders start
+PASS starter cards retain descriptions
+PASS renders playing
+PASS public menu and real attack input start a run
+PASS renders paused
+PASS renders build
+PASS renders paused
+PASS renders paused
+PASS imported seed stays literal text
+PASS seed input preserves literal attribute characters
+PASS renders history
+PASS saved history seed stays literal text
+PASS renders reward
+PASS renders build
+PASS renders reward
+PASS renders replace
+PASS replacement retains three choices
+PASS renders reward
+PASS renders art-choice
+PASS renders playing
+PASS world labels use actual positioned elements
+PASS combat and world label text cannot create markup
+PASS renders build
+PASS learned art appears in loadout
+PASS renders dead
+PASS damage source stays literal text
+PASS rating renders DOM elements
+PASS renders won
+PASS renders epilogue
+PASS dynamic title and aria attribute cannot create markup
+PASS text, attributes and CSS property values stay isolated
+PASS no injected handler or dialog executes
+PASS no page or game-loop errors
+PASS standalone UI works without HTTP requests
+{"browser":"156.0.4314.50","checks":125,"errors":[],"requests":[]}

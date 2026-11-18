@@ -1,0 +1,95 @@
+{
+  "version": "12.0.0",
+  "checks": [
+    {
+      "name": "two intentional taps 108ms apart produce two swings",
+      "pass": true,
+      "actual": 2
+    },
+    {
+      "name": "movement does not reverse an already active strike",
+      "pass": true,
+      "data": {
+        "before": {
+          "x": 110,
+          "y": 398,
+          "w": 65,
+          "h": 42
+        },
+        "after": {
+          "x": 110,
+          "y": 398,
+          "w": 65,
+          "h": 42
+        },
+        "face": 1
+      }
+    },
+    {
+      "name": "hurt reaction cannot hide a newly damaging main attack",
+      "pass": true,
+      "data": {
+        "hurt": 0.23166666666666666,
+        "attack": 0
+      }
+    },
+    {
+      "name": "five first-region routes have at least four structural profiles",
+      "pass": true,
+      "data": [
+        {
+          "stage": 0,
+          "profile": {
+            "floors": 4,
+            "shelves": 5,
+            "rows": [
+              3,
+              4
+            ]
+          }
+        },
+        {
+          "stage": 3,
+          "profile": {
+            "floors": 1,
+            "shelves": 4,
+            "rows": [
+              4
+            ]
+          }
+        },
+        {
+          "stage": 6,
+          "profile": {
+            "floors": 5,
+            "shelves": 3,
+            "rows": [
+              4
+            ]
+          }
+        },
+        {
+          "stage": 9,
+          "profile": {
+            "floors": 2,
+            "shelves": 7,
+            "rows": [
+              4
+            ]
+          }
+        },
+        {
+          "stage": 12,
+          "profile": {
+            "floors": 5,
+            "shelves": 6,
+            "rows": [
+              3,
+              4
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

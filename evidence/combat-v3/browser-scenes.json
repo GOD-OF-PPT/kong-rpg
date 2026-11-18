@@ -1,0 +1,160 @@
+{
+  "sha256": "a284de700292d73c3972018f7318152e8661f2e78fe52077ca6ac2b09d39b5c3",
+  "checks": [
+    {
+      "name": "scenario 0 restored before exercising input",
+      "pass": true
+    },
+    {
+      "name": "E no longer triggers world interaction",
+      "pass": true
+    },
+    {
+      "name": "F activates normal lamp reward",
+      "pass": true
+    },
+    {
+      "name": "scenario 3 restored before exercising input",
+      "pass": true
+    },
+    {
+      "name": "scenario 3 restored before exercising input",
+      "pass": true
+    },
+    {
+      "name": "scenario 3 restored before exercising input",
+      "pass": true
+    },
+    {
+      "name": "scenario 0 restored before exercising input",
+      "pass": true
+    },
+    {
+      "name": "scenario 0 restored before exercising input",
+      "pass": true
+    },
+    {
+      "name": "scenario 0 restored before exercising input",
+      "pass": true
+    },
+    {
+      "name": "E leaves node 0 unstarted",
+      "pass": true
+    },
+    {
+      "name": "F starts node 0",
+      "pass": true
+    },
+    {
+      "name": "scenario 1 restored before exercising input",
+      "pass": true
+    },
+    {
+      "name": "E leaves node 1 unstarted",
+      "pass": true
+    },
+    {
+      "name": "F starts node 1",
+      "pass": true
+    },
+    {
+      "name": "bridge focus cost is paid",
+      "pass": true
+    },
+    {
+      "name": "lit bridge collision is enabled",
+      "pass": true
+    },
+    {
+      "name": "scenario 2 restored before exercising input",
+      "pass": true
+    },
+    {
+      "name": "E leaves node 2 unstarted",
+      "pass": true
+    },
+    {
+      "name": "F starts node 2",
+      "pass": true
+    },
+    {
+      "name": "scenario 0 restored before exercising input",
+      "pass": true
+    },
+    {
+      "name": "saved story is readable in real pause journal",
+      "pass": true
+    },
+    {
+      "name": "journal participates in modal keyboard focus",
+      "pass": true
+    },
+    {
+      "name": "scenario 2 restored before exercising input",
+      "pass": true
+    },
+    {
+      "name": "scenario 1 restored before exercising input",
+      "pass": true
+    },
+    {
+      "name": "active enemy spell survives actual browser reload",
+      "pass": true
+    },
+    {
+      "name": "scenario 3 restored before exercising input",
+      "pass": true
+    },
+    {
+      "name": "scenario 3 restored before exercising input",
+      "pass": true
+    },
+    {
+      "name": "bell creates a visible gap in final encounter",
+      "pass": true
+    },
+    {
+      "name": "v2 import enters old-journey flow",
+      "pass": true
+    },
+    {
+      "name": "preserved v2.1 actually restores v2 save",
+      "pass": true
+    },
+    {
+      "name": "no page exceptions",
+      "pass": true
+    },
+    {
+      "name": "offline content scenes request no network",
+      "pass": true
+    },
+    {
+      "name": "v3 portable save restores with persistent storage disabled",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "network": [],
+  "views": [
+    "f-lamp",
+    "attack-light",
+    "attack-rising",
+    "attack-heavy",
+    "shield-block",
+    "slam-impact",
+    "node-0-ready",
+    "node-0-active",
+    "node-1-ready",
+    "node-1-active",
+    "node-2-ready",
+    "node-2-active",
+    "node-rescued",
+    "pause-journal",
+    "enemy-shield-rush-warning",
+    "enemy-ground-spell-warning",
+    "boss-rain-warning",
+    "boss-rain-bell-relief"
+  ],
+  "video": "evidence/combat-v3/video/page@14a0224ac9f0c5acec8ce9c9a39d2adf.webm"
+}

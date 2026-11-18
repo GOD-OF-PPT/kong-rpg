@@ -1,0 +1,121 @@
+{
+  "method": "RGBA retained, explicit nonuniform gutters, shared body scale, nearest-neighbour",
+  "source": {
+    "path": "assets\\art-audit-v7\\actor-states-source.png",
+    "sha256": "cefc88a8159770ce1de45cf7873c1077fe7e3f780622450e207c8b4d6201c486"
+  },
+  "output": {
+    "path": "assets\\art-audit-v7\\actor-states.png",
+    "sha256": "6c87afd7f8d848629a076dc88edf17313e38d4feb2a8ee4413e8f8e6a2377534"
+  },
+  "frames": {
+    "wukong-dead": {
+      "source": [
+        0,
+        0,
+        740,
+        650
+      ],
+      "bounds": [
+        65,
+        190,
+        713,
+        609
+      ],
+      "sourceAnchor": [
+        385,
+        610
+      ],
+      "scale": 0.147117296222664,
+      "size": [
+        95,
+        62
+      ],
+      "offset": [
+        17,
+        50
+      ]
+    },
+    "nezha-dead": {
+      "source": [
+        740,
+        0,
+        1254,
+        650
+      ],
+      "bounds": [
+        27,
+        347,
+        422,
+        608
+      ],
+      "sourceAnchor": [
+        950,
+        610
+      ],
+      "scale": 0.147117296222664,
+      "size": [
+        58,
+        38
+      ],
+      "offset": [
+        37,
+        74
+      ]
+    },
+    "nezha-ultimate-start": {
+      "source": [
+        0,
+        650,
+        627,
+        1254
+      ],
+      "bounds": [
+        113,
+        35,
+        502,
+        538
+      ],
+      "sourceAnchor": [
+        345,
+        1188
+      ],
+      "scale": 0.147117296222664,
+      "size": [
+        57,
+        74
+      ],
+      "offset": [
+        30,
+        38
+      ]
+    },
+    "nezha-ultimate-release": {
+      "source": [
+        627,
+        650,
+        1254,
+        1254
+      ],
+      "bounds": [
+        55,
+        84,
+        521,
+        538
+      ],
+      "sourceAnchor": [
+        932,
+        1188
+      ],
+      "scale": 0.147117296222664,
+      "size": [
+        69,
+        67
+      ],
+      "offset": [
+        27,
+        45
+      ]
+    }
+  }
+}

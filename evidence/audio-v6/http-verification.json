@@ -1,0 +1,772 @@
+{
+  "version": "6.1.0",
+  "kind": "http",
+  "entrySha256": "7850f5ac038c85d7f5a49a727d80e6b2776dcc14fab8407612979323c59c671b",
+  "environment": {
+    "os": "10.0.26200",
+    "cpu": "Intel(R) Core(TM) i5-14600K",
+    "node": "v22.12.0",
+    "viewport": "1440x1000",
+    "audio": "WebAudio decode, scheduled buffers and OfflineAudioContext; no microphone or human listening"
+  },
+  "checks": [
+    {
+      "name": "eight embedded WAVs decode after real user gesture",
+      "pass": true,
+      "context": "running",
+      "sampleRate": 48000,
+      "baseLatencyMs": 10,
+      "outputLatencyMs": 40,
+      "volume": 0.25,
+      "decoded": [
+        "staff-light-a",
+        "staff-light-b",
+        "staff-heavy",
+        "shield-block",
+        "ring-hit-a",
+        "ring-hit-b",
+        "ground-slam",
+        "ultimate-hit"
+      ],
+      "activeVoices": 0,
+      "played": {},
+      "fallbacks": 0,
+      "coalesced": 0,
+      "stolen": 0,
+      "maxVoices": 0,
+      "decodeErrors": [],
+      "recent": []
+    },
+    {
+      "name": "keyboard movement remains active",
+      "pass": true
+    },
+    {
+      "name": "whiff does not produce a contact sample",
+      "pass": true
+    },
+    {
+      "name": "light resolves a real contact through keyboard and production event routing",
+      "pass": true,
+      "added": [
+        [
+          "staff-light-a",
+          1
+        ]
+      ]
+    },
+    {
+      "name": "light pause clears sample voices",
+      "pass": true
+    },
+    {
+      "name": "heavy resolves a real contact through keyboard and production event routing",
+      "pass": true,
+      "added": [
+        [
+          "staff-heavy",
+          1
+        ]
+      ]
+    },
+    {
+      "name": "heavy pause clears sample voices",
+      "pass": true
+    },
+    {
+      "name": "block resolves a real contact through keyboard and production event routing",
+      "pass": true,
+      "added": [
+        [
+          "shield-block",
+          1
+        ]
+      ]
+    },
+    {
+      "name": "block pause clears sample voices",
+      "pass": true
+    },
+    {
+      "name": "slam resolves a real contact through keyboard and production event routing",
+      "pass": true,
+      "added": [
+        [
+          "ground-slam",
+          1
+        ]
+      ]
+    },
+    {
+      "name": "slam contact does not double the heavy staff body",
+      "pass": true
+    },
+    {
+      "name": "slam pause clears sample voices",
+      "pass": true
+    },
+    {
+      "name": "ultimate resolves a real contact through keyboard and production event routing",
+      "pass": true,
+      "added": [
+        [
+          "ultimate-hit",
+          1
+        ]
+      ]
+    },
+    {
+      "name": "ultimate area damage has one contact body",
+      "pass": true
+    },
+    {
+      "name": "ultimate pause clears sample voices",
+      "pass": true
+    },
+    {
+      "name": "ring resolves a real contact through keyboard and production event routing",
+      "pass": true,
+      "added": [
+        [
+          "ring-hit-a",
+          1
+        ]
+      ]
+    },
+    {
+      "name": "ring pause clears sample voices",
+      "pass": true
+    },
+    {
+      "name": "paused DOM input cannot attack",
+      "pass": true
+    },
+    {
+      "name": "mute setting reaches audio master",
+      "pass": true
+    },
+    {
+      "name": "save exports and restores schema 6",
+      "pass": true
+    },
+    {
+      "name": "mute survives reload",
+      "pass": true
+    },
+    {
+      "name": "stress mix renders nonzero audio without clipping",
+      "pass": true,
+      "peak": 0.7990430593490601
+    },
+    {
+      "name": "all six simultaneous categories route and repeated targets coalesce",
+      "pass": true
+    },
+    {
+      "name": "area pulse hitting seal and enemy still plays once",
+      "pass": true
+    },
+    {
+      "name": "mute produces digital silence",
+      "pass": true
+    },
+    {
+      "name": "short tails end before next second",
+      "pass": true
+    },
+    {
+      "name": "no decode fallback used",
+      "pass": true
+    },
+    {
+      "name": "no runtime errors",
+      "pass": true
+    }
+  ],
+  "scenes": [
+    {
+      "name": "light",
+      "seed": "AUDIO-1026",
+      "keys": [
+        "KeyJ"
+      ],
+      "submittedMs": 1791,
+      "sounds": [
+        {
+          "id": "staff-light-a",
+          "time": 0.9413,
+          "submittedMs": 1850.7
+        }
+      ],
+      "events": [
+        {
+          "type": "room",
+          "t": 0,
+          "wall": 0,
+          "stage": 0
+        },
+        {
+          "type": "room",
+          "t": 0,
+          "wall": 0,
+          "stage": 0
+        },
+        {
+          "type": "swing",
+          "t": 0.008,
+          "wall": 0.008,
+          "combo": 1
+        },
+        {
+          "type": "hint",
+          "t": 0.008,
+          "wall": 0.008,
+          "text": "看到举刀再跳；连续轻棍不会冻结敌招。"
+        },
+        {
+          "type": "hit",
+          "t": 0.058,
+          "wall": 0.058,
+          "target": 0,
+          "kind": "blade",
+          "amount": 14,
+          "impact": "light",
+          "x": 447,
+          "y": 418
+        }
+      ]
+    },
+    {
+      "name": "heavy",
+      "seed": "AUDIO-1026",
+      "keys": [
+        "KeyJ"
+      ],
+      "submittedMs": 2123.5,
+      "sounds": [
+        {
+          "id": "staff-heavy",
+          "time": 1.36,
+          "submittedMs": 2266.9
+        }
+      ],
+      "events": [
+        {
+          "type": "room",
+          "t": 0,
+          "wall": 0,
+          "stage": 0
+        },
+        {
+          "type": "room",
+          "t": 0,
+          "wall": 0,
+          "stage": 0
+        },
+        {
+          "type": "swing",
+          "t": 0.008,
+          "wall": 0.008,
+          "combo": 3
+        },
+        {
+          "type": "hint",
+          "t": 0.008,
+          "wall": 0.008,
+          "text": "看到举刀再跳；连续轻棍不会冻结敌招。"
+        },
+        {
+          "type": "hit",
+          "t": 0.133,
+          "wall": 0.133,
+          "target": 0,
+          "kind": "blade",
+          "amount": 27,
+          "impact": "heavy",
+          "x": 447,
+          "y": 418
+        }
+      ]
+    },
+    {
+      "name": "block",
+      "seed": "AUDIO-1026",
+      "keys": [
+        "KeyJ"
+      ],
+      "submittedMs": 2756.2999999523163,
+      "sounds": [
+        {
+          "id": "shield-block",
+          "time": 1.912,
+          "submittedMs": 2816.9
+        }
+      ],
+      "events": [
+        {
+          "type": "room",
+          "t": 0,
+          "wall": 0,
+          "stage": 0
+        },
+        {
+          "type": "room",
+          "t": 0,
+          "wall": 0,
+          "stage": 0
+        },
+        {
+          "type": "swing",
+          "t": 0.008,
+          "wall": 0.008,
+          "combo": 1
+        },
+        {
+          "type": "blocked",
+          "t": 0.058,
+          "wall": 0.058,
+          "target": 1
+        }
+      ]
+    },
+    {
+      "name": "slam",
+      "seed": "AUDIO-1026",
+      "keys": [
+        "KeyS",
+        "KeyJ"
+      ],
+      "submittedMs": 3088.7999999523163,
+      "sounds": [
+        {
+          "id": "ground-slam",
+          "time": 2.2107,
+          "submittedMs": 3117.8
+        }
+      ],
+      "events": [
+        {
+          "type": "room",
+          "t": 0,
+          "wall": 0,
+          "stage": 0
+        },
+        {
+          "type": "room",
+          "t": 0,
+          "wall": 0,
+          "stage": 0
+        },
+        {
+          "type": "slam",
+          "t": 0.008,
+          "wall": 0.008
+        },
+        {
+          "type": "hint",
+          "t": 0.008,
+          "wall": 0.008,
+          "text": "看到举刀再跳；连续轻棍不会冻结敌招。"
+        },
+        {
+          "type": "slam-land",
+          "t": 0.025,
+          "wall": 0.025,
+          "fire": false
+        },
+        {
+          "type": "swing",
+          "t": 0.183,
+          "wall": 0.183,
+          "combo": 1
+        },
+        {
+          "type": "swing",
+          "t": 0.475,
+          "wall": 0.475,
+          "combo": 2
+        }
+      ]
+    },
+    {
+      "name": "ultimate",
+      "seed": "AUDIO-1026",
+      "keys": [
+        "KeyR"
+      ],
+      "submittedMs": 3924.6999999284744,
+      "sounds": [
+        {
+          "id": "ultimate-hit",
+          "time": 3.2213,
+          "submittedMs": 4133.8
+        }
+      ],
+      "events": [
+        {
+          "type": "room",
+          "t": 0,
+          "wall": 0,
+          "stage": 0
+        },
+        {
+          "type": "room",
+          "t": 0,
+          "wall": 0,
+          "stage": 0
+        },
+        {
+          "type": "ultimate",
+          "t": 0.008,
+          "wall": 0.008
+        },
+        {
+          "type": "hint",
+          "t": 0.008,
+          "wall": 0.008,
+          "text": "看到举刀再跳；连续轻棍不会冻结敌招。"
+        },
+        {
+          "type": "hit",
+          "t": 0.208,
+          "wall": 0.208,
+          "target": 0,
+          "kind": "blade",
+          "amount": 64,
+          "impact": "ultimate",
+          "x": 447,
+          "y": 418
+        },
+        {
+          "type": "kill",
+          "t": 0.208,
+          "wall": 0.208,
+          "kind": "blade"
+        },
+        {
+          "type": "drop",
+          "t": 0.208,
+          "wall": 0.208,
+          "id": 0,
+          "kind": "focus",
+          "x": 439,
+          "y": 420
+        },
+        {
+          "type": "ultimate-hit",
+          "t": 0.208,
+          "wall": 0.208,
+          "pulse": 1,
+          "box": {
+            "x": 331,
+            "y": 331,
+            "w": 355,
+            "h": 130
+          }
+        }
+      ]
+    },
+    {
+      "name": "ring",
+      "seed": "AUDIO-1026",
+      "keys": [
+        "KeyJ"
+      ],
+      "submittedMs": 4924.600000023842,
+      "sounds": [
+        {
+          "id": "ring-hit-a",
+          "time": 4.3707,
+          "submittedMs": 5283.9
+        }
+      ],
+      "events": [
+        {
+          "type": "room",
+          "t": 0,
+          "wall": 0,
+          "stage": 0
+        },
+        {
+          "type": "room",
+          "t": 0,
+          "wall": 0,
+          "stage": 0
+        },
+        {
+          "type": "swing",
+          "t": 0.008,
+          "wall": 0.008,
+          "combo": 1,
+          "hero": "nezha"
+        },
+        {
+          "type": "ring-throw",
+          "t": 0.15,
+          "wall": 0.15
+        },
+        {
+          "type": "hit",
+          "t": 0.367,
+          "wall": 0.367,
+          "target": 0,
+          "kind": "blade",
+          "amount": 18,
+          "impact": "ring",
+          "x": 447,
+          "y": 418
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "requests": [
+    "http://127.0.0.1:5188/release/index.html?audio=6.1.0",
+    "http://127.0.0.1:5188/release/index.html?audio=6.1.0"
+  ],
+  "browser": "156.0.4314.42",
+  "mix": {
+    "burst": {
+      "peak": 0.7990430593490601,
+      "rms": 0.10439612227393437,
+      "tail": 0,
+      "diagnostics": {
+        "context": "suspended",
+        "sampleRate": 48000,
+        "baseLatencyMs": 0,
+        "outputLatencyMs": 0,
+        "volume": 1,
+        "decoded": [
+          "staff-light-a",
+          "staff-light-b",
+          "staff-heavy",
+          "shield-block",
+          "ring-hit-a",
+          "ring-hit-b",
+          "ground-slam",
+          "ultimate-hit"
+        ],
+        "activeVoices": 6,
+        "played": {
+          "staff-light-a": 1,
+          "ring-hit-a": 1,
+          "staff-heavy": 1,
+          "shield-block": 1,
+          "ground-slam": 1,
+          "ultimate-hit": 1
+        },
+        "fallbacks": 0,
+        "coalesced": 20,
+        "stolen": 0,
+        "maxVoices": 6,
+        "decodeErrors": [],
+        "recent": [
+          {
+            "id": "staff-light-a",
+            "time": 0,
+            "submittedMs": 1086.1
+          },
+          {
+            "id": "ring-hit-a",
+            "time": 0,
+            "submittedMs": 1086.2
+          },
+          {
+            "id": "staff-heavy",
+            "time": 0,
+            "submittedMs": 1086.2
+          },
+          {
+            "id": "shield-block",
+            "time": 0,
+            "submittedMs": 1086.2
+          },
+          {
+            "id": "ground-slam",
+            "time": 0,
+            "submittedMs": 1086.2
+          },
+          {
+            "id": "ultimate-hit",
+            "time": 0,
+            "submittedMs": 1086.3
+          }
+        ]
+      }
+    },
+    "muted": {
+      "peak": 0,
+      "rms": 0,
+      "tail": 0,
+      "diagnostics": {
+        "context": "suspended",
+        "sampleRate": 48000,
+        "baseLatencyMs": 0,
+        "outputLatencyMs": 0,
+        "volume": 0,
+        "decoded": [
+          "staff-light-a",
+          "staff-light-b",
+          "staff-heavy",
+          "shield-block",
+          "ring-hit-a",
+          "ring-hit-b",
+          "ground-slam",
+          "ultimate-hit"
+        ],
+        "activeVoices": 6,
+        "played": {
+          "staff-light-a": 1,
+          "ring-hit-a": 1,
+          "staff-heavy": 1,
+          "shield-block": 1,
+          "ground-slam": 1,
+          "ultimate-hit": 1
+        },
+        "fallbacks": 0,
+        "coalesced": 20,
+        "stolen": 0,
+        "maxVoices": 6,
+        "decodeErrors": [],
+        "recent": [
+          {
+            "id": "staff-light-a",
+            "time": 0,
+            "submittedMs": 1102.5
+          },
+          {
+            "id": "ring-hit-a",
+            "time": 0,
+            "submittedMs": 1102.5
+          },
+          {
+            "id": "staff-heavy",
+            "time": 0,
+            "submittedMs": 1102.5
+          },
+          {
+            "id": "shield-block",
+            "time": 0,
+            "submittedMs": 1102.5
+          },
+          {
+            "id": "ground-slam",
+            "time": 0,
+            "submittedMs": 1102.5
+          },
+          {
+            "id": "ultimate-hit",
+            "time": 0,
+            "submittedMs": 1102.5
+          }
+        ]
+      }
+    },
+    "stopped": {
+      "peak": 0.11979904770851135,
+      "rms": 0.003677814470539307,
+      "tail": 0,
+      "diagnostics": {
+        "context": "suspended",
+        "sampleRate": 48000,
+        "baseLatencyMs": 0,
+        "outputLatencyMs": 0,
+        "volume": 1,
+        "decoded": [
+          "staff-light-a",
+          "staff-light-b",
+          "staff-heavy",
+          "shield-block",
+          "ring-hit-a",
+          "ring-hit-b",
+          "ground-slam",
+          "ultimate-hit"
+        ],
+        "activeVoices": 0,
+        "played": {
+          "staff-light-a": 1,
+          "ring-hit-a": 1,
+          "staff-heavy": 1,
+          "shield-block": 1,
+          "ground-slam": 1,
+          "ultimate-hit": 1
+        },
+        "fallbacks": 0,
+        "coalesced": 20,
+        "stolen": 0,
+        "maxVoices": 6,
+        "decodeErrors": [],
+        "recent": [
+          {
+            "id": "staff-light-a",
+            "time": 0,
+            "submittedMs": 1114
+          },
+          {
+            "id": "ring-hit-a",
+            "time": 0,
+            "submittedMs": 1114
+          },
+          {
+            "id": "staff-heavy",
+            "time": 0,
+            "submittedMs": 1114
+          },
+          {
+            "id": "shield-block",
+            "time": 0,
+            "submittedMs": 1114
+          },
+          {
+            "id": "ground-slam",
+            "time": 0,
+            "submittedMs": 1114
+          },
+          {
+            "id": "ultimate-hit",
+            "time": 0,
+            "submittedMs": 1114.1
+          }
+        ]
+      }
+    },
+    "area": {
+      "peak": 0.5885910987854004,
+      "rms": 0.06684883126323699,
+      "tail": 0,
+      "diagnostics": {
+        "context": "suspended",
+        "sampleRate": 48000,
+        "baseLatencyMs": 0,
+        "outputLatencyMs": 0,
+        "volume": 1,
+        "decoded": [
+          "staff-light-a",
+          "staff-light-b",
+          "staff-heavy",
+          "shield-block",
+          "ring-hit-a",
+          "ring-hit-b",
+          "ground-slam",
+          "ultimate-hit"
+        ],
+        "activeVoices": 1,
+        "played": {
+          "ultimate-hit": 1
+        },
+        "fallbacks": 0,
+        "coalesced": 0,
+        "stolen": 0,
+        "maxVoices": 1,
+        "decodeErrors": [],
+        "recent": [
+          {
+            "id": "ultimate-hit",
+            "time": 0,
+            "submittedMs": 1128.7
+          }
+        ]
+      }
+    }
+  }
+}

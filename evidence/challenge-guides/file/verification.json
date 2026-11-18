@@ -1,0 +1,418 @@
+{
+  "version": "12.2.1",
+  "mode": "file",
+  "sha256": "565d8ad824c2386ec4012e12909f5b6c170edf4dc095bac8abc23abb9a217f64",
+  "method": "Production renderer pixel probes, public fixture import then actual resume/pause input and screenshots. Not a human playtest.",
+  "checks": [
+    {
+      "name": "all 19 normal skills retain predictive overlays and head markers",
+      "pass": true
+    },
+    {
+      "name": "all 19 challenge skills paint zero predictive overlay pixels and no head markers",
+      "pass": true
+    },
+    {
+      "name": "anticipation cues and actual released spell effects remain visible in both modes",
+      "pass": true
+    },
+    {
+      "name": "normal axe-cleave HUD uses the current difficulty",
+      "pass": true
+    },
+    {
+      "name": "normal axe-cleave live warning state still exports and restores",
+      "pass": true
+    },
+    {
+      "name": "challenge axe-cleave HUD uses the current difficulty",
+      "pass": true
+    },
+    {
+      "name": "challenge axe-cleave live warning state still exports and restores",
+      "pass": true
+    },
+    {
+      "name": "normal dragon-column HUD uses the current difficulty",
+      "pass": true
+    },
+    {
+      "name": "normal dragon-column live warning state still exports and restores",
+      "pass": true
+    },
+    {
+      "name": "challenge dragon-column HUD uses the current difficulty",
+      "pass": true
+    },
+    {
+      "name": "challenge dragon-column live warning state still exports and restores",
+      "pass": true
+    },
+    {
+      "name": "normal soldier-bolt live warning state still exports and restores",
+      "pass": true
+    },
+    {
+      "name": "challenge soldier-bolt live warning state still exports and restores",
+      "pass": true
+    },
+    {
+      "name": "returning from challenge to normal restores actual HUD guidance",
+      "pass": true
+    },
+    {
+      "name": "no browser exceptions",
+      "pass": true
+    },
+    {
+      "name": "offline release sends no HTTP requests",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "network": [],
+  "probes": [
+    {
+      "difficulty": "normal",
+      "move": "axe-cleave",
+      "telegraph": 9702,
+      "boundary": 402,
+      "markers": 1,
+      "bodyCue": 44,
+      "effect": 3884
+    },
+    {
+      "difficulty": "normal",
+      "move": "axe-quake",
+      "telegraph": 13352,
+      "boundary": 1182,
+      "markers": 1,
+      "bodyCue": 44,
+      "effect": 3249
+    },
+    {
+      "difficulty": "normal",
+      "move": "axe-rush",
+      "telegraph": 29658,
+      "boundary": 754,
+      "markers": 1,
+      "bodyCue": 44,
+      "effect": 391
+    },
+    {
+      "difficulty": "normal",
+      "move": "judge-mark",
+      "telegraph": 7122,
+      "boundary": 518,
+      "markers": 1,
+      "bodyCue": 38,
+      "effect": 1549
+    },
+    {
+      "difficulty": "normal",
+      "move": "judge-chain",
+      "telegraph": 7658,
+      "boundary": 842,
+      "markers": 1,
+      "bodyCue": 38,
+      "effect": 5978
+    },
+    {
+      "difficulty": "normal",
+      "move": "judge-echo",
+      "telegraph": 7122,
+      "boundary": 518,
+      "markers": 1,
+      "bodyCue": 38,
+      "effect": 1549
+    },
+    {
+      "difficulty": "normal",
+      "move": "venom-fan",
+      "telegraph": 6902,
+      "boundary": 1082,
+      "markers": 1,
+      "bodyCue": 44,
+      "effect": 444
+    },
+    {
+      "difficulty": "normal",
+      "move": "venom-tide",
+      "telegraph": 13352,
+      "boundary": 1182,
+      "markers": 1,
+      "bodyCue": 44,
+      "effect": 148
+    },
+    {
+      "difficulty": "normal",
+      "move": "head-dive",
+      "telegraph": 29658,
+      "boundary": 754,
+      "markers": 1,
+      "bodyCue": 44,
+      "effect": 398
+    },
+    {
+      "difficulty": "normal",
+      "move": "dragon-surge",
+      "telegraph": 18266,
+      "boundary": 1671,
+      "markers": 1,
+      "bodyCue": 48,
+      "effect": 9473
+    },
+    {
+      "difficulty": "normal",
+      "move": "dragon-column",
+      "telegraph": 10972,
+      "boundary": 778,
+      "markers": 1,
+      "bodyCue": 48,
+      "effect": 15401
+    },
+    {
+      "difficulty": "normal",
+      "move": "dragon-thunder",
+      "telegraph": 7122,
+      "boundary": 518,
+      "markers": 1,
+      "bodyCue": 40,
+      "effect": 3420
+    },
+    {
+      "difficulty": "normal",
+      "move": "tower-prison",
+      "telegraph": 16676,
+      "boundary": 906,
+      "markers": 1,
+      "bodyCue": 58,
+      "effect": 11708
+    },
+    {
+      "difficulty": "normal",
+      "move": "king-sword",
+      "telegraph": 9702,
+      "boundary": 402,
+      "markers": 1,
+      "bodyCue": 44,
+      "effect": 3884
+    },
+    {
+      "difficulty": "normal",
+      "move": "king-fire",
+      "telegraph": 13352,
+      "boundary": 1182,
+      "markers": 1,
+      "bodyCue": 94,
+      "effect": 102
+    },
+    {
+      "difficulty": "normal",
+      "move": "shield-wave",
+      "telegraph": 5992,
+      "boundary": 542,
+      "markers": 1,
+      "bodyCue": 44,
+      "effect": 133
+    },
+    {
+      "difficulty": "normal",
+      "move": "soldier-slash",
+      "telegraph": 3912,
+      "boundary": 222,
+      "markers": 1,
+      "bodyCue": 44,
+      "effect": 1631
+    },
+    {
+      "difficulty": "normal",
+      "move": "soldier-bolt",
+      "telegraph": 6762,
+      "boundary": 922,
+      "markers": 1,
+      "bodyCue": 44,
+      "effect": 44
+    },
+    {
+      "difficulty": "normal",
+      "move": "soldier-rush",
+      "telegraph": 4166,
+      "boundary": 290,
+      "markers": 1,
+      "bodyCue": 44,
+      "effect": 113
+    },
+    {
+      "difficulty": "challenge",
+      "move": "axe-cleave",
+      "telegraph": 0,
+      "boundary": 0,
+      "markers": 0,
+      "bodyCue": 44,
+      "effect": 3684
+    },
+    {
+      "difficulty": "challenge",
+      "move": "axe-quake",
+      "telegraph": 0,
+      "boundary": 0,
+      "markers": 0,
+      "bodyCue": 44,
+      "effect": 3045
+    },
+    {
+      "difficulty": "challenge",
+      "move": "axe-rush",
+      "telegraph": 0,
+      "boundary": 0,
+      "markers": 0,
+      "bodyCue": 44,
+      "effect": 391
+    },
+    {
+      "difficulty": "challenge",
+      "move": "judge-mark",
+      "telegraph": 0,
+      "boundary": 0,
+      "markers": 0,
+      "bodyCue": 38,
+      "effect": 1307
+    },
+    {
+      "difficulty": "challenge",
+      "move": "judge-chain",
+      "telegraph": 0,
+      "boundary": 0,
+      "markers": 0,
+      "bodyCue": 38,
+      "effect": 5190
+    },
+    {
+      "difficulty": "challenge",
+      "move": "judge-echo",
+      "telegraph": 0,
+      "boundary": 0,
+      "markers": 0,
+      "bodyCue": 38,
+      "effect": 1307
+    },
+    {
+      "difficulty": "challenge",
+      "move": "venom-fan",
+      "telegraph": 0,
+      "boundary": 0,
+      "markers": 0,
+      "bodyCue": 44,
+      "effect": 444
+    },
+    {
+      "difficulty": "challenge",
+      "move": "venom-tide",
+      "telegraph": 0,
+      "boundary": 0,
+      "markers": 0,
+      "bodyCue": 44,
+      "effect": 148
+    },
+    {
+      "difficulty": "challenge",
+      "move": "head-dive",
+      "telegraph": 0,
+      "boundary": 0,
+      "markers": 0,
+      "bodyCue": 44,
+      "effect": 398
+    },
+    {
+      "difficulty": "challenge",
+      "move": "dragon-surge",
+      "telegraph": 0,
+      "boundary": 0,
+      "markers": 0,
+      "bodyCue": 48,
+      "effect": 9472
+    },
+    {
+      "difficulty": "challenge",
+      "move": "dragon-column",
+      "telegraph": 0,
+      "boundary": 0,
+      "markers": 0,
+      "bodyCue": 48,
+      "effect": 14725
+    },
+    {
+      "difficulty": "challenge",
+      "move": "dragon-thunder",
+      "telegraph": 0,
+      "boundary": 0,
+      "markers": 0,
+      "bodyCue": 40,
+      "effect": 2652
+    },
+    {
+      "difficulty": "challenge",
+      "move": "tower-prison",
+      "telegraph": 0,
+      "boundary": 0,
+      "markers": 0,
+      "bodyCue": 58,
+      "effect": 10914
+    },
+    {
+      "difficulty": "challenge",
+      "move": "king-sword",
+      "telegraph": 0,
+      "boundary": 0,
+      "markers": 0,
+      "bodyCue": 44,
+      "effect": 3684
+    },
+    {
+      "difficulty": "challenge",
+      "move": "king-fire",
+      "telegraph": 0,
+      "boundary": 0,
+      "markers": 0,
+      "bodyCue": 94,
+      "effect": 102
+    },
+    {
+      "difficulty": "challenge",
+      "move": "shield-wave",
+      "telegraph": 0,
+      "boundary": 0,
+      "markers": 0,
+      "bodyCue": 44,
+      "effect": 133
+    },
+    {
+      "difficulty": "challenge",
+      "move": "soldier-slash",
+      "telegraph": 0,
+      "boundary": 0,
+      "markers": 0,
+      "bodyCue": 44,
+      "effect": 1521
+    },
+    {
+      "difficulty": "challenge",
+      "move": "soldier-bolt",
+      "telegraph": 0,
+      "boundary": 0,
+      "markers": 0,
+      "bodyCue": 44,
+      "effect": 44
+    },
+    {
+      "difficulty": "challenge",
+      "move": "soldier-rush",
+      "telegraph": 0,
+      "boundary": 0,
+      "markers": 0,
+      "bodyCue": 44,
+      "effect": 113
+    }
+  ]
+}

@@ -1,0 +1,997 @@
+{
+  "version": "7.1.3",
+  "base": "48df77fdd94f2959266056d8d54282731cfa0328",
+  "kind": "file",
+  "sha256": "d0a6477a048b9dbf1dc35c9f46c7cdd06bfe497e1ce90e8aa1322003936d8924",
+  "environment": {
+    "os": "10.0.26200",
+    "node": "v22.12.0",
+    "viewport": "1366x768",
+    "method": "actual HTMLAudioElement playback into WebAudio; real UI keys, clicks, volume and save import; labelled media seek for end/loop; output analyser; no human listening",
+    "browser": "156.0.4314.42"
+  },
+  "checks": [
+    {
+      "name": "no sound before a browser user gesture",
+      "pass": true
+    },
+    {
+      "name": "homepage gesture starts one of the two local menu MP3s",
+      "pass": true,
+      "scene": "menu",
+      "current": "menu-01",
+      "hidden": false,
+      "rms": 0.001796,
+      "starts": [
+        {
+          "id": "menu-01",
+          "time": 0.051
+        }
+      ],
+      "errors": [],
+      "blocked": 0,
+      "loops": 0,
+      "menuChanges": 0,
+      "voices": [
+        {
+          "id": "menu-01",
+          "paused": false,
+          "position": 0.813,
+          "duration": 97.907,
+          "readyState": 4,
+          "loop": false,
+          "gain": 0.75,
+          "fading": false
+        }
+      ]
+    },
+    {
+      "name": "homepage music reaches the actual output graph",
+      "pass": true
+    },
+    {
+      "name": "a completed menu song selects the other song without immediate repeat",
+      "pass": true,
+      "scene": "menu",
+      "current": "menu-02",
+      "hidden": false,
+      "rms": 0.004094,
+      "starts": [
+        {
+          "id": "menu-01",
+          "time": 0.051
+        },
+        {
+          "id": "menu-02",
+          "time": 1.16
+        }
+      ],
+      "errors": [],
+      "blocked": 0,
+      "loops": 0,
+      "menuChanges": 1,
+      "voices": [
+        {
+          "id": "menu-01",
+          "paused": true,
+          "position": 97.907,
+          "duration": 97.907,
+          "readyState": 4,
+          "loop": false,
+          "gain": 0,
+          "fading": false
+        },
+        {
+          "id": "menu-02",
+          "paused": false,
+          "position": 0.813,
+          "duration": 126.354,
+          "readyState": 4,
+          "loop": false,
+          "gain": 0.42,
+          "fading": false
+        }
+      ]
+    },
+    {
+      "name": "gameplay crossfade leaves only the looping combat MP3",
+      "pass": true,
+      "scene": "playing",
+      "current": "gameplay",
+      "hidden": false,
+      "rms": 0.05849,
+      "starts": [
+        {
+          "id": "menu-01",
+          "time": 0.051
+        },
+        {
+          "id": "menu-02",
+          "time": 1.16
+        },
+        {
+          "id": "gameplay",
+          "time": 2.421
+        }
+      ],
+      "errors": [],
+      "blocked": 0,
+      "loops": 0,
+      "menuChanges": 1,
+      "voices": [
+        {
+          "id": "menu-01",
+          "paused": true,
+          "position": 97.907,
+          "duration": 97.907,
+          "readyState": 4,
+          "loop": false,
+          "gain": 0,
+          "fading": false
+        },
+        {
+          "id": "menu-02",
+          "paused": true,
+          "position": 1.773,
+          "duration": 126.354,
+          "readyState": 4,
+          "loop": false,
+          "gain": 0,
+          "fading": false
+        },
+        {
+          "id": "gameplay",
+          "paused": false,
+          "position": 0.862,
+          "duration": 147.069,
+          "readyState": 4,
+          "loop": true,
+          "gain": 0.3,
+          "fading": false
+        }
+      ]
+    },
+    {
+      "name": "combat MP3 reaches the actual output graph",
+      "pass": true
+    },
+    {
+      "name": "combat track loops naturally after its end",
+      "pass": true
+    },
+    {
+      "name": "pause ducks the same song without restarting its position",
+      "pass": true,
+      "scene": "quiet",
+      "current": "gameplay",
+      "hidden": false,
+      "rms": 0.000623,
+      "starts": [
+        {
+          "id": "menu-01",
+          "time": 0.051
+        },
+        {
+          "id": "menu-02",
+          "time": 1.16
+        },
+        {
+          "id": "gameplay",
+          "time": 2.421
+        }
+      ],
+      "errors": [],
+      "blocked": 0,
+      "loops": 1,
+      "menuChanges": 1,
+      "voices": [
+        {
+          "id": "menu-01",
+          "paused": true,
+          "position": 97.907,
+          "duration": 97.907,
+          "readyState": 4,
+          "loop": false,
+          "gain": 0,
+          "fading": false
+        },
+        {
+          "id": "menu-02",
+          "paused": true,
+          "position": 1.773,
+          "duration": 126.354,
+          "readyState": 4,
+          "loop": false,
+          "gain": 0,
+          "fading": false
+        },
+        {
+          "id": "gameplay",
+          "paused": false,
+          "position": 0.389,
+          "duration": 147.069,
+          "readyState": 4,
+          "loop": true,
+          "gain": 0.084,
+          "fading": false
+        }
+      ]
+    },
+    {
+      "name": "existing master volume mutes music output",
+      "pass": true
+    },
+    {
+      "name": "mute persists across reload",
+      "pass": true
+    },
+    {
+      "name": "real staff impact samples still play over combat music",
+      "pass": true
+    },
+    {
+      "name": "reward reading lowers combat music without switching to menu",
+      "pass": true
+    },
+    {
+      "name": "music integration keeps schema 7 import/export",
+      "pass": true
+    },
+    {
+      "name": "returning home restores shuffled menu music",
+      "pass": true
+    },
+    {
+      "name": "rapid menu/resume transitions leave one active intended song",
+      "pass": true,
+      "scene": "menu",
+      "current": "menu-02",
+      "hidden": false,
+      "rms": 0.035782,
+      "starts": [
+        {
+          "id": "menu-02",
+          "time": 0.112
+        },
+        {
+          "id": "gameplay",
+          "time": 0.76
+        },
+        {
+          "id": "menu-01",
+          "time": 3.112
+        },
+        {
+          "id": "gameplay",
+          "time": 3.941
+        },
+        {
+          "id": "menu-02",
+          "time": 4.261
+        }
+      ],
+      "errors": [],
+      "blocked": 0,
+      "loops": 0,
+      "menuChanges": 0,
+      "voices": [
+        {
+          "id": "menu-02",
+          "paused": false,
+          "position": 1.007,
+          "duration": 126.354,
+          "readyState": 4,
+          "loop": false,
+          "gain": 0.42,
+          "fading": false
+        },
+        {
+          "id": "gameplay",
+          "paused": true,
+          "position": 0.947,
+          "duration": 147.069,
+          "readyState": 4,
+          "loop": true,
+          "gain": 0,
+          "fading": false
+        },
+        {
+          "id": "menu-01",
+          "paused": true,
+          "position": 0.968,
+          "duration": 97.907,
+          "readyState": 4,
+          "loop": false,
+          "gain": 0,
+          "fading": false
+        }
+      ]
+    },
+    {
+      "name": "death fades the combat soundtrack to silence",
+      "pass": true
+    },
+    {
+      "name": "production hidden-page listener pauses media",
+      "pass": true
+    },
+    {
+      "name": "visible page gesture resumes its intended song",
+      "pass": true
+    },
+    {
+      "name": "shuffle supports both starting songs and avoids consecutive repeats",
+      "pass": true,
+      "method": "controlled random values, selection-only audit",
+      "order": [
+        [
+          "menu-01",
+          "menu-02",
+          "menu-01"
+        ],
+        [
+          "menu-02",
+          "menu-01",
+          "menu-02"
+        ]
+      ]
+    },
+    {
+      "name": "no music decode/playback failures",
+      "pass": true,
+      "music": {
+        "scene": "menu",
+        "current": "menu-01",
+        "hidden": false,
+        "rms": 0.001799,
+        "starts": [
+          {
+            "id": "menu-02",
+            "time": 0.112
+          },
+          {
+            "id": "gameplay",
+            "time": 0.76
+          },
+          {
+            "id": "menu-01",
+            "time": 3.112
+          },
+          {
+            "id": "gameplay",
+            "time": 3.941
+          },
+          {
+            "id": "menu-02",
+            "time": 4.261
+          },
+          {
+            "id": "menu-01",
+            "time": 6.261
+          },
+          {
+            "id": "menu-01",
+            "time": 7.24
+          }
+        ],
+        "errors": [],
+        "blocked": 0,
+        "loops": 0,
+        "menuChanges": 0,
+        "voices": [
+          {
+            "id": "menu-02",
+            "paused": true,
+            "position": 1.199,
+            "duration": 126.354,
+            "readyState": 4,
+            "loop": false,
+            "gain": 0,
+            "fading": false
+          },
+          {
+            "id": "gameplay",
+            "paused": true,
+            "position": 0.947,
+            "duration": 147.069,
+            "readyState": 4,
+            "loop": true,
+            "gain": 0,
+            "fading": false
+          },
+          {
+            "id": "menu-01",
+            "paused": false,
+            "position": 1.39,
+            "duration": 97.907,
+            "readyState": 4,
+            "loop": false,
+            "gain": 0.75,
+            "fading": false
+          }
+        ]
+      }
+    },
+    {
+      "name": "fresh offline file session issues zero HTTP requests",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "requests": [],
+  "states": [
+    {
+      "name": "menu-first",
+      "screen": "menu",
+      "audio": {
+        "context": "running",
+        "sampleRate": 48000,
+        "baseLatencyMs": 10,
+        "outputLatencyMs": 40,
+        "volume": 0.25,
+        "masterGain": 0.25,
+        "music": {
+          "scene": "menu",
+          "current": "menu-01",
+          "hidden": false,
+          "rms": 0.001796,
+          "starts": [
+            {
+              "id": "menu-01",
+              "time": 0.051
+            }
+          ],
+          "errors": [],
+          "blocked": 0,
+          "loops": 0,
+          "menuChanges": 0,
+          "voices": [
+            {
+              "id": "menu-01",
+              "paused": false,
+              "position": 0.813,
+              "duration": 97.907,
+              "readyState": 4,
+              "loop": false,
+              "gain": 0.75,
+              "fading": false
+            }
+          ]
+        },
+        "decoded": [
+          "staff-light-a",
+          "staff-light-b",
+          "staff-heavy",
+          "shield-block",
+          "ring-hit-a",
+          "ring-hit-b",
+          "ground-slam",
+          "ultimate-hit"
+        ],
+        "activeVoices": 0,
+        "played": {},
+        "fallbacks": 0,
+        "coalesced": 0,
+        "stolen": 0,
+        "maxVoices": 0,
+        "decodeErrors": [],
+        "recent": []
+      }
+    },
+    {
+      "name": "menu-second",
+      "screen": "menu",
+      "audio": {
+        "context": "running",
+        "sampleRate": 48000,
+        "baseLatencyMs": 10,
+        "outputLatencyMs": 40,
+        "volume": 0.25,
+        "masterGain": 0.25,
+        "music": {
+          "scene": "menu",
+          "current": "menu-02",
+          "hidden": false,
+          "rms": 0.004094,
+          "starts": [
+            {
+              "id": "menu-01",
+              "time": 0.051
+            },
+            {
+              "id": "menu-02",
+              "time": 1.16
+            }
+          ],
+          "errors": [],
+          "blocked": 0,
+          "loops": 0,
+          "menuChanges": 1,
+          "voices": [
+            {
+              "id": "menu-01",
+              "paused": true,
+              "position": 97.907,
+              "duration": 97.907,
+              "readyState": 4,
+              "loop": false,
+              "gain": 0,
+              "fading": false
+            },
+            {
+              "id": "menu-02",
+              "paused": false,
+              "position": 0.813,
+              "duration": 126.354,
+              "readyState": 4,
+              "loop": false,
+              "gain": 0.42,
+              "fading": false
+            }
+          ]
+        },
+        "decoded": [
+          "staff-light-a",
+          "staff-light-b",
+          "staff-heavy",
+          "shield-block",
+          "ring-hit-a",
+          "ring-hit-b",
+          "ground-slam",
+          "ultimate-hit"
+        ],
+        "activeVoices": 0,
+        "played": {},
+        "fallbacks": 0,
+        "coalesced": 0,
+        "stolen": 0,
+        "maxVoices": 0,
+        "decodeErrors": [],
+        "recent": []
+      }
+    },
+    {
+      "name": "playing",
+      "screen": "playing",
+      "audio": {
+        "context": "running",
+        "sampleRate": 48000,
+        "baseLatencyMs": 10,
+        "outputLatencyMs": 40,
+        "volume": 0.25,
+        "masterGain": 0.25,
+        "music": {
+          "scene": "playing",
+          "current": "gameplay",
+          "hidden": false,
+          "rms": 0.047803,
+          "starts": [
+            {
+              "id": "menu-01",
+              "time": 0.051
+            },
+            {
+              "id": "menu-02",
+              "time": 1.16
+            },
+            {
+              "id": "gameplay",
+              "time": 2.421
+            }
+          ],
+          "errors": [],
+          "blocked": 0,
+          "loops": 0,
+          "menuChanges": 1,
+          "voices": [
+            {
+              "id": "menu-01",
+              "paused": true,
+              "position": 97.907,
+              "duration": 97.907,
+              "readyState": 4,
+              "loop": false,
+              "gain": 0,
+              "fading": false
+            },
+            {
+              "id": "menu-02",
+              "paused": true,
+              "position": 1.773,
+              "duration": 126.354,
+              "readyState": 4,
+              "loop": false,
+              "gain": 0,
+              "fading": false
+            },
+            {
+              "id": "gameplay",
+              "paused": false,
+              "position": 0.871,
+              "duration": 147.069,
+              "readyState": 4,
+              "loop": true,
+              "gain": 0.3,
+              "fading": false
+            }
+          ]
+        },
+        "decoded": [
+          "staff-light-a",
+          "staff-light-b",
+          "staff-heavy",
+          "shield-block",
+          "ring-hit-a",
+          "ring-hit-b",
+          "ground-slam",
+          "ultimate-hit"
+        ],
+        "activeVoices": 0,
+        "played": {},
+        "fallbacks": 0,
+        "coalesced": 0,
+        "stolen": 0,
+        "maxVoices": 0,
+        "decodeErrors": [],
+        "recent": []
+      }
+    },
+    {
+      "name": "combat-loop",
+      "screen": "playing",
+      "audio": {
+        "context": "running",
+        "sampleRate": 48000,
+        "baseLatencyMs": 10,
+        "outputLatencyMs": 40,
+        "volume": 0.25,
+        "masterGain": 0.25,
+        "music": {
+          "scene": "playing",
+          "current": "gameplay",
+          "hidden": false,
+          "rms": 0.000005,
+          "starts": [
+            {
+              "id": "menu-01",
+              "time": 0.051
+            },
+            {
+              "id": "menu-02",
+              "time": 1.16
+            },
+            {
+              "id": "gameplay",
+              "time": 2.421
+            }
+          ],
+          "errors": [],
+          "blocked": 0,
+          "loops": 1,
+          "menuChanges": 1,
+          "voices": [
+            {
+              "id": "menu-01",
+              "paused": true,
+              "position": 97.907,
+              "duration": 97.907,
+              "readyState": 4,
+              "loop": false,
+              "gain": 0,
+              "fading": false
+            },
+            {
+              "id": "menu-02",
+              "paused": true,
+              "position": 1.773,
+              "duration": 126.354,
+              "readyState": 4,
+              "loop": false,
+              "gain": 0,
+              "fading": false
+            },
+            {
+              "id": "gameplay",
+              "paused": false,
+              "position": 0.012,
+              "duration": 147.069,
+              "readyState": 4,
+              "loop": true,
+              "gain": 0.3,
+              "fading": false
+            }
+          ]
+        },
+        "decoded": [
+          "staff-light-a",
+          "staff-light-b",
+          "staff-heavy",
+          "shield-block",
+          "ring-hit-a",
+          "ring-hit-b",
+          "ground-slam",
+          "ultimate-hit"
+        ],
+        "activeVoices": 0,
+        "played": {},
+        "fallbacks": 0,
+        "coalesced": 0,
+        "stolen": 0,
+        "maxVoices": 0,
+        "decodeErrors": [],
+        "recent": []
+      }
+    },
+    {
+      "name": "paused",
+      "screen": "paused",
+      "audio": {
+        "context": "running",
+        "sampleRate": 48000,
+        "baseLatencyMs": 10,
+        "outputLatencyMs": 40,
+        "volume": 0.25,
+        "masterGain": 0.25,
+        "music": {
+          "scene": "quiet",
+          "current": "gameplay",
+          "hidden": false,
+          "rms": 0.000785,
+          "starts": [
+            {
+              "id": "menu-01",
+              "time": 0.051
+            },
+            {
+              "id": "menu-02",
+              "time": 1.16
+            },
+            {
+              "id": "gameplay",
+              "time": 2.421
+            }
+          ],
+          "errors": [],
+          "blocked": 0,
+          "loops": 1,
+          "menuChanges": 1,
+          "voices": [
+            {
+              "id": "menu-01",
+              "paused": true,
+              "position": 97.907,
+              "duration": 97.907,
+              "readyState": 4,
+              "loop": false,
+              "gain": 0,
+              "fading": false
+            },
+            {
+              "id": "menu-02",
+              "paused": true,
+              "position": 1.773,
+              "duration": 126.354,
+              "readyState": 4,
+              "loop": false,
+              "gain": 0,
+              "fading": false
+            },
+            {
+              "id": "gameplay",
+              "paused": false,
+              "position": 0.401,
+              "duration": 147.069,
+              "readyState": 4,
+              "loop": true,
+              "gain": 0.084,
+              "fading": false
+            }
+          ]
+        },
+        "decoded": [
+          "staff-light-a",
+          "staff-light-b",
+          "staff-heavy",
+          "shield-block",
+          "ring-hit-a",
+          "ring-hit-b",
+          "ground-slam",
+          "ultimate-hit"
+        ],
+        "activeVoices": 0,
+        "played": {},
+        "fallbacks": 0,
+        "coalesced": 0,
+        "stolen": 0,
+        "maxVoices": 0,
+        "decodeErrors": [],
+        "recent": []
+      }
+    },
+    {
+      "name": "impact",
+      "screen": "playing",
+      "audio": {
+        "context": "running",
+        "sampleRate": 48000,
+        "baseLatencyMs": 10,
+        "outputLatencyMs": 40,
+        "volume": 0.25,
+        "masterGain": 0.25,
+        "music": {
+          "scene": "playing",
+          "current": "gameplay",
+          "hidden": false,
+          "rms": 0.036905,
+          "starts": [
+            {
+              "id": "menu-02",
+              "time": 0.112
+            },
+            {
+              "id": "gameplay",
+              "time": 0.76
+            }
+          ],
+          "errors": [],
+          "blocked": 0,
+          "loops": 0,
+          "menuChanges": 0,
+          "voices": [
+            {
+              "id": "menu-02",
+              "paused": true,
+              "position": 1.181,
+              "duration": 126.354,
+              "readyState": 4,
+              "loop": false,
+              "gain": 0,
+              "fading": false
+            },
+            {
+              "id": "gameplay",
+              "paused": false,
+              "position": 0.74,
+              "duration": 147.069,
+              "readyState": 4,
+              "loop": true,
+              "gain": 0.1623,
+              "fading": true
+            }
+          ]
+        },
+        "decoded": [
+          "staff-light-a",
+          "staff-light-b",
+          "staff-heavy",
+          "shield-block",
+          "ring-hit-a",
+          "ring-hit-b",
+          "ground-slam",
+          "ultimate-hit"
+        ],
+        "activeVoices": 1,
+        "played": {
+          "staff-light-a": 1
+        },
+        "fallbacks": 0,
+        "coalesced": 0,
+        "stolen": 0,
+        "maxVoices": 1,
+        "decodeErrors": [],
+        "recent": [
+          {
+            "id": "staff-light-a",
+            "time": 1.4613,
+            "submittedMs": 2485.1
+          }
+        ]
+      }
+    },
+    {
+      "name": "menu-return",
+      "screen": "menu",
+      "audio": {
+        "context": "running",
+        "sampleRate": 48000,
+        "baseLatencyMs": 10,
+        "outputLatencyMs": 40,
+        "volume": 0.25,
+        "masterGain": 0.25,
+        "music": {
+          "scene": "menu",
+          "current": "menu-01",
+          "hidden": false,
+          "rms": 0.001797,
+          "starts": [
+            {
+              "id": "menu-02",
+              "time": 0.112
+            },
+            {
+              "id": "gameplay",
+              "time": 0.76
+            },
+            {
+              "id": "menu-01",
+              "time": 3.112
+            }
+          ],
+          "errors": [],
+          "blocked": 0,
+          "loops": 0,
+          "menuChanges": 0,
+          "voices": [
+            {
+              "id": "menu-02",
+              "paused": true,
+              "position": 1.181,
+              "duration": 126.354,
+              "readyState": 4,
+              "loop": false,
+              "gain": 0,
+              "fading": false
+            },
+            {
+              "id": "gameplay",
+              "paused": true,
+              "position": 2.952,
+              "duration": 147.069,
+              "readyState": 4,
+              "loop": true,
+              "gain": 0,
+              "fading": false
+            },
+            {
+              "id": "menu-01",
+              "paused": false,
+              "position": 0.81,
+              "duration": 97.907,
+              "readyState": 4,
+              "loop": false,
+              "gain": 0.75,
+              "fading": false
+            }
+          ]
+        },
+        "decoded": [
+          "staff-light-a",
+          "staff-light-b",
+          "staff-heavy",
+          "shield-block",
+          "ring-hit-a",
+          "ring-hit-b",
+          "ground-slam",
+          "ultimate-hit"
+        ],
+        "activeVoices": 0,
+        "played": {
+          "staff-light-a": 1
+        },
+        "fallbacks": 0,
+        "coalesced": 0,
+        "stolen": 0,
+        "maxVoices": 1,
+        "decodeErrors": [],
+        "recent": [
+          {
+            "id": "staff-light-a",
+            "time": 1.4613,
+            "submittedMs": 2485.1
+          }
+        ]
+      }
+    }
+  ],
+  "mediaSeeks": [
+    {
+      "id": "menu-01",
+      "method": "seek actual media to 250ms before end; let normal ended/loop event occur"
+    },
+    {
+      "id": "gameplay",
+      "method": "seek actual media to 250ms before end; let normal ended/loop event occur"
+    }
+  ],
+  "visibilityBoundary": "Headless host did not emit visibilitychange; listener checked via explicit signal below"
+}

@@ -1,0 +1,24 @@
+
+> kong-rpg@12.4.1 build
+> npm run prepare:assets && vite build && vite build --mode offline
+
+
+> kong-rpg@12.4.1 prepare:assets
+> node tools/prepare-assets.cjs
+
+Images: 79 network manifest 5849 bytes; standalone catalogue 59853203 bytes
+Art integrity: 79 PNG assets; 627 bounded frames
+Embedded 8 impact samples
+Embedded 3 local music tracks
+vite v8.3.5 building client environment for production...
+transforming...
+✓ 86 modules transformed.
+rendering chunks...
+[plugin kong-game-distribution] First screen: 4 images; game JS 358966 bytes; module HTTP entry
+✓ built in 208ms
+vite v8.3.5 building client environment for offline...
+transforming...
+✓ 86 modules transformed.
+rendering chunks...
+[plugin kong-game-distribution] First screen: 4 images; game JS 588796 bytes; classic file:// entry
+✓ built in 235ms

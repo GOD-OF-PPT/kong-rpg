@@ -1,0 +1,12 @@
+#combat-labels .impact-number{font:700 15px/1 monospace;color:#fff1ce;text-shadow:-1px 0 #241e24,1px 0 #241e24,0 -1px #241e24,0 1px #241e24,1px 2px #241e24;letter-spacing:0}
+#combat-labels .impact-number.heavy{font-size:21px;color:#ffe4a0}
+#combat-labels .impact-number.block{font:600 12px/1 "Microsoft YaHei",sans-serif;color:#a5eee4}
+#combat-labels .impact-number.hurt{font-size:17px;color:#f49b86}
+#stage[data-mode=playing] #toast{top:21%;bottom:auto;max-width:67%;font-size:13px}
+#stage[data-mode=playing]:has(#boss-hud:not([hidden])) #toast{top:31%}
+.run-journal{max-width:680px;margin:10px auto;color:#d2c6a7;font-size:12px;line-height:1.8}
+.run-journal summary{cursor:pointer;color:#e1bd7a;padding:7px;letter-spacing:2px}
+.run-journal p{padding:6px 12px;border-left:1px solid #9d7d4b;margin:7px 0}
+.dialog-paused .run-journal{text-align:left;max-width:440px;margin-left:0;font-size:11px}
+.run-journal[open]{max-height:125px;overflow:auto;scrollbar-width:thin;scrollbar-color:#8f784e #112028}
+.run-journal[open] summary{position:sticky;top:0;background:#122028}

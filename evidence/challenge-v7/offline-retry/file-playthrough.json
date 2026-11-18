@@ -1,0 +1,1796 @@
+{
+  "environment": {
+    "os": "win32 10.0.26200",
+    "cpu": "Intel(R) Core(TM) i5-14600K",
+    "node": "v22.12.0",
+    "viewport": "1440x1000",
+    "mode": "headless Edge real-time requestAnimationFrame; event-to-render-submission, not display photon latency"
+  },
+  "version": "7.1.0",
+  "entry": "E:\\githome\\kong-rpg\\artifacts\\portable-challenge-v7\\index.html",
+  "sha256": "8f90f9ae53390ec7f9cccbde37a48ec6d8227b16de882c4061d274eab7b5dc4a",
+  "kind": "file",
+  "jumpKey": "KeyW",
+  "hero": "nezha",
+  "difficulty": "challenge",
+  "buildPreference": "martial",
+  "checks": [
+    {
+      "name": "preview server stopped",
+      "pass": true
+    },
+    {
+      "name": "actual run keeps the selected difficulty",
+      "pass": true
+    },
+    {
+      "name": "new run starts through prologue and relic choice",
+      "pass": true
+    },
+    {
+      "name": "pause gates world input",
+      "pass": true
+    },
+    {
+      "name": "v7 JSON imports paused",
+      "pass": true
+    },
+    {
+      "name": "victory reaches epilogue",
+      "pass": true
+    },
+    {
+      "name": "epilogue returns to complete results",
+      "pass": true
+    },
+    {
+      "name": "complete real-input journey",
+      "pass": true
+    },
+    {
+      "name": "new hero ability used through real input",
+      "pass": true
+    },
+    {
+      "name": "all three midpoint opportunities visited",
+      "pass": true
+    },
+    {
+      "name": "all stages visited",
+      "pass": true
+    },
+    {
+      "name": "three independent guardians defeated",
+      "pass": true
+    },
+    {
+      "name": "ultimate used in real-input journey",
+      "pass": true
+    },
+    {
+      "name": "ring has real distant hits in full journey",
+      "pass": true
+    },
+    {
+      "name": "three optional world consequences completed",
+      "pass": true
+    },
+    {
+      "name": "no runtime exceptions",
+      "pass": true
+    },
+    {
+      "name": "frame interval p95 under 25ms",
+      "pass": true
+    },
+    {
+      "name": "event to render submission p95 under 50ms",
+      "pass": true
+    },
+    {
+      "name": "zero HTTP(S) requests",
+      "pass": true
+    }
+  ],
+  "samples": [
+    {
+      "time": 0.3833333333333337,
+      "wall": 0.3833333333333337,
+      "stage": 0,
+      "x": 90,
+      "y": 396,
+      "hp": 100,
+      "focus": 65,
+      "seals": [
+        56,
+        56
+      ],
+      "boss": null,
+      "rage": 25,
+      "growth": {}
+    },
+    {
+      "time": 2.016666666666662,
+      "wall": 2.041666666666662,
+      "stage": 0,
+      "x": 354,
+      "y": 396,
+      "hp": 100,
+      "focus": 31,
+      "seals": [
+        56,
+        56
+      ],
+      "boss": null,
+      "rage": 33,
+      "growth": {}
+    },
+    {
+      "time": 3.3083333333333242,
+      "wall": 3.416666666666657,
+      "stage": 0,
+      "x": 656,
+      "y": 396,
+      "hp": 100,
+      "focus": 13,
+      "seals": [
+        56,
+        56
+      ],
+      "boss": null,
+      "rage": 69,
+      "growth": {}
+    },
+    {
+      "time": 4.775000000000027,
+      "wall": 4.883333333333366,
+      "stage": 0,
+      "x": 1157,
+      "y": 396,
+      "hp": 100,
+      "focus": 13,
+      "seals": [
+        56,
+        56
+      ],
+      "boss": null,
+      "rage": 69,
+      "growth": {}
+    },
+    {
+      "time": 6.133333333333428,
+      "wall": 6.350000000000105,
+      "stage": 0,
+      "x": 1453,
+      "y": 385,
+      "hp": 88,
+      "focus": 25,
+      "seals": [
+        56,
+        56
+      ],
+      "boss": null,
+      "rage": 99,
+      "growth": {}
+    },
+    {
+      "time": 7.558333333333499,
+      "wall": 7.891666666666849,
+      "stage": 0,
+      "x": 1435,
+      "y": 335,
+      "hp": 88,
+      "focus": 31,
+      "seals": [
+        10,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {}
+    },
+    {
+      "time": 9.075000000000125,
+      "wall": 9.40833333333344,
+      "stage": 0,
+      "x": 1609,
+      "y": 396,
+      "hp": 108,
+      "focus": 40,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 10.533333333333376,
+      "wall": 10.86666666666669,
+      "stage": 0,
+      "x": 1938,
+      "y": 364,
+      "hp": 108,
+      "focus": 0,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 12.016666666666625,
+      "wall": 12.458333333333266,
+      "stage": 0,
+      "x": 2251,
+      "y": 233,
+      "hp": 96,
+      "focus": 31,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 13.758333333333193,
+      "wall": 14.399999999999823,
+      "stage": 0,
+      "x": 2341,
+      "y": 350,
+      "hp": 96,
+      "focus": 12,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 15.349999999999769,
+      "wall": 16.183333333333056,
+      "stage": 0,
+      "x": 2302,
+      "y": 378,
+      "hp": 80,
+      "focus": 35,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 17.133333333333002,
+      "wall": 17.991666666666287,
+      "stage": 0,
+      "x": 2604,
+      "y": 396,
+      "hp": 110,
+      "focus": 70,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 18.72499999999958,
+      "wall": 19.63333333333286,
+      "stage": 0,
+      "x": 3055,
+      "y": 356,
+      "hp": 110,
+      "focus": 29,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 20.24166666666616,
+      "wall": 21.2916666666661,
+      "stage": 0,
+      "x": 3380,
+      "y": 382,
+      "hp": 98,
+      "focus": 49,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 21.783333333332738,
+      "wall": 22.941666666666006,
+      "stage": 0,
+      "x": 3665,
+      "y": 373,
+      "hp": 98,
+      "focus": 34,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 23.44999999999931,
+      "wall": 24.608333333332578,
+      "stage": 0,
+      "x": 4058,
+      "y": 288,
+      "hp": 98,
+      "focus": 34,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 25.099999999999216,
+      "wall": 26.341666666665812,
+      "stage": 0,
+      "x": 4406,
+      "y": 396,
+      "hp": 86,
+      "focus": 12,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 26.649999999999128,
+      "wall": 28.11666666666571,
+      "stage": 0,
+      "x": 4601,
+      "y": 327,
+      "hp": 86,
+      "focus": 52,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 28.60833333333235,
+      "wall": 30.074999999998933,
+      "stage": 0,
+      "x": 5024,
+      "y": 396,
+      "hp": 110,
+      "focus": 32,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 30.316666666665586,
+      "wall": 31.80833333333217,
+      "stage": 0,
+      "x": 5319,
+      "y": 396,
+      "hp": 110,
+      "focus": 38,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 32.30833333333214,
+      "wall": 33.799999999998725,
+      "stage": 0,
+      "x": 5298,
+      "y": 396,
+      "hp": 98,
+      "focus": 31,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 34.71666666666534,
+      "wall": 36.23333333333192,
+      "stage": 0,
+      "x": 5706,
+      "y": 297,
+      "hp": 86,
+      "focus": 37,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 37.091666666665205,
+      "wall": 38.608333333331785,
+      "stage": 0,
+      "x": 5999,
+      "y": 330,
+      "hp": 74,
+      "focus": 37,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 39.24166666666508,
+      "wall": 40.84166666666499,
+      "stage": 0,
+      "x": 6128,
+      "y": 396,
+      "hp": 74,
+      "focus": 100,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 0,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 41.316666666664965,
+      "wall": 42.916666666664874,
+      "stage": 0,
+      "x": 6564,
+      "y": 396,
+      "hp": 86,
+      "focus": 100,
+      "seals": [
+        0,
+        0
+      ],
+      "boss": null,
+      "rage": 15,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 43.05833333333153,
+      "wall": 44.76666666666477,
+      "stage": 0,
+      "x": 6922,
+      "y": 396,
+      "hp": 86,
+      "focus": 78,
+      "seals": [
+        0,
+        0
+      ],
+      "boss": 116,
+      "guardian": "mountain",
+      "rage": 45,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 44.8499999999981,
+      "wall": 46.55833333333133,
+      "stage": 0,
+      "x": 6903,
+      "y": 396,
+      "hp": 86,
+      "focus": 38,
+      "seals": [
+        0,
+        0
+      ],
+      "boss": 116,
+      "guardian": "mountain",
+      "rage": 45,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 46.508333333331336,
+      "wall": 48.38333333333123,
+      "stage": 0,
+      "x": 6795,
+      "y": 396,
+      "hp": 70,
+      "focus": 22,
+      "seals": [
+        0,
+        0
+      ],
+      "boss": 24,
+      "guardian": "mountain",
+      "rage": 89,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 48.21666666666457,
+      "wall": 50.174999999997794,
+      "stage": 0,
+      "x": 6919,
+      "y": 396,
+      "hp": 82,
+      "focus": 44,
+      "seals": [
+        0,
+        0
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 50.37499999999778,
+      "wall": 52.333333333331005,
+      "stage": 1,
+      "x": 169,
+      "y": 305,
+      "hp": 120,
+      "focus": 44,
+      "seals": [
+        56,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 52.16666666666435,
+      "wall": 54.14999999999757,
+      "stage": 1,
+      "x": 564,
+      "y": 396,
+      "hp": 120,
+      "focus": 44,
+      "seals": [
+        56,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 53.89166666666425,
+      "wall": 56.01666666666413,
+      "stage": 1,
+      "x": 790,
+      "y": 217,
+      "hp": 108,
+      "focus": 29,
+      "seals": [
+        56,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 55.741666666664145,
+      "wall": 57.94999999999735,
+      "stage": 1,
+      "x": 1148,
+      "y": 274,
+      "hp": 108,
+      "focus": 35,
+      "seals": [
+        56,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 57.59166666666404,
+      "wall": 59.941666666663906,
+      "stage": 1,
+      "x": 1735,
+      "y": 304,
+      "hp": 108,
+      "focus": 45,
+      "seals": [
+        56,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 59.616666666663924,
+      "wall": 62.19166666666378,
+      "stage": 1,
+      "x": 2075,
+      "y": 231,
+      "hp": 108,
+      "focus": 35,
+      "seals": [
+        44,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 61.95833333333046,
+      "wall": 64.6249999999975,
+      "stage": 1,
+      "x": 2047,
+      "y": 329,
+      "hp": 80,
+      "focus": 58,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 64.32499999999726,
+      "wall": 67.12499999999949,
+      "stage": 1,
+      "x": 2501,
+      "y": 381,
+      "hp": 110,
+      "focus": 56,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 66.55833333333237,
+      "wall": 69.38333333333462,
+      "stage": 1,
+      "x": 2958,
+      "y": 306,
+      "hp": 110,
+      "focus": 40,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 68.55833333333396,
+      "wall": 71.52500000000299,
+      "stage": 1,
+      "x": 3504,
+      "y": 396,
+      "hp": 110,
+      "focus": 85,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 70.80833333333575,
+      "wall": 73.77500000000478,
+      "stage": 1,
+      "x": 4126,
+      "y": 396,
+      "hp": 96,
+      "focus": 34,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 73.02500000000418,
+      "wall": 76.10000000000663,
+      "stage": 1,
+      "x": 4607,
+      "y": 396,
+      "hp": 108,
+      "focus": 66,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 75.16666666667255,
+      "wall": 78.46666666667518,
+      "stage": 1,
+      "x": 5019,
+      "y": 245,
+      "hp": 108,
+      "focus": 45,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 77.91666666667474,
+      "wall": 81.21666666667737,
+      "stage": 1,
+      "x": 5389,
+      "y": 396,
+      "hp": 82,
+      "focus": 25,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 80.14166666667651,
+      "wall": 83.46666666667916,
+      "stage": 1,
+      "x": 5903,
+      "y": 396,
+      "hp": 82,
+      "focus": 31,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 82.36666666667828,
+      "wall": 85.71666666668095,
+      "stage": 1,
+      "x": 6256,
+      "y": 396,
+      "hp": 58,
+      "focus": 37,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 84.45000000001328,
+      "wall": 87.85833333334932,
+      "stage": 1,
+      "x": 6476,
+      "y": 358,
+      "hp": 58,
+      "focus": 87,
+      "seals": [
+        0,
+        0
+      ],
+      "boss": null,
+      "rage": 0,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 86.49166666668157,
+      "wall": 89.94166666668431,
+      "stage": 1,
+      "x": 6933,
+      "y": 396,
+      "hp": 58,
+      "focus": 55,
+      "seals": [
+        0,
+        0
+      ],
+      "boss": 122,
+      "guardian": "ferry",
+      "rage": 22,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 88.60000000001658,
+      "wall": 92.25833333335282,
+      "stage": 1,
+      "x": 6995,
+      "y": 396,
+      "hp": 46,
+      "focus": 51,
+      "seals": [
+        0,
+        0
+      ],
+      "boss": 52,
+      "guardian": "ferry",
+      "rage": 66,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 91.16666666668529,
+      "wall": 94.96666666668831,
+      "stage": 2,
+      "x": 121,
+      "y": 356,
+      "hp": 106,
+      "focus": 80,
+      "seals": [
+        56,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 93.39166666668706,
+      "wall": 97.2166666666901,
+      "stage": 2,
+      "x": 703,
+      "y": 357,
+      "hp": 94,
+      "focus": 81,
+      "seals": [
+        56,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 95.59166666668881,
+      "wall": 99.52500000002527,
+      "stage": 2,
+      "x": 1343,
+      "y": 345,
+      "hp": 94,
+      "focus": 31,
+      "seals": [
+        56,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 98.04166666669076,
+      "wall": 102.0333333333606,
+      "stage": 2,
+      "x": 1534,
+      "y": 324,
+      "hp": 82,
+      "focus": 29,
+      "seals": [
+        38,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 100.65833333335951,
+      "wall": 104.70833333336273,
+      "stage": 2,
+      "x": 1573,
+      "y": 296,
+      "hp": 70,
+      "focus": 82,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 0,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 103.25833333336158,
+      "wall": 107.42500000003156,
+      "stage": 2,
+      "x": 2149,
+      "y": 306,
+      "hp": 100,
+      "focus": 51,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 28,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 105.48333333336335,
+      "wall": 109.85000000003349,
+      "stage": 2,
+      "x": 2604,
+      "y": 380,
+      "hp": 100,
+      "focus": 31,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 78,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 107.975000000032,
+      "wall": 112.4166666667022,
+      "stage": 2,
+      "x": 2404,
+      "y": 396,
+      "hp": 70,
+      "focus": 12,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 110.14166666670039,
+      "wall": 114.58333333337059,
+      "stage": 2,
+      "x": 2661,
+      "y": 306,
+      "hp": 70,
+      "focus": 12,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 14,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 112.26666666670208,
+      "wall": 116.7333333333723,
+      "stage": 2,
+      "x": 2751,
+      "y": 396,
+      "hp": 58,
+      "focus": 18,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 22,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 114.46666666670383,
+      "wall": 119.04166666670747,
+      "stage": 2,
+      "x": 3229,
+      "y": 288,
+      "hp": 46,
+      "focus": 26,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 52,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 116.63333333337222,
+      "wall": 121.20833333337586,
+      "stage": 2,
+      "x": 3810,
+      "y": 396,
+      "hp": 46,
+      "focus": 29,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 52,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 118.90833333337403,
+      "wall": 123.48333333337767,
+      "stage": 2,
+      "x": 4303,
+      "y": 306,
+      "hp": 34,
+      "focus": 29,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 52,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 121.24166666670922,
+      "wall": 126.00833333337968,
+      "stage": 2,
+      "x": 4638,
+      "y": 396,
+      "hp": 46,
+      "focus": 49,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 123.60000000004443,
+      "wall": 128.36666666671425,
+      "stage": 2,
+      "x": 4745,
+      "y": 396,
+      "hp": 46,
+      "focus": 35,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 0,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 125.91666666671294,
+      "wall": 130.76666666671207,
+      "stage": 2,
+      "x": 5082,
+      "y": 341,
+      "hp": 46,
+      "focus": 10,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 22,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 128.33333333338095,
+      "wall": 133.32500000004308,
+      "stage": 2,
+      "x": 5368,
+      "y": 267,
+      "hp": 46,
+      "focus": 26,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 58,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 130.75000000004542,
+      "wall": 135.90833333337406,
+      "stage": 2,
+      "x": 5273,
+      "y": 365,
+      "hp": 46,
+      "focus": 29,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 133.77500000004267,
+      "wall": 139.07500000003785,
+      "stage": 2,
+      "x": 5590,
+      "y": 320,
+      "hp": 64,
+      "focus": 91,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 0,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 136.341666666707,
+      "wall": 141.70000000003546,
+      "stage": 2,
+      "x": 6124,
+      "y": 321,
+      "hp": 64,
+      "focus": 35,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 14,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 138.71666666670484,
+      "wall": 144.0750000000333,
+      "stage": 2,
+      "x": 6569,
+      "y": 306,
+      "hp": 50,
+      "focus": 22,
+      "seals": [
+        0,
+        0
+      ],
+      "boss": null,
+      "rage": 29,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 140.85833333336956,
+      "wall": 146.30000000003128,
+      "stage": 2,
+      "x": 7188,
+      "y": 396,
+      "hp": 50,
+      "focus": 34,
+      "seals": [
+        0,
+        0
+      ],
+      "boss": 146,
+      "guardian": "sanctuary",
+      "rage": 51,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 143.00000000003428,
+      "wall": 148.6666666666958,
+      "stage": 2,
+      "x": 6995,
+      "y": 396,
+      "hp": 34,
+      "focus": 30,
+      "seals": [
+        0,
+        0
+      ],
+      "boss": 42,
+      "guardian": "sanctuary",
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 145.23333333336558,
+      "wall": 150.95833333336037,
+      "stage": 3,
+      "x": 90,
+      "y": 396,
+      "hp": 94,
+      "focus": 100,
+      "seals": [
+        56,
+        56
+      ],
+      "boss": 270,
+      "rage": 18,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 147.7333333333633,
+      "wall": 153.54166666669136,
+      "stage": 3,
+      "x": 449,
+      "y": 387,
+      "hp": 82,
+      "focus": 9,
+      "seals": [
+        56,
+        56
+      ],
+      "boss": 270,
+      "rage": 54,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 149.70000000002818,
+      "wall": 155.50833333335623,
+      "stage": 3,
+      "x": 1016,
+      "y": 313,
+      "hp": 82,
+      "focus": 9,
+      "seals": [
+        56,
+        56
+      ],
+      "boss": 270,
+      "rage": 54,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 151.6500000000264,
+      "wall": 157.600000000021,
+      "stage": 3,
+      "x": 1326,
+      "y": 281,
+      "hp": 94,
+      "focus": 40,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": 270,
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 153.65833333335792,
+      "wall": 159.61666666668583,
+      "stage": 3,
+      "x": 1891,
+      "y": 396,
+      "hp": 94,
+      "focus": 42,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": 270,
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 155.45000000002295,
+      "wall": 161.53333333335075,
+      "stage": 3,
+      "x": 2096,
+      "y": 396,
+      "hp": 94,
+      "focus": 79,
+      "seals": [
+        0,
+        38
+      ],
+      "boss": 270,
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 157.49166666668776,
+      "wall": 163.7500000000154,
+      "stage": 3,
+      "x": 2169,
+      "y": 396,
+      "hp": 82,
+      "focus": 91,
+      "seals": [
+        0,
+        0
+      ],
+      "boss": 270,
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 159.48333333335262,
+      "wall": 165.74166666668026,
+      "stage": 3,
+      "x": 2678,
+      "y": 396,
+      "hp": 118,
+      "focus": 43,
+      "seals": [
+        0,
+        0
+      ],
+      "boss": 270,
+      "rage": 100,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 161.3250000000176,
+      "wall": 167.64166666667853,
+      "stage": 3,
+      "x": 3025,
+      "y": 391,
+      "hp": 118,
+      "focus": 55,
+      "seals": [
+        0,
+        0
+      ],
+      "boss": 206,
+      "rage": 0,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 163.100000000016,
+      "wall": 169.52500000001015,
+      "stage": 3,
+      "x": 3352,
+      "y": 369,
+      "hp": 100,
+      "focus": 73,
+      "seals": [
+        0,
+        0
+      ],
+      "boss": 142,
+      "rage": 30,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 165.03333333334757,
+      "wall": 171.45833333334173,
+      "stage": 3,
+      "x": 3066,
+      "y": 396,
+      "hp": 100,
+      "focus": 33,
+      "seals": [
+        0,
+        0
+      ],
+      "boss": 142,
+      "rage": 30,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 166.76666666667933,
+      "wall": 173.35833333334,
+      "stage": 3,
+      "x": 2791,
+      "y": 396,
+      "hp": 88,
+      "focus": 23,
+      "seals": [
+        0,
+        0
+      ],
+      "boss": 76,
+      "rage": 74,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 168.67500000001093,
+      "wall": 175.2666666666716,
+      "stage": 3,
+      "x": 2903,
+      "y": 396,
+      "hp": 88,
+      "focus": 23,
+      "seals": [
+        0,
+        0
+      ],
+      "boss": 76,
+      "rage": 74,
+      "growth": {
+        "vitality": 1
+      }
+    },
+    {
+      "time": 170.61666666667583,
+      "wall": 177.23333333333647,
+      "stage": 3,
+      "x": 2856,
+      "y": 396,
+      "hp": 72,
+      "focus": 29,
+      "seals": [
+        0,
+        0
+      ],
+      "boss": 68,
+      "rage": 82,
+      "growth": {
+        "vitality": 1
+      }
+    }
+  ],
+  "rewards": [
+    {
+      "stage": 0,
+      "kind": "mid",
+      "options": [
+        "vitality",
+        "clone-burst",
+        "rest"
+      ],
+      "hp": 88,
+      "chosen": "vitality"
+    },
+    {
+      "stage": 0,
+      "kind": "exit",
+      "options": [
+        "vitality",
+        "dash-strike",
+        "rest"
+      ],
+      "hp": 82,
+      "chosen": "rest"
+    },
+    {
+      "stage": 1,
+      "kind": "mid",
+      "options": [
+        "cloud",
+        "ultimate-echo",
+        "rest"
+      ],
+      "hp": 80,
+      "chosen": "rest"
+    },
+    {
+      "stage": 1,
+      "kind": "exit",
+      "options": [
+        "mirror",
+        "clone-burst",
+        "rest"
+      ],
+      "hp": 58,
+      "chosen": "rest"
+    },
+    {
+      "stage": 2,
+      "kind": "mid",
+      "options": [
+        "mirror",
+        "clone-burst",
+        "rest"
+      ],
+      "hp": 70,
+      "chosen": "rest"
+    },
+    {
+      "stage": 2,
+      "kind": "exit",
+      "options": [
+        "echo",
+        "clone-burst",
+        "rest"
+      ],
+      "hp": 46,
+      "chosen": "rest"
+    }
+  ],
+  "stages": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "worldEvents": [
+    {
+      "stage": 0,
+      "id": "rescue",
+      "state": "active",
+      "time": 12.391666666666604,
+      "hp": 96
+    },
+    {
+      "stage": 0,
+      "id": "rescue",
+      "state": "done",
+      "time": 16.241666666666386,
+      "hp": 98
+    },
+    {
+      "stage": 1,
+      "id": "bridge",
+      "state": "done",
+      "time": 75.86666666667311,
+      "hp": 94
+    },
+    {
+      "stage": 2,
+      "id": "bell",
+      "state": "active",
+      "time": 126.84166666671368,
+      "hp": 46
+    },
+    {
+      "stage": 2,
+      "id": "bell",
+      "state": "done",
+      "time": 132.51666666671048,
+      "hp": 64
+    }
+  ],
+  "errors": [],
+  "network": [],
+  "browser": "156.0.4314.42",
+  "seed": "LOTUS-1025",
+  "controlRecoveries": [],
+  "final": {
+    "difficulty": "challenge",
+    "challengeRules": 1,
+    "time": 172.37500000000756,
+    "elapsed": 179.07500000000147,
+    "hp": 72,
+    "kills": 45,
+    "broken": 8,
+    "relics": [
+      "staff"
+    ],
+    "growth": {
+      "vitality": 1
+    },
+    "talisman": null,
+    "stats": {
+      "swings": 149,
+      "hits": 166,
+      "blocks": 10,
+      "jumps": 65,
+      "dashes": 48,
+      "clones": 39,
+      "focusSpent": 2131.1666666667106,
+      "rests": 5,
+      "ultimates": 9,
+      "talismans": 0,
+      "guardians": 3,
+      "drops": 13,
+      "camps": 4,
+      "trials": 0,
+      "farHits": 42,
+      "extends": 0,
+      "tipHits": 0,
+      "vaults": 0,
+      "flights": 39
+    },
+    "world": {
+      "rescue": true,
+      "bridge": true,
+      "bell": true
+    },
+    "journal": [
+      "rescue:start",
+      "rescue:done",
+      "bridge:done",
+      "bell:start",
+      "bell:done"
+    ]
+  },
+  "performance": {
+    "frames": 10000,
+    "frameP95": 5.699999999982538,
+    "inputP95": 13.8,
+    "inputMax": 65.4
+  },
+  "trace": "evidence/challenge-v7/offline-retry/file-trace-1793071426677.zip",
+  "inputBoundaries": "evidence/challenge-v7/offline-retry/file-input-boundaries-1793071431017.json",
+  "video": "evidence/challenge-v7/offline-retry/video/page@09d26712567c0f9c433fc707756aabae.webm"
+}

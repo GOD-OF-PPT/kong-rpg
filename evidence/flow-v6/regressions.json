@@ -1,0 +1,29 @@
+{
+  "version": "6.2.1",
+  "results": [
+    {
+      "name": "actual third-strike wave damages an out-of-reach seal once in both directions",
+      "pass": true
+    },
+    {
+      "name": "an in-flight wave remembers seal contact across save/reload",
+      "pass": true
+    },
+    {
+      "name": "old schema6 projectiles without seal contact data still restore",
+      "pass": true
+    },
+    {
+      "name": "invalid seal hit lists reject rather than enabling repeat rewards",
+      "pass": true
+    },
+    {
+      "name": "piercing wave damages a foe and seal with the same numeric id independently",
+      "pass": true
+    },
+    {
+      "name": "reflected projectile can break a seal and never pay its heal/rage twice",
+      "pass": true
+    }
+  ]
+}

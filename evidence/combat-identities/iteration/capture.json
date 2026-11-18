@@ -1,0 +1,5017 @@
+{
+  "version": "12.1.4",
+  "sha256": "021531335f874bbbdeca16a7b6f1bd03aa460d7293054ddeb7f3aaee4b463841",
+  "method": "Public-import training fixtures; actual input and runtime simulation; frame capture after production renderer. Raw Canvas 960x540, no graphics replacement. Not natural gameplay or human playtest.",
+  "cases": [
+    {
+      "id": "wukong-main1",
+      "hero": "wukong",
+      "kind": "main",
+      "combo": 1,
+      "title": "孙悟空 · 第1击",
+      "distance": 55,
+      "seed": "VISUAL-SKILLS-1028",
+      "target": 900,
+      "frames": [
+        {
+          "label": "起手",
+          "file": "frames/wukong-main1-0.png",
+          "time": 0.14166666666666666,
+          "age": 0,
+          "camera": 1560,
+          "player": {
+            "x": 2095,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 100,
+            "invuln": 0
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-active",
+            "move": "",
+            "hp": 300,
+            "face": -1
+          },
+          "boxes": [],
+          "cast": null,
+          "effects": [],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 0
+            },
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 2
+            },
+            {
+              "type": "swing",
+              "t": 0.142,
+              "wall": 0.142,
+              "combo": 1,
+              "hero": "wukong"
+            }
+          ]
+        },
+        {
+          "label": "生效",
+          "file": "frames/wukong-main1-1.png",
+          "time": 0.18333333333333332,
+          "age": 0.04166666666666666,
+          "camera": 1560,
+          "player": {
+            "x": 2095,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 100,
+            "invuln": 0
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-active",
+            "move": "",
+            "hp": 300,
+            "face": -1
+          },
+          "boxes": [
+            {
+              "kind": "attack",
+              "x": 2105,
+              "y": 400,
+              "w": 70,
+              "h": 40
+            }
+          ],
+          "cast": null,
+          "effects": [],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 0
+            },
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 2
+            },
+            {
+              "type": "swing",
+              "t": 0.142,
+              "wall": 0.142,
+              "combo": 1,
+              "hero": "wukong"
+            }
+          ]
+        },
+        {
+          "label": "命中",
+          "file": "frames/wukong-main1-2.png",
+          "time": 0.19166666666666665,
+          "age": 0.04999999999999999,
+          "camera": 1560,
+          "player": {
+            "x": 2095,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 100,
+            "invuln": 0
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-active",
+            "move": "",
+            "hp": 295,
+            "face": -1
+          },
+          "boxes": [
+            {
+              "kind": "attack",
+              "x": 2105,
+              "y": 400,
+              "w": 70,
+              "h": 40
+            }
+          ],
+          "cast": null,
+          "effects": [
+            {
+              "kind": "brace-hit",
+              "x": 2150,
+              "y": 390.5,
+              "life": 0.4116666666666666
+            },
+            {
+              "kind": "hit",
+              "x": 2150,
+              "y": 420,
+              "life": 0.15166666666666667,
+              "impact": "light"
+            }
+          ],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 2
+            },
+            {
+              "type": "swing",
+              "t": 0.142,
+              "wall": 0.142,
+              "combo": 1,
+              "hero": "wukong"
+            },
+            {
+              "type": "strike-release",
+              "t": 0.192,
+              "wall": 0.192,
+              "combo": 1,
+              "hero": "wukong"
+            },
+            {
+              "type": "boss-brace",
+              "t": 0.192,
+              "wall": 0.192,
+              "target": 900,
+              "chip": 5,
+              "absorbed": 9
+            },
+            {
+              "type": "hit",
+              "t": 0.192,
+              "wall": 0.192,
+              "target": 900,
+              "kind": "warden",
+              "amount": 5,
+              "impact": "light",
+              "hero": "wukong",
+              "x": 2150,
+              "y": 420
+            }
+          ]
+        },
+        {
+          "label": "收回",
+          "file": "frames/wukong-main1-3.png",
+          "time": 0.2583333333333333,
+          "age": 0.11666666666666664,
+          "camera": 1560,
+          "player": {
+            "x": 2095,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 100,
+            "invuln": 0
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-active",
+            "move": "",
+            "hp": 295,
+            "face": -1
+          },
+          "boxes": [],
+          "cast": null,
+          "effects": [
+            {
+              "kind": "brace-hit",
+              "x": 2150,
+              "y": 390.5,
+              "life": 0.32833333333333303
+            },
+            {
+              "kind": "hit",
+              "x": 2150,
+              "y": 420,
+              "life": 0.06833333333333336,
+              "impact": "light"
+            }
+          ],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 2
+            },
+            {
+              "type": "swing",
+              "t": 0.142,
+              "wall": 0.142,
+              "combo": 1,
+              "hero": "wukong"
+            },
+            {
+              "type": "strike-release",
+              "t": 0.192,
+              "wall": 0.192,
+              "combo": 1,
+              "hero": "wukong"
+            },
+            {
+              "type": "boss-brace",
+              "t": 0.192,
+              "wall": 0.192,
+              "target": 900,
+              "chip": 5,
+              "absorbed": 9
+            },
+            {
+              "type": "hit",
+              "t": 0.192,
+              "wall": 0.192,
+              "target": 900,
+              "kind": "warden",
+              "amount": 5,
+              "impact": "light",
+              "hero": "wukong",
+              "x": 2150,
+              "y": 420
+            }
+          ]
+        }
+      ],
+      "missing": [],
+      "review": {
+        "status": "待审",
+        "notes": []
+      }
+    },
+    {
+      "id": "wukong-main2",
+      "hero": "wukong",
+      "kind": "main",
+      "combo": 2,
+      "title": "孙悟空 · 第2击",
+      "distance": 55,
+      "seed": "VISUAL-SKILLS-1028",
+      "target": 900,
+      "frames": [
+        {
+          "label": "起手",
+          "file": "frames/wukong-main2-0.png",
+          "time": 0.008333333333333333,
+          "age": 0,
+          "camera": 1560,
+          "player": {
+            "x": 2095,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 100,
+            "invuln": 0
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-active",
+            "move": "",
+            "hp": 300,
+            "face": -1
+          },
+          "boxes": [],
+          "cast": null,
+          "effects": [],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 0
+            },
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 2
+            },
+            {
+              "type": "swing",
+              "t": 0.008,
+              "wall": 0.008,
+              "combo": 2,
+              "hero": "wukong"
+            }
+          ]
+        },
+        {
+          "label": "生效",
+          "file": "frames/wukong-main2-1.png",
+          "time": 0.075,
+          "age": 0.06666666666666667,
+          "camera": 1560,
+          "player": {
+            "x": 2095,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 100,
+            "invuln": 0
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-active",
+            "move": "",
+            "hp": 300,
+            "face": -1
+          },
+          "boxes": [
+            {
+              "kind": "attack",
+              "x": 2105,
+              "y": 388,
+              "w": 85,
+              "h": 52
+            }
+          ],
+          "cast": null,
+          "effects": [],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 0
+            },
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 2
+            },
+            {
+              "type": "swing",
+              "t": 0.008,
+              "wall": 0.008,
+              "combo": 2,
+              "hero": "wukong"
+            }
+          ]
+        },
+        {
+          "label": "命中",
+          "file": "frames/wukong-main2-2.png",
+          "time": 0.08333333333333333,
+          "age": 0.075,
+          "camera": 1560,
+          "player": {
+            "x": 2095,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 100,
+            "invuln": 0
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-active",
+            "move": "",
+            "hp": 294,
+            "face": -1
+          },
+          "boxes": [
+            {
+              "kind": "attack",
+              "x": 2105,
+              "y": 388,
+              "w": 85,
+              "h": 52
+            }
+          ],
+          "cast": null,
+          "effects": [
+            {
+              "kind": "brace-hit",
+              "x": 2150,
+              "y": 390.5,
+              "life": 0.4116666666666666
+            },
+            {
+              "kind": "hit",
+              "x": 2150,
+              "y": 414,
+              "life": 0.15166666666666667,
+              "impact": "light"
+            }
+          ],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 2
+            },
+            {
+              "type": "swing",
+              "t": 0.008,
+              "wall": 0.008,
+              "combo": 2,
+              "hero": "wukong"
+            },
+            {
+              "type": "strike-release",
+              "t": 0.083,
+              "wall": 0.083,
+              "combo": 2,
+              "hero": "wukong"
+            },
+            {
+              "type": "boss-brace",
+              "t": 0.083,
+              "wall": 0.083,
+              "target": 900,
+              "chip": 6,
+              "absorbed": 9
+            },
+            {
+              "type": "hit",
+              "t": 0.083,
+              "wall": 0.083,
+              "target": 900,
+              "kind": "warden",
+              "amount": 6,
+              "impact": "light",
+              "hero": "wukong",
+              "x": 2150,
+              "y": 414
+            }
+          ]
+        },
+        {
+          "label": "收回",
+          "file": "frames/wukong-main2-3.png",
+          "time": 0.18333333333333332,
+          "age": 0.175,
+          "camera": 1560,
+          "player": {
+            "x": 2095,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 100,
+            "invuln": 0
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-active",
+            "move": "",
+            "hp": 294,
+            "face": -1
+          },
+          "boxes": [],
+          "cast": null,
+          "effects": [
+            {
+              "kind": "brace-hit",
+              "x": 2150,
+              "y": 390.5,
+              "life": 0.2949999999999996
+            },
+            {
+              "kind": "hit",
+              "x": 2150,
+              "y": 414,
+              "life": 0.03500000000000003,
+              "impact": "light"
+            }
+          ],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 2
+            },
+            {
+              "type": "swing",
+              "t": 0.008,
+              "wall": 0.008,
+              "combo": 2,
+              "hero": "wukong"
+            },
+            {
+              "type": "strike-release",
+              "t": 0.083,
+              "wall": 0.083,
+              "combo": 2,
+              "hero": "wukong"
+            },
+            {
+              "type": "boss-brace",
+              "t": 0.083,
+              "wall": 0.083,
+              "target": 900,
+              "chip": 6,
+              "absorbed": 9
+            },
+            {
+              "type": "hit",
+              "t": 0.083,
+              "wall": 0.083,
+              "target": 900,
+              "kind": "warden",
+              "amount": 6,
+              "impact": "light",
+              "hero": "wukong",
+              "x": 2150,
+              "y": 414
+            }
+          ]
+        }
+      ],
+      "missing": [],
+      "review": {
+        "status": "待审",
+        "notes": []
+      }
+    },
+    {
+      "id": "wukong-main3",
+      "hero": "wukong",
+      "kind": "main",
+      "combo": 3,
+      "title": "孙悟空 · 第3击",
+      "distance": 55,
+      "seed": "VISUAL-SKILLS-1028",
+      "target": 900,
+      "frames": [
+        {
+          "label": "起手",
+          "file": "frames/wukong-main3-0.png",
+          "time": 0.008333333333333333,
+          "age": 0,
+          "camera": 1560,
+          "player": {
+            "x": 2095,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 100,
+            "invuln": 0
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-active",
+            "move": "",
+            "hp": 300,
+            "face": -1
+          },
+          "boxes": [],
+          "cast": null,
+          "effects": [],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 0
+            },
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 2
+            },
+            {
+              "type": "swing",
+              "t": 0.008,
+              "wall": 0.008,
+              "combo": 3,
+              "hero": "wukong"
+            }
+          ]
+        },
+        {
+          "label": "生效",
+          "file": "frames/wukong-main3-1.png",
+          "time": 0.14166666666666666,
+          "age": 0.13333333333333333,
+          "camera": 1560,
+          "player": {
+            "x": 2095,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 100,
+            "invuln": 0
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-active",
+            "move": "",
+            "hp": 300,
+            "face": -1
+          },
+          "boxes": [
+            {
+              "kind": "attack",
+              "x": 2105,
+              "y": 386,
+              "w": 112,
+              "h": 54
+            }
+          ],
+          "cast": null,
+          "effects": [],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 0
+            },
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 2
+            },
+            {
+              "type": "swing",
+              "t": 0.008,
+              "wall": 0.008,
+              "combo": 3,
+              "hero": "wukong"
+            }
+          ]
+        },
+        {
+          "label": "命中",
+          "file": "frames/wukong-main3-2.png",
+          "time": 0.15,
+          "age": 0.14166666666666666,
+          "camera": 1560,
+          "player": {
+            "x": 2095,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 100,
+            "invuln": 0
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-active",
+            "move": "",
+            "hp": 282,
+            "face": -1
+          },
+          "boxes": [
+            {
+              "kind": "attack",
+              "x": 2105,
+              "y": 386,
+              "w": 112,
+              "h": 54
+            }
+          ],
+          "cast": null,
+          "effects": [
+            {
+              "kind": "brace-hit",
+              "x": 2150,
+              "y": 390.5,
+              "life": 0.4116666666666666
+            },
+            {
+              "kind": "heavy-hit",
+              "x": 2150,
+              "y": 413,
+              "life": 0.25166666666666665,
+              "impact": "heavy"
+            }
+          ],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 2
+            },
+            {
+              "type": "swing",
+              "t": 0.008,
+              "wall": 0.008,
+              "combo": 3,
+              "hero": "wukong"
+            },
+            {
+              "type": "strike-release",
+              "t": 0.15,
+              "wall": 0.15,
+              "combo": 3,
+              "hero": "wukong"
+            },
+            {
+              "type": "boss-brace",
+              "t": 0.15,
+              "wall": 0.15,
+              "target": 900,
+              "chip": 18,
+              "absorbed": 12
+            },
+            {
+              "type": "hit",
+              "t": 0.15,
+              "wall": 0.15,
+              "target": 900,
+              "kind": "warden",
+              "amount": 18,
+              "impact": "heavy",
+              "hero": "wukong",
+              "x": 2150,
+              "y": 413
+            }
+          ]
+        },
+        {
+          "label": "收回",
+          "file": "frames/wukong-main3-3.png",
+          "time": 0.24999999999999997,
+          "age": 0.24166666666666664,
+          "camera": 1560,
+          "player": {
+            "x": 2095,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 100,
+            "invuln": 0
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-active",
+            "move": "",
+            "hp": 282,
+            "face": -1
+          },
+          "boxes": [],
+          "cast": null,
+          "effects": [
+            {
+              "kind": "brace-hit",
+              "x": 2150,
+              "y": 390.5,
+              "life": 0.2699999999999995
+            },
+            {
+              "kind": "heavy-hit",
+              "x": 2150,
+              "y": 413,
+              "life": 0.11000000000000001,
+              "impact": "heavy"
+            }
+          ],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 2
+            },
+            {
+              "type": "swing",
+              "t": 0.008,
+              "wall": 0.008,
+              "combo": 3,
+              "hero": "wukong"
+            },
+            {
+              "type": "strike-release",
+              "t": 0.15,
+              "wall": 0.15,
+              "combo": 3,
+              "hero": "wukong"
+            },
+            {
+              "type": "boss-brace",
+              "t": 0.15,
+              "wall": 0.15,
+              "target": 900,
+              "chip": 18,
+              "absorbed": 12
+            },
+            {
+              "type": "hit",
+              "t": 0.15,
+              "wall": 0.15,
+              "target": 900,
+              "kind": "warden",
+              "amount": 18,
+              "impact": "heavy",
+              "hero": "wukong",
+              "x": 2150,
+              "y": 413
+            }
+          ]
+        }
+      ],
+      "missing": [],
+      "review": {
+        "status": "待审",
+        "notes": []
+      }
+    },
+    {
+      "id": "nezha-main1",
+      "hero": "nezha",
+      "kind": "main",
+      "combo": 1,
+      "title": "哪吒 · 第1击",
+      "distance": 65,
+      "seed": "VISUAL-SKILLS-1028",
+      "target": 900,
+      "frames": [
+        {
+          "label": "起手",
+          "file": "frames/nezha-main1-0.png",
+          "time": 0.008333333333333333,
+          "age": 0,
+          "camera": 1560,
+          "player": {
+            "x": 2085,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 100,
+            "invuln": 0
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-active",
+            "move": "",
+            "hp": 300,
+            "face": -1
+          },
+          "boxes": [],
+          "cast": null,
+          "effects": [],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 0
+            },
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 2
+            },
+            {
+              "type": "swing",
+              "t": 0.008,
+              "wall": 0.008,
+              "combo": 1,
+              "hero": "nezha"
+            }
+          ]
+        },
+        {
+          "label": "生效",
+          "file": "frames/nezha-main1-1.png",
+          "time": 0.03333333333333333,
+          "age": 0.025,
+          "camera": 1560,
+          "player": {
+            "x": 2085,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 100,
+            "invuln": 0
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-active",
+            "move": "",
+            "hp": 300,
+            "face": -1
+          },
+          "boxes": [
+            {
+              "kind": "attack",
+              "x": 2095,
+              "y": 410,
+              "w": 98,
+              "h": 24
+            }
+          ],
+          "cast": null,
+          "effects": [],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 0
+            },
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 2
+            },
+            {
+              "type": "swing",
+              "t": 0.008,
+              "wall": 0.008,
+              "combo": 1,
+              "hero": "nezha"
+            }
+          ]
+        },
+        {
+          "label": "命中",
+          "file": "frames/nezha-main1-2.png",
+          "time": 0.041666666666666664,
+          "age": 0.03333333333333333,
+          "camera": 1560,
+          "player": {
+            "x": 2085,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 100,
+            "invuln": 0
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-active",
+            "move": "",
+            "hp": 295,
+            "face": -1
+          },
+          "boxes": [
+            {
+              "kind": "attack",
+              "x": 2095,
+              "y": 410,
+              "w": 98,
+              "h": 24
+            }
+          ],
+          "cast": null,
+          "effects": [
+            {
+              "kind": "brace-hit",
+              "x": 2150,
+              "y": 390.5,
+              "life": 0.4116666666666666
+            },
+            {
+              "kind": "hit",
+              "x": 2150,
+              "y": 422,
+              "life": 0.15166666666666667,
+              "impact": "light"
+            }
+          ],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 2
+            },
+            {
+              "type": "swing",
+              "t": 0.008,
+              "wall": 0.008,
+              "combo": 1,
+              "hero": "nezha"
+            },
+            {
+              "type": "strike-release",
+              "t": 0.042,
+              "wall": 0.042,
+              "combo": 1,
+              "hero": "nezha"
+            },
+            {
+              "type": "boss-brace",
+              "t": 0.042,
+              "wall": 0.042,
+              "target": 900,
+              "chip": 5,
+              "absorbed": 7
+            },
+            {
+              "type": "hit",
+              "t": 0.042,
+              "wall": 0.042,
+              "target": 900,
+              "kind": "warden",
+              "amount": 5,
+              "impact": "light",
+              "hero": "nezha",
+              "x": 2150,
+              "y": 422
+            }
+          ]
+        },
+        {
+          "label": "收回",
+          "file": "frames/nezha-main1-3.png",
+          "time": 0.09166666666666666,
+          "age": 0.08333333333333333,
+          "camera": 1560,
+          "player": {
+            "x": 2085,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 100,
+            "invuln": 0
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-active",
+            "move": "",
+            "hp": 295,
+            "face": -1
+          },
+          "boxes": [],
+          "cast": null,
+          "effects": [
+            {
+              "kind": "brace-hit",
+              "x": 2150,
+              "y": 390.5,
+              "life": 0.34499999999999975
+            },
+            {
+              "kind": "hit",
+              "x": 2150,
+              "y": 422,
+              "life": 0.08500000000000002,
+              "impact": "light"
+            }
+          ],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 2
+            },
+            {
+              "type": "swing",
+              "t": 0.008,
+              "wall": 0.008,
+              "combo": 1,
+              "hero": "nezha"
+            },
+            {
+              "type": "strike-release",
+              "t": 0.042,
+              "wall": 0.042,
+              "combo": 1,
+              "hero": "nezha"
+            },
+            {
+              "type": "boss-brace",
+              "t": 0.042,
+              "wall": 0.042,
+              "target": 900,
+              "chip": 5,
+              "absorbed": 7
+            },
+            {
+              "type": "hit",
+              "t": 0.042,
+              "wall": 0.042,
+              "target": 900,
+              "kind": "warden",
+              "amount": 5,
+              "impact": "light",
+              "hero": "nezha",
+              "x": 2150,
+              "y": 422
+            }
+          ]
+        }
+      ],
+      "missing": [],
+      "review": {
+        "status": "待审",
+        "notes": []
+      }
+    },
+    {
+      "id": "nezha-main2",
+      "hero": "nezha",
+      "kind": "main",
+      "combo": 2,
+      "title": "哪吒 · 第2击",
+      "distance": 65,
+      "seed": "VISUAL-SKILLS-1028",
+      "target": 900,
+      "frames": [
+        {
+          "label": "起手",
+          "file": "frames/nezha-main2-0.png",
+          "time": 0.008333333333333333,
+          "age": 0,
+          "camera": 1560,
+          "player": {
+            "x": 2085,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 100,
+            "invuln": 0
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-active",
+            "move": "",
+            "hp": 300,
+            "face": -1
+          },
+          "boxes": [],
+          "cast": null,
+          "effects": [],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 0
+            },
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 2
+            },
+            {
+              "type": "swing",
+              "t": 0.008,
+              "wall": 0.008,
+              "combo": 2,
+              "hero": "nezha"
+            }
+          ]
+        },
+        {
+          "label": "生效",
+          "file": "frames/nezha-main2-1.png",
+          "time": 0.075,
+          "age": 0.06666666666666667,
+          "camera": 1560,
+          "player": {
+            "x": 2085,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 100,
+            "invuln": 0
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-active",
+            "move": "",
+            "hp": 300,
+            "face": -1
+          },
+          "boxes": [
+            {
+              "kind": "attack",
+              "x": 2095,
+              "y": 382,
+              "w": 74,
+              "h": 58
+            }
+          ],
+          "cast": null,
+          "effects": [],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 0
+            },
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 2
+            },
+            {
+              "type": "swing",
+              "t": 0.008,
+              "wall": 0.008,
+              "combo": 2,
+              "hero": "nezha"
+            }
+          ]
+        },
+        {
+          "label": "命中",
+          "file": "frames/nezha-main2-2.png",
+          "time": 0.08333333333333333,
+          "age": 0.075,
+          "camera": 1560,
+          "player": {
+            "x": 2085,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 100,
+            "invuln": 0
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-active",
+            "move": "",
+            "hp": 295,
+            "face": -1
+          },
+          "boxes": [
+            {
+              "kind": "attack",
+              "x": 2095,
+              "y": 382,
+              "w": 74,
+              "h": 58
+            }
+          ],
+          "cast": null,
+          "effects": [
+            {
+              "kind": "brace-hit",
+              "x": 2150,
+              "y": 390.5,
+              "life": 0.4116666666666666
+            },
+            {
+              "kind": "hit",
+              "x": 2150,
+              "y": 411,
+              "life": 0.15166666666666667,
+              "impact": "light"
+            }
+          ],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 2
+            },
+            {
+              "type": "swing",
+              "t": 0.008,
+              "wall": 0.008,
+              "combo": 2,
+              "hero": "nezha"
+            },
+            {
+              "type": "strike-release",
+              "t": 0.083,
+              "wall": 0.083,
+              "combo": 2,
+              "hero": "nezha"
+            },
+            {
+              "type": "boss-brace",
+              "t": 0.083,
+              "wall": 0.083,
+              "target": 900,
+              "chip": 5,
+              "absorbed": 8
+            },
+            {
+              "type": "hit",
+              "t": 0.083,
+              "wall": 0.083,
+              "target": 900,
+              "kind": "warden",
+              "amount": 5,
+              "impact": "light",
+              "hero": "nezha",
+              "x": 2150,
+              "y": 411
+            }
+          ]
+        },
+        {
+          "label": "收回",
+          "file": "frames/nezha-main2-3.png",
+          "time": 0.16666666666666666,
+          "age": 0.15833333333333333,
+          "camera": 1560,
+          "player": {
+            "x": 2085,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 100,
+            "invuln": 0
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-active",
+            "move": "",
+            "hp": 295,
+            "face": -1
+          },
+          "boxes": [],
+          "cast": null,
+          "effects": [
+            {
+              "kind": "brace-hit",
+              "x": 2150,
+              "y": 390.5,
+              "life": 0.3116666666666663
+            },
+            {
+              "kind": "hit",
+              "x": 2150,
+              "y": 411,
+              "life": 0.051666666666666694,
+              "impact": "light"
+            }
+          ],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 2
+            },
+            {
+              "type": "swing",
+              "t": 0.008,
+              "wall": 0.008,
+              "combo": 2,
+              "hero": "nezha"
+            },
+            {
+              "type": "strike-release",
+              "t": 0.083,
+              "wall": 0.083,
+              "combo": 2,
+              "hero": "nezha"
+            },
+            {
+              "type": "boss-brace",
+              "t": 0.083,
+              "wall": 0.083,
+              "target": 900,
+              "chip": 5,
+              "absorbed": 8
+            },
+            {
+              "type": "hit",
+              "t": 0.083,
+              "wall": 0.083,
+              "target": 900,
+              "kind": "warden",
+              "amount": 5,
+              "impact": "light",
+              "hero": "nezha",
+              "x": 2150,
+              "y": 411
+            }
+          ]
+        }
+      ],
+      "missing": [],
+      "review": {
+        "status": "待审",
+        "notes": []
+      }
+    },
+    {
+      "id": "nezha-main3",
+      "hero": "nezha",
+      "kind": "main",
+      "combo": 3,
+      "title": "哪吒 · 第3击",
+      "distance": 65,
+      "seed": "VISUAL-SKILLS-1028",
+      "target": 900,
+      "frames": [
+        {
+          "label": "起手",
+          "file": "frames/nezha-main3-0.png",
+          "time": 0.008333333333333333,
+          "age": 0,
+          "camera": 1560,
+          "player": {
+            "x": 2085,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 100,
+            "invuln": 0
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-active",
+            "move": "",
+            "hp": 300,
+            "face": -1
+          },
+          "boxes": [],
+          "cast": null,
+          "effects": [],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 0
+            },
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 2
+            },
+            {
+              "type": "swing",
+              "t": 0.008,
+              "wall": 0.008,
+              "combo": 3,
+              "hero": "nezha"
+            }
+          ]
+        },
+        {
+          "label": "生效",
+          "file": "frames/nezha-main3-1.png",
+          "time": 0.12499999999999999,
+          "age": 0.11666666666666665,
+          "camera": 1560,
+          "player": {
+            "x": 2085,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 100,
+            "invuln": 0
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-active",
+            "move": "",
+            "hp": 300,
+            "face": -1
+          },
+          "boxes": [
+            {
+              "kind": "attack",
+              "x": 2095,
+              "y": 409,
+              "w": 126,
+              "h": 26
+            }
+          ],
+          "cast": null,
+          "effects": [],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 0
+            },
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 2
+            },
+            {
+              "type": "swing",
+              "t": 0.008,
+              "wall": 0.008,
+              "combo": 3,
+              "hero": "nezha"
+            }
+          ]
+        },
+        {
+          "label": "命中",
+          "file": "frames/nezha-main3-2.png",
+          "time": 0.13333333333333333,
+          "age": 0.125,
+          "camera": 1560,
+          "player": {
+            "x": 2085,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 100,
+            "invuln": 0
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-active",
+            "move": "",
+            "hp": 282,
+            "face": -1
+          },
+          "boxes": [
+            {
+              "kind": "attack",
+              "x": 2095,
+              "y": 409,
+              "w": 126,
+              "h": 26
+            }
+          ],
+          "cast": null,
+          "effects": [
+            {
+              "kind": "brace-hit",
+              "x": 2150,
+              "y": 390.5,
+              "life": 0.4116666666666666
+            },
+            {
+              "kind": "heavy-hit",
+              "x": 2150,
+              "y": 422,
+              "life": 0.25166666666666665,
+              "impact": "heavy"
+            }
+          ],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 2
+            },
+            {
+              "type": "swing",
+              "t": 0.008,
+              "wall": 0.008,
+              "combo": 3,
+              "hero": "nezha"
+            },
+            {
+              "type": "strike-release",
+              "t": 0.133,
+              "wall": 0.133,
+              "combo": 3,
+              "hero": "nezha"
+            },
+            {
+              "type": "boss-brace",
+              "t": 0.133,
+              "wall": 0.133,
+              "target": 900,
+              "chip": 18,
+              "absorbed": 11
+            },
+            {
+              "type": "hit",
+              "t": 0.133,
+              "wall": 0.133,
+              "target": 900,
+              "kind": "warden",
+              "amount": 18,
+              "impact": "heavy",
+              "hero": "nezha",
+              "x": 2150,
+              "y": 422
+            }
+          ]
+        },
+        {
+          "label": "收回",
+          "file": "frames/nezha-main3-3.png",
+          "time": 0.22499999999999998,
+          "age": 0.21666666666666665,
+          "camera": 1560,
+          "player": {
+            "x": 2085,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 100,
+            "invuln": 0
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-active",
+            "move": "",
+            "hp": 282,
+            "face": -1
+          },
+          "boxes": [],
+          "cast": null,
+          "effects": [
+            {
+              "kind": "brace-hit",
+              "x": 2150,
+              "y": 390.5,
+              "life": 0.2783333333333329
+            },
+            {
+              "kind": "heavy-hit",
+              "x": 2150,
+              "y": 422,
+              "life": 0.11833333333333335,
+              "impact": "heavy"
+            }
+          ],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 2
+            },
+            {
+              "type": "swing",
+              "t": 0.008,
+              "wall": 0.008,
+              "combo": 3,
+              "hero": "nezha"
+            },
+            {
+              "type": "strike-release",
+              "t": 0.133,
+              "wall": 0.133,
+              "combo": 3,
+              "hero": "nezha"
+            },
+            {
+              "type": "boss-brace",
+              "t": 0.133,
+              "wall": 0.133,
+              "target": 900,
+              "chip": 18,
+              "absorbed": 11
+            },
+            {
+              "type": "hit",
+              "t": 0.133,
+              "wall": 0.133,
+              "target": 900,
+              "kind": "warden",
+              "amount": 18,
+              "impact": "heavy",
+              "hero": "nezha",
+              "x": 2150,
+              "y": 422
+            }
+          ]
+        }
+      ],
+      "missing": [],
+      "review": {
+        "status": "待审",
+        "notes": []
+      }
+    },
+    {
+      "id": "erlang-main1",
+      "hero": "erlang",
+      "kind": "main",
+      "combo": 1,
+      "title": "杨戬 · 第1击",
+      "distance": 65,
+      "seed": "VISUAL-SKILLS-1028",
+      "target": 900,
+      "frames": [
+        {
+          "label": "起手",
+          "file": "frames/erlang-main1-0.png",
+          "time": 0.008333333333333333,
+          "age": 0,
+          "camera": 1560,
+          "player": {
+            "x": 2085,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 100,
+            "invuln": 0
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-active",
+            "move": "",
+            "hp": 300,
+            "face": -1
+          },
+          "boxes": [],
+          "cast": null,
+          "effects": [],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 0
+            },
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 2
+            },
+            {
+              "type": "swing",
+              "t": 0.008,
+              "wall": 0.008,
+              "combo": 1,
+              "hero": "erlang"
+            }
+          ]
+        },
+        {
+          "label": "生效",
+          "file": "frames/erlang-main1-1.png",
+          "time": 0.075,
+          "age": 0.06666666666666667,
+          "camera": 1560,
+          "player": {
+            "x": 2085,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 100,
+            "invuln": 0
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-active",
+            "move": "",
+            "hp": 300,
+            "face": -1
+          },
+          "boxes": [
+            {
+              "kind": "attack",
+              "x": 2095,
+              "y": 396,
+              "w": 84,
+              "h": 44
+            }
+          ],
+          "cast": null,
+          "effects": [],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 0
+            },
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 2
+            },
+            {
+              "type": "swing",
+              "t": 0.008,
+              "wall": 0.008,
+              "combo": 1,
+              "hero": "erlang"
+            }
+          ]
+        },
+        {
+          "label": "命中",
+          "file": "frames/erlang-main1-2.png",
+          "time": 0.08333333333333333,
+          "age": 0.075,
+          "camera": 1560,
+          "player": {
+            "x": 2085,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 100,
+            "invuln": 0
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-active",
+            "move": "",
+            "hp": 294,
+            "face": -1
+          },
+          "boxes": [
+            {
+              "kind": "attack",
+              "x": 2095,
+              "y": 396,
+              "w": 84,
+              "h": 44
+            }
+          ],
+          "cast": null,
+          "effects": [
+            {
+              "kind": "brace-hit",
+              "x": 2150,
+              "y": 390.5,
+              "life": 0.4116666666666666
+            },
+            {
+              "kind": "hit",
+              "x": 2150,
+              "y": 418,
+              "life": 0.15166666666666667,
+              "impact": "light"
+            }
+          ],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 2
+            },
+            {
+              "type": "swing",
+              "t": 0.008,
+              "wall": 0.008,
+              "combo": 1,
+              "hero": "erlang"
+            },
+            {
+              "type": "strike-release",
+              "t": 0.083,
+              "wall": 0.083,
+              "combo": 1,
+              "hero": "erlang"
+            },
+            {
+              "type": "boss-brace",
+              "t": 0.083,
+              "wall": 0.083,
+              "target": 900,
+              "chip": 6,
+              "absorbed": 10
+            },
+            {
+              "type": "hit",
+              "t": 0.083,
+              "wall": 0.083,
+              "target": 900,
+              "kind": "warden",
+              "amount": 6,
+              "impact": "light",
+              "hero": "erlang",
+              "x": 2150,
+              "y": 418
+            }
+          ]
+        },
+        {
+          "label": "收回",
+          "file": "frames/erlang-main1-3.png",
+          "time": 0.16666666666666666,
+          "age": 0.15833333333333333,
+          "camera": 1560,
+          "player": {
+            "x": 2085,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 100,
+            "invuln": 0
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-active",
+            "move": "",
+            "hp": 294,
+            "face": -1
+          },
+          "boxes": [],
+          "cast": null,
+          "effects": [
+            {
+              "kind": "brace-hit",
+              "x": 2150,
+              "y": 390.5,
+              "life": 0.3116666666666663
+            },
+            {
+              "kind": "hit",
+              "x": 2150,
+              "y": 418,
+              "life": 0.051666666666666694,
+              "impact": "light"
+            }
+          ],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 2
+            },
+            {
+              "type": "swing",
+              "t": 0.008,
+              "wall": 0.008,
+              "combo": 1,
+              "hero": "erlang"
+            },
+            {
+              "type": "strike-release",
+              "t": 0.083,
+              "wall": 0.083,
+              "combo": 1,
+              "hero": "erlang"
+            },
+            {
+              "type": "boss-brace",
+              "t": 0.083,
+              "wall": 0.083,
+              "target": 900,
+              "chip": 6,
+              "absorbed": 10
+            },
+            {
+              "type": "hit",
+              "t": 0.083,
+              "wall": 0.083,
+              "target": 900,
+              "kind": "warden",
+              "amount": 6,
+              "impact": "light",
+              "hero": "erlang",
+              "x": 2150,
+              "y": 418
+            }
+          ]
+        }
+      ],
+      "missing": [],
+      "review": {
+        "status": "待审",
+        "notes": []
+      }
+    },
+    {
+      "id": "erlang-main2",
+      "hero": "erlang",
+      "kind": "main",
+      "combo": 2,
+      "title": "杨戬 · 第2击",
+      "distance": 65,
+      "seed": "VISUAL-SKILLS-1028",
+      "target": 900,
+      "frames": [
+        {
+          "label": "起手",
+          "file": "frames/erlang-main2-0.png",
+          "time": 0.008333333333333333,
+          "age": 0,
+          "camera": 1560,
+          "player": {
+            "x": 2085,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 100,
+            "invuln": 0
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-active",
+            "move": "",
+            "hp": 300,
+            "face": -1
+          },
+          "boxes": [],
+          "cast": null,
+          "effects": [],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 0
+            },
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 2
+            },
+            {
+              "type": "swing",
+              "t": 0.008,
+              "wall": 0.008,
+              "combo": 2,
+              "hero": "erlang"
+            }
+          ]
+        },
+        {
+          "label": "生效",
+          "file": "frames/erlang-main2-1.png",
+          "time": 0.08333333333333333,
+          "age": 0.075,
+          "camera": 1560,
+          "player": {
+            "x": 2085,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 100,
+            "invuln": 0
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-active",
+            "move": "",
+            "hp": 300,
+            "face": -1
+          },
+          "boxes": [
+            {
+              "kind": "attack",
+              "x": 2095,
+              "y": 378,
+              "w": 72,
+              "h": 62
+            }
+          ],
+          "cast": null,
+          "effects": [],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 0
+            },
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 2
+            },
+            {
+              "type": "swing",
+              "t": 0.008,
+              "wall": 0.008,
+              "combo": 2,
+              "hero": "erlang"
+            }
+          ]
+        },
+        {
+          "label": "命中",
+          "file": "frames/erlang-main2-2.png",
+          "time": 0.09166666666666666,
+          "age": 0.08333333333333333,
+          "camera": 1560,
+          "player": {
+            "x": 2085,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 100,
+            "invuln": 0
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-active",
+            "move": "",
+            "hp": 294,
+            "face": -1
+          },
+          "boxes": [
+            {
+              "kind": "attack",
+              "x": 2095,
+              "y": 378,
+              "w": 72,
+              "h": 62
+            }
+          ],
+          "cast": null,
+          "effects": [
+            {
+              "kind": "brace-hit",
+              "x": 2150,
+              "y": 390.5,
+              "life": 0.40333333333333327
+            },
+            {
+              "kind": "hit",
+              "x": 2150,
+              "y": 409,
+              "life": 0.14333333333333334,
+              "impact": "light"
+            }
+          ],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 2
+            },
+            {
+              "type": "swing",
+              "t": 0.008,
+              "wall": 0.008,
+              "combo": 2,
+              "hero": "erlang"
+            },
+            {
+              "type": "strike-release",
+              "t": 0.092,
+              "wall": 0.092,
+              "combo": 2,
+              "hero": "erlang"
+            },
+            {
+              "type": "boss-brace",
+              "t": 0.092,
+              "wall": 0.092,
+              "target": 900,
+              "chip": 6,
+              "absorbed": 9
+            },
+            {
+              "type": "hit",
+              "t": 0.092,
+              "wall": 0.092,
+              "target": 900,
+              "kind": "warden",
+              "amount": 6,
+              "impact": "light",
+              "hero": "erlang",
+              "x": 2150,
+              "y": 409
+            }
+          ]
+        },
+        {
+          "label": "收回",
+          "file": "frames/erlang-main2-3.png",
+          "time": 0.19166666666666665,
+          "age": 0.18333333333333332,
+          "camera": 1560,
+          "player": {
+            "x": 2085,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 100,
+            "invuln": 0
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-active",
+            "move": "",
+            "hp": 294,
+            "face": -1
+          },
+          "boxes": [],
+          "cast": null,
+          "effects": [
+            {
+              "kind": "brace-hit",
+              "x": 2150,
+              "y": 390.5,
+              "life": 0.2949999999999996
+            },
+            {
+              "kind": "hit",
+              "x": 2150,
+              "y": 409,
+              "life": 0.03500000000000003,
+              "impact": "light"
+            }
+          ],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 2
+            },
+            {
+              "type": "swing",
+              "t": 0.008,
+              "wall": 0.008,
+              "combo": 2,
+              "hero": "erlang"
+            },
+            {
+              "type": "strike-release",
+              "t": 0.092,
+              "wall": 0.092,
+              "combo": 2,
+              "hero": "erlang"
+            },
+            {
+              "type": "boss-brace",
+              "t": 0.092,
+              "wall": 0.092,
+              "target": 900,
+              "chip": 6,
+              "absorbed": 9
+            },
+            {
+              "type": "hit",
+              "t": 0.092,
+              "wall": 0.092,
+              "target": 900,
+              "kind": "warden",
+              "amount": 6,
+              "impact": "light",
+              "hero": "erlang",
+              "x": 2150,
+              "y": 409
+            }
+          ]
+        }
+      ],
+      "missing": [],
+      "review": {
+        "status": "待审",
+        "notes": []
+      }
+    },
+    {
+      "id": "erlang-main3",
+      "hero": "erlang",
+      "kind": "main",
+      "combo": 3,
+      "title": "杨戬 · 第3击",
+      "distance": 65,
+      "seed": "VISUAL-SKILLS-1028",
+      "target": 900,
+      "frames": [
+        {
+          "label": "起手",
+          "file": "frames/erlang-main3-0.png",
+          "time": 0.008333333333333333,
+          "age": 0,
+          "camera": 1560,
+          "player": {
+            "x": 2085,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 100,
+            "invuln": 0
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-active",
+            "move": "",
+            "hp": 300,
+            "face": -1
+          },
+          "boxes": [],
+          "cast": null,
+          "effects": [],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 0
+            },
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 2
+            },
+            {
+              "type": "swing",
+              "t": 0.008,
+              "wall": 0.008,
+              "combo": 3,
+              "hero": "erlang"
+            }
+          ]
+        },
+        {
+          "label": "生效",
+          "file": "frames/erlang-main3-1.png",
+          "time": 0.15,
+          "age": 0.14166666666666666,
+          "camera": 1560,
+          "player": {
+            "x": 2085,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 100,
+            "invuln": 0
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-active",
+            "move": "",
+            "hp": 300,
+            "face": -1
+          },
+          "boxes": [
+            {
+              "kind": "attack",
+              "x": 2095,
+              "y": 381,
+              "w": 94,
+              "h": 59
+            }
+          ],
+          "cast": null,
+          "effects": [],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 0
+            },
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 2
+            },
+            {
+              "type": "swing",
+              "t": 0.008,
+              "wall": 0.008,
+              "combo": 3,
+              "hero": "erlang"
+            }
+          ]
+        },
+        {
+          "label": "命中",
+          "file": "frames/erlang-main3-2.png",
+          "time": 0.15833333333333333,
+          "age": 0.15,
+          "camera": 1560,
+          "player": {
+            "x": 2085,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 100,
+            "invuln": 0
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-active",
+            "move": "",
+            "hp": 280,
+            "face": -1
+          },
+          "boxes": [
+            {
+              "kind": "attack",
+              "x": 2095,
+              "y": 381,
+              "w": 94,
+              "h": 59
+            }
+          ],
+          "cast": null,
+          "effects": [
+            {
+              "kind": "brace-hit",
+              "x": 2150,
+              "y": 390.5,
+              "life": 0.40333333333333327
+            },
+            {
+              "kind": "heavy-hit",
+              "x": 2150,
+              "y": 410.5,
+              "life": 0.24333333333333332,
+              "impact": "heavy"
+            }
+          ],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 2
+            },
+            {
+              "type": "swing",
+              "t": 0.008,
+              "wall": 0.008,
+              "combo": 3,
+              "hero": "erlang"
+            },
+            {
+              "type": "strike-release",
+              "t": 0.158,
+              "wall": 0.158,
+              "combo": 3,
+              "hero": "erlang"
+            },
+            {
+              "type": "boss-brace",
+              "t": 0.158,
+              "wall": 0.158,
+              "target": 900,
+              "chip": 20,
+              "absorbed": 13
+            },
+            {
+              "type": "hit",
+              "t": 0.158,
+              "wall": 0.158,
+              "target": 900,
+              "kind": "warden",
+              "amount": 20,
+              "impact": "heavy",
+              "hero": "erlang",
+              "x": 2150,
+              "y": 410.5
+            }
+          ]
+        },
+        {
+          "label": "收回",
+          "file": "frames/erlang-main3-3.png",
+          "time": 0.275,
+          "age": 0.26666666666666666,
+          "camera": 1560,
+          "player": {
+            "x": 2085,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 100,
+            "invuln": 0
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-active",
+            "move": "",
+            "hp": 280,
+            "face": -1
+          },
+          "boxes": [],
+          "cast": null,
+          "effects": [
+            {
+              "kind": "brace-hit",
+              "x": 2150,
+              "y": 390.5,
+              "life": 0.2533333333333328
+            },
+            {
+              "kind": "heavy-hit",
+              "x": 2150,
+              "y": 410.5,
+              "life": 0.09333333333333335,
+              "impact": "heavy"
+            }
+          ],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 2
+            },
+            {
+              "type": "swing",
+              "t": 0.008,
+              "wall": 0.008,
+              "combo": 3,
+              "hero": "erlang"
+            },
+            {
+              "type": "strike-release",
+              "t": 0.158,
+              "wall": 0.158,
+              "combo": 3,
+              "hero": "erlang"
+            },
+            {
+              "type": "boss-brace",
+              "t": 0.158,
+              "wall": 0.158,
+              "target": 900,
+              "chip": 20,
+              "absorbed": 13
+            },
+            {
+              "type": "hit",
+              "t": 0.158,
+              "wall": 0.158,
+              "target": 900,
+              "kind": "warden",
+              "amount": 20,
+              "impact": "heavy",
+              "hero": "erlang",
+              "x": 2150,
+              "y": 410.5
+            }
+          ]
+        }
+      ],
+      "missing": [],
+      "review": {
+        "status": "待审",
+        "notes": []
+      }
+    },
+    {
+      "id": "enemy-axe-cleave",
+      "move": "axe-cleave",
+      "kind": "enemy",
+      "hero": "wukong",
+      "title": "断云重斧",
+      "seed": "VISUAL-SKILLS-1028",
+      "target": 900,
+      "frames": [
+        {
+          "label": "预警",
+          "file": "frames/enemy-axe-cleave-0.png",
+          "time": 0.19999999999999998,
+          "age": 0.19999999999999998,
+          "camera": 1560,
+          "player": {
+            "x": 2060,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 100,
+            "invuln": 0
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-windup",
+            "move": "axe-cleave",
+            "hp": 300,
+            "face": -1
+          },
+          "boxes": [
+            {
+              "kind": "warning",
+              "x": 1960,
+              "y": 398,
+              "w": 190,
+              "h": 50
+            }
+          ],
+          "cast": null,
+          "effects": [],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 0
+            },
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 2
+            }
+          ]
+        },
+        {
+          "label": "释放",
+          "file": "frames/enemy-axe-cleave-1.png",
+          "time": 0.5000000000000007,
+          "age": 0.5000000000000007,
+          "camera": 1560,
+          "player": {
+            "x": 2060,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 64,
+            "invuln": 1
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-active",
+            "move": "axe-cleave",
+            "hp": 300,
+            "face": -1
+          },
+          "boxes": [
+            {
+              "kind": "danger",
+              "x": 1960,
+              "y": 398,
+              "w": 190,
+              "h": 50
+            },
+            {
+              "kind": "locked",
+              "x": 1960,
+              "y": 398,
+              "w": 190,
+              "h": 50
+            }
+          ],
+          "cast": null,
+          "effects": [
+            {
+              "kind": "hurt",
+              "x": 2072,
+              "y": 419,
+              "life": 0.3
+            }
+          ],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 0
+            },
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 2
+            },
+            {
+              "type": "enemy-attack",
+              "t": 0.5,
+              "wall": 0.5,
+              "id": 900,
+              "kind": "warden",
+              "move": "axe-cleave"
+            },
+            {
+              "type": "hurt",
+              "t": 0.5,
+              "wall": 0.5,
+              "source": "巨灵神·断云重斧",
+              "amount": 36,
+              "x": 2072,
+              "y": 419,
+              "enemyMaterial": "steel"
+            }
+          ]
+        },
+        {
+          "label": "受击接触",
+          "file": "frames/enemy-axe-cleave-2.png",
+          "time": 0.5000000000000007,
+          "age": 0.5000000000000007,
+          "camera": 1560,
+          "player": {
+            "x": 2060,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 64,
+            "invuln": 1
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-active",
+            "move": "axe-cleave",
+            "hp": 300,
+            "face": -1
+          },
+          "boxes": [
+            {
+              "kind": "danger",
+              "x": 1960,
+              "y": 398,
+              "w": 190,
+              "h": 50
+            },
+            {
+              "kind": "locked",
+              "x": 1960,
+              "y": 398,
+              "w": 190,
+              "h": 50
+            }
+          ],
+          "cast": null,
+          "effects": [
+            {
+              "kind": "hurt",
+              "x": 2072,
+              "y": 419,
+              "life": 0.3
+            }
+          ],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 0
+            },
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 2
+            },
+            {
+              "type": "enemy-attack",
+              "t": 0.5,
+              "wall": 0.5,
+              "id": 900,
+              "kind": "warden",
+              "move": "axe-cleave"
+            },
+            {
+              "type": "hurt",
+              "t": 0.5,
+              "wall": 0.5,
+              "source": "巨灵神·断云重斧",
+              "amount": 36,
+              "x": 2072,
+              "y": 419,
+              "enemyMaterial": "steel"
+            }
+          ]
+        },
+        {
+          "label": "收招",
+          "file": "frames/enemy-axe-cleave-3.png",
+          "time": 1.9583333333333288,
+          "age": 1.9583333333333288,
+          "camera": 1560,
+          "player": {
+            "x": 2060.091570170061,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 28,
+            "invuln": 0.6500000000000012
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "recover",
+            "move": "axe-quake",
+            "hp": 300,
+            "face": -1
+          },
+          "boxes": [],
+          "cast": null,
+          "effects": [],
+          "events": [
+            {
+              "type": "boss-warning",
+              "t": 0.85,
+              "wall": 0.85,
+              "id": 900,
+              "move": "axe-quake",
+              "name": "巨灵神",
+              "box": {
+                "x": 1860,
+                "y": 418,
+                "w": 580,
+                "h": 22
+              }
+            },
+            {
+              "type": "enemy-commit",
+              "t": 0.85,
+              "wall": 0.85,
+              "id": 900,
+              "move": "axe-quake",
+              "echo": true,
+              "windup": 0.756,
+              "marks": [
+                {
+                  "x": 1860,
+                  "y": 418,
+                  "w": 580,
+                  "h": 22
+                }
+              ],
+              "face": -1
+            },
+            {
+              "type": "enemy-attack",
+              "t": 1.608,
+              "wall": 1.608,
+              "id": 900,
+              "kind": "warden",
+              "move": "axe-quake"
+            },
+            {
+              "type": "hurt",
+              "t": 1.608,
+              "wall": 1.608,
+              "source": "巨灵神·踏云震",
+              "amount": 36,
+              "x": 2088.3941038927437,
+              "y": 429,
+              "enemyMaterial": "stone"
+            },
+            {
+              "type": "enemy-opening",
+              "t": 1.958,
+              "wall": 1.958,
+              "id": 900,
+              "move": "axe-quake",
+              "seconds": 1.02
+            }
+          ]
+        }
+      ],
+      "missing": [],
+      "review": {
+        "status": "待审",
+        "notes": []
+      }
+    },
+    {
+      "id": "enemy-axe-quake",
+      "move": "axe-quake",
+      "kind": "enemy",
+      "hero": "wukong",
+      "title": "踏云震",
+      "seed": "VISUAL-SKILLS-1028",
+      "target": 900,
+      "frames": [
+        {
+          "label": "预警",
+          "file": "frames/enemy-axe-quake-0.png",
+          "time": 0.19999999999999998,
+          "age": 0.19999999999999998,
+          "camera": 1560,
+          "player": {
+            "x": 1872,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 100,
+            "invuln": 0
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-windup",
+            "move": "axe-quake",
+            "hp": 300,
+            "face": -1
+          },
+          "boxes": [
+            {
+              "kind": "warning",
+              "x": 1860,
+              "y": 418,
+              "w": 580,
+              "h": 22
+            }
+          ],
+          "cast": null,
+          "effects": [],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 0
+            },
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 2
+            }
+          ]
+        },
+        {
+          "label": "释放",
+          "file": "frames/enemy-axe-quake-1.png",
+          "time": 0.5000000000000007,
+          "age": 0.5000000000000007,
+          "camera": 1560,
+          "player": {
+            "x": 1872,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 64,
+            "invuln": 1
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-active",
+            "move": "axe-quake",
+            "hp": 300,
+            "face": -1
+          },
+          "boxes": [
+            {
+              "kind": "danger",
+              "x": 1860,
+              "y": 418,
+              "w": 580,
+              "h": 22
+            },
+            {
+              "kind": "locked",
+              "x": 1860,
+              "y": 418,
+              "w": 580,
+              "h": 22
+            }
+          ],
+          "cast": null,
+          "effects": [
+            {
+              "kind": "hurt",
+              "x": 1884,
+              "y": 429,
+              "life": 0.3
+            }
+          ],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 0
+            },
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 2
+            },
+            {
+              "type": "enemy-attack",
+              "t": 0.5,
+              "wall": 0.5,
+              "id": 900,
+              "kind": "warden",
+              "move": "axe-quake"
+            },
+            {
+              "type": "hurt",
+              "t": 0.5,
+              "wall": 0.5,
+              "source": "巨灵神·踏云震",
+              "amount": 36,
+              "x": 1884,
+              "y": 429,
+              "enemyMaterial": "stone"
+            }
+          ]
+        },
+        {
+          "label": "受击接触",
+          "file": "frames/enemy-axe-quake-2.png",
+          "time": 0.5000000000000007,
+          "age": 0.5000000000000007,
+          "camera": 1560,
+          "player": {
+            "x": 1872,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 64,
+            "invuln": 1
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-active",
+            "move": "axe-quake",
+            "hp": 300,
+            "face": -1
+          },
+          "boxes": [
+            {
+              "kind": "danger",
+              "x": 1860,
+              "y": 418,
+              "w": 580,
+              "h": 22
+            },
+            {
+              "kind": "locked",
+              "x": 1860,
+              "y": 418,
+              "w": 580,
+              "h": 22
+            }
+          ],
+          "cast": null,
+          "effects": [
+            {
+              "kind": "hurt",
+              "x": 1884,
+              "y": 429,
+              "life": 0.3
+            }
+          ],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 0
+            },
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 2
+            },
+            {
+              "type": "enemy-attack",
+              "t": 0.5,
+              "wall": 0.5,
+              "id": 900,
+              "kind": "warden",
+              "move": "axe-quake"
+            },
+            {
+              "type": "hurt",
+              "t": 0.5,
+              "wall": 0.5,
+              "source": "巨灵神·踏云震",
+              "amount": 36,
+              "x": 1884,
+              "y": 429,
+              "enemyMaterial": "stone"
+            }
+          ]
+        },
+        {
+          "label": "收招",
+          "file": "frames/enemy-axe-quake-3.png",
+          "time": 0.8499999999999994,
+          "age": 0.8499999999999994,
+          "camera": 1555.6974662773182,
+          "player": {
+            "x": 1855.6974662773182,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 64,
+            "invuln": 0.6500000000000012
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "recover",
+            "move": "axe-quake",
+            "hp": 300,
+            "face": -1
+          },
+          "boxes": [],
+          "cast": null,
+          "effects": [],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 0
+            },
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 2
+            },
+            {
+              "type": "enemy-attack",
+              "t": 0.5,
+              "wall": 0.5,
+              "id": 900,
+              "kind": "warden",
+              "move": "axe-quake"
+            },
+            {
+              "type": "hurt",
+              "t": 0.5,
+              "wall": 0.5,
+              "source": "巨灵神·踏云震",
+              "amount": 36,
+              "x": 1884,
+              "y": 429,
+              "enemyMaterial": "stone"
+            },
+            {
+              "type": "enemy-opening",
+              "t": 0.85,
+              "wall": 0.85,
+              "id": 900,
+              "move": "axe-quake",
+              "seconds": 1.02
+            }
+          ]
+        }
+      ],
+      "missing": [],
+      "review": {
+        "status": "待审",
+        "notes": []
+      }
+    },
+    {
+      "id": "enemy-axe-rush",
+      "move": "axe-rush",
+      "kind": "enemy",
+      "hero": "wukong",
+      "title": "横斧冲阵",
+      "seed": "VISUAL-SKILLS-1028",
+      "target": 900,
+      "frames": [
+        {
+          "label": "预警",
+          "file": "frames/enemy-axe-rush-0.png",
+          "time": 0.19999999999999998,
+          "age": 0.19999999999999998,
+          "camera": 1560,
+          "player": {
+            "x": 2060,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 100,
+            "invuln": 0
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-windup",
+            "move": "axe-rush",
+            "hp": 300,
+            "face": -1
+          },
+          "boxes": [
+            {
+              "kind": "warning",
+              "x": 1846,
+              "y": 358,
+              "w": 366,
+              "h": 80
+            }
+          ],
+          "cast": null,
+          "effects": [],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 0
+            },
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 2
+            }
+          ]
+        },
+        {
+          "label": "释放",
+          "file": "frames/enemy-axe-rush-1.png",
+          "time": 0.5000000000000007,
+          "age": 0.5000000000000007,
+          "camera": 1560,
+          "player": {
+            "x": 2060,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 100,
+            "invuln": 0
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-charge",
+            "move": "axe-rush",
+            "hp": 300,
+            "face": -1
+          },
+          "boxes": [
+            {
+              "kind": "locked",
+              "x": 1846,
+              "y": 358,
+              "w": 366,
+              "h": 80
+            }
+          ],
+          "cast": null,
+          "effects": [],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 0
+            },
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 2
+            },
+            {
+              "type": "enemy-attack",
+              "t": 0.5,
+              "wall": 0.5,
+              "id": 900,
+              "kind": "warden",
+              "move": "axe-rush"
+            }
+          ]
+        },
+        {
+          "label": "受击接触",
+          "file": "frames/enemy-axe-rush-2.png",
+          "time": 0.6416666666666668,
+          "age": 0.6416666666666668,
+          "camera": 1560,
+          "player": {
+            "x": 2055.5833333333308,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 70,
+            "invuln": 1
+          },
+          "enemy": {
+            "x": 2080.5833333333308,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-charge",
+            "move": "axe-rush",
+            "hp": 300,
+            "face": -1
+          },
+          "boxes": [
+            {
+              "kind": "locked",
+              "x": 1846,
+              "y": 358,
+              "w": 366,
+              "h": 80
+            }
+          ],
+          "cast": null,
+          "effects": [
+            {
+              "kind": "hurt",
+              "x": 2080.5833333333308,
+              "y": 417,
+              "life": 0.3
+            }
+          ],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 0
+            },
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 2
+            },
+            {
+              "type": "enemy-attack",
+              "t": 0.5,
+              "wall": 0.5,
+              "id": 900,
+              "kind": "warden",
+              "move": "axe-rush"
+            },
+            {
+              "type": "hurt",
+              "t": 0.642,
+              "wall": 0.642,
+              "source": "巨灵神·横斧冲阵",
+              "amount": 30,
+              "x": 2080.5833333333308,
+              "y": 417,
+              "enemyMaterial": "wind"
+            }
+          ]
+        },
+        {
+          "label": "收招",
+          "file": "frames/enemy-axe-rush-3.png",
+          "time": 2.2249999999999948,
+          "age": 2.2249999999999948,
+          "camera": 1531,
+          "player": {
+            "x": 1831,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 34,
+            "invuln": 0.6500000000000012
+          },
+          "enemy": {
+            "x": 1856,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "recover",
+            "move": "axe-cleave",
+            "hp": 300,
+            "face": -1
+          },
+          "boxes": [],
+          "cast": null,
+          "effects": [],
+          "events": [
+            {
+              "type": "boss-warning",
+              "t": 1.225,
+              "wall": 1.225,
+              "id": 900,
+              "move": "axe-cleave",
+              "name": "巨灵神",
+              "box": {
+                "x": 1666,
+                "y": 398,
+                "w": 190,
+                "h": 50
+              }
+            },
+            {
+              "type": "enemy-commit",
+              "t": 1.225,
+              "wall": 1.225,
+              "id": 900,
+              "move": "axe-cleave",
+              "echo": true,
+              "windup": 0.648,
+              "marks": [
+                {
+                  "x": 1666,
+                  "y": 398,
+                  "w": 190,
+                  "h": 50
+                }
+              ],
+              "face": -1
+            },
+            {
+              "type": "enemy-attack",
+              "t": 1.875,
+              "wall": 1.875,
+              "id": 900,
+              "kind": "warden",
+              "move": "axe-cleave"
+            },
+            {
+              "type": "hurt",
+              "t": 1.875,
+              "wall": 1.875,
+              "source": "巨灵神·断云重斧",
+              "amount": 36,
+              "x": 1843,
+              "y": 419,
+              "enemyMaterial": "steel"
+            },
+            {
+              "type": "enemy-opening",
+              "t": 2.225,
+              "wall": 2.225,
+              "id": 900,
+              "move": "axe-cleave",
+              "seconds": 0.9
+            }
+          ]
+        }
+      ],
+      "missing": [],
+      "review": {
+        "status": "待审",
+        "notes": []
+      }
+    },
+    {
+      "id": "enemy-judge-mark",
+      "move": "judge-mark",
+      "kind": "enemy",
+      "hero": "wukong",
+      "title": "朱笔定罪",
+      "seed": "VISUAL-SKILLS-1028",
+      "target": 900,
+      "frames": [
+        {
+          "label": "预警",
+          "file": "frames/enemy-judge-mark-0.png",
+          "time": 0.19999999999999998,
+          "age": 0.19999999999999998,
+          "camera": 1560,
+          "player": {
+            "x": 2060,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 100,
+            "invuln": 0
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-windup",
+            "move": "judge-mark",
+            "hp": 318,
+            "face": -1
+          },
+          "boxes": [
+            {
+              "kind": "warning",
+              "x": 2034,
+              "y": 350,
+              "w": 76,
+              "h": 90
+            }
+          ],
+          "cast": null,
+          "effects": [],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 0
+            },
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 5
+            }
+          ]
+        },
+        {
+          "label": "释放",
+          "file": "frames/enemy-judge-mark-1.png",
+          "time": 0.5000000000000007,
+          "age": 0.5000000000000007,
+          "camera": 1560,
+          "player": {
+            "x": 2060,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 64,
+            "invuln": 1
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-active",
+            "move": "judge-mark",
+            "hp": 318,
+            "face": -1
+          },
+          "boxes": [
+            {
+              "kind": "danger",
+              "x": 2034,
+              "y": 350,
+              "w": 76,
+              "h": 90
+            },
+            {
+              "kind": "locked",
+              "x": 2034,
+              "y": 350,
+              "w": 76,
+              "h": 90
+            }
+          ],
+          "cast": null,
+          "effects": [
+            {
+              "kind": "hurt",
+              "x": 2072,
+              "y": 418,
+              "life": 0.3
+            }
+          ],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 0
+            },
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 5
+            },
+            {
+              "type": "enemy-attack",
+              "t": 0.5,
+              "wall": 0.5,
+              "id": 900,
+              "kind": "warden",
+              "move": "judge-mark"
+            },
+            {
+              "type": "hurt",
+              "t": 0.5,
+              "wall": 0.5,
+              "source": "秦广王·朱笔定罪",
+              "amount": 36,
+              "x": 2072,
+              "y": 418,
+              "enemyMaterial": "ink"
+            }
+          ]
+        },
+        {
+          "label": "受击接触",
+          "file": "frames/enemy-judge-mark-2.png",
+          "time": 0.5000000000000007,
+          "age": 0.5000000000000007,
+          "camera": 1560,
+          "player": {
+            "x": 2060,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 64,
+            "invuln": 1
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-active",
+            "move": "judge-mark",
+            "hp": 318,
+            "face": -1
+          },
+          "boxes": [
+            {
+              "kind": "danger",
+              "x": 2034,
+              "y": 350,
+              "w": 76,
+              "h": 90
+            },
+            {
+              "kind": "locked",
+              "x": 2034,
+              "y": 350,
+              "w": 76,
+              "h": 90
+            }
+          ],
+          "cast": null,
+          "effects": [
+            {
+              "kind": "hurt",
+              "x": 2072,
+              "y": 418,
+              "life": 0.3
+            }
+          ],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 0
+            },
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 5
+            },
+            {
+              "type": "enemy-attack",
+              "t": 0.5,
+              "wall": 0.5,
+              "id": 900,
+              "kind": "warden",
+              "move": "judge-mark"
+            },
+            {
+              "type": "hurt",
+              "t": 0.5,
+              "wall": 0.5,
+              "source": "秦广王·朱笔定罪",
+              "amount": 36,
+              "x": 2072,
+              "y": 418,
+              "enemyMaterial": "ink"
+            }
+          ]
+        },
+        {
+          "label": "收招",
+          "file": "frames/enemy-judge-mark-3.png",
+          "time": 0.8499999999999994,
+          "age": 0.8499999999999994,
+          "camera": 1560,
+          "player": {
+            "x": 2043.6974662773182,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 64,
+            "invuln": 0.6500000000000012
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "recover",
+            "move": "judge-mark",
+            "hp": 318,
+            "face": -1
+          },
+          "boxes": [],
+          "cast": null,
+          "effects": [],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 0
+            },
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 5
+            },
+            {
+              "type": "enemy-attack",
+              "t": 0.5,
+              "wall": 0.5,
+              "id": 900,
+              "kind": "warden",
+              "move": "judge-mark"
+            },
+            {
+              "type": "hurt",
+              "t": 0.5,
+              "wall": 0.5,
+              "source": "秦广王·朱笔定罪",
+              "amount": 36,
+              "x": 2072,
+              "y": 418,
+              "enemyMaterial": "ink"
+            },
+            {
+              "type": "enemy-opening",
+              "t": 0.85,
+              "wall": 0.85,
+              "id": 900,
+              "move": "judge-mark",
+              "seconds": 0.74
+            }
+          ]
+        }
+      ],
+      "missing": [],
+      "review": {
+        "status": "待审",
+        "notes": []
+      }
+    },
+    {
+      "id": "enemy-venom-fan",
+      "move": "venom-fan",
+      "kind": "enemy",
+      "hero": "wukong",
+      "title": "九首毒扇",
+      "seed": "VISUAL-SKILLS-1028",
+      "target": 900,
+      "frames": [
+        {
+          "label": "预警",
+          "file": "frames/enemy-venom-fan-0.png",
+          "time": 0.19999999999999998,
+          "age": 0.19999999999999998,
+          "camera": 1560,
+          "player": {
+            "x": 2060,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 100,
+            "invuln": 0
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-windup",
+            "move": "venom-fan",
+            "hp": 336,
+            "face": -1
+          },
+          "boxes": [
+            {
+              "kind": "warning",
+              "x": 1620,
+              "y": 292,
+              "w": 530,
+              "h": 12
+            },
+            {
+              "kind": "warning",
+              "x": 1620,
+              "y": 358,
+              "w": 530,
+              "h": 12
+            },
+            {
+              "kind": "warning",
+              "x": 1620,
+              "y": 424,
+              "w": 530,
+              "h": 12
+            }
+          ],
+          "cast": null,
+          "effects": [],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 0
+            },
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 8
+            }
+          ]
+        },
+        {
+          "label": "释放",
+          "file": "frames/enemy-venom-fan-1.png",
+          "time": 0.5000000000000007,
+          "age": 0.5000000000000007,
+          "camera": 1560,
+          "player": {
+            "x": 2060,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 100,
+            "invuln": 0
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-active",
+            "move": "venom-fan",
+            "hp": 336,
+            "face": -1
+          },
+          "boxes": [
+            {
+              "kind": "locked",
+              "x": 1620,
+              "y": 292,
+              "w": 530,
+              "h": 12
+            },
+            {
+              "kind": "locked",
+              "x": 1620,
+              "y": 358,
+              "w": 530,
+              "h": 12
+            },
+            {
+              "kind": "locked",
+              "x": 1620,
+              "y": 424,
+              "w": 530,
+              "h": 12
+            },
+            {
+              "kind": "projectile",
+              "x": 2129.9583333333335,
+              "y": 292,
+              "w": 18,
+              "h": 12
+            },
+            {
+              "kind": "projectile",
+              "x": 2129.9583333333335,
+              "y": 358,
+              "w": 18,
+              "h": 12
+            },
+            {
+              "kind": "projectile",
+              "x": 2129.9583333333335,
+              "y": 424,
+              "w": 18,
+              "h": 12
+            }
+          ],
+          "cast": null,
+          "effects": [],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 0
+            },
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 8
+            },
+            {
+              "type": "enemy-attack",
+              "t": 0.5,
+              "wall": 0.5,
+              "id": 900,
+              "kind": "warden",
+              "move": "venom-fan"
+            }
+          ]
+        },
+        {
+          "label": "受击接触",
+          "file": "frames/enemy-venom-fan-2.png",
+          "time": 0.6916666666666667,
+          "age": 0.6916666666666667,
+          "camera": 1560,
+          "player": {
+            "x": 2060,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 72,
+            "invuln": 1
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-active",
+            "move": "venom-fan",
+            "hp": 336,
+            "face": -1
+          },
+          "boxes": [
+            {
+              "kind": "locked",
+              "x": 1620,
+              "y": 292,
+              "w": 530,
+              "h": 12
+            },
+            {
+              "kind": "locked",
+              "x": 1620,
+              "y": 358,
+              "w": 530,
+              "h": 12
+            },
+            {
+              "kind": "locked",
+              "x": 1620,
+              "y": 424,
+              "w": 530,
+              "h": 12
+            },
+            {
+              "kind": "projectile",
+              "x": 2083.0000000000036,
+              "y": 292,
+              "w": 18,
+              "h": 12
+            },
+            {
+              "kind": "projectile",
+              "x": 2083.0000000000036,
+              "y": 358,
+              "w": 18,
+              "h": 12
+            }
+          ],
+          "cast": null,
+          "effects": [
+            {
+              "kind": "hurt",
+              "x": 2083.0000000000036,
+              "y": 430,
+              "life": 0.3
+            }
+          ],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 0
+            },
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 8
+            },
+            {
+              "type": "enemy-attack",
+              "t": 0.5,
+              "wall": 0.5,
+              "id": 900,
+              "kind": "warden",
+              "move": "venom-fan"
+            },
+            {
+              "type": "hurt",
+              "t": 0.692,
+              "wall": 0.692,
+              "source": "九头虫·九首毒扇",
+              "amount": 28,
+              "x": 2083.0000000000036,
+              "y": 430,
+              "enemyMaterial": "venom"
+            }
+          ]
+        },
+        {
+          "label": "收招",
+          "file": "frames/enemy-venom-fan-3.png",
+          "time": 1.9249999999999956,
+          "age": 1.9249999999999956,
+          "camera": 1560,
+          "player": {
+            "x": 2043.6058960756936,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 72,
+            "invuln": 0
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "recover",
+            "move": "venom-tide",
+            "hp": 336,
+            "face": -1
+          },
+          "boxes": [
+            {
+              "kind": "projectile",
+              "x": 1780.8333333333296,
+              "y": 292,
+              "w": 18,
+              "h": 12
+            },
+            {
+              "kind": "projectile",
+              "x": 1780.8333333333296,
+              "y": 358,
+              "w": 18,
+              "h": 12
+            },
+            {
+              "kind": "projectile",
+              "x": 2346.75,
+              "y": 418,
+              "w": 18,
+              "h": 14
+            }
+          ],
+          "cast": null,
+          "effects": [],
+          "events": [
+            {
+              "type": "hurt",
+              "t": 0.692,
+              "wall": 0.692,
+              "source": "九头虫·九首毒扇",
+              "amount": 28,
+              "x": 2083.0000000000036,
+              "y": 430,
+              "enemyMaterial": "venom"
+            },
+            {
+              "type": "boss-warning",
+              "t": 0.85,
+              "wall": 0.85,
+              "id": 900,
+              "move": "venom-tide",
+              "name": "九头虫",
+              "box": {
+                "x": 1860,
+                "y": 418,
+                "w": 580,
+                "h": 22
+              }
+            },
+            {
+              "type": "enemy-commit",
+              "t": 0.85,
+              "wall": 0.85,
+              "id": 900,
+              "move": "venom-tide",
+              "echo": true,
+              "windup": 0.7200000000000001,
+              "marks": [
+                {
+                  "x": 1860,
+                  "y": 418,
+                  "w": 580,
+                  "h": 22
+                }
+              ],
+              "face": -1
+            },
+            {
+              "type": "enemy-attack",
+              "t": 1.575,
+              "wall": 1.575,
+              "id": 900,
+              "kind": "warden",
+              "move": "venom-tide"
+            },
+            {
+              "type": "enemy-opening",
+              "t": 1.925,
+              "wall": 1.925,
+              "id": 900,
+              "move": "venom-tide",
+              "seconds": 0.82
+            }
+          ]
+        }
+      ],
+      "missing": [],
+      "review": {
+        "status": "待审",
+        "notes": []
+      }
+    },
+    {
+      "id": "enemy-dragon-column",
+      "move": "dragon-column",
+      "kind": "enemy",
+      "hero": "wukong",
+      "title": "双龙水柱",
+      "seed": "VISUAL-SKILLS-1028",
+      "target": 900,
+      "frames": [
+        {
+          "label": "预警",
+          "file": "frames/enemy-dragon-column-0.png",
+          "time": 0.19999999999999998,
+          "age": 0.19999999999999998,
+          "camera": 1560,
+          "player": {
+            "x": 1985,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 100,
+            "invuln": 0
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-windup",
+            "move": "dragon-column",
+            "hp": 354,
+            "face": -1
+          },
+          "boxes": [
+            {
+              "kind": "warning",
+              "x": 1964,
+              "y": 280,
+              "w": 66,
+              "h": 160
+            },
+            {
+              "kind": "warning",
+              "x": 2114,
+              "y": 280,
+              "w": 66,
+              "h": 160
+            }
+          ],
+          "cast": null,
+          "effects": [],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 0
+            },
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 11
+            }
+          ]
+        },
+        {
+          "label": "释放",
+          "file": "frames/enemy-dragon-column-1.png",
+          "time": 0.5000000000000007,
+          "age": 0.5000000000000007,
+          "camera": 1560,
+          "player": {
+            "x": 1985,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 64,
+            "invuln": 1
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-active",
+            "move": "dragon-column",
+            "hp": 354,
+            "face": -1
+          },
+          "boxes": [
+            {
+              "kind": "danger",
+              "x": 1964,
+              "y": 280,
+              "w": 66,
+              "h": 160
+            },
+            {
+              "kind": "danger",
+              "x": 2114,
+              "y": 280,
+              "w": 66,
+              "h": 160
+            },
+            {
+              "kind": "locked",
+              "x": 1964,
+              "y": 280,
+              "w": 66,
+              "h": 160
+            },
+            {
+              "kind": "locked",
+              "x": 2114,
+              "y": 280,
+              "w": 66,
+              "h": 160
+            }
+          ],
+          "cast": null,
+          "effects": [
+            {
+              "kind": "hurt",
+              "x": 1997,
+              "y": 418,
+              "life": 0.3
+            }
+          ],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 0
+            },
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 11
+            },
+            {
+              "type": "enemy-attack",
+              "t": 0.5,
+              "wall": 0.5,
+              "id": 900,
+              "kind": "warden",
+              "move": "dragon-column"
+            },
+            {
+              "type": "hurt",
+              "t": 0.5,
+              "wall": 0.5,
+              "source": "东海龙王·双龙水柱",
+              "amount": 36,
+              "x": 1997,
+              "y": 418,
+              "enemyMaterial": "water"
+            }
+          ]
+        },
+        {
+          "label": "受击接触",
+          "file": "frames/enemy-dragon-column-2.png",
+          "time": 0.5000000000000007,
+          "age": 0.5000000000000007,
+          "camera": 1560,
+          "player": {
+            "x": 1985,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 64,
+            "invuln": 1
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-active",
+            "move": "dragon-column",
+            "hp": 354,
+            "face": -1
+          },
+          "boxes": [
+            {
+              "kind": "danger",
+              "x": 1964,
+              "y": 280,
+              "w": 66,
+              "h": 160
+            },
+            {
+              "kind": "danger",
+              "x": 2114,
+              "y": 280,
+              "w": 66,
+              "h": 160
+            },
+            {
+              "kind": "locked",
+              "x": 1964,
+              "y": 280,
+              "w": 66,
+              "h": 160
+            },
+            {
+              "kind": "locked",
+              "x": 2114,
+              "y": 280,
+              "w": 66,
+              "h": 160
+            }
+          ],
+          "cast": null,
+          "effects": [
+            {
+              "kind": "hurt",
+              "x": 1997,
+              "y": 418,
+              "life": 0.3
+            }
+          ],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 0
+            },
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 11
+            },
+            {
+              "type": "enemy-attack",
+              "t": 0.5,
+              "wall": 0.5,
+              "id": 900,
+              "kind": "warden",
+              "move": "dragon-column"
+            },
+            {
+              "type": "hurt",
+              "t": 0.5,
+              "wall": 0.5,
+              "source": "东海龙王·双龙水柱",
+              "amount": 36,
+              "x": 1997,
+              "y": 418,
+              "enemyMaterial": "water"
+            }
+          ]
+        },
+        {
+          "label": "收招",
+          "file": "frames/enemy-dragon-column-3.png",
+          "time": 0.8499999999999994,
+          "age": 0.8499999999999994,
+          "camera": 1560,
+          "player": {
+            "x": 1968.6974662773182,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 64,
+            "invuln": 0.6500000000000012
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "recover",
+            "move": "dragon-column",
+            "hp": 354,
+            "face": -1
+          },
+          "boxes": [],
+          "cast": null,
+          "effects": [],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 0
+            },
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 11
+            },
+            {
+              "type": "enemy-attack",
+              "t": 0.5,
+              "wall": 0.5,
+              "id": 900,
+              "kind": "warden",
+              "move": "dragon-column"
+            },
+            {
+              "type": "hurt",
+              "t": 0.5,
+              "wall": 0.5,
+              "source": "东海龙王·双龙水柱",
+              "amount": 36,
+              "x": 1997,
+              "y": 418,
+              "enemyMaterial": "water"
+            },
+            {
+              "type": "enemy-opening",
+              "t": 0.85,
+              "wall": 0.85,
+              "id": 900,
+              "move": "dragon-column",
+              "seconds": 0.82
+            }
+          ]
+        }
+      ],
+      "missing": [],
+      "review": {
+        "status": "待审",
+        "notes": []
+      }
+    },
+    {
+      "id": "enemy-king-sword",
+      "move": "king-sword",
+      "kind": "enemy",
+      "hero": "wukong",
+      "title": "天王断邪",
+      "seed": "VISUAL-SKILLS-1028",
+      "target": 900,
+      "frames": [
+        {
+          "label": "预警",
+          "file": "frames/enemy-king-sword-0.png",
+          "time": 0.19999999999999998,
+          "age": 0.19999999999999998,
+          "camera": 1560,
+          "player": {
+            "x": 2060,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 100,
+            "invuln": 0
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-windup",
+            "move": "king-sword",
+            "hp": 372,
+            "face": -1
+          },
+          "boxes": [
+            {
+              "kind": "warning",
+              "x": 1960,
+              "y": 398,
+              "w": 190,
+              "h": 50
+            }
+          ],
+          "cast": null,
+          "effects": [],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 0
+            },
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 14
+            }
+          ]
+        },
+        {
+          "label": "释放",
+          "file": "frames/enemy-king-sword-1.png",
+          "time": 0.5000000000000007,
+          "age": 0.5000000000000007,
+          "camera": 1560,
+          "player": {
+            "x": 2060,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 64,
+            "invuln": 1
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-active",
+            "move": "king-sword",
+            "hp": 372,
+            "face": -1
+          },
+          "boxes": [
+            {
+              "kind": "danger",
+              "x": 1960,
+              "y": 398,
+              "w": 190,
+              "h": 50
+            },
+            {
+              "kind": "locked",
+              "x": 1960,
+              "y": 398,
+              "w": 190,
+              "h": 50
+            }
+          ],
+          "cast": null,
+          "effects": [
+            {
+              "kind": "hurt",
+              "x": 2072,
+              "y": 419,
+              "life": 0.3
+            }
+          ],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 0
+            },
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 14
+            },
+            {
+              "type": "enemy-attack",
+              "t": 0.5,
+              "wall": 0.5,
+              "id": 900,
+              "kind": "warden",
+              "move": "king-sword"
+            },
+            {
+              "type": "hurt",
+              "t": 0.5,
+              "wall": 0.5,
+              "source": "托塔天王·天王断邪",
+              "amount": 36,
+              "x": 2072,
+              "y": 419,
+              "enemyMaterial": "steel"
+            }
+          ]
+        },
+        {
+          "label": "受击接触",
+          "file": "frames/enemy-king-sword-2.png",
+          "time": 0.5000000000000007,
+          "age": 0.5000000000000007,
+          "camera": 1560,
+          "player": {
+            "x": 2060,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 64,
+            "invuln": 1
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "campaign-active",
+            "move": "king-sword",
+            "hp": 372,
+            "face": -1
+          },
+          "boxes": [
+            {
+              "kind": "danger",
+              "x": 1960,
+              "y": 398,
+              "w": 190,
+              "h": 50
+            },
+            {
+              "kind": "locked",
+              "x": 1960,
+              "y": 398,
+              "w": 190,
+              "h": 50
+            }
+          ],
+          "cast": null,
+          "effects": [
+            {
+              "kind": "hurt",
+              "x": 2072,
+              "y": 419,
+              "life": 0.3
+            }
+          ],
+          "events": [
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 0
+            },
+            {
+              "type": "room",
+              "t": 0,
+              "wall": 0,
+              "stage": 14
+            },
+            {
+              "type": "enemy-attack",
+              "t": 0.5,
+              "wall": 0.5,
+              "id": 900,
+              "kind": "warden",
+              "move": "king-sword"
+            },
+            {
+              "type": "hurt",
+              "t": 0.5,
+              "wall": 0.5,
+              "source": "托塔天王·天王断邪",
+              "amount": 36,
+              "x": 2072,
+              "y": 419,
+              "enemyMaterial": "steel"
+            }
+          ]
+        },
+        {
+          "label": "收招",
+          "file": "frames/enemy-king-sword-3.png",
+          "time": 1.9416666666666622,
+          "age": 1.9416666666666622,
+          "camera": 1560,
+          "player": {
+            "x": 2076.394103927276,
+            "y": 396,
+            "w": 24,
+            "h": 44,
+            "face": 1,
+            "hp": 64,
+            "invuln": 0
+          },
+          "enemy": {
+            "x": 2150,
+            "y": 350,
+            "w": 58,
+            "h": 90,
+            "phase": "recover",
+            "move": "king-fire",
+            "hp": 372,
+            "face": -1
+          },
+          "boxes": [
+            {
+              "kind": "projectile",
+              "x": 2346.75,
+              "y": 418,
+              "w": 18,
+              "h": 14
+            }
+          ],
+          "cast": null,
+          "effects": [],
+          "events": [
+            {
+              "type": "hurt",
+              "t": 0.5,
+              "wall": 0.5,
+              "source": "托塔天王·天王断邪",
+              "amount": 36,
+              "x": 2072,
+              "y": 419,
+              "enemyMaterial": "steel"
+            },
+            {
+              "type": "boss-warning",
+              "t": 0.85,
+              "wall": 0.85,
+              "id": 900,
+              "move": "king-fire",
+              "name": "托塔天王",
+              "box": {
+                "x": 1860,
+                "y": 418,
+                "w": 580,
+                "h": 22
+              }
+            },
+            {
+              "type": "enemy-commit",
+              "t": 0.85,
+              "wall": 0.85,
+              "id": 900,
+              "move": "king-fire",
+              "echo": true,
+              "windup": 0.738,
+              "marks": [
+                {
+                  "x": 1860,
+                  "y": 418,
+                  "w": 580,
+                  "h": 22
+                }
+              ],
+              "face": -1
+            },
+            {
+              "type": "enemy-attack",
+              "t": 1.592,
+              "wall": 1.592,
+              "id": 900,
+              "kind": "warden",
+              "move": "king-fire"
+            },
+            {
+              "type": "enemy-opening",
+              "t": 1.942,
+              "wall": 1.942,
+              "id": 900,
+              "move": "king-fire",
+              "seconds": 0.88
+            }
+          ]
+        }
+      ],
+      "missing": [],
+      "review": {
+        "status": "待审",
+        "notes": []
+      }
+    }
+  ],
+  "errors": [],
+  "browser": "156.0.4314.50",
+  "servedVersion": "12.1.4",
+  "recording": {
+    "file": "E:\\githome\\kong-rpg\\evidence\\combat-identities\\iteration\\skills.webm",
+    "mime": "video/webm;codecs=vp9",
+    "ms": 19614.899999976158,
+    "method": "real Canvas captureStream at requested 30Hz, MediaRecorder VP9; ms is recording wall time, encoded frame rate not independently inspected"
+  }
+}

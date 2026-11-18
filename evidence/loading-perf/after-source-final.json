@@ -1,0 +1,715 @@
+{
+  "url": "http://127.0.0.1:5187/",
+  "browser": "156.0.4314.50",
+  "network": {
+    "downloadMiBps": 2,
+    "uploadMiBps": 1,
+    "latencyMs": 20,
+    "cache": "disabled"
+  },
+  "menuReadyMs": 3464,
+  "menuBytes": 5698113,
+  "firstPlayMs": 19239,
+  "menu": {
+    "ids": [
+      "brandWordmark",
+      "stone",
+      "wukong",
+      "mountain"
+    ],
+    "resources": [
+      {
+        "name": "http://127.0.0.1:5187/src/style.css",
+        "bytes": 3765,
+        "decoded": 12982,
+        "transfer": 4065,
+        "ms": 29.200000047683716
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/v2.css",
+        "bytes": 919,
+        "decoded": 2217,
+        "transfer": 1219,
+        "ms": 24.5
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/combat.css",
+        "bytes": 451,
+        "decoded": 1068,
+        "transfer": 751,
+        "ms": 27.799999952316284
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/dialogs.css",
+        "bytes": 4810,
+        "decoded": 18582,
+        "transfer": 5110,
+        "ms": 31
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/progression.css",
+        "bytes": 511,
+        "decoded": 1185,
+        "transfer": 811,
+        "ms": 27.799999952316284
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/journey.css",
+        "bytes": 827,
+        "decoded": 2397,
+        "transfer": 1127,
+        "ms": 27.899999976158142
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/heroes.css",
+        "bytes": 624,
+        "decoded": 1552,
+        "transfer": 924,
+        "ms": 55.299999952316284
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/equipped-hud.css",
+        "bytes": 580,
+        "decoded": 1368,
+        "transfer": 880,
+        "ms": 55.39999997615814
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/signature.css",
+        "bytes": 276,
+        "decoded": 626,
+        "transfer": 576,
+        "ms": 54.89999997615814
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/challenge.css",
+        "bytes": 529,
+        "decoded": 1329,
+        "transfer": 829,
+        "ms": 55
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/realms.css",
+        "bytes": 361,
+        "decoded": 839,
+        "transfer": 661,
+        "ms": 55.199999928474426
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/celestial.css",
+        "bytes": 454,
+        "decoded": 1047,
+        "transfer": 754,
+        "ms": 55.60000002384186
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/brand.css",
+        "bytes": 1237,
+        "decoded": 4436,
+        "transfer": 1537,
+        "ms": 93.70000004768372
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/campaign.css",
+        "bytes": 583,
+        "decoded": 1606,
+        "transfer": 883,
+        "ms": 94
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/cloud-visual.css",
+        "bytes": 519,
+        "decoded": 1068,
+        "transfer": 819,
+        "ms": 94.20000004768372
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/combat-feedback.css",
+        "bytes": 131,
+        "decoded": 219,
+        "transfer": 431,
+        "ms": 94.30000007152557
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/motion.js",
+        "bytes": 508,
+        "decoded": 1039,
+        "transfer": 808,
+        "ms": 93.80000007152557
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/content.js",
+        "bytes": 3649,
+        "decoded": 7748,
+        "transfer": 3949,
+        "ms": 95.70000004768372
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/world.js",
+        "bytes": 2657,
+        "decoded": 5584,
+        "transfer": 2957,
+        "ms": 145.79999995231628
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/progression.js",
+        "bytes": 3744,
+        "decoded": 8929,
+        "transfer": 4044,
+        "ms": 146.20000004768372
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/journey.js",
+        "bytes": 3887,
+        "decoded": 9075,
+        "transfer": 4187,
+        "ms": 146.70000004768372
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/signature.js",
+        "bytes": 3664,
+        "decoded": 9809,
+        "transfer": 3964,
+        "ms": 145.89999997615814
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/heroes.js",
+        "bytes": 3421,
+        "decoded": 7597,
+        "transfer": 3721,
+        "ms": 146.10000002384186
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/simulation.js",
+        "bytes": 9232,
+        "decoded": 26920,
+        "transfer": 9532,
+        "ms": 152.19999992847443
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/realms.js",
+        "bytes": 1720,
+        "decoded": 3834,
+        "transfer": 2020,
+        "ms": 188.5
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/challenge.js",
+        "bytes": 3008,
+        "decoded": 7259,
+        "transfer": 3308,
+        "ms": 188.89999997615814
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/campaign-data.js",
+        "bytes": 3083,
+        "decoded": 6274,
+        "transfer": 3383,
+        "ms": 188.69999992847443
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/warriors.js",
+        "bytes": 5110,
+        "decoded": 12678,
+        "transfer": 5410,
+        "ms": 189.09999990463257
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/celestial.js",
+        "bytes": 4003,
+        "decoded": 9795,
+        "transfer": 4303,
+        "ms": 189
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/enemy-effects.js",
+        "bytes": 1036,
+        "decoded": 2263,
+        "transfer": 1336,
+        "ms": 188.30000007152557
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/route-layouts.js",
+        "bytes": 1193,
+        "decoded": 3326,
+        "transfer": 1493,
+        "ms": 239.60000002384186
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/campaign-world.js",
+        "bytes": 3574,
+        "decoded": 7922,
+        "transfer": 3874,
+        "ms": 240.20000004768372
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/campaign-combat.js",
+        "bytes": 4445,
+        "decoded": 12603,
+        "transfer": 4745,
+        "ms": 240.30000007152557
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/combat-identity.js",
+        "bytes": 1980,
+        "decoded": 5479,
+        "transfer": 2280,
+        "ms": 239.70000004768372
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/campaign-state.js",
+        "bytes": 981,
+        "decoded": 2100,
+        "transfer": 1281,
+        "ms": 239.60000002384186
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/storage.js",
+        "bytes": 6262,
+        "decoded": 19407,
+        "transfer": 6562,
+        "ms": 241.20000004768372
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/art.js",
+        "bytes": 2178,
+        "decoded": 5285,
+        "transfer": 2478,
+        "ms": 286.7999999523163
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/renderer.js",
+        "bytes": 5786,
+        "decoded": 14721,
+        "transfer": 6086,
+        "ms": 287.5
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/generated-art.js",
+        "bytes": 2086,
+        "decoded": 5849,
+        "transfer": 2386,
+        "ms": 286.7999999523163
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/asset-loader.js",
+        "bytes": 1293,
+        "decoded": 3060,
+        "transfer": 1593,
+        "ms": 286.5
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/art-catalog.js",
+        "bytes": 1472,
+        "decoded": 3606,
+        "transfer": 1772,
+        "ms": 286.39999997615814
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/visuals.js",
+        "bytes": 3139,
+        "decoded": 8682,
+        "transfer": 3439,
+        "ms": 287.09999990463257
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/progression-art.js",
+        "bytes": 1722,
+        "decoded": 4130,
+        "transfer": 2022,
+        "ms": 328.5
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/combat-art.js",
+        "bytes": 2503,
+        "decoded": 6658,
+        "transfer": 2803,
+        "ms": 328.7000000476837
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/journey-art.js",
+        "bytes": 1442,
+        "decoded": 3043,
+        "transfer": 1742,
+        "ms": 328.5
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/hero-art.js",
+        "bytes": 1205,
+        "decoded": 2548,
+        "transfer": 1505,
+        "ms": 328.2000000476837
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/map-data.js",
+        "bytes": 435,
+        "decoded": 2278,
+        "transfer": 735,
+        "ms": 328.2999999523163
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/realm-dressing-data.js",
+        "bytes": 185,
+        "decoded": 753,
+        "transfer": 485,
+        "ms": 328
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/map-art.js",
+        "bytes": 2208,
+        "decoded": 5938,
+        "transfer": 2508,
+        "ms": 375.10000002384186
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/scene-art.js",
+        "bytes": 782,
+        "decoded": 1572,
+        "transfer": 1082,
+        "ms": 374.59999990463257
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/signature-data.js",
+        "bytes": 275,
+        "decoded": 1091,
+        "transfer": 575,
+        "ms": 374.09999990463257
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/scene-data.js",
+        "bytes": 154,
+        "decoded": 351,
+        "transfer": 454,
+        "ms": 374.59999990463257
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/challenge-art.js",
+        "bytes": 708,
+        "decoded": 1270,
+        "transfer": 1008,
+        "ms": 374.3000000715256
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/signature-art.js",
+        "bytes": 1363,
+        "decoded": 3048,
+        "transfer": 1663,
+        "ms": 374.10000002384186
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/actor-states-data.js",
+        "bytes": 155,
+        "decoded": 384,
+        "transfer": 455,
+        "ms": 427.8000000715256
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/v8-art-data.js",
+        "bytes": 489,
+        "decoded": 3043,
+        "transfer": 789,
+        "ms": 427.89999997615814
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/actor-repair-data.js",
+        "bytes": 173,
+        "decoded": 395,
+        "transfer": 473,
+        "ms": 427.7999999523163
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/actor-state-art.js",
+        "bytes": 1005,
+        "decoded": 2295,
+        "transfer": 1305,
+        "ms": 428
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/dialog-art.js",
+        "bytes": 910,
+        "decoded": 2028,
+        "transfer": 1210,
+        "ms": 428.2000000476837
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/v8-art.js",
+        "bytes": 3376,
+        "decoded": 9645,
+        "transfer": 3676,
+        "ms": 428.59999990463257
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/celestial-art-data.js",
+        "bytes": 434,
+        "decoded": 2472,
+        "transfer": 734,
+        "ms": 474.39999997615814
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/audit-art-data.js",
+        "bytes": 180,
+        "decoded": 558,
+        "transfer": 480,
+        "ms": 473.7000000476837
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/celestial-art.js",
+        "bytes": 4127,
+        "decoded": 12113,
+        "transfer": 4427,
+        "ms": 475.3000000715256
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/campaign-art-data.js",
+        "bytes": 455,
+        "decoded": 4244,
+        "transfer": 755,
+        "ms": 474.5
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/enemy-marker-data.js",
+        "bytes": 287,
+        "decoded": 402,
+        "transfer": 587,
+        "ms": 473.7999999523163
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/campaign-art.js",
+        "bytes": 1545,
+        "decoded": 4102,
+        "transfer": 1845,
+        "ms": 474.2999999523163
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/cloud-visual-data.js",
+        "bytes": 468,
+        "decoded": 1853,
+        "transfer": 768,
+        "ms": 520
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/enemy-marker-art.js",
+        "bytes": 1615,
+        "decoded": 3723,
+        "transfer": 1915,
+        "ms": 521.1999999284744
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/cloud-visuals.js",
+        "bytes": 2831,
+        "decoded": 7876,
+        "transfer": 3131,
+        "ms": 520.7999999523163
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/combat-feedback-art.js",
+        "bytes": 1872,
+        "decoded": 5056,
+        "transfer": 2172,
+        "ms": 521
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/combat-feedback-data.js",
+        "bytes": 215,
+        "decoded": 627,
+        "transfer": 515,
+        "ms": 520.1999999284744
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/motion-data.js",
+        "bytes": 764,
+        "decoded": 15003,
+        "transfer": 1064,
+        "ms": 519.6999999284744
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/motion-art.js",
+        "bytes": 1498,
+        "decoded": 3905,
+        "transfer": 1798,
+        "ms": 566.3000000715256
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/enemy-effects-data.js",
+        "bytes": 408,
+        "decoded": 3357,
+        "transfer": 708,
+        "ms": 566.5
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/enemy-effects-art.js",
+        "bytes": 2683,
+        "decoded": 8294,
+        "transfer": 2983,
+        "ms": 567.2000000476837
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/input.js",
+        "bytes": 1292,
+        "decoded": 4378,
+        "transfer": 1592,
+        "ms": 566.6000000238419
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/combat-identity-data.js",
+        "bytes": 515,
+        "decoded": 6685,
+        "transfer": 815,
+        "ms": 566.8000000715256
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/combat-identity-art.js",
+        "bytes": 4044,
+        "decoded": 11840,
+        "transfer": 4344,
+        "ms": 567.8999999761581
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/generated-music.js",
+        "bytes": 268,
+        "decoded": 456,
+        "transfer": 568,
+        "ms": 613.3999999761581
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/generated-audio.js",
+        "bytes": 392,
+        "decoded": 952,
+        "transfer": 692,
+        "ms": 613.2000000476837
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/music.js",
+        "bytes": 1971,
+        "decoded": 5650,
+        "transfer": 2271,
+        "ms": 614.1000000238419
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/audio.js",
+        "bytes": 4070,
+        "decoded": 12308,
+        "transfer": 4370,
+        "ms": 614.7999999523163
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/brand.js",
+        "bytes": 444,
+        "decoded": 773,
+        "transfer": 744,
+        "ms": 613.5
+      },
+      {
+        "name": "http://127.0.0.1:5187/src/app.js",
+        "bytes": 17647,
+        "decoded": 50572,
+        "transfer": 17947,
+        "ms": 628.1999999284744
+      },
+      {
+        "name": "http://127.0.0.1:5187/assets/brand-rekindled/wordmark.png?v=e703efa5ab2a14ce",
+        "bytes": 719926,
+        "decoded": 719926,
+        "transfer": 720226,
+        "ms": 1760.7000000476837
+      },
+      {
+        "name": "http://127.0.0.1:5187/assets/art-v1/stone-platform.png?v=0e6e36cd6a30ce74",
+        "bytes": 946448,
+        "decoded": 946448,
+        "transfer": 946748,
+        "ms": 2088.7000000476837
+      },
+      {
+        "name": "http://127.0.0.1:5187/assets/art-v1/wukong-atlas.png?v=ce37326df844b464",
+        "bytes": 1269917,
+        "decoded": 1269917,
+        "transfer": 1270217,
+        "ms": 2400
+      },
+      {
+        "name": "http://127.0.0.1:5187/assets/art-v1/mountain-approach.png?v=57e9513653529b48",
+        "bytes": 2593019,
+        "decoded": 2593019,
+        "transfer": 2593319,
+        "ms": 3053.399999976158
+      }
+    ]
+  },
+  "firstRoom": {
+    "ids": [
+      "brandWordmark",
+      "stone",
+      "wukong",
+      "mountain",
+      "props",
+      "uiScroll",
+      "v8ErlangPortrait",
+      "uiFolio",
+      "v8NezhaPortrait",
+      "uiIcons",
+      "nezhaPortrait",
+      "impacts",
+      "nodes",
+      "mapProps",
+      "nodesDone",
+      "mapTerrain",
+      "sigFx",
+      "mapDressing",
+      "sceneProps",
+      "actorStates",
+      "celestialHeroes",
+      "enemies",
+      "celestialBosses",
+      "v8Fx",
+      "v8Enemies",
+      "celestialFx",
+      "v8Terrain",
+      "auditDevices",
+      "actorRepair",
+      "combatContacts",
+      "enemy-materials",
+      "enemy-contacts",
+      "realmDressing",
+      "guardians",
+      "identity-qinguang",
+      "identity-juling",
+      "identity-ninehead",
+      "identity-dragonking",
+      "identity-litian",
+      "sigWukong",
+      "enemyBattleSeals",
+      "staffActors",
+      "identity-wukong",
+      "staffFx",
+      "campaign-juling",
+      "run",
+      "campaignArmy-cloud",
+      "cloudEnvironment",
+      "cloudFoundation",
+      "motion-cloud",
+      "realmCloud",
+      "combo"
+    ],
+    "metrics": []
+  },
+  "errors": [],
+  "checks": [
+    {
+      "name": "menu ready within six seconds on cold 2 MiB/s, 20ms network",
+      "pass": true
+    },
+    {
+      "name": "menu requests only its four image assets",
+      "pass": true
+    },
+    {
+      "name": "no individual JavaScript response exceeds 512 KiB decoded",
+      "pass": true
+    },
+    {
+      "name": "real input reaches first playable fight without art exceptions",
+      "pass": true
+    }
+  ]
+}

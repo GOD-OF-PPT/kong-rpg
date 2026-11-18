@@ -1,0 +1,3840 @@
+{
+  "environment": {
+    "os": "win32 10.0.26200",
+    "cpu": "Intel(R) Core(TM) i5-14600K",
+    "node": "v22.12.0",
+    "viewport": "1440x1000",
+    "mode": "headless Edge real-time requestAnimationFrame; event-to-render-submission, not display photon latency"
+  },
+  "version": "7.1.0",
+  "entry": "E:\\githome\\kong-rpg\\artifacts\\portable-challenge-v7\\index.html",
+  "sha256": "8f90f9ae53390ec7f9cccbde37a48ec6d8227b16de882c4061d274eab7b5dc4a",
+  "kind": "file",
+  "jumpKey": "KeyW",
+  "hero": "wukong",
+  "difficulty": "challenge",
+  "buildPreference": "martial",
+  "checks": [
+    {
+      "name": "preview server stopped",
+      "pass": true
+    },
+    {
+      "name": "actual run keeps the selected difficulty",
+      "pass": true
+    },
+    {
+      "name": "new run starts through prologue and relic choice",
+      "pass": true
+    },
+    {
+      "name": "pause gates world input",
+      "pass": true
+    },
+    {
+      "name": "v7 JSON imports paused",
+      "pass": true
+    }
+  ],
+  "samples": [
+    {
+      "time": 0.3833333333333337,
+      "wall": 0.3833333333333337,
+      "stage": 0,
+      "x": 90,
+      "y": 396,
+      "hp": 100,
+      "focus": 65,
+      "seals": [
+        56,
+        56
+      ],
+      "boss": null,
+      "rage": 25,
+      "growth": {}
+    },
+    {
+      "time": 1.9749999999999954,
+      "wall": 1.9999999999999953,
+      "stage": 0,
+      "x": 347,
+      "y": 396,
+      "hp": 100,
+      "focus": 37,
+      "seals": [
+        56,
+        56
+      ],
+      "boss": null,
+      "rage": 33,
+      "growth": {}
+    },
+    {
+      "time": 3.216666666666658,
+      "wall": 3.324999999999991,
+      "stage": 0,
+      "x": 464,
+      "y": 396,
+      "hp": 100,
+      "focus": 30,
+      "seals": [
+        56,
+        56
+      ],
+      "boss": null,
+      "rage": 55,
+      "growth": {}
+    },
+    {
+      "time": 4.7250000000000245,
+      "wall": 4.8916666666666995,
+      "stage": 0,
+      "x": 893,
+      "y": 345,
+      "hp": 100,
+      "focus": 40,
+      "seals": [
+        56,
+        56
+      ],
+      "boss": null,
+      "rage": 69,
+      "growth": {}
+    },
+    {
+      "time": 6.433333333333443,
+      "wall": 6.658333333333454,
+      "stage": 0,
+      "x": 1320,
+      "y": 396,
+      "hp": 88,
+      "focus": 0,
+      "seals": [
+        56,
+        56
+      ],
+      "boss": null,
+      "rage": 83,
+      "growth": {}
+    },
+    {
+      "time": 8.441666666666828,
+      "wall": 8.716666666666812,
+      "stage": 0,
+      "x": 1365,
+      "y": 352,
+      "hp": 88,
+      "focus": 2,
+      "seals": [
+        15,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {}
+    },
+    {
+      "time": 10.40000000000005,
+      "wall": 10.733333333333364,
+      "stage": 0,
+      "x": 1494,
+      "y": 396,
+      "hp": 76,
+      "focus": 30,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 0,
+      "growth": {}
+    },
+    {
+      "time": 12.424999999999935,
+      "wall": 12.81666666666658,
+      "stage": 0,
+      "x": 1650,
+      "y": 252,
+      "hp": 100,
+      "focus": 25,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 14,
+      "growth": {}
+    },
+    {
+      "time": 13.991666666666513,
+      "wall": 14.383333333333157,
+      "stage": 0,
+      "x": 1973,
+      "y": 315,
+      "hp": 88,
+      "focus": 25,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 14,
+      "growth": {}
+    },
+    {
+      "time": 15.541666666666424,
+      "wall": 16.099999999999728,
+      "stage": 0,
+      "x": 2297,
+      "y": 396,
+      "hp": 88,
+      "focus": 95,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 86,
+      "growth": {}
+    },
+    {
+      "time": 17.00833333333301,
+      "wall": 17.61666666666631,
+      "stage": 0,
+      "x": 2287,
+      "y": 323,
+      "hp": 88,
+      "focus": 82,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {}
+    },
+    {
+      "time": 18.66666666666625,
+      "wall": 19.416666666666206,
+      "stage": 0,
+      "x": 2283,
+      "y": 396,
+      "hp": 90,
+      "focus": 100,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 0,
+      "growth": {}
+    },
+    {
+      "time": 20.27499999999949,
+      "wall": 21.024999999999448,
+      "stage": 0,
+      "x": 2507,
+      "y": 396,
+      "hp": 100,
+      "focus": 100,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 0,
+      "growth": {}
+    },
+    {
+      "time": 21.841666666666068,
+      "wall": 22.591666666666026,
+      "stage": 0,
+      "x": 2771,
+      "y": 288,
+      "hp": 100,
+      "focus": 60,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 0,
+      "growth": {}
+    },
+    {
+      "time": 23.433333333332644,
+      "wall": 24.1833333333326,
+      "stage": 0,
+      "x": 3054,
+      "y": 329,
+      "hp": 100,
+      "focus": 60,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 0,
+      "growth": {}
+    },
+    {
+      "time": 24.87499999999923,
+      "wall": 25.758333333332512,
+      "stage": 0,
+      "x": 3338,
+      "y": 368,
+      "hp": 100,
+      "focus": 66,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 38,
+      "growth": {}
+    },
+    {
+      "time": 26.516666666665802,
+      "wall": 27.399999999999086,
+      "stage": 0,
+      "x": 3803,
+      "y": 396,
+      "hp": 100,
+      "focus": 66,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 38,
+      "growth": {}
+    },
+    {
+      "time": 28.249999999999037,
+      "wall": 29.13333333333232,
+      "stage": 0,
+      "x": 4228,
+      "y": 291,
+      "hp": 100,
+      "focus": 11,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 38,
+      "growth": {}
+    },
+    {
+      "time": 30.049999999998935,
+      "wall": 30.949999999998884,
+      "stage": 0,
+      "x": 4663,
+      "y": 396,
+      "hp": 88,
+      "focus": 43,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 46,
+      "growth": {}
+    },
+    {
+      "time": 31.799999999998835,
+      "wall": 32.75833333333212,
+      "stage": 0,
+      "x": 5015,
+      "y": 233,
+      "hp": 76,
+      "focus": 37,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 62,
+      "growth": {}
+    },
+    {
+      "time": 33.46666666666541,
+      "wall": 34.50833333333202,
+      "stage": 0,
+      "x": 5426,
+      "y": 306,
+      "hp": 76,
+      "focus": 71,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 84,
+      "growth": {}
+    },
+    {
+      "time": 35.20833333333198,
+      "wall": 36.308333333331916,
+      "stage": 0,
+      "x": 5970,
+      "y": 293,
+      "hp": 76,
+      "focus": 31,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 98,
+      "growth": {}
+    },
+    {
+      "time": 36.95833333333188,
+      "wall": 38.17499999999848,
+      "stage": 0,
+      "x": 6178,
+      "y": 396,
+      "hp": 76,
+      "focus": 53,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 0,
+      "growth": {}
+    },
+    {
+      "time": 38.84999999999844,
+      "wall": 40.066666666665036,
+      "stage": 0,
+      "x": 6460,
+      "y": 396,
+      "hp": 88,
+      "focus": 62,
+      "seals": [
+        0,
+        42
+      ],
+      "boss": null,
+      "rage": 5,
+      "growth": {}
+    },
+    {
+      "time": 40.883333333331656,
+      "wall": 42.09999999999825,
+      "stage": 0,
+      "x": 6412,
+      "y": 277,
+      "hp": 76,
+      "focus": 31,
+      "seals": [
+        0,
+        15
+      ],
+      "boss": null,
+      "rage": 10,
+      "growth": {}
+    },
+    {
+      "time": 42.799999999998214,
+      "wall": 44.01666666666481,
+      "stage": 0,
+      "x": 6448,
+      "y": 396,
+      "hp": 76,
+      "focus": 40,
+      "seals": [
+        0,
+        1
+      ],
+      "boss": null,
+      "rage": 15,
+      "growth": {}
+    },
+    {
+      "time": 44.91666666666476,
+      "wall": 46.13333333333136,
+      "stage": 0,
+      "x": 6598,
+      "y": 396,
+      "hp": 76,
+      "focus": 9,
+      "seals": [
+        0,
+        0
+      ],
+      "boss": null,
+      "rage": 20,
+      "growth": {}
+    },
+    {
+      "time": 46.89166666666465,
+      "wall": 48.108333333331245,
+      "stage": 0,
+      "x": 6908,
+      "y": 396,
+      "hp": 76,
+      "focus": 21,
+      "seals": [
+        0,
+        0
+      ],
+      "boss": 153,
+      "guardian": "mountain",
+      "rage": 34,
+      "growth": {}
+    },
+    {
+      "time": 48.78333333333121,
+      "wall": 50.058333333331134,
+      "stage": 0,
+      "x": 6951,
+      "y": 396,
+      "hp": 76,
+      "focus": 21,
+      "seals": [
+        0,
+        0
+      ],
+      "boss": 153,
+      "guardian": "mountain",
+      "rage": 34,
+      "growth": {}
+    },
+    {
+      "time": 50.583333333331105,
+      "wall": 52.07499999999769,
+      "stage": 0,
+      "x": 6707,
+      "y": 396,
+      "hp": 76,
+      "focus": 53,
+      "seals": [
+        0,
+        0
+      ],
+      "boss": 47,
+      "guardian": "mountain",
+      "rage": 94,
+      "growth": {}
+    },
+    {
+      "time": 52.54999999999766,
+      "wall": 54.12499999999757,
+      "stage": 0,
+      "x": 6745,
+      "y": 396,
+      "hp": 88,
+      "focus": 87,
+      "seals": [
+        0,
+        0
+      ],
+      "boss": null,
+      "rage": 18,
+      "growth": {}
+    },
+    {
+      "time": 54.49999999999755,
+      "wall": 56.07499999999746,
+      "stage": 0,
+      "x": 7042,
+      "y": 396,
+      "hp": 88,
+      "focus": 87,
+      "seals": [
+        0,
+        0
+      ],
+      "boss": null,
+      "rage": 18,
+      "growth": {}
+    },
+    {
+      "time": 57.03333333333074,
+      "wall": 58.60833333333065,
+      "stage": 1,
+      "x": 313,
+      "y": 396,
+      "hp": 100,
+      "focus": 60,
+      "seals": [
+        56,
+        56
+      ],
+      "boss": null,
+      "rage": 18,
+      "growth": {
+        "dash-strike": 1
+      }
+    },
+    {
+      "time": 59.124999999997286,
+      "wall": 60.82499999999719,
+      "stage": 1,
+      "x": 648,
+      "y": 309,
+      "hp": 88,
+      "focus": 73,
+      "seals": [
+        56,
+        56
+      ],
+      "boss": null,
+      "rage": 58,
+      "growth": {
+        "dash-strike": 1
+      }
+    },
+    {
+      "time": 61.32499999999716,
+      "wall": 63.024999999997064,
+      "stage": 1,
+      "x": 1148,
+      "y": 289,
+      "hp": 88,
+      "focus": 33,
+      "seals": [
+        56,
+        56
+      ],
+      "boss": null,
+      "rage": 58,
+      "growth": {
+        "dash-strike": 1
+      }
+    },
+    {
+      "time": 63.39166666666371,
+      "wall": 65.2083333333313,
+      "stage": 1,
+      "x": 1762,
+      "y": 454,
+      "hp": 88,
+      "focus": 5,
+      "seals": [
+        56,
+        56
+      ],
+      "boss": null,
+      "rage": 86,
+      "growth": {
+        "dash-strike": 1
+      }
+    },
+    {
+      "time": 65.74166666666505,
+      "wall": 67.55833333333317,
+      "stage": 1,
+      "x": 1808,
+      "y": 327,
+      "hp": 58,
+      "focus": 5,
+      "seals": [
+        56,
+        56
+      ],
+      "boss": null,
+      "rage": 86,
+      "growth": {
+        "dash-strike": 1
+      }
+    },
+    {
+      "time": 67.68333333333327,
+      "wall": 69.61666666666814,
+      "stage": 1,
+      "x": 2012,
+      "y": 396,
+      "hp": 58,
+      "focus": 100,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 0,
+      "growth": {
+        "dash-strike": 1
+      }
+    },
+    {
+      "time": 69.96666666666842,
+      "wall": 71.90000000000329,
+      "stage": 1,
+      "x": 2335,
+      "y": 396,
+      "hp": 88,
+      "focus": 60,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 0,
+      "growth": {
+        "dash-strike": 1
+      }
+    },
+    {
+      "time": 72.00833333333671,
+      "wall": 73.94166666667158,
+      "stage": 1,
+      "x": 2731,
+      "y": 331,
+      "hp": 88,
+      "focus": 60,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 0,
+      "growth": {
+        "dash-strike": 1
+      }
+    },
+    {
+      "time": 74.04166666667166,
+      "wall": 76.05833333333993,
+      "stage": 1,
+      "x": 3186,
+      "y": 395,
+      "hp": 88,
+      "focus": 32,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 22,
+      "growth": {
+        "dash-strike": 1
+      }
+    },
+    {
+      "time": 76.14166666667333,
+      "wall": 78.20833333334164,
+      "stage": 1,
+      "x": 3607,
+      "y": 242,
+      "hp": 88,
+      "focus": 46,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 38,
+      "growth": {
+        "dash-strike": 1
+      }
+    },
+    {
+      "time": 78.30833333334172,
+      "wall": 80.37500000001003,
+      "stage": 1,
+      "x": 4150,
+      "y": 396,
+      "hp": 88,
+      "focus": 46,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 38,
+      "growth": {
+        "dash-strike": 1
+      }
+    },
+    {
+      "time": 80.45000000001009,
+      "wall": 82.5166666666784,
+      "stage": 1,
+      "x": 3950,
+      "y": 289,
+      "hp": 58,
+      "focus": 6,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 38,
+      "growth": {
+        "dash-strike": 1
+      }
+    },
+    {
+      "time": 82.55000000001176,
+      "wall": 84.61666666668008,
+      "stage": 1,
+      "x": 3994,
+      "y": 329,
+      "hp": 40,
+      "focus": 6,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 38,
+      "growth": {
+        "dash-strike": 1
+      }
+    },
+    {
+      "time": 84.7250000000135,
+      "wall": 86.93333333334859,
+      "stage": 1,
+      "x": 3726,
+      "y": 396,
+      "hp": 22,
+      "focus": 42,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 74,
+      "growth": {
+        "dash-strike": 1
+      }
+    },
+    {
+      "time": 86.73333333334843,
+      "wall": 88.96666666668354,
+      "stage": 1,
+      "x": 4093,
+      "y": 332,
+      "hp": 22,
+      "focus": 84,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 82,
+      "growth": {
+        "dash-strike": 1
+      }
+    },
+    {
+      "time": 88.51666666668318,
+      "wall": 90.95000000001845,
+      "stage": 1,
+      "x": 4357,
+      "y": 396,
+      "hp": 10,
+      "focus": 100,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 8,
+      "growth": {
+        "dash-strike": 1
+      }
+    },
+    {
+      "time": 90.49166666668475,
+      "wall": 92.92500000002002,
+      "stage": 1,
+      "x": 4620,
+      "y": 288,
+      "hp": 34,
+      "focus": 80,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 8,
+      "growth": {
+        "dash-strike": 1
+      }
+    },
+    {
+      "time": 92.75833333335322,
+      "wall": 95.19166666668849,
+      "stage": 1,
+      "x": 5088,
+      "y": 396,
+      "hp": 20,
+      "focus": 60,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 8,
+      "growth": {
+        "dash-strike": 1
+      }
+    },
+    {
+      "time": 94.64166666668805,
+      "wall": 97.18333333335674,
+      "stage": 1,
+      "x": 5499,
+      "y": 396,
+      "hp": 8,
+      "focus": 56,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 38,
+      "growth": {
+        "dash-strike": 1
+      }
+    },
+    {
+      "time": 96.54166666668957,
+      "wall": 99.20000000002501,
+      "stage": 1,
+      "x": 5867,
+      "y": 396,
+      "hp": 8,
+      "focus": 50,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 66,
+      "growth": {
+        "dash-strike": 1
+      }
+    }
+  ],
+  "rewards": [
+    {
+      "stage": 0,
+      "kind": "mid",
+      "options": [
+        "vitality",
+        "clone-burst",
+        "rest"
+      ],
+      "hp": 76,
+      "chosen": "rest"
+    },
+    {
+      "stage": 0,
+      "kind": "exit",
+      "options": [
+        "vitality",
+        "dash-strike",
+        "rest"
+      ],
+      "hp": 88,
+      "chosen": "dash-strike"
+    },
+    {
+      "stage": 1,
+      "kind": "mid",
+      "options": [
+        "cloud",
+        "thunder",
+        "rest"
+      ],
+      "hp": 58,
+      "chosen": "rest"
+    }
+  ],
+  "stages": [
+    0,
+    1
+  ],
+  "worldEvents": [
+    {
+      "stage": 0,
+      "id": "rescue",
+      "state": "active",
+      "time": 15.058333333333119,
+      "hp": 88
+    },
+    {
+      "stage": 0,
+      "id": "rescue",
+      "state": "done",
+      "time": 18.133333333332946,
+      "hp": 90
+    },
+    {
+      "stage": 1,
+      "id": "bridge",
+      "state": "done",
+      "time": 92.41666666668628,
+      "hp": 20
+    }
+  ],
+  "errors": [],
+  "network": [],
+  "browser": "156.0.4314.42",
+  "seed": "LOTUS-1025",
+  "failed": {
+    "source": "莲焰飞弹",
+    "stage": 1,
+    "player": {
+      "x": 6026.109498214038,
+      "y": 300.52083333333326,
+      "w": 24,
+      "h": 44,
+      "vx": -200,
+      "vy": -200,
+      "face": 1,
+      "hp": 0,
+      "focus": 92,
+      "rage": 74,
+      "ringCD": 0,
+      "ringAim": null,
+      "ultimate": 0,
+      "ultimateStage": 1,
+      "talismanCD": 0,
+      "ward": 0,
+      "dashTargets": [],
+      "grounded": false,
+      "coyote": 0,
+      "buffer": 0,
+      "airJumps": 0,
+      "invuln": 1,
+      "dash": 0,
+      "dashCD": 0,
+      "attack": 0,
+      "attackId": 81,
+      "attackTargets": [],
+      "comboIndex": 2,
+      "slam": false,
+      "landing": 0,
+      "drop": 0,
+      "hurt": 0.24,
+      "attackBuffer": 0,
+      "armCD": 0,
+      "vaultTime": 0,
+      "vaultUsed": false,
+      "groundTime": 0,
+      "wheelFuel": 1.25,
+      "wheelReady": true,
+      "attackDuration": 0.31
+    },
+    "log": [
+      {
+        "type": "swing",
+        "t": 48.408,
+        "wall": 49.683,
+        "combo": 1
+      },
+      {
+        "type": "enemy-attack",
+        "t": 48.425,
+        "wall": 49.7,
+        "id": 900,
+        "kind": "warden",
+        "move": "challenge-quake-windup"
+      },
+      {
+        "type": "swing",
+        "t": 48.7,
+        "wall": 49.975,
+        "combo": 2
+      },
+      {
+        "type": "swing",
+        "t": 49.017,
+        "wall": 50.292,
+        "combo": 3
+      },
+      {
+        "type": "hit",
+        "t": 49.217,
+        "wall": 50.492,
+        "target": 900,
+        "kind": "warden",
+        "amount": 27,
+        "impact": "heavy",
+        "x": 6759.666666666648,
+        "y": 370
+      },
+      {
+        "type": "swing",
+        "t": 49.542,
+        "wall": 50.875,
+        "combo": 1
+      },
+      {
+        "type": "hit",
+        "t": 49.592,
+        "wall": 50.925,
+        "target": 900,
+        "kind": "warden",
+        "amount": 14,
+        "impact": "light",
+        "x": 6759.666666666648,
+        "y": 370
+      },
+      {
+        "type": "clone",
+        "t": 49.742,
+        "wall": 51.1,
+        "cost": 40
+      },
+      {
+        "type": "swing",
+        "t": 49.833,
+        "wall": 51.192,
+        "combo": 2
+      },
+      {
+        "type": "hit",
+        "t": 49.858,
+        "wall": 51.217,
+        "target": 900,
+        "kind": "warden",
+        "amount": 12,
+        "impact": "light",
+        "x": 6759.666666666648,
+        "y": 370
+      },
+      {
+        "type": "clone-strike",
+        "t": 49.858,
+        "wall": 51.217
+      },
+      {
+        "type": "swing",
+        "t": 50.15,
+        "wall": 51.533,
+        "combo": 3
+      },
+      {
+        "type": "hit",
+        "t": 50.275,
+        "wall": 51.658,
+        "target": 900,
+        "kind": "warden",
+        "amount": 27,
+        "impact": "heavy",
+        "x": 6759.666666666648,
+        "y": 370
+      },
+      {
+        "type": "dash",
+        "t": 50.283,
+        "wall": 51.725
+      },
+      {
+        "type": "hit",
+        "t": 50.383,
+        "wall": 51.825,
+        "target": 900,
+        "kind": "warden",
+        "amount": 12,
+        "impact": "light",
+        "x": 6759.666666666648,
+        "y": 370
+      },
+      {
+        "type": "clone-strike",
+        "t": 50.383,
+        "wall": 51.825
+      },
+      {
+        "type": "swing",
+        "t": 50.467,
+        "wall": 51.933,
+        "combo": 1
+      },
+      {
+        "type": "hit",
+        "t": 50.517,
+        "wall": 51.983,
+        "target": 900,
+        "kind": "warden",
+        "amount": 14,
+        "impact": "light",
+        "x": 6759.666666666648,
+        "y": 370
+      },
+      {
+        "type": "boss-warning",
+        "t": 50.683,
+        "wall": 52.175,
+        "attack": "quake",
+        "name": "镇山魈王"
+      },
+      {
+        "type": "swing",
+        "t": 50.758,
+        "wall": 52.25,
+        "combo": 2
+      },
+      {
+        "type": "hit",
+        "t": 50.908,
+        "wall": 52.4,
+        "target": 900,
+        "kind": "warden",
+        "amount": 12,
+        "impact": "light",
+        "x": 6759.666666666648,
+        "y": 370
+      },
+      {
+        "type": "ultimate-ready",
+        "t": 50.908,
+        "wall": 52.4
+      },
+      {
+        "type": "clone-strike",
+        "t": 50.908,
+        "wall": 52.4
+      },
+      {
+        "type": "swing",
+        "t": 51.075,
+        "wall": 52.592,
+        "combo": 3
+      },
+      {
+        "type": "ultimate",
+        "t": 51.125,
+        "wall": 52.642
+      },
+      {
+        "type": "interrupt",
+        "t": 51.325,
+        "wall": 52.842,
+        "target": 900
+      },
+      {
+        "type": "hit",
+        "t": 51.325,
+        "wall": 52.842,
+        "target": 900,
+        "kind": "warden",
+        "amount": 64,
+        "impact": "ultimate",
+        "x": 6759.666666666648,
+        "y": 370
+      },
+      {
+        "type": "kill",
+        "t": 51.325,
+        "wall": 52.842,
+        "kind": "warden"
+      },
+      {
+        "type": "guardian-defeat",
+        "t": 51.325,
+        "wall": 52.842,
+        "name": "镇山魈王"
+      },
+      {
+        "type": "ultimate-hit",
+        "t": 51.325,
+        "wall": 52.842,
+        "pulse": 1,
+        "box": {
+          "x": 6382.757754528223,
+          "y": 331,
+          "w": 355,
+          "h": 130
+        }
+      },
+      {
+        "type": "clone-strike",
+        "t": 51.433,
+        "wall": 53.008
+      },
+      {
+        "type": "swing",
+        "t": 51.992,
+        "wall": 53.567,
+        "combo": 1
+      },
+      {
+        "type": "swing",
+        "t": 52.283,
+        "wall": 53.858,
+        "combo": 2
+      },
+      {
+        "type": "swing",
+        "t": 52.6,
+        "wall": 54.175,
+        "combo": 3
+      },
+      {
+        "type": "swing",
+        "t": 53.125,
+        "wall": 54.7,
+        "combo": 1
+      },
+      {
+        "type": "swing",
+        "t": 53.417,
+        "wall": 54.992,
+        "combo": 2
+      },
+      {
+        "type": "swing",
+        "t": 53.733,
+        "wall": 55.308,
+        "combo": 3
+      },
+      {
+        "type": "swing",
+        "t": 54.258,
+        "wall": 55.833,
+        "combo": 1
+      },
+      {
+        "type": "swing",
+        "t": 54.55,
+        "wall": 56.125,
+        "combo": 2
+      },
+      {
+        "type": "swing",
+        "t": 54.867,
+        "wall": 56.442,
+        "combo": 3
+      },
+      {
+        "type": "swing",
+        "t": 55.392,
+        "wall": 56.967,
+        "combo": 1
+      },
+      {
+        "type": "reward",
+        "t": 55.442,
+        "wall": 57.017,
+        "kind": "exit"
+      },
+      {
+        "type": "growth",
+        "t": 55.442,
+        "wall": 57.017,
+        "id": "dash-strike",
+        "rank": 1
+      },
+      {
+        "type": "room",
+        "t": 55.442,
+        "wall": 57.017,
+        "stage": 1
+      },
+      {
+        "type": "warning",
+        "t": 55.45,
+        "wall": 57.025,
+        "kind": "blade",
+        "id": 0,
+        "move": "pursuit"
+      },
+      {
+        "type": "hint",
+        "t": 55.45,
+        "wall": 57.025,
+        "text": "黑莲重劫：援兵结阵。刀气可跳避或返弹，盾震可跃过，双印需两次判断。"
+      },
+      {
+        "type": "swing",
+        "t": 55.933,
+        "wall": 57.508,
+        "combo": 2
+      },
+      {
+        "type": "clone",
+        "t": 56.008,
+        "wall": 57.583,
+        "cost": 40
+      },
+      {
+        "type": "clone-strike",
+        "t": 56.125,
+        "wall": 57.7
+      },
+      {
+        "type": "jump",
+        "t": 56.217,
+        "wall": 57.792,
+        "air": false
+      },
+      {
+        "type": "warning",
+        "t": 56.308,
+        "wall": 57.883,
+        "id": 1000,
+        "kind": "blade",
+        "move": "challenge-bolt-windup"
+      },
+      {
+        "type": "enemy-attack",
+        "t": 56.408,
+        "wall": 57.983,
+        "kind": "blade",
+        "id": 0,
+        "move": "pursuit"
+      },
+      {
+        "type": "clone-strike",
+        "t": 56.65,
+        "wall": 58.225
+      },
+      {
+        "type": "swing",
+        "t": 56.808,
+        "wall": 58.383,
+        "combo": 1
+      },
+      {
+        "type": "hint",
+        "t": 57.092,
+        "wall": 58.667,
+        "text": "看到举刀再跳；连续轻棍不会冻结敌招。"
+      },
+      {
+        "type": "swing",
+        "t": 57.1,
+        "wall": 58.675,
+        "combo": 2
+      },
+      {
+        "type": "enemy-attack",
+        "t": 57.167,
+        "wall": 58.742,
+        "id": 1000,
+        "kind": "blade",
+        "move": "challenge-bolt-windup"
+      },
+      {
+        "type": "hit",
+        "t": 57.175,
+        "wall": 58.75,
+        "target": 0,
+        "kind": "blade",
+        "amount": 12,
+        "impact": "light",
+        "x": 139,
+        "y": 418
+      },
+      {
+        "type": "clone-strike",
+        "t": 57.175,
+        "wall": 58.75
+      },
+      {
+        "type": "hurt",
+        "t": 57.692,
+        "wall": 59.292,
+        "source": "执刃魔兵·封路刀气",
+        "amount": 12
+      },
+      {
+        "type": "jump",
+        "t": 57.7,
+        "wall": 59.3,
+        "air": false
+      },
+      {
+        "type": "hit",
+        "t": 57.7,
+        "wall": 59.3,
+        "target": 0,
+        "kind": "blade",
+        "amount": 12,
+        "impact": "light",
+        "x": 151,
+        "y": 418
+      },
+      {
+        "type": "clone-strike",
+        "t": 57.7,
+        "wall": 59.3
+      },
+      {
+        "type": "dash",
+        "t": 57.742,
+        "wall": 59.367
+      },
+      {
+        "type": "warning",
+        "t": 57.8,
+        "wall": 59.425,
+        "kind": "caster",
+        "id": 1,
+        "move": "orb",
+        "aimX": 464.6597006190788,
+        "aimY": 391.0520833333333
+      },
+      {
+        "type": "swing",
+        "t": 58.208,
+        "wall": 59.833,
+        "combo": 1
+      },
+      {
+        "type": "hit",
+        "t": 58.258,
+        "wall": 59.883,
+        "target": 1000,
+        "kind": "blade",
+        "amount": 14,
+        "impact": "light",
+        "x": 635,
+        "y": 418
+      },
+      {
+        "type": "warning",
+        "t": 58.367,
+        "wall": 60.017,
+        "kind": "blade",
+        "id": 0,
+        "move": "pursuit"
+      },
+      {
+        "type": "swing",
+        "t": 58.5,
+        "wall": 60.15,
+        "combo": 2
+      },
+      {
+        "type": "hit",
+        "t": 58.575,
+        "wall": 60.225,
+        "target": 1000,
+        "kind": "blade",
+        "amount": 14,
+        "impact": "light",
+        "x": 647,
+        "y": 418
+      },
+      {
+        "type": "warning",
+        "t": 58.633,
+        "wall": 60.308,
+        "kind": "blade",
+        "id": 1000,
+        "move": "windup",
+        "x": 634,
+        "y": 400,
+        "face": -1
+      },
+      {
+        "type": "clone",
+        "t": 58.775,
+        "wall": 60.45,
+        "cost": 40
+      },
+      {
+        "type": "swing",
+        "t": 58.817,
+        "wall": 60.492,
+        "combo": 3
+      },
+      {
+        "type": "hit",
+        "t": 58.892,
+        "wall": 60.567,
+        "target": 1000,
+        "kind": "blade",
+        "amount": 12,
+        "impact": "light",
+        "x": 647,
+        "y": 418
+      },
+      {
+        "type": "kill",
+        "t": 58.892,
+        "wall": 60.567,
+        "kind": "blade"
+      },
+      {
+        "type": "drop",
+        "t": 58.892,
+        "wall": 60.567,
+        "id": 1000,
+        "kind": "rage",
+        "x": 639,
+        "y": 420
+      },
+      {
+        "type": "clone-strike",
+        "t": 58.892,
+        "wall": 60.567
+      },
+      {
+        "type": "jump",
+        "t": 58.925,
+        "wall": 60.625,
+        "air": false
+      },
+      {
+        "type": "enemy-attack",
+        "t": 59.325,
+        "wall": 61.025,
+        "kind": "blade",
+        "id": 0,
+        "move": "pursuit"
+      },
+      {
+        "type": "clone-strike",
+        "t": 59.417,
+        "wall": 61.117
+      },
+      {
+        "type": "jump",
+        "t": 59.683,
+        "wall": 61.383,
+        "air": false
+      },
+      {
+        "type": "clone-strike",
+        "t": 59.942,
+        "wall": 61.642
+      },
+      {
+        "type": "warning",
+        "t": 60.042,
+        "wall": 61.742,
+        "kind": "shield",
+        "id": 1001,
+        "move": "advance"
+      },
+      {
+        "type": "swing",
+        "t": 60.258,
+        "wall": 61.958,
+        "combo": 1
+      },
+      {
+        "type": "warning",
+        "t": 60.267,
+        "wall": 61.967,
+        "id": 1,
+        "kind": "caster",
+        "move": "challenge-mark-windup"
+      },
+      {
+        "type": "clone-strike",
+        "t": 60.467,
+        "wall": 62.167
+      },
+      {
+        "type": "warning",
+        "t": 60.55,
+        "wall": 62.25,
+        "kind": "shield",
+        "id": 2,
+        "move": "advance"
+      },
+      {
+        "type": "swing",
+        "t": 60.633,
+        "wall": 62.333,
+        "combo": 2
+      },
+      {
+        "type": "clone",
+        "t": 60.825,
+        "wall": 62.525,
+        "cost": 40
+      },
+      {
+        "type": "clone-strike",
+        "t": 60.942,
+        "wall": 62.642
+      },
+      {
+        "type": "swing",
+        "t": 60.95,
+        "wall": 62.65,
+        "combo": 3
+      },
+      {
+        "type": "jump",
+        "t": 61,
+        "wall": 62.7,
+        "air": false
+      },
+      {
+        "type": "warning",
+        "t": 61.225,
+        "wall": 62.925,
+        "id": 1,
+        "kind": "caster",
+        "move": "challenge-echo-windup"
+      },
+      {
+        "type": "enemy-attack",
+        "t": 61.225,
+        "wall": 62.925,
+        "id": 1,
+        "kind": "caster",
+        "move": "challenge-mark-windup"
+      },
+      {
+        "type": "clone-strike",
+        "t": 61.467,
+        "wall": 63.167
+      },
+      {
+        "type": "hit",
+        "t": 61.667,
+        "wall": 63.367,
+        "target": 1001,
+        "kind": "shield",
+        "amount": 19,
+        "impact": "heavy",
+        "x": 1214.5833333333237,
+        "y": 418
+      },
+      {
+        "type": "stomp",
+        "t": 61.667,
+        "wall": 63.367,
+        "kind": "shield"
+      },
+      {
+        "type": "dash",
+        "t": 61.675,
+        "wall": 63.433
+      },
+      {
+        "type": "hit",
+        "t": 61.783,
+        "wall": 63.542,
+        "target": 2,
+        "kind": "shield",
+        "amount": 18,
+        "impact": "heavy",
+        "x": 1361.5833333333237,
+        "y": 418
+      },
+      {
+        "type": "swing",
+        "t": 61.858,
+        "wall": 63.675,
+        "combo": 1
+      },
+      {
+        "type": "warning",
+        "t": 61.958,
+        "wall": 63.775,
+        "id": 1001,
+        "kind": "shield",
+        "move": "challenge-quake-windup"
+      },
+      {
+        "type": "enemy-attack",
+        "t": 61.983,
+        "wall": 63.8,
+        "id": 1,
+        "kind": "caster",
+        "move": "challenge-echo-windup"
+      },
+      {
+        "type": "clone-strike",
+        "t": 61.992,
+        "wall": 63.808
+      },
+      {
+        "type": "swing",
+        "t": 62.15,
+        "wall": 63.967,
+        "combo": 2
+      },
+      {
+        "type": "warning",
+        "t": 62.267,
+        "wall": 64.083,
+        "kind": "caster",
+        "id": 1002,
+        "move": "orb",
+        "aimX": 1456.500652444945,
+        "aimY": 414
+      },
+      {
+        "type": "swing",
+        "t": 62.467,
+        "wall": 64.283,
+        "combo": 3
+      },
+      {
+        "type": "warning",
+        "t": 62.467,
+        "wall": 64.283,
+        "kind": "shield",
+        "id": 2,
+        "move": "advance"
+      },
+      {
+        "type": "clone-strike",
+        "t": 62.517,
+        "wall": 64.333
+      },
+      {
+        "type": "warning",
+        "t": 62.525,
+        "wall": 64.342,
+        "id": 3,
+        "kind": "blade",
+        "move": "challenge-bolt-windup"
+      },
+      {
+        "type": "enemy-attack",
+        "t": 62.917,
+        "wall": 64.733,
+        "id": 1001,
+        "kind": "shield",
+        "move": "challenge-quake-windup"
+      },
+      {
+        "type": "dash",
+        "t": 62.95,
+        "wall": 64.767
+      },
+      {
+        "type": "warning",
+        "t": 63.2,
+        "wall": 65.017,
+        "kind": "shield",
+        "id": 4,
+        "move": "advance"
+      },
+      {
+        "type": "swing",
+        "t": 63.283,
+        "wall": 65.1,
+        "combo": 1
+      },
+      {
+        "type": "clone",
+        "t": 63.308,
+        "wall": 65.125,
+        "cost": 40
+      },
+      {
+        "type": "enemy-attack",
+        "t": 63.383,
+        "wall": 65.2,
+        "id": 3,
+        "kind": "blade",
+        "move": "challenge-bolt-windup"
+      },
+      {
+        "type": "clone-strike",
+        "t": 63.425,
+        "wall": 65.242
+      },
+      {
+        "type": "warning",
+        "t": 63.542,
+        "wall": 65.358,
+        "kind": "caster",
+        "id": 5,
+        "move": "orb",
+        "aimX": 1812.7082283662064,
+        "aimY": 553.0104166666666
+      },
+      {
+        "type": "swing",
+        "t": 63.575,
+        "wall": 65.392,
+        "combo": 2
+      },
+      {
+        "type": "hurt",
+        "t": 63.625,
+        "wall": 65.442,
+        "source": "坠入云渊",
+        "amount": 18
+      },
+      {
+        "type": "swing",
+        "t": 63.633,
+        "wall": 65.45,
+        "combo": 3
+      },
+      {
+        "type": "warning",
+        "t": 63.692,
+        "wall": 65.508,
+        "kind": "caster",
+        "id": 1,
+        "move": "cross"
+      },
+      {
+        "type": "clone-strike",
+        "t": 63.95,
+        "wall": 65.767
+      },
+      {
+        "type": "dash",
+        "t": 64.192,
+        "wall": 66.008
+      },
+      {
+        "type": "warning",
+        "t": 64.383,
+        "wall": 66.2,
+        "kind": "shield",
+        "id": 2,
+        "move": "advance"
+      },
+      {
+        "type": "jump",
+        "t": 64.425,
+        "wall": 66.242,
+        "air": false
+      },
+      {
+        "type": "clone-strike",
+        "t": 64.475,
+        "wall": 66.292
+      },
+      {
+        "type": "enemy-attack",
+        "t": 64.85,
+        "wall": 66.667,
+        "kind": "caster",
+        "id": 1,
+        "move": "cross"
+      },
+      {
+        "type": "hurt",
+        "t": 64.908,
+        "wall": 66.725,
+        "source": "莲焰飞弹",
+        "amount": 12
+      },
+      {
+        "type": "clone-strike",
+        "t": 65,
+        "wall": 66.817
+      },
+      {
+        "type": "warning",
+        "t": 65.033,
+        "wall": 66.85,
+        "id": 1002,
+        "kind": "caster",
+        "move": "challenge-mark-windup"
+      },
+      {
+        "type": "warning",
+        "t": 65.117,
+        "wall": 66.933,
+        "kind": "shield",
+        "id": 4,
+        "move": "advance"
+      },
+      {
+        "type": "swing",
+        "t": 65.225,
+        "wall": 67.042,
+        "combo": 1
+      },
+      {
+        "type": "swing",
+        "t": 65.517,
+        "wall": 67.333,
+        "combo": 2
+      },
+      {
+        "type": "warning",
+        "t": 65.775,
+        "wall": 67.592,
+        "kind": "blade",
+        "id": 3,
+        "move": "lunge-windup",
+        "x": 1893.7250000000085,
+        "y": 400,
+        "face": -1
+      },
+      {
+        "type": "swing",
+        "t": 65.833,
+        "wall": 67.65,
+        "combo": 3
+      },
+      {
+        "type": "interrupt",
+        "t": 65.958,
+        "wall": 67.775,
+        "target": 3
+      },
+      {
+        "type": "hit",
+        "t": 65.958,
+        "wall": 67.775,
+        "target": 3,
+        "kind": "blade",
+        "amount": 27,
+        "impact": "heavy",
+        "x": 1918.7250000000085,
+        "y": 418
+      },
+      {
+        "type": "ultimate-ready",
+        "t": 65.958,
+        "wall": 67.775
+      },
+      {
+        "type": "warning",
+        "t": 65.992,
+        "wall": 67.867,
+        "id": 1002,
+        "kind": "caster",
+        "move": "challenge-echo-windup"
+      },
+      {
+        "type": "enemy-attack",
+        "t": 65.992,
+        "wall": 67.867,
+        "id": 1002,
+        "kind": "caster",
+        "move": "challenge-mark-windup"
+      },
+      {
+        "type": "warning",
+        "t": 66.008,
+        "wall": 67.883,
+        "kind": "caster",
+        "id": 5,
+        "move": "cross"
+      },
+      {
+        "type": "ultimate",
+        "t": 66.1,
+        "wall": 67.975
+      },
+      {
+        "type": "hit",
+        "t": 66.3,
+        "wall": 68.175,
+        "target": 3,
+        "kind": "blade",
+        "amount": 64,
+        "impact": "ultimate",
+        "x": 1930.7250000000085,
+        "y": 418
+      },
+      {
+        "type": "kill",
+        "t": 66.3,
+        "wall": 68.175,
+        "kind": "blade"
+      },
+      {
+        "type": "drop",
+        "t": 66.3,
+        "wall": 68.175,
+        "id": 3,
+        "kind": "focus",
+        "x": 1922.7250000000085,
+        "y": 420
+      },
+      {
+        "type": "hit",
+        "t": 66.3,
+        "wall": 68.175,
+        "target": 4,
+        "kind": "shield",
+        "amount": 64,
+        "impact": "ultimate",
+        "x": 2101,
+        "y": 318
+      },
+      {
+        "type": "kill",
+        "t": 66.3,
+        "wall": 68.175,
+        "kind": "shield"
+      },
+      {
+        "type": "interrupt",
+        "t": 66.3,
+        "wall": 68.175,
+        "target": 1002
+      },
+      {
+        "type": "hit",
+        "t": 66.3,
+        "wall": 68.175,
+        "target": 1002,
+        "kind": "caster",
+        "amount": 64,
+        "impact": "ultimate",
+        "x": 2069,
+        "y": 416.19421536681847
+      },
+      {
+        "type": "kill",
+        "t": 66.3,
+        "wall": 68.175,
+        "kind": "caster"
+      },
+      {
+        "type": "drop",
+        "t": 66.3,
+        "wall": 68.175,
+        "id": 1002,
+        "kind": "focus",
+        "x": 2061,
+        "y": 420
+      },
+      {
+        "type": "seal-hit",
+        "t": 66.3,
+        "wall": 68.175,
+        "id": 0
+      },
+      {
+        "type": "seal",
+        "t": 66.3,
+        "wall": 68.175,
+        "id": 0
+      },
+      {
+        "type": "ultimate-hit",
+        "t": 66.3,
+        "wall": 68.175,
+        "pulse": 1,
+        "box": {
+          "x": 1832.040283118742,
+          "y": 331,
+          "w": 355,
+          "h": 130
+        }
+      },
+      {
+        "type": "pickup",
+        "t": 67.092,
+        "wall": 69.025,
+        "kind": "focus",
+        "amount": 7.800000000000097,
+        "sourceId": 3
+      },
+      {
+        "type": "enemy-attack",
+        "t": 67.167,
+        "wall": 69.1,
+        "kind": "caster",
+        "id": 5,
+        "move": "cross"
+      },
+      {
+        "type": "swing",
+        "t": 67.308,
+        "wall": 69.242,
+        "combo": 1
+      },
+      {
+        "type": "hint",
+        "t": 67.467,
+        "wall": 69.4,
+        "text": "阵眼破后可按F借灯整顿；山门在右方。"
+      },
+      {
+        "type": "swing",
+        "t": 67.6,
+        "wall": 69.533,
+        "combo": 2
+      },
+      {
+        "type": "swing",
+        "t": 67.917,
+        "wall": 69.85,
+        "combo": 3
+      },
+      {
+        "type": "reward",
+        "t": 68.358,
+        "wall": 70.292,
+        "kind": "mid"
+      },
+      {
+        "type": "swing",
+        "t": 68.6,
+        "wall": 70.533,
+        "combo": 1
+      },
+      {
+        "type": "warning",
+        "t": 68.875,
+        "wall": 70.808,
+        "id": 5,
+        "kind": "caster",
+        "move": "challenge-mark-windup"
+      },
+      {
+        "type": "swing",
+        "t": 68.892,
+        "wall": 70.825,
+        "combo": 2
+      },
+      {
+        "type": "clone",
+        "t": 69.125,
+        "wall": 71.058,
+        "cost": 40
+      },
+      {
+        "type": "clone-strike",
+        "t": 69.242,
+        "wall": 71.175
+      },
+      {
+        "type": "swing",
+        "t": 69.458,
+        "wall": 71.392,
+        "combo": 3
+      },
+      {
+        "type": "clone-strike",
+        "t": 69.767,
+        "wall": 71.7
+      },
+      {
+        "type": "warning",
+        "t": 69.833,
+        "wall": 71.767,
+        "id": 5,
+        "kind": "caster",
+        "move": "challenge-echo-windup"
+      },
+      {
+        "type": "enemy-attack",
+        "t": 69.833,
+        "wall": 71.767,
+        "id": 5,
+        "kind": "caster",
+        "move": "challenge-mark-windup"
+      },
+      {
+        "type": "swing",
+        "t": 69.983,
+        "wall": 71.917,
+        "combo": 1
+      },
+      {
+        "type": "swing",
+        "t": 70.275,
+        "wall": 72.208,
+        "combo": 2
+      },
+      {
+        "type": "clone-strike",
+        "t": 70.292,
+        "wall": 72.225
+      },
+      {
+        "type": "swing",
+        "t": 70.592,
+        "wall": 72.525,
+        "combo": 3
+      },
+      {
+        "type": "enemy-attack",
+        "t": 70.592,
+        "wall": 72.525,
+        "id": 5,
+        "kind": "caster",
+        "move": "challenge-echo-windup"
+      },
+      {
+        "type": "clone-strike",
+        "t": 70.817,
+        "wall": 72.75
+      },
+      {
+        "type": "jump",
+        "t": 71.242,
+        "wall": 73.175,
+        "air": false
+      },
+      {
+        "type": "warning",
+        "t": 71.483,
+        "wall": 73.417,
+        "id": 400,
+        "kind": "blade",
+        "move": "challenge-bolt-windup"
+      },
+      {
+        "type": "hint",
+        "t": 71.742,
+        "wall": 73.675,
+        "text": "灯枢可用 F 注入20定力，接回断桥。"
+      },
+      {
+        "type": "warning",
+        "t": 72.008,
+        "wall": 73.942,
+        "id": 1003,
+        "kind": "blade",
+        "move": "challenge-bolt-windup"
+      },
+      {
+        "type": "jump",
+        "t": 72.125,
+        "wall": 74.058,
+        "air": false
+      },
+      {
+        "type": "hint",
+        "t": 72.192,
+        "wall": 74.125,
+        "text": "前方双路：上层 F 挑战试炼赢取一项法门，也可沿下路赶往山门。"
+      },
+      {
+        "type": "clone",
+        "t": 72.283,
+        "wall": 74.217,
+        "cost": 40
+      },
+      {
+        "type": "warning",
+        "t": 72.3,
+        "wall": 74.233,
+        "move": "air-seal",
+        "kind": "caster"
+      },
+      {
+        "type": "enemy-attack",
+        "t": 72.342,
+        "wall": 74.275,
+        "id": 400,
+        "kind": "blade",
+        "move": "challenge-bolt-windup"
+      },
+      {
+        "type": "clone-strike",
+        "t": 72.4,
+        "wall": 74.333
+      },
+      {
+        "type": "swing",
+        "t": 72.725,
+        "wall": 74.658,
+        "combo": 1
+      },
+      {
+        "type": "enemy-attack",
+        "t": 72.867,
+        "wall": 74.8,
+        "id": 1003,
+        "kind": "blade",
+        "move": "challenge-bolt-windup"
+      },
+      {
+        "type": "clone-strike",
+        "t": 72.925,
+        "wall": 74.858
+      },
+      {
+        "type": "swing",
+        "t": 73.017,
+        "wall": 74.95,
+        "combo": 2
+      },
+      {
+        "type": "hint",
+        "t": 73.108,
+        "wall": 75.042,
+        "text": "连刃第二斩更远。轻棍不推退蓄力，重棍可打断；先看刀光。"
+      },
+      {
+        "type": "enemy-attack",
+        "t": 73.258,
+        "wall": 75.192,
+        "move": "air-seal",
+        "kind": "caster"
+      },
+      {
+        "type": "swing",
+        "t": 73.333,
+        "wall": 75.267,
+        "combo": 3
+      },
+      {
+        "type": "clone-strike",
+        "t": 73.45,
+        "wall": 75.383
+      },
+      {
+        "type": "hit",
+        "t": 73.583,
+        "wall": 75.517,
+        "target": 400,
+        "kind": "blade",
+        "amount": 19,
+        "impact": "heavy",
+        "x": 3069.2333333333336,
+        "y": 418
+      },
+      {
+        "type": "stomp",
+        "t": 73.583,
+        "wall": 75.517,
+        "kind": "blade"
+      },
+      {
+        "type": "warning",
+        "t": 73.758,
+        "wall": 75.75,
+        "kind": "blade",
+        "id": 400,
+        "move": "pursuit"
+      },
+      {
+        "type": "swing",
+        "t": 73.858,
+        "wall": 75.85,
+        "combo": 1
+      },
+      {
+        "type": "warning",
+        "t": 73.917,
+        "wall": 75.908,
+        "kind": "shield",
+        "id": 401,
+        "move": "advance"
+      },
+      {
+        "type": "hit",
+        "t": 73.95,
+        "wall": 75.942,
+        "target": 1003,
+        "kind": "blade",
+        "amount": 14,
+        "impact": "light",
+        "x": 3225,
+        "y": 418
+      },
+      {
+        "type": "clone-strike",
+        "t": 73.975,
+        "wall": 75.992
+      },
+      {
+        "type": "swing",
+        "t": 74.15,
+        "wall": 76.167,
+        "combo": 2
+      },
+      {
+        "type": "hit",
+        "t": 74.225,
+        "wall": 76.242,
+        "target": 1003,
+        "kind": "blade",
+        "amount": 14,
+        "impact": "light",
+        "x": 3237,
+        "y": 418
+      },
+      {
+        "type": "warning",
+        "t": 74.283,
+        "wall": 76.325,
+        "kind": "blade",
+        "id": 1003,
+        "move": "windup",
+        "x": 3224,
+        "y": 400,
+        "face": -1
+      },
+      {
+        "type": "clone",
+        "t": 74.417,
+        "wall": 76.458,
+        "cost": 40
+      },
+      {
+        "type": "swing",
+        "t": 74.467,
+        "wall": 76.508,
+        "combo": 3
+      },
+      {
+        "type": "hit",
+        "t": 74.533,
+        "wall": 76.575,
+        "target": 1003,
+        "kind": "blade",
+        "amount": 12,
+        "impact": "light",
+        "x": 3237,
+        "y": 418
+      },
+      {
+        "type": "kill",
+        "t": 74.533,
+        "wall": 76.575,
+        "kind": "blade"
+      },
+      {
+        "type": "drop",
+        "t": 74.533,
+        "wall": 76.575,
+        "id": 1003,
+        "kind": "focus",
+        "x": 3229,
+        "y": 420
+      },
+      {
+        "type": "clone-strike",
+        "t": 74.533,
+        "wall": 76.575
+      },
+      {
+        "type": "jump",
+        "t": 74.575,
+        "wall": 76.642,
+        "air": false
+      },
+      {
+        "type": "pickup",
+        "t": 74.592,
+        "wall": 76.658,
+        "kind": "focus",
+        "amount": 20,
+        "sourceId": 1003
+      },
+      {
+        "type": "enemy-attack",
+        "t": 74.717,
+        "wall": 76.783,
+        "kind": "blade",
+        "id": 400,
+        "move": "pursuit"
+      },
+      {
+        "type": "clone-strike",
+        "t": 75.058,
+        "wall": 77.125
+      },
+      {
+        "type": "jump",
+        "t": 75.458,
+        "wall": 77.525,
+        "air": false
+      },
+      {
+        "type": "clone-strike",
+        "t": 75.583,
+        "wall": 77.65
+      },
+      {
+        "type": "warning",
+        "t": 75.833,
+        "wall": 77.9,
+        "kind": "shield",
+        "id": 401,
+        "move": "advance"
+      },
+      {
+        "type": "swing",
+        "t": 76.033,
+        "wall": 78.1,
+        "combo": 1
+      },
+      {
+        "type": "dash",
+        "t": 76.067,
+        "wall": 78.133
+      },
+      {
+        "type": "clone-strike",
+        "t": 76.108,
+        "wall": 78.175
+      },
+      {
+        "type": "swing",
+        "t": 76.25,
+        "wall": 78.317,
+        "combo": 2
+      },
+      {
+        "type": "swing",
+        "t": 76.567,
+        "wall": 78.633,
+        "combo": 3
+      },
+      {
+        "type": "warning",
+        "t": 76.7,
+        "wall": 78.767,
+        "kind": "caster",
+        "id": 402,
+        "move": "orb",
+        "aimX": 3832.933047923593,
+        "aimY": 414
+      },
+      {
+        "type": "swing",
+        "t": 77.092,
+        "wall": 79.158,
+        "combo": 1
+      },
+      {
+        "type": "jump",
+        "t": 77.192,
+        "wall": 79.258,
+        "air": false
+      },
+      {
+        "type": "swing",
+        "t": 77.817,
+        "wall": 79.883,
+        "combo": 2
+      },
+      {
+        "type": "warning",
+        "t": 77.825,
+        "wall": 79.892,
+        "kind": "shield",
+        "id": 1004,
+        "move": "advance"
+      },
+      {
+        "type": "jump",
+        "t": 78.425,
+        "wall": 80.492,
+        "air": false
+      },
+      {
+        "type": "hurt",
+        "t": 78.45,
+        "wall": 80.517,
+        "source": "莲焰飞弹",
+        "amount": 12
+      },
+      {
+        "type": "warning",
+        "t": 78.842,
+        "wall": 80.908,
+        "id": 403,
+        "kind": "blade",
+        "move": "challenge-bolt-windup"
+      },
+      {
+        "type": "swing",
+        "t": 79.017,
+        "wall": 81.083,
+        "combo": 1
+      },
+      {
+        "type": "dash",
+        "t": 79.042,
+        "wall": 81.108
+      },
+      {
+        "type": "hint",
+        "t": 79.125,
+        "wall": 81.192,
+        "text": "怪物倒下会留下补给；资源满时不会收走，可回头再取。"
+      },
+      {
+        "type": "warning",
+        "t": 79.167,
+        "wall": 81.233,
+        "id": 402,
+        "kind": "caster",
+        "move": "challenge-mark-windup"
+      },
+      {
+        "type": "swing",
+        "t": 79.225,
+        "wall": 81.292,
+        "combo": 2
+      },
+      {
+        "type": "clone",
+        "t": 79.392,
+        "wall": 81.458,
+        "cost": 40
+      },
+      {
+        "type": "hurt",
+        "t": 79.492,
+        "wall": 81.558,
+        "source": "坠入云渊",
+        "amount": 18
+      },
+      {
+        "type": "warning",
+        "t": 79.492,
+        "wall": 81.558,
+        "kind": "shield",
+        "id": 401,
+        "move": "advance"
+      },
+      {
+        "type": "swing",
+        "t": 79.5,
+        "wall": 81.567,
+        "combo": 3
+      },
+      {
+        "type": "clone-strike",
+        "t": 79.508,
+        "wall": 81.575
+      },
+      {
+        "type": "enemy-attack",
+        "t": 79.7,
+        "wall": 81.767,
+        "id": 403,
+        "kind": "blade",
+        "move": "challenge-bolt-windup"
+      },
+      {
+        "type": "swing",
+        "t": 80.025,
+        "wall": 82.092,
+        "combo": 1
+      },
+      {
+        "type": "clone-strike",
+        "t": 80.033,
+        "wall": 82.1
+      },
+      {
+        "type": "jump",
+        "t": 80.125,
+        "wall": 82.192,
+        "air": false
+      },
+      {
+        "type": "warning",
+        "t": 80.125,
+        "wall": 82.192,
+        "id": 402,
+        "kind": "caster",
+        "move": "challenge-echo-windup"
+      },
+      {
+        "type": "enemy-attack",
+        "t": 80.125,
+        "wall": 82.192,
+        "id": 402,
+        "kind": "caster",
+        "move": "challenge-mark-windup"
+      },
+      {
+        "type": "clone-strike",
+        "t": 80.558,
+        "wall": 82.625
+      },
+      {
+        "type": "swing",
+        "t": 80.7,
+        "wall": 82.767,
+        "combo": 2
+      },
+      {
+        "type": "dash",
+        "t": 80.725,
+        "wall": 82.792
+      },
+      {
+        "type": "enemy-attack",
+        "t": 80.883,
+        "wall": 82.95,
+        "id": 402,
+        "kind": "caster",
+        "move": "challenge-echo-windup"
+      },
+      {
+        "type": "swing",
+        "t": 80.908,
+        "wall": 82.975,
+        "combo": 3
+      },
+      {
+        "type": "clone-strike",
+        "t": 81.083,
+        "wall": 83.15
+      },
+      {
+        "type": "swing",
+        "t": 81.433,
+        "wall": 83.5,
+        "combo": 1
+      },
+      {
+        "type": "hurt",
+        "t": 81.483,
+        "wall": 83.55,
+        "source": "坠入云渊",
+        "amount": 18
+      },
+      {
+        "type": "warning",
+        "t": 81.483,
+        "wall": 83.55,
+        "kind": "shield",
+        "id": 401,
+        "move": "rush-windup",
+        "x": 3620.4166666666474,
+        "y": 400,
+        "face": 1
+      },
+      {
+        "type": "swing",
+        "t": 81.492,
+        "wall": 83.558,
+        "combo": 2
+      },
+      {
+        "type": "swing",
+        "t": 81.808,
+        "wall": 83.875,
+        "combo": 3
+      },
+      {
+        "type": "jump",
+        "t": 81.958,
+        "wall": 84.025,
+        "air": false
+      },
+      {
+        "type": "enemy-attack",
+        "t": 82.342,
+        "wall": 84.408,
+        "kind": "shield",
+        "id": 401,
+        "move": "rush"
+      },
+      {
+        "type": "warning",
+        "t": 82.45,
+        "wall": 84.517,
+        "kind": "shield",
+        "id": 1004,
+        "move": "advance"
+      },
+      {
+        "type": "warning",
+        "t": 82.592,
+        "wall": 84.658,
+        "kind": "caster",
+        "id": 402,
+        "move": "cross"
+      },
+      {
+        "type": "swing",
+        "t": 82.667,
+        "wall": 84.733,
+        "combo": 1
+      },
+      {
+        "type": "dash",
+        "t": 82.692,
+        "wall": 84.758
+      },
+      {
+        "type": "swing",
+        "t": 83.042,
+        "wall": 85.108,
+        "combo": 2
+      },
+      {
+        "type": "swing",
+        "t": 83.358,
+        "wall": 85.425,
+        "combo": 3
+      },
+      {
+        "type": "hurt",
+        "t": 83.375,
+        "wall": 85.442,
+        "source": "坠入云渊",
+        "amount": 18
+      },
+      {
+        "type": "swing",
+        "t": 83.383,
+        "wall": 85.45,
+        "combo": 1
+      },
+      {
+        "type": "enemy-attack",
+        "t": 83.75,
+        "wall": 85.817,
+        "kind": "caster",
+        "id": 402,
+        "move": "cross"
+      },
+      {
+        "type": "dash",
+        "t": 83.867,
+        "wall": 85.933
+      },
+      {
+        "type": "hit",
+        "t": 83.892,
+        "wall": 85.958,
+        "target": 401,
+        "kind": "shield",
+        "amount": 18,
+        "impact": "heavy",
+        "x": 3751.0166666666473,
+        "y": 418
+      },
+      {
+        "type": "swing",
+        "t": 84.05,
+        "wall": 86.175,
+        "combo": 2
+      },
+      {
+        "type": "warning",
+        "t": 84.075,
+        "wall": 86.2,
+        "id": 401,
+        "kind": "shield",
+        "move": "challenge-quake-windup"
+      },
+      {
+        "type": "hit",
+        "t": 84.125,
+        "wall": 86.25,
+        "target": 401,
+        "kind": "shield",
+        "amount": 14,
+        "impact": "light",
+        "x": 3751.94999999998,
+        "y": 418
+      },
+      {
+        "type": "swing",
+        "t": 84.367,
+        "wall": 86.517,
+        "combo": 3
+      },
+      {
+        "type": "interrupt",
+        "t": 84.492,
+        "wall": 86.642,
+        "target": 401
+      },
+      {
+        "type": "hit",
+        "t": 84.492,
+        "wall": 86.642,
+        "target": 401,
+        "kind": "shield",
+        "amount": 27,
+        "impact": "heavy",
+        "x": 3763.94999999998,
+        "y": 418
+      },
+      {
+        "type": "swing",
+        "t": 84.892,
+        "wall": 87.1,
+        "combo": 1
+      },
+      {
+        "type": "hit",
+        "t": 84.942,
+        "wall": 87.15,
+        "target": 401,
+        "kind": "shield",
+        "amount": 14,
+        "impact": "light",
+        "x": 3775.94999999998,
+        "y": 418
+      },
+      {
+        "type": "kill",
+        "t": 84.942,
+        "wall": 87.15,
+        "kind": "shield"
+      },
+      {
+        "type": "drop",
+        "t": 84.942,
+        "wall": 87.15,
+        "id": 401,
+        "kind": "focus",
+        "x": 3767.94999999998,
+        "y": 420
+      },
+      {
+        "type": "pickup",
+        "t": 85.108,
+        "wall": 87.342,
+        "kind": "focus",
+        "amount": 20,
+        "sourceId": 401
+      },
+      {
+        "type": "swing",
+        "t": 85.183,
+        "wall": 87.417,
+        "combo": 2
+      },
+      {
+        "type": "swing",
+        "t": 85.5,
+        "wall": 87.733,
+        "combo": 3
+      },
+      {
+        "type": "warning",
+        "t": 85.567,
+        "wall": 87.8,
+        "kind": "caster",
+        "id": 402,
+        "move": "orb",
+        "aimX": 3833.202190176289,
+        "aimY": 414
+      },
+      {
+        "type": "warning",
+        "t": 86.042,
+        "wall": 88.275,
+        "kind": "shield",
+        "id": 1004,
+        "move": "advance"
+      },
+      {
+        "type": "jump",
+        "t": 86.05,
+        "wall": 88.283,
+        "air": false
+      },
+      {
+        "type": "swing",
+        "t": 86.625,
+        "wall": 88.858,
+        "combo": 1
+      },
+      {
+        "type": "dash",
+        "t": 86.658,
+        "wall": 88.892
+      },
+      {
+        "type": "swing",
+        "t": 86.983,
+        "wall": 89.217,
+        "combo": 2
+      },
+      {
+        "type": "warning",
+        "t": 86.992,
+        "wall": 89.225,
+        "id": 403,
+        "kind": "blade",
+        "move": "challenge-bolt-windup"
+      },
+      {
+        "type": "hurt",
+        "t": 87.042,
+        "wall": 89.275,
+        "source": "莲焰飞弹",
+        "amount": 12
+      },
+      {
+        "type": "swing",
+        "t": 87.05,
+        "wall": 89.283,
+        "combo": 3
+      },
+      {
+        "type": "hit",
+        "t": 87.208,
+        "wall": 89.442,
+        "target": 1004,
+        "kind": "shield",
+        "amount": 27,
+        "impact": "heavy",
+        "x": 4319,
+        "y": 418
+      },
+      {
+        "type": "swing",
+        "t": 87.575,
+        "wall": 89.867,
+        "combo": 1
+      },
+      {
+        "type": "blocked",
+        "t": 87.625,
+        "wall": 89.917,
+        "target": 1004
+      },
+      {
+        "type": "warning",
+        "t": 87.775,
+        "wall": 90.067,
+        "id": 1004,
+        "kind": "shield",
+        "move": "challenge-quake-windup"
+      },
+      {
+        "type": "enemy-attack",
+        "t": 87.85,
+        "wall": 90.142,
+        "id": 403,
+        "kind": "blade",
+        "move": "challenge-bolt-windup"
+      },
+      {
+        "type": "swing",
+        "t": 87.867,
+        "wall": 90.158,
+        "combo": 2
+      },
+      {
+        "type": "clone",
+        "t": 87.892,
+        "wall": 90.183,
+        "cost": 40
+      },
+      {
+        "type": "dash",
+        "t": 87.917,
+        "wall": 90.208
+      },
+      {
+        "type": "interrupt",
+        "t": 87.917,
+        "wall": 90.208,
+        "target": 1004
+      },
+      {
+        "type": "hit",
+        "t": 87.917,
+        "wall": 90.208,
+        "target": 1004,
+        "kind": "shield",
+        "amount": 18,
+        "impact": "heavy",
+        "x": 4331,
+        "y": 418
+      },
+      {
+        "type": "ultimate-ready",
+        "t": 87.917,
+        "wall": 90.208
+      },
+      {
+        "type": "ultimate",
+        "t": 88.008,
+        "wall": 90.358
+      },
+      {
+        "type": "hit",
+        "t": 88.008,
+        "wall": 90.358,
+        "target": 1004,
+        "kind": "shield",
+        "amount": 12,
+        "impact": "light",
+        "x": 4343,
+        "y": 418
+      },
+      {
+        "type": "clone-strike",
+        "t": 88.008,
+        "wall": 90.358
+      },
+      {
+        "type": "warning",
+        "t": 88.033,
+        "wall": 90.408,
+        "id": 402,
+        "kind": "caster",
+        "move": "challenge-mark-windup"
+      },
+      {
+        "type": "interrupt",
+        "t": 88.208,
+        "wall": 90.583,
+        "target": 402
+      },
+      {
+        "type": "hit",
+        "t": 88.208,
+        "wall": 90.583,
+        "target": 402,
+        "kind": "caster",
+        "amount": 64,
+        "impact": "ultimate",
+        "x": 4445,
+        "y": 346.36013106432404
+      },
+      {
+        "type": "kill",
+        "t": 88.208,
+        "wall": 90.583,
+        "kind": "caster"
+      },
+      {
+        "type": "drop",
+        "t": 88.208,
+        "wall": 90.583,
+        "id": 402,
+        "kind": "focus",
+        "x": 4437,
+        "y": 420
+      },
+      {
+        "type": "hit",
+        "t": 88.208,
+        "wall": 90.583,
+        "target": 1004,
+        "kind": "shield",
+        "amount": 64,
+        "impact": "ultimate",
+        "x": 4331,
+        "y": 418
+      },
+      {
+        "type": "kill",
+        "t": 88.208,
+        "wall": 90.583,
+        "kind": "shield"
+      },
+      {
+        "type": "drop",
+        "t": 88.208,
+        "wall": 90.583,
+        "id": 1004,
+        "kind": "heal",
+        "x": 4323,
+        "y": 420
+      },
+      {
+        "type": "ultimate-hit",
+        "t": 88.208,
+        "wall": 90.583,
+        "pulse": 1,
+        "box": {
+          "x": 4312,
+          "y": 331,
+          "w": 355,
+          "h": 130
+        }
+      },
+      {
+        "type": "clone-strike",
+        "t": 88.533,
+        "wall": 90.967
+      },
+      {
+        "type": "swing",
+        "t": 88.875,
+        "wall": 91.308,
+        "combo": 1
+      },
+      {
+        "type": "clone-strike",
+        "t": 89.058,
+        "wall": 91.492
+      },
+      {
+        "type": "swing",
+        "t": 89.167,
+        "wall": 91.6,
+        "combo": 2
+      },
+      {
+        "type": "swing",
+        "t": 89.483,
+        "wall": 91.917,
+        "combo": 3
+      },
+      {
+        "type": "clone-strike",
+        "t": 89.583,
+        "wall": 92.017
+      },
+      {
+        "type": "warning",
+        "t": 89.933,
+        "wall": 92.367,
+        "kind": "blade",
+        "id": 403,
+        "move": "windup",
+        "x": 4649.491666666675,
+        "y": 400,
+        "face": -1
+      },
+      {
+        "type": "swing",
+        "t": 90.008,
+        "wall": 92.442,
+        "combo": 1
+      },
+      {
+        "type": "jump",
+        "t": 90.133,
+        "wall": 92.567,
+        "air": false
+      },
+      {
+        "type": "clone",
+        "t": 90.15,
+        "wall": 92.583,
+        "cost": 40
+      },
+      {
+        "type": "ability-note",
+        "t": 90.183,
+        "wall": 92.617,
+        "text": "归灯调息 · 生命+24、定力+20。此灯只可借一次。"
+      },
+      {
+        "type": "warning",
+        "t": 90.242,
+        "wall": 92.675,
+        "kind": "shield",
+        "id": 6,
+        "move": "advance"
+      },
+      {
+        "type": "clone-strike",
+        "t": 90.267,
+        "wall": 92.7
+      },
+      {
+        "type": "enemy-attack",
+        "t": 90.458,
+        "wall": 92.892,
+        "kind": "blade",
+        "id": 403,
+        "box": {
+          "x": 4603.491666666675,
+          "y": 406,
+          "w": 60,
+          "h": 32
+        }
+      },
+      {
+        "type": "warning",
+        "t": 90.642,
+        "wall": 93.075,
+        "kind": "blade",
+        "id": 403,
+        "move": "second-slash"
+      },
+      {
+        "type": "swing",
+        "t": 90.717,
+        "wall": 93.15,
+        "combo": 2
+      },
+      {
+        "type": "clone-strike",
+        "t": 90.792,
+        "wall": 93.225
+      },
+      {
+        "type": "swing",
+        "t": 91.033,
+        "wall": 93.467,
+        "combo": 3
+      },
+      {
+        "type": "enemy-attack",
+        "t": 91.125,
+        "wall": 93.558,
+        "kind": "blade",
+        "id": 403,
+        "box": {
+          "x": 4569.491666666675,
+          "y": 406,
+          "w": 94,
+          "h": 32
+        }
+      },
+      {
+        "type": "clone-strike",
+        "t": 91.317,
+        "wall": 93.75
+      },
+      {
+        "type": "warning",
+        "t": 91.5,
+        "wall": 93.933,
+        "kind": "caster",
+        "id": 7,
+        "move": "orb",
+        "aimX": 4802.186293774558,
+        "aimY": 324
+      },
+      {
+        "type": "swing",
+        "t": 91.558,
+        "wall": 93.992,
+        "combo": 1
+      },
+      {
+        "type": "dash",
+        "t": 91.7,
+        "wall": 94.133
+      },
+      {
+        "type": "warning",
+        "t": 91.792,
+        "wall": 94.225,
+        "kind": "caster",
+        "id": 1005,
+        "move": "orb",
+        "aimX": 4899.999607849242,
+        "aimY": 324
+      },
+      {
+        "type": "clone-strike",
+        "t": 91.842,
+        "wall": 94.275
+      },
+      {
+        "type": "swing",
+        "t": 92.008,
+        "wall": 94.442,
+        "combo": 2
+      },
+      {
+        "type": "drop",
+        "t": 92.217,
+        "wall": 94.65
+      },
+      {
+        "type": "slam",
+        "t": 92.325,
+        "wall": 94.758
+      },
+      {
+        "type": "story",
+        "t": 92.367,
+        "wall": 94.8,
+        "id": "bridge",
+        "part": "done",
+        "title": "渡口灯明",
+        "text": "你将定力注入灯枢，三段残桥重新亮起。对岸传来应答的钟声。"
+      },
+      {
+        "type": "hurt",
+        "t": 92.4,
+        "wall": 94.833,
+        "source": "黑莲地刺",
+        "amount": 14
+      },
+      {
+        "type": "swing",
+        "t": 92.408,
+        "wall": 94.842,
+        "combo": 3
+      },
+      {
+        "type": "warning",
+        "t": 92.758,
+        "wall": 95.192,
+        "id": 6,
+        "kind": "shield",
+        "move": "challenge-quake-windup"
+      },
+      {
+        "type": "clone",
+        "t": 92.85,
+        "wall": 95.283,
+        "cost": 40
+      },
+      {
+        "type": "swing",
+        "t": 92.933,
+        "wall": 95.367,
+        "combo": 1
+      },
+      {
+        "type": "clone-strike",
+        "t": 92.967,
+        "wall": 95.4
+      },
+      {
+        "type": "dash",
+        "t": 93.017,
+        "wall": 95.45
+      },
+      {
+        "type": "swing",
+        "t": 93.2,
+        "wall": 95.633,
+        "combo": 2
+      },
+      {
+        "type": "jump",
+        "t": 93.45,
+        "wall": 95.883,
+        "air": false
+      },
+      {
+        "type": "clone-strike",
+        "t": 93.492,
+        "wall": 95.925
+      },
+      {
+        "type": "hurt",
+        "t": 93.508,
+        "wall": 95.942,
+        "source": "莲焰飞弹",
+        "amount": 12
+      },
+      {
+        "type": "swing",
+        "t": 93.517,
+        "wall": 95.95,
+        "combo": 3
+      },
+      {
+        "type": "hit",
+        "t": 93.642,
+        "wall": 96.075,
+        "target": 7,
+        "kind": "caster",
+        "amount": 27,
+        "impact": "heavy",
+        "x": 5415,
+        "y": 343.04004148392664
+      },
+      {
+        "type": "enemy-attack",
+        "t": 93.717,
+        "wall": 96.208,
+        "id": 6,
+        "kind": "shield",
+        "move": "challenge-quake-windup"
+      },
+      {
+        "type": "warning",
+        "t": 93.967,
+        "wall": 96.458,
+        "id": 7,
+        "kind": "caster",
+        "move": "challenge-mark-windup"
+      },
+      {
+        "type": "clone-strike",
+        "t": 94.017,
+        "wall": 96.508
+      },
+      {
+        "type": "swing",
+        "t": 94.042,
+        "wall": 96.533,
+        "combo": 1
+      },
+      {
+        "type": "warning",
+        "t": 94.075,
+        "wall": 96.567,
+        "id": 8,
+        "kind": "blade",
+        "move": "challenge-bolt-windup"
+      },
+      {
+        "type": "hit",
+        "t": 94.1,
+        "wall": 96.592,
+        "target": 1005,
+        "kind": "caster",
+        "amount": 14,
+        "impact": "light",
+        "x": 5511,
+        "y": 415.6697592584442
+      },
+      {
+        "type": "swing",
+        "t": 94.333,
+        "wall": 96.85,
+        "combo": 2
+      },
+      {
+        "type": "hit",
+        "t": 94.408,
+        "wall": 96.925,
+        "target": 1005,
+        "kind": "caster",
+        "amount": 14,
+        "impact": "light",
+        "x": 5523,
+        "y": 417.9791666378758
+      },
+      {
+        "type": "clone-strike",
+        "t": 94.542,
+        "wall": 97.083
+      },
+      {
+        "type": "warning",
+        "t": 94.558,
+        "wall": 97.1,
+        "kind": "caster",
+        "id": 1005,
+        "move": "orb",
+        "aimX": 5494.177301421658,
+        "aimY": 414
+      },
+      {
+        "type": "swing",
+        "t": 94.65,
+        "wall": 97.192,
+        "combo": 3
+      },
+      {
+        "type": "interrupt",
+        "t": 94.775,
+        "wall": 97.317,
+        "target": 1005
+      },
+      {
+        "type": "hit",
+        "t": 94.775,
+        "wall": 97.317,
+        "target": 1005,
+        "kind": "caster",
+        "amount": 27,
+        "impact": "heavy",
+        "x": 5511,
+        "y": 420.66188495455054
+      },
+      {
+        "type": "kill",
+        "t": 94.775,
+        "wall": 97.317,
+        "kind": "caster"
+      },
+      {
+        "type": "drop",
+        "t": 94.775,
+        "wall": 97.317,
+        "id": 1005,
+        "kind": "heal",
+        "x": 5503,
+        "y": 420
+      },
+      {
+        "type": "jump",
+        "t": 94.825,
+        "wall": 97.425,
+        "air": false
+      },
+      {
+        "type": "clone",
+        "t": 94.858,
+        "wall": 97.458,
+        "cost": 40
+      },
+      {
+        "type": "warning",
+        "t": 94.925,
+        "wall": 97.525,
+        "id": 7,
+        "kind": "caster",
+        "move": "challenge-echo-windup"
+      },
+      {
+        "type": "enemy-attack",
+        "t": 94.925,
+        "wall": 97.525,
+        "id": 7,
+        "kind": "caster",
+        "move": "challenge-mark-windup"
+      },
+      {
+        "type": "enemy-attack",
+        "t": 94.933,
+        "wall": 97.533,
+        "id": 8,
+        "kind": "blade",
+        "move": "challenge-bolt-windup"
+      },
+      {
+        "type": "clone-strike",
+        "t": 94.975,
+        "wall": 97.575
+      },
+      {
+        "type": "warning",
+        "t": 95.408,
+        "wall": 98.008,
+        "id": 1006,
+        "kind": "blade",
+        "move": "challenge-bolt-windup"
+      },
+      {
+        "type": "clone-strike",
+        "t": 95.5,
+        "wall": 98.1
+      },
+      {
+        "type": "swing",
+        "t": 95.558,
+        "wall": 98.158,
+        "combo": 1
+      },
+      {
+        "type": "warning",
+        "t": 95.633,
+        "wall": 98.233,
+        "kind": "caster",
+        "id": 9,
+        "move": "orb",
+        "aimX": 5721.1698578975465,
+        "aimY": 324
+      },
+      {
+        "type": "enemy-attack",
+        "t": 95.683,
+        "wall": 98.283,
+        "id": 7,
+        "kind": "caster",
+        "move": "challenge-echo-windup"
+      },
+      {
+        "type": "swing",
+        "t": 95.85,
+        "wall": 98.45,
+        "combo": 2
+      },
+      {
+        "type": "clone-strike",
+        "t": 96.025,
+        "wall": 98.625
+      },
+      {
+        "type": "swing",
+        "t": 96.167,
+        "wall": 98.767,
+        "combo": 3
+      },
+      {
+        "type": "enemy-attack",
+        "t": 96.267,
+        "wall": 98.867,
+        "id": 1006,
+        "kind": "blade",
+        "move": "challenge-bolt-windup"
+      },
+      {
+        "type": "hit",
+        "t": 96.292,
+        "wall": 98.892,
+        "target": 8,
+        "kind": "blade",
+        "amount": 27,
+        "impact": "heavy",
+        "x": 5904,
+        "y": 418
+      },
+      {
+        "type": "warning",
+        "t": 96.35,
+        "wall": 99.008,
+        "kind": "blade",
+        "id": 8,
+        "move": "pursuit"
+      },
+      {
+        "type": "clone-strike",
+        "t": 96.55,
+        "wall": 99.208
+      },
+      {
+        "type": "swing",
+        "t": 96.692,
+        "wall": 99.35,
+        "combo": 1
+      },
+      {
+        "type": "hit",
+        "t": 96.742,
+        "wall": 99.4,
+        "target": 8,
+        "kind": "blade",
+        "amount": 14,
+        "impact": "light",
+        "x": 5904,
+        "y": 418
+      },
+      {
+        "type": "kill",
+        "t": 96.742,
+        "wall": 99.4,
+        "kind": "blade"
+      },
+      {
+        "type": "drop",
+        "t": 96.742,
+        "wall": 99.4,
+        "id": 8,
+        "kind": "focus",
+        "x": 5896,
+        "y": 420
+      },
+      {
+        "type": "pickup",
+        "t": 96.808,
+        "wall": 99.492,
+        "kind": "focus",
+        "amount": 20,
+        "sourceId": 8
+      },
+      {
+        "type": "swing",
+        "t": 96.983,
+        "wall": 99.667,
+        "combo": 2
+      },
+      {
+        "type": "jump",
+        "t": 97.075,
+        "wall": 99.758,
+        "air": false
+      },
+      {
+        "type": "warning",
+        "t": 97.392,
+        "wall": 100.075,
+        "kind": "caster",
+        "id": 7,
+        "move": "sigil",
+        "aimX": 5995.50325538913,
+        "aimY": 350
+      },
+      {
+        "type": "hurt",
+        "t": 97.567,
+        "wall": 100.25,
+        "source": "莲焰飞弹",
+        "amount": 12
+      },
+      {
+        "type": "death",
+        "t": 97.567,
+        "wall": 100.25,
+        "source": "莲焰飞弹"
+      }
+    ]
+  },
+  "inputBoundaries": "evidence/challenge-v7/final-wukong/file-input-boundaries-1793070514873.json",
+  "video": "evidence/challenge-v7/final-wukong/video/page@9bf9a7fedf1e523811598f48eead2baa.webm"
+}

@@ -1,0 +1,1534 @@
+{
+  "version": "4.0.0",
+  "sha256": "03ae24837d0a6d7f1e1133ed8fd402491ff25e4cfaaf2c14e74ae12c4f678064",
+  "kind": "file",
+  "jumpKey": "Space",
+  "buildPreference": "mystic",
+  "checks": [
+    {
+      "name": "preview server stopped",
+      "pass": true
+    },
+    {
+      "name": "new run starts through prologue and relic choice",
+      "pass": true
+    },
+    {
+      "name": "pause gates world input",
+      "pass": true
+    },
+    {
+      "name": "v4 JSON imports paused",
+      "pass": true
+    },
+    {
+      "name": "victory reaches epilogue",
+      "pass": true
+    },
+    {
+      "name": "epilogue returns to complete results",
+      "pass": true
+    },
+    {
+      "name": "complete real-input journey",
+      "pass": true
+    },
+    {
+      "name": "all three midpoint opportunities visited",
+      "pass": true
+    },
+    {
+      "name": "all stages visited",
+      "pass": true
+    },
+    {
+      "name": "three independent guardians defeated",
+      "pass": true
+    },
+    {
+      "name": "ultimate used in real-input journey",
+      "pass": true
+    },
+    {
+      "name": "three optional world consequences completed",
+      "pass": true
+    },
+    {
+      "name": "no runtime exceptions",
+      "pass": true
+    },
+    {
+      "name": "frame interval p95 under 25ms",
+      "pass": true
+    },
+    {
+      "name": "event to render submission p95 under 50ms",
+      "pass": true
+    },
+    {
+      "name": "zero HTTP(S) requests",
+      "pass": true
+    }
+  ],
+  "samples": [
+    {
+      "time": 0.3833333333333337,
+      "wall": 0.3833333333333337,
+      "stage": 0,
+      "x": 90,
+      "y": 396,
+      "hp": 100,
+      "focus": 65,
+      "seals": [
+        56,
+        56
+      ],
+      "boss": null,
+      "rage": 25,
+      "growth": {}
+    },
+    {
+      "time": 1.933333333333329,
+      "wall": 1.933333333333329,
+      "stage": 0,
+      "x": 270,
+      "y": 396,
+      "hp": 100,
+      "focus": 65,
+      "seals": [
+        56,
+        56
+      ],
+      "boss": null,
+      "rage": 25,
+      "growth": {}
+    },
+    {
+      "time": 3.1749999999999914,
+      "wall": 3.249999999999991,
+      "stage": 0,
+      "x": 529,
+      "y": 396,
+      "hp": 100,
+      "focus": 71,
+      "seals": [
+        56,
+        56
+      ],
+      "boss": null,
+      "rage": 49,
+      "growth": {}
+    },
+    {
+      "time": 4.42500000000001,
+      "wall": 4.500000000000013,
+      "stage": 0,
+      "x": 719,
+      "y": 396,
+      "hp": 100,
+      "focus": 71,
+      "seals": [
+        56,
+        56
+      ],
+      "boss": null,
+      "rage": 49,
+      "growth": {}
+    },
+    {
+      "time": 5.733333333333408,
+      "wall": 5.808333333333412,
+      "stage": 0,
+      "x": 1096,
+      "y": 396,
+      "hp": 100,
+      "focus": 71,
+      "seals": [
+        56,
+        56
+      ],
+      "boss": null,
+      "rage": 49,
+      "growth": {}
+    },
+    {
+      "time": 7.075000000000141,
+      "wall": 7.150000000000145,
+      "stage": 0,
+      "x": 1448,
+      "y": 345,
+      "hp": 88,
+      "focus": 71,
+      "seals": [
+        56,
+        56
+      ],
+      "boss": null,
+      "rage": 49,
+      "growth": {}
+    },
+    {
+      "time": 8.566666666666821,
+      "wall": 8.641666666666817,
+      "stage": 0,
+      "x": 1462,
+      "y": 321,
+      "hp": 76,
+      "focus": 67,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 69,
+      "growth": {
+        "clone-burst": 1
+      }
+    },
+    {
+      "time": 9.87500000000008,
+      "wall": 10.008333333333406,
+      "stage": 0,
+      "x": 1720,
+      "y": 396,
+      "hp": 76,
+      "focus": 79,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 83,
+      "growth": {
+        "clone-burst": 1
+      }
+    },
+    {
+      "time": 11.241666666666669,
+      "wall": 11.374999999999995,
+      "stage": 0,
+      "x": 1976,
+      "y": 396,
+      "hp": 76,
+      "focus": 79,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 83,
+      "growth": {
+        "clone-burst": 1
+      }
+    },
+    {
+      "time": 12.983333333333237,
+      "wall": 13.191666666666558,
+      "stage": 0,
+      "x": 2290,
+      "y": 396,
+      "hp": 76,
+      "focus": 85,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 0,
+      "growth": {
+        "clone-burst": 1
+      }
+    },
+    {
+      "time": 14.416666666666488,
+      "wall": 14.68333333333314,
+      "stage": 0,
+      "x": 2300,
+      "y": 326,
+      "hp": 76,
+      "focus": 100,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 0,
+      "growth": {
+        "clone-burst": 1
+      }
+    },
+    {
+      "time": 15.824999999999742,
+      "wall": 16.199999999999722,
+      "stage": 0,
+      "x": 2245,
+      "y": 396,
+      "hp": 76,
+      "focus": 100,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 30,
+      "growth": {
+        "clone-burst": 1
+      }
+    },
+    {
+      "time": 18.11666666666628,
+      "wall": 18.516666666666257,
+      "stage": 0,
+      "x": 2422,
+      "y": 396,
+      "hp": 94,
+      "focus": 60,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 38,
+      "growth": {
+        "clone-burst": 1
+      }
+    },
+    {
+      "time": 20.116666666666166,
+      "wall": 20.62499999999947,
+      "stage": 0,
+      "x": 2846,
+      "y": 223,
+      "hp": 94,
+      "focus": 100,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 68,
+      "growth": {
+        "clone-burst": 1
+      }
+    },
+    {
+      "time": 22.10833333333272,
+      "wall": 22.616666666666024,
+      "stage": 0,
+      "x": 3183,
+      "y": 396,
+      "hp": 94,
+      "focus": 60,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 68,
+      "growth": {
+        "clone-burst": 1
+      }
+    },
+    {
+      "time": 24.2333333333326,
+      "wall": 24.741666666665903,
+      "stage": 0,
+      "x": 3522,
+      "y": 288,
+      "hp": 94,
+      "focus": 29,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 68,
+      "growth": {
+        "clone-burst": 1
+      }
+    },
+    {
+      "time": 26.208333333332487,
+      "wall": 26.824999999999118,
+      "stage": 0,
+      "x": 4001,
+      "y": 396,
+      "hp": 94,
+      "focus": 68,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 98,
+      "growth": {
+        "clone-burst": 1
+      }
+    },
+    {
+      "time": 28.46666666666569,
+      "wall": 29.174999999998985,
+      "stage": 0,
+      "x": 4286,
+      "y": 396,
+      "hp": 94,
+      "focus": 100,
+      "seals": [
+        0,
+        42
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "clone-burst": 1
+      }
+    },
+    {
+      "time": 30.816666666665558,
+      "wall": 31.566666666665515,
+      "stage": 0,
+      "x": 4370,
+      "y": 396,
+      "hp": 94,
+      "focus": 100,
+      "seals": [
+        0,
+        0
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "clone-burst": 1
+      }
+    },
+    {
+      "time": 32.833333333332114,
+      "wall": 33.6416666666654,
+      "stage": 0,
+      "x": 4624,
+      "y": 396,
+      "hp": 94,
+      "focus": 72,
+      "seals": [
+        0,
+        0
+      ],
+      "boss": 116,
+      "guardian": "mountain",
+      "rage": 0,
+      "growth": {
+        "clone-burst": 1
+      }
+    },
+    {
+      "time": 34.791666666665336,
+      "wall": 35.59999999999862,
+      "stage": 0,
+      "x": 4939,
+      "y": 361,
+      "hp": 94,
+      "focus": 32,
+      "seals": [
+        0,
+        0
+      ],
+      "boss": 116,
+      "guardian": "mountain",
+      "rage": 0,
+      "growth": {
+        "clone-burst": 1
+      }
+    },
+    {
+      "time": 36.741666666665225,
+      "wall": 37.60833333333184,
+      "stage": 0,
+      "x": 4683,
+      "y": 396,
+      "hp": 94,
+      "focus": 4,
+      "seals": [
+        0,
+        0
+      ],
+      "boss": 92,
+      "guardian": "mountain",
+      "rage": 14,
+      "growth": {
+        "clone-burst": 1
+      }
+    },
+    {
+      "time": 38.9666666666651,
+      "wall": 39.99166666666504,
+      "stage": 0,
+      "x": 4462,
+      "y": 306,
+      "hp": 94,
+      "focus": 24,
+      "seals": [
+        0,
+        0
+      ],
+      "boss": 13,
+      "guardian": "mountain",
+      "rage": 60,
+      "growth": {
+        "clone-burst": 1
+      }
+    },
+    {
+      "time": 41.083333333331645,
+      "wall": 42.166666666664916,
+      "stage": 0,
+      "x": 4804,
+      "y": 396,
+      "hp": 100,
+      "focus": 46,
+      "seals": [
+        0,
+        0
+      ],
+      "boss": null,
+      "rage": 92,
+      "growth": {
+        "clone-burst": 1
+      }
+    },
+    {
+      "time": 43.84166666666482,
+      "wall": 44.92499999999809,
+      "stage": 1,
+      "x": 163,
+      "y": 396,
+      "hp": 120,
+      "focus": 66,
+      "seals": [
+        56,
+        56
+      ],
+      "boss": null,
+      "rage": 92,
+      "growth": {
+        "clone-burst": 1,
+        "vitality": 1
+      }
+    },
+    {
+      "time": 45.74166666666471,
+      "wall": 46.87499999999798,
+      "stage": 1,
+      "x": 537,
+      "y": 396,
+      "hp": 120,
+      "focus": 50,
+      "seals": [
+        56,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "clone-burst": 1,
+        "vitality": 1
+      }
+    },
+    {
+      "time": 47.57499999999794,
+      "wall": 48.79166666666454,
+      "stage": 1,
+      "x": 821,
+      "y": 306,
+      "hp": 108,
+      "focus": 84,
+      "seals": [
+        56,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "clone-burst": 1,
+        "vitality": 1
+      }
+    },
+    {
+      "time": 49.5166666666645,
+      "wall": 50.758333333331095,
+      "stage": 1,
+      "x": 1160,
+      "y": 289,
+      "hp": 108,
+      "focus": 56,
+      "seals": [
+        56,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "clone-burst": 1,
+        "vitality": 1
+      }
+    },
+    {
+      "time": 51.59166666666438,
+      "wall": 52.83333333333098,
+      "stage": 1,
+      "x": 1582,
+      "y": 293,
+      "hp": 108,
+      "focus": 31,
+      "seals": [
+        56,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "clone-burst": 1,
+        "vitality": 1
+      }
+    },
+    {
+      "time": 53.499999999997605,
+      "wall": 54.93333333333086,
+      "stage": 1,
+      "x": 2021,
+      "y": 288,
+      "hp": 108,
+      "focus": 64,
+      "seals": [
+        56,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "clone-burst": 1,
+        "vitality": 1
+      }
+    },
+    {
+      "time": 55.891666666664136,
+      "wall": 57.34999999999739,
+      "stage": 1,
+      "x": 2257,
+      "y": 396,
+      "hp": 96,
+      "focus": 72,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "clone-burst": 1,
+        "vitality": 1
+      }
+    },
+    {
+      "time": 57.90833333333069,
+      "wall": 59.4583333333306,
+      "stage": 1,
+      "x": 2599,
+      "y": 288,
+      "hp": 96,
+      "focus": 54,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "clone-burst": 1,
+        "vitality": 1
+      }
+    },
+    {
+      "time": 60.24166666666389,
+      "wall": 61.90833333333046,
+      "stage": 1,
+      "x": 3207,
+      "y": 396,
+      "hp": 82,
+      "focus": 58,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "clone-burst": 1,
+        "vitality": 1
+      }
+    },
+    {
+      "time": 62.33333333333044,
+      "wall": 63.99999999999701,
+      "stage": 1,
+      "x": 3569,
+      "y": 306,
+      "hp": 82,
+      "focus": 18,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "clone-burst": 1,
+        "vitality": 1
+      }
+    },
+    {
+      "time": 64.00833333333034,
+      "wall": 65.75833333333173,
+      "stage": 1,
+      "x": 3819,
+      "y": 293,
+      "hp": 82,
+      "focus": 52,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "clone-burst": 1,
+        "vitality": 1
+      }
+    },
+    {
+      "time": 65.69166666666501,
+      "wall": 67.49999999999979,
+      "stage": 1,
+      "x": 3962,
+      "y": 396,
+      "hp": 70,
+      "focus": 83,
+      "seals": [
+        0,
+        0
+      ],
+      "boss": null,
+      "rage": 0,
+      "growth": {
+        "clone-burst": 1,
+        "vitality": 1
+      }
+    },
+    {
+      "time": 67.40833333333305,
+      "wall": 69.21666666666782,
+      "stage": 1,
+      "x": 4226,
+      "y": 396,
+      "hp": 70,
+      "focus": 83,
+      "seals": [
+        0,
+        0
+      ],
+      "boss": null,
+      "rage": 0,
+      "growth": {
+        "clone-burst": 1,
+        "vitality": 1
+      }
+    },
+    {
+      "time": 69.1500000000011,
+      "wall": 70.95833333333587,
+      "stage": 1,
+      "x": 4558,
+      "y": 396,
+      "hp": 70,
+      "focus": 43,
+      "seals": [
+        0,
+        0
+      ],
+      "boss": 168,
+      "guardian": "ferry",
+      "rage": 0,
+      "growth": {
+        "clone-burst": 1,
+        "vitality": 1
+      }
+    },
+    {
+      "time": 70.86666666666913,
+      "wall": 72.73333333333728,
+      "stage": 1,
+      "x": 4913,
+      "y": 396,
+      "hp": 70,
+      "focus": 55,
+      "seals": [
+        0,
+        0
+      ],
+      "boss": 141,
+      "guardian": "ferry",
+      "rage": 14,
+      "growth": {
+        "clone-burst": 1,
+        "vitality": 1
+      }
+    },
+    {
+      "time": 72.78333333333732,
+      "wall": 74.85000000000564,
+      "stage": 1,
+      "x": 4795,
+      "y": 396,
+      "hp": 70,
+      "focus": 99,
+      "seals": [
+        0,
+        0
+      ],
+      "boss": 28,
+      "guardian": "ferry",
+      "rage": 82,
+      "growth": {
+        "clone-burst": 1,
+        "vitality": 1
+      }
+    },
+    {
+      "time": 74.58333333333876,
+      "wall": 76.77500000000717,
+      "stage": 2,
+      "x": 90,
+      "y": 396,
+      "hp": 100,
+      "focus": 100,
+      "seals": [
+        56,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "clone-burst": 1,
+        "vitality": 1,
+        "ultimate-echo": 1
+      }
+    },
+    {
+      "time": 76.66666666667375,
+      "wall": 78.85833333334216,
+      "stage": 2,
+      "x": 391,
+      "y": 292,
+      "hp": 100,
+      "focus": 60,
+      "seals": [
+        56,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "clone-burst": 1,
+        "vitality": 1,
+        "ultimate-echo": 1
+      }
+    },
+    {
+      "time": 78.4500000000085,
+      "wall": 80.75000000001033,
+      "stage": 2,
+      "x": 707,
+      "y": 396,
+      "hp": 100,
+      "focus": 100,
+      "seals": [
+        56,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "clone-burst": 1,
+        "vitality": 1,
+        "ultimate-echo": 1
+      }
+    },
+    {
+      "time": 80.20833333334323,
+      "wall": 82.50833333334506,
+      "stage": 2,
+      "x": 1153,
+      "y": 365,
+      "hp": 100,
+      "focus": 100,
+      "seals": [
+        56,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "clone-burst": 1,
+        "vitality": 1,
+        "ultimate-echo": 1
+      }
+    },
+    {
+      "time": 81.85833333334455,
+      "wall": 84.15833333334638,
+      "stage": 2,
+      "x": 1470,
+      "y": 396,
+      "hp": 100,
+      "focus": 100,
+      "seals": [
+        56,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "clone-burst": 1,
+        "vitality": 1,
+        "ultimate-echo": 1
+      }
+    },
+    {
+      "time": 83.81666666667944,
+      "wall": 86.17500000001465,
+      "stage": 2,
+      "x": 1738,
+      "y": 397,
+      "hp": 88,
+      "focus": 100,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "clone-burst": 1,
+        "vitality": 1,
+        "ultimate-echo": 1
+      }
+    },
+    {
+      "time": 85.45833333334741,
+      "wall": 87.90000000001602,
+      "stage": 2,
+      "x": 2077,
+      "y": 361,
+      "hp": 88,
+      "focus": 60,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "clone-burst": 1,
+        "vitality": 1,
+        "ultimate-echo": 1
+      }
+    },
+    {
+      "time": 87.15833333334876,
+      "wall": 89.71666666668413,
+      "stage": 2,
+      "x": 2455,
+      "y": 396,
+      "hp": 88,
+      "focus": 54,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "clone-burst": 1,
+        "vitality": 1,
+        "ultimate-echo": 1
+      }
+    },
+    {
+      "time": 88.99166666668356,
+      "wall": 91.55000000001893,
+      "stage": 2,
+      "x": 2864,
+      "y": 306,
+      "hp": 88,
+      "focus": 54,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "clone-burst": 1,
+        "vitality": 1,
+        "ultimate-echo": 1
+      }
+    },
+    {
+      "time": 90.81666666668501,
+      "wall": 93.49166666668714,
+      "stage": 2,
+      "x": 3309,
+      "y": 396,
+      "hp": 88,
+      "focus": 78,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "clone-burst": 1,
+        "vitality": 1,
+        "ultimate-echo": 1
+      }
+    },
+    {
+      "time": 92.54166666668638,
+      "wall": 95.24166666668853,
+      "stage": 2,
+      "x": 3117,
+      "y": 372,
+      "hp": 88,
+      "focus": 66,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "clone-burst": 1,
+        "vitality": 1,
+        "ultimate-echo": 1
+      }
+    },
+    {
+      "time": 94.1083333333543,
+      "wall": 96.95000000002322,
+      "stage": 2,
+      "x": 3322,
+      "y": 396,
+      "hp": 88,
+      "focus": 60,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 100,
+      "growth": {
+        "clone-burst": 1,
+        "vitality": 1,
+        "ultimate-echo": 1
+      }
+    },
+    {
+      "time": 96.00000000002247,
+      "wall": 98.90000000002478,
+      "stage": 2,
+      "x": 3303,
+      "y": 396,
+      "hp": 94,
+      "focus": 100,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 0,
+      "growth": {
+        "clone-burst": 1,
+        "vitality": 1,
+        "ultimate-echo": 1
+      }
+    },
+    {
+      "time": 97.70000000002382,
+      "wall": 100.60000000002613,
+      "stage": 2,
+      "x": 3602,
+      "y": 306,
+      "hp": 94,
+      "focus": 60,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 0,
+      "growth": {
+        "clone-burst": 1,
+        "vitality": 1,
+        "ultimate-echo": 1
+      }
+    },
+    {
+      "time": 99.30833333335843,
+      "wall": 102.2833333333608,
+      "stage": 2,
+      "x": 3878,
+      "y": 306,
+      "hp": 94,
+      "focus": 66,
+      "seals": [
+        0,
+        56
+      ],
+      "boss": null,
+      "rage": 24,
+      "growth": {
+        "clone-burst": 1,
+        "vitality": 1,
+        "ultimate-echo": 1
+      }
+    },
+    {
+      "time": 101.0333333333598,
+      "wall": 104.00833333336217,
+      "stage": 2,
+      "x": 4210,
+      "y": 396,
+      "hp": 94,
+      "focus": 53,
+      "seals": [
+        0,
+        30
+      ],
+      "boss": null,
+      "rage": 34,
+      "growth": {
+        "clone-burst": 1,
+        "vitality": 1,
+        "ultimate-echo": 1
+      }
+    },
+    {
+      "time": 102.69166666669446,
+      "wall": 105.77500000003025,
+      "stage": 2,
+      "x": 4391,
+      "y": 396,
+      "hp": 94,
+      "focus": 100,
+      "seals": [
+        0,
+        0
+      ],
+      "boss": null,
+      "rage": 79,
+      "growth": {
+        "clone-burst": 1,
+        "vitality": 1,
+        "ultimate-echo": 1
+      }
+    },
+    {
+      "time": 104.43333333336251,
+      "wall": 107.5166666666983,
+      "stage": 2,
+      "x": 4658,
+      "y": 396,
+      "hp": 94,
+      "focus": 60,
+      "seals": [
+        0,
+        0
+      ],
+      "boss": 192,
+      "guardian": "sanctuary",
+      "rage": 79,
+      "growth": {
+        "clone-burst": 1,
+        "vitality": 1,
+        "ultimate-echo": 1
+      }
+    },
+    {
+      "time": 106.34166666669736,
+      "wall": 109.42500000003315,
+      "stage": 2,
+      "x": 4658,
+      "y": 396,
+      "hp": 78,
+      "focus": 20,
+      "seals": [
+        0,
+        0
+      ],
+      "boss": 192,
+      "guardian": "sanctuary",
+      "rage": 79,
+      "growth": {
+        "clone-burst": 1,
+        "vitality": 1,
+        "ultimate-echo": 1
+      }
+    },
+    {
+      "time": 108.0166666666987,
+      "wall": 111.1250000000345,
+      "stage": 2,
+      "x": 4921,
+      "y": 396,
+      "hp": 78,
+      "focus": 32,
+      "seals": [
+        0,
+        0
+      ],
+      "boss": 178,
+      "guardian": "sanctuary",
+      "rage": 87,
+      "growth": {
+        "clone-burst": 1,
+        "vitality": 1,
+        "ultimate-echo": 1
+      }
+    },
+    {
+      "time": 109.62500000003331,
+      "wall": 112.95000000003596,
+      "stage": 2,
+      "x": 4785,
+      "y": 396,
+      "hp": 78,
+      "focus": 52,
+      "seals": [
+        0,
+        0
+      ],
+      "boss": 82,
+      "guardian": "sanctuary",
+      "rage": 8,
+      "growth": {
+        "clone-burst": 1,
+        "vitality": 1,
+        "ultimate-echo": 1
+      }
+    },
+    {
+      "time": 111.20000000003456,
+      "wall": 114.64166666670397,
+      "stage": 2,
+      "x": 4909,
+      "y": 396,
+      "hp": 90,
+      "focus": 86,
+      "seals": [
+        0,
+        0
+      ],
+      "boss": null,
+      "rage": 26,
+      "growth": {
+        "clone-burst": 1,
+        "vitality": 1,
+        "ultimate-echo": 1
+      }
+    },
+    {
+      "time": 113.10000000003608,
+      "wall": 116.54166666670548,
+      "stage": 3,
+      "x": 211,
+      "y": 396,
+      "hp": 108,
+      "focus": 60,
+      "seals": [],
+      "boss": 270,
+      "rage": 26,
+      "growth": {
+        "clone-burst": 1,
+        "vitality": 1,
+        "ultimate-echo": 1
+      }
+    },
+    {
+      "time": 114.70000000003735,
+      "wall": 118.20000000004013,
+      "stage": 3,
+      "x": 523,
+      "y": 396,
+      "hp": 108,
+      "focus": 32,
+      "seals": [],
+      "boss": 234,
+      "rage": 34,
+      "growth": {
+        "clone-burst": 1,
+        "vitality": 1,
+        "ultimate-echo": 1
+      }
+    },
+    {
+      "time": 116.1500000000385,
+      "wall": 119.82500000004143,
+      "stage": 3,
+      "x": 757,
+      "y": 301,
+      "hp": 108,
+      "focus": 68,
+      "seals": [],
+      "boss": 152,
+      "rage": 64,
+      "growth": {
+        "clone-burst": 1,
+        "vitality": 1,
+        "ultimate-echo": 1
+      }
+    },
+    {
+      "time": 117.70000000003974,
+      "wall": 121.37500000004266,
+      "stage": 3,
+      "x": 530,
+      "y": 396,
+      "hp": 108,
+      "focus": 28,
+      "seals": [],
+      "boss": 152,
+      "rage": 64,
+      "growth": {
+        "clone-burst": 1,
+        "vitality": 1,
+        "ultimate-echo": 1
+      }
+    },
+    {
+      "time": 119.24166666670763,
+      "wall": 122.97500000004393,
+      "stage": 3,
+      "x": 207,
+      "y": 396,
+      "hp": 96,
+      "focus": 0,
+      "seals": [],
+      "boss": 141,
+      "rage": 78,
+      "growth": {
+        "clone-burst": 1,
+        "vitality": 1,
+        "ultimate-echo": 1
+      }
+    },
+    {
+      "time": 120.90833333337562,
+      "wall": 124.66666666671195,
+      "stage": 3,
+      "x": 433,
+      "y": 396,
+      "hp": 96,
+      "focus": 12,
+      "seals": [],
+      "boss": 129,
+      "rage": 86,
+      "growth": {
+        "clone-burst": 1,
+        "vitality": 1,
+        "ultimate-echo": 1
+      }
+    },
+    {
+      "time": 122.40000000004348,
+      "wall": 126.2416666667132,
+      "stage": 3,
+      "x": 685,
+      "y": 396,
+      "hp": 96,
+      "focus": 36,
+      "seals": [],
+      "boss": 88,
+      "rage": 100,
+      "growth": {
+        "clone-burst": 1,
+        "vitality": 1,
+        "ultimate-echo": 1
+      }
+    }
+  ],
+  "rewards": [
+    {
+      "stage": 0,
+      "kind": "mid",
+      "options": [
+        "vitality",
+        "clone-burst",
+        "rest"
+      ],
+      "hp": 76,
+      "chosen": "clone-burst"
+    },
+    {
+      "stage": 0,
+      "kind": "exit",
+      "options": [
+        "vitality",
+        "dash-strike",
+        "rest"
+      ],
+      "hp": 100,
+      "chosen": "vitality"
+    },
+    {
+      "stage": 1,
+      "kind": "mid",
+      "options": [
+        "echo",
+        "thunder",
+        "rest"
+      ],
+      "hp": 96,
+      "chosen": "thunder"
+    },
+    {
+      "stage": 1,
+      "kind": "exit",
+      "options": [
+        "mirror",
+        "ultimate-echo",
+        "rest"
+      ],
+      "hp": 82,
+      "chosen": "ultimate-echo"
+    },
+    {
+      "stage": 2,
+      "kind": "mid",
+      "options": [
+        "mirror",
+        "thunder",
+        "rest"
+      ],
+      "hp": 88,
+      "chosen": "thunder"
+    },
+    {
+      "stage": 2,
+      "kind": "exit",
+      "options": [
+        "staff",
+        "thunder",
+        "rest"
+      ],
+      "hp": 90,
+      "chosen": "thunder"
+    }
+  ],
+  "stages": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "worldEvents": [
+    {
+      "stage": 0,
+      "id": "rescue",
+      "state": "active",
+      "time": 12.4666666666666,
+      "hp": 76
+    },
+    {
+      "stage": 0,
+      "id": "rescue",
+      "state": "done",
+      "time": 16.958333333333012,
+      "hp": 94
+    },
+    {
+      "stage": 1,
+      "id": "bridge",
+      "state": "done",
+      "time": 58.86666666666397,
+      "hp": 96
+    },
+    {
+      "stage": 2,
+      "id": "bell",
+      "state": "active",
+      "time": 90.43333333335137,
+      "hp": 88
+    },
+    {
+      "stage": 2,
+      "id": "bell",
+      "state": "done",
+      "time": 95.33333333335527,
+      "hp": 94
+    }
+  ],
+  "errors": [],
+  "network": [],
+  "browser": "156.0.4314.42",
+  "seed": "LOTUS-1025",
+  "final": {
+    "time": 122.97500000004393,
+    "elapsed": 126.87500000004704,
+    "hp": 96,
+    "kills": 22,
+    "broken": 6,
+    "relics": [
+      "cloud"
+    ],
+    "growth": {
+      "clone-burst": 1,
+      "vitality": 1,
+      "ultimate-echo": 1
+    },
+    "talisman": null,
+    "stats": {
+      "swings": 334,
+      "hits": 98,
+      "blocks": 40,
+      "jumps": 42,
+      "dashes": 30,
+      "clones": 38,
+      "focusSpent": 1540,
+      "rests": 0,
+      "ultimates": 6,
+      "talismans": 9,
+      "guardians": 3
+    },
+    "world": {
+      "rescue": true,
+      "bridge": true,
+      "bell": true
+    },
+    "journal": [
+      "rescue:start",
+      "rescue:done",
+      "bridge:done",
+      "bell:start",
+      "bell:done"
+    ]
+  },
+  "performance": {
+    "frames": 10000,
+    "frameP95": 5.69999999999709,
+    "inputP95": 10.6,
+    "inputMax": 67
+  },
+  "trace": "evidence/progression-v4/file-trace-1792997848508.zip",
+  "inputBoundaries": "evidence/progression-v4/file-input-boundaries.json",
+  "video": "evidence/progression-v4/video/page@13d2104814acebb8b597127adddd96fd.webm"
+}

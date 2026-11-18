@@ -1,0 +1,239 @@
+https://deadcells.com/patchnotes/19
+Dead Cells - Rogue-lite metroidvania with some souls-lite combat on top! Kill, die, learn, repeat. Update of Plenty
+Update 19.0: 2020-05-28
+(ed5b0c16) Update 19.1: 2020-06-03
+(8b85ecb6) Update 19.2: 2020-06-10
+(9677a94a) Update 19.3: 2020-06-17
+(4210d26d) Update 19.4: 2020-06-18
+(ccbac701) Update 19.5: 2020-06-25
+(a352425e) Update 19.6: 2020-06-29
+(e79a2f9a) Update 19.7: 2020-07-06
+(01de44d4) Important features Weapon rework Following the extremely succesful weapon popularity poll, we tried to give
+some love to the less liked weapons and slightly nerfed the most effective ones. The aim is to open up a wider range of
+builds, while not sacrificing what made meta builds fun. Most of the changed consist of slight number tweaks, some are
+more profound reworks but there is one notable exceptions: - All Crossbows (with the exception of Sonic Crossbow which
+is now named Sonic Carbine ) are now two-handed weapons and Survival only. - Multiple-nocks Bow , Marksman's Bow and
+Nerves of Steel are now Tactic only and have been buffed. These weapons never really shined in Tactics because there are
+few reasons to take them in a Tactic build rather than in a Survival Build. And we were forced to make them less
+efficient than other pure Tactic range weapons to balance for the dual-scaling. With the 2-handed weapons becoming part
+of the Survival identity, it felt only natural to increase the efficiency of these weapons to make them better on par
+with the other choices, and to make it pure Tactic. Economy rework It has been brought to our attention several times
+(and, frankly, we knew already) that the economy in Dead Cells was... peculiar. While everything seemed to be fine at
+low difficulty level, it got worse and worse in high BC, where if you wanted to buy healing you would have to basically
+never spend any gold on anything else. So to fix this we implemented several changes, small and big, some among them
+will be detailed later in this patchnote. Here's a short list of what changed: - Gold scaling is gone, long live small
+numbers! - A good amount of items had their price changed - To replace gold scaling, gear price now goes up with item
+level - Refining and affix reroll costs have been changed - Shop categories are now stats instead of equipment type -
+Shop reroll is now free, but makes items on sale pricier Gear qualities and damage rework Bonus stats have been removed
+from ++ and S gears, but to compensate new scrolls have been added in biomes, enemy damage has been reduced, and gear
+damage has been changed to increase with item level. This change was implemented to give back some importance to gear
+level, and in pair with the economy rebalance give you more opportunities (and an incentive) to switch gears during your
+run. New DoT: Shocked and DoT reworks All damage over time statuses seemed to blend together a bit too much for our
+taste. We decided to try and give each DoT a unique identity, and added a fourth one, shocked, in the process. Most
+electric weapons and items inflict this new shock DoT. - New DoT, Shocked : deal damage over time to the target and all
+nearby targets. - Bleed rework: Stack enough bleed status on a target and the damages left is instantaneously dealt at
+once. - Poison rework: Upon death, propagate the poison status with reduced damages and for the remaining duration. -
+Fire un-rework: Untouched, because fire was already perfect. Also, all affixes giving bonus damage on an enemy with a
+specific status have updated values. Damage mutation rework Damage mutations (those who give a bonus DPS to your
+attacks) suffered from poor scaling, making them extremely useful at low difficulties while being less and less useful
+as you progress through the game. To remedy to that, we changed their bonus from a bonus DP to a bonus % of damages.
+This means that everything that boosts your attack (item level, item rarity, affixes, etc.) will synergize with those
+mutations. Impacted mutations: - Combo - Vengeance - Tainted Flask - Support - Tranquility - Gastronomy - Extended
+Healing Changed and increased the initial pool of mutations . Any diminishing return is now removed after a few
+secondes. This means that Freeze, Stun, Slows, and everything else that used to be less and less effective against a
+target in a fight can now be used more efficiently for these long boss fights. Update 19.1 Community suggestion
+Equipping a two-handed weapon now gives you access to a backpack weapon slot. You can put any one-handed weapon inside
+so the next time you come across another one-handed weapon , you can equip both at the same time to replace your
+two-handed weapon . Update 19.1 Community suggestion Ice Crossbow , Repeater Crossbow and the new Shop category haven't
+been tweaked yet , but we're working on improve them. Other changes in this patch would have collided with these tweaks
+so we decided to put them of for now. Update 19.1 Repeater Crossbow re-rework: - Main fire now crits on rooted targets -
+Secondary fire shoots a volley of arrows in the air that rain down and roots targets. - New direction feels better, but
+feedback would be super appreciated. Update 19.2 Translation included for most languages. Update 19.7 Balancing All
+bonus damage affixes' chances of being generated have been lowered - with the newest addition, every item felt like it
+had 3 or 4 DoTs status synergies, making it feel like there is no point in building your build around. Community
+suggestion Gold scaling has been removed from the game. While it's less impressive to gain 500 gold than 42345, it's
+also more easy to grasp. And more importantly: this makes our work waaaay easier to fine tune the amount of gold
+generated in a level. Shop Reroll is now free, and the limit has been increased to 5 times. Every time you reroll
+though, the price of items available in the shop is increased by 40% of their base price. Spoiler level now has a
+guaranteed heal shop and a random gear shop, instead of two different random shops. Many items' base prices have been
+changed. The changes might not be completely apparent at first glance, as the scaling heavily modified the prices
+anyway, but here's the list of items which prices changed. Items that had their price raised: - All healing items -
+Powerful Grenade - Fire Grenade - Heavy Crossbow - Explosive Crossbow - Repeater Crossbow Items which prices have been
+lowered: - Stun Grenade - Giant Killer - Ice Armor - Ice Bow - Long Bow - Sonic Carbine Legendary Weapons no longer give
+scroll and give less bonus damage than before. That's not permanent - we just haven't decided on how to balance them
+yet. As mentionned above, enemy damage has been decreased to make for the loss of gear scrolls at the beginning of a
+run. It's very much WIP, we will be very grateful to let us know if you think enemies do too much or too little damage .
+Thanks! You now get a free amulet at the beginning of a game at BC1+. Most likely subject to changes. Mobs now teleport
+to you much faster at BC4+. Skills no longer proc rally nor cooldown reduction mutations. Reworked Heavy Crossbow : -
+Now a Survival-only two-handed weapon - Off-hand instantly reloads your crossbow with a volley of critical bolts - The
+hook no longer pierce enemies, even with the "pierce ennemies" affixes. - The damages dealt by the volley of bolts is
+now capped by bosses damage cap. Reworked Repeater Crossbow : - Now a Survival-only two-handed weapon - Main hand fire
+rate has been reduced and now root every 4 bolts. No longer crit on rooted enemies. -  Off-hand fires a volley of bolts
+all at once that inflict critical damages to rooted enemies. Reworked Ice Crossbow : - Now a Survival-only two-handed
+weapon - Main hand fire has been mostyl unchanged, except you can no longer charge a volley of critical bolts with it. -
+Off-hand now fire a long range, ultra-fast bolt with infinite piercing which crits on frozen enemies. Reworked Explosive
+Crossbow : - Now a Survival-only two-handed weapon - Main fire has not been changed. - Off-hand is now a melee combo ...
+with a surprise. Reworked War Javelin : - Pressing the button again teleports you to the javelin. - No longer profits
+from Ammo mutation. Reworked Wings of the Crow : - Now features up AND down movement. You can run normaly with the power
+activated, jump again to take flight. - Movement speed is increased while wings are active. - Attacking enemies with
+weapons inflict new Shock status. - Stomping and dodging no longer cancel the power, reactivate to cancel the power. -
+Stomping deals extra damages around. Reworked Tonic : - No longer requires a health flask or a level change to use
+again. Has a normal cooldown instead. - No longer heals you. - Invincibility is much shorter. - Grant a portion of your
+missing health as temporary bonus health (shield) - Reduce damage taken. - Prevent malaise. - Increase movement speed. -
+Shorten dodge cooldown. Reworked Vampirism : - No longer requires a health flask or a level change to use again. Has a
+normal cooldown instead. - Totally scrapped the old mechanic. - Now transform you entire life plus a portion of your
+missing life into rally. Strike fast to heal yourself! High risk, high reward, right? Reworked Tentacle Whip : added a
+kick that bumps enemies away when striking an enemy too close for a critical hit. The goal here is to provide a less
+clunky chaining when failing to crit. Buffed/reworked Ice Shards : The aim here is to give ice shard a strong identity
+of secondary weapon. - Removed ammo count - Increased slow duration - Reduced critical damages Buff all starting weapons
+damages ( Rusty Sword , Beginner's Bow and Old Wooden Shield ). Buffed Nutcracker : - Increased range - Reworked model
+and animations Buffed Root Grenade : - Increased duration - Slightly increased DPS Buffed Stun Grenade : - Reduced
+cooldown Buffed Frost Blast : - Increased range - Remove ammunition Buffed Spartan Sandals : - Increased hit damages
+Buffed Torch : - Increased hit damages Buffed Knockback Shield : - Increased damage dealt to enemies projected against a
+wall Buffed Crusher : - Now slows enemies in its area Buffed Spite Sword : - Increased damage - Slightly reduced forward
+momentum Buffed Multiple-nocks Bow : - Increased ammo count - Removed Survival scaling - Slighlty increased fire rate
+Buffed Marksman's Bow : - Increased ammo count - Removed Survival scaling Buffed Nerves of Steel : - Increased ammo
+count - Removed Survival scaling Buffed Spiked Boots : - Reworked animations and hitboxes. - Slight damage buff overall.
+Buffed Balanced Blade : - Increased critical time - Increased base damage but reduced damage gained with subsequent hit
+(the maximum damage stayed unchanged) - Slightly increased breach values Buffed Blood Sword : - Increased bleeding time
+Buffed Flint : - Faster charge - Larger sparks area upon full charge - Sparks now ignite oil on the ground Buffed Greed
+Shield : - Removed gold cap to receive full gold reward Buffed Sonic Carbine (previously Sonic Crossbow ): - Increased
+damage - Increased range Buffed Symmetrical Lance : - Increased range Nerfed Rampart Shield : - Reduced invincibility
+time after parrying - Added a FX to warn invincibility ending Nerfed Flamethrower Turret : - Increase cooldown. Nerfed
+Wolf Trap : - Reduced root duration - Reduced bonus DPS Nerfed Tick Scythe : - Slitghly lower damage. - Taking a hit now
+cancel the critical chain. Nerfed Rythm'n Bouzouki : - Reduced damages Nerfed Quick Bow : - Reduced critical damages
+Nerfed Necromancy : - only heals you up to 50% health. Electric Whip no longer dual-scales with Brutality (pure Tactics
+only). Community suggestion Clock Tower and Forgotten Sepulcher number of fragments swapped. Community suggestion Rapier
+now dual-scales with Brutality and Tactics. The new Duelist mob in Slumbering Sanctuary has been buffed (breach
+resistance increased and more hp). Buffed bonus damage on stunned enemies affix chance. New bonus damage on immobilized
+target and bonus damage on electrified (shocked) target affixes. Community suggestion Two-handed weapons can no longer
+appear as starting gear until the Recycling Tubes are unlocked. Update 19.1 Modified Explosive Crossbow secondary hit to
+crit upon direct hit and push back ennemies further. Update 19.1 Community suggestion Improved one-shot protection to
+prevent some unfair deaths related to combos. Update 19.1 The Duelyst is now named Dancer and occasionnally dash behind
+you before stabbing you in the back. Omae wa mo shindeiru. Update 19.1 Community suggestion Enemies' damage further
+decreased in BC2 and higher. Update 19.1 Slammer and Toxic Miasma damage slightly decreased. Update 19.1 Community
+suggestion Mob density has been slightly reduced in BC1 and higher. Update 19.1 Community suggestion Combo Mutation base
+value decreased. Update 19.1 Community suggestion Lightning Whip damage reduced to compensate for the new additional
+damage coming from the shock status. Update 19.1 Lowered Ice Shards critical damage. Update 19.1 Community suggestion
+Ice Armor can't get the "burn the ground when effect ends" affix. Update 19.1 Community suggestion Ice Shield can't get
+the "burn on parry" affix. Update 19.1 Buffed Ice Crossbow : - Increased range, projectile speed and damages of main
+fire - Slightly increased charge speed and recovery of secondary fire - Slightly decreased damage of secondary fire
+Update 19.2 Community suggestion Improved chance of seeing all kinds of loot when selecting a category at the merchant.
+Update 19.2 Community suggestion Wings of the Crow cooldown raised (note that the item still needs work and we haven't
+decided which directions we should go yet). Update 19.2 Community suggestion Ban bonus damage on immobilized and shocked
+enemies on items inflicting the immobilized and shocked effects. Update 19.2 Community suggestion Following feedback on
+the previous patch: - Enemies do more damage in first and second biomes. (BC3+) - Enemies have less health on third
+biomes. (BC3+) - First Boss health has been decreased but damage has been increased. (BC3+) - Giant's Hands have a bit
+more health. (All BCs) - End game enemies have a bit more health (Castle and the spoiler biome) (BC3+) Update 19.2
+Community suggestion Damage cap of Conjonctivius' tentacles and Giant's Hand have been raised to make the fight a bit
+more fair when wielding slow weapons. Update 19.2 Librarian does less damage: its role was to teach you the Boss
+pattern, not to be the "run ender" he has become. Update 19.2 Adjusted the gear level of the free amulet at the start: -
+BC1: Level III (1 scroll) - BC2: Level IV (1 scroll) - BC3: Level VI (2 scrolls) - BC4: Level VII (2 scrolls) Update
+19.2 Community suggestion Forbid "3 more ammo" affix on Repeater Crossbow Update 19.2 Community suggestion Mobs hitting
+on the invulnerability shield are now only bumped horizontally, no longer interrupting some combos (Rampagers, notably).
+Lots of combos are still interrupted (Guardian Knights, Lacerator, etc.) Update 19.3 Community suggestion Affixes and
+mutations now affect damages dealt by DoTs . This only affects DoTs applied directly by items. Not poison clouds nor
+fire on the ground. Update 19.3 Toxic Cloud affix pool have been reworked (no more damage bonus affixes, more bonus
+effect on trigger, etc.). Update 19.3 Toxic Carbine now applies one stack of poison on impact. Update 19.3 Guardian no
+longer turn towards you during their attack animation. They can still turn during their combo. Update 19.3 Guardian 's
+shield now requires a small threshold of damages to be applied before breaking. Update 19.3 Changed the new Sudden Death
+protection to only trigger upon fatal strike (but still protecting from wombo combos). Update 19.3 Slightly buffed
+Disengagement mutation to prevent your HP from descending under 20% while the mutation is active. Update 19.3 Community
+suggestion Conjonctivius "Touhou" rain of tears attack cooldown doubled. Update 19.3 QuickBow critical damage increased.
+Update 19.3 Community suggestion Frostbite damage increased. Update 19.3 Community suggestion All first bosses have less
+life but do more damage in BC4+. Update 19.3 Community suggestion Tiers 4 biomes (Stilt Village, Slumbering Sanctuary
+and Graveyard ) mobs do less damage, Tiers 3* biomes do more in BC4+. Update 19.3 Community suggestion Librarians do
+more damage than in 1.9.2 (but still less than before). Update 19.3 Community suggestion High Peak Castle and last biome
+mobs have more health in BC4+. Update 19.3 Community suggestion Increased Giant and Time Keeper damage in BC4+. Update
+19.3 Community suggestion Reverted the changes made to Tentacle Whip forward momentum. Update 19.3 Community suggestion
+When the eye of the Giant is out, both hands are now invulnerable. Update 19.3 Community suggestion Prevent the "victims
+burn" affix from appearing on ice items. Update 19.3 Community suggestion Damage received from traps are now capped at
+30% of your maximum life. Update 19.3 Community suggestion Prevent food from spawning behind (possibly closed) ZDoors.
+Update 19.3 Buffed Grapling Hook : Controls are locked a shorter time. Update 19.3 You can now drop a maximum of one
+blueprint from mobs in a single level. This limitation does not apply to blueprints found in secret rooms or by using
+the Hunter's Grenade . Update 19.3 Changed Guardian 's shield breaking condition from a threshold to a hidden "shield's
+life". Update 19.4 Global Shields (the invulnerability bubble) no longer interrupt spinning attacks from Lacerators ,
+Guardian Knights and A certain secret boss . Update 19.4 Community suggestion BC4+: - Giant, Time Keeper and HotK damage
+increased. - Mobs in tiers 5 biomes (Clock Tower, Cavern and Sepuchler) do more damage - Cavern's mob have a bit more
+health - Mobs in High Peak Castle and spoiler biome do more damage. Update 19.4 Community suggestion Nerfed Alchemic
+Carbine to make up for the multiple buffs received by Poison DoTs. Update 19.4 Community suggestion All BCs difficulties
+have been tweaked : - BC0 is probably going to feel harder, hence better preparing you for BC1. BC0 is supposed to teach
+you the basic mechanics, to dodge hits instead of facetanking, and to get you the most important meta upgrades (Runes,
+Health Flasks, etc.). - BC1, BC2 and BC3 will feel easier, especially if your forge isn't at a good level. Overall,
+we're looking to have a smoother difficulty curve without the big walls we had before (looking at you 1 and 2BC). -
+BC4-5 new changes : increased High Peak Castle , Time Keeper , Giant and HoTK damage. Some tweaks to the level of the
+gear you loot in some places: - Toxic Sewers gear level increased by 1. - Ossuary gear level decreased by 1. - Ancient
+Sewers gear level increased by 1. Harder biomes now also give more cells than easier ones. Update 19.5 Blood Sword bleed
+damage decreased. That thing was scary. Update 19.5 Replaced one Food Shop by and Active Shop in Cavern . Update 19.6
+Nerfed A Certain Secret Boss laser beam damages. Update 19.6 Increased Slumbering Sanctuary and Time Keeper number of
+Scroll fragments dropped by 1 in BC3+. Update 19.6 Community suggestion War Javelin stun's duration decreases much
+faster. First strike: 100%, Second strike: 50%, Third and subsequent strikes: No Stun Update 19.6 Community suggestion
+Killing one of Giant 's hand now only decreases the amount of charge by one instead of resetting the charge count.
+Update 19.6 Community suggestion Prevent more than 2 "+XX% damage on _ target" affixes from appearing on an item. Update
+19.6 Level design Community suggestion Guardians 's (soon to be renamed Oven Knights ) density has been decreased.
+Community suggestion Slumbering Sanctuary bestiary has been revisited to have new mobs in the "sleeping" part of the
+biome too. The Bad Seed Community suggestion The Swamp Altar is now a permanent room, and so cannot be deactivated with
+the "Remove lore rooms" options. Update 19.1 Graphics & UI Broadsword , Twin Daggers and Bow and Endless Quiver now
+display a non-critical value in their description to help comparing items. Community suggestion Added an option to
+display or hide the Seed information above your minimap. Update 19.1 Community suggestion Adjusted Explosive Crossbow
+paint colors. Update 19.1 Community suggestion Improved display of backpack in the description of two-handed weapons.
+Update 19.2 Clarified some items names and descriptions. Update 19.3 Community suggestion Changed the confusing keyword
+"immobilized" to the color-coded (and obviously, objectively much clearer) "root" in descriptions to clarify synergies.
+Update 19.3 Community suggestion Fire icon on oiled target is now blue. Let's put emphasis on those sweet sweet
+synergies. Update 19.3 Added a backpack icon on relevant UIs. Update 19.3 The starting amulet is now on an altar if you
+have unlocked the Recycling Tubes . Update 19.4 Community suggestion Faded the backpack slot in the HUD to clarify that
+the weapon in it is unavalaible to use. Update 19.5 Added the customized banner. Update 19.6 Updated War Spear 's
+description. Update 19.6 Quality of life The Vorpan does not appear for the first few runs, and only appear at one
+merchant per level. The very first run through Prison Quarters does not create lore rooms . Shop categories are now
+replaced with stats. As the item pool grew, categories made less and less sense. So to make sure the shops you find
+during your run always have something interesting for you, you can now select Brutality, Tactics or Survival when you
+have the shop categories unlocked. Community suggestion Thunder Shield no longer target doors. Especially golden door.
+Update 19.1 Community suggestion When selecting an amulet and wearing the Prisonner's Collar , the choice UI is no
+longer displayed and the Prisonner's Collar is immediatly replaced. Update 19.2 Community suggestion Explorer Instinct
+now signals mobs carrying precious loot with a star on the minimap. Update 19.3 Community suggestion Added a Custom Game
+option to use the old category choices (item types rather than item colors) in the shops. This option does not lock
+achievements. Update 19.5 Thornies now face you when aggressively teleporting to you in BC4+. Update 19.5 Community
+suggestion Forced the aquisition of Boss Cells to avoid the case where one would end the run without unlocking the next
+difficulty. Update 19.6 Music & Sfx Community suggestion Heavy Crossbow SFX have been reworked. Update 19.1 The Bad Seed
+Added some missing SFX on Jerkshrooms and Mushroom Boi . Update 19.2 Removed the random pitch variation for Repeater
+rapid-fire SFX. Update 19.2 Bug fixes Fixed weird graphical interaction between invulnerable enemies and Crow's Foot
+mutation. Bleed on parry affix forbidden on bloodshield . Victims burn affix forbidden on Frostblast and Ice Crossbow.
+Fixed Ice Crossbow secondary fire not being counted as a ranged attack. Update 19.1 Fixed Hokuto's Bow and Wolf Trap
+bonus DPS no longer applying on DoTs. Update 19.1 Fixed Thundershield crashing when parrying a bomb. Update 19.1 Fixed
+Mushroom Boi crashing when entering a ZDoor. Update 19.1 Fixed Rat sometimes attacking behind your shield. Update 19.1
+Fixed Spiked Boots sometimes making you grab ledges or platforms above you. Update 19.1 Fixed various other crashes.
+Update 19.1 The Bad Seed Fixed holes sometimes appearing in the walls of the Arboretum . Update 19.2 Fixed Knives
+Thrower sometimes dancing undecided on the spot. Update 19.2 Fixed Rampager sometimes attacking without warning when
+exiting invisibility. Update 19.2 Fixed the Tentacle Whip dash changing direction when swapping items. How did you even
+found this one guys?! Update 19.2 Fixed Fragment of the Philosopher's Stone dropping from almost every enemies in a
+level sometimes. Update 19.2 Fixed being able to duplicate War Javelin by abusing ZDoors. Update 19.2 Fixed Crusher and
+Wolf trap not triggering "on destroy" affixes. Update 19.2 Fixed War Javelin teleport allowing you to skip bosses. Sorry
+speedrunners, this one was too easy... Update 19.2 Fixed the background of the Clockroom being green. Update 19.2 Fixed
+multiple crashes. Update 19.2 Giant 's health bug fixed. Update 19.3 Fixed Elite mobs with the cloning ability not
+taking damage on aggro. Update 19.3 Fixed being unable to drop an item carried by the Homonculus by pressing dodge on
+some controller or keyboard configurations. Update 19.3 Fixed some spikes collisions. Update 19.3 Fixed invulnerable
+Guardian reacting to strikes like their shield was broken every time. Update 19.3 Fixed the explosion from the Explosive
+Crossbow off-hand strike counting as a melee hit (and trigering revenge damages from Thornies ). Update 19.3 Fixed
+Guardian 's shield breaking even while protected. Update 19.4 Fixed YOLO mutation no longer healing. Update 19.4 Fixed
+Shops sometimes being empty. Update 19.4 Fixed DoT trigerring Thornies retaliation. Update 19.4 Fixed missing
+translations for "damage on rooted target" affix. Update 19.4 Fixed statistic about mutation blueprints brought to
+collector. Update 19.4 Fixed bonus damage on Rooted enemies appearing too often. Update 19.4 The outfit blueprint
+dropped by the Bomber can now be acquired in BC3 instead of BC4. Update 19.4 Fixed some crashes Update 19.4 Fixed
+Adrenalin and Frenzy calculations to only scale with the base damage of an attack (before any scaling or damage buff,
+except critical hits, is taken into account). We were looking into nerfing these mutations when we found out that they
+weren't working as expected. Update 19.5 Fixed Rampager losing track of you after every dodge. Update 19.5 Fixed
+(probably) Knives Throwers dancing when they cannot decide what to do. Update 19.5 Fixed Great Owl of War attacking
+while invisible. Update 19.6 Fixed Clone Elite mobs weird life calculations. Update 19.6 Fixed a crash that occured when
+using a modded weapon. Update 19.6 Fixed some crashes. Update 19.6 Fixed blueprints dropping from bosses out of order.
+Update 19.7 Fixed the mutation Dead Inside dropping nowhere. Update 19.7 Fixed Ammo and Dead Inside mutations being
+undroppable. Update 19.7 Update Log Update 19.0: 2020-05-28
+(ed5b0c16) alpha branch Update 19.1: 2020-06-03
+(8b85ecb6) alpha branch Update 19.2: 2020-06-10
+(9677a94a) alpha branch Update 19.3: 2020-06-17
+(4210d26d) alpha branch Update 19.4: 2020-06-18
+(ccbac701) beta branch Update 19.5: 2020-06-25
+(a352425e) beta branch Update 19.6: 2020-06-29
+(e79a2f9a) beta branch Update 19.7: 2020-07-06
+(01de44d4) View all major changes Previous update patchnotes Motion Twin is a French workers cooperative based in
+Bordeaux. We've been making games since 2001 and we're going to keep on doing that until senility kicks in! Available on
+Steam Follow us on Twitter Follow us on Facebook Presskit

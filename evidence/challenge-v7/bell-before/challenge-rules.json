@@ -1,0 +1,84 @@
+{
+  "version": "7.1.0",
+  "checks": [
+    {
+      "name": "normal simulation and rooms stay identical to the actual v7.0.1 sources",
+      "pass": true
+    },
+    {
+      "name": "fixed seeds add safe ground reinforcements with unchanged HP and deterministic drops",
+      "pass": true,
+      "counts": [
+        {
+          "stage": 0,
+          "normal": 12,
+          "challenge": 18
+        },
+        {
+          "stage": 1,
+          "normal": 14,
+          "challenge": 21
+        },
+        {
+          "stage": 2,
+          "normal": 14,
+          "challenge": 21
+        },
+        {
+          "stage": 3,
+          "normal": 5,
+          "challenge": 8
+        }
+      ]
+    },
+    {
+      "name": "old real v7 saves restore as normal; challenge mode and revision cannot be silently removed",
+      "pass": true
+    },
+    {
+      "name": "the blade commits a real projectile line, can be jumped, and its new projectile restores",
+      "pass": true
+    },
+    {
+      "name": "mirror dash can return the new blade projectile and preserve its saved identity",
+      "pass": true
+    },
+    {
+      "name": "shield quake punishes standing but leaves a jump solution and a full recovery window",
+      "pass": true
+    },
+    {
+      "name": "caster commits two separate marks; moving out twice avoids both and second mark persists",
+      "pass": true
+    },
+    {
+      "name": "a heavy attack interrupts a caster special and a clone is a real lock target",
+      "pass": true
+    },
+    {
+      "name": "only two ordinary specials can start together in a dense group",
+      "pass": true
+    },
+    {
+      "name": "all three wardens telegraph a distinct follow-up and can save it without replaying attacks",
+      "pass": true
+    },
+    {
+      "name": "ultimate still interrupts a guardian follow-up instead of forcing a skill check",
+      "pass": true
+    },
+    {
+      "name": "bell removes an extra Wutian mark without moving the remaining locked target",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(e.marks.some(m=>K.overlap(s.player,m)))\n\n    at E:\\githome\\kong-rpg\\tools\\verify-challenge.cjs:19:329\n    at test (E:\\githome\\kong-rpg\\tools\\verify-challenge.cjs:5:39)\n    at Object.<anonymous> (E:\\githome\\kong-rpg\\tools\\verify-challenge.cjs:19:1)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+    },
+    {
+      "name": "Wutian follow-up is locked, preserves bell consequence and offers a recovery",
+      "pass": true
+    },
+    {
+      "name": "winning, failed restart state and histories preserve challenge identity",
+      "pass": true
+    }
+  ]
+}

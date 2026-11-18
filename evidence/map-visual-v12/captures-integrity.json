@@ -1,0 +1,1528 @@
+{
+  "before": {
+    "entrySHA256": "c024823a08df890bf3439aaf9b49b3ac40a0b82fca589af820968436dea34e92",
+    "maps": 15,
+    "frames": 126,
+    "images": [
+      {
+        "stage": 0,
+        "id": "route-0",
+        "file": "frames/map-0-route-0.png",
+        "sha256": "5af1df363e45287f210c85b0a548646441299d2bd6f0009f617b12ba41b8f950"
+      },
+      {
+        "stage": 0,
+        "id": "route-1",
+        "file": "frames/map-0-route-1.png",
+        "sha256": "c7cc8233b692c2d5d4e1036924066ef0008b23e0f3607e252a0f132f7dcb14de"
+      },
+      {
+        "stage": 0,
+        "id": "route-2",
+        "file": "frames/map-0-route-2.png",
+        "sha256": "60db288efd3530ffa6667735afd358a1b7649a723711d8a05e93d64d3ec5ddfc"
+      },
+      {
+        "stage": 0,
+        "id": "route-3",
+        "file": "frames/map-0-route-3.png",
+        "sha256": "ce07972da70964a11c04a5536c7a68944e029bf201ef0c003932ffa1fd88f697"
+      },
+      {
+        "stage": 0,
+        "id": "boss",
+        "file": "frames/map-0-boss.png",
+        "sha256": "59fc731109139e87ac01cf19425dfc8c3d80ebf8082e7c913abe5f6ddcfbe909"
+      },
+      {
+        "stage": 0,
+        "id": "clear",
+        "file": "frames/map-0-clear.png",
+        "sha256": "b97da3cc4a35b25ad2eadbe98acdee84af56448e433da58892b047366866ad7a"
+      },
+      {
+        "stage": 0,
+        "id": "supplies",
+        "file": "frames/map-0-supplies.png",
+        "sha256": "bd60feee0e6ca332340d209c33020600b0943455ca5e769d6e1eaf82a9226313"
+      },
+      {
+        "stage": 1,
+        "id": "route-0",
+        "file": "frames/map-1-route-0.png",
+        "sha256": "7716253957c35a9365fe4a7edbd3641f1d0db17e8ef28cec78e88ec33dc14d1c"
+      },
+      {
+        "stage": 1,
+        "id": "route-1",
+        "file": "frames/map-1-route-1.png",
+        "sha256": "0c5c28ab136a15534630a2bb15370bd8e2cb5f9eb1e82d906878c3819be33ef8"
+      },
+      {
+        "stage": 1,
+        "id": "route-2",
+        "file": "frames/map-1-route-2.png",
+        "sha256": "5cbe6370dba8edda85507fb057a90798e830eddc75fffd359d501b09ec06e7a6"
+      },
+      {
+        "stage": 1,
+        "id": "route-3",
+        "file": "frames/map-1-route-3.png",
+        "sha256": "5985ff2bb238b4756ca4c31979bb5547abaffd73ba02d27c64b068e3c88cfe6f"
+      },
+      {
+        "stage": 1,
+        "id": "boss",
+        "file": "frames/map-1-boss.png",
+        "sha256": "56292ebd427ad138a20d3d95861ffdcb885f6afe6d1d0c87a8db9d89d6e28026"
+      },
+      {
+        "stage": 1,
+        "id": "clear",
+        "file": "frames/map-1-clear.png",
+        "sha256": "eaf1fef8cd67aae7b0def7344fae5fa4d7155791942edd2088bf7478d59d9492"
+      },
+      {
+        "stage": 1,
+        "id": "supplies",
+        "file": "frames/map-1-supplies.png",
+        "sha256": "440277fa49151797e09e28b853a2d73eecfa2b224f918804cc2c24dbe503daeb"
+      },
+      {
+        "stage": 1,
+        "id": "fragile-cracking",
+        "file": "frames/map-1-fragile-cracking.png",
+        "sha256": "546204f921285065c4e9bc9394e94292066845fbd91d5c864c5ceaa20762d1d4"
+      },
+      {
+        "stage": 1,
+        "id": "fragile-broken",
+        "file": "frames/map-1-fragile-broken.png",
+        "sha256": "a6caf47a673653d176c81879d7b4b75f8e84c77a7e878ca05d63628716f56fc8"
+      },
+      {
+        "stage": 1,
+        "id": "support",
+        "file": "frames/map-1-support.png",
+        "sha256": "52050c68ba05895f84f37f1267aed0d0acaadddf6827b0a9d0be3db50df50de1"
+      },
+      {
+        "stage": 2,
+        "id": "route-0",
+        "file": "frames/map-2-route-0.png",
+        "sha256": "bbecf20ca13862ea5515e536251038d4b22d291ca4b3ab73d830ba38b95fd481"
+      },
+      {
+        "stage": 2,
+        "id": "route-1",
+        "file": "frames/map-2-route-1.png",
+        "sha256": "ec59978de43c4603d7f5d50564342aa9c09af536309dd7fb89c6284fc9fcd0d3"
+      },
+      {
+        "stage": 2,
+        "id": "route-2",
+        "file": "frames/map-2-route-2.png",
+        "sha256": "0f7365df30b5dfc66ceb6f8f0bf18d3507efda7f0edc393e0d97da10c3aea8cf"
+      },
+      {
+        "stage": 2,
+        "id": "route-3",
+        "file": "frames/map-2-route-3.png",
+        "sha256": "b642bbdf7c819c0fd10211e7463a7192125771c516fd87fe269849d5feb62262"
+      },
+      {
+        "stage": 2,
+        "id": "boss",
+        "file": "frames/map-2-boss.png",
+        "sha256": "f84e02924d1d6278209ddf56c0e51782b03c65ba916498e1a43f4b9c7c785ff7"
+      },
+      {
+        "stage": 2,
+        "id": "clear",
+        "file": "frames/map-2-clear.png",
+        "sha256": "444348744cc82e9e5f6ba91e09ef69afddc5c6a8f4278cbd587aef4b3ba047d6"
+      },
+      {
+        "stage": 2,
+        "id": "supplies",
+        "file": "frames/map-2-supplies.png",
+        "sha256": "b8ee0a9ca3ad92de9c8517059146d7bc3d0b5206f7400838ffc4ddd561c14242"
+      },
+      {
+        "stage": 3,
+        "id": "route-0",
+        "file": "frames/map-3-route-0.png",
+        "sha256": "9007df9e764647d2c08b3e2ddfd9cfca60f1083e993dc452eac153010f3d7379"
+      },
+      {
+        "stage": 3,
+        "id": "route-1",
+        "file": "frames/map-3-route-1.png",
+        "sha256": "ce46987d202ed5697b17cc7fcfb4e283b4de0b9d6295c661484094ce2c2215ea"
+      },
+      {
+        "stage": 3,
+        "id": "route-2",
+        "file": "frames/map-3-route-2.png",
+        "sha256": "a34a6a0090c6ecc6b7a14bcafc38b3ad5a364e55959a2ce1ee30fe312be70bfe"
+      },
+      {
+        "stage": 3,
+        "id": "route-3",
+        "file": "frames/map-3-route-3.png",
+        "sha256": "e6e124fe7b85394a86b56e796ef90714914a74391294382ccbf8f608220ce923"
+      },
+      {
+        "stage": 3,
+        "id": "boss",
+        "file": "frames/map-3-boss.png",
+        "sha256": "a6d80e6f675e1b371290643ad21711edd1c30eb783e7d848f41d58224a0b9884"
+      },
+      {
+        "stage": 3,
+        "id": "clear",
+        "file": "frames/map-3-clear.png",
+        "sha256": "293dd659b205c6ee66a2256dd5c30d71586efc34e23eefab2eb48aa755050e0b"
+      },
+      {
+        "stage": 3,
+        "id": "supplies",
+        "file": "frames/map-3-supplies.png",
+        "sha256": "8b28b8a3b746d76cbeeb13eecb10abeb737db81f809d1e5db598814c88f28770"
+      },
+      {
+        "stage": 3,
+        "id": "hazard-quiet",
+        "file": "frames/map-3-hazard-quiet.png",
+        "sha256": "6930e40613fd82461bcceb925823af8726b5a790397af1ba8aafdeb343b34682"
+      },
+      {
+        "stage": 3,
+        "id": "hazard-warning",
+        "file": "frames/map-3-hazard-warning.png",
+        "sha256": "de2218391254d5a2e04d2bf77e10a089dede34778ca749ac724e83fa2debd1ac"
+      },
+      {
+        "stage": 3,
+        "id": "hazard-active",
+        "file": "frames/map-3-hazard-active.png",
+        "sha256": "3337e5d4bd6b07b016952f220695bd94e2228f839acec52342f4197b5bf3322c"
+      },
+      {
+        "stage": 4,
+        "id": "route-0",
+        "file": "frames/map-4-route-0.png",
+        "sha256": "d5911308306f3aa90b94393031b6377590bbf426472c9729ea72637bbed127c7"
+      },
+      {
+        "stage": 4,
+        "id": "route-1",
+        "file": "frames/map-4-route-1.png",
+        "sha256": "e7dfa430b48c08b7e3457b48fc119f701fefc0b7224c525e4a9d80a5b90ea7dc"
+      },
+      {
+        "stage": 4,
+        "id": "route-2",
+        "file": "frames/map-4-route-2.png",
+        "sha256": "832a7bc08a9eebd8da0c840bcc8b211dbc3dfdfd981b6f6aefb71cc9fdbc7cc0"
+      },
+      {
+        "stage": 4,
+        "id": "route-3",
+        "file": "frames/map-4-route-3.png",
+        "sha256": "2035d00b7ae5be3d0d03ff1029ab0d454055be37b69e8eaed986c4660242913c"
+      },
+      {
+        "stage": 4,
+        "id": "boss",
+        "file": "frames/map-4-boss.png",
+        "sha256": "de466344084325a7f1e050918a7d79cf5f9df6ac8091528d08970be54d0ac6d4"
+      },
+      {
+        "stage": 4,
+        "id": "clear",
+        "file": "frames/map-4-clear.png",
+        "sha256": "293dd659b205c6ee66a2256dd5c30d71586efc34e23eefab2eb48aa755050e0b"
+      },
+      {
+        "stage": 4,
+        "id": "supplies",
+        "file": "frames/map-4-supplies.png",
+        "sha256": "08958e9400f507e1e85ad9221b4904dcaff737a24b44e0f938ff50508c7156af"
+      },
+      {
+        "stage": 4,
+        "id": "hazard-quiet",
+        "file": "frames/map-4-hazard-quiet.png",
+        "sha256": "7bf195e223a80b5733a7f7f6893097b4e7ab2331f7f66da1353f016239ca4299"
+      },
+      {
+        "stage": 4,
+        "id": "hazard-warning",
+        "file": "frames/map-4-hazard-warning.png",
+        "sha256": "370fbebe10b63e73faac3e542603e1d3677e433ee140ea9dafb174b50ea93c75"
+      },
+      {
+        "stage": 4,
+        "id": "hazard-active",
+        "file": "frames/map-4-hazard-active.png",
+        "sha256": "8e2df540a231f810923e4ceed4263c0d2ceb14128ab3540f4775fd6fdd69616d"
+      },
+      {
+        "stage": 5,
+        "id": "route-0",
+        "file": "frames/map-5-route-0.png",
+        "sha256": "dfe308733975f3a26a4028a66bb1f548bd651e78de64e541a7723cf1831a63d0"
+      },
+      {
+        "stage": 5,
+        "id": "route-1",
+        "file": "frames/map-5-route-1.png",
+        "sha256": "8a4df6d1dbe276e6321551b97b2a5b794fa0f87664a1ffc9ee0aa6932c3e0e50"
+      },
+      {
+        "stage": 5,
+        "id": "route-2",
+        "file": "frames/map-5-route-2.png",
+        "sha256": "cc090f54129141d8f1cdd8eee041fd4d1e2cc8693c3dbf1463283af883e60ab3"
+      },
+      {
+        "stage": 5,
+        "id": "route-3",
+        "file": "frames/map-5-route-3.png",
+        "sha256": "ddb767721759581529a3d0fa34d09555226a41ae5899ad026a6ccd7c8418dcce"
+      },
+      {
+        "stage": 5,
+        "id": "boss",
+        "file": "frames/map-5-boss.png",
+        "sha256": "c51d20d48610970d3c8b66d8991706464851b8cf27694a80b24e2e37ae0e1f01"
+      },
+      {
+        "stage": 5,
+        "id": "clear",
+        "file": "frames/map-5-clear.png",
+        "sha256": "55def075c7c4a950124691871c4ac030a43d12e7b1d05308fbfabb8a4775a81b"
+      },
+      {
+        "stage": 5,
+        "id": "supplies",
+        "file": "frames/map-5-supplies.png",
+        "sha256": "5d1d31fbc3090697d88e3852546031783313b7bb7c87ea98779d29c9c3295942"
+      },
+      {
+        "stage": 5,
+        "id": "hazard-quiet",
+        "file": "frames/map-5-hazard-quiet.png",
+        "sha256": "7587209d8f6c15ed279befbdbf96c601e6af4eb5246e97fa529fe7c74e95fd21"
+      },
+      {
+        "stage": 5,
+        "id": "hazard-warning",
+        "file": "frames/map-5-hazard-warning.png",
+        "sha256": "2859819f786725ba3a76e1d6ad6514a1852445b091e5741b357701fc67a96387"
+      },
+      {
+        "stage": 5,
+        "id": "hazard-active",
+        "file": "frames/map-5-hazard-active.png",
+        "sha256": "f6d3b180d237602e02ec601e327b6061e47b30a7020c127360c7f1768ab109b0"
+      },
+      {
+        "stage": 6,
+        "id": "route-0",
+        "file": "frames/map-6-route-0.png",
+        "sha256": "b81ecc60fa8cee3adb02e89d0217282cf150341cd5804b8994d1086b22ebfe78"
+      },
+      {
+        "stage": 6,
+        "id": "route-1",
+        "file": "frames/map-6-route-1.png",
+        "sha256": "c48f9c7aa6a35d01c44feebb60ac201b713dbd763fd65b3db325a4b40884aad8"
+      },
+      {
+        "stage": 6,
+        "id": "route-2",
+        "file": "frames/map-6-route-2.png",
+        "sha256": "105e3d423aab38f56c694a25199bf28404e7351021efdc355a6597f9cfe99ee0"
+      },
+      {
+        "stage": 6,
+        "id": "route-3",
+        "file": "frames/map-6-route-3.png",
+        "sha256": "e3b003f723fa3e64ef0140e7544e2900560b0545004b3dc33c74db4ced89182a"
+      },
+      {
+        "stage": 6,
+        "id": "boss",
+        "file": "frames/map-6-boss.png",
+        "sha256": "dc851ed9f61644cfcfe0ea9628ab59b0749767fbebbe9b854a5a672e21876911"
+      },
+      {
+        "stage": 6,
+        "id": "clear",
+        "file": "frames/map-6-clear.png",
+        "sha256": "8881283c752ffbbeebc4485cc0939f91cb2156b62b0b74a3fe4c47eaab712d0c"
+      },
+      {
+        "stage": 6,
+        "id": "supplies",
+        "file": "frames/map-6-supplies.png",
+        "sha256": "536d1d27b788b8c7d941c4751f9b272636ee4f6bf59e5eac9de573b5f4073c40"
+      },
+      {
+        "stage": 7,
+        "id": "route-0",
+        "file": "frames/map-7-route-0.png",
+        "sha256": "e5e99e9e8b5555ba4497938826edd922bcb7c5adf8c16714c9c3b3d1e493254c"
+      },
+      {
+        "stage": 7,
+        "id": "route-1",
+        "file": "frames/map-7-route-1.png",
+        "sha256": "e63322dcb325d92d2a6311cefc32ce4d451552e7b65e6681b48cc7847259c04d"
+      },
+      {
+        "stage": 7,
+        "id": "route-2",
+        "file": "frames/map-7-route-2.png",
+        "sha256": "e6774a8feb9bb0520730f366f998dc0d0b8a9a29771573b640bbeea47b3add51"
+      },
+      {
+        "stage": 7,
+        "id": "route-3",
+        "file": "frames/map-7-route-3.png",
+        "sha256": "e1b89a3e976a8fb29b181b8447ada139c939ca3ba2a012c4d34159c0c03ebe20"
+      },
+      {
+        "stage": 7,
+        "id": "boss",
+        "file": "frames/map-7-boss.png",
+        "sha256": "b88584c52da3985cdc6ede7e20a15344d9b181ef14f9a26e960ed94948393214"
+      },
+      {
+        "stage": 7,
+        "id": "clear",
+        "file": "frames/map-7-clear.png",
+        "sha256": "94ea834008b67d9b154c5484b757671e90894f4b35bdae43b28c9c1f897d8da9"
+      },
+      {
+        "stage": 7,
+        "id": "supplies",
+        "file": "frames/map-7-supplies.png",
+        "sha256": "163ff2c1f3c2442747031615a3a41bff91ec89b08d44b2663446c720deb2ee83"
+      },
+      {
+        "stage": 7,
+        "id": "support",
+        "file": "frames/map-7-support.png",
+        "sha256": "9f6d738a41fb5ff8fb14d4191b0d6555ada007129e604a01addcf4aad83b624e"
+      },
+      {
+        "stage": 8,
+        "id": "route-0",
+        "file": "frames/map-8-route-0.png",
+        "sha256": "76fec205ce3a922ad32b2401f01a30e135aec4c827fb6f7d69f19083e3ac6252"
+      },
+      {
+        "stage": 8,
+        "id": "route-1",
+        "file": "frames/map-8-route-1.png",
+        "sha256": "828da20a8fc1e4226cd26f35dfd1cec1a8246e82ea40c0d36f8235d87a129c51"
+      },
+      {
+        "stage": 8,
+        "id": "route-2",
+        "file": "frames/map-8-route-2.png",
+        "sha256": "946955d4c9ee25af67af3d9c2f9fa707aef4d15f7deff39383d3cd18bc62aa6d"
+      },
+      {
+        "stage": 8,
+        "id": "route-3",
+        "file": "frames/map-8-route-3.png",
+        "sha256": "3d370d3631d764f11dc6550c8999ac134c05a2b20826ad183be51d379507d772"
+      },
+      {
+        "stage": 8,
+        "id": "boss",
+        "file": "frames/map-8-boss.png",
+        "sha256": "c4626f4a00f63f4b749ab05eb48207e31547f24fe358c2b3045bb6945feb544d"
+      },
+      {
+        "stage": 8,
+        "id": "clear",
+        "file": "frames/map-8-clear.png",
+        "sha256": "6d776143424bd004f13bb77cf1f104f6206bc7a47f902102e496a6754a993fbc"
+      },
+      {
+        "stage": 8,
+        "id": "supplies",
+        "file": "frames/map-8-supplies.png",
+        "sha256": "80fe2a55418d4a45798d0b03f8f40a4568912ee42a33ec430c61986075a3b606"
+      },
+      {
+        "stage": 9,
+        "id": "route-0",
+        "file": "frames/map-9-route-0.png",
+        "sha256": "f1d028def3cb72aa01203f35d06b855b234acf63f4e9f44a8f19caca216bc6fe"
+      },
+      {
+        "stage": 9,
+        "id": "route-1",
+        "file": "frames/map-9-route-1.png",
+        "sha256": "8839278e83b4832058d8a616ab1dcadc7870d553d5481b48eebf9349db549d06"
+      },
+      {
+        "stage": 9,
+        "id": "route-2",
+        "file": "frames/map-9-route-2.png",
+        "sha256": "bafd1d5fae2319bc7bacfac736085350c6f93af35585f8d581abd41bd41ba6c1"
+      },
+      {
+        "stage": 9,
+        "id": "route-3",
+        "file": "frames/map-9-route-3.png",
+        "sha256": "1d6091ec1e980ea974e48e40d15763f974c32adea595adba928ccf4640ac8bcb"
+      },
+      {
+        "stage": 9,
+        "id": "boss",
+        "file": "frames/map-9-boss.png",
+        "sha256": "ad7fb425ba37208dade4aa170229d747046cccd2fc4b3ccdbd51623a13dbcbc6"
+      },
+      {
+        "stage": 9,
+        "id": "clear",
+        "file": "frames/map-9-clear.png",
+        "sha256": "81cab65c952766f0212c0b5593219bb6fdef3a104e3e5bd5ef917a55907be84b"
+      },
+      {
+        "stage": 9,
+        "id": "supplies",
+        "file": "frames/map-9-supplies.png",
+        "sha256": "9d282df6fb998fa07bdc10f3523355e995961ee90fc71c03f03b77b53d45ddd2"
+      },
+      {
+        "stage": 9,
+        "id": "support",
+        "file": "frames/map-9-support.png",
+        "sha256": "a32cbd46d835e94b3db478aeda8e51d71129a00ffd7f0f2c7e00d1f43e6632d1"
+      },
+      {
+        "stage": 10,
+        "id": "route-0",
+        "file": "frames/map-10-route-0.png",
+        "sha256": "1535df949dfe147c6c5c5f03ada0677f8e7be21d6822d1110fc244e2e94a621a"
+      },
+      {
+        "stage": 10,
+        "id": "route-1",
+        "file": "frames/map-10-route-1.png",
+        "sha256": "0b9c03c24ca6430b696d6369942512d8ef59f6ffa9da2bbe290a34b2e00e4a75"
+      },
+      {
+        "stage": 10,
+        "id": "route-2",
+        "file": "frames/map-10-route-2.png",
+        "sha256": "ffc2860eb6569d871b9cad2066595be5c3d8cbec29bd69d6dbf4e09b4155c7d5"
+      },
+      {
+        "stage": 10,
+        "id": "route-3",
+        "file": "frames/map-10-route-3.png",
+        "sha256": "b842a7bef7746e660198b60fba5d1b7f5d5d12f0c3c421fa6fffee279c1cf765"
+      },
+      {
+        "stage": 10,
+        "id": "boss",
+        "file": "frames/map-10-boss.png",
+        "sha256": "1d7ab9eec5155f6d51f26c94c08f759949ff1ee9580c8ebf2436c336e049d7db"
+      },
+      {
+        "stage": 10,
+        "id": "clear",
+        "file": "frames/map-10-clear.png",
+        "sha256": "cbc8b17c7e4802e8fbb79363b9d290b9e1999429204ce52085db7086fef51d06"
+      },
+      {
+        "stage": 10,
+        "id": "supplies",
+        "file": "frames/map-10-supplies.png",
+        "sha256": "9e5f2ba9cf30a92eea2bab9a8a0b11ee28c34580709695095809f4be1fbb03d0"
+      },
+      {
+        "stage": 10,
+        "id": "hazard-quiet",
+        "file": "frames/map-10-hazard-quiet.png",
+        "sha256": "76797ae1cd32bca1bacbdd03499210f67416d3cfc8ac0aa99ca3a5a7744476aa"
+      },
+      {
+        "stage": 10,
+        "id": "hazard-warning",
+        "file": "frames/map-10-hazard-warning.png",
+        "sha256": "4e006744a94f68eb306e0d46b33619b620956e27204d2c78eb837738f7898558"
+      },
+      {
+        "stage": 10,
+        "id": "hazard-active",
+        "file": "frames/map-10-hazard-active.png",
+        "sha256": "4a666ae655a4992444c1baa022dbde9f257b07d796bc3b65b3ffc70ea9a9ea68"
+      },
+      {
+        "stage": 11,
+        "id": "route-0",
+        "file": "frames/map-11-route-0.png",
+        "sha256": "dc8bc5441e99616abb5daeee3341da0c3c3ffb5c85babff44889db9a5b4adbb5"
+      },
+      {
+        "stage": 11,
+        "id": "route-1",
+        "file": "frames/map-11-route-1.png",
+        "sha256": "9283eafa5f8d908d770d6fd6fecb8e302409101a29a5f20a5d84379d5a9075fb"
+      },
+      {
+        "stage": 11,
+        "id": "route-2",
+        "file": "frames/map-11-route-2.png",
+        "sha256": "37b19ad151db7b07da876e4dc4fb96daeccf95cbb046f16e0375c7b5b91ef791"
+      },
+      {
+        "stage": 11,
+        "id": "route-3",
+        "file": "frames/map-11-route-3.png",
+        "sha256": "3154546958a8647789a96ebe6a46234c22d63bfef8ae0f740b5443cdd0088143"
+      },
+      {
+        "stage": 11,
+        "id": "boss",
+        "file": "frames/map-11-boss.png",
+        "sha256": "8cb28eb34b357a440ae018c8024a2e09a13a38a7e9b8eaf0d9cd3c36e8673a7f"
+      },
+      {
+        "stage": 11,
+        "id": "clear",
+        "file": "frames/map-11-clear.png",
+        "sha256": "f93e9047390aed940d7521bf32e2124ea3569f387d9d94568568320d9898a46a"
+      },
+      {
+        "stage": 11,
+        "id": "supplies",
+        "file": "frames/map-11-supplies.png",
+        "sha256": "f9121c387abfe71e141aa5982ad8f4a8ad182646d506da9eb1cdbda0dbcc6678"
+      },
+      {
+        "stage": 12,
+        "id": "route-0",
+        "file": "frames/map-12-route-0.png",
+        "sha256": "772893f582bdbe143792015306e86f285c1e6d229629b7598509643f4d0c88ca"
+      },
+      {
+        "stage": 12,
+        "id": "route-1",
+        "file": "frames/map-12-route-1.png",
+        "sha256": "86e7a8a658ed4df909d375e4d53a79410383c7a5bab2a8b26aad8239f148c6f6"
+      },
+      {
+        "stage": 12,
+        "id": "route-2",
+        "file": "frames/map-12-route-2.png",
+        "sha256": "dd974cbbb7e8de27ac3db299be8bfb92ff2a0dff5fb692d709623b1fcd90535b"
+      },
+      {
+        "stage": 12,
+        "id": "route-3",
+        "file": "frames/map-12-route-3.png",
+        "sha256": "f19b3011d91edb99251a665065162dd45504765c795fa33bfa02dafeea05a78d"
+      },
+      {
+        "stage": 12,
+        "id": "boss",
+        "file": "frames/map-12-boss.png",
+        "sha256": "efc7ea4fed306ff18276625b1573358a987ff806af30cd224dc8ecdb20606817"
+      },
+      {
+        "stage": 12,
+        "id": "clear",
+        "file": "frames/map-12-clear.png",
+        "sha256": "de0a1ca94b4575a431998dc8ba7d986bedf63c987e94e1731f4ba49ed3789c1b"
+      },
+      {
+        "stage": 12,
+        "id": "supplies",
+        "file": "frames/map-12-supplies.png",
+        "sha256": "f3fcf8739e39b097b191d8197ec7d2f9d98086fe12d01d8c122cd4d69271f232"
+      },
+      {
+        "stage": 12,
+        "id": "hazard-quiet",
+        "file": "frames/map-12-hazard-quiet.png",
+        "sha256": "fd52b9a2d06f111d2e217013584d1be7d71e8b9399e834a188bfd1c19d34177f"
+      },
+      {
+        "stage": 12,
+        "id": "hazard-warning",
+        "file": "frames/map-12-hazard-warning.png",
+        "sha256": "42a19cb946bcbcc9b73176fef23cc51b620b3cfb101472ba00bb6e1d19d4a63b"
+      },
+      {
+        "stage": 12,
+        "id": "hazard-active",
+        "file": "frames/map-12-hazard-active.png",
+        "sha256": "fbe60b5ea62c3191ae012369a587bdb1ee4489b58fa47de75736e2683a92f75d"
+      },
+      {
+        "stage": 13,
+        "id": "route-0",
+        "file": "frames/map-13-route-0.png",
+        "sha256": "5ad5f2ac74ef112c685e309647db6853863f8275fe355bf3a77591dbf28d5080"
+      },
+      {
+        "stage": 13,
+        "id": "route-1",
+        "file": "frames/map-13-route-1.png",
+        "sha256": "3f70ca47a9ba855165e70c074770c5ee982a4cc58d39f0923cc9d975afd8c06a"
+      },
+      {
+        "stage": 13,
+        "id": "route-2",
+        "file": "frames/map-13-route-2.png",
+        "sha256": "c108feb6d0a7389b85281bf2d627851ddee76130eee4c5178792be831ed149d0"
+      },
+      {
+        "stage": 13,
+        "id": "route-3",
+        "file": "frames/map-13-route-3.png",
+        "sha256": "312c808a4acbafa97d77cec7b7c637de252b10fd145c7ca4c2198aa99eaefeba"
+      },
+      {
+        "stage": 13,
+        "id": "boss",
+        "file": "frames/map-13-boss.png",
+        "sha256": "617ceb0304d7b84c6b7bc7d60a1ddc2bb398b1ef1343641a04492780e1f43d1e"
+      },
+      {
+        "stage": 13,
+        "id": "clear",
+        "file": "frames/map-13-clear.png",
+        "sha256": "70405eb0db934fef7d8aff183b359db0bcb44cda57cf278b5b89ec74d42ef0b0"
+      },
+      {
+        "stage": 13,
+        "id": "supplies",
+        "file": "frames/map-13-supplies.png",
+        "sha256": "c85f0290359c8ab479d0f0c25730601756db4118230013614909464db576d235"
+      },
+      {
+        "stage": 13,
+        "id": "support",
+        "file": "frames/map-13-support.png",
+        "sha256": "c63e211fba774ecce3913695d95d0e6d08ea4056b8c0fa0ca03290ca2ceb04ec"
+      },
+      {
+        "stage": 14,
+        "id": "route-0",
+        "file": "frames/map-14-route-0.png",
+        "sha256": "e392d88ebb2cbfb8ac0da0191b833f25ed94aad1c5b57527ec4c5801f76b8cee"
+      },
+      {
+        "stage": 14,
+        "id": "route-1",
+        "file": "frames/map-14-route-1.png",
+        "sha256": "5e6837e3641faa6aa12769121f73dcc479827f1c1b0baf25694b5dcbf5fe7d5d"
+      },
+      {
+        "stage": 14,
+        "id": "route-2",
+        "file": "frames/map-14-route-2.png",
+        "sha256": "b44101fa0cd15eb6e46307f7bfa9d9f09c246b8fc82e6f47e2714dc5a0c55d11"
+      },
+      {
+        "stage": 14,
+        "id": "route-3",
+        "file": "frames/map-14-route-3.png",
+        "sha256": "bafed80deb7a4bac96d3b57239028a746d67057242e0145ae33de28b3e9a9f96"
+      },
+      {
+        "stage": 14,
+        "id": "boss",
+        "file": "frames/map-14-boss.png",
+        "sha256": "122da01fd882a74980e05b366aa2d192c9f4da1f259f16330d3cf30d9ec8f396"
+      },
+      {
+        "stage": 14,
+        "id": "clear",
+        "file": "frames/map-14-clear.png",
+        "sha256": "aedfe9de8555630576447fb2daccc4b8a5bf3854836e092fd6f1956d6a15561a"
+      },
+      {
+        "stage": 14,
+        "id": "supplies",
+        "file": "frames/map-14-supplies.png",
+        "sha256": "5453440437e6e4cb95732c734d78e3f834c461a5cf39d1939dd47bcf417c73fd"
+      }
+    ]
+  },
+  "after": {
+    "entrySHA256": "d837b01aacee590ced313f19358538c38c371c7a2627b0d05cc88a1be4706182",
+    "maps": 15,
+    "frames": 126,
+    "images": [
+      {
+        "stage": 0,
+        "id": "route-0",
+        "file": "frames/map-0-route-0.png",
+        "sha256": "5af1df363e45287f210c85b0a548646441299d2bd6f0009f617b12ba41b8f950"
+      },
+      {
+        "stage": 0,
+        "id": "route-1",
+        "file": "frames/map-0-route-1.png",
+        "sha256": "c7cc8233b692c2d5d4e1036924066ef0008b23e0f3607e252a0f132f7dcb14de"
+      },
+      {
+        "stage": 0,
+        "id": "route-2",
+        "file": "frames/map-0-route-2.png",
+        "sha256": "60db288efd3530ffa6667735afd358a1b7649a723711d8a05e93d64d3ec5ddfc"
+      },
+      {
+        "stage": 0,
+        "id": "route-3",
+        "file": "frames/map-0-route-3.png",
+        "sha256": "ce07972da70964a11c04a5536c7a68944e029bf201ef0c003932ffa1fd88f697"
+      },
+      {
+        "stage": 0,
+        "id": "boss",
+        "file": "frames/map-0-boss.png",
+        "sha256": "59fc731109139e87ac01cf19425dfc8c3d80ebf8082e7c913abe5f6ddcfbe909"
+      },
+      {
+        "stage": 0,
+        "id": "clear",
+        "file": "frames/map-0-clear.png",
+        "sha256": "b97da3cc4a35b25ad2eadbe98acdee84af56448e433da58892b047366866ad7a"
+      },
+      {
+        "stage": 0,
+        "id": "supplies",
+        "file": "frames/map-0-supplies.png",
+        "sha256": "bd60feee0e6ca332340d209c33020600b0943455ca5e769d6e1eaf82a9226313"
+      },
+      {
+        "stage": 1,
+        "id": "route-0",
+        "file": "frames/map-1-route-0.png",
+        "sha256": "7716253957c35a9365fe4a7edbd3641f1d0db17e8ef28cec78e88ec33dc14d1c"
+      },
+      {
+        "stage": 1,
+        "id": "route-1",
+        "file": "frames/map-1-route-1.png",
+        "sha256": "0c5c28ab136a15534630a2bb15370bd8e2cb5f9eb1e82d906878c3819be33ef8"
+      },
+      {
+        "stage": 1,
+        "id": "route-2",
+        "file": "frames/map-1-route-2.png",
+        "sha256": "307270c4b930aff3e38033eae8d9092b2787a6ce61db1255cc56c98608a8c927"
+      },
+      {
+        "stage": 1,
+        "id": "route-3",
+        "file": "frames/map-1-route-3.png",
+        "sha256": "9a036da3b6c3ad49b9100ddd6ee1229c0ec60e71f0096774f4568ea246929ec5"
+      },
+      {
+        "stage": 1,
+        "id": "boss",
+        "file": "frames/map-1-boss.png",
+        "sha256": "b35588baf0d6e81dd34b83f1968798d6345065caecfcc03b8fb846a64139bbbb"
+      },
+      {
+        "stage": 1,
+        "id": "clear",
+        "file": "frames/map-1-clear.png",
+        "sha256": "3053dd7124e76af6dccd3b7574aad8f2dea9e01327c0633ea7385d2be510132f"
+      },
+      {
+        "stage": 1,
+        "id": "supplies",
+        "file": "frames/map-1-supplies.png",
+        "sha256": "440277fa49151797e09e28b853a2d73eecfa2b224f918804cc2c24dbe503daeb"
+      },
+      {
+        "stage": 1,
+        "id": "fragile-cracking",
+        "file": "frames/map-1-fragile-cracking.png",
+        "sha256": "546204f921285065c4e9bc9394e94292066845fbd91d5c864c5ceaa20762d1d4"
+      },
+      {
+        "stage": 1,
+        "id": "fragile-broken",
+        "file": "frames/map-1-fragile-broken.png",
+        "sha256": "a6caf47a673653d176c81879d7b4b75f8e84c77a7e878ca05d63628716f56fc8"
+      },
+      {
+        "stage": 1,
+        "id": "support",
+        "file": "frames/map-1-support.png",
+        "sha256": "72b0f80dce7a0da70444e3456e03d1836bc10a6ed5d094066907399159347462"
+      },
+      {
+        "stage": 2,
+        "id": "route-0",
+        "file": "frames/map-2-route-0.png",
+        "sha256": "bbecf20ca13862ea5515e536251038d4b22d291ca4b3ab73d830ba38b95fd481"
+      },
+      {
+        "stage": 2,
+        "id": "route-1",
+        "file": "frames/map-2-route-1.png",
+        "sha256": "ec59978de43c4603d7f5d50564342aa9c09af536309dd7fb89c6284fc9fcd0d3"
+      },
+      {
+        "stage": 2,
+        "id": "route-2",
+        "file": "frames/map-2-route-2.png",
+        "sha256": "0f7365df30b5dfc66ceb6f8f0bf18d3507efda7f0edc393e0d97da10c3aea8cf"
+      },
+      {
+        "stage": 2,
+        "id": "route-3",
+        "file": "frames/map-2-route-3.png",
+        "sha256": "b642bbdf7c819c0fd10211e7463a7192125771c516fd87fe269849d5feb62262"
+      },
+      {
+        "stage": 2,
+        "id": "boss",
+        "file": "frames/map-2-boss.png",
+        "sha256": "f84e02924d1d6278209ddf56c0e51782b03c65ba916498e1a43f4b9c7c785ff7"
+      },
+      {
+        "stage": 2,
+        "id": "clear",
+        "file": "frames/map-2-clear.png",
+        "sha256": "444348744cc82e9e5f6ba91e09ef69afddc5c6a8f4278cbd587aef4b3ba047d6"
+      },
+      {
+        "stage": 2,
+        "id": "supplies",
+        "file": "frames/map-2-supplies.png",
+        "sha256": "b8ee0a9ca3ad92de9c8517059146d7bc3d0b5206f7400838ffc4ddd561c14242"
+      },
+      {
+        "stage": 3,
+        "id": "route-0",
+        "file": "frames/map-3-route-0.png",
+        "sha256": "9007df9e764647d2c08b3e2ddfd9cfca60f1083e993dc452eac153010f3d7379"
+      },
+      {
+        "stage": 3,
+        "id": "route-1",
+        "file": "frames/map-3-route-1.png",
+        "sha256": "ce46987d202ed5697b17cc7fcfb4e283b4de0b9d6295c661484094ce2c2215ea"
+      },
+      {
+        "stage": 3,
+        "id": "route-2",
+        "file": "frames/map-3-route-2.png",
+        "sha256": "a34a6a0090c6ecc6b7a14bcafc38b3ad5a364e55959a2ce1ee30fe312be70bfe"
+      },
+      {
+        "stage": 3,
+        "id": "route-3",
+        "file": "frames/map-3-route-3.png",
+        "sha256": "e6e124fe7b85394a86b56e796ef90714914a74391294382ccbf8f608220ce923"
+      },
+      {
+        "stage": 3,
+        "id": "boss",
+        "file": "frames/map-3-boss.png",
+        "sha256": "a6d80e6f675e1b371290643ad21711edd1c30eb783e7d848f41d58224a0b9884"
+      },
+      {
+        "stage": 3,
+        "id": "clear",
+        "file": "frames/map-3-clear.png",
+        "sha256": "293dd659b205c6ee66a2256dd5c30d71586efc34e23eefab2eb48aa755050e0b"
+      },
+      {
+        "stage": 3,
+        "id": "supplies",
+        "file": "frames/map-3-supplies.png",
+        "sha256": "8b28b8a3b746d76cbeeb13eecb10abeb737db81f809d1e5db598814c88f28770"
+      },
+      {
+        "stage": 3,
+        "id": "hazard-quiet",
+        "file": "frames/map-3-hazard-quiet.png",
+        "sha256": "6930e40613fd82461bcceb925823af8726b5a790397af1ba8aafdeb343b34682"
+      },
+      {
+        "stage": 3,
+        "id": "hazard-warning",
+        "file": "frames/map-3-hazard-warning.png",
+        "sha256": "de2218391254d5a2e04d2bf77e10a089dede34778ca749ac724e83fa2debd1ac"
+      },
+      {
+        "stage": 3,
+        "id": "hazard-active",
+        "file": "frames/map-3-hazard-active.png",
+        "sha256": "3337e5d4bd6b07b016952f220695bd94e2228f839acec52342f4197b5bf3322c"
+      },
+      {
+        "stage": 4,
+        "id": "route-0",
+        "file": "frames/map-4-route-0.png",
+        "sha256": "d5911308306f3aa90b94393031b6377590bbf426472c9729ea72637bbed127c7"
+      },
+      {
+        "stage": 4,
+        "id": "route-1",
+        "file": "frames/map-4-route-1.png",
+        "sha256": "e7dfa430b48c08b7e3457b48fc119f701fefc0b7224c525e4a9d80a5b90ea7dc"
+      },
+      {
+        "stage": 4,
+        "id": "route-2",
+        "file": "frames/map-4-route-2.png",
+        "sha256": "832a7bc08a9eebd8da0c840bcc8b211dbc3dfdfd981b6f6aefb71cc9fdbc7cc0"
+      },
+      {
+        "stage": 4,
+        "id": "route-3",
+        "file": "frames/map-4-route-3.png",
+        "sha256": "2035d00b7ae5be3d0d03ff1029ab0d454055be37b69e8eaed986c4660242913c"
+      },
+      {
+        "stage": 4,
+        "id": "boss",
+        "file": "frames/map-4-boss.png",
+        "sha256": "de466344084325a7f1e050918a7d79cf5f9df6ac8091528d08970be54d0ac6d4"
+      },
+      {
+        "stage": 4,
+        "id": "clear",
+        "file": "frames/map-4-clear.png",
+        "sha256": "293dd659b205c6ee66a2256dd5c30d71586efc34e23eefab2eb48aa755050e0b"
+      },
+      {
+        "stage": 4,
+        "id": "supplies",
+        "file": "frames/map-4-supplies.png",
+        "sha256": "08958e9400f507e1e85ad9221b4904dcaff737a24b44e0f938ff50508c7156af"
+      },
+      {
+        "stage": 4,
+        "id": "hazard-quiet",
+        "file": "frames/map-4-hazard-quiet.png",
+        "sha256": "7bf195e223a80b5733a7f7f6893097b4e7ab2331f7f66da1353f016239ca4299"
+      },
+      {
+        "stage": 4,
+        "id": "hazard-warning",
+        "file": "frames/map-4-hazard-warning.png",
+        "sha256": "370fbebe10b63e73faac3e542603e1d3677e433ee140ea9dafb174b50ea93c75"
+      },
+      {
+        "stage": 4,
+        "id": "hazard-active",
+        "file": "frames/map-4-hazard-active.png",
+        "sha256": "8e2df540a231f810923e4ceed4263c0d2ceb14128ab3540f4775fd6fdd69616d"
+      },
+      {
+        "stage": 5,
+        "id": "route-0",
+        "file": "frames/map-5-route-0.png",
+        "sha256": "dfe308733975f3a26a4028a66bb1f548bd651e78de64e541a7723cf1831a63d0"
+      },
+      {
+        "stage": 5,
+        "id": "route-1",
+        "file": "frames/map-5-route-1.png",
+        "sha256": "8a4df6d1dbe276e6321551b97b2a5b794fa0f87664a1ffc9ee0aa6932c3e0e50"
+      },
+      {
+        "stage": 5,
+        "id": "route-2",
+        "file": "frames/map-5-route-2.png",
+        "sha256": "cc090f54129141d8f1cdd8eee041fd4d1e2cc8693c3dbf1463283af883e60ab3"
+      },
+      {
+        "stage": 5,
+        "id": "route-3",
+        "file": "frames/map-5-route-3.png",
+        "sha256": "ddb767721759581529a3d0fa34d09555226a41ae5899ad026a6ccd7c8418dcce"
+      },
+      {
+        "stage": 5,
+        "id": "boss",
+        "file": "frames/map-5-boss.png",
+        "sha256": "c51d20d48610970d3c8b66d8991706464851b8cf27694a80b24e2e37ae0e1f01"
+      },
+      {
+        "stage": 5,
+        "id": "clear",
+        "file": "frames/map-5-clear.png",
+        "sha256": "55def075c7c4a950124691871c4ac030a43d12e7b1d05308fbfabb8a4775a81b"
+      },
+      {
+        "stage": 5,
+        "id": "supplies",
+        "file": "frames/map-5-supplies.png",
+        "sha256": "5d1d31fbc3090697d88e3852546031783313b7bb7c87ea98779d29c9c3295942"
+      },
+      {
+        "stage": 5,
+        "id": "hazard-quiet",
+        "file": "frames/map-5-hazard-quiet.png",
+        "sha256": "7587209d8f6c15ed279befbdbf96c601e6af4eb5246e97fa529fe7c74e95fd21"
+      },
+      {
+        "stage": 5,
+        "id": "hazard-warning",
+        "file": "frames/map-5-hazard-warning.png",
+        "sha256": "2859819f786725ba3a76e1d6ad6514a1852445b091e5741b357701fc67a96387"
+      },
+      {
+        "stage": 5,
+        "id": "hazard-active",
+        "file": "frames/map-5-hazard-active.png",
+        "sha256": "f6d3b180d237602e02ec601e327b6061e47b30a7020c127360c7f1768ab109b0"
+      },
+      {
+        "stage": 6,
+        "id": "route-0",
+        "file": "frames/map-6-route-0.png",
+        "sha256": "b81ecc60fa8cee3adb02e89d0217282cf150341cd5804b8994d1086b22ebfe78"
+      },
+      {
+        "stage": 6,
+        "id": "route-1",
+        "file": "frames/map-6-route-1.png",
+        "sha256": "c48f9c7aa6a35d01c44feebb60ac201b713dbd763fd65b3db325a4b40884aad8"
+      },
+      {
+        "stage": 6,
+        "id": "route-2",
+        "file": "frames/map-6-route-2.png",
+        "sha256": "105e3d423aab38f56c694a25199bf28404e7351021efdc355a6597f9cfe99ee0"
+      },
+      {
+        "stage": 6,
+        "id": "route-3",
+        "file": "frames/map-6-route-3.png",
+        "sha256": "e3b003f723fa3e64ef0140e7544e2900560b0545004b3dc33c74db4ced89182a"
+      },
+      {
+        "stage": 6,
+        "id": "boss",
+        "file": "frames/map-6-boss.png",
+        "sha256": "dc851ed9f61644cfcfe0ea9628ab59b0749767fbebbe9b854a5a672e21876911"
+      },
+      {
+        "stage": 6,
+        "id": "clear",
+        "file": "frames/map-6-clear.png",
+        "sha256": "8881283c752ffbbeebc4485cc0939f91cb2156b62b0b74a3fe4c47eaab712d0c"
+      },
+      {
+        "stage": 6,
+        "id": "supplies",
+        "file": "frames/map-6-supplies.png",
+        "sha256": "536d1d27b788b8c7d941c4751f9b272636ee4f6bf59e5eac9de573b5f4073c40"
+      },
+      {
+        "stage": 7,
+        "id": "route-0",
+        "file": "frames/map-7-route-0.png",
+        "sha256": "e5e99e9e8b5555ba4497938826edd922bcb7c5adf8c16714c9c3b3d1e493254c"
+      },
+      {
+        "stage": 7,
+        "id": "route-1",
+        "file": "frames/map-7-route-1.png",
+        "sha256": "1393aab558f5e85aeeab004501683b7df4c02ff78d242ffdb4b98063238922cf"
+      },
+      {
+        "stage": 7,
+        "id": "route-2",
+        "file": "frames/map-7-route-2.png",
+        "sha256": "e6774a8feb9bb0520730f366f998dc0d0b8a9a29771573b640bbeea47b3add51"
+      },
+      {
+        "stage": 7,
+        "id": "route-3",
+        "file": "frames/map-7-route-3.png",
+        "sha256": "e1b89a3e976a8fb29b181b8447ada139c939ca3ba2a012c4d34159c0c03ebe20"
+      },
+      {
+        "stage": 7,
+        "id": "boss",
+        "file": "frames/map-7-boss.png",
+        "sha256": "b88584c52da3985cdc6ede7e20a15344d9b181ef14f9a26e960ed94948393214"
+      },
+      {
+        "stage": 7,
+        "id": "clear",
+        "file": "frames/map-7-clear.png",
+        "sha256": "94ea834008b67d9b154c5484b757671e90894f4b35bdae43b28c9c1f897d8da9"
+      },
+      {
+        "stage": 7,
+        "id": "supplies",
+        "file": "frames/map-7-supplies.png",
+        "sha256": "9bc6dd716c37c4ac2263d242a3c12167d51823a1dfd0a42ebec971be7c876005"
+      },
+      {
+        "stage": 7,
+        "id": "support",
+        "file": "frames/map-7-support.png",
+        "sha256": "2254b4329c771def56a10ef5df85719c572735b4fcd9fcf9c1da9a14510af08d"
+      },
+      {
+        "stage": 8,
+        "id": "route-0",
+        "file": "frames/map-8-route-0.png",
+        "sha256": "76fec205ce3a922ad32b2401f01a30e135aec4c827fb6f7d69f19083e3ac6252"
+      },
+      {
+        "stage": 8,
+        "id": "route-1",
+        "file": "frames/map-8-route-1.png",
+        "sha256": "828da20a8fc1e4226cd26f35dfd1cec1a8246e82ea40c0d36f8235d87a129c51"
+      },
+      {
+        "stage": 8,
+        "id": "route-2",
+        "file": "frames/map-8-route-2.png",
+        "sha256": "946955d4c9ee25af67af3d9c2f9fa707aef4d15f7deff39383d3cd18bc62aa6d"
+      },
+      {
+        "stage": 8,
+        "id": "route-3",
+        "file": "frames/map-8-route-3.png",
+        "sha256": "3d370d3631d764f11dc6550c8999ac134c05a2b20826ad183be51d379507d772"
+      },
+      {
+        "stage": 8,
+        "id": "boss",
+        "file": "frames/map-8-boss.png",
+        "sha256": "c4626f4a00f63f4b749ab05eb48207e31547f24fe358c2b3045bb6945feb544d"
+      },
+      {
+        "stage": 8,
+        "id": "clear",
+        "file": "frames/map-8-clear.png",
+        "sha256": "6d776143424bd004f13bb77cf1f104f6206bc7a47f902102e496a6754a993fbc"
+      },
+      {
+        "stage": 8,
+        "id": "supplies",
+        "file": "frames/map-8-supplies.png",
+        "sha256": "80fe2a55418d4a45798d0b03f8f40a4568912ee42a33ec430c61986075a3b606"
+      },
+      {
+        "stage": 9,
+        "id": "route-0",
+        "file": "frames/map-9-route-0.png",
+        "sha256": "f1d028def3cb72aa01203f35d06b855b234acf63f4e9f44a8f19caca216bc6fe"
+      },
+      {
+        "stage": 9,
+        "id": "route-1",
+        "file": "frames/map-9-route-1.png",
+        "sha256": "93e249795ccd6dcb879d60f8424562baa91ae31bbcdb57987876ae91b687d876"
+      },
+      {
+        "stage": 9,
+        "id": "route-2",
+        "file": "frames/map-9-route-2.png",
+        "sha256": "bafd1d5fae2319bc7bacfac736085350c6f93af35585f8d581abd41bd41ba6c1"
+      },
+      {
+        "stage": 9,
+        "id": "route-3",
+        "file": "frames/map-9-route-3.png",
+        "sha256": "1d6091ec1e980ea974e48e40d15763f974c32adea595adba928ccf4640ac8bcb"
+      },
+      {
+        "stage": 9,
+        "id": "boss",
+        "file": "frames/map-9-boss.png",
+        "sha256": "ad7fb425ba37208dade4aa170229d747046cccd2fc4b3ccdbd51623a13dbcbc6"
+      },
+      {
+        "stage": 9,
+        "id": "clear",
+        "file": "frames/map-9-clear.png",
+        "sha256": "81cab65c952766f0212c0b5593219bb6fdef3a104e3e5bd5ef917a55907be84b"
+      },
+      {
+        "stage": 9,
+        "id": "supplies",
+        "file": "frames/map-9-supplies.png",
+        "sha256": "bdab0a4e1b64f1cd906d990b81ecc61b4e96c3d3d918a761ee8ed207504b7854"
+      },
+      {
+        "stage": 9,
+        "id": "support",
+        "file": "frames/map-9-support.png",
+        "sha256": "d51b06cc1dec9ccdc42180634f98ccf753f807ea6c97941f91dc6088bce7cd6d"
+      },
+      {
+        "stage": 10,
+        "id": "route-0",
+        "file": "frames/map-10-route-0.png",
+        "sha256": "1535df949dfe147c6c5c5f03ada0677f8e7be21d6822d1110fc244e2e94a621a"
+      },
+      {
+        "stage": 10,
+        "id": "route-1",
+        "file": "frames/map-10-route-1.png",
+        "sha256": "0b9c03c24ca6430b696d6369942512d8ef59f6ffa9da2bbe290a34b2e00e4a75"
+      },
+      {
+        "stage": 10,
+        "id": "route-2",
+        "file": "frames/map-10-route-2.png",
+        "sha256": "ffc2860eb6569d871b9cad2066595be5c3d8cbec29bd69d6dbf4e09b4155c7d5"
+      },
+      {
+        "stage": 10,
+        "id": "route-3",
+        "file": "frames/map-10-route-3.png",
+        "sha256": "b842a7bef7746e660198b60fba5d1b7f5d5d12f0c3c421fa6fffee279c1cf765"
+      },
+      {
+        "stage": 10,
+        "id": "boss",
+        "file": "frames/map-10-boss.png",
+        "sha256": "1d7ab9eec5155f6d51f26c94c08f759949ff1ee9580c8ebf2436c336e049d7db"
+      },
+      {
+        "stage": 10,
+        "id": "clear",
+        "file": "frames/map-10-clear.png",
+        "sha256": "cbc8b17c7e4802e8fbb79363b9d290b9e1999429204ce52085db7086fef51d06"
+      },
+      {
+        "stage": 10,
+        "id": "supplies",
+        "file": "frames/map-10-supplies.png",
+        "sha256": "9e5f2ba9cf30a92eea2bab9a8a0b11ee28c34580709695095809f4be1fbb03d0"
+      },
+      {
+        "stage": 10,
+        "id": "hazard-quiet",
+        "file": "frames/map-10-hazard-quiet.png",
+        "sha256": "76797ae1cd32bca1bacbdd03499210f67416d3cfc8ac0aa99ca3a5a7744476aa"
+      },
+      {
+        "stage": 10,
+        "id": "hazard-warning",
+        "file": "frames/map-10-hazard-warning.png",
+        "sha256": "4e006744a94f68eb306e0d46b33619b620956e27204d2c78eb837738f7898558"
+      },
+      {
+        "stage": 10,
+        "id": "hazard-active",
+        "file": "frames/map-10-hazard-active.png",
+        "sha256": "4a666ae655a4992444c1baa022dbde9f257b07d796bc3b65b3ffc70ea9a9ea68"
+      },
+      {
+        "stage": 11,
+        "id": "route-0",
+        "file": "frames/map-11-route-0.png",
+        "sha256": "dc8bc5441e99616abb5daeee3341da0c3c3ffb5c85babff44889db9a5b4adbb5"
+      },
+      {
+        "stage": 11,
+        "id": "route-1",
+        "file": "frames/map-11-route-1.png",
+        "sha256": "9283eafa5f8d908d770d6fd6fecb8e302409101a29a5f20a5d84379d5a9075fb"
+      },
+      {
+        "stage": 11,
+        "id": "route-2",
+        "file": "frames/map-11-route-2.png",
+        "sha256": "37b19ad151db7b07da876e4dc4fb96daeccf95cbb046f16e0375c7b5b91ef791"
+      },
+      {
+        "stage": 11,
+        "id": "route-3",
+        "file": "frames/map-11-route-3.png",
+        "sha256": "3154546958a8647789a96ebe6a46234c22d63bfef8ae0f740b5443cdd0088143"
+      },
+      {
+        "stage": 11,
+        "id": "boss",
+        "file": "frames/map-11-boss.png",
+        "sha256": "8cb28eb34b357a440ae018c8024a2e09a13a38a7e9b8eaf0d9cd3c36e8673a7f"
+      },
+      {
+        "stage": 11,
+        "id": "clear",
+        "file": "frames/map-11-clear.png",
+        "sha256": "f93e9047390aed940d7521bf32e2124ea3569f387d9d94568568320d9898a46a"
+      },
+      {
+        "stage": 11,
+        "id": "supplies",
+        "file": "frames/map-11-supplies.png",
+        "sha256": "f9121c387abfe71e141aa5982ad8f4a8ad182646d506da9eb1cdbda0dbcc6678"
+      },
+      {
+        "stage": 12,
+        "id": "route-0",
+        "file": "frames/map-12-route-0.png",
+        "sha256": "772893f582bdbe143792015306e86f285c1e6d229629b7598509643f4d0c88ca"
+      },
+      {
+        "stage": 12,
+        "id": "route-1",
+        "file": "frames/map-12-route-1.png",
+        "sha256": "86e7a8a658ed4df909d375e4d53a79410383c7a5bab2a8b26aad8239f148c6f6"
+      },
+      {
+        "stage": 12,
+        "id": "route-2",
+        "file": "frames/map-12-route-2.png",
+        "sha256": "dd974cbbb7e8de27ac3db299be8bfb92ff2a0dff5fb692d709623b1fcd90535b"
+      },
+      {
+        "stage": 12,
+        "id": "route-3",
+        "file": "frames/map-12-route-3.png",
+        "sha256": "f19b3011d91edb99251a665065162dd45504765c795fa33bfa02dafeea05a78d"
+      },
+      {
+        "stage": 12,
+        "id": "boss",
+        "file": "frames/map-12-boss.png",
+        "sha256": "efc7ea4fed306ff18276625b1573358a987ff806af30cd224dc8ecdb20606817"
+      },
+      {
+        "stage": 12,
+        "id": "clear",
+        "file": "frames/map-12-clear.png",
+        "sha256": "de0a1ca94b4575a431998dc8ba7d986bedf63c987e94e1731f4ba49ed3789c1b"
+      },
+      {
+        "stage": 12,
+        "id": "supplies",
+        "file": "frames/map-12-supplies.png",
+        "sha256": "f3fcf8739e39b097b191d8197ec7d2f9d98086fe12d01d8c122cd4d69271f232"
+      },
+      {
+        "stage": 12,
+        "id": "hazard-quiet",
+        "file": "frames/map-12-hazard-quiet.png",
+        "sha256": "fd52b9a2d06f111d2e217013584d1be7d71e8b9399e834a188bfd1c19d34177f"
+      },
+      {
+        "stage": 12,
+        "id": "hazard-warning",
+        "file": "frames/map-12-hazard-warning.png",
+        "sha256": "42a19cb946bcbcc9b73176fef23cc51b620b3cfb101472ba00bb6e1d19d4a63b"
+      },
+      {
+        "stage": 12,
+        "id": "hazard-active",
+        "file": "frames/map-12-hazard-active.png",
+        "sha256": "fbe60b5ea62c3191ae012369a587bdb1ee4489b58fa47de75736e2683a92f75d"
+      },
+      {
+        "stage": 13,
+        "id": "route-0",
+        "file": "frames/map-13-route-0.png",
+        "sha256": "5ad5f2ac74ef112c685e309647db6853863f8275fe355bf3a77591dbf28d5080"
+      },
+      {
+        "stage": 13,
+        "id": "route-1",
+        "file": "frames/map-13-route-1.png",
+        "sha256": "3f70ca47a9ba855165e70c074770c5ee982a4cc58d39f0923cc9d975afd8c06a"
+      },
+      {
+        "stage": 13,
+        "id": "route-2",
+        "file": "frames/map-13-route-2.png",
+        "sha256": "19d6e1185b7d87710ecf6e007c0aaafdf9b62f5a608a50f6612d76ac3dcca836"
+      },
+      {
+        "stage": 13,
+        "id": "route-3",
+        "file": "frames/map-13-route-3.png",
+        "sha256": "1dbf2b3abcd0be950b15b496f6fa06f248ae0afc4be9e5a5d79c66504f67a5f5"
+      },
+      {
+        "stage": 13,
+        "id": "boss",
+        "file": "frames/map-13-boss.png",
+        "sha256": "1b0fc286744123c560389acba0814228e666427c503806f1acbb82ee4fb00ebd"
+      },
+      {
+        "stage": 13,
+        "id": "clear",
+        "file": "frames/map-13-clear.png",
+        "sha256": "1a3558923dd49744e0f8b95982861cf4b5011b4710b865eb2a7f53488ad64053"
+      },
+      {
+        "stage": 13,
+        "id": "supplies",
+        "file": "frames/map-13-supplies.png",
+        "sha256": "c85f0290359c8ab479d0f0c25730601756db4118230013614909464db576d235"
+      },
+      {
+        "stage": 13,
+        "id": "support",
+        "file": "frames/map-13-support.png",
+        "sha256": "a39a2a751a9daabbb3a8b0238747cd69ed2b44ad162c3febc38c12017593db5d"
+      },
+      {
+        "stage": 14,
+        "id": "route-0",
+        "file": "frames/map-14-route-0.png",
+        "sha256": "e392d88ebb2cbfb8ac0da0191b833f25ed94aad1c5b57527ec4c5801f76b8cee"
+      },
+      {
+        "stage": 14,
+        "id": "route-1",
+        "file": "frames/map-14-route-1.png",
+        "sha256": "5e6837e3641faa6aa12769121f73dcc479827f1c1b0baf25694b5dcbf5fe7d5d"
+      },
+      {
+        "stage": 14,
+        "id": "route-2",
+        "file": "frames/map-14-route-2.png",
+        "sha256": "b44101fa0cd15eb6e46307f7bfa9d9f09c246b8fc82e6f47e2714dc5a0c55d11"
+      },
+      {
+        "stage": 14,
+        "id": "route-3",
+        "file": "frames/map-14-route-3.png",
+        "sha256": "bafed80deb7a4bac96d3b57239028a746d67057242e0145ae33de28b3e9a9f96"
+      },
+      {
+        "stage": 14,
+        "id": "boss",
+        "file": "frames/map-14-boss.png",
+        "sha256": "122da01fd882a74980e05b366aa2d192c9f4da1f259f16330d3cf30d9ec8f396"
+      },
+      {
+        "stage": 14,
+        "id": "clear",
+        "file": "frames/map-14-clear.png",
+        "sha256": "aedfe9de8555630576447fb2daccc4b8a5bf3854836e092fd6f1956d6a15561a"
+      },
+      {
+        "stage": 14,
+        "id": "supplies",
+        "file": "frames/map-14-supplies.png",
+        "sha256": "5453440437e6e4cb95732c734d78e3f834c461a5cf39d1939dd47bcf417c73fd"
+      }
+    ]
+  }
+}

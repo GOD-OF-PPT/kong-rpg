@@ -1,0 +1,204 @@
+{
+  "version": "3.0.2",
+  "sha256": "162539a338287c411821cdc803ff7cc498f15dc8f27053dbfd2ab433f5b5ef4a",
+  "method": "Fresh Edge contexts; actual keyboard events and production save imports; HTTP and offline file entry; no application hooks for state mutation",
+  "sessions": [
+    {
+      "kind": "http",
+      "checks": [
+        {
+          "name": "A/D still type in seed field",
+          "pass": true
+        },
+        {
+          "name": "choice footer explains A/D",
+          "pass": true
+        },
+        {
+          "name": "starter A wraps to last scroll",
+          "pass": true
+        },
+        {
+          "name": "starter D wraps to first scroll",
+          "pass": true
+        },
+        {
+          "name": "starter D selects next scroll",
+          "pass": true
+        },
+        {
+          "name": "arrows remain compatible",
+          "pass": true
+        },
+        {
+          "name": "Ctrl+A does not move choice",
+          "pass": true
+        },
+        {
+          "name": "A from back button selects last scroll",
+          "pass": true
+        },
+        {
+          "name": "D from back button selects first scroll",
+          "pass": true
+        },
+        {
+          "name": "Enter confirms and selection keys do not move player",
+          "pass": true
+        },
+        {
+          "name": "D still moves player during combat",
+          "pass": true
+        },
+        {
+          "name": "A/D stay scoped to choice screens",
+          "pass": true
+        },
+        {
+          "name": "reward D selects next scroll",
+          "pass": true
+        },
+        {
+          "name": "reward A selects previous scroll",
+          "pass": true
+        },
+        {
+          "name": "reward A wraps to rest",
+          "pass": true
+        },
+        {
+          "name": "choice navigation preserves resources and simulation",
+          "pass": true
+        },
+        {
+          "name": "Enter confirms keyboard-selected rest",
+          "pass": true
+        },
+        {
+          "name": "replacement D selects next equipped relic",
+          "pass": true
+        },
+        {
+          "name": "replacement A selects previous equipped relic",
+          "pass": true
+        },
+        {
+          "name": "replacement A wraps to last equipped relic",
+          "pass": true
+        },
+        {
+          "name": "Enter replaces exactly highlighted relic",
+          "pass": true
+        },
+        {
+          "name": "no browser script errors",
+          "pass": true
+        }
+      ],
+      "errors": [],
+      "requests": [
+        "http://127.0.0.1:5188/release/index.html?v=3.0.2"
+      ]
+    },
+    {
+      "kind": "file",
+      "checks": [
+        {
+          "name": "A/D still type in seed field",
+          "pass": true
+        },
+        {
+          "name": "choice footer explains A/D",
+          "pass": true
+        },
+        {
+          "name": "starter A wraps to last scroll",
+          "pass": true
+        },
+        {
+          "name": "starter D wraps to first scroll",
+          "pass": true
+        },
+        {
+          "name": "starter D selects next scroll",
+          "pass": true
+        },
+        {
+          "name": "arrows remain compatible",
+          "pass": true
+        },
+        {
+          "name": "Ctrl+A does not move choice",
+          "pass": true
+        },
+        {
+          "name": "A from back button selects last scroll",
+          "pass": true
+        },
+        {
+          "name": "D from back button selects first scroll",
+          "pass": true
+        },
+        {
+          "name": "Enter confirms and selection keys do not move player",
+          "pass": true
+        },
+        {
+          "name": "D still moves player during combat",
+          "pass": true
+        },
+        {
+          "name": "A/D stay scoped to choice screens",
+          "pass": true
+        },
+        {
+          "name": "reward D selects next scroll",
+          "pass": true
+        },
+        {
+          "name": "reward A selects previous scroll",
+          "pass": true
+        },
+        {
+          "name": "reward A wraps to rest",
+          "pass": true
+        },
+        {
+          "name": "choice navigation preserves resources and simulation",
+          "pass": true
+        },
+        {
+          "name": "Enter confirms keyboard-selected rest",
+          "pass": true
+        },
+        {
+          "name": "replacement D selects next equipped relic",
+          "pass": true
+        },
+        {
+          "name": "replacement A selects previous equipped relic",
+          "pass": true
+        },
+        {
+          "name": "replacement A wraps to last equipped relic",
+          "pass": true
+        },
+        {
+          "name": "Enter replaces exactly highlighted relic",
+          "pass": true
+        },
+        {
+          "name": "no browser script errors",
+          "pass": true
+        },
+        {
+          "name": "offline choice screens make zero HTTP requests",
+          "pass": true
+        }
+      ],
+      "errors": [],
+      "requests": []
+    }
+  ],
+  "browser": "156.0.4314.42"
+}

@@ -1,0 +1,54 @@
+{
+  "version": "12.1.2",
+  "method": "Real production K.step; fixed seed; no browser quality claims",
+  "rows": [
+    {
+      "name": "Erlang R cancels an unfinished bow rather than secretly firing during summon",
+      "pass": true
+    },
+    {
+      "name": "Erlang U cancels an active main attack and its queued combo",
+      "pass": true
+    },
+    {
+      "name": "Erlang C cancels an unfinished bow before beam charge",
+      "pass": true
+    },
+    {
+      "name": "Wukong cannot create a hidden clone during injury reaction",
+      "pass": true
+    },
+    {
+      "name": "Nezha cannot release hidden silk during injury reaction",
+      "pass": true
+    },
+    {
+      "name": "Erlang cloud relic actually extends airborne main attack as its reward promises",
+      "pass": true
+    },
+    {
+      "name": "Erlang R takes over movement rather than sliding a previous dash",
+      "pass": true
+    },
+    {
+      "name": "Wukong H replaces an extending staff instead of stacking two weapon actions",
+      "pass": true
+    },
+    {
+      "name": "Nezha can still throw the ring while flying and while in six-arm form",
+      "pass": true
+    },
+    {
+      "name": "cancelling an actor action preserves already released allies and projectiles",
+      "pass": true
+    },
+    {
+      "name": "cloud extends actual aerial blade contact but never ground contact",
+      "pass": true
+    },
+    {
+      "name": "each Erlang god-step has a fresh counterstrike target set",
+      "pass": true
+    }
+  ]
+}

@@ -1,0 +1,1554 @@
+{
+  "method": "full-sheet connected silhouette; same scale per actor; shared ground anchor; alpha-preserving premultiplied resampling; Erlang extra transitions omitted",
+  "sourceHashes": {
+    "dragonking-source.png": "5eebd07ea5caa36aa53d3366a664d7e2213fddd386d14e3efa968792969b3790",
+    "erlang-source.png": "61b35b6c0a7ee7ce041894074db4917e3b267b6abc9a0f9df3539ff158e1e814",
+    "juling-source.png": "b77f0f35c2fd33e4aed29a586d9cdb273c0b628adbc6beb6cca89cc5a9712581",
+    "litian-source.png": "b310fe0640f6855a97f76151fd1d601e71d972a0045857e7a5fb0187b944e909",
+    "nezha-source.png": "5588d510ee42d1a2e1b02021ef13042591216bf208060d517df113fc54df3a2f",
+    "ninehead-source.png": "7db9a1e2ff3540d4ca3b624efd1c048ee2199de80c52189aaef804c0c8e9bd29",
+    "qinguang-source.png": "0a972a45cc8223bc49636738bc2a1c30534d6d3862029bc725ab174fdd3db63c",
+    "wukong-source.png": "6983ed0911432d17c20cc2b855dfd6b4538c90d23ad3f42c8877901f05679f2b"
+  },
+  "frames": [
+    {
+      "id": "wukong-0-0",
+      "sourceBounds": [
+        14,
+        63,
+        306,
+        349
+      ],
+      "sourceComponent": 1,
+      "scale": 0.2846715328467153,
+      "size": [
+        83,
+        81
+      ],
+      "foot": [
+        150.0,
+        285.0
+      ]
+    },
+    {
+      "id": "wukong-0-1",
+      "sourceBounds": [
+        370,
+        71,
+        795,
+        349
+      ],
+      "sourceComponent": 2,
+      "scale": 0.2846715328467153,
+      "size": [
+        121,
+        79
+      ],
+      "foot": [
+        142.0,
+        277.0
+      ]
+    },
+    {
+      "id": "wukong-0-2",
+      "sourceBounds": [
+        753,
+        96,
+        1137,
+        349
+      ],
+      "sourceComponent": 4,
+      "scale": 0.2846715328467153,
+      "size": [
+        109,
+        72
+      ],
+      "foot": [
+        143.0,
+        252.0
+      ]
+    },
+    {
+      "id": "wukong-0-3",
+      "sourceBounds": [
+        1159,
+        75,
+        1438,
+        349
+      ],
+      "sourceComponent": 3,
+      "scale": 0.2846715328467153,
+      "size": [
+        79,
+        78
+      ],
+      "foot": [
+        133.0,
+        273.0
+      ]
+    },
+    {
+      "id": "wukong-1-0",
+      "sourceBounds": [
+        21,
+        458,
+        356,
+        708
+      ],
+      "sourceComponent": 7,
+      "scale": 0.2846715328467153,
+      "size": [
+        95,
+        71
+      ],
+      "foot": [
+        158.0,
+        249.0
+      ]
+    },
+    {
+      "id": "wukong-1-1",
+      "sourceBounds": [
+        374,
+        413,
+        738,
+        708
+      ],
+      "sourceComponent": 6,
+      "scale": 0.2846715328467153,
+      "size": [
+        104,
+        84
+      ],
+      "foot": [
+        145.0,
+        294.0
+      ]
+    },
+    {
+      "id": "wukong-1-2",
+      "sourceBounds": [
+        776,
+        379,
+        1084,
+        708
+      ],
+      "sourceComponent": 5,
+      "scale": 0.2846715328467153,
+      "size": [
+        88,
+        94
+      ],
+      "foot": [
+        141.0,
+        328.0
+      ]
+    },
+    {
+      "id": "wukong-1-3",
+      "sourceBounds": [
+        1136,
+        470,
+        1432,
+        708
+      ],
+      "sourceComponent": 8,
+      "scale": 0.2846715328467153,
+      "size": [
+        84,
+        68
+      ],
+      "foot": [
+        154.0,
+        237.0
+      ]
+    },
+    {
+      "id": "wukong-2-0",
+      "sourceBounds": [
+        24,
+        731,
+        365,
+        1052
+      ],
+      "sourceComponent": 10,
+      "scale": 0.2846715328467153,
+      "size": [
+        97,
+        91
+      ],
+      "foot": [
+        152.0,
+        320.0
+      ]
+    },
+    {
+      "id": "wukong-2-1",
+      "sourceBounds": [
+        371,
+        787,
+        766,
+        1052
+      ],
+      "sourceComponent": 11,
+      "scale": 0.2846715328467153,
+      "size": [
+        112,
+        75
+      ],
+      "foot": [
+        197.0,
+        264.0
+      ]
+    },
+    {
+      "id": "wukong-2-2",
+      "sourceBounds": [
+        763,
+        807,
+        1145,
+        1053
+      ],
+      "sourceComponent": 13,
+      "scale": 0.2846715328467153,
+      "size": [
+        109,
+        70
+      ],
+      "foot": [
+        243.0,
+        245.0
+      ]
+    },
+    {
+      "id": "wukong-2-3",
+      "sourceBounds": [
+        1152,
+        794,
+        1437,
+        1055
+      ],
+      "sourceComponent": 12,
+      "scale": 0.2846715328467153,
+      "size": [
+        81,
+        74
+      ],
+      "foot": [
+        151.0,
+        260.0
+      ]
+    },
+    {
+      "id": "nezha-0-0",
+      "sourceBounds": [
+        47,
+        80,
+        301,
+        291
+      ],
+      "sourceComponent": 1,
+      "scale": 0.4148936170212766,
+      "size": [
+        105,
+        88
+      ],
+      "foot": [
+        96.0,
+        210.0
+      ]
+    },
+    {
+      "id": "nezha-0-1",
+      "sourceBounds": [
+        416,
+        111,
+        781,
+        292
+      ],
+      "sourceComponent": 3,
+      "scale": 0.4148936170212766,
+      "size": [
+        151,
+        75
+      ],
+      "foot": [
+        95.0,
+        180.0
+      ]
+    },
+    {
+      "id": "nezha-0-2",
+      "sourceBounds": [
+        821,
+        118,
+        1218,
+        292
+      ],
+      "sourceComponent": 4,
+      "scale": 0.4148936170212766,
+      "size": [
+        165,
+        72
+      ],
+      "foot": [
+        92.0,
+        173.0
+      ]
+    },
+    {
+      "id": "nezha-0-3",
+      "sourceBounds": [
+        1255,
+        106,
+        1555,
+        294
+      ],
+      "sourceComponent": 2,
+      "scale": 0.4148936170212766,
+      "size": [
+        124,
+        78
+      ],
+      "foot": [
+        91.0,
+        187.0
+      ]
+    },
+    {
+      "id": "nezha-1-0",
+      "sourceBounds": [
+        60,
+        480,
+        383,
+        639
+      ],
+      "sourceComponent": 8,
+      "scale": 0.4148936170212766,
+      "size": [
+        134,
+        66
+      ],
+      "foot": [
+        144.0,
+        158.0
+      ]
+    },
+    {
+      "id": "nezha-1-1",
+      "sourceBounds": [
+        435,
+        405,
+        784,
+        638
+      ],
+      "sourceComponent": 7,
+      "scale": 0.4148936170212766,
+      "size": [
+        145,
+        97
+      ],
+      "foot": [
+        129.0,
+        232.0
+      ]
+    },
+    {
+      "id": "nezha-1-2",
+      "sourceBounds": [
+        865,
+        335,
+        1152,
+        638
+      ],
+      "sourceComponent": 5,
+      "scale": 0.4148936170212766,
+      "size": [
+        119,
+        126
+      ],
+      "foot": [
+        137.0,
+        302.0
+      ]
+    },
+    {
+      "id": "nezha-1-3",
+      "sourceBounds": [
+        1259,
+        393,
+        1501,
+        636
+      ],
+      "sourceComponent": 6,
+      "scale": 0.4148936170212766,
+      "size": [
+        100,
+        101
+      ],
+      "foot": [
+        134.0,
+        242.0
+      ]
+    },
+    {
+      "id": "nezha-2-0",
+      "sourceBounds": [
+        29,
+        705,
+        280,
+        921
+      ],
+      "sourceComponent": 10,
+      "scale": 0.4148936170212766,
+      "size": [
+        104,
+        90
+      ],
+      "foot": [
+        137.0,
+        215.0
+      ]
+    },
+    {
+      "id": "nezha-2-1",
+      "sourceBounds": [
+        398,
+        750,
+        802,
+        918
+      ],
+      "sourceComponent": 12,
+      "scale": 0.4148936170212766,
+      "size": [
+        168,
+        70
+      ],
+      "foot": [
+        94.0,
+        167.0
+      ]
+    },
+    {
+      "id": "nezha-2-2",
+      "sourceBounds": [
+        829,
+        747,
+        1281,
+        918
+      ],
+      "sourceComponent": 11,
+      "scale": 0.4148936170212766,
+      "size": [
+        188,
+        71
+      ],
+      "foot": [
+        93.0,
+        170.0
+      ]
+    },
+    {
+      "id": "nezha-2-3",
+      "sourceBounds": [
+        1308,
+        684,
+        1528,
+        920
+      ],
+      "sourceComponent": 9,
+      "scale": 0.4148936170212766,
+      "size": [
+        91,
+        98
+      ],
+      "foot": [
+        114.0,
+        235.0
+      ]
+    },
+    {
+      "id": "erlang-0-0",
+      "sourceBounds": [
+        6,
+        141,
+        309,
+        346
+      ],
+      "sourceComponent": 4,
+      "scale": 0.35944700460829493,
+      "size": [
+        109,
+        74
+      ],
+      "foot": [
+        144.0,
+        204.0
+      ]
+    },
+    {
+      "id": "erlang-0-1",
+      "sourceBounds": [
+        375,
+        69,
+        719,
+        346
+      ],
+      "sourceComponent": 1,
+      "scale": 0.35944700460829493,
+      "size": [
+        124,
+        100
+      ],
+      "foot": [
+        127.0,
+        276.0
+      ]
+    },
+    {
+      "id": "erlang-0-2",
+      "sourceBounds": [
+        730,
+        149,
+        1095,
+        349
+      ],
+      "sourceComponent": 6,
+      "scale": 0.35944700460829493,
+      "size": [
+        131,
+        72
+      ],
+      "foot": [
+        206.0,
+        199.0
+      ]
+    },
+    {
+      "id": "erlang-0-3",
+      "sourceBounds": [
+        1113,
+        129,
+        1438,
+        346
+      ],
+      "sourceComponent": 2,
+      "scale": 0.35944700460829493,
+      "size": [
+        117,
+        78
+      ],
+      "foot": [
+        116.0,
+        216.0
+      ]
+    },
+    {
+      "id": "erlang-1-0",
+      "sourceBounds": [
+        6,
+        552,
+        267,
+        704
+      ],
+      "sourceComponent": 12,
+      "scale": 0.35944700460829493,
+      "size": [
+        94,
+        55
+      ],
+      "foot": [
+        161.0,
+        151.0
+      ]
+    },
+    {
+      "id": "erlang-1-1",
+      "sourceBounds": [
+        322,
+        418,
+        617,
+        704
+      ],
+      "sourceComponent": 9,
+      "scale": 0.35944700460829493,
+      "size": [
+        106,
+        103
+      ],
+      "foot": [
+        118.0,
+        285.0
+      ]
+    },
+    {
+      "id": "erlang-1-2",
+      "sourceBounds": [
+        901,
+        392,
+        1192,
+        704
+      ],
+      "sourceComponent": 8,
+      "scale": 0.35944700460829493,
+      "size": [
+        105,
+        112
+      ],
+      "foot": [
+        108.0,
+        311.0
+      ]
+    },
+    {
+      "id": "erlang-1-3",
+      "sourceBounds": [
+        1183,
+        419,
+        1432,
+        704
+      ],
+      "sourceComponent": 10,
+      "scale": 0.35944700460829493,
+      "size": [
+        90,
+        102
+      ],
+      "foot": [
+        108.0,
+        284.0
+      ]
+    },
+    {
+      "id": "erlang-2-0",
+      "sourceBounds": [
+        25,
+        745,
+        264,
+        1032
+      ],
+      "sourceComponent": 14,
+      "scale": 0.35944700460829493,
+      "size": [
+        86,
+        103
+      ],
+      "foot": [
+        126.0,
+        286.0
+      ]
+    },
+    {
+      "id": "erlang-2-1",
+      "sourceBounds": [
+        617,
+        836,
+        914,
+        1038
+      ],
+      "sourceComponent": 16,
+      "scale": 0.35944700460829493,
+      "size": [
+        107,
+        73
+      ],
+      "foot": [
+        180.0,
+        201.0
+      ]
+    },
+    {
+      "id": "erlang-2-2",
+      "sourceBounds": [
+        904,
+        857,
+        1221,
+        1042
+      ],
+      "sourceComponent": 17,
+      "scale": 0.35944700460829493,
+      "size": [
+        114,
+        66
+      ],
+      "foot": [
+        216.0,
+        184.0
+      ]
+    },
+    {
+      "id": "erlang-2-3",
+      "sourceBounds": [
+        1201,
+        746,
+        1438,
+        1032
+      ],
+      "sourceComponent": 15,
+      "scale": 0.35944700460829493,
+      "size": [
+        85,
+        103
+      ],
+      "foot": [
+        102.0,
+        285.0
+      ]
+    },
+    {
+      "id": "juling-0-0",
+      "sourceBounds": [
+        133,
+        14,
+        480,
+        357
+      ],
+      "sourceComponent": 1,
+      "scale": 0.5341880341880342,
+      "size": [
+        185,
+        183
+      ],
+      "foot": [
+        153.0,
+        342.0
+      ]
+    },
+    {
+      "id": "juling-0-1",
+      "sourceBounds": [
+        558,
+        123,
+        979,
+        357
+      ],
+      "sourceComponent": 2,
+      "scale": 0.5341880341880342,
+      "size": [
+        225,
+        125
+      ],
+      "foot": [
+        184.0,
+        233.0
+      ]
+    },
+    {
+      "id": "juling-0-2",
+      "sourceBounds": [
+        1078,
+        123,
+        1495,
+        357
+      ],
+      "sourceComponent": 3,
+      "scale": 0.5341880341880342,
+      "size": [
+        223,
+        125
+      ],
+      "foot": [
+        171.0,
+        233.0
+      ]
+    },
+    {
+      "id": "juling-1-0",
+      "sourceBounds": [
+        152,
+        382,
+        454,
+        690
+      ],
+      "sourceComponent": 5,
+      "scale": 0.5341880341880342,
+      "size": [
+        161,
+        165
+      ],
+      "foot": [
+        176.0,
+        307.0
+      ]
+    },
+    {
+      "id": "juling-1-1",
+      "sourceBounds": [
+        622,
+        389,
+        948,
+        690
+      ],
+      "sourceComponent": 6,
+      "scale": 0.5341880341880342,
+      "size": [
+        174,
+        161
+      ],
+      "foot": [
+        167.0,
+        300.0
+      ]
+    },
+    {
+      "id": "juling-1-2",
+      "sourceBounds": [
+        1093,
+        397,
+        1483,
+        690
+      ],
+      "sourceComponent": 7,
+      "scale": 0.5341880341880342,
+      "size": [
+        208,
+        157
+      ],
+      "foot": [
+        174.0,
+        292.0
+      ]
+    },
+    {
+      "id": "juling-2-0",
+      "sourceBounds": [
+        111,
+        746,
+        449,
+        993
+      ],
+      "sourceComponent": 10,
+      "scale": 0.5341880341880342,
+      "size": [
+        181,
+        132
+      ],
+      "foot": [
+        155.0,
+        246.0
+      ]
+    },
+    {
+      "id": "juling-2-1",
+      "sourceBounds": [
+        522,
+        734,
+        961,
+        985
+      ],
+      "sourceComponent": 8,
+      "scale": 0.5341880341880342,
+      "size": [
+        235,
+        134
+      ],
+      "foot": [
+        196.0,
+        250.0
+      ]
+    },
+    {
+      "id": "juling-2-2",
+      "sourceBounds": [
+        1033,
+        738,
+        1486,
+        994
+      ],
+      "sourceComponent": 9,
+      "scale": 0.5341880341880342,
+      "size": [
+        242,
+        137
+      ],
+      "foot": [
+        214.0,
+        255.0
+      ]
+    },
+    {
+      "id": "qinguang-0-0",
+      "sourceBounds": [
+        69,
+        19,
+        363,
+        388
+      ],
+      "sourceComponent": 1,
+      "scale": 0.382262996941896,
+      "size": [
+        112,
+        141
+      ],
+      "foot": [
+        156.0,
+        368.0
+      ]
+    },
+    {
+      "id": "qinguang-0-1",
+      "sourceBounds": [
+        429,
+        98,
+        850,
+        388
+      ],
+      "sourceComponent": 4,
+      "scale": 0.382262996941896,
+      "size": [
+        161,
+        111
+      ],
+      "foot": [
+        223.0,
+        289.0
+      ]
+    },
+    {
+      "id": "qinguang-0-2",
+      "sourceBounds": [
+        865,
+        61,
+        1256,
+        388
+      ],
+      "sourceComponent": 2,
+      "scale": 0.382262996941896,
+      "size": [
+        149,
+        125
+      ],
+      "foot": [
+        258.0,
+        326.0
+      ]
+    },
+    {
+      "id": "qinguang-1-0",
+      "sourceBounds": [
+        67,
+        426,
+        343,
+        758
+      ],
+      "sourceComponent": 8,
+      "scale": 0.382262996941896,
+      "size": [
+        106,
+        127
+      ],
+      "foot": [
+        141.0,
+        331.0
+      ]
+    },
+    {
+      "id": "qinguang-1-1",
+      "sourceBounds": [
+        457,
+        439,
+        882,
+        759
+      ],
+      "sourceComponent": 9,
+      "scale": 0.382262996941896,
+      "size": [
+        162,
+        122
+      ],
+      "foot": [
+        250.0,
+        319.0
+      ]
+    },
+    {
+      "id": "qinguang-1-2",
+      "sourceBounds": [
+        980,
+        493,
+        1277,
+        759
+      ],
+      "sourceComponent": 13,
+      "scale": 0.382262996941896,
+      "size": [
+        114,
+        102
+      ],
+      "foot": [
+        135.0,
+        265.0
+      ]
+    },
+    {
+      "id": "qinguang-2-0",
+      "sourceBounds": [
+        73,
+        770,
+        377,
+        1164
+      ],
+      "sourceComponent": 16,
+      "scale": 0.382262996941896,
+      "size": [
+        116,
+        151
+      ],
+      "foot": [
+        164.0,
+        393.0
+      ]
+    },
+    {
+      "id": "qinguang-2-1",
+      "sourceBounds": [
+        444,
+        850,
+        858,
+        1164
+      ],
+      "sourceComponent": 17,
+      "scale": 0.382262996941896,
+      "size": [
+        158,
+        120
+      ],
+      "foot": [
+        250.0,
+        313.0
+      ]
+    },
+    {
+      "id": "qinguang-2-2",
+      "sourceBounds": [
+        928,
+        888,
+        1278,
+        1164
+      ],
+      "sourceComponent": 21,
+      "scale": 0.382262996941896,
+      "size": [
+        134,
+        106
+      ],
+      "foot": [
+        203.0,
+        275.0
+      ]
+    },
+    {
+      "id": "ninehead-0-0",
+      "sourceBounds": [
+        46,
+        48,
+        501,
+        366
+      ],
+      "sourceComponent": 1,
+      "scale": 0.3993610223642173,
+      "size": [
+        182,
+        127
+      ],
+      "foot": [
+        300.0,
+        317.0
+      ]
+    },
+    {
+      "id": "ninehead-0-1",
+      "sourceBounds": [
+        496,
+        75,
+        1020,
+        366
+      ],
+      "sourceComponent": 2,
+      "scale": 0.3993610223642173,
+      "size": [
+        209,
+        116
+      ],
+      "foot": [
+        378.0,
+        290.0
+      ]
+    },
+    {
+      "id": "ninehead-0-2",
+      "sourceBounds": [
+        1077,
+        127,
+        1508,
+        365
+      ],
+      "sourceComponent": 5,
+      "scale": 0.3993610223642173,
+      "size": [
+        172,
+        95
+      ],
+      "foot": [
+        276.0,
+        237.0
+      ]
+    },
+    {
+      "id": "ninehead-1-0",
+      "sourceBounds": [
+        41,
+        413,
+        489,
+        685
+      ],
+      "sourceComponent": 11,
+      "scale": 0.3993610223642173,
+      "size": [
+        179,
+        109
+      ],
+      "foot": [
+        221.0,
+        271.0
+      ]
+    },
+    {
+      "id": "ninehead-1-1",
+      "sourceBounds": [
+        524,
+        416,
+        1025,
+        686
+      ],
+      "sourceComponent": 12,
+      "scale": 0.3993610223642173,
+      "size": [
+        200,
+        108
+      ],
+      "foot": [
+        237.0,
+        269.0
+      ]
+    },
+    {
+      "id": "ninehead-1-2",
+      "sourceBounds": [
+        1078,
+        417,
+        1508,
+        687
+      ],
+      "sourceComponent": 13,
+      "scale": 0.3993610223642173,
+      "size": [
+        172,
+        108
+      ],
+      "foot": [
+        260.0,
+        269.0
+      ]
+    },
+    {
+      "id": "ninehead-2-0",
+      "sourceBounds": [
+        23,
+        732,
+        469,
+        968
+      ],
+      "sourceComponent": 15,
+      "scale": 0.3993610223642173,
+      "size": [
+        178,
+        94
+      ],
+      "foot": [
+        282.0,
+        235.0
+      ]
+    },
+    {
+      "id": "ninehead-2-1",
+      "sourceBounds": [
+        508,
+        794,
+        1032,
+        948
+      ],
+      "sourceComponent": 16,
+      "scale": 0.3993610223642173,
+      "size": [
+        209,
+        62
+      ],
+      "foot": [
+        360.0,
+        153.0
+      ]
+    },
+    {
+      "id": "ninehead-2-2",
+      "sourceBounds": [
+        1052,
+        731,
+        1524,
+        973
+      ],
+      "sourceComponent": 14,
+      "scale": 0.3993610223642173,
+      "size": [
+        188,
+        97
+      ],
+      "foot": [
+        246.0,
+        241.0
+      ]
+    },
+    {
+      "id": "dragonking-0-0",
+      "sourceBounds": [
+        68,
+        12,
+        378,
+        357
+      ],
+      "sourceComponent": 1,
+      "scale": 0.5060728744939271,
+      "size": [
+        157,
+        175
+      ],
+      "foot": [
+        174.0,
+        344.0
+      ]
+    },
+    {
+      "id": "dragonking-0-1",
+      "sourceBounds": [
+        586,
+        68,
+        918,
+        357
+      ],
+      "sourceComponent": 2,
+      "scale": 0.5060728744939271,
+      "size": [
+        168,
+        146
+      ],
+      "foot": [
+        190.0,
+        288.0
+      ]
+    },
+    {
+      "id": "dragonking-0-2",
+      "sourceBounds": [
+        1164,
+        95,
+        1432,
+        357
+      ],
+      "sourceComponent": 3,
+      "scale": 0.5060728744939271,
+      "size": [
+        136,
+        133
+      ],
+      "foot": [
+        145.0,
+        261.0
+      ]
+    },
+    {
+      "id": "dragonking-1-0",
+      "sourceBounds": [
+        91,
+        408,
+        401,
+        627
+      ],
+      "sourceComponent": 6,
+      "scale": 0.5060728744939271,
+      "size": [
+        157,
+        111
+      ],
+      "foot": [
+        149.0,
+        218.0
+      ]
+    },
+    {
+      "id": "dragonking-1-1",
+      "sourceBounds": [
+        504,
+        416,
+        966,
+        628
+      ],
+      "sourceComponent": 7,
+      "scale": 0.5060728744939271,
+      "size": [
+        234,
+        107
+      ],
+      "foot": [
+        319.0,
+        211.0
+      ]
+    },
+    {
+      "id": "dragonking-1-2",
+      "sourceBounds": [
+        1029,
+        421,
+        1494,
+        627
+      ],
+      "sourceComponent": 8,
+      "scale": 0.5060728744939271,
+      "size": [
+        235,
+        104
+      ],
+      "foot": [
+        300.0,
+        205.0
+      ]
+    },
+    {
+      "id": "dragonking-2-0",
+      "sourceBounds": [
+        90,
+        638,
+        372,
+        991
+      ],
+      "sourceComponent": 14,
+      "scale": 0.5060728744939271,
+      "size": [
+        143,
+        179
+      ],
+      "foot": [
+        144.0,
+        352.0
+      ]
+    },
+    {
+      "id": "dragonking-2-1",
+      "sourceBounds": [
+        554,
+        646,
+        938,
+        990
+      ],
+      "sourceComponent": 15,
+      "scale": 0.5060728744939271,
+      "size": [
+        194,
+        174
+      ],
+      "foot": [
+        219.0,
+        343.0
+      ]
+    },
+    {
+      "id": "dragonking-2-2",
+      "sourceBounds": [
+        1162,
+        731,
+        1459,
+        993
+      ],
+      "sourceComponent": 17,
+      "scale": 0.5060728744939271,
+      "size": [
+        150,
+        133
+      ],
+      "foot": [
+        167.0,
+        261.0
+      ]
+    },
+    {
+      "id": "litian-0-0",
+      "sourceBounds": [
+        58,
+        20,
+        422,
+        344
+      ],
+      "sourceComponent": 1,
+      "scale": 0.51440329218107,
+      "size": [
+        187,
+        167
+      ],
+      "foot": [
+        204.0,
+        323.0
+      ]
+    },
+    {
+      "id": "litian-0-1",
+      "sourceBounds": [
+        522,
+        107,
+        935,
+        343
+      ],
+      "sourceComponent": 3,
+      "scale": 0.51440329218107,
+      "size": [
+        212,
+        121
+      ],
+      "foot": [
+        260.0,
+        235.0
+      ]
+    },
+    {
+      "id": "litian-0-2",
+      "sourceBounds": [
+        1083,
+        98,
+        1475,
+        344
+      ],
+      "sourceComponent": 2,
+      "scale": 0.51440329218107,
+      "size": [
+        202,
+        127
+      ],
+      "foot": [
+        233.0,
+        245.0
+      ]
+    },
+    {
+      "id": "litian-1-0",
+      "sourceBounds": [
+        92,
+        427,
+        410,
+        685
+      ],
+      "sourceComponent": 5,
+      "scale": 0.51440329218107,
+      "size": [
+        164,
+        133
+      ],
+      "foot": [
+        166.0,
+        257.0
+      ]
+    },
+    {
+      "id": "litian-1-1",
+      "sourceBounds": [
+        568,
+        353,
+        930,
+        686
+      ],
+      "sourceComponent": 4,
+      "scale": 0.51440329218107,
+      "size": [
+        186,
+        171
+      ],
+      "foot": [
+        206.0,
+        332.0
+      ]
+    },
+    {
+      "id": "litian-1-2",
+      "sourceBounds": [
+        1150,
+        432,
+        1468,
+        686
+      ],
+      "sourceComponent": 6,
+      "scale": 0.51440329218107,
+      "size": [
+        164,
+        131
+      ],
+      "foot": [
+        177.0,
+        253.0
+      ]
+    },
+    {
+      "id": "litian-2-0",
+      "sourceBounds": [
+        121,
+        739,
+        444,
+        990
+      ],
+      "sourceComponent": 8,
+      "scale": 0.51440329218107,
+      "size": [
+        166,
+        129
+      ],
+      "foot": [
+        157.0,
+        250.0
+      ]
+    },
+    {
+      "id": "litian-2-1",
+      "sourceBounds": [
+        510,
+        747,
+        1006,
+        990
+      ],
+      "sourceComponent": 9,
+      "scale": 0.51440329218107,
+      "size": [
+        255,
+        125
+      ],
+      "foot": [
+        322.0,
+        242.0
+      ]
+    },
+    {
+      "id": "litian-2-2",
+      "sourceBounds": [
+        1196,
+        737,
+        1475,
+        990
+      ],
+      "sourceComponent": 7,
+      "scale": 0.51440329218107,
+      "size": [
+        144,
+        130
+      ],
+      "foot": [
+        133.0,
+        252.0
+      ]
+    }
+  ]
+}

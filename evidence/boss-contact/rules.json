@@ -1,0 +1,231 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "name": "wukong normal 2: boss contact cannot bounce or grant a free hit",
+      "pass": true
+    },
+    {
+      "name": "wukong normal 5: boss contact cannot bounce or grant a free hit",
+      "pass": true
+    },
+    {
+      "name": "wukong normal 8: boss contact cannot bounce or grant a free hit",
+      "pass": true
+    },
+    {
+      "name": "wukong normal 11: boss contact cannot bounce or grant a free hit",
+      "pass": true
+    },
+    {
+      "name": "wukong normal 14: boss contact cannot bounce or grant a free hit",
+      "pass": true
+    },
+    {
+      "name": "wukong challenge 2: boss contact cannot bounce or grant a free hit",
+      "pass": true
+    },
+    {
+      "name": "wukong challenge 5: boss contact cannot bounce or grant a free hit",
+      "pass": true
+    },
+    {
+      "name": "wukong challenge 8: boss contact cannot bounce or grant a free hit",
+      "pass": true
+    },
+    {
+      "name": "wukong challenge 11: boss contact cannot bounce or grant a free hit",
+      "pass": true
+    },
+    {
+      "name": "wukong challenge 14: boss contact cannot bounce or grant a free hit",
+      "pass": true
+    },
+    {
+      "name": "nezha normal 2: boss contact cannot bounce or grant a free hit",
+      "pass": true
+    },
+    {
+      "name": "nezha normal 5: boss contact cannot bounce or grant a free hit",
+      "pass": true
+    },
+    {
+      "name": "nezha normal 8: boss contact cannot bounce or grant a free hit",
+      "pass": true
+    },
+    {
+      "name": "nezha normal 11: boss contact cannot bounce or grant a free hit",
+      "pass": true
+    },
+    {
+      "name": "nezha normal 14: boss contact cannot bounce or grant a free hit",
+      "pass": true
+    },
+    {
+      "name": "nezha challenge 2: boss contact cannot bounce or grant a free hit",
+      "pass": true
+    },
+    {
+      "name": "nezha challenge 5: boss contact cannot bounce or grant a free hit",
+      "pass": true
+    },
+    {
+      "name": "nezha challenge 8: boss contact cannot bounce or grant a free hit",
+      "pass": true
+    },
+    {
+      "name": "nezha challenge 11: boss contact cannot bounce or grant a free hit",
+      "pass": true
+    },
+    {
+      "name": "nezha challenge 14: boss contact cannot bounce or grant a free hit",
+      "pass": true
+    },
+    {
+      "name": "erlang normal 2: boss contact cannot bounce or grant a free hit",
+      "pass": true
+    },
+    {
+      "name": "erlang normal 5: boss contact cannot bounce or grant a free hit",
+      "pass": true
+    },
+    {
+      "name": "erlang normal 8: boss contact cannot bounce or grant a free hit",
+      "pass": true
+    },
+    {
+      "name": "erlang normal 11: boss contact cannot bounce or grant a free hit",
+      "pass": true
+    },
+    {
+      "name": "erlang normal 14: boss contact cannot bounce or grant a free hit",
+      "pass": true
+    },
+    {
+      "name": "erlang challenge 2: boss contact cannot bounce or grant a free hit",
+      "pass": true
+    },
+    {
+      "name": "erlang challenge 5: boss contact cannot bounce or grant a free hit",
+      "pass": true
+    },
+    {
+      "name": "erlang challenge 8: boss contact cannot bounce or grant a free hit",
+      "pass": true
+    },
+    {
+      "name": "erlang challenge 11: boss contact cannot bounce or grant a free hit",
+      "pass": true
+    },
+    {
+      "name": "erlang challenge 14: boss contact cannot bounce or grant a free hit",
+      "pass": true
+    },
+    {
+      "name": "boss pinned to left arena wall still leaves an escape side",
+      "pass": true
+    },
+    {
+      "name": "boss pinned to right arena wall still leaves an escape side",
+      "pass": true
+    },
+    {
+      "name": "mini-boss stage 0 is not a jump platform",
+      "pass": true
+    },
+    {
+      "name": "mini-boss stage 1 is not a jump platform",
+      "pass": true
+    },
+    {
+      "name": "mini-boss stage 3 is not a jump platform",
+      "pass": true
+    },
+    {
+      "name": "mini-boss stage 4 is not a jump platform",
+      "pass": true
+    },
+    {
+      "name": "mini-boss stage 6 is not a jump platform",
+      "pass": true
+    },
+    {
+      "name": "mini-boss stage 7 is not a jump platform",
+      "pass": true
+    },
+    {
+      "name": "mini-boss stage 9 is not a jump platform",
+      "pass": true
+    },
+    {
+      "name": "mini-boss stage 10 is not a jump platform",
+      "pass": true
+    },
+    {
+      "name": "mini-boss stage 12 is not a jump platform",
+      "pass": true
+    },
+    {
+      "name": "mini-boss stage 13 is not a jump platform",
+      "pass": true
+    },
+    {
+      "name": "an intentional downward slam still hits a boss once without rebounding",
+      "pass": true
+    },
+    {
+      "name": "ordinary enemies retain stomp damage, rebound and air-jump refresh",
+      "pass": true
+    },
+    {
+      "name": "legitimate aerial weapon attacks can still hit a boss from the side",
+      "pass": true
+    },
+    {
+      "name": "midair save/import cannot restore the old head-bounce loop",
+      "pass": true
+    }
+  ],
+  "samples": [
+    {
+      "boss": "juling",
+      "seconds": 5.491666666666729,
+      "playerHP": 0,
+      "bossHP": 600,
+      "groundedFrames": 578,
+      "stomps": 0
+    },
+    {
+      "boss": "qinguang",
+      "seconds": 7.216666666666815,
+      "playerHP": 0,
+      "bossHP": 800,
+      "groundedFrames": 785,
+      "stomps": 0
+    },
+    {
+      "boss": "ninehead",
+      "seconds": 9.500000000000101,
+      "playerHP": 34,
+      "bossHP": 834,
+      "groundedFrames": 1119,
+      "stomps": 0
+    },
+    {
+      "boss": "dragonking",
+      "seconds": 7.933333333333517,
+      "playerHP": 0,
+      "bossHP": 1250,
+      "groundedFrames": 871,
+      "stomps": 0
+    },
+    {
+      "boss": "litian",
+      "seconds": 4.650000000000021,
+      "playerHP": 0,
+      "bossHP": 1500,
+      "groundedFrames": 477,
+      "stomps": 0
+    }
+  ]
+}

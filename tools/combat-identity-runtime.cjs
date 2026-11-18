@@ -1,0 +1,4 @@
+const fs=require('node:fs'),vm=require('node:vm'),path=require('node:path'),cp=require('node:child_process');
+const root=path.resolve(__dirname,'..');
+const files=['content','motion','world','progression','journey','heroes','signature','simulation','challenge','realms','warriors','celestial','campaign-data','enemy-effects','route-layouts','campaign-world','campaign-combat','campaign-state','combat-identity','storage'];
+module.exports=function(ref){const c=vm.createContext({console});for(const file of files){let source;if(ref){try{source=cp.execFileSync('git',['show',ref+':src/'+file+'.js'],{cwd:root,encoding:'utf8',stdio:['ignore','pipe','ignore']});}catch(e){if(file==='combat-identity')continue;throw e;}}else source=fs.readFileSync(path.join(root,'src',file+'.js'),'utf8');vm.runInContext(source,c,{filename:file+'.js'});}return c.Kong;};

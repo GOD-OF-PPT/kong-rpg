@@ -1,0 +1,53 @@
+{
+  "version": "8.0.0",
+  "checks": [
+    {
+      "name": "three heroes and schema8 are explicit, actual v7 save routes to preserved entry",
+      "pass": true
+    },
+    {
+      "name": "Nezha main attack is melee and independent ring does not replace it",
+      "pass": true
+    },
+    {
+      "name": "ring costs focus, blocks repeat casts and survives a midflight save",
+      "pass": true
+    },
+    {
+      "name": "Erlang bow commits preparation, cost, direction and cooldown; hit cancels draw",
+      "pass": true
+    },
+    {
+      "name": "arrow respects a frontal shield; empowered arrow breaks it",
+      "pass": true
+    },
+    {
+      "name": "hound attacks living nearby enemies on its own cadence and expires",
+      "pass": true
+    },
+    {
+      "name": "death removes hound; level changes cannot carry summons or arrows into new room",
+      "pass": true
+    },
+    {
+      "name": "eye uses focus, breaks a shield only in its locked region, and restores",
+      "pass": true
+    },
+    {
+      "name": "five realm locations have distinct monsters, deterministic room contents and safe telegraphs",
+      "pass": true
+    },
+    {
+      "name": "realm projectiles start at the correct end and remain inside the telegraphed lane",
+      "pass": true
+    },
+    {
+      "name": "normal and challenge saves preserve all new fields and reject malformed additions",
+      "pass": true
+    },
+    {
+      "name": "pause freezes new state clocks and failed restarts discard run growth",
+      "pass": true
+    }
+  ]
+}

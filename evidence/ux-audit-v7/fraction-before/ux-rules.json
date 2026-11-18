@@ -1,0 +1,26 @@
+{
+  "version": "7.0.1",
+  "checks": [
+    {
+      "name": "all three midpoint lamps reject remote F and accept a reachable body",
+      "pass": true
+    },
+    {
+      "name": "a gateway requires a nearby landing even after the boss and seals are defeated",
+      "pass": true
+    },
+    {
+      "name": "entering a midpoint reward cancels unfinished signature actions without refund",
+      "pass": true
+    },
+    {
+      "name": "Nezha gives an explicit failure cue when U cannot start for lack of focus",
+      "pass": true
+    },
+    {
+      "name": "fractional focus pickup copy stays short while preserving the actual gain",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: 定心光 · 定力 +0.20000000000000284 · 走近自动拾取\n    at E:\\githome\\kong-rpg\\tools\\verify-ux-v7.cjs:10:304\n    at test (E:\\githome\\kong-rpg\\tools\\verify-ux-v7.cjs:4:49)\n    at Object.<anonymous> (E:\\githome\\kong-rpg\\tools\\verify-ux-v7.cjs:10:1)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+    }
+  ]
+}

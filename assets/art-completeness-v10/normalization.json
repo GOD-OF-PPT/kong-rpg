@@ -1,0 +1,108 @@
+{
+  "sourceSize": [
+    1402,
+    1122
+  ],
+  "sourceSHA256": "8b69507fd654899ede7d62527f0ef794ab848b0b045f414a43449d74d273084f",
+  "tool": "built-in image_gen",
+  "method": "explicit 2x2 crops, common 0.18 scale, nearest-neighbour, bottom foot anchor",
+  "frames": {
+    "erlang-heavy-windup": {
+      "sourceBox": [
+        0,
+        0,
+        701,
+        561
+      ],
+      "alphaBounds": [
+        107,
+        56,
+        582,
+        551
+      ],
+      "footX": 374.0,
+      "scale": 0.18,
+      "size": [
+        86,
+        89
+      ],
+      "placement": [
+        32,
+        23
+      ]
+    },
+    "erlang-heavy-strike": {
+      "sourceBox": [
+        701,
+        0,
+        1402,
+        561
+      ],
+      "alphaBounds": [
+        6,
+        220,
+        667,
+        551
+      ],
+      "footX": 310.5,
+      "scale": 0.18,
+      "size": [
+        119,
+        60
+      ],
+      "placement": [
+        25,
+        52
+      ]
+    },
+    "erlang-hurt": {
+      "sourceBox": [
+        0,
+        561,
+        701,
+        1122
+      ],
+      "alphaBounds": [
+        80,
+        72,
+        670,
+        480
+      ],
+      "footX": 390.5,
+      "scale": 0.18,
+      "size": [
+        106,
+        73
+      ],
+      "placement": [
+        24,
+        39
+      ]
+    },
+    "nezha-hurt": {
+      "sourceBox": [
+        701,
+        561,
+        1402,
+        1122
+      ],
+      "alphaBounds": [
+        62,
+        147,
+        599,
+        480
+      ],
+      "footX": 377.5,
+      "scale": 0.18,
+      "size": [
+        97,
+        60
+      ],
+      "placement": [
+        23,
+        52
+      ]
+    }
+  },
+  "outputSHA256": "c6ccc56d293e7bafc2676c00ffdee8019a30d7a4763c9590f0598f82bc0edc7b"
+}

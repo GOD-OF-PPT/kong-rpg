@@ -1,0 +1,150 @@
+{
+  "sha256": "a284de700292d73c3972018f7318152e8661f2e78fe52077ca6ac2b09d39b5c3",
+  "method": "real keyboard event timestamp to first rAF observing both corresponding action state and changed Canvas pixels around hero; readback sees submitted Canvas buffer, excludes display scanout/hardware; 5 isolated samples per action",
+  "samples": [
+    {
+      "code": "KeyJ",
+      "ms": 18.3,
+      "eventMs": 18.6,
+      "changed": 2845,
+      "frames": 1
+    },
+    {
+      "code": "KeyJ",
+      "ms": 5.2,
+      "eventMs": 5.4,
+      "changed": 2685,
+      "frames": 1
+    },
+    {
+      "code": "KeyJ",
+      "ms": 6.7,
+      "eventMs": 7,
+      "changed": 2685,
+      "frames": 1
+    },
+    {
+      "code": "KeyJ",
+      "ms": 8.8,
+      "eventMs": 8.9,
+      "changed": 2841,
+      "frames": 2
+    },
+    {
+      "code": "KeyJ",
+      "ms": 11.7,
+      "eventMs": 11.8,
+      "changed": 2843,
+      "frames": 2
+    },
+    {
+      "code": "Space",
+      "ms": 7.2,
+      "eventMs": 7.5,
+      "changed": 2241,
+      "frames": 1
+    },
+    {
+      "code": "Space",
+      "ms": 10.9,
+      "eventMs": 11.1,
+      "changed": 2241,
+      "frames": 2
+    },
+    {
+      "code": "Space",
+      "ms": 10.1,
+      "eventMs": 10.2,
+      "changed": 2241,
+      "frames": 2
+    },
+    {
+      "code": "Space",
+      "ms": 6.6,
+      "eventMs": 6.7,
+      "changed": 2241,
+      "frames": 1
+    },
+    {
+      "code": "Space",
+      "ms": 9.5,
+      "eventMs": 10,
+      "changed": 2243,
+      "frames": 2
+    },
+    {
+      "code": "KeyK",
+      "ms": 8.7,
+      "eventMs": 8.8,
+      "changed": 2478,
+      "frames": 1
+    },
+    {
+      "code": "KeyK",
+      "ms": 9.9,
+      "eventMs": 10.2,
+      "changed": 2444,
+      "frames": 2
+    },
+    {
+      "code": "KeyK",
+      "ms": 10.4,
+      "eventMs": 10.6,
+      "changed": 2444,
+      "frames": 2
+    },
+    {
+      "code": "KeyK",
+      "ms": 6.7,
+      "eventMs": 6.9,
+      "changed": 2444,
+      "frames": 1
+    },
+    {
+      "code": "KeyK",
+      "ms": 13.2,
+      "eventMs": 13.5,
+      "changed": 2444,
+      "frames": 2
+    },
+    {
+      "code": "KeyL",
+      "ms": 10.7,
+      "eventMs": 10.9,
+      "changed": 1938,
+      "frames": 2
+    },
+    {
+      "code": "KeyL",
+      "ms": 13.3,
+      "eventMs": 14.1,
+      "changed": 2015,
+      "frames": 2
+    },
+    {
+      "code": "KeyL",
+      "ms": 12.3,
+      "eventMs": 12.6,
+      "changed": 1737,
+      "frames": 2
+    },
+    {
+      "code": "KeyL",
+      "ms": 7.7,
+      "eventMs": 8,
+      "changed": 1737,
+      "frames": 1
+    },
+    {
+      "code": "KeyL",
+      "ms": 12.5,
+      "eventMs": 13.1,
+      "changed": 1743,
+      "frames": 2
+    }
+  ],
+  "errors": [],
+  "p95": 13.3,
+  "max": 18.3,
+  "pass": true
+}

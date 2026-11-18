@@ -1,0 +1,563 @@
+{
+  "version": "12.1.0",
+  "rows": [
+    {
+      "name": "all nineteen live move IDs resolve material, shape and stable restoration from source",
+      "pass": true
+    },
+    {
+      "name": "real hurt records the overlap contact and one material impact; invulnerability adds no fake hit",
+      "pass": true
+    },
+    {
+      "name": "two same-named soldiers keep their own strike direction after another soldier dies",
+      "pass": true
+    },
+    {
+      "name": "sixty fixed-seed fights have identical simulation states versus the v12 baseline",
+      "pass": true
+    }
+  ],
+  "pairedFights": [
+    {
+      "stage": 2,
+      "hero": "wukong",
+      "diff": "normal",
+      "strategy": "stand",
+      "steps": 490,
+      "hp": 0,
+      "boss": 160
+    },
+    {
+      "stage": 2,
+      "hero": "wukong",
+      "diff": "normal",
+      "strategy": "move",
+      "steps": 900,
+      "hp": 28,
+      "boss": 209
+    },
+    {
+      "stage": 2,
+      "hero": "wukong",
+      "diff": "challenge",
+      "strategy": "stand",
+      "steps": 490,
+      "hp": 0,
+      "boss": 160
+    },
+    {
+      "stage": 2,
+      "hero": "wukong",
+      "diff": "challenge",
+      "strategy": "move",
+      "steps": 655,
+      "hp": 0,
+      "boss": 231
+    },
+    {
+      "stage": 2,
+      "hero": "nezha",
+      "diff": "normal",
+      "strategy": "stand",
+      "steps": 496,
+      "hp": 0,
+      "boss": 137
+    },
+    {
+      "stage": 2,
+      "hero": "nezha",
+      "diff": "normal",
+      "strategy": "move",
+      "steps": 552,
+      "hp": 0,
+      "boss": 157
+    },
+    {
+      "stage": 2,
+      "hero": "nezha",
+      "diff": "challenge",
+      "strategy": "stand",
+      "steps": 496,
+      "hp": 0,
+      "boss": 137
+    },
+    {
+      "stage": 2,
+      "hero": "nezha",
+      "diff": "challenge",
+      "strategy": "move",
+      "steps": 552,
+      "hp": 0,
+      "boss": 157
+    },
+    {
+      "stage": 2,
+      "hero": "erlang",
+      "diff": "normal",
+      "strategy": "stand",
+      "steps": 487,
+      "hp": 0,
+      "boss": 222
+    },
+    {
+      "stage": 2,
+      "hero": "erlang",
+      "diff": "normal",
+      "strategy": "move",
+      "steps": 900,
+      "hp": 28,
+      "boss": 163
+    },
+    {
+      "stage": 2,
+      "hero": "erlang",
+      "diff": "challenge",
+      "strategy": "stand",
+      "steps": 487,
+      "hp": 0,
+      "boss": 222
+    },
+    {
+      "stage": 2,
+      "hero": "erlang",
+      "diff": "challenge",
+      "strategy": "move",
+      "steps": 630,
+      "hp": 0,
+      "boss": 187
+    },
+    {
+      "stage": 5,
+      "hero": "wukong",
+      "diff": "normal",
+      "strategy": "stand",
+      "steps": 700,
+      "hp": 0,
+      "boss": 272
+    },
+    {
+      "stage": 5,
+      "hero": "wukong",
+      "diff": "normal",
+      "strategy": "move",
+      "steps": 900,
+      "hp": 28,
+      "boss": 279
+    },
+    {
+      "stage": 5,
+      "hero": "wukong",
+      "diff": "challenge",
+      "strategy": "stand",
+      "steps": 824,
+      "hp": 0,
+      "boss": 272
+    },
+    {
+      "stage": 5,
+      "hero": "wukong",
+      "diff": "challenge",
+      "strategy": "move",
+      "steps": 591,
+      "hp": 0,
+      "boss": 279
+    },
+    {
+      "stage": 5,
+      "hero": "nezha",
+      "diff": "normal",
+      "strategy": "stand",
+      "steps": 715,
+      "hp": 0,
+      "boss": 254
+    },
+    {
+      "stage": 5,
+      "hero": "nezha",
+      "diff": "normal",
+      "strategy": "move",
+      "steps": 900,
+      "hp": 28,
+      "boss": 232
+    },
+    {
+      "stage": 5,
+      "hero": "nezha",
+      "diff": "challenge",
+      "strategy": "stand",
+      "steps": 839,
+      "hp": 0,
+      "boss": 254
+    },
+    {
+      "stage": 5,
+      "hero": "nezha",
+      "diff": "challenge",
+      "strategy": "move",
+      "steps": 900,
+      "hp": 28,
+      "boss": 232
+    },
+    {
+      "stage": 5,
+      "hero": "erlang",
+      "diff": "normal",
+      "strategy": "stand",
+      "steps": 718,
+      "hp": 0,
+      "boss": 249
+    },
+    {
+      "stage": 5,
+      "hero": "erlang",
+      "diff": "normal",
+      "strategy": "move",
+      "steps": 900,
+      "hp": 64,
+      "boss": 233
+    },
+    {
+      "stage": 5,
+      "hero": "erlang",
+      "diff": "challenge",
+      "strategy": "stand",
+      "steps": 845,
+      "hp": 0,
+      "boss": 245
+    },
+    {
+      "stage": 5,
+      "hero": "erlang",
+      "diff": "challenge",
+      "strategy": "move",
+      "steps": 900,
+      "hp": 64,
+      "boss": 227
+    },
+    {
+      "stage": 8,
+      "hero": "wukong",
+      "diff": "normal",
+      "strategy": "stand",
+      "steps": 890,
+      "hp": 0,
+      "boss": 206
+    },
+    {
+      "stage": 8,
+      "hero": "wukong",
+      "diff": "normal",
+      "strategy": "move",
+      "steps": 900,
+      "hp": 44,
+      "boss": 240
+    },
+    {
+      "stage": 8,
+      "hero": "wukong",
+      "diff": "challenge",
+      "strategy": "stand",
+      "steps": 900,
+      "hp": 14,
+      "boss": 182
+    },
+    {
+      "stage": 8,
+      "hero": "wukong",
+      "diff": "challenge",
+      "strategy": "move",
+      "steps": 900,
+      "hp": 12,
+      "boss": 223
+    },
+    {
+      "stage": 8,
+      "hero": "nezha",
+      "diff": "normal",
+      "strategy": "stand",
+      "steps": 900,
+      "hp": 16,
+      "boss": 175
+    },
+    {
+      "stage": 8,
+      "hero": "nezha",
+      "diff": "normal",
+      "strategy": "move",
+      "steps": 900,
+      "hp": 44,
+      "boss": 161
+    },
+    {
+      "stage": 8,
+      "hero": "nezha",
+      "diff": "challenge",
+      "strategy": "stand",
+      "steps": 900,
+      "hp": 14,
+      "boss": 151
+    },
+    {
+      "stage": 8,
+      "hero": "nezha",
+      "diff": "challenge",
+      "strategy": "move",
+      "steps": 900,
+      "hp": 44,
+      "boss": 186
+    },
+    {
+      "stage": 8,
+      "hero": "erlang",
+      "diff": "normal",
+      "strategy": "stand",
+      "steps": 900,
+      "hp": 16,
+      "boss": 176
+    },
+    {
+      "stage": 8,
+      "hero": "erlang",
+      "diff": "normal",
+      "strategy": "move",
+      "steps": 900,
+      "hp": 12,
+      "boss": 175
+    },
+    {
+      "stage": 8,
+      "hero": "erlang",
+      "diff": "challenge",
+      "strategy": "stand",
+      "steps": 900,
+      "hp": 14,
+      "boss": 156
+    },
+    {
+      "stage": 8,
+      "hero": "erlang",
+      "diff": "challenge",
+      "strategy": "move",
+      "steps": 900,
+      "hp": 14,
+      "boss": 196
+    },
+    {
+      "stage": 11,
+      "hero": "wukong",
+      "diff": "normal",
+      "strategy": "stand",
+      "steps": 724,
+      "hp": 0,
+      "boss": 209
+    },
+    {
+      "stage": 11,
+      "hero": "wukong",
+      "diff": "normal",
+      "strategy": "move",
+      "steps": 900,
+      "hp": 100,
+      "boss": 290
+    },
+    {
+      "stage": 11,
+      "hero": "wukong",
+      "diff": "challenge",
+      "strategy": "stand",
+      "steps": 623,
+      "hp": 0,
+      "boss": 192
+    },
+    {
+      "stage": 11,
+      "hero": "wukong",
+      "diff": "challenge",
+      "strategy": "move",
+      "steps": 900,
+      "hp": 100,
+      "boss": 290
+    },
+    {
+      "stage": 11,
+      "hero": "nezha",
+      "diff": "normal",
+      "strategy": "stand",
+      "steps": 730,
+      "hp": 0,
+      "boss": 183
+    },
+    {
+      "stage": 11,
+      "hero": "nezha",
+      "diff": "normal",
+      "strategy": "move",
+      "steps": 900,
+      "hp": 64,
+      "boss": 183
+    },
+    {
+      "stage": 11,
+      "hero": "nezha",
+      "diff": "challenge",
+      "strategy": "stand",
+      "steps": 632,
+      "hp": 0,
+      "boss": 161
+    },
+    {
+      "stage": 11,
+      "hero": "nezha",
+      "diff": "challenge",
+      "strategy": "move",
+      "steps": 900,
+      "hp": 28,
+      "boss": 183
+    },
+    {
+      "stage": 11,
+      "hero": "erlang",
+      "diff": "normal",
+      "strategy": "stand",
+      "steps": 727,
+      "hp": 0,
+      "boss": 246
+    },
+    {
+      "stage": 11,
+      "hero": "erlang",
+      "diff": "normal",
+      "strategy": "move",
+      "steps": 900,
+      "hp": 100,
+      "boss": 94
+    },
+    {
+      "stage": 11,
+      "hero": "erlang",
+      "diff": "challenge",
+      "strategy": "stand",
+      "steps": 626,
+      "hp": 0,
+      "boss": 242
+    },
+    {
+      "stage": 11,
+      "hero": "erlang",
+      "diff": "challenge",
+      "strategy": "move",
+      "steps": 900,
+      "hp": 28,
+      "boss": 167
+    },
+    {
+      "stage": 14,
+      "hero": "wukong",
+      "diff": "normal",
+      "strategy": "stand",
+      "steps": 848,
+      "hp": 0,
+      "boss": 218
+    },
+    {
+      "stage": 14,
+      "hero": "wukong",
+      "diff": "normal",
+      "strategy": "move",
+      "steps": 900,
+      "hp": 36,
+      "boss": 286
+    },
+    {
+      "stage": 14,
+      "hero": "wukong",
+      "diff": "challenge",
+      "strategy": "stand",
+      "steps": 900,
+      "hp": 26,
+      "boss": 201
+    },
+    {
+      "stage": 14,
+      "hero": "wukong",
+      "diff": "challenge",
+      "strategy": "move",
+      "steps": 602,
+      "hp": 0,
+      "boss": 308
+    },
+    {
+      "stage": 14,
+      "hero": "nezha",
+      "diff": "normal",
+      "strategy": "stand",
+      "steps": 854,
+      "hp": 0,
+      "boss": 189
+    },
+    {
+      "stage": 14,
+      "hero": "nezha",
+      "diff": "normal",
+      "strategy": "move",
+      "steps": 900,
+      "hp": 28,
+      "boss": 222
+    },
+    {
+      "stage": 14,
+      "hero": "nezha",
+      "diff": "challenge",
+      "strategy": "stand",
+      "steps": 900,
+      "hp": 26,
+      "boss": 172
+    },
+    {
+      "stage": 14,
+      "hero": "nezha",
+      "diff": "challenge",
+      "strategy": "move",
+      "steps": 634,
+      "hp": 0,
+      "boss": 252
+    },
+    {
+      "stage": 14,
+      "hero": "erlang",
+      "diff": "normal",
+      "strategy": "stand",
+      "steps": 854,
+      "hp": 0,
+      "boss": 248
+    },
+    {
+      "stage": 14,
+      "hero": "erlang",
+      "diff": "normal",
+      "strategy": "move",
+      "steps": 851,
+      "hp": 0,
+      "boss": 204
+    },
+    {
+      "stage": 14,
+      "hero": "erlang",
+      "diff": "challenge",
+      "strategy": "stand",
+      "steps": 900,
+      "hp": 26,
+      "boss": 241
+    },
+    {
+      "stage": 14,
+      "hero": "erlang",
+      "diff": "challenge",
+      "strategy": "move",
+      "steps": 611,
+      "hp": 0,
+      "boss": 260
+    }
+  ]
+}

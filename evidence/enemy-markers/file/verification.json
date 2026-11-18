@@ -1,0 +1,658 @@
+{
+  "kind": "file",
+  "baseline": false,
+  "version": "8.0.1",
+  "sha256": "f2459977832a1889c1b826a007eda10741f69d13c7c636161504fbb96c83a737",
+  "seed": "MARKERS-1027",
+  "method": "canonical schema8 scene imports; real DOM, keyboard and mouse; DOM canvas capture at display scale plus raw native 960x540 export; controlled art states, not natural full playthrough",
+  "checks": [
+    {
+      "name": "embedded artwork decodes",
+      "pass": true
+    },
+    {
+      "name": "all six ImageGen glyphs survive actual small-size sampling",
+      "pass": true,
+      "data": [
+        {
+          "id": "twin",
+          "solid": 259
+        },
+        {
+          "id": "pulse",
+          "solid": 288
+        },
+        {
+          "id": "volley",
+          "solid": 260
+        },
+        {
+          "id": "empowered",
+          "solid": 240
+        },
+        {
+          "id": "intent",
+          "solid": 176
+        },
+        {
+          "id": "warning",
+          "solid": 174
+        }
+      ]
+    },
+    {
+      "name": "traits imports and runs",
+      "pass": true
+    },
+    {
+      "name": "traits has visible living enemies",
+      "pass": true
+    },
+    {
+      "name": "windup imports and runs",
+      "pass": true
+    },
+    {
+      "name": "windup has visible living enemies",
+      "pass": true
+    },
+    {
+      "name": "hurt imports and runs",
+      "pass": true
+    },
+    {
+      "name": "hurt has visible living enemies",
+      "pass": true
+    },
+    {
+      "name": "chain imports and runs",
+      "pass": true
+    },
+    {
+      "name": "chain has visible living enemies",
+      "pass": true
+    },
+    {
+      "name": "challenge imports and runs",
+      "pass": true
+    },
+    {
+      "name": "challenge has visible living enemies",
+      "pass": true
+    },
+    {
+      "name": "plain imports and runs",
+      "pass": true
+    },
+    {
+      "name": "plain has visible living enemies",
+      "pass": true
+    },
+    {
+      "name": "empowered imports and runs",
+      "pass": true
+    },
+    {
+      "name": "empowered has visible living enemies",
+      "pass": true
+    },
+    {
+      "name": "guardian imports and runs",
+      "pass": true
+    },
+    {
+      "name": "guardian has visible living enemies",
+      "pass": true
+    },
+    {
+      "name": "boss imports and runs",
+      "pass": true
+    },
+    {
+      "name": "boss has visible living enemies",
+      "pass": true
+    },
+    {
+      "name": "realm imports and runs",
+      "pass": true
+    },
+    {
+      "name": "realm has visible living enemies",
+      "pass": true
+    },
+    {
+      "name": "edge and low-ceiling badges remain inside canvas",
+      "pass": true,
+      "data": [
+        {
+          "id": 1,
+          "x": 303,
+          "y": 20,
+          "size": 34,
+          "warning": true
+        },
+        {
+          "id": 2,
+          "x": 360,
+          "y": 21,
+          "size": 34,
+          "warning": true
+        },
+        {
+          "id": 3,
+          "x": 25,
+          "y": 357,
+          "size": 34,
+          "warning": true
+        },
+        {
+          "id": 4,
+          "x": 940,
+          "y": 357,
+          "size": 34,
+          "warning": true
+        }
+      ]
+    },
+    {
+      "name": "nearby badges do not overpaint each other 1:0",
+      "pass": true
+    },
+    {
+      "name": "nearby badges do not overpaint each other 2:0",
+      "pass": true
+    },
+    {
+      "name": "nearby badges do not overpaint each other 2:1",
+      "pass": true
+    },
+    {
+      "name": "nearby badges do not overpaint each other 3:0",
+      "pass": true
+    },
+    {
+      "name": "nearby badges do not overpaint each other 3:1",
+      "pass": true
+    },
+    {
+      "name": "nearby badges do not overpaint each other 3:2",
+      "pass": true
+    },
+    {
+      "name": "keyboard attack still operates",
+      "pass": true
+    },
+    {
+      "name": "DOM pause blocks combat input",
+      "pass": true
+    },
+    {
+      "name": "actual exported warning state restores",
+      "pass": true
+    },
+    {
+      "name": "mouse attack still operates",
+      "pass": true
+    },
+    {
+      "name": "no runtime errors",
+      "pass": true
+    },
+    {
+      "name": "new disconnected file session makes zero HTTP requests",
+      "pass": true
+    }
+  ],
+  "scenes": [
+    {
+      "name": "traits",
+      "state": [
+        {
+          "id": 600,
+          "kind": "blade",
+          "trait": "twin",
+          "phase": "recover",
+          "x": 710,
+          "y": 400
+        },
+        {
+          "id": 601,
+          "kind": "shield",
+          "trait": "pulse",
+          "phase": "recover",
+          "x": 845,
+          "y": 400
+        },
+        {
+          "id": 602,
+          "kind": "caster",
+          "trait": "volley",
+          "phase": "recover",
+          "x": 980,
+          "y": 325.0736817203387
+        }
+      ],
+      "elapsed": 0.3416666666666669
+    },
+    {
+      "name": "windup",
+      "state": [
+        {
+          "id": 600,
+          "kind": "blade",
+          "trait": "twin",
+          "phase": "windup",
+          "x": 710,
+          "y": 400
+        },
+        {
+          "id": 601,
+          "kind": "shield",
+          "trait": "pulse",
+          "phase": "windup",
+          "x": 845,
+          "y": 400
+        },
+        {
+          "id": 602,
+          "kind": "caster",
+          "trait": "volley",
+          "phase": "windup",
+          "x": 980,
+          "y": 324.2179790565704
+        }
+      ],
+      "elapsed": 0.20833333333333331
+    },
+    {
+      "name": "hurt",
+      "state": [
+        {
+          "id": 600,
+          "kind": "blade",
+          "trait": "twin",
+          "phase": "recover",
+          "x": 710,
+          "y": 400
+        },
+        {
+          "id": 601,
+          "kind": "shield",
+          "trait": "pulse",
+          "phase": "recover",
+          "x": 845,
+          "y": 400
+        },
+        {
+          "id": 602,
+          "kind": "caster",
+          "trait": "volley",
+          "phase": "recover",
+          "x": 980,
+          "y": 324.17046625522033
+        }
+      ],
+      "elapsed": 0.19999999999999998
+    },
+    {
+      "name": "chain",
+      "state": [
+        {
+          "id": 600,
+          "kind": "blade",
+          "trait": "twin",
+          "phase": "chain-windup",
+          "x": 710,
+          "y": 400
+        },
+        {
+          "id": 601,
+          "kind": "shield",
+          "trait": "pulse",
+          "phase": "windup",
+          "x": 845,
+          "y": 400
+        },
+        {
+          "id": 602,
+          "kind": "caster",
+          "trait": "volley",
+          "phase": "windup",
+          "x": 980,
+          "y": 324.26626462362754
+        }
+      ],
+      "elapsed": 0.21666666666666665
+    },
+    {
+      "name": "challenge",
+      "state": [
+        {
+          "id": 600,
+          "kind": "blade",
+          "trait": "twin",
+          "phase": "windup",
+          "x": 710,
+          "y": 400
+        },
+        {
+          "id": 601,
+          "kind": "shield",
+          "trait": "pulse",
+          "phase": "windup",
+          "x": 845,
+          "y": 400
+        },
+        {
+          "id": 602,
+          "kind": "caster",
+          "trait": "volley",
+          "phase": "windup",
+          "x": 980,
+          "y": 324.2179790565704
+        }
+      ],
+      "elapsed": 0.20833333333333331
+    },
+    {
+      "name": "plain",
+      "state": [
+        {
+          "id": 0,
+          "kind": "blade",
+          "phase": "windup",
+          "x": 710,
+          "y": 400
+        },
+        {
+          "id": 1,
+          "kind": "shield",
+          "phase": "windup",
+          "x": 845,
+          "y": 400
+        },
+        {
+          "id": 2,
+          "kind": "caster",
+          "phase": "windup",
+          "x": 980,
+          "y": 329.75063477872965
+        }
+      ],
+      "elapsed": 0.19166666666666665
+    },
+    {
+      "name": "empowered",
+      "state": [
+        {
+          "id": 0,
+          "kind": "blade",
+          "phase": "windup",
+          "x": 710,
+          "y": 400
+        },
+        {
+          "id": 1,
+          "kind": "shield",
+          "phase": "windup",
+          "x": 845,
+          "y": 400
+        },
+        {
+          "id": 2,
+          "kind": "caster",
+          "phase": "windup",
+          "x": 980,
+          "y": 329.7018527222046
+        }
+      ],
+      "elapsed": 0.19999999999999998
+    },
+    {
+      "name": "guardian",
+      "state": [
+        {
+          "id": 900,
+          "kind": "warden",
+          "phase": "warden-windup",
+          "x": 6990,
+          "y": 352
+        }
+      ],
+      "elapsed": 0.20833333333333331
+    },
+    {
+      "name": "boss",
+      "state": [
+        {
+          "id": 0,
+          "kind": "boss",
+          "phase": "sweep-windup",
+          "x": 2944,
+          "y": 368
+        }
+      ],
+      "elapsed": 0.19999999999999998
+    },
+    {
+      "name": "realm",
+      "state": [
+        {
+          "id": 7,
+          "kind": "caster",
+          "phase": "realm-echo",
+          "x": 780,
+          "y": 240.62356824751103
+        }
+      ],
+      "elapsed": 0.20833333333333331
+    }
+  ],
+  "errors": [],
+  "network": [],
+  "browser": "156.0.4314.42",
+  "recording": {
+    "file": "E:\\githome\\kong-rpg\\evidence\\enemy-markers\\file\\marker-states.mp4",
+    "fps": 5,
+    "frames": [
+      {
+        "index": 0,
+        "ms": 68.2
+      },
+      {
+        "index": 1,
+        "ms": 235.03
+      },
+      {
+        "index": 2,
+        "ms": 459.85
+      },
+      {
+        "index": 3,
+        "ms": 647.07
+      },
+      {
+        "index": 4,
+        "ms": 862.82
+      },
+      {
+        "index": 5,
+        "ms": 1047.76
+      },
+      {
+        "index": 6,
+        "ms": 1262.32
+      },
+      {
+        "index": 7,
+        "ms": 1529.07
+      },
+      {
+        "index": 8,
+        "ms": 1663.29
+      },
+      {
+        "index": 9,
+        "ms": 1870.79
+      },
+      {
+        "index": 10,
+        "ms": 2079.57
+      },
+      {
+        "index": 11,
+        "ms": 2317.65
+      },
+      {
+        "index": 12,
+        "ms": 2484.23
+      },
+      {
+        "index": 13,
+        "ms": 2684.93
+      },
+      {
+        "index": 14,
+        "ms": 2889.38
+      },
+      {
+        "index": 15,
+        "ms": 3131.73
+      },
+      {
+        "index": 16,
+        "ms": 3296.09
+      },
+      {
+        "index": 17,
+        "ms": 3503.23
+      },
+      {
+        "index": 18,
+        "ms": 3772.28
+      },
+      {
+        "index": 19,
+        "ms": 3903.27
+      },
+      {
+        "index": 20,
+        "ms": 4111.07
+      },
+      {
+        "index": 21,
+        "ms": 4320.05
+      },
+      {
+        "index": 22,
+        "ms": 4581.41
+      },
+      {
+        "index": 23,
+        "ms": 4722.2
+      },
+      {
+        "index": 24,
+        "ms": 4923.89
+      },
+      {
+        "index": 25,
+        "ms": 5138.51
+      },
+      {
+        "index": 26,
+        "ms": 5368.65
+      },
+      {
+        "index": 27,
+        "ms": 5540.18
+      },
+      {
+        "index": 28,
+        "ms": 5746.48
+      },
+      {
+        "index": 29,
+        "ms": 6038.36
+      },
+      {
+        "index": 30,
+        "ms": 6140.64
+      },
+      {
+        "index": 31,
+        "ms": 6350.55
+      },
+      {
+        "index": 32,
+        "ms": 6554.91
+      },
+      {
+        "index": 33,
+        "ms": 6808.8
+      },
+      {
+        "index": 34,
+        "ms": 6962.82
+      },
+      {
+        "index": 35,
+        "ms": 7165.12
+      },
+      {
+        "index": 36,
+        "ms": 7384.61
+      },
+      {
+        "index": 37,
+        "ms": 7630.51
+      },
+      {
+        "index": 38,
+        "ms": 7783.6
+      },
+      {
+        "index": 39,
+        "ms": 7987.36
+      },
+      {
+        "index": 40,
+        "ms": 8186.38
+      },
+      {
+        "index": 41,
+        "ms": 8392.95
+      },
+      {
+        "index": 42,
+        "ms": 8591.7
+      },
+      {
+        "index": 43,
+        "ms": 8830.97
+      },
+      {
+        "index": 44,
+        "ms": 9035.9
+      },
+      {
+        "index": 45,
+        "ms": 9203.58
+      },
+      {
+        "index": 46,
+        "ms": 9408.48
+      },
+      {
+        "index": 47,
+        "ms": 9611.58
+      },
+      {
+        "index": 48,
+        "ms": 9816.03
+      }
+    ],
+    "method": "continuous page screenshots at requested 5Hz; JSON contains actual capture times",
+    "error": ""
+  }
+}

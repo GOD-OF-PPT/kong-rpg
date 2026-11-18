@@ -1,0 +1,6 @@
+.rage-line{margin-top:9px;color:#dbc58b}.rage-line>span{font-size:9px;white-space:nowrap}.rage-line .meter{border-color:#82643b}.rage-line .meter i{background:#d9ad55}.rage-line.ready{color:#ffdf8f;text-shadow:0 0 7px #cc8d3a88}.rage-line.ready .meter{border-color:#f7d997;box-shadow:0 0 6px #dcac4f88}
+.run-arts{position:absolute;bottom:10%;left:3%;max-width:64%;display:flex;align-items:center;gap:14px;font:10px/1.7 "Microsoft YaHei",sans-serif;color:#c9d8c6;text-shadow:0 2px 3px #111;pointer-events:none}.run-arts #talisman-state{color:#b1e3df;white-space:nowrap}.run-arts #growth-state{max-width:400px;line-height:1.6}
+.growth-line{text-align:center;margin:7px auto 0;max-width:700px;color:#d9c595;font:11px/1.8 "Microsoft YaHei",sans-serif;letter-spacing:.3px}
+#boss-name{font-weight:400;color:var(--boss-color,#d8b2d0)}#boss-hud .meter i{background:var(--boss-color,#ba77a3)}#boss-phase{letter-spacing:1px}
+.game-dialog .relic-card .tag{max-width:100%;letter-spacing:1.5px;text-align:center;line-height:1.6}.footline .keystrip{gap:11px}
+@container(max-width:1200px){.run-arts{font-size:9px;gap:9px}.growth-line{font-size:10px}.game-dialog .relic-card .tag{letter-spacing:1px}}

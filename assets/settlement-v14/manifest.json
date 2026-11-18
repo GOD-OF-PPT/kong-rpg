@@ -1,0 +1,30 @@
+{
+  "tool": "built-in image_gen",
+  "use": "Result-screen background; live DOM text and existing hero art layered separately.",
+  "source": {
+    "file": "assets/settlement-v14/return-gate-source.png",
+    "sha256": "efb82ed0c62b1408fc1985e500ccd21ead6e7d460c86fbf9b5e275cc57e8a0dc"
+  },
+  "image": {
+    "file": "assets/settlement-v14/return-gate.png",
+    "sha256": "dfed5ff25f71df4429600c1ef2b7a4e97908a3e7ccbf1995b492d16a5191010a",
+    "format": "png",
+    "mediaType": "image/png",
+    "size": 3018279,
+    "width": 1600,
+    "height": 900,
+    "space": "srgb",
+    "channels": 3,
+    "depth": "uchar",
+    "density": 72,
+    "isProgressive": false,
+    "isPalette": false,
+    "bitsPerSample": 8,
+    "hasProfile": false,
+    "hasAlpha": false,
+    "autoOrient": {
+      "width": 1600,
+      "height": 900
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "tool": "built-in image_gen",
+  "transparent_background": false,
+  "prompt": "Use case: ads-marketing. Asset type: finished premium game cover / key art, landscape 16:9, target final canvas 1920 by 1080 pixels. Primary request: create the official cover for the original Chinese mythic pixel action roguelite 劫火重燃 (Rekindled Embers), using the supplied shipped game art as identity references. Input images: Image1 is the EXACT existing gold/cinnabar title wordmark to preserve, characters must read 劫火重燃; Image2 is Wukong's shipped sprite animation atlas, identity/color/proportion reference only (show ONE Wukong, never a sprite sheet); Image3 is Nezha's shipped portrait identity reference; Image4 is Erlang's shipped portrait identity reference. Subject/composition: bold coherent action key art, NOT a UI mockup. Wukong is the main foreground hero at center-right with recognizable monkey face, golden circlet, teal armor/clothes, ornate gold shoulder armor, flowing red scarf, gripping ONE black-and-gold staff in two hands in a sweeping battle pose. Slightly behind and above to the right: youthful Nezha with two black hair buns, red silk, gold armor and teal trousers, ONE fire-tipped spear, a golden ring and two distinct small fire-wind wheels at his feet. Lower right beside Wukong: handsome adult Erlang with third eye, long dark hair, white/silver cape, teal and gold armor, ONE silver three-pronged poleblade, a bow on his back, with one small black celestial hound leaping near his feet. Three heroes only, three readable separate silhouettes with correct limbs, different weapon shapes and fighting poses. Weapons must be anatomically held, not floating or crossing faces. Scene: a broken mythic sky palace causeway over a sea of clouds, distant layered heavenly gates, a dark distant underworld arch low in the mist, teal sea and faint submerged palace silhouettes at the lower distance, suggest five realms in one continuous world rather than panels. Distant top-right threatening armored pagoda-bearing guardian silhouette, very secondary, not another foreground hero. High contrast focal faces and weapons, diagonal gold sparks and sparse ember red accents, deep midnight blue and turquoise architecture, warm gold rim light, energetic heroic tension with a resolve-to-rise-again mood. Style: refined high-density pixel art illustration consistent with the shipped sprites, visible deliberate pixel clusters and crisp edges, richly composed game key art; no photorealism, no 3D render, no soft airbrushed fantasy poster. Title area: reserve the left upper 45 percent as quieter dark blue negative space; reproduce Image1 wordmark there prominently with generous safe margins, exact Chinese 劫火重燃 in one horizontal line, no alternate title. Directly underneath put smaller exact Chinese slogan: \"踏破五界，此战再起。\" and a restrained small English subtitle \"REKINDLED EMBERS\". The title, slogan, characters and all main weapons stay at least 70px inside the edges. No other copy, no platform logos, no watermark, no UI, no health bars, no buttons, no feature icons, no panels. Do not include 西游 or any previous game title anywhere. Opaque complete cover background, intended exact 1920×1080 delivery.",
+  "references": [
+    {
+      "path": "assets/brand-rekindled/wordmark.png",
+      "role": "existing title logo identity"
+    },
+    {
+      "path": "assets/combat-identities/wukong.png",
+      "role": "Wukong identity and palette, one figure in output"
+    },
+    {
+      "path": "assets/v8/nezha-portrait.png",
+      "role": "Nezha identity and palette"
+    },
+    {
+      "path": "assets/v8/erlang-portrait.png",
+      "role": "Erlang identity and palette"
+    }
+  ],
+  "output": "assets/marketing/rekindled-embers-cover-1920x1080.png"
+}

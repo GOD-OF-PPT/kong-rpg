@@ -1,0 +1,150 @@
+{
+  "version": "7.0.1",
+  "kind": "http",
+  "entry": "E:\\githome\\kong-rpg\\release\\index.html",
+  "sha256": "dd52d2607675c57d66fa24e6cd7d736ca25cb51e2bdfe9fedfc6f15f3020dd9c",
+  "checks": [
+    {
+      "name": "left hold continues attacking after right-click skill",
+      "pass": true,
+      "first": 3,
+      "second": 6
+    },
+    {
+      "name": "held combat direction cannot navigate a new reward",
+      "pass": true,
+      "initial": "mercy",
+      "after": "mercy"
+    },
+    {
+      "name": "fresh D still selects next reward",
+      "pass": true
+    },
+    {
+      "name": "modified browser keys do not trigger combat",
+      "pass": true
+    },
+    {
+      "name": "Ctrl-Tab is not captured as game pause",
+      "pass": true
+    },
+    {
+      "name": "held movement does not restart after pause",
+      "pass": true
+    },
+    {
+      "name": "fresh movement works after pause",
+      "pass": true
+    },
+    {
+      "name": "Nezha pause uses her own portrait",
+      "pass": true,
+      "hero": "nezha"
+    },
+    {
+      "name": "wukong U HUD explains insufficient focus",
+      "pass": true,
+      "text": "定力不足"
+    },
+    {
+      "name": "nezha U HUD explains insufficient focus",
+      "pass": true,
+      "text": "定力不足"
+    },
+    {
+      "name": "HUD yields visibility when player flies behind it",
+      "pass": true,
+      "hudOpacity": 0.18
+    },
+    {
+      "name": "passed objective points back instead of saying ahead zero",
+      "pass": true,
+      "objective": "阵眼 1 / 2 · 回身 24丈"
+    },
+    {
+      "name": "fractional focus hint does not expose floating point digits",
+      "pass": true,
+      "pickupText": "定心光 · 定力 +0.2 · 走近自动拾取"
+    },
+    {
+      "name": "a distant lamp cannot be claimed through a platform",
+      "pass": true
+    },
+    {
+      "name": "approaching the real lamp landing still permits reward",
+      "pass": true,
+      "landing": {
+        "x": 1480,
+        "y": 396,
+        "w": 24,
+        "h": 44,
+        "vx": 0,
+        "vy": 0,
+        "face": 1,
+        "hp": 100,
+        "focus": 100,
+        "rage": 25,
+        "ringCD": 0,
+        "ringAim": null,
+        "ultimate": 0,
+        "ultimateStage": 0,
+        "talismanCD": 0,
+        "ward": 0,
+        "dashTargets": [],
+        "grounded": true,
+        "coyote": 0,
+        "buffer": 0,
+        "airJumps": 0,
+        "invuln": 0,
+        "dash": 0,
+        "dashCD": 0,
+        "attack": 0,
+        "attackId": 0,
+        "attackTargets": [],
+        "comboIndex": 0,
+        "slam": false,
+        "landing": 0,
+        "drop": 0,
+        "hurt": 0,
+        "attackBuffer": 0,
+        "armCD": 0,
+        "vaultTime": 0,
+        "vaultUsed": false,
+        "groundTime": 0,
+        "wheelFuel": 1.25,
+        "wheelReady": true
+      }
+    },
+    {
+      "name": "midpoint reward ends an unlaunched pole vault",
+      "pass": true
+    },
+    {
+      "name": "choosing a reward cannot auto-launch the previous vault",
+      "pass": true
+    },
+    {
+      "name": "failed import preserves current run",
+      "pass": true
+    },
+    {
+      "name": "pause freezes signature and world",
+      "pass": true
+    },
+    {
+      "name": "actual v7.0.0 flight save preserves hero and remaining fuel",
+      "pass": true,
+      "build": "7.0.0"
+    },
+    {
+      "name": "no runtime errors",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "network": [
+    "http://127.0.0.1:5188/release/index.html?ux=7"
+  ],
+  "browser": "156.0.4314.42",
+  "video": "evidence/ux-audit-v7/final/video/page@598fad23b2e34bf4072220ebbefe5ba6.webm"
+}

@@ -1,227 +1,115 @@
-(function (K) {
+(function(K){
   'use strict';
-  const KEY = 'kong.black-lotus.v2', LEGACY = 'kong.black-lotus.v1', SETTINGS = 'kong.black-lotus.settings.v2';
-  const number = (v, a, b) => typeof v === 'number' && Number.isFinite(v) && v >= a && v <= b;
-  const fail = () => { throw new Error('存档数据不完整或已损坏，请保留原文件。'); };
-  const count = v => Number.isFinite(Number(v)) ? Math.max(0, Math.min(1e7, Math.floor(Number(v)))) : 0;
-
-  K.cleanMeta = function (m) {
-    const validSeals = Array.isArray(m?.seals) ? m.seals.filter(id => K.SEALS_CODEX?.some(x => x.id === id)) : [];
-    const seenRelics = Array.isArray(m?.seenRelics) ? m.seenRelics.filter(id => K.RELICS.some(r => r.id === id)) : [];
-    return {
-      runs: count(m?.runs),
-      wins: count(m?.wins),
-      best: Math.min(4, count(m?.best)),
-      seals: [...new Set(validSeals)],
-      seenRelics: [...new Set(seenRelics)],
-      history: Array.isArray(m?.history) ? m.history.filter(x => x && typeof x.id === 'string' && typeof x.seed === 'string').slice(-8).map(x => ({
-        id: x.id.slice(0, 100),
-        seed: x.seed.slice(0, 32),
-        won: !!x.won,
-        stage: Math.min(3, count(x.stage)),
-        seconds: count(x.seconds),
-        damage: count(x.damage),
-        grade: typeof x.grade === 'string' ? x.grade.slice(0, 4) : '',
-        relics: Array.isArray(x.relics) ? x.relics.filter(id => K.RELICS.some(r => r.id === id)).slice(0, 4) : []
-      })) : []
-    };
+  const KEY='kong.black-lotus.v12',ELEVENTH='kong.black-lotus.v11',TENTH='kong.black-lotus.v10',NINTH='kong.black-lotus.v9',EIGHTH='kong.black-lotus.v8',SEVENTH='kong.black-lotus.v7',LEGACY='kong.black-lotus.v1',PREVIOUS='kong.black-lotus.v2',THIRD='kong.black-lotus.v3',FOURTH='kong.black-lotus.v4',FIFTH='kong.black-lotus.v5',SIXTH='kong.black-lotus.v6',SETTINGS='kong.black-lotus.settings.v2';
+  const number=(v,a,b)=>typeof v==='number'&&Number.isFinite(v)&&v>=a&&v<=b;
+  const fail=()=>{throw new Error('存档数据不完整或已损坏，请保留原文件。');};
+  const count=v=>Number.isFinite(Number(v))?Math.max(0,Math.min(1e7,Math.floor(Number(v)))):0;
+  K.cleanMeta=function(m){
+    return {normalClear:K.validClear(m?.normalClear)?{...m.normalClear}:null,runs:count(m?.runs),wins:count(m?.wins),best:Math.min(15,count(m?.best)),history:Array.isArray(m?.history)?m.history.filter(x=>x&&typeof x.id==='string'&&typeof x.seed==='string').slice(-8).map(x=>({id:x.id.slice(0,100),seed:x.seed.slice(0,32),won:!!x.won,grade:['S','A','B','C'].includes(x.grade)?x.grade:null,score:count(x.score),stage:Math.min(14,count(x.stage)),hero:K.HEROES.some(h=>h.id===x.hero)?x.hero:'wukong',difficulty:x.difficulty==='challenge'?'challenge':'normal',seconds:count(x.seconds),damage:count(x.damage),relics:Array.isArray(x.relics)?x.relics.filter(id=>K.RELICS.some(r=>r.id===id)).slice(0,3):[]})):[]};
   };
-
-  K.evaluateSeals = function (s, meta) {
-    if (!s || !meta) return [];
-    meta.seals ||= [];
-    meta.seenRelics ||= [];
-    for (const id of (s.relics || [])) if (!meta.seenRelics.includes(id)) meta.seenRelics.push(id);
-    const newly = [];
-    const unlock = id => { if (!meta.seals.includes(id)) { meta.seals.push(id); newly.push(id); } };
-    if (s.kills >= 1) unlock('first_blood');
-    if ((s.insights || 0) >= 3) unlock('insight_master');
-    if (s.log?.some(e => e.type === 'pillar-cast' && e.power >= 3)) unlock('pillar_breaker');
-    if ((s.flowStrikes || 0) >= 3) unlock('stance_dancer');
-    if ((s.shatterCount || 0) >= 1) unlock('immobilize_sage');
-    if (s.macaqueSlain) unlock('macaque_slayer');
-    if ((s.bellsCleared || 0) >= 1) unlock('bell_ringer');
-    if ((s.upgradedRelics || []).length >= 1) unlock('stele_sage');
-    if (K.activeSynergies(s.relics).filter(x => !x.reqCount).length >= 2) unlock('synergy_weaver');
-    if ((s.wardensSlain || 0) >= 1) unlock('warden_slayer');
-    if ((s.maxCombo || 0) >= 15) unlock('combo_king');
-    if (s.mode === 'won') {
-      unlock('lotus_conqueror');
-      if (s.damageTaken <= 45) unlock('flawless_sage');
-    }
-    return newly;
-  };
-
-  K.validSave = function (data) {
-    if (data?.game === 'black-lotus' && [1, 2].includes(data.schema) && data.state?.version === 1) {
-      const error = new Error('这是v1旅程，请在保留的原版中继续。');
-      error.legacy = true;
-      throw error;
-    }
-    if (!data || data.schema !== 2 || data.game !== 'black-lotus' || !data.state) throw new Error('这不是劫后行v2存档。');
-    const s = data.state;
-    const maxSlots = s.maxRelics === 4 ? 4 : 3;
-    if (s.version !== 2 || s.rules !== 2 || !Number.isInteger(s.stage) || s.stage < 0 || s.stage > 3 || typeof s.seed !== 'string' || s.seed.length > 32 || !['playing', 'paused', 'reward', 'forge', 'dead', 'won'].includes(s.mode)) fail();
-    if (!Array.isArray(s.relics) || s.relics.length > maxSlots || new Set(s.relics).size !== s.relics.length || s.relics.some(id => !K.RELICS.some(r => r.id === id))) fail();
-    const canonical = K.makeRoom(s.seed, s.stage), p = s.player;
-    const maxHpCap = number(p?.maxHp, 100, 200) ? p.maxHp : 100;
-    if (!p || !number(p.hp, 0, maxHpCap) || !number(p.focus, 0, 100) || !number(p.x, 0, canonical.width) || !number(p.y, -1000, 1000) || !number(p.vx, -2000, 2000) || !number(p.vy, -2000, 2000) || ![-1, 1].includes(p.face)) fail();
-    for (const key of ['coyote', 'buffer', 'invuln', 'dash', 'dashCD', 'attack', 'landing', 'drop', 'hurt', 'attackBuffer']) if (!number(p[key], 0, 5)) fail();
-    if (typeof p.grounded !== 'boolean' || typeof p.slam !== 'boolean' || !Number.isInteger(p.airJumps) || p.airJumps < 0 || p.airJumps > 1 || !Number.isInteger(p.comboIndex) || p.comboIndex < 0 || p.comboIndex > 3 || !number(p.attackId, 0, 1e7) || !Array.isArray(p.attackTargets) || p.attackTargets.length > 40 || p.attackTargets.some(x => typeof x !== 'string') || (p.attack > 0 && !number(p.attackDuration, .1, 1))) fail();
-    for (const key of ['time', 'elapsed', 'roomTime', 'kills', 'broken', 'damageTaken', 'hitstop', 'shake', 'checkpoint', 'combo', 'comboTime', 'serial']) if (!number(s[key], 0, 1e8)) fail();
-    if (s.broken > 6 || s.checkpoint > canonical.width || s.combo > 3 || typeof s.lastDamage !== 'string' || s.lastDamage.length > 100 || !Array.isArray(s.hints) || s.hints.length > 30 || s.hints.some(x => typeof x !== 'string' || x.length > 50)) fail();
-    if (!s.room || !Array.isArray(s.room.enemies) || s.room.enemies.length < canonical.enemies.length || s.room.enemies.length > canonical.enemies.length + 8 || !Array.isArray(s.room.seals) || s.room.seals.length !== canonical.seals.length || !Array.isArray(s.room.pickups) || s.room.pickups.length !== canonical.pickups.length || typeof s.room.midClaimed !== 'boolean') fail();
-
-    const phases = ['idle', 'windup', 'attack', 'recover', 'sweep-windup', 'orb-windup', 'pillar-windup', 'beam-windup', 'beam', 'sweep', 'shift-windup', 'shift'];
-    canonical.enemies.forEach((e, i) => {
-      const x = s.room.enemies[i];
-      if (!x || x.id !== e.id || x.kind !== e.kind || !number(x.hp, 0, e.maxHp) || !number(x.x, 0, canonical.width) || !number(x.y, -200, 540) || !number(x.timer, -2, 10) || !number(x.stun, 0, 3) || !number(x.flash, 0, 2) || !number(x.interruptLock, 0, 2) || !number(x.attacks, 0, 1e7) || ![-1, 1].includes(x.face) || !phases.includes(x.phase)) fail();
-      for (const key of ['hp', 'x', 'y', 'timer', 'stun', 'frozen', 'freezeHits', 'flash', 'interruptLock', 'attacks', 'face', 'phase', 'struck', 'phase2', 'phase3', 'archForm']) if (x[key] !== undefined) e[key] = x[key];
-      if (x.shiftTo !== undefined) { if (!number(x.shiftTo, 0, 960)) fail(); e.shiftTo = x.shiftTo; }
-      if (x.aimX !== undefined) { if (!number(x.aimX, -200, canonical.width + 200) || !number(x.aimY, -1000, 1000)) fail(); e.aimX = x.aimX; e.aimY = x.aimY; }
+  K.validSave=function(data){
+    if(data?.game==='black-lotus'&&[1,2,3,4,5,6,7,8,9,10,11].includes(data.schema)&&data.schema===data.state?.version){const error=new Error('这是旧版旅程，请在保留的原版中继续。');error.legacy=true;throw error;}
+    if(!data||data.schema!==12||data.game!=='black-lotus'||!data.state)throw new Error('这不是劫火重燃的有效旅程存档。');
+    const s=data.state;if(!K.HEROES.some(h=>h.id===s.hero))fail();
+    const difficulty=s.difficulty??'normal',challenging=difficulty==='challenge';
+    if(!['normal','challenge'].includes(difficulty)||(challenging?s.challengeRules!==1:s.challengeRules!==undefined&&s.challengeRules!==0))fail();
+    if(s.version!==12||s.rules!==12||!Number.isInteger(s.stage)||s.stage<0||s.stage>14||typeof s.seed!=='string'||s.seed.length>32||!['playing','paused','reward','dead','won','art-choice'].includes(s.mode))fail();
+    if(!s.growth||typeof s.growth!=='object'||Array.isArray(s.growth)||Object.entries(s.growth).some(([id,n])=>{const r=K.GROWTH.find(r=>r.id===id&&!r.temporary);return !r||!Number.isInteger(n)||n<1||n>r.max;}))fail();
+    if(s.talisman!==null&&(!s.talisman||!['thunder','ward'].includes(s.talisman.id)||!Number.isInteger(s.talisman.charges)||s.talisman.charges<1||s.talisman.charges>(s.talisman.id==='thunder'?3:2)))fail();
+    if(!s.world||['rescue','bridge','bell'].some(key=>typeof s.world[key]!=='boolean')||!Array.isArray(s.journal)||s.journal.length>6||new Set(s.journal).size!==s.journal.length||s.journal.some(key=>!['rescue:start','rescue:done','bridge:done','bell:start','bell:done'].includes(key)))fail();
+    if(!Array.isArray(s.relics)||s.relics.length>3||new Set(s.relics).size!==s.relics.length||s.relics.some(id=>!K.RELICS.some(r=>r.id===id)))fail();
+    if(!s.campaign)fail();if(challenging&&!K.validClear(s.campaign.access))throw Error('挑战资格无效，请先完成普通旅程S评级。');
+    const canonical=K.makeRoom(s.seed,s.stage,difficulty),p=s.player;
+    if(!p||!number(p.hp,0,K.maxHP(s))||!number(p.focus,0,100)||!number(p.rage,0,100)||!number(p.ultimate,0,.86)||!Number.isInteger(p.ultimateStage)||p.ultimateStage<0||p.ultimateStage>2||!number(p.x,0,canonical.width)||!number(p.y,-1000,1000)||!number(p.vx,-2000,2000)||!number(p.vy,-2000,2000)||![-1,1].includes(p.face))fail();
+    for(const key of ['coyote','buffer','invuln','dash','dashCD','attack','landing','drop','hurt','attackBuffer','talismanCD','ward','ringCD'])if(!number(p[key],0,5))fail();
+    if(!Array.isArray(p.dashTargets)||p.dashTargets.length>40||p.dashTargets.some(x=>typeof x!=='string'))fail();
+    if(typeof p.grounded!=='boolean'||typeof p.slam!=='boolean'||!Number.isInteger(p.airJumps)||p.airJumps<0||p.airJumps>1||!Number.isInteger(p.comboIndex)||p.comboIndex<0||p.comboIndex>3||!number(p.attackId,0,1e7)||!Array.isArray(p.attackTargets)||p.attackTargets.length>40||p.attackTargets.some(x=>typeof x!=='string')||(p.attack>0&&!number(p.attackDuration,.1,1)))fail();
+    if(p.slam&&p.vy<=0)fail();if(p.ringAim!==null&&(!p.ringAim||!number(p.ringAim.x,-100,canonical.width+100)||!number(p.ringAim.y,0,540)))fail();
+    for(const key of ['time','elapsed','roomTime','kills','broken','damageTaken','hitstop','shake','checkpoint','combo','comboTime','serial'])if(!number(s[key],0,1e8))fail();
+    if(s.broken>30||s.checkpoint>canonical.width||s.combo>3||typeof s.lastDamage!=='string'||s.lastDamage.length>100||!Array.isArray(s.hints)||s.hints.length>80||s.hints.some(x=>typeof x!=='string'||x.length>50))fail();
+    if(!s.room||!Array.isArray(s.room.enemies)||s.room.enemies.length!==canonical.enemies.length||!Array.isArray(s.room.seals)||s.room.seals.length!==canonical.seals.length||!Array.isArray(s.room.pickups)||s.room.pickups.length!==canonical.pickups.length||typeof s.room.midClaimed!=='boolean')fail();
+    const phases=['campaign-windup','campaign-active','campaign-charge','idle','windup','attack','recover','sweep-windup','orb-windup','sweep','shift-windup','shift','lunge-windup','lunge','rush-windup','rush','sigil-windup','rain-windup','warden-windup','warden-rush','chain-windup','pursuit-windup','pursuit','advance','cross-windup','break-windup','break-rush','air-windup'];
+    if(challenging)phases.push(...K.CHALLENGE_PHASES);phases.push(...K.REALM_PHASES);
+    function validBox(b,maxHeight=250){return b&&number(b.x,-200,canonical.width+200)&&number(b.y,-1000,1000)&&number(b.w,1,1100)&&number(b.h,1,maxHeight);}
+    canonical.enemies.forEach((e,i)=>{
+      const x=s.room.enemies[i],previousMax=e.chiefId&&e.stage%3===2?300+Math.floor(e.stage/3)*18:0;
+      // Schema12 saves before the boss-health rebalance carry their original
+      // maximum. Scale that one known profile once; preserve defeated bosses
+      // and the player's progress through an ongoing fight.
+      const previous=previousMax>0&&x?.maxHp===previousMax,max=previous?previousMax:e.maxHp;
+      if(!x||x.id!==e.id||x.kind!==e.kind||!number(x.hp,0,max)||!number(x.x,0,canonical.width)||!number(x.y,-200,540)||!number(x.timer,-2,10)||!number(x.stun,0,2)||!number(x.flash,0,2)||!number(x.interruptLock,0,2)||!number(x.attacks,0,1e7)||![-1,1].includes(x.face)||!phases.includes(x.phase))fail();
+      if(challenging){if(!number(x.challengeCD,0,7))fail();e.challengeCD=x.challengeCD;if(x.phase==='challenge-bolt-windup'&&(e.kind!=='blade'||x.aimX===undefined))fail();if(['challenge-mark-windup','challenge-echo-windup'].includes(x.phase)&&(e.kind!=='caster'||x.marks?.length!==1))fail();if(['challenge-quake-windup','challenge-bell-windup'].includes(x.phase)&&x.marks?.length!==1)fail();if(x.phase==='challenge-fan-windup'&&(e.kind!=='warden'||e.guardian!=='ferry'||x.marks?.length!==2))fail();if(x.phase==='challenge-rain-windup'&&(e.kind!=='boss'||![1,2].includes(x.marks?.length)))fail();}
+      if(e.realm){if(x.realm!==e.realm||!number(x.realmCD,0,4.5))fail();e.realmCD=x.realmCD;if(K.REALM_PHASES.includes(x.phase)&&(!Array.isArray(x.marks)||x.marks.length<1||x.marks.length>2))fail();}
+      if(![100,420].includes(x.roamRange))fail();e.roamRange=x.roamRange;
+      if(x.counterTo!==undefined){if(!number(x.counterTo,0,canonical.width))fail();e.counterTo=x.counterTo;}if(['pursuit','pursuit-windup'].includes(x.phase)&&!Number.isFinite(x.counterTo))fail();if(x.phase==='cross-windup'&&(!Array.isArray(x.marks)||x.marks.length!==2))fail();
+      if(!number(x.signatureCD,0,4))fail();e.signatureCD=x.signatureCD;if(x.rushTo!==undefined){if(!number(x.rushTo,0,canonical.width))fail();e.rushTo=x.rushTo;}if(['break-windup','break-rush'].includes(x.phase)&&!Number.isFinite(x.rushTo))fail();if(x.phase==='air-windup'&&(!Array.isArray(x.marks)||x.marks.length!==1))fail();
+      if(typeof x.followup!=='boolean')fail();e.followup=x.followup;
+      if(e.kind==='boss'){if(typeof x.dormant!=='boolean')fail();e.dormant=x.dormant;}
+      if(x.stage!==e.stage||x.role!==e.role||x.chiefId!==e.chiefId||typeof x.dormant!=='boolean'||!Number.isInteger(x.repeat)||x.repeat<0||x.repeat>1||!number(x.campChargeTo,0,canonical.width)||!['',...Object.keys(K.CAMPAIGN_MOVES)].includes(x.move))fail();e.dormant=x.dormant;e.repeat=x.repeat;e.campChargeTo=x.campChargeTo;e.move=x.move;
+      for(const key of ['hp','x','y','timer','stun','flash','interruptLock','attacks','face','phase','struck'])e[key]=x[key];
+      if(previous)e.hp=Math.ceil(x.hp/previousMax*e.maxHp);
+      if(e.kind==='warden'){if(x.guardian!==e.guardian||typeof x.dormant!=='boolean'||!['',...Object.keys(K.CAMPAIGN_MOVES)].includes(x.move))fail();e.dormant=x.dormant;e.move=x.move;if(x.chargeTo!==undefined){if(!number(x.chargeTo,4430+canonical.arena.offset,5140+canonical.arena.offset))fail();e.chargeTo=x.chargeTo;}if(e.phase==='warden-rush'&&(e.move!=='charge'||!Number.isFinite(e.chargeTo)))fail();}
+      if(x.shiftTo!==undefined){if(!number(x.shiftTo,canonical.arena.offset,canonical.width))fail();e.shiftTo=x.shiftTo;}
+      if(x.aimX!==undefined){if(!number(x.aimX,-200,canonical.width+200)||!number(x.aimY,-1000,1000))fail();e.aimX=x.aimX;e.aimY=x.aimY;}
+      if(!number(x.recoil,0,1)||![-1,1].includes(x.recoilFace))fail();e.recoil=x.recoil;e.recoilFace=x.recoilFace;
+      if(x.marks!==undefined){const shot=['venom-fan','soldier-bolt','king-fire'].includes(x.move),tall=x.move==='dragon-thunder'||K.bossSignatureFor(e,x.move)?.origin==='sky',limit=e.chiefId&&e.stage%3===2&&x.move==='venom-fan'?5:4;if(!Array.isArray(x.marks)||x.marks.length>limit||x.marks.some(b=>!validBox(b,shot||tall?540:250)))fail();e.marks=x.marks.map(b=>({x:b.x,y:b.y,w:b.w,h:b.h}));}
+      if(e.phase==='rain-windup'&&(!e.marks||e.marks.length<2))fail();
+      if(e.phase==='sigil-windup'&&x.aimX===undefined)fail();
     });
-    for (let i = canonical.enemies.length; i < s.room.enemies.length; i++) {
-      const x = s.room.enemies[i];
-      if (!x || !['blade', 'spear', 'macaque'].includes(x.kind) || !number(x.hp, 0, 160) || !number(x.x, 0, canonical.width) || !phases.includes(x.phase)) fail();
-      const extra = K.enemy(x.kind, x.x, x.y, x.id, s.stage);
-      for (const key of ['hp', 'x', 'y', 'timer', 'stun', 'frozen', 'freezeHits', 'flash', 'interruptLock', 'attacks', 'face', 'phase']) if (x[key] !== undefined) extra[key] = x[key];
-      extra.summonedBy = x.summonedBy;
-      canonical.enemies.push(extra);
-    }
+    canonical.seals.forEach((q,i)=>{const x=s.room.seals[i];if(!x||!number(x.hp,0,56)||!number(x.pulse,0,4)||typeof x.warning!=='boolean')fail();q.hp=x.hp;q.pulse=x.pulse;q.warning=x.warning;});
+    canonical.pickups.forEach((q,i)=>{
+      const x=s.room.pickups[i];if(!x||typeof x.used!=='boolean'||x.kind!==q.kind||x.sourceId!==q.sourceId)fail();q.used=x.used;
+      if(q.sourceId!==undefined){const e=canonical.enemies.find(e=>e.id===q.sourceId);if(typeof x.enabled!=='boolean'||(x.enabled&&e.hp>0)||(x.used&&!x.enabled)||!number(x.x,e.origin-(e.roamRange||100)-80,e.origin+(e.roamRange||100)+100)||!number(x.y,0,440))fail();q.enabled=x.enabled;q.x=x.x;q.y=x.y;}
+    });canonical.midClaimed=s.room.midClaimed;
+    if(canonical.camp){if(typeof s.room.camp?.used!=='boolean')fail();canonical.camp.used=s.room.camp.used;}
+    if(canonical.trial){const t=s.room.trial;if(!t||!['ready','active','cleared','claimed'].includes(t.state))fail();canonical.trial.state=t.state;const guards=canonical.enemies.filter(e=>canonical.trial.guards.includes(e.id));if(['ready','cleared','claimed'].includes(t.state)&&guards.some(e=>e.hp>0))fail();if(t.state==='ready'&&canonical.pickups.some(q=>canonical.trial.guards.includes(q.sourceId)&&q.enabled))fail();}
 
-    canonical.seals.forEach((q, i) => {
-      const x = s.room.seals[i];
-      if (!x || !number(x.hp, 0, 56) || !number(x.pulse, 0, 4) || typeof x.warning !== 'boolean') fail();
-      q.hp = x.hp; q.pulse = x.pulse; q.warning = x.warning;
+    if(!Array.isArray(s.room.platforms)||s.room.platforms.length!==canonical.platforms.length)fail();
+    canonical.platforms.forEach((q,i)=>{if(q.fragile){const x=s.room.platforms[i];if(!x||!number(x.crack,0,.65)||!number(x.cooldown,0,2.8))fail();q.crack=x.crack;q.cooldown=x.cooldown;}if(q.raft)q.x=q.originX+Math.sin(s.roomTime*.85)*65;});
+    if(canonical.node){const n=s.room.node;if(!n||n.id!==canonical.node.id||!['ready','active','done'].includes(n.state)||(n.state==='done')!==s.world[n.id])fail();canonical.node.state=n.state;if(n.state==='ready'&&canonical.enemies.some(e=>canonical.node.guards.includes(e.id)&&e.hp>0))fail();}
+    const dangerSources=[...K.CAMPAIGN_SOURCES,...K.REALM_SOURCES,'莲灯使·锁空莲印','莲灯使·锁地咒','莲灯使·交叉封位','无天·黑莲落火','镇山魈王·震地','渡厄灯魁·索灯','缄愿法使·封愿','缄愿法使·钟浪'];
+    if(challenging)dangerSources.push(...K.CHALLENGE_DANGERS);
+    if(!Array.isArray(s.dangers)||s.dangers.length>20||s.dangers.some(d=>{const spell=Object.keys(K.CAMPAIGN_MOVES).find(id=>d.source?.endsWith('·'+K.CAMPAIGN_MOVES[id].name)),tall=spell==='dragon-thunder'||canonical.enemies.some(e=>K.bossSignatureFor(e,spell)?.origin==='sky'&&d.source===K.campaignName(e)+'·'+K.CAMPAIGN_MOVES[spell]?.name);return !validBox(d,tall?540:250)||!number(d.life,0,1)||![10,12,15,16,18,36].includes(d.damage)||!dangerSources.includes(d.source);}))fail();
+    if(!Array.isArray(s.casts)||s.casts.length>3||s.casts.some(c=>!validBox(c)||!number(c.timer,0,.24)))fail();
+    if(!Array.isArray(s.projectiles)||s.projectiles.length>100)fail();
+    const projectiles=s.projectiles.map(b=>{
+      for(const [key,min,max]of[['x',-200,canonical.width+200],['y',-2000,2000],['vx',-2000,2000],['vy',-2000,2000],['life',0,10],['w',1,100],['h',1,100]])if(!number(b[key],min,max))fail();
+      if(typeof b.friendly!=='boolean'||(b.damage!==undefined&&!number(b.damage,1,100))||(b.hit!==undefined&&(!Array.isArray(b.hit)||b.hit.length>100||b.hit.some(x=>!Number.isInteger(x)))))fail();
+      if(b.source!==undefined&&![...K.REALM_SOURCES,...K.CAMPAIGN_SOURCES,'渡厄灯魁·散焰','震盾兵·地波',...(challenging?K.CHALLENGE_PROJECTILES:[])].includes(b.source))fail();
+      // Optional for existing schema6 saves; separate IDs avoid enemy 0 / seal 0 collisions.
+      if(b.sealHits!==undefined&&(!Array.isArray(b.sealHits)||b.sealHits.length>canonical.seals.length||new Set(b.sealHits).size!==b.sealHits.length||b.sealHits.some(id=>!canonical.seals.some(q=>q.id===id))||(!b.friendly&&b.sealHits.length)))fail();
+      if(b.anchorHits!==undefined&&(!Array.isArray(b.anchorHits)||b.anchorHits.length>canonical.anchors.length||new Set(b.anchorHits).size!==b.anchorHits.length||b.anchorHits.some(id=>!canonical.anchors.some(q=>q.id===id))||(!b.friendly&&b.anchorHits.length)))fail();
+      if(b.impact!==undefined&&!['staff-bolt','wave'].includes(b.impact)||b.pierce!==undefined&&typeof b.pierce!=='boolean')fail();
+      return {anchorHits:b.anchorHits?.slice(),x:b.x,y:b.y,vx:b.vx,vy:b.vy,life:b.life,w:b.w,h:b.h,friendly:b.friendly,damage:b.damage,hit:b.hit,sealHits:b.sealHits?.slice(),source:b.source,impact:b.impact,pierce:b.pierce};
     });
-    canonical.pickups.forEach((q, i) => q.used = !!s.room.pickups[i].used);
-    if (Array.isArray(s.room.shrines)) {
-      canonical.shrines.forEach((sh, i) => {
-        if (s.room.shrines[i]) { sh.used = !!s.room.shrines[i].used; sh.trial = number(s.room.shrines[i].trial, 0, 10) ? s.room.shrines[i].trial : 0; }
-      });
-    }
-    if (Array.isArray(s.room.breakables)) {
-      canonical.breakables.forEach((br, i) => {
-        if (s.room.breakables[i]) { br.broken = !!s.room.breakables[i].broken; br.hp = br.broken ? 0 : 1; }
-      });
-    }
-    canonical.midClaimed = s.room.midClaimed;
-
-    if (!Array.isArray(s.projectiles) || s.projectiles.length > 100) fail();
-    const projectiles = s.projectiles.map(b => {
-      for (const [key, min, max] of [['x', -200, canonical.width + 200], ['y', -2000, 2000], ['vx', -2000, 2000], ['vy', -2000, 2000], ['life', 0, 10], ['w', 1, 100], ['h', 1, 100]]) if (!number(b[key], min, max)) fail();
-      if (typeof b.friendly !== 'boolean' || (b.damage !== undefined && !number(b.damage, 1, 100)) || (b.hit !== undefined && (!Array.isArray(b.hit) || b.hit.length > 100 || b.hit.some(x => !Number.isInteger(x))))) fail();
-      return { x: b.x, y: b.y, vx: b.vx, vy: b.vy, life: b.life, w: b.w, h: b.h, friendly: b.friendly, damage: b.damage, hit: b.hit, hitSeals: !!b.hitSeals, flameWave: !!b.flameWave };
-    });
-
-    let clone = null;
-    if (s.clone) {
-      const c = s.clone;
-      if (!number(c.x, 0, canonical.width) || !number(c.y, -1000, 1000) || !number(c.life, 0, 4) || !number(c.timer, -1, 1) || ![-1, 1].includes(c.face)) fail();
-      clone = { x: c.x, y: c.y, w: 24, h: 44, life: c.life, timer: c.timer, face: c.face };
-    }
-    const clones = Array.isArray(s.clones) ? s.clones.slice(0, 4).filter(c => c && number(c.x, 0, canonical.width) && number(c.life, 0, 5)).map(c => ({ x: c.x, y: c.y || 396, vx: c.vx || 0, vy: c.vy || 0, w: 24, h: 44, life: c.life, timer: c.timer || .2, face: c.face === -1 ? -1 : 1 })) : (clone ? [clone] : []);
-
-    if (!['mid', 'exit'].includes(s.rewardKind) || !Array.isArray(s.reward) || s.reward.length > 3 || s.reward.some(id => !K.relic(id) || (id !== 'rest' && s.relics.includes(id))) || (s.mode === 'reward' && s.reward.length !== 3) || (s.pendingRelic !== null && !s.reward.includes(s.pendingRelic))) fail();
-    if ((s.mode === 'dead' && p.hp !== 0) || (p.hp === 0 && s.mode !== 'dead') || (s.mode === 'won' && (s.stage !== 3 || canonical.enemies[0].hp !== 0))) fail();
-
-    const restored = K.newRun(s.seed, null);
-    K.enterRoom(restored, s.stage, true);
-    for (const key of ['time', 'elapsed', 'roomTime', 'kills', 'broken', 'damageTaken', 'lastDamage', 'hitstop', 'shake', 'checkpoint', 'combo', 'comboTime', 'serial', 'rewardKind', 'pendingRelic']) restored[key] = s[key];
-    for (const optKey of ['hitCombo', 'hitComboTime', 'maxCombo', 'insights', 'bellsCleared', 'wardensSlain', 'essence', 'flowStrikes', 'shatterCount']) if (number(s[optKey], 0, 1e7)) restored[optKey] = s[optKey];
-    restored.macaqueSlain = !!s.macaqueSlain;
-    restored.maxRelics = maxSlots;
-    restored.stanceStyle = ['smash', 'pillar', 'thrust'].includes(s.stanceStyle) ? s.stanceStyle : 'smash';
-    restored.forgeBuys = Array.isArray(s.forgeBuys) ? s.forgeBuys.filter(x => typeof x === 'string').slice(0, 12) : [];
-    restored.upgradedRelics = Array.isArray(s.upgradedRelics) ? s.upgradedRelics.filter(id => s.relics.includes(id)) : [];
-    restored.player = {
-      ...restored.player,
-      ...p,
-      w: 24, h: 44,
-      maxHp: maxHpCap,
-      ward: number(p.ward, 0, 80) ? p.ward : 0,
-      maxWard: number(p.maxWard, 10, 80) ? p.maxWard : 26,
-      stance: Number.isInteger(p.stance) && p.stance >= 0 && p.stance <= 4 ? p.stance : 0,
-      maxStance: 3,
-      stanceMeter: number(p.stanceMeter, 0, 100) ? p.stanceMeter : 0,
-      perfectWindow: number(p.perfectWindow, 0, 1) ? p.perfectWindow : 0,
-      perfectTriggered: !!p.perfectTriggered,
-      riposte: number(p.riposte, 0, 5) ? p.riposte : 0,
-      pillar: number(p.pillar, 0, 1.5) ? p.pillar : 0,
-      pillarPower: Number.isInteger(p.pillarPower) ? p.pillarPower : 0,
-      pillarStruck: !!p.pillarStruck,
-      rockSolid: number(p.rockSolid, 0, 1) ? p.rockSolid : 0,
-      rockCD: number(p.rockCD, 0, 10) ? p.rockCD : 0,
-      immobCD: number(p.immobCD, 0, 10) ? p.immobCD : 0,
-      switchCD: number(p.switchCD, 0, 3) ? p.switchCD : 0,
-      vaseCD: number(p.vaseCD, 0, 10) ? p.vaseCD : 0
-    };
-    restored.room = canonical;
-    restored.relics = s.relics.slice();
-    restored.reward = s.reward.slice();
-    restored.clones = clones;
-    restored.clone = clone || clones[0] || null;
-    restored.projectiles = projectiles;
-    restored.hints = s.hints.slice();
-    restored.mode = (s.mode === 'playing' || s.mode === 'forge') ? 'paused' : s.mode;
-    restored.runId = typeof s.runId === 'string' ? s.runId.slice(0, 100) : s.seed + ':imported';
-    if (!s.stats || typeof s.stats !== 'object') fail();
-    for (const key of ['swings', 'hits', 'blocks', 'jumps', 'dashes', 'clones', 'focusSpent', 'rests']) {
-      if (!number(s.stats[key], 0, 1e7)) fail();
-      restored.stats[key] = s.stats[key];
-    }
-    for (const optStat of ['pillars', 'insights']) restored.stats[optStat] = number(s.stats[optStat], 0, 1e7) ? s.stats[optStat] : 0;
-    return { state: restored, meta: K.cleanMeta(data.meta) };
+    let clone=null;if(s.clone){const c=s.clone;if(!number(c.x,0,canonical.width)||!number(c.y,-1000,1000)||!number(c.life,0,4)||!number(c.timer,-1,1)||![-1,1].includes(c.face))fail();clone={x:c.x,y:c.y,w:24,h:44,life:c.life,timer:c.timer,face:c.face};}
+    if(!['mid','exit','trial'].includes(s.rewardKind)||!Array.isArray(s.reward)||s.reward.length>3||new Set(s.reward).size!==s.reward.length||s.reward.some(id=>!K.rewardEligible(s,id))||(s.mode==='reward'&&s.reward.length!==3)||(s.pendingRelic!==null&&(!s.reward.includes(s.pendingRelic)||!K.RELICS.some(r=>r.id===s.pendingRelic)||s.relics.length!==3)))fail();
+    if(s.mode==='reward'&&s.rewardKind==='trial'&&canonical.trial?.state!=='cleared')fail();
+    if((s.mode==='dead'&&p.hp!==0)||(p.hp===0&&s.mode!=='dead')||(s.mode==='won'&&(s.stage!==14||canonical.enemies.find(e=>e.kind==='warden').hp!==0)))fail();
+    let ring=null,silk=null;
+    if(s.ring!==null){const r=s.ring;if(!r||!K.isRanged(s)||!number(r.x,-100,canonical.width+100)||!number(r.y,-200,650)||!number(r.vx,-900,900)||!number(r.vy,-900,900)||!number(r.life,0,4)||!number(r.distance,0,5000)||!['out','back'].includes(r.phase)||![360,430].includes(r.range)||typeof r.flared!=='boolean')fail();for(const key of ['hitOut','hitBack'])if(!Array.isArray(r[key])||r[key].length>50||new Set(r[key]).size!==r[key].length||r[key].some(x=>typeof x!=='string'||!/^([esa][0-9]+)$/.test(x)))fail();ring={x:r.x,y:r.y,w:22,h:22,vx:r.vx,vy:r.vy,life:r.life,distance:r.distance,phase:r.phase,range:r.range,flared:r.flared,hitOut:r.hitOut.slice(),hitBack:r.hitBack.slice()};}
+    if(s.silk!==null){const c=s.silk;if(!c||!K.isRanged(s)||!number(c.x,0,canonical.width)||!number(c.y,-1000,1000)||![180,240].includes(c.w)||!number(c.life,0,3)||![-1,1].includes(c.face))fail();silk={x:c.x,y:c.y,w:c.w,h:72,life:c.life,face:c.face};}
+    const signature=K.readSignature(s,p,canonical,number,fail);
+    const warrior=K.readWarrior(s,canonical,number,fail);
+    const celestial=K.readCelestial(s,canonical,number,fail);
+    const campaign=K.readCampaign(s,canonical,number,fail);
+    const restored=K.newRun(s.seed,null,s.hero,difficulty,{normalClear:s.campaign.access});K.enterRoom(restored,s.stage,true);
+    for(const key of ['time','elapsed','roomTime','kills','broken','damageTaken','lastDamage','hitstop','shake','checkpoint','combo','comboTime','serial','rewardKind','pendingRelic'])restored[key]=s[key];
+    Object.assign(restored,warrior);restored.celestial=celestial;restored.campaign=campaign;restored.arm=signature.arm;restored.flight=signature.flight;restored.ring=ring;restored.silk=silk;restored.player={...p,hero:s.hero,w:24,h:44};restored.growth={...s.growth};restored.talisman=s.talisman?{id:s.talisman.id,charges:s.talisman.charges}:null;restored.casts=s.casts.map(c=>({x:c.x,y:c.y,w:c.w,h:c.h,timer:c.timer}));restored.room=canonical;restored.world={rescue:s.world.rescue,bridge:s.world.bridge,bell:s.world.bell};restored.journal=s.journal.slice();restored.dangers=s.dangers.map(d=>({x:d.x,y:d.y,w:d.w,h:d.h,life:d.life,damage:d.damage,source:d.source}));K.applyWorld(restored);restored.relics=s.relics.slice();restored.reward=s.reward.slice();restored.clone=clone;restored.projectiles=projectiles;restored.hints=s.hints.slice();restored.mode=s.mode==='playing'?'paused':s.mode;
+    restored.runId=typeof s.runId==='string'?s.runId.slice(0,100):s.seed+':imported';
+    for(const key of Object.keys(restored.stats)){if(!number(s.stats?.[key],0,1e7))fail();restored.stats[key]=s.stats[key];}
+    return {state:restored,meta:K.cleanMeta(data.meta)};
   };
-
-  K.pack = (state, meta) => JSON.stringify({ game: 'black-lotus', schema: 2, build: K.VERSION, state, meta: K.cleanMeta(meta) });
-  K.download = function (raw, name) {
-    const url = URL.createObjectURL(new Blob([raw], { type: 'application/json' }));
-    const a = document.createElement('a'); a.href = url; a.download = name; a.click();
-    setTimeout(() => URL.revokeObjectURL(url), 1000);
-  };
-
-  K.Storage = class {
-    constructor() {
-      this.available = true; this.error = ''; this.legacy = null;
-      try {
-        const raw = localStorage.getItem(LEGACY);
-        if (raw && raw.length < 1000000) {
-          const x = JSON.parse(raw);
-          if (x.game === 'black-lotus' && x.state?.version === 1 && [1, 2].includes(x.schema)) this.legacy = x;
-        }
-      } catch { this.available = false; }
-    }
-    read() {
-      try {
-        const raw = localStorage.getItem(KEY);
-        if (!raw) return null;
-        if (raw.length > 1000000) fail();
-        return K.validSave(JSON.parse(raw));
-      } catch (e) { this.error = e.message; return null; }
-    }
-    write(state, meta) {
-      try { localStorage.setItem(KEY, K.pack(state, meta)); this.available = true; return true; }
-      catch { this.available = false; return false; }
-    }
-    export(state, meta) { K.download(K.pack(state, meta), '劫后行-v4-' + state.seed + '.json'); }
-    import(raw) {
-      if (raw.length > 1000000) throw new Error('存档文件过大。');
-      return K.validSave(JSON.parse(raw));
-    }
-    readSettings() {
-      try {
-        const x = JSON.parse(localStorage.getItem(SETTINGS) || '{}');
-        return {
-          volume: number(x.volume, 0, 1) ? x.volume : .38,
-          muted: !!x.muted,
-          touch: typeof x.touch === 'boolean' ? x.touch : ('ontouchstart' in window && innerWidth < 1024),
-          shake: typeof x.shake === 'boolean' ? x.shake : !matchMedia('(prefers-reduced-motion: reduce)').matches
-        };
-      } catch {
-        return { volume: .38, muted: false, touch: false, shake: false };
-      }
-    }
-    settings(value) { try { localStorage.setItem(SETTINGS, JSON.stringify(value)); } catch {} }
+  K.pack=(state,meta)=>JSON.stringify({game:'black-lotus',schema:12,build:K.VERSION,state,meta:K.cleanMeta(meta)});
+  K.download=function(raw,name){const url=URL.createObjectURL(new Blob([raw],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
+  K.Storage=class{
+    constructor(){this.available=true;this.error='';this.legacy=null;try{for(const key of[LEGACY,PREVIOUS,THIRD,FOURTH,FIFTH,SIXTH,SEVENTH,EIGHTH,NINTH,TENTH,ELEVENTH]){const raw=localStorage.getItem(key);if(raw&&raw.length<1000000){const x=JSON.parse(raw);if(x.game==='black-lotus'&&[1,2,3,4,5,6,7,8,9,10,11].includes(x.state?.version)&&x.schema===x.state.version)this.legacy=x;}}}catch{this.available=false;}}
+    read(){try{const raw=localStorage.getItem(KEY);if(!raw)return null;if(raw.length>1000000)fail();return K.validSave(JSON.parse(raw));}catch(e){this.error=e.message;return null;}}
+    profile(){let current=K.cleanMeta();for(const key of [KEY,ELEVENTH,TENTH]){try{const value=K.cleanMeta(JSON.parse(localStorage.getItem(key+'.profile')||'{}'));if(key===KEY)current=value;else if(!K.canChallenge(current)&&K.canChallenge(value))current.normalClear=value.normalClear;}catch{}}return current;}
+    write(state,meta){try{localStorage.setItem(KEY,K.pack(state,meta));localStorage.setItem(KEY+'.profile',JSON.stringify(K.cleanMeta(meta)));this.available=true;return true;}catch{this.available=false;return false;}}
+    export(state,meta){K.download(K.pack(state,meta),'劫火重燃-v12-'+(state.difficulty==='challenge'?'重劫-':'')+state.seed+'.json');}
+    import(raw){if(raw.length>1000000)throw new Error('存档文件过大。');return K.validSave(JSON.parse(raw));}
+    readSettings(){try{const x=JSON.parse(localStorage.getItem(SETTINGS)||'{}');return {volume:number(x.volume,0,1)?x.volume:.25,shake:typeof x.shake==='boolean'?x.shake:!matchMedia('(prefers-reduced-motion: reduce)').matches};}catch{return{volume:.25,shake:false};}}
+    settings(value){try{localStorage.setItem(SETTINGS,JSON.stringify(value));}catch{}}
   };
 })(globalThis.Kong ||= {});

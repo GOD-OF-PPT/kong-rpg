@@ -1,0 +1,485 @@
+{
+  "version": "5.0.0",
+  "seed": "V5-COMBAT-COMPARE",
+  "method": "Isolated VM encounter using the shipped twin-blade rules; other enemies, hazards, nodes and seals removed. Deterministic input policies, not human evidence.",
+  "rows": [
+    {
+      "relic": "staff",
+      "distance": 50,
+      "policy": "hold-attack",
+      "damage": 0,
+      "killed": true,
+      "seconds": 0.792,
+      "jumps": 0,
+      "events": [
+        {
+          "type": "warning",
+          "t": 0.008,
+          "wall": 0.008,
+          "kind": "blade",
+          "id": 400,
+          "move": "windup",
+          "x": 3070,
+          "y": 400,
+          "face": -1
+        },
+        {
+          "type": "warning",
+          "t": 0.717,
+          "wall": 0.767,
+          "kind": "blade",
+          "id": 400,
+          "move": "second-slash"
+        },
+        {
+          "type": "interrupt",
+          "t": 0.742,
+          "wall": 0.792,
+          "target": 400
+        },
+        {
+          "type": "kill",
+          "t": 0.742,
+          "wall": 0.792,
+          "kind": "blade"
+        }
+      ]
+    },
+    {
+      "relic": "staff",
+      "distance": 50,
+      "policy": "observe-warning",
+      "damage": 0,
+      "killed": true,
+      "seconds": 1.9,
+      "jumps": 2,
+      "events": [
+        {
+          "type": "warning",
+          "t": 0.008,
+          "wall": 0.008,
+          "kind": "blade",
+          "id": 400,
+          "move": "windup",
+          "x": 3070,
+          "y": 400,
+          "face": -1
+        },
+        {
+          "type": "warning",
+          "t": 0.717,
+          "wall": 0.742,
+          "kind": "blade",
+          "id": 400,
+          "move": "second-slash"
+        },
+        {
+          "type": "kill",
+          "t": 1.875,
+          "wall": 1.9,
+          "kind": "blade"
+        }
+      ]
+    },
+    {
+      "relic": "staff",
+      "distance": 65,
+      "policy": "hold-attack",
+      "damage": 0,
+      "killed": true,
+      "seconds": 0.767,
+      "jumps": 0,
+      "events": [
+        {
+          "type": "warning",
+          "t": 0.008,
+          "wall": 0.008,
+          "kind": "blade",
+          "id": 400,
+          "move": "windup",
+          "x": 3070,
+          "y": 400,
+          "face": -1
+        },
+        {
+          "type": "warning",
+          "t": 0.717,
+          "wall": 0.742,
+          "kind": "blade",
+          "id": 400,
+          "move": "second-slash"
+        },
+        {
+          "type": "interrupt",
+          "t": 0.742,
+          "wall": 0.767,
+          "target": 400
+        },
+        {
+          "type": "kill",
+          "t": 0.742,
+          "wall": 0.767,
+          "kind": "blade"
+        }
+      ]
+    },
+    {
+      "relic": "staff",
+      "distance": 65,
+      "policy": "observe-warning",
+      "damage": 0,
+      "killed": false,
+      "seconds": 6,
+      "jumps": 2,
+      "events": [
+        {
+          "type": "warning",
+          "t": 0.008,
+          "wall": 0.008,
+          "kind": "blade",
+          "id": 400,
+          "move": "windup",
+          "x": 3070,
+          "y": 400,
+          "face": -1
+        },
+        {
+          "type": "warning",
+          "t": 0.717,
+          "wall": 0.742,
+          "kind": "blade",
+          "id": 400,
+          "move": "second-slash"
+        }
+      ]
+    },
+    {
+      "relic": "staff",
+      "distance": 80,
+      "policy": "hold-attack",
+      "damage": 0,
+      "killed": true,
+      "seconds": 1.933,
+      "jumps": 0,
+      "events": [
+        {
+          "type": "warning",
+          "t": 0.008,
+          "wall": 0.008,
+          "kind": "blade",
+          "id": 400,
+          "move": "windup",
+          "x": 3070,
+          "y": 400,
+          "face": -1
+        },
+        {
+          "type": "warning",
+          "t": 0.717,
+          "wall": 0.717,
+          "kind": "blade",
+          "id": 400,
+          "move": "second-slash"
+        },
+        {
+          "type": "interrupt",
+          "t": 0.742,
+          "wall": 0.742,
+          "target": 400
+        },
+        {
+          "type": "warning",
+          "t": 1.8,
+          "wall": 1.858,
+          "kind": "blade",
+          "id": 400,
+          "move": "windup",
+          "x": 3071.4000000000015,
+          "y": 400,
+          "face": -1
+        },
+        {
+          "type": "interrupt",
+          "t": 1.875,
+          "wall": 1.933,
+          "target": 400
+        },
+        {
+          "type": "kill",
+          "t": 1.875,
+          "wall": 1.933,
+          "kind": "blade"
+        }
+      ]
+    },
+    {
+      "relic": "staff",
+      "distance": 80,
+      "policy": "observe-warning",
+      "damage": 0,
+      "killed": false,
+      "seconds": 6,
+      "jumps": 2,
+      "events": [
+        {
+          "type": "warning",
+          "t": 0.008,
+          "wall": 0.008,
+          "kind": "blade",
+          "id": 400,
+          "move": "windup",
+          "x": 3070,
+          "y": 400,
+          "face": -1
+        },
+        {
+          "type": "warning",
+          "t": 0.717,
+          "wall": 0.717,
+          "kind": "blade",
+          "id": 400,
+          "move": "second-slash"
+        }
+      ]
+    },
+    {
+      "relic": "echo",
+      "distance": 50,
+      "policy": "hold-attack",
+      "damage": 0,
+      "killed": true,
+      "seconds": 0.792,
+      "jumps": 0,
+      "events": [
+        {
+          "type": "warning",
+          "t": 0.008,
+          "wall": 0.008,
+          "kind": "blade",
+          "id": 400,
+          "move": "windup",
+          "x": 3070,
+          "y": 400,
+          "face": -1
+        },
+        {
+          "type": "warning",
+          "t": 0.717,
+          "wall": 0.767,
+          "kind": "blade",
+          "id": 400,
+          "move": "second-slash"
+        },
+        {
+          "type": "interrupt",
+          "t": 0.742,
+          "wall": 0.792,
+          "target": 400
+        },
+        {
+          "type": "kill",
+          "t": 0.742,
+          "wall": 0.792,
+          "kind": "blade"
+        }
+      ]
+    },
+    {
+      "relic": "echo",
+      "distance": 50,
+      "policy": "observe-warning",
+      "damage": 0,
+      "killed": true,
+      "seconds": 1.842,
+      "jumps": 2,
+      "events": [
+        {
+          "type": "warning",
+          "t": 0.008,
+          "wall": 0.008,
+          "kind": "blade",
+          "id": 400,
+          "move": "windup",
+          "x": 3070,
+          "y": 400,
+          "face": -1
+        },
+        {
+          "type": "warning",
+          "t": 0.717,
+          "wall": 0.742,
+          "kind": "blade",
+          "id": 400,
+          "move": "second-slash"
+        },
+        {
+          "type": "kill",
+          "t": 1.817,
+          "wall": 1.842,
+          "kind": "blade"
+        }
+      ]
+    },
+    {
+      "relic": "echo",
+      "distance": 65,
+      "policy": "hold-attack",
+      "damage": 0,
+      "killed": true,
+      "seconds": 0.767,
+      "jumps": 0,
+      "events": [
+        {
+          "type": "warning",
+          "t": 0.008,
+          "wall": 0.008,
+          "kind": "blade",
+          "id": 400,
+          "move": "windup",
+          "x": 3070,
+          "y": 400,
+          "face": -1
+        },
+        {
+          "type": "warning",
+          "t": 0.717,
+          "wall": 0.742,
+          "kind": "blade",
+          "id": 400,
+          "move": "second-slash"
+        },
+        {
+          "type": "interrupt",
+          "t": 0.742,
+          "wall": 0.767,
+          "target": 400
+        },
+        {
+          "type": "kill",
+          "t": 0.742,
+          "wall": 0.767,
+          "kind": "blade"
+        }
+      ]
+    },
+    {
+      "relic": "echo",
+      "distance": 65,
+      "policy": "observe-warning",
+      "damage": 0,
+      "killed": false,
+      "seconds": 6,
+      "jumps": 2,
+      "events": [
+        {
+          "type": "warning",
+          "t": 0.008,
+          "wall": 0.008,
+          "kind": "blade",
+          "id": 400,
+          "move": "windup",
+          "x": 3070,
+          "y": 400,
+          "face": -1
+        },
+        {
+          "type": "warning",
+          "t": 0.717,
+          "wall": 0.742,
+          "kind": "blade",
+          "id": 400,
+          "move": "second-slash"
+        }
+      ]
+    },
+    {
+      "relic": "echo",
+      "distance": 80,
+      "policy": "hold-attack",
+      "damage": 0,
+      "killed": true,
+      "seconds": 1.875,
+      "jumps": 0,
+      "events": [
+        {
+          "type": "warning",
+          "t": 0.008,
+          "wall": 0.008,
+          "kind": "blade",
+          "id": 400,
+          "move": "windup",
+          "x": 3070,
+          "y": 400,
+          "face": -1
+        },
+        {
+          "type": "warning",
+          "t": 0.717,
+          "wall": 0.717,
+          "kind": "blade",
+          "id": 400,
+          "move": "second-slash"
+        },
+        {
+          "type": "interrupt",
+          "t": 0.742,
+          "wall": 0.742,
+          "target": 400
+        },
+        {
+          "type": "warning",
+          "t": 1.8,
+          "wall": 1.858,
+          "kind": "blade",
+          "id": 400,
+          "move": "windup",
+          "x": 3071.4000000000015,
+          "y": 400,
+          "face": -1
+        },
+        {
+          "type": "interrupt",
+          "t": 1.817,
+          "wall": 1.875,
+          "target": 400
+        },
+        {
+          "type": "kill",
+          "t": 1.817,
+          "wall": 1.875,
+          "kind": "blade"
+        }
+      ]
+    },
+    {
+      "relic": "echo",
+      "distance": 80,
+      "policy": "observe-warning",
+      "damage": 0,
+      "killed": false,
+      "seconds": 6,
+      "jumps": 2,
+      "events": [
+        {
+          "type": "warning",
+          "t": 0.008,
+          "wall": 0.008,
+          "kind": "blade",
+          "id": 400,
+          "move": "windup",
+          "x": 3070,
+          "y": 400,
+          "face": -1
+        },
+        {
+          "type": "warning",
+          "t": 0.717,
+          "wall": 0.717,
+          "kind": "blade",
+          "id": 400,
+          "move": "second-slash"
+        }
+      ]
+    }
+  ]
+}

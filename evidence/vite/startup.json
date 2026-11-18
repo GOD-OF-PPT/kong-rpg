@@ -1,0 +1,324 @@
+{
+  "buildTool": {
+    "name": "vite",
+    "version": "8.3.5"
+  },
+  "entrySHA256": "be39e5c71cc56873ef4767c9cc9fc86f82de3072f6b01391a59c309ca415eb6d",
+  "script": "game.40af0ca632801720.js",
+  "network": {
+    "downloadMiBps": 2,
+    "uploadMiBps": 1,
+    "latencyMs": 20,
+    "cache": "disabled",
+    "cpuSlowdown": 1
+  },
+  "runs": [
+    {
+      "homeReadyMs": 2206.7000000476837,
+      "menuBytes": 4307540,
+      "paint": [
+        {
+          "name": "first-paint",
+          "ms": 176
+        },
+        {
+          "name": "first-contentful-paint",
+          "ms": 176
+        }
+      ],
+      "lcp": {
+        "ms": 1260,
+        "size": 54400,
+        "url": "http://127.0.0.1:57464/assets/images/brandWordmark.d5323c1b198b2397.webp"
+      },
+      "images": [
+        "brandWordmark",
+        "stone",
+        "wukong",
+        "mountain"
+      ],
+      "navigationBytes": 3217,
+      "resources": [
+        {
+          "name": "http://127.0.0.1:57464/game.40af0ca632801720.js",
+          "encodedBytes": 110949,
+          "decodedBytes": 378055,
+          "transferBytes": 111249,
+          "ms": 304.2999999523163
+        },
+        {
+          "name": "http://127.0.0.1:57464/assets/style.7695ac396e15e155.css",
+          "encodedBytes": 15088,
+          "decodedBytes": 67561,
+          "transferBytes": 15388,
+          "ms": 77.29999995231628
+        },
+        {
+          "name": "http://127.0.0.1:57464/assets/images/brandWordmark.d5323c1b198b2397.webp",
+          "encodedBytes": 559238,
+          "decodedBytes": 559238,
+          "transferBytes": 559538,
+          "ms": 1166
+        },
+        {
+          "name": "http://127.0.0.1:57464/assets/images/wukong.9ed9b0f96501d7a7.webp",
+          "encodedBytes": 967554,
+          "decodedBytes": 967554,
+          "transferBytes": 967854,
+          "ms": 1634.5999999046326
+        },
+        {
+          "name": "http://127.0.0.1:57464/assets/images/mountain.296d70c71773dacb.webp",
+          "encodedBytes": 1936944,
+          "decodedBytes": 1936944,
+          "transferBytes": 1937244,
+          "ms": 2112.199999809265
+        },
+        {
+          "name": "http://127.0.0.1:57464/assets/images/stone.7b443d9e58c0ea25.webp",
+          "encodedBytes": 712750,
+          "decodedBytes": 712750,
+          "transferBytes": 713050,
+          "ms": 1386.0999999046326
+        }
+      ],
+      "errors": []
+    },
+    {
+      "homeReadyMs": 2205.899999856949,
+      "menuBytes": 4307540,
+      "paint": [
+        {
+          "name": "first-paint",
+          "ms": 156
+        },
+        {
+          "name": "first-contentful-paint",
+          "ms": 156
+        }
+      ],
+      "lcp": {
+        "ms": 1256,
+        "size": 54400,
+        "url": "http://127.0.0.1:57464/assets/images/brandWordmark.d5323c1b198b2397.webp"
+      },
+      "images": [
+        "brandWordmark",
+        "stone",
+        "wukong",
+        "mountain"
+      ],
+      "navigationBytes": 3217,
+      "resources": [
+        {
+          "name": "http://127.0.0.1:57464/game.40af0ca632801720.js",
+          "encodedBytes": 110949,
+          "decodedBytes": 378055,
+          "transferBytes": 111249,
+          "ms": 300
+        },
+        {
+          "name": "http://127.0.0.1:57464/assets/style.7695ac396e15e155.css",
+          "encodedBytes": 15088,
+          "decodedBytes": 67561,
+          "transferBytes": 15388,
+          "ms": 70.20000004768372
+        },
+        {
+          "name": "http://127.0.0.1:57464/assets/images/brandWordmark.d5323c1b198b2397.webp",
+          "encodedBytes": 559238,
+          "decodedBytes": 559238,
+          "transferBytes": 559538,
+          "ms": 1167.3999998569489
+        },
+        {
+          "name": "http://127.0.0.1:57464/assets/images/wukong.9ed9b0f96501d7a7.webp",
+          "encodedBytes": 967554,
+          "decodedBytes": 967554,
+          "transferBytes": 967854,
+          "ms": 1638.7999999523163
+        },
+        {
+          "name": "http://127.0.0.1:57464/assets/images/mountain.296d70c71773dacb.webp",
+          "encodedBytes": 1936944,
+          "decodedBytes": 1936944,
+          "transferBytes": 1937244,
+          "ms": 2100.5999999046326
+        },
+        {
+          "name": "http://127.0.0.1:57464/assets/images/stone.7b443d9e58c0ea25.webp",
+          "encodedBytes": 712750,
+          "decodedBytes": 712750,
+          "transferBytes": 713050,
+          "ms": 1387.1000001430511
+        }
+      ],
+      "errors": []
+    },
+    {
+      "homeReadyMs": 2213.7000000476837,
+      "menuBytes": 4307540,
+      "paint": [
+        {
+          "name": "first-paint",
+          "ms": 164
+        },
+        {
+          "name": "first-contentful-paint",
+          "ms": 164
+        }
+      ],
+      "lcp": {
+        "ms": 1264,
+        "size": 54400,
+        "url": "http://127.0.0.1:57464/assets/images/brandWordmark.d5323c1b198b2397.webp"
+      },
+      "images": [
+        "brandWordmark",
+        "stone",
+        "wukong",
+        "mountain"
+      ],
+      "navigationBytes": 3217,
+      "resources": [
+        {
+          "name": "http://127.0.0.1:57464/game.40af0ca632801720.js",
+          "encodedBytes": 110949,
+          "decodedBytes": 378055,
+          "transferBytes": 111249,
+          "ms": 305.2000000476837
+        },
+        {
+          "name": "http://127.0.0.1:57464/assets/style.7695ac396e15e155.css",
+          "encodedBytes": 15088,
+          "decodedBytes": 67561,
+          "transferBytes": 15388,
+          "ms": 72.79999995231628
+        },
+        {
+          "name": "http://127.0.0.1:57464/assets/images/brandWordmark.d5323c1b198b2397.webp",
+          "encodedBytes": 559238,
+          "decodedBytes": 559238,
+          "transferBytes": 559538,
+          "ms": 1176.7000000476837
+        },
+        {
+          "name": "http://127.0.0.1:57464/assets/images/stone.7b443d9e58c0ea25.webp",
+          "encodedBytes": 712750,
+          "decodedBytes": 712750,
+          "transferBytes": 713050,
+          "ms": 1392.3999998569489
+        },
+        {
+          "name": "http://127.0.0.1:57464/assets/images/wukong.9ed9b0f96501d7a7.webp",
+          "encodedBytes": 967554,
+          "decodedBytes": 967554,
+          "transferBytes": 967854,
+          "ms": 1643.2000000476837
+        },
+        {
+          "name": "http://127.0.0.1:57464/assets/images/mountain.296d70c71773dacb.webp",
+          "encodedBytes": 1936944,
+          "decodedBytes": 1936944,
+          "transferBytes": 1937244,
+          "ms": 2111.7999999523163
+        }
+      ],
+      "errors": []
+    }
+  ],
+  "checks": [
+    {
+      "name": "run 0: homepage fully ready within 6 seconds",
+      "pass": true
+    },
+    {
+      "name": "run 0: first contentful paint within 1.8 seconds",
+      "pass": true
+    },
+    {
+      "name": "run 0: initial transfer at most 5 MB",
+      "pass": true
+    },
+    {
+      "name": "run 0: only four boot images requested and decoded",
+      "pass": true
+    },
+    {
+      "name": "run 0: music waits for a gesture",
+      "pass": true
+    },
+    {
+      "name": "run 0: JavaScript response at most 512 KiB decoded",
+      "pass": true
+    },
+    {
+      "name": "run 0: no runtime errors",
+      "pass": true
+    },
+    {
+      "name": "run 1: homepage fully ready within 6 seconds",
+      "pass": true
+    },
+    {
+      "name": "run 1: first contentful paint within 1.8 seconds",
+      "pass": true
+    },
+    {
+      "name": "run 1: initial transfer at most 5 MB",
+      "pass": true
+    },
+    {
+      "name": "run 1: only four boot images requested and decoded",
+      "pass": true
+    },
+    {
+      "name": "run 1: music waits for a gesture",
+      "pass": true
+    },
+    {
+      "name": "run 1: JavaScript response at most 512 KiB decoded",
+      "pass": true
+    },
+    {
+      "name": "run 1: no runtime errors",
+      "pass": true
+    },
+    {
+      "name": "run 2: homepage fully ready within 6 seconds",
+      "pass": true
+    },
+    {
+      "name": "run 2: first contentful paint within 1.8 seconds",
+      "pass": true
+    },
+    {
+      "name": "run 2: initial transfer at most 5 MB",
+      "pass": true
+    },
+    {
+      "name": "run 2: only four boot images requested and decoded",
+      "pass": true
+    },
+    {
+      "name": "run 2: music waits for a gesture",
+      "pass": true
+    },
+    {
+      "name": "run 2: JavaScript response at most 512 KiB decoded",
+      "pass": true
+    },
+    {
+      "name": "run 2: no runtime errors",
+      "pass": true
+    },
+    {
+      "name": "public menu and real keyboard input enter a playable fight",
+      "pass": true
+    }
+  ],
+  "url": "http://127.0.0.1:57464/",
+  "browser": "156.0.4314.50",
+  "firstFightReadyMs": 15268.599999904633,
+  "pass": true
+}

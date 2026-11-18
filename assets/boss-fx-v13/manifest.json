@@ -1,0 +1,352 @@
+{
+  "tool": "built-in image_gen",
+  "sources": {
+    "earth-family.png": "51b6874f40ff80e29bb7655fdfa3c29d6116b5673ae53b4b86be67e8796215db",
+    "grounded-spires.png": "d3a4b9025200c18b1049298346578dc9e184615f16ca1fb6bcb9c26f91945043",
+    "ink-family.png": "bd606b89925c35848e339b4bdf748b8662032e9fd2b8e659cab76e47e1aa06f9",
+    "venom-family.png": "b960b48da52bd28d89320658945fb96fd96a27328aed80a0b909a2eedfa1fbaa",
+    "dragon-family.png": "abd5a5f6b590e00c2ace2f44c34d3f23542029d8e74a21e885ce563efd461d27",
+    "lightning-sharp.png": "b1d33d26f44fbcd111d0b64bb833e39f9425acecbd92ed3bd1b7733b8d6b3b3a",
+    "gold-family.png": "6b119618e224a735d0fdf86c6587f61d6cb3ea8fcd91eabb1677e9095cb28156"
+  },
+  "cuts": {
+    "earth-family": [
+      0,
+      629,
+      1148,
+      1850
+    ],
+    "ink-family": [
+      0,
+      626,
+      1238,
+      1981
+    ],
+    "venom-family": [
+      0,
+      684,
+      1450,
+      2172
+    ],
+    "dragon-family": [
+      0,
+      763,
+      1233,
+      1851
+    ],
+    "gold-family": [
+      0,
+      722,
+      1448,
+      2172
+    ]
+  },
+  "atlas": {
+    "file": "assets/boss-fx-v13/atlas.png",
+    "sha256": "fe0906279d5df91ccdec51394906e76eb16db2c5373aec32defc063fb629dd85",
+    "width": 768,
+    "height": 1600
+  },
+  "frames": [
+    {
+      "id": "axe-arc",
+      "source": "earth-family.png",
+      "sourceSHA256": "51b6874f40ff80e29bb7655fdfa3c29d6116b5673ae53b4b86be67e8796215db",
+      "slot": [
+        0,
+        0
+      ],
+      "image": "bossFX",
+      "r": [
+        16,
+        25,
+        224,
+        270
+      ],
+      "anchor": [
+        112,
+        270
+      ]
+    },
+    {
+      "id": "earth-eruption",
+      "source": "grounded-spires.png",
+      "sourceSHA256": "d3a4b9025200c18b1049298346578dc9e184615f16ca1fb6bcb9c26f91945043",
+      "slot": [
+        1,
+        0
+      ],
+      "image": "bossFX",
+      "r": [
+        272,
+        46,
+        224,
+        227
+      ],
+      "anchor": [
+        112,
+        227
+      ]
+    },
+    {
+      "id": "dust-wave",
+      "source": "earth-family.png",
+      "sourceSHA256": "51b6874f40ff80e29bb7655fdfa3c29d6116b5673ae53b4b86be67e8796215db",
+      "slot": [
+        2,
+        0
+      ],
+      "image": "bossFX",
+      "r": [
+        528,
+        32,
+        224,
+        256
+      ],
+      "anchor": [
+        112,
+        256
+      ]
+    },
+    {
+      "id": "verdict-seal",
+      "source": "ink-family.png",
+      "sourceSHA256": "bd606b89925c35848e339b4bdf748b8662032e9fd2b8e659cab76e47e1aa06f9",
+      "slot": [
+        0,
+        1
+      ],
+      "image": "bossFX",
+      "r": [
+        16,
+        338,
+        224,
+        284
+      ],
+      "anchor": [
+        112,
+        284
+      ]
+    },
+    {
+      "id": "soul-chains",
+      "source": "ink-family.png",
+      "sourceSHA256": "bd606b89925c35848e339b4bdf748b8662032e9fd2b8e659cab76e47e1aa06f9",
+      "slot": [
+        1,
+        1
+      ],
+      "image": "bossFX",
+      "r": [
+        273,
+        336,
+        222,
+        288
+      ],
+      "anchor": [
+        111,
+        288
+      ]
+    },
+    {
+      "id": "spirit-smoke",
+      "source": "ink-family.png",
+      "sourceSHA256": "bd606b89925c35848e339b4bdf748b8662032e9fd2b8e659cab76e47e1aa06f9",
+      "slot": [
+        2,
+        1
+      ],
+      "image": "bossFX",
+      "r": [
+        528,
+        363,
+        224,
+        233
+      ],
+      "anchor": [
+        112,
+        233
+      ]
+    },
+    {
+      "id": "venom-orb",
+      "source": "venom-family.png",
+      "sourceSHA256": "b960b48da52bd28d89320658945fb96fd96a27328aed80a0b909a2eedfa1fbaa",
+      "slot": [
+        0,
+        2
+      ],
+      "image": "bossFX",
+      "r": [
+        16,
+        681,
+        224,
+        237
+      ],
+      "anchor": [
+        112,
+        237
+      ]
+    },
+    {
+      "id": "venom-wave",
+      "source": "venom-family.png",
+      "sourceSHA256": "b960b48da52bd28d89320658945fb96fd96a27328aed80a0b909a2eedfa1fbaa",
+      "slot": [
+        1,
+        2
+      ],
+      "image": "bossFX",
+      "r": [
+        272,
+        696,
+        224,
+        208
+      ],
+      "anchor": [
+        112,
+        208
+      ]
+    },
+    {
+      "id": "venom-mist",
+      "source": "venom-family.png",
+      "sourceSHA256": "b960b48da52bd28d89320658945fb96fd96a27328aed80a0b909a2eedfa1fbaa",
+      "slot": [
+        2,
+        2
+      ],
+      "image": "bossFX",
+      "r": [
+        528,
+        690,
+        224,
+        219
+      ],
+      "anchor": [
+        112,
+        219
+      ]
+    },
+    {
+      "id": "storm-cloud",
+      "source": "dragon-family.png",
+      "sourceSHA256": "abd5a5f6b590e00c2ace2f44c34d3f23542029d8e74a21e885ce563efd461d27",
+      "slot": [
+        0,
+        3
+      ],
+      "image": "bossFX",
+      "r": [
+        16,
+        997,
+        224,
+        245
+      ],
+      "anchor": [
+        112,
+        245
+      ]
+    },
+    {
+      "id": "lightning",
+      "source": "lightning-sharp.png",
+      "sourceSHA256": "b1d33d26f44fbcd111d0b64bb833e39f9425acecbd92ed3bd1b7733b8d6b3b3a",
+      "slot": [
+        1,
+        3
+      ],
+      "image": "bossFX",
+      "r": [
+        288,
+        976,
+        191,
+        288
+      ],
+      "anchor": [
+        95.5,
+        288
+      ]
+    },
+    {
+      "id": "water-geyser",
+      "source": "dragon-family.png",
+      "sourceSHA256": "abd5a5f6b590e00c2ace2f44c34d3f23542029d8e74a21e885ce563efd461d27",
+      "slot": [
+        2,
+        3
+      ],
+      "image": "bossFX",
+      "r": [
+        545,
+        976,
+        190,
+        288
+      ],
+      "anchor": [
+        95,
+        288
+      ]
+    },
+    {
+      "id": "pagoda",
+      "source": "gold-family.png",
+      "sourceSHA256": "6b119618e224a735d0fdf86c6587f61d6cb3ea8fcd91eabb1677e9095cb28156",
+      "slot": [
+        0,
+        4
+      ],
+      "image": "bossFX",
+      "r": [
+        16,
+        1322,
+        224,
+        235
+      ],
+      "anchor": [
+        112,
+        235
+      ]
+    },
+    {
+      "id": "gold-ribbons",
+      "source": "gold-family.png",
+      "sourceSHA256": "6b119618e224a735d0fdf86c6587f61d6cb3ea8fcd91eabb1677e9095cb28156",
+      "slot": [
+        1,
+        4
+      ],
+      "image": "bossFX",
+      "r": [
+        272,
+        1330,
+        224,
+        219
+      ],
+      "anchor": [
+        112,
+        219
+      ]
+    },
+    {
+      "id": "fire-wheel",
+      "source": "gold-family.png",
+      "sourceSHA256": "6b119618e224a735d0fdf86c6587f61d6cb3ea8fcd91eabb1677e9095cb28156",
+      "slot": [
+        2,
+        4
+      ],
+      "image": "bossFX",
+      "r": [
+        528,
+        1323,
+        224,
+        234
+      ],
+      "anchor": [
+        112,
+        234
+      ]
+    }
+  ]
+}

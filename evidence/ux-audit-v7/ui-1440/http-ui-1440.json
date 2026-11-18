@@ -1,0 +1,2583 @@
+{
+  "version": "7.0.1",
+  "kind": "http",
+  "entry": "E:\\githome\\kong-rpg\\release\\index.html",
+  "sha256": "dd52d2607675c57d66fa24e6cd7d736ca25cb51e2bdfe9fedfc6f15f3020dd9c",
+  "checks": [
+    {
+      "name": "prologue dialog stays inside playfield",
+      "pass": true
+    },
+    {
+      "name": "heroes dialog stays inside playfield",
+      "pass": true
+    },
+    {
+      "name": "D selects Nezha",
+      "pass": true
+    },
+    {
+      "name": "starter-nezha dialog stays inside playfield",
+      "pass": true
+    },
+    {
+      "name": "starter-nezha cloud text stays inside card",
+      "pass": true
+    },
+    {
+      "name": "starter-nezha cloud text gap 1",
+      "pass": true
+    },
+    {
+      "name": "starter-nezha cloud text gap 2",
+      "pass": true
+    },
+    {
+      "name": "starter-nezha cloud text gap 3",
+      "pass": true
+    },
+    {
+      "name": "starter-nezha cloud text gap 4",
+      "pass": true
+    },
+    {
+      "name": "starter-nezha echo text stays inside card",
+      "pass": true
+    },
+    {
+      "name": "starter-nezha echo text gap 1",
+      "pass": true
+    },
+    {
+      "name": "starter-nezha echo text gap 2",
+      "pass": true
+    },
+    {
+      "name": "starter-nezha echo text gap 3",
+      "pass": true
+    },
+    {
+      "name": "starter-nezha echo text gap 4",
+      "pass": true
+    },
+    {
+      "name": "starter-nezha staff text stays inside card",
+      "pass": true
+    },
+    {
+      "name": "starter-nezha staff text gap 1",
+      "pass": true
+    },
+    {
+      "name": "starter-nezha staff text gap 2",
+      "pass": true
+    },
+    {
+      "name": "starter-nezha staff text gap 3",
+      "pass": true
+    },
+    {
+      "name": "starter-nezha staff text gap 4",
+      "pass": true
+    },
+    {
+      "name": "A wraps to third starter",
+      "pass": true
+    },
+    {
+      "name": "Enter starts selected hero and build",
+      "pass": true
+    },
+    {
+      "name": "pause-maximal dialog stays inside playfield",
+      "pass": true
+    },
+    {
+      "name": "pause-journal dialog stays inside playfield",
+      "pass": true
+    },
+    {
+      "name": "help-maximal dialog stays inside playfield",
+      "pass": true
+    },
+    {
+      "name": "guide describes the current upper-left talisman HUD",
+      "pass": true
+    },
+    {
+      "name": "guide prose stays above the painted bottom binding",
+      "pass": true,
+      "page": {
+        "x": 167.265625,
+        "y": 241.515625,
+        "w": 1105.453125,
+        "h": 478.171875
+      },
+      "lines": [
+        {
+          "bottom": 366.109375,
+          "text": "A D移动，空格/W跳。长按高跳、松开短跳；S＋空格下穿。踩敌反弹，腾云骨多一跳。"
+        },
+        {
+          "bottom": 388.90625,
+          "text": "悟空J/左键三连，第三棍可打断；空中S＋J下劈。哪吒J水平掷环、左键瞄准，去程18/回程22；一环在外不能再掷。盾兵可绕背、踩踏或借破盾加成。"
+        },
+        {
+          "bottom": 481.5,
+          "text": "K/Shift闪避，0.85秒冷却。L/右键：悟空分身、哪吒混天绫，耗40定力；照影珠或缚莲绫耗50。普攻命中回定力。"
+        },
+        {
+          "bottom": 504.296875,
+          "text": "命中积攒战意，满100按R释放大招：破盾、清近处敌弹。起势护体，收招仍有风险。Q使用限次符术，余量见左上。U：悟空按住蓄棍、松开伸刺；S松开撑地跃。哪吒按住驭轮，W升S降，松开落下。"
+        },
+        {
+          "bottom": 619.6875,
+          "text": "F借灯、触发见闻或过门。上路试炼可跳过，清场后回去领奖；归灯只用一次。补给满值留地。每次奖励择一：舍利最多三枚，法门本局保留，新符替换旧符；B查详情。"
+        },
+        {
+          "bottom": 619.6875,
+          "text": "突刺/盾冲按路径跳避；交叉印与锁空印锁定后移开，飞行时可收轮下降。三守关考跳跃和横移；三境均需破双阵、退守关者。无天绕背或趁收招。失败清空本局成长。"
+        }
+      ]
+    },
+    {
+      "name": "build-maximal dialog stays inside playfield",
+      "pass": true
+    },
+    {
+      "name": "build scroll reaches final controls",
+      "pass": true
+    },
+    {
+      "name": "mixed-history dialog stays inside playfield",
+      "pass": true
+    },
+    {
+      "name": "each history row uses its own hero reward names",
+      "pass": true,
+      "rows": [
+        "止步悬灯古渡NEZHA0分40秒哪吒 · 凌云踵 · 缚莲绫 · 破甲环",
+        "止步雾隐山道WUKONG0分12秒孙悟空 · 腾云骨 · 照影珠 · 定海心"
+      ]
+    },
+    {
+      "name": "combat pointer release cannot choose a reward",
+      "pass": true
+    },
+    {
+      "name": "fresh click still chooses reward",
+      "pass": true
+    },
+    {
+      "name": "Tab pauses before focusing DOM",
+      "pass": true
+    },
+    {
+      "name": "paused DOM keys spend no combat input",
+      "pass": true
+    },
+    {
+      "name": "blur signal pauses the fight",
+      "pass": true
+    },
+    {
+      "name": "reward-wukong-mirror dialog stays inside playfield",
+      "pass": true
+    },
+    {
+      "name": "reward-wukong-mirror mirror text stays inside card",
+      "pass": true
+    },
+    {
+      "name": "reward-wukong-mirror mirror text gap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-wukong-mirror mirror text gap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-wukong-mirror mirror text gap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-wukong-mirror mirror text gap 4",
+      "pass": true
+    },
+    {
+      "name": "reward-wukong-mirror clone-burst text stays inside card",
+      "pass": true
+    },
+    {
+      "name": "reward-wukong-mirror clone-burst text gap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-wukong-mirror clone-burst text gap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-wukong-mirror clone-burst text gap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-wukong-mirror clone-burst text gap 4",
+      "pass": true
+    },
+    {
+      "name": "reward-wukong-mirror rest text stays inside card",
+      "pass": true
+    },
+    {
+      "name": "reward-wukong-mirror rest text gap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-wukong-mirror rest text gap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-wukong-mirror rest text gap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-wukong-mirror rest text gap 4",
+      "pass": true
+    },
+    {
+      "name": "reward-wukong-mercy dialog stays inside playfield",
+      "pass": true
+    },
+    {
+      "name": "reward-wukong-mercy mercy text stays inside card",
+      "pass": true
+    },
+    {
+      "name": "reward-wukong-mercy mercy text gap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-wukong-mercy mercy text gap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-wukong-mercy mercy text gap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-wukong-mercy mercy text gap 4",
+      "pass": true
+    },
+    {
+      "name": "reward-wukong-mercy ultimate-echo text stays inside card",
+      "pass": true
+    },
+    {
+      "name": "reward-wukong-mercy ultimate-echo text gap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-wukong-mercy ultimate-echo text gap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-wukong-mercy ultimate-echo text gap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-wukong-mercy ultimate-echo text gap 4",
+      "pass": true
+    },
+    {
+      "name": "reward-wukong-mercy thunder text stays inside card",
+      "pass": true
+    },
+    {
+      "name": "reward-wukong-mercy thunder text gap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-wukong-mercy thunder text gap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-wukong-mercy thunder text gap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-wukong-mercy thunder text gap 4",
+      "pass": true
+    },
+    {
+      "name": "reward-wukong-vitality dialog stays inside playfield",
+      "pass": true
+    },
+    {
+      "name": "reward-wukong-vitality vitality text stays inside card",
+      "pass": true
+    },
+    {
+      "name": "reward-wukong-vitality vitality text gap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-wukong-vitality vitality text gap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-wukong-vitality vitality text gap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-wukong-vitality vitality text gap 4",
+      "pass": true
+    },
+    {
+      "name": "reward-wukong-vitality staff-wave text stays inside card",
+      "pass": true
+    },
+    {
+      "name": "reward-wukong-vitality staff-wave text gap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-wukong-vitality staff-wave text gap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-wukong-vitality staff-wave text gap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-wukong-vitality staff-wave text gap 4",
+      "pass": true
+    },
+    {
+      "name": "reward-wukong-vitality ward text stays inside card",
+      "pass": true
+    },
+    {
+      "name": "reward-wukong-vitality ward text gap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-wukong-vitality ward text gap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-wukong-vitality ward text gap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-wukong-vitality ward text gap 4",
+      "pass": true
+    },
+    {
+      "name": "reward-nezha-mirror dialog stays inside playfield",
+      "pass": true
+    },
+    {
+      "name": "reward-nezha-mirror mirror text stays inside card",
+      "pass": true
+    },
+    {
+      "name": "reward-nezha-mirror mirror text gap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-nezha-mirror mirror text gap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-nezha-mirror mirror text gap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-nezha-mirror mirror text gap 4",
+      "pass": true
+    },
+    {
+      "name": "reward-nezha-mirror clone-burst text stays inside card",
+      "pass": true
+    },
+    {
+      "name": "reward-nezha-mirror clone-burst text gap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-nezha-mirror clone-burst text gap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-nezha-mirror clone-burst text gap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-nezha-mirror clone-burst text gap 4",
+      "pass": true
+    },
+    {
+      "name": "reward-nezha-mirror rest text stays inside card",
+      "pass": true
+    },
+    {
+      "name": "reward-nezha-mirror rest text gap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-nezha-mirror rest text gap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-nezha-mirror rest text gap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-nezha-mirror rest text gap 4",
+      "pass": true
+    },
+    {
+      "name": "reward-nezha-mercy dialog stays inside playfield",
+      "pass": true
+    },
+    {
+      "name": "reward-nezha-mercy mercy text stays inside card",
+      "pass": true
+    },
+    {
+      "name": "reward-nezha-mercy mercy text gap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-nezha-mercy mercy text gap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-nezha-mercy mercy text gap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-nezha-mercy mercy text gap 4",
+      "pass": true
+    },
+    {
+      "name": "reward-nezha-mercy ultimate-echo text stays inside card",
+      "pass": true
+    },
+    {
+      "name": "reward-nezha-mercy ultimate-echo text gap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-nezha-mercy ultimate-echo text gap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-nezha-mercy ultimate-echo text gap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-nezha-mercy ultimate-echo text gap 4",
+      "pass": true
+    },
+    {
+      "name": "reward-nezha-mercy thunder text stays inside card",
+      "pass": true
+    },
+    {
+      "name": "reward-nezha-mercy thunder text gap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-nezha-mercy thunder text gap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-nezha-mercy thunder text gap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-nezha-mercy thunder text gap 4",
+      "pass": true
+    },
+    {
+      "name": "reward-nezha-vitality dialog stays inside playfield",
+      "pass": true
+    },
+    {
+      "name": "reward-nezha-vitality vitality text stays inside card",
+      "pass": true
+    },
+    {
+      "name": "reward-nezha-vitality vitality text gap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-nezha-vitality vitality text gap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-nezha-vitality vitality text gap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-nezha-vitality vitality text gap 4",
+      "pass": true
+    },
+    {
+      "name": "reward-nezha-vitality staff-wave text stays inside card",
+      "pass": true
+    },
+    {
+      "name": "reward-nezha-vitality staff-wave text gap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-nezha-vitality staff-wave text gap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-nezha-vitality staff-wave text gap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-nezha-vitality staff-wave text gap 4",
+      "pass": true
+    },
+    {
+      "name": "reward-nezha-vitality ward text stays inside card",
+      "pass": true
+    },
+    {
+      "name": "reward-nezha-vitality ward text gap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-nezha-vitality ward text gap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-nezha-vitality ward text gap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-nezha-vitality ward text gap 4",
+      "pass": true
+    },
+    {
+      "name": "replacement dialog stays inside playfield",
+      "pass": true
+    },
+    {
+      "name": "replacement cloud text stays inside card",
+      "pass": true
+    },
+    {
+      "name": "replacement cloud text gap 1",
+      "pass": true
+    },
+    {
+      "name": "replacement cloud text gap 2",
+      "pass": true
+    },
+    {
+      "name": "replacement cloud text gap 3",
+      "pass": true
+    },
+    {
+      "name": "replacement cloud text gap 4",
+      "pass": true
+    },
+    {
+      "name": "replacement echo text stays inside card",
+      "pass": true
+    },
+    {
+      "name": "replacement echo text gap 1",
+      "pass": true
+    },
+    {
+      "name": "replacement echo text gap 2",
+      "pass": true
+    },
+    {
+      "name": "replacement echo text gap 3",
+      "pass": true
+    },
+    {
+      "name": "replacement echo text gap 4",
+      "pass": true
+    },
+    {
+      "name": "replacement staff text stays inside card",
+      "pass": true
+    },
+    {
+      "name": "replacement staff text gap 1",
+      "pass": true
+    },
+    {
+      "name": "replacement staff text gap 2",
+      "pass": true
+    },
+    {
+      "name": "replacement staff text gap 3",
+      "pass": true
+    },
+    {
+      "name": "replacement staff text gap 4",
+      "pass": true
+    },
+    {
+      "name": "replacement survives reload",
+      "pass": true
+    },
+    {
+      "name": "Escape returns to unchanged reward",
+      "pass": true
+    },
+    {
+      "name": "replacement updates left HUD and resumes",
+      "pass": true
+    },
+    {
+      "name": "keyboard third strike sends a real wave into distant seal",
+      "pass": true
+    },
+    {
+      "name": "wukong defeats actual spawned trial guards",
+      "pass": true
+    },
+    {
+      "name": "wukong claims trial reward and cannot claim twice",
+      "pass": true
+    },
+    {
+      "name": "wukong spent trial stays in combat screen",
+      "pass": true
+    },
+    {
+      "name": "nezha defeats actual spawned trial guards",
+      "pass": true
+    },
+    {
+      "name": "nezha claims trial reward and cannot claim twice",
+      "pass": true
+    },
+    {
+      "name": "nezha spent trial stays in combat screen",
+      "pass": true
+    },
+    {
+      "name": "death dialog stays inside playfield",
+      "pass": true
+    },
+    {
+      "name": "death restart clears old growth and keeps seed",
+      "pass": true
+    },
+    {
+      "name": "victory dialog stays inside playfield",
+      "pass": true
+    },
+    {
+      "name": "epilogue dialog stays inside playfield",
+      "pass": true
+    },
+    {
+      "name": "results do not double count victories",
+      "pass": true
+    },
+    {
+      "name": "victory appears in run history",
+      "pass": true
+    },
+    {
+      "name": "old v5 save opens its preserved game",
+      "pass": true,
+      "oldVersion": "5.0.0"
+    },
+    {
+      "name": "legacy route keeps the current v7 save",
+      "pass": true
+    },
+    {
+      "name": "unavailable storage asks for export",
+      "pass": true
+    },
+    {
+      "name": "blocked storage starts clean after reload",
+      "pass": true
+    },
+    {
+      "name": "export and import recover when persistence is unavailable",
+      "pass": true
+    },
+    {
+      "name": "no page or frame errors",
+      "pass": true
+    }
+  ],
+  "layouts": [
+    {
+      "name": "prologue",
+      "screen": "prologue",
+      "stage": {
+        "x": 40,
+        "y": 96,
+        "w": 1360,
+        "h": 765
+      },
+      "box": {
+        "x": 245,
+        "y": 133.8125,
+        "w": 950,
+        "h": 689.375
+      },
+      "scroll": 0,
+      "cards": []
+    },
+    {
+      "name": "heroes",
+      "screen": "heroes",
+      "stage": {
+        "x": 40,
+        "y": 96,
+        "w": 1360,
+        "h": 765
+      },
+      "box": {
+        "x": 102.109375,
+        "y": 199.640625,
+        "w": 1235.765625,
+        "h": 557.71875
+      },
+      "scroll": 0,
+      "cards": []
+    },
+    {
+      "name": "starter-nezha",
+      "screen": "start",
+      "stage": {
+        "x": 40,
+        "y": 96,
+        "w": 1360,
+        "h": 765
+      },
+      "box": {
+        "x": 102.109375,
+        "y": 158.234375,
+        "w": 1235.765625,
+        "h": 640.515625
+      },
+      "scroll": 0,
+      "cards": [
+        {
+          "id": "cloud",
+          "box": {
+            "x": 294.984375,
+            "y": 301.34375,
+            "w": 271.328125,
+            "h": 380.90625
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "tag": "H3",
+              "box": {
+                "x": 389.4375,
+                "y": 410.34375,
+                "w": 82.40625,
+                "h": 31.1875
+              },
+              "overflow": false
+            },
+            {
+              "tag": "tag",
+              "box": {
+                "x": 405.640625,
+                "y": 445.53125,
+                "w": 50,
+                "h": 17.59375
+              },
+              "overflow": false
+            },
+            {
+              "tag": "P",
+              "box": {
+                "x": 346.53125,
+                "y": 473.125,
+                "w": 168.234375,
+                "h": 68.25
+              },
+              "overflow": false
+            },
+            {
+              "tag": "cost",
+              "box": {
+                "x": 346.53125,
+                "y": 553.375,
+                "w": 168.234375,
+                "h": 46.375
+              },
+              "overflow": false
+            },
+            {
+              "tag": "choice-verb",
+              "box": {
+                "x": 400.640625,
+                "y": 607.75,
+                "w": 60,
+                "h": 16.5
+              },
+              "overflow": false
+            }
+          ]
+        },
+        {
+          "id": "echo",
+          "box": {
+            "x": 584.3125,
+            "y": 306.34375,
+            "w": 271.328125,
+            "h": 380.90625
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "tag": "H3",
+              "box": {
+                "x": 678.765625,
+                "y": 415.34375,
+                "w": 82.40625,
+                "h": 31.1875
+              },
+              "overflow": false
+            },
+            {
+              "tag": "tag",
+              "box": {
+                "x": 694.96875,
+                "y": 450.53125,
+                "w": 50,
+                "h": 17.59375
+              },
+              "overflow": false
+            },
+            {
+              "tag": "P",
+              "box": {
+                "x": 635.859375,
+                "y": 478.125,
+                "w": 168.234375,
+                "h": 68.25
+              },
+              "overflow": false
+            },
+            {
+              "tag": "cost",
+              "box": {
+                "x": 635.859375,
+                "y": 558.375,
+                "w": 168.234375,
+                "h": 46.375
+              },
+              "overflow": false
+            },
+            {
+              "tag": "choice-verb",
+              "box": {
+                "x": 689.96875,
+                "y": 612.75,
+                "w": 60,
+                "h": 16.5
+              },
+              "overflow": false
+            }
+          ]
+        },
+        {
+          "id": "staff",
+          "box": {
+            "x": 873.640625,
+            "y": 306.34375,
+            "w": 271.34375,
+            "h": 380.90625
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "tag": "H3",
+              "box": {
+                "x": 968.109375,
+                "y": 415.34375,
+                "w": 82.40625,
+                "h": 31.1875
+              },
+              "overflow": false
+            },
+            {
+              "tag": "tag",
+              "box": {
+                "x": 984.3125,
+                "y": 450.53125,
+                "w": 50,
+                "h": 17.59375
+              },
+              "overflow": false
+            },
+            {
+              "tag": "P",
+              "box": {
+                "x": 925.1875,
+                "y": 478.125,
+                "w": 168.25,
+                "h": 45.5
+              },
+              "overflow": false
+            },
+            {
+              "tag": "cost",
+              "box": {
+                "x": 925.1875,
+                "y": 558.375,
+                "w": 168.25,
+                "h": 46.375
+              },
+              "overflow": false
+            },
+            {
+              "tag": "choice-verb",
+              "box": {
+                "x": 979.3125,
+                "y": 612.75,
+                "w": 60,
+                "h": 16.5
+              },
+              "overflow": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pause-maximal",
+      "screen": "paused",
+      "stage": {
+        "x": 40,
+        "y": 96,
+        "w": 1360,
+        "h": 765
+      },
+      "box": {
+        "x": 170,
+        "y": 195.09375,
+        "w": 1100,
+        "h": 566.8125
+      },
+      "scroll": 0,
+      "cards": []
+    },
+    {
+      "name": "pause-journal",
+      "screen": "paused",
+      "stage": {
+        "x": 40,
+        "y": 96,
+        "w": 1360,
+        "h": 765
+      },
+      "box": {
+        "x": 170,
+        "y": 149.484375,
+        "w": 1100,
+        "h": 658.015625
+      },
+      "scroll": 0,
+      "cards": []
+    },
+    {
+      "name": "help-maximal",
+      "screen": "help",
+      "stage": {
+        "x": 40,
+        "y": 96,
+        "w": 1360,
+        "h": 765
+      },
+      "box": {
+        "x": 129.265625,
+        "y": 125.796875,
+        "w": 1181.453125,
+        "h": 705.390625
+      },
+      "scroll": 0,
+      "cards": []
+    },
+    {
+      "name": "build-maximal",
+      "screen": "build",
+      "stage": {
+        "x": 40,
+        "y": 96,
+        "w": 1360,
+        "h": 765
+      },
+      "box": {
+        "x": 102.109375,
+        "y": 168.6875,
+        "w": 1235.765625,
+        "h": 619.609375
+      },
+      "scroll": 0,
+      "cards": []
+    },
+    {
+      "name": "mixed-history",
+      "screen": "history",
+      "stage": {
+        "x": 40,
+        "y": 96,
+        "w": 1360,
+        "h": 765
+      },
+      "box": {
+        "x": 129.265625,
+        "y": 218.640625,
+        "w": 1181.453125,
+        "h": 519.71875
+      },
+      "scroll": 0,
+      "cards": []
+    },
+    {
+      "name": "reward-wukong-mirror",
+      "screen": "reward",
+      "stage": {
+        "x": 40,
+        "y": 96,
+        "w": 1360,
+        "h": 765
+      },
+      "box": {
+        "x": 102.109375,
+        "y": 143.6875,
+        "w": 1235.765625,
+        "h": 669.609375
+      },
+      "scroll": 0,
+      "cards": [
+        {
+          "id": "mirror",
+          "box": {
+            "x": 294.984375,
+            "y": 317.796875,
+            "w": 271.328125,
+            "h": 360
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "tag": "H3",
+              "box": {
+                "x": 389.4375,
+                "y": 426.796875,
+                "w": 82.40625,
+                "h": 31.1875
+              },
+              "overflow": false
+            },
+            {
+              "tag": "tag",
+              "box": {
+                "x": 405.640625,
+                "y": 461.984375,
+                "w": 50,
+                "h": 17.59375
+              },
+              "overflow": false
+            },
+            {
+              "tag": "P",
+              "box": {
+                "x": 346.53125,
+                "y": 489.578125,
+                "w": 168.234375,
+                "h": 45.5
+              },
+              "overflow": false
+            },
+            {
+              "tag": "cost",
+              "box": {
+                "x": 346.53125,
+                "y": 567.609375,
+                "w": 168.234375,
+                "h": 27.6875
+              },
+              "overflow": false
+            },
+            {
+              "tag": "choice-verb",
+              "box": {
+                "x": 400.640625,
+                "y": 603.296875,
+                "w": 60,
+                "h": 16.5
+              },
+              "overflow": false
+            }
+          ]
+        },
+        {
+          "id": "clone-burst",
+          "box": {
+            "x": 584.3125,
+            "y": 317.796875,
+            "w": 271.328125,
+            "h": 360
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "tag": "H3",
+              "box": {
+                "x": 678.765625,
+                "y": 426.796875,
+                "w": 82.40625,
+                "h": 31.1875
+              },
+              "overflow": false
+            },
+            {
+              "tag": "tag",
+              "box": {
+                "x": 670.265625,
+                "y": 461.984375,
+                "w": 99.421875,
+                "h": 17.59375
+              },
+              "overflow": false
+            },
+            {
+              "tag": "P",
+              "box": {
+                "x": 635.859375,
+                "y": 489.578125,
+                "w": 168.234375,
+                "h": 45.5
+              },
+              "overflow": false
+            },
+            {
+              "tag": "cost",
+              "box": {
+                "x": 635.859375,
+                "y": 567.609375,
+                "w": 168.234375,
+                "h": 27.6875
+              },
+              "overflow": false
+            },
+            {
+              "tag": "choice-verb",
+              "box": {
+                "x": 689.96875,
+                "y": 603.296875,
+                "w": 60,
+                "h": 16.5
+              },
+              "overflow": false
+            }
+          ]
+        },
+        {
+          "id": "rest",
+          "box": {
+            "x": 873.640625,
+            "y": 312.796875,
+            "w": 271.34375,
+            "h": 360
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "tag": "H3",
+              "box": {
+                "x": 954.375,
+                "y": 421.796875,
+                "w": 109.875,
+                "h": 31.1875
+              },
+              "overflow": false
+            },
+            {
+              "tag": "tag",
+              "box": {
+                "x": 984.3125,
+                "y": 456.984375,
+                "w": 50,
+                "h": 17.59375
+              },
+              "overflow": false
+            },
+            {
+              "tag": "P",
+              "box": {
+                "x": 925.1875,
+                "y": 484.578125,
+                "w": 168.25,
+                "h": 45.5
+              },
+              "overflow": false
+            },
+            {
+              "tag": "cost",
+              "box": {
+                "x": 925.1875,
+                "y": 562.609375,
+                "w": 168.25,
+                "h": 27.6875
+              },
+              "overflow": false
+            },
+            {
+              "tag": "choice-verb",
+              "box": {
+                "x": 979.3125,
+                "y": 598.296875,
+                "w": 60,
+                "h": 16.5
+              },
+              "overflow": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "reward-wukong-mercy",
+      "screen": "reward",
+      "stage": {
+        "x": 40,
+        "y": 96,
+        "w": 1360,
+        "h": 765
+      },
+      "box": {
+        "x": 102.109375,
+        "y": 143.6875,
+        "w": 1235.765625,
+        "h": 669.609375
+      },
+      "scroll": 0,
+      "cards": [
+        {
+          "id": "mercy",
+          "box": {
+            "x": 294.984375,
+            "y": 312.796875,
+            "w": 271.328125,
+            "h": 360
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "tag": "H3",
+              "box": {
+                "x": 389.4375,
+                "y": 421.796875,
+                "w": 82.40625,
+                "h": 31.1875
+              },
+              "overflow": false
+            },
+            {
+              "tag": "tag",
+              "box": {
+                "x": 405.640625,
+                "y": 456.984375,
+                "w": 50,
+                "h": 17.59375
+              },
+              "overflow": false
+            },
+            {
+              "tag": "P",
+              "box": {
+                "x": 346.53125,
+                "y": 484.578125,
+                "w": 168.234375,
+                "h": 45.5
+              },
+              "overflow": false
+            },
+            {
+              "tag": "cost",
+              "box": {
+                "x": 346.53125,
+                "y": 562.609375,
+                "w": 168.234375,
+                "h": 27.6875
+              },
+              "overflow": false
+            },
+            {
+              "tag": "choice-verb",
+              "box": {
+                "x": 400.640625,
+                "y": 598.296875,
+                "w": 60,
+                "h": 16.5
+              },
+              "overflow": false
+            }
+          ]
+        },
+        {
+          "id": "ultimate-echo",
+          "box": {
+            "x": 584.3125,
+            "y": 317.796875,
+            "w": 271.328125,
+            "h": 360
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "tag": "H3",
+              "box": {
+                "x": 665.03125,
+                "y": 426.796875,
+                "w": 109.875,
+                "h": 31.1875
+              },
+              "overflow": false
+            },
+            {
+              "tag": "tag",
+              "box": {
+                "x": 670.265625,
+                "y": 461.984375,
+                "w": 99.421875,
+                "h": 17.59375
+              },
+              "overflow": false
+            },
+            {
+              "tag": "P",
+              "box": {
+                "x": 635.859375,
+                "y": 489.578125,
+                "w": 168.234375,
+                "h": 45.5
+              },
+              "overflow": false
+            },
+            {
+              "tag": "cost",
+              "box": {
+                "x": 635.859375,
+                "y": 548.921875,
+                "w": 168.234375,
+                "h": 46.375
+              },
+              "overflow": false
+            },
+            {
+              "tag": "choice-verb",
+              "box": {
+                "x": 689.96875,
+                "y": 603.296875,
+                "w": 60,
+                "h": 16.5
+              },
+              "overflow": false
+            }
+          ]
+        },
+        {
+          "id": "thunder",
+          "box": {
+            "x": 873.640625,
+            "y": 312.796875,
+            "w": 271.34375,
+            "h": 360
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "tag": "H3",
+              "box": {
+                "x": 954.375,
+                "y": 421.796875,
+                "w": 109.875,
+                "h": 31.1875
+              },
+              "overflow": false
+            },
+            {
+              "tag": "tag",
+              "box": {
+                "x": 972.25,
+                "y": 456.984375,
+                "w": 74.125,
+                "h": 17.59375
+              },
+              "overflow": false
+            },
+            {
+              "tag": "P",
+              "box": {
+                "x": 925.1875,
+                "y": 484.578125,
+                "w": 168.25,
+                "h": 45.5
+              },
+              "overflow": false
+            },
+            {
+              "tag": "cost",
+              "box": {
+                "x": 925.1875,
+                "y": 543.921875,
+                "w": 168.25,
+                "h": 46.375
+              },
+              "overflow": false
+            },
+            {
+              "tag": "choice-verb",
+              "box": {
+                "x": 979.3125,
+                "y": 598.296875,
+                "w": 60,
+                "h": 16.5
+              },
+              "overflow": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "reward-wukong-vitality",
+      "screen": "reward",
+      "stage": {
+        "x": 40,
+        "y": 96,
+        "w": 1360,
+        "h": 765
+      },
+      "box": {
+        "x": 102.109375,
+        "y": 143.6875,
+        "w": 1235.765625,
+        "h": 669.609375
+      },
+      "scroll": 0,
+      "cards": [
+        {
+          "id": "vitality",
+          "box": {
+            "x": 294.984375,
+            "y": 312.796875,
+            "w": 271.328125,
+            "h": 360
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "tag": "H3",
+              "box": {
+                "x": 389.4375,
+                "y": 421.796875,
+                "w": 82.40625,
+                "h": 31.1875
+              },
+              "overflow": false
+            },
+            {
+              "tag": "tag",
+              "box": {
+                "x": 380.9375,
+                "y": 456.984375,
+                "w": 99.421875,
+                "h": 17.59375
+              },
+              "overflow": false
+            },
+            {
+              "tag": "P",
+              "box": {
+                "x": 346.53125,
+                "y": 484.578125,
+                "w": 168.234375,
+                "h": 45.5
+              },
+              "overflow": false
+            },
+            {
+              "tag": "cost",
+              "box": {
+                "x": 346.53125,
+                "y": 543.921875,
+                "w": 168.234375,
+                "h": 46.375
+              },
+              "overflow": false
+            },
+            {
+              "tag": "choice-verb",
+              "box": {
+                "x": 400.640625,
+                "y": 598.296875,
+                "w": 60,
+                "h": 16.5
+              },
+              "overflow": false
+            }
+          ]
+        },
+        {
+          "id": "staff-wave",
+          "box": {
+            "x": 584.3125,
+            "y": 317.796875,
+            "w": 271.328125,
+            "h": 360
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "tag": "H3",
+              "box": {
+                "x": 665.03125,
+                "y": 426.796875,
+                "w": 109.875,
+                "h": 31.1875
+              },
+              "overflow": false
+            },
+            {
+              "tag": "tag",
+              "box": {
+                "x": 670.265625,
+                "y": 461.984375,
+                "w": 99.421875,
+                "h": 17.59375
+              },
+              "overflow": false
+            },
+            {
+              "tag": "P",
+              "box": {
+                "x": 635.859375,
+                "y": 489.578125,
+                "w": 168.234375,
+                "h": 45.5
+              },
+              "overflow": false
+            },
+            {
+              "tag": "cost",
+              "box": {
+                "x": 635.859375,
+                "y": 567.609375,
+                "w": 168.234375,
+                "h": 27.6875
+              },
+              "overflow": false
+            },
+            {
+              "tag": "choice-verb",
+              "box": {
+                "x": 689.96875,
+                "y": 603.296875,
+                "w": 60,
+                "h": 16.5
+              },
+              "overflow": false
+            }
+          ]
+        },
+        {
+          "id": "ward",
+          "box": {
+            "x": 873.640625,
+            "y": 312.796875,
+            "w": 271.34375,
+            "h": 360
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "tag": "H3",
+              "box": {
+                "x": 954.375,
+                "y": 421.796875,
+                "w": 109.875,
+                "h": 31.1875
+              },
+              "overflow": false
+            },
+            {
+              "tag": "tag",
+              "box": {
+                "x": 972.25,
+                "y": 456.984375,
+                "w": 74.125,
+                "h": 17.59375
+              },
+              "overflow": false
+            },
+            {
+              "tag": "P",
+              "box": {
+                "x": 925.1875,
+                "y": 484.578125,
+                "w": 168.25,
+                "h": 45.5
+              },
+              "overflow": false
+            },
+            {
+              "tag": "cost",
+              "box": {
+                "x": 925.1875,
+                "y": 562.609375,
+                "w": 168.25,
+                "h": 27.6875
+              },
+              "overflow": false
+            },
+            {
+              "tag": "choice-verb",
+              "box": {
+                "x": 979.3125,
+                "y": 598.296875,
+                "w": 60,
+                "h": 16.5
+              },
+              "overflow": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "reward-nezha-mirror",
+      "screen": "reward",
+      "stage": {
+        "x": 40,
+        "y": 96,
+        "w": 1360,
+        "h": 765
+      },
+      "box": {
+        "x": 102.109375,
+        "y": 133.234375,
+        "w": 1235.765625,
+        "h": 690.515625
+      },
+      "scroll": 0,
+      "cards": [
+        {
+          "id": "mirror",
+          "box": {
+            "x": 294.984375,
+            "y": 302.34375,
+            "w": 271.328125,
+            "h": 380.90625
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "tag": "H3",
+              "box": {
+                "x": 389.4375,
+                "y": 411.34375,
+                "w": 82.40625,
+                "h": 31.1875
+              },
+              "overflow": false
+            },
+            {
+              "tag": "tag",
+              "box": {
+                "x": 405.640625,
+                "y": 446.53125,
+                "w": 50,
+                "h": 17.59375
+              },
+              "overflow": false
+            },
+            {
+              "tag": "P",
+              "box": {
+                "x": 346.53125,
+                "y": 474.125,
+                "w": 168.234375,
+                "h": 68.25
+              },
+              "overflow": false
+            },
+            {
+              "tag": "cost",
+              "box": {
+                "x": 346.53125,
+                "y": 554.375,
+                "w": 168.234375,
+                "h": 46.375
+              },
+              "overflow": false
+            },
+            {
+              "tag": "choice-verb",
+              "box": {
+                "x": 400.640625,
+                "y": 608.75,
+                "w": 60,
+                "h": 16.5
+              },
+              "overflow": false
+            }
+          ]
+        },
+        {
+          "id": "clone-burst",
+          "box": {
+            "x": 584.3125,
+            "y": 307.34375,
+            "w": 271.328125,
+            "h": 380.90625
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "tag": "H3",
+              "box": {
+                "x": 678.765625,
+                "y": 416.34375,
+                "w": 82.40625,
+                "h": 31.1875
+              },
+              "overflow": false
+            },
+            {
+              "tag": "tag",
+              "box": {
+                "x": 677.09375,
+                "y": 451.53125,
+                "w": 85.765625,
+                "h": 17.59375
+              },
+              "overflow": false
+            },
+            {
+              "tag": "P",
+              "box": {
+                "x": 635.859375,
+                "y": 479.125,
+                "w": 168.234375,
+                "h": 45.5
+              },
+              "overflow": false
+            },
+            {
+              "tag": "cost",
+              "box": {
+                "x": 635.859375,
+                "y": 578.0625,
+                "w": 168.234375,
+                "h": 27.6875
+              },
+              "overflow": false
+            },
+            {
+              "tag": "choice-verb",
+              "box": {
+                "x": 689.96875,
+                "y": 613.75,
+                "w": 60,
+                "h": 16.5
+              },
+              "overflow": false
+            }
+          ]
+        },
+        {
+          "id": "rest",
+          "box": {
+            "x": 873.640625,
+            "y": 302.34375,
+            "w": 271.34375,
+            "h": 380.90625
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "tag": "H3",
+              "box": {
+                "x": 954.375,
+                "y": 411.34375,
+                "w": 109.875,
+                "h": 31.1875
+              },
+              "overflow": false
+            },
+            {
+              "tag": "tag",
+              "box": {
+                "x": 984.3125,
+                "y": 446.53125,
+                "w": 50,
+                "h": 17.59375
+              },
+              "overflow": false
+            },
+            {
+              "tag": "P",
+              "box": {
+                "x": 925.1875,
+                "y": 474.125,
+                "w": 168.25,
+                "h": 45.5
+              },
+              "overflow": false
+            },
+            {
+              "tag": "cost",
+              "box": {
+                "x": 925.1875,
+                "y": 573.0625,
+                "w": 168.25,
+                "h": 27.6875
+              },
+              "overflow": false
+            },
+            {
+              "tag": "choice-verb",
+              "box": {
+                "x": 979.3125,
+                "y": 608.75,
+                "w": 60,
+                "h": 16.5
+              },
+              "overflow": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "reward-nezha-mercy",
+      "screen": "reward",
+      "stage": {
+        "x": 40,
+        "y": 96,
+        "w": 1360,
+        "h": 765
+      },
+      "box": {
+        "x": 102.109375,
+        "y": 143.6875,
+        "w": 1235.765625,
+        "h": 669.609375
+      },
+      "scroll": 0,
+      "cards": [
+        {
+          "id": "mercy",
+          "box": {
+            "x": 294.984375,
+            "y": 312.796875,
+            "w": 271.328125,
+            "h": 360
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "tag": "H3",
+              "box": {
+                "x": 389.4375,
+                "y": 421.796875,
+                "w": 82.40625,
+                "h": 31.1875
+              },
+              "overflow": false
+            },
+            {
+              "tag": "tag",
+              "box": {
+                "x": 405.640625,
+                "y": 456.984375,
+                "w": 50,
+                "h": 17.59375
+              },
+              "overflow": false
+            },
+            {
+              "tag": "P",
+              "box": {
+                "x": 346.53125,
+                "y": 484.578125,
+                "w": 168.234375,
+                "h": 45.5
+              },
+              "overflow": false
+            },
+            {
+              "tag": "cost",
+              "box": {
+                "x": 346.53125,
+                "y": 562.609375,
+                "w": 168.234375,
+                "h": 27.6875
+              },
+              "overflow": false
+            },
+            {
+              "tag": "choice-verb",
+              "box": {
+                "x": 400.640625,
+                "y": 598.296875,
+                "w": 60,
+                "h": 16.5
+              },
+              "overflow": false
+            }
+          ]
+        },
+        {
+          "id": "ultimate-echo",
+          "box": {
+            "x": 584.3125,
+            "y": 317.796875,
+            "w": 271.328125,
+            "h": 360
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "tag": "H3",
+              "box": {
+                "x": 665.03125,
+                "y": 426.796875,
+                "w": 109.875,
+                "h": 31.1875
+              },
+              "overflow": false
+            },
+            {
+              "tag": "tag",
+              "box": {
+                "x": 677.09375,
+                "y": 461.984375,
+                "w": 85.765625,
+                "h": 17.59375
+              },
+              "overflow": false
+            },
+            {
+              "tag": "P",
+              "box": {
+                "x": 635.859375,
+                "y": 489.578125,
+                "w": 168.234375,
+                "h": 22.75
+              },
+              "overflow": false
+            },
+            {
+              "tag": "cost",
+              "box": {
+                "x": 635.859375,
+                "y": 548.921875,
+                "w": 168.234375,
+                "h": 46.375
+              },
+              "overflow": false
+            },
+            {
+              "tag": "choice-verb",
+              "box": {
+                "x": 689.96875,
+                "y": 603.296875,
+                "w": 60,
+                "h": 16.5
+              },
+              "overflow": false
+            }
+          ]
+        },
+        {
+          "id": "thunder",
+          "box": {
+            "x": 873.640625,
+            "y": 312.796875,
+            "w": 271.34375,
+            "h": 360
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "tag": "H3",
+              "box": {
+                "x": 954.375,
+                "y": 421.796875,
+                "w": 109.875,
+                "h": 31.1875
+              },
+              "overflow": false
+            },
+            {
+              "tag": "tag",
+              "box": {
+                "x": 972.25,
+                "y": 456.984375,
+                "w": 74.125,
+                "h": 17.59375
+              },
+              "overflow": false
+            },
+            {
+              "tag": "P",
+              "box": {
+                "x": 925.1875,
+                "y": 484.578125,
+                "w": 168.25,
+                "h": 45.5
+              },
+              "overflow": false
+            },
+            {
+              "tag": "cost",
+              "box": {
+                "x": 925.1875,
+                "y": 543.921875,
+                "w": 168.25,
+                "h": 46.375
+              },
+              "overflow": false
+            },
+            {
+              "tag": "choice-verb",
+              "box": {
+                "x": 979.3125,
+                "y": 598.296875,
+                "w": 60,
+                "h": 16.5
+              },
+              "overflow": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "reward-nezha-vitality",
+      "screen": "reward",
+      "stage": {
+        "x": 40,
+        "y": 96,
+        "w": 1360,
+        "h": 765
+      },
+      "box": {
+        "x": 102.109375,
+        "y": 143.6875,
+        "w": 1235.765625,
+        "h": 669.609375
+      },
+      "scroll": 0,
+      "cards": [
+        {
+          "id": "vitality",
+          "box": {
+            "x": 294.984375,
+            "y": 312.796875,
+            "w": 271.328125,
+            "h": 360
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "tag": "H3",
+              "box": {
+                "x": 389.4375,
+                "y": 421.796875,
+                "w": 82.40625,
+                "h": 31.1875
+              },
+              "overflow": false
+            },
+            {
+              "tag": "tag",
+              "box": {
+                "x": 380.9375,
+                "y": 456.984375,
+                "w": 99.421875,
+                "h": 17.59375
+              },
+              "overflow": false
+            },
+            {
+              "tag": "P",
+              "box": {
+                "x": 346.53125,
+                "y": 484.578125,
+                "w": 168.234375,
+                "h": 45.5
+              },
+              "overflow": false
+            },
+            {
+              "tag": "cost",
+              "box": {
+                "x": 346.53125,
+                "y": 543.921875,
+                "w": 168.234375,
+                "h": 46.375
+              },
+              "overflow": false
+            },
+            {
+              "tag": "choice-verb",
+              "box": {
+                "x": 400.640625,
+                "y": 598.296875,
+                "w": 60,
+                "h": 16.5
+              },
+              "overflow": false
+            }
+          ]
+        },
+        {
+          "id": "staff-wave",
+          "box": {
+            "x": 584.3125,
+            "y": 317.796875,
+            "w": 271.328125,
+            "h": 360
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "tag": "H3",
+              "box": {
+                "x": 665.03125,
+                "y": 426.796875,
+                "w": 109.875,
+                "h": 31.1875
+              },
+              "overflow": false
+            },
+            {
+              "tag": "tag",
+              "box": {
+                "x": 677.09375,
+                "y": 461.984375,
+                "w": 85.765625,
+                "h": 17.59375
+              },
+              "overflow": false
+            },
+            {
+              "tag": "P",
+              "box": {
+                "x": 635.859375,
+                "y": 489.578125,
+                "w": 168.234375,
+                "h": 45.5
+              },
+              "overflow": false
+            },
+            {
+              "tag": "cost",
+              "box": {
+                "x": 635.859375,
+                "y": 548.921875,
+                "w": 168.234375,
+                "h": 46.375
+              },
+              "overflow": false
+            },
+            {
+              "tag": "choice-verb",
+              "box": {
+                "x": 689.96875,
+                "y": 603.296875,
+                "w": 60,
+                "h": 16.5
+              },
+              "overflow": false
+            }
+          ]
+        },
+        {
+          "id": "ward",
+          "box": {
+            "x": 873.640625,
+            "y": 312.796875,
+            "w": 271.34375,
+            "h": 360
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "tag": "H3",
+              "box": {
+                "x": 954.375,
+                "y": 421.796875,
+                "w": 109.875,
+                "h": 31.1875
+              },
+              "overflow": false
+            },
+            {
+              "tag": "tag",
+              "box": {
+                "x": 972.25,
+                "y": 456.984375,
+                "w": 74.125,
+                "h": 17.59375
+              },
+              "overflow": false
+            },
+            {
+              "tag": "P",
+              "box": {
+                "x": 925.1875,
+                "y": 484.578125,
+                "w": 168.25,
+                "h": 45.5
+              },
+              "overflow": false
+            },
+            {
+              "tag": "cost",
+              "box": {
+                "x": 925.1875,
+                "y": 562.609375,
+                "w": 168.25,
+                "h": 27.6875
+              },
+              "overflow": false
+            },
+            {
+              "tag": "choice-verb",
+              "box": {
+                "x": 979.3125,
+                "y": 598.296875,
+                "w": 60,
+                "h": 16.5
+              },
+              "overflow": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "replacement",
+      "screen": "replace",
+      "stage": {
+        "x": 40,
+        "y": 96,
+        "w": 1360,
+        "h": 765
+      },
+      "box": {
+        "x": 102.109375,
+        "y": 126.59375,
+        "w": 1235.765625,
+        "h": 703.8125
+      },
+      "scroll": 0,
+      "cards": [
+        {
+          "id": "cloud",
+          "box": {
+            "x": 294.984375,
+            "y": 333,
+            "w": 271.328125,
+            "h": 380.90625
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "tag": "H3",
+              "box": {
+                "x": 389.4375,
+                "y": 442,
+                "w": 82.40625,
+                "h": 31.1875
+              },
+              "overflow": false
+            },
+            {
+              "tag": "tag",
+              "box": {
+                "x": 405.640625,
+                "y": 477.1875,
+                "w": 50,
+                "h": 17.59375
+              },
+              "overflow": false
+            },
+            {
+              "tag": "P",
+              "box": {
+                "x": 346.53125,
+                "y": 504.78125,
+                "w": 168.234375,
+                "h": 68.25
+              },
+              "overflow": false
+            },
+            {
+              "tag": "cost",
+              "box": {
+                "x": 346.53125,
+                "y": 585.03125,
+                "w": 168.234375,
+                "h": 46.375
+              },
+              "overflow": false
+            },
+            {
+              "tag": "choice-verb",
+              "box": {
+                "x": 400.640625,
+                "y": 639.40625,
+                "w": 60,
+                "h": 16.5
+              },
+              "overflow": false
+            }
+          ]
+        },
+        {
+          "id": "echo",
+          "box": {
+            "x": 584.3125,
+            "y": 338,
+            "w": 271.328125,
+            "h": 380.90625
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "tag": "H3",
+              "box": {
+                "x": 678.765625,
+                "y": 447,
+                "w": 82.40625,
+                "h": 31.1875
+              },
+              "overflow": false
+            },
+            {
+              "tag": "tag",
+              "box": {
+                "x": 694.96875,
+                "y": 482.1875,
+                "w": 50,
+                "h": 17.59375
+              },
+              "overflow": false
+            },
+            {
+              "tag": "P",
+              "box": {
+                "x": 635.859375,
+                "y": 509.78125,
+                "w": 168.234375,
+                "h": 68.25
+              },
+              "overflow": false
+            },
+            {
+              "tag": "cost",
+              "box": {
+                "x": 635.859375,
+                "y": 590.03125,
+                "w": 168.234375,
+                "h": 46.375
+              },
+              "overflow": false
+            },
+            {
+              "tag": "choice-verb",
+              "box": {
+                "x": 689.96875,
+                "y": 644.40625,
+                "w": 60,
+                "h": 16.5
+              },
+              "overflow": false
+            }
+          ]
+        },
+        {
+          "id": "staff",
+          "box": {
+            "x": 873.640625,
+            "y": 338,
+            "w": 271.34375,
+            "h": 380.90625
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "tag": "H3",
+              "box": {
+                "x": 968.109375,
+                "y": 447,
+                "w": 82.40625,
+                "h": 31.1875
+              },
+              "overflow": false
+            },
+            {
+              "tag": "tag",
+              "box": {
+                "x": 984.3125,
+                "y": 482.1875,
+                "w": 50,
+                "h": 17.59375
+              },
+              "overflow": false
+            },
+            {
+              "tag": "P",
+              "box": {
+                "x": 925.1875,
+                "y": 509.78125,
+                "w": 168.25,
+                "h": 45.5
+              },
+              "overflow": false
+            },
+            {
+              "tag": "cost",
+              "box": {
+                "x": 925.1875,
+                "y": 590.03125,
+                "w": 168.25,
+                "h": 46.375
+              },
+              "overflow": false
+            },
+            {
+              "tag": "choice-verb",
+              "box": {
+                "x": 979.3125,
+                "y": 644.40625,
+                "w": 60,
+                "h": 16.5
+              },
+              "overflow": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "wave-seal",
+      "screen": "playing",
+      "stage": {
+        "x": 40,
+        "y": 96,
+        "w": 1360,
+        "h": 765
+      }
+    },
+    {
+      "name": "trial-cleared-wukong",
+      "screen": "playing",
+      "stage": {
+        "x": 40,
+        "y": 96,
+        "w": 1360,
+        "h": 765
+      }
+    },
+    {
+      "name": "trial-cleared-nezha",
+      "screen": "playing",
+      "stage": {
+        "x": 40,
+        "y": 96,
+        "w": 1360,
+        "h": 765
+      }
+    },
+    {
+      "name": "death",
+      "screen": "dead",
+      "stage": {
+        "x": 40,
+        "y": 96,
+        "w": 1360,
+        "h": 765
+      },
+      "box": {
+        "x": 220,
+        "y": 160.171875,
+        "w": 1000,
+        "h": 636.65625
+      },
+      "scroll": 0,
+      "cards": []
+    },
+    {
+      "name": "victory",
+      "screen": "won",
+      "stage": {
+        "x": 40,
+        "y": 96,
+        "w": 1360,
+        "h": 765
+      },
+      "box": {
+        "x": 220,
+        "y": 171.859375,
+        "w": 1000,
+        "h": 613.265625
+      },
+      "scroll": 0,
+      "cards": []
+    },
+    {
+      "name": "epilogue",
+      "screen": "epilogue",
+      "stage": {
+        "x": 40,
+        "y": 96,
+        "w": 1360,
+        "h": 765
+      },
+      "box": {
+        "x": 245,
+        "y": 218.5625,
+        "w": 950,
+        "h": 519.859375
+      },
+      "scroll": 0,
+      "cards": []
+    }
+  ],
+  "errors": [],
+  "network": [
+    "http://127.0.0.1:5188/release/index.html?audit=6.2",
+    "http://127.0.0.1:5188/release/index.html?audit=6.2"
+  ],
+  "viewport": {
+    "width": 1440,
+    "height": 1000
+  },
+  "video": "evidence/ux-audit-v7/ui-1440/ui-video/page@ac65a32fe2bc351d89d774c05d243fdf.webm"
+}

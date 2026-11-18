@@ -1,0 +1,1311 @@
+{
+  "baseCommit": "37a3bd758fb053e955f6f6b3a1d9e3407e631b51",
+  "summary": {
+    "before": {
+      "files": 215,
+      "bytes": 193160603
+    },
+    "remove": {
+      "files": 82,
+      "bytes": 128508691
+    },
+    "retain": {
+      "files": 133,
+      "bytes": 64651912
+    }
+  },
+  "remove": [
+    {
+      "file": "assets/art-audit-v7/actor-states-source.png",
+      "bytes": 1090750,
+      "sha256": "cefc88a8159770ce1de45cf7873c1077fe7e3f780622450e207c8b4d6201c486",
+      "reason": null
+    },
+    {
+      "file": "assets/art-completeness-v10/actor-repair-source.png",
+      "bytes": 1185819,
+      "sha256": "8b69507fd654899ede7d62527f0ef794ab848b0b045f414a43449d74d273084f",
+      "reason": null
+    },
+    {
+      "file": "assets/art-recheck-v12/realm-dressing-source.png",
+      "bytes": 1647396,
+      "sha256": "f65cb580ad1c623449429de7941d19de04da7d4c288a9e7159ae3d1a2ce97051",
+      "reason": null
+    },
+    {
+      "file": "assets/art-v1/wukong-atlas-draft.png",
+      "bytes": 2338546,
+      "sha256": "8a8ece07a8136ad860575c4441df98c48578e4fd55ad91ca7025615f30bccfa1",
+      "reason": null
+    },
+    {
+      "file": "assets/audio-v6/impact-reel.wav",
+      "bytes": 350124,
+      "sha256": "7dff99df17d6740e5a63dc5d230e00e9005ce7a372266a73b7e7bdca1a0c5dfb",
+      "reason": null
+    },
+    {
+      "file": "assets/audio-v6/source/ring-hit.mp3",
+      "bytes": 25946,
+      "sha256": "6019174756fe65953e4383d27f393548ffcd714db0fa613d7509f21cb109d060",
+      "reason": null
+    },
+    {
+      "file": "assets/audio-v6/source/shield-block.mp3",
+      "bytes": 114135,
+      "sha256": "771ba2451a15827fe35f676ace1fa200a0e4268adb5d00187bad9ecc6c66f6a4",
+      "reason": null
+    },
+    {
+      "file": "assets/audio-v6/source/staff-heavy.mp3",
+      "bytes": 66070,
+      "sha256": "c27b539b52387ee3bd567eb797cd042758b53a3ba3c9f3e7eebcfbe1604ba5b8",
+      "reason": null
+    },
+    {
+      "file": "assets/audio-v6/source/staff-light.mp3",
+      "bytes": 50187,
+      "sha256": "4b7b22d013ac2cb512d8bc52a47c2d94f72c86338d88abc65710998a2d26f34b",
+      "reason": null
+    },
+    {
+      "file": "assets/audio-v6/source/ultimate-hit.mp3",
+      "bytes": 130018,
+      "sha256": "09e4a021ed566460cc66d49242091cf50b9667a8a463310669cde0cc226ec200",
+      "reason": null
+    },
+    {
+      "file": "assets/audit-v10/devices-source.png",
+      "bytes": 1730751,
+      "sha256": "2dbaa50d7491be2aaa98838f6bfb73ec76b0cc65165b8407fd2c9b8ecc65adaf",
+      "reason": null
+    },
+    {
+      "file": "assets/audit-v10/juling-source.png",
+      "bytes": 1856388,
+      "sha256": "6260d1471fa9cbda9e0022638e1e3bb038f2a745ca59486f3aa9c5fa0f376b4e",
+      "reason": null
+    },
+    {
+      "file": "assets/brand-rekindled/wordmark-source.png",
+      "bytes": 1866749,
+      "sha256": "bc3f88a7f1abafebc7a735971de17ddf2a020d6a4a1b143491e2cc39574f230d",
+      "reason": null
+    },
+    {
+      "file": "assets/campaign-v10/army-cloud-source.png",
+      "bytes": 2528046,
+      "sha256": "c7a8eee65362c8185a1fb0711d2bded8e425b306aa02c484095a21da146ff988",
+      "reason": null
+    },
+    {
+      "file": "assets/campaign-v10/army-dragon-source.png",
+      "bytes": 2567374,
+      "sha256": "5b2ab27f3463948a756664215d1b07006a3df70850652e48706a1e37bb267f0e",
+      "reason": null
+    },
+    {
+      "file": "assets/campaign-v10/army-heaven-source.png",
+      "bytes": 2530127,
+      "sha256": "b17a2ceb183b9a45a755f1ec1dfcf5002d608086933b2238c1fb1e777a5b7dd4",
+      "reason": null
+    },
+    {
+      "file": "assets/campaign-v10/army-underworld-source.png",
+      "bytes": 2142291,
+      "sha256": "daa759a1e82c7a2df811099ae7c170d72a23d623fefebd0881fe0e29bd2c4b17",
+      "reason": null
+    },
+    {
+      "file": "assets/campaign-v10/army-water-source.png",
+      "bytes": 2479009,
+      "sha256": "3c73ee11ebbcfd6bbd9e0b6b09fbad8a4596f70eb770fa62dcc812b2e2469e82",
+      "reason": null
+    },
+    {
+      "file": "assets/campaign-v10/dragonking-source.png",
+      "bytes": 1433440,
+      "sha256": "52761622f93ae1945fbb99e059867493b395f0dc682b942531ac0b3d958bdbe1",
+      "reason": null
+    },
+    {
+      "file": "assets/campaign-v10/juling-rejected-strip.png",
+      "bytes": 1853974,
+      "sha256": "d0ac4f8a7b36afb663bccec2c7b8a16db48e825a05904d01c543ed21372f85f3",
+      "reason": null
+    },
+    {
+      "file": "assets/campaign-v10/juling-source.png",
+      "bytes": 1863653,
+      "sha256": "542925465ee6a9b19523713e6f84abce05f6eba14b833dfda12dc01c827e139d",
+      "reason": null
+    },
+    {
+      "file": "assets/campaign-v10/juling.png",
+      "bytes": 93932,
+      "sha256": "d63d01806eea3618d75c28a95fe96eaa01174e471293cead70c10a94b9a6d89f",
+      "reason": null
+    },
+    {
+      "file": "assets/campaign-v10/litian-source.png",
+      "bytes": 1384899,
+      "sha256": "449fc3ac466ccd5b50600808541eabf90a596c4181d3332e0b36a0219cdf4501",
+      "reason": null
+    },
+    {
+      "file": "assets/campaign-v10/ninehead-source.png",
+      "bytes": 2066936,
+      "sha256": "6c4b479b6a9ded08791aa6683aa26d37087a1c30fa6e178daa373c4a54c59d15",
+      "reason": null
+    },
+    {
+      "file": "assets/campaign-v10/qinguang-source.png",
+      "bytes": 1286532,
+      "sha256": "aff7f1f5ae27647976c2454a49aa50f60de5b08348d5d03492c48a925fc9dc62",
+      "reason": null
+    },
+    {
+      "file": "assets/celestial-v9/bosses-source.png",
+      "bytes": 1567114,
+      "sha256": "776154f0ff929bce51dce6c35449dcdfd799ccd4b1855766a5bde0a934111944",
+      "reason": null
+    },
+    {
+      "file": "assets/celestial-v9/effects-source.png",
+      "bytes": 2322749,
+      "sha256": "6eba79fef6cd7d8600b5c813c8c4d5e3c1b3711387bf461a07c17de232a062f4",
+      "reason": null
+    },
+    {
+      "file": "assets/celestial-v9/heroes-source.png",
+      "bytes": 1772759,
+      "sha256": "fde84b9ca4115e9df73f5e3d8051cafbf67e91489fe9d99dd6291c4e7044f4c1",
+      "reason": null
+    },
+    {
+      "file": "assets/cloud-visual-v10/background-source.png",
+      "bytes": 2199615,
+      "sha256": "e3efb24cf1d265a3e04911c289e366ac0d163d3625dde216298800d88c974359",
+      "reason": null
+    },
+    {
+      "file": "assets/cloud-visual-v10/environment-source.png",
+      "bytes": 1051128,
+      "sha256": "edccf0757b32736c68a67d2b6d1aa33a8a9a278a826c2d19db708b603c9f5856",
+      "reason": null
+    },
+    {
+      "file": "assets/cloud-visual-v10/foundation-source.png",
+      "bytes": 978244,
+      "sha256": "151e5f057760334b5bcb571f386c898ec1cd67c99ce0a8b7572699eb82919ecf",
+      "reason": null
+    },
+    {
+      "file": "assets/cloud-visual-v10/staff-actors-source.png",
+      "bytes": 1967291,
+      "sha256": "1810026e4c6d108e01f9c48b6c39d33aed9c66c3d965cb18275407e035b9d332",
+      "reason": null
+    },
+    {
+      "file": "assets/cloud-visual-v10/staff-fx-source.png",
+      "bytes": 795649,
+      "sha256": "f8caaaddb62c10508884d3de6c12d7ed4499cd437415cbbc5c4cf820efa35ebc",
+      "reason": null
+    },
+    {
+      "file": "assets/combat-identities/dragonking-source.png",
+      "bytes": 2273920,
+      "sha256": "5eebd07ea5caa36aa53d3366a664d7e2213fddd386d14e3efa968792969b3790",
+      "reason": null
+    },
+    {
+      "file": "assets/combat-identities/erlang-source.png",
+      "bytes": 1630006,
+      "sha256": "61b35b6c0a7ee7ce041894074db4917e3b267b6abc9a0f9df3539ff158e1e814",
+      "reason": null
+    },
+    {
+      "file": "assets/combat-identities/juling-source.png",
+      "bytes": 2417824,
+      "sha256": "b77f0f35c2fd33e4aed29a586d9cdb273c0b628adbc6beb6cca89cc5a9712581",
+      "reason": null
+    },
+    {
+      "file": "assets/combat-identities/litian-source.png",
+      "bytes": 2102417,
+      "sha256": "b310fe0640f6855a97f76151fd1d601e71d972a0045857e7a5fb0187b944e909",
+      "reason": null
+    },
+    {
+      "file": "assets/combat-identities/nezha-source.png",
+      "bytes": 960624,
+      "sha256": "5588d510ee42d1a2e1b02021ef13042591216bf208060d517df113fc54df3a2f",
+      "reason": null
+    },
+    {
+      "file": "assets/combat-identities/ninehead-source.png",
+      "bytes": 2700035,
+      "sha256": "7db9a1e2ff3540d4ca3b624efd1c048ee2199de80c52189aaef804c0c8e9bd29",
+      "reason": null
+    },
+    {
+      "file": "assets/combat-identities/qinguang-source.png",
+      "bytes": 1834548,
+      "sha256": "0a972a45cc8223bc49636738bc2a1c30534d6d3862029bc725ab174fdd3db63c",
+      "reason": null
+    },
+    {
+      "file": "assets/combat-identities/wukong-source.png",
+      "bytes": 1768314,
+      "sha256": "6983ed0911432d17c20cc2b855dfd6b4538c90d23ad3f42c8877901f05679f2b",
+      "reason": null
+    },
+    {
+      "file": "assets/combat-v11/contacts-source.png",
+      "bytes": 584356,
+      "sha256": "d5cdfd0f9006302ce0060045499597f50ff20490814f9b0d893f9b299047e469",
+      "reason": null
+    },
+    {
+      "file": "assets/enemy-vfx-v12/contacts-source.png",
+      "bytes": 1723440,
+      "sha256": "dd4867c76a47af6c167db6b50cf910e632e4270fb9d080b2d68614f040b83e1e",
+      "reason": null
+    },
+    {
+      "file": "assets/enemy-vfx-v12/materials-source.png",
+      "bytes": 1323843,
+      "sha256": "f41ac021cab8fc7561a8a09d5de79363fdb79e452f6a818bcf61cc893695291f",
+      "reason": null
+    },
+    {
+      "file": "assets/enemy-vfx-v12/materials.png",
+      "bytes": 49510,
+      "sha256": "0772932271e7136a68a0bafa8ea8b147680a17678b14d11627142b5256dc8b87",
+      "reason": null
+    },
+    {
+      "file": "assets/map-v6/dressing-source.png",
+      "bytes": 2351112,
+      "sha256": "d37619ede702e3e932f7abaa692aeed535fbbe4aa036adefa78ea4fd3afe46be",
+      "reason": null
+    },
+    {
+      "file": "assets/map-v6/props-source.png",
+      "bytes": 1757194,
+      "sha256": "6b7df13a30058a42addd499239fb70865abe862dd6534e5c7328075677a01eea",
+      "reason": null
+    },
+    {
+      "file": "assets/map-v6/terrain-source.png",
+      "bytes": 1444863,
+      "sha256": "394ddf32f401bdcd75c6f7de6e171882fc4e494ea87791fc5f9766ad98e3c859",
+      "reason": null
+    },
+    {
+      "file": "assets/marketing/rekindled-embers-cover-source.png",
+      "bytes": 3444250,
+      "sha256": "4b91eb04f7d11e8edb3fd51a720667841f3106b1a989464e554a0f4152f4d6fb",
+      "reason": null
+    },
+    {
+      "file": "assets/motion-v12/cloud-reference.png",
+      "bytes": 56636,
+      "sha256": "2b96d72ecd7f0bc0d872026f546b77588e4bc5254cbc1a0d9208c56a4601d1aa",
+      "reason": null
+    },
+    {
+      "file": "assets/motion-v12/cloud-source-draft.png",
+      "bytes": 2377806,
+      "sha256": "ff5c334fb015c71f04ade37705aa486031d9dd8874229c9e917a377e25d29f6a",
+      "reason": null
+    },
+    {
+      "file": "assets/motion-v12/cloud-source.png",
+      "bytes": 2397798,
+      "sha256": "814a376961f3de01525343dd8c559e8dedd1f15fc2b5c3170c739adcbbdf5df4",
+      "reason": null
+    },
+    {
+      "file": "assets/motion-v12/dragon-reference.png",
+      "bytes": 64802,
+      "sha256": "46c21967e80d06d80d6d81299dfee5c77a859f555b4a1bcf250ef446cc3d2f85",
+      "reason": null
+    },
+    {
+      "file": "assets/motion-v12/dragon-source.png",
+      "bytes": 2517829,
+      "sha256": "ef541eafabc565166dc3e36260268697f6c85c4bcc332f7c5cd3647b406eebfe",
+      "reason": null
+    },
+    {
+      "file": "assets/motion-v12/erlang-reference.png",
+      "bytes": 18756,
+      "sha256": "018efab08af31b68694ddd31bd56093ebde29a476c385c915fca803072153864",
+      "reason": null
+    },
+    {
+      "file": "assets/motion-v12/erlang-refined-draft.png",
+      "bytes": 1826068,
+      "sha256": "3deac85858036a4f441415dec610b62fe156224ddea55d6477c1cb973303c4ae",
+      "reason": null
+    },
+    {
+      "file": "assets/motion-v12/erlang-source.png",
+      "bytes": 1942689,
+      "sha256": "4a4408bfe8fa5443b62ef92af44e4b307f8aa6ceb286c68ec80f022ae9bfe609",
+      "reason": null
+    },
+    {
+      "file": "assets/motion-v12/heaven-reference.png",
+      "bytes": 55141,
+      "sha256": "1be3045cf9002ac3c96063e32d0e5725edfbe47669b7670b151be84d6d27ffe2",
+      "reason": null
+    },
+    {
+      "file": "assets/motion-v12/heaven-source.png",
+      "bytes": 2434687,
+      "sha256": "2905e3ba1bf6687daaebb2543dce065098e8200a71c50f299145893bd2f0e3ba",
+      "reason": null
+    },
+    {
+      "file": "assets/motion-v12/nezha-reference.png",
+      "bytes": 14329,
+      "sha256": "30a52d01e69ec394951b64b3d11ea8f6953ed221e7afacb73a9bac7dfa7512d8",
+      "reason": null
+    },
+    {
+      "file": "assets/motion-v12/nezha-source.png",
+      "bytes": 1472814,
+      "sha256": "9af7e4c1fa14ab5d113ea666c569f570bace0db8c3aae7353aef871fd0f87f25",
+      "reason": null
+    },
+    {
+      "file": "assets/motion-v12/underworld-reference.png",
+      "bytes": 52528,
+      "sha256": "75aba306ebb43bea107d10c42f71e3c4969517f470747caee4fc47bb5e914af9",
+      "reason": null
+    },
+    {
+      "file": "assets/motion-v12/underworld-source.png",
+      "bytes": 2359829,
+      "sha256": "630208d5b038fb2a2fae764c0b720ea22e296f9120257f7808fa47682ae36063",
+      "reason": null
+    },
+    {
+      "file": "assets/motion-v12/water-reference.png",
+      "bytes": 57614,
+      "sha256": "9df59ee160f4982c6201838ab648dbda3012dce01df0b2826aabbe4e5c1c3036",
+      "reason": null
+    },
+    {
+      "file": "assets/motion-v12/water-source.png",
+      "bytes": 2606392,
+      "sha256": "ca9bf7d1bf310b62f369d27409962bdc71e85a4b14dfb0bfc24e442957b1bb3b",
+      "reason": null
+    },
+    {
+      "file": "assets/ranged-v6/nezha-source.png",
+      "bytes": 1304102,
+      "sha256": "eb56eb4db1a59cbd8d610870a0e2c6def30476d162d4e8720dfae8115cabcded",
+      "reason": null
+    },
+    {
+      "file": "assets/scene-v7/seal-states-source.png",
+      "bytes": 1463645,
+      "sha256": "09ecf2865c539a3b73c1242a86a5ea0b67b5bc6d862bfed7088e12bbc65644b0",
+      "reason": null
+    },
+    {
+      "file": "assets/signature-v7/fx-source.png",
+      "bytes": 929674,
+      "sha256": "19640d10f34e023bbb050f8ede7ec4ed63b5169e33eb7c894ffff30079d32bae",
+      "reason": null
+    },
+    {
+      "file": "assets/signature-v7/nezha-source.png",
+      "bytes": 1140421,
+      "sha256": "cfe3235cf59ef716c242b86bbbb54a5e2af91c0419e5cfca11c9d3f4e862f24b",
+      "reason": null
+    },
+    {
+      "file": "assets/signature-v7/wukong-source.png",
+      "bytes": 1505851,
+      "sha256": "43be0d0c09c0cb2f40c5a966949a0990cc7fba369d24b43ce0bed046dc2bab57",
+      "reason": null
+    },
+    {
+      "file": "assets/v8/cloud-source.png",
+      "bytes": 2563236,
+      "sha256": "acf440de1de38de3520aec88ab15f79f7c53912bff6c7c406aa909d71458c8b8",
+      "reason": null
+    },
+    {
+      "file": "assets/v8/cloud.png",
+      "bytes": 905151,
+      "sha256": "3aade94245326fe6532b0350223c384bcacb15f03c5371889001d56f6c08e76d",
+      "reason": null
+    },
+    {
+      "file": "assets/v8/companion-source.png",
+      "bytes": 1484911,
+      "sha256": "825552011f11659516eba27a0189b7b2c01f8c845edef70951e477fd8e0228f5",
+      "reason": null
+    },
+    {
+      "file": "assets/v8/dragon-source.png",
+      "bytes": 2792973,
+      "sha256": "c8b6d63eeb0e10a849e76de0c103d8272fbc154d49acc269cf05a669a2d11549",
+      "reason": null
+    },
+    {
+      "file": "assets/v8/enemies-source.png",
+      "bytes": 2650031,
+      "sha256": "5564e38d6460c2ff41cd622e45504258baec3e449acaf445d738b3986b089917",
+      "reason": null
+    },
+    {
+      "file": "assets/v8/erlang-source.png",
+      "bytes": 1957789,
+      "sha256": "cca111a12de10f2bc8f7ac1d3642cd5edfabd0df8af95d3e66b2d618f2d6fc9c",
+      "reason": null
+    },
+    {
+      "file": "assets/v8/erlang-v2-source.png",
+      "bytes": 2539935,
+      "sha256": "4b845c5fb8d66d1a402022d34f61f1a93203a06a307c5adc52c4be1470152874",
+      "reason": null
+    },
+    {
+      "file": "assets/v8/heaven-source.png",
+      "bytes": 2523631,
+      "sha256": "c491e8f77036fbbab41e36a670f1fc10d676b1e25c303c7595b46d4ec1adf608",
+      "reason": null
+    },
+    {
+      "file": "assets/v8/nezha-source.png",
+      "bytes": 1983942,
+      "sha256": "81571e94bc4bacdc9e51aa2da624937d65b81d80b35be6674b9877414f3df850",
+      "reason": null
+    },
+    {
+      "file": "assets/v8/terrain-source.png",
+      "bytes": 2060505,
+      "sha256": "b9654f44914b0cc016a452c18585094ac6d1ba348abf66d00f988a1fb68ddea7",
+      "reason": null
+    },
+    {
+      "file": "assets/v8/underworld-source.png",
+      "bytes": 2434976,
+      "sha256": "3c7b64fcdbeb35e7b00ea8231a1ba8ca511cc3b459f02a9ed7158363d37cd2e2",
+      "reason": null
+    },
+    {
+      "file": "assets/v8/water-source.png",
+      "bytes": 2308303,
+      "sha256": "efbb57bd6465ffa584385dea917d9c3fcf242264ad9b00df646506609f96d849",
+      "reason": null
+    }
+  ],
+  "retain": [
+    {
+      "file": "assets/art-audit-v7/actor-states.png",
+      "bytes": 33384,
+      "sha256": "6c87afd7f8d848629a076dc88edf17313e38d4feb2a8ee4413e8f8e6a2377534",
+      "reason": "runtime image: actorStates"
+    },
+    {
+      "file": "assets/art-audit-v7/coverage.json",
+      "bytes": 28863,
+      "sha256": "92254ff086fbec278214b50c030edaad3984171d0d4ac168e95a9200610eb6a4",
+      "reason": "small provenance / build metadata"
+    },
+    {
+      "file": "assets/art-audit-v7/normalization.json",
+      "bytes": 2057,
+      "sha256": "84d4971336beaea323189a7251048a0d05df6d32cf9d901be4fc04f4878fa65f",
+      "reason": "small provenance / build metadata"
+    },
+    {
+      "file": "assets/art-audit-v7/prompts.json",
+      "bytes": 2322,
+      "sha256": "f87134823f9224ea02edd2c66a2d0b90c33953fb2bdf6909e28eb94f3ddd076a",
+      "reason": "small provenance / build metadata"
+    },
+    {
+      "file": "assets/art-completeness-v10/actor-repair.png",
+      "bytes": 51339,
+      "sha256": "c6ccc56d293e7bafc2676c00ffdee8019a30d7a4763c9590f0598f82bc0edc7b",
+      "reason": "runtime image: actorRepair"
+    },
+    {
+      "file": "assets/art-completeness-v10/normalization.json",
+      "bytes": 1814,
+      "sha256": "35aacd318a9eeb8a0ad6d14055961b21c61a602de3363d93f939d329cfa541c0",
+      "reason": "small provenance / build metadata"
+    },
+    {
+      "file": "assets/art-recheck-v12/normalization.json",
+      "bytes": 3191,
+      "sha256": "5c833c2fc8c9113c972d5e578fa23394c74950cf3e907bb5d57588a8b1d06f02",
+      "reason": "small provenance / build metadata"
+    },
+    {
+      "file": "assets/art-recheck-v12/realm-dressing.png",
+      "bytes": 114290,
+      "sha256": "f57d704dddffcf3bd15a7304315338a9277ce7efdeb56e87879e6721057b802a",
+      "reason": "runtime image: realmDressing"
+    },
+    {
+      "file": "assets/art-v1/enemy-atlas.png",
+      "bytes": 2389650,
+      "sha256": "a3226339999519e17fdafed08bfa01bf9b85e4c0db87cf097534b9f3ef805fa1",
+      "reason": "runtime image: enemies"
+    },
+    {
+      "file": "assets/art-v1/lantern-ferry.png",
+      "bytes": 2645367,
+      "sha256": "be12588fb7f74815f79f48a77a8e8b1147cbfb6201b585a56fc60eb9a03e4c49",
+      "reason": "runtime image: ferry"
+    },
+    {
+      "file": "assets/art-v1/manifest.json",
+      "bytes": 1225,
+      "sha256": "3072c4b9c246511209470c9b63f753bebdf44418198a6615de0f664b7eada9df",
+      "reason": "small provenance / build metadata"
+    },
+    {
+      "file": "assets/art-v1/mountain-approach.png",
+      "bytes": 2593019,
+      "sha256": "57e9513653529b4825a2a406b6c64775de29ba4dddbcb9ff3be6406c5c168e56",
+      "reason": "runtime image: mountain"
+    },
+    {
+      "file": "assets/art-v1/ruined-sanctuary.png",
+      "bytes": 2979693,
+      "sha256": "867935f592dfb15b8b3ff4bc9d05c779c147ec2a9ea489dc11611a6873b6046a",
+      "reason": "runtime image: sanctuary"
+    },
+    {
+      "file": "assets/art-v1/stone-platform.png",
+      "bytes": 946448,
+      "sha256": "0e6e36cd6a30ce74c4ea3a1bb2a6096bd3ae65e868b2715fbec0c65e25aa09de",
+      "reason": "runtime image: stone"
+    },
+    {
+      "file": "assets/art-v1/wukong-atlas.png",
+      "bytes": 1269917,
+      "sha256": "ce37326df844b464a177a956ae165e91560a7af5f65d4bb1a99b2978485b22c1",
+      "reason": "runtime image: wukong"
+    },
+    {
+      "file": "assets/art-v2/journey-props.png",
+      "bytes": 1265179,
+      "sha256": "56e3b8c4f4537c3a1d88b3d9d0d6667fcb314aedfb803ab0b6438631025880d4",
+      "reason": "runtime image: props"
+    },
+    {
+      "file": "assets/art-v2/manifest.json",
+      "bytes": 1585,
+      "sha256": "b5099cc0663678b86ff57f12fbee3597e86e2e69e787e230e8aab648c8a94c67",
+      "reason": "small provenance / build metadata"
+    },
+    {
+      "file": "assets/art-v2/wukong-run.png",
+      "bytes": 860700,
+      "sha256": "0a2de6e34eb2e3c101fe9a609e6faa5d3a943e1c83583387d6681b784a521c8d",
+      "reason": "runtime image: run"
+    },
+    {
+      "file": "assets/audio-v6/manifest.json",
+      "bytes": 4166,
+      "sha256": "cc971f36f3df972cdb50e986b278009036724a198d6bb13a5e7afe1b972b715d",
+      "reason": "small provenance / build metadata"
+    },
+    {
+      "file": "assets/audio-v6/processed/ground-slam.wav",
+      "bytes": 28204,
+      "sha256": "6f57141f9ca4b752ee6d22d021f81e6ea8820f2a7303d565cf584839b3f3af89",
+      "reason": "runtime sound: ground-slam"
+    },
+    {
+      "file": "assets/audio-v6/processed/ring-hit-a.wav",
+      "bytes": 18604,
+      "sha256": "9b3ec4c4530da1ea98142003a8dac3adc0f84eaada6ba49397ed5f2a667ee620",
+      "reason": "runtime sound: ring-hit-a"
+    },
+    {
+      "file": "assets/audio-v6/processed/ring-hit-b.wav",
+      "bytes": 19244,
+      "sha256": "ba36afa7ec75d37ef0f1dce21abfa762ad57814e988d915ad3392f16c0d325b0",
+      "reason": "runtime sound: ring-hit-b"
+    },
+    {
+      "file": "assets/audio-v6/processed/shield-block.wav",
+      "bytes": 17964,
+      "sha256": "28b5774eec3af6986de4b7c7bc658ca689e71589dba7a8101ba9c04218eeb09b",
+      "reason": "runtime sound: shield-block"
+    },
+    {
+      "file": "assets/audio-v6/processed/staff-heavy.wav",
+      "bytes": 24364,
+      "sha256": "a799a430b21abf85002dfccac09dea650ed192269fd60fd43c3f1386632246c2",
+      "reason": "runtime sound: staff-heavy"
+    },
+    {
+      "file": "assets/audio-v6/processed/staff-light-a.wav",
+      "bytes": 14764,
+      "sha256": "ada2d654f0d0a8cbfe464d6ddc30cfd431f01c690916a2dd0141e1ae8cc3313e",
+      "reason": "runtime sound: staff-light-a"
+    },
+    {
+      "file": "assets/audio-v6/processed/staff-light-b.wav",
+      "bytes": 13484,
+      "sha256": "72847a7a5247a2116165523d7bc8127a5ae41b3a441113b446e6cc56f17074d5",
+      "reason": "runtime sound: staff-light-b"
+    },
+    {
+      "file": "assets/audio-v6/processed/ultimate-hit.wav",
+      "bytes": 35244,
+      "sha256": "d133af785a851494c03fdbb33b01c9bd2436f41b01ff9bf909e7eb3bcbdf8f5c",
+      "reason": "runtime sound: ultimate-hit"
+    },
+    {
+      "file": "assets/audio-v6/provenance.json",
+      "bytes": 2744,
+      "sha256": "4cff857900a1e5d02286c72d722ba0b7a376c71939b5d858a5907067414bc41e",
+      "reason": "small provenance / build metadata"
+    },
+    {
+      "file": "assets/audit-v10/devices.png",
+      "bytes": 23474,
+      "sha256": "4d001a2a1073440efbfb846826a74a807e3d950b95196c7f8538252f3c6d133a",
+      "reason": "runtime image: auditDevices"
+    },
+    {
+      "file": "assets/audit-v10/juling.png",
+      "bytes": 97732,
+      "sha256": "fa24fe81f63ee1ef5a64ee0a43af504ae876aef8035db935ded4b810ef04fcd4",
+      "reason": "runtime image: campaign-juling"
+    },
+    {
+      "file": "assets/audit-v10/normalization.json",
+      "bytes": 2870,
+      "sha256": "50ea8d9caa3542540198118512c46682ce2adc2a2a60310a9aac5990b6d92bef",
+      "reason": "small provenance / build metadata"
+    },
+    {
+      "file": "assets/brand-rekindled/emblem.svg",
+      "bytes": 588,
+      "sha256": "a50f32e4ed24c7b591a32e7d271ea91d187903ba34f0569656c4ca9d7b57c0bc",
+      "reason": "current authored brand / final marketing deliverable"
+    },
+    {
+      "file": "assets/brand-rekindled/normalization.json",
+      "bytes": 329,
+      "sha256": "c7aea773de3317091b2d025637d9d87948f54c941c1dc5f6d60af774d8c02505",
+      "reason": "small provenance / build metadata"
+    },
+    {
+      "file": "assets/brand-rekindled/wordmark.png",
+      "bytes": 719926,
+      "sha256": "e703efa5ab2a14ceb99bfeb55506ba39350ffa1736ce0e5266ff9c3ab42470ae",
+      "reason": "runtime image: brandWordmark"
+    },
+    {
+      "file": "assets/campaign-v10/army-cloud.png",
+      "bytes": 59370,
+      "sha256": "1da531501650ca5493c418b8c44cac6740c5c2300502850b1d06ca481304a2f6",
+      "reason": "runtime image: campaignArmy-cloud"
+    },
+    {
+      "file": "assets/campaign-v10/army-dragon.png",
+      "bytes": 68683,
+      "sha256": "5d922fba45988ee8366ef711be725d0ae4776d469456bafe49bf84ddb2d47d23",
+      "reason": "runtime image: campaignArmy-dragon"
+    },
+    {
+      "file": "assets/campaign-v10/army-heaven.png",
+      "bytes": 57895,
+      "sha256": "ecb2c2f1164e481b3a22a0e89db9fc5413634ee05d5d84bccf0554b4b5f0b767",
+      "reason": "runtime image: campaignArmy-heaven"
+    },
+    {
+      "file": "assets/campaign-v10/army-underworld.png",
+      "bytes": 53861,
+      "sha256": "bacf7a6b74a85d7161bcd8813b4ff8f84beceb4e1d1992e6f9e2008a82a8aaf7",
+      "reason": "runtime image: campaignArmy-underworld"
+    },
+    {
+      "file": "assets/campaign-v10/army-water.png",
+      "bytes": 62019,
+      "sha256": "d6651ffff7e4b1fef6eea6c7ffa0c4b4f43dd02c0f140bab9d69c2d11b4d4ee6",
+      "reason": "runtime image: campaignArmy-water"
+    },
+    {
+      "file": "assets/campaign-v10/dragonking.png",
+      "bytes": 76685,
+      "sha256": "16b99f3ad57e192d912e020e49722ecd0fc81135b4890a49591722f4bab735d5",
+      "reason": "runtime image: campaign-dragonking"
+    },
+    {
+      "file": "assets/campaign-v10/litian.png",
+      "bytes": 69817,
+      "sha256": "f097b83ff5baacba0bf9c65b58ad98d1f1565d0b841a2520fd689dab09ccf1b3",
+      "reason": "runtime image: campaign-litian"
+    },
+    {
+      "file": "assets/campaign-v10/ninehead.png",
+      "bytes": 105664,
+      "sha256": "22e66871a8bf066df2bce1b3eaed6a49e88a3d6f50975dbedd61c27251ed43fc",
+      "reason": "runtime image: campaign-ninehead"
+    },
+    {
+      "file": "assets/campaign-v10/normalization.json",
+      "bytes": 19238,
+      "sha256": "f3a08c72f0ada44c7d10e2c388456bf2663f9efe8a695847b353895023f2b494",
+      "reason": "small provenance / build metadata"
+    },
+    {
+      "file": "assets/campaign-v10/qinguang.png",
+      "bytes": 86711,
+      "sha256": "5357221ca9773110f9f4f1220a1d816d4ea33cc080eae4c905597c7858fd941b",
+      "reason": "runtime image: campaign-qinguang"
+    },
+    {
+      "file": "assets/celestial-v9/bosses.png",
+      "bytes": 264429,
+      "sha256": "216da291124e852dd638c8867c0092ab5114fbdc1af639ea0bc3ed9898f4572e",
+      "reason": "runtime image: celestialBosses"
+    },
+    {
+      "file": "assets/celestial-v9/effects.png",
+      "bytes": 328198,
+      "sha256": "4d31f879d35216fbcea5104c8e91440d40fc313eb4da16407beb9c118e0a04c8",
+      "reason": "runtime image: celestialFx"
+    },
+    {
+      "file": "assets/celestial-v9/heroes.png",
+      "bytes": 157800,
+      "sha256": "d16f456ab62259766d32feac05d12ddcd4a4d60efded7eb12d200fdd5fdb3741",
+      "reason": "runtime image: celestialHeroes"
+    },
+    {
+      "file": "assets/celestial-v9/normalization.json",
+      "bytes": 11181,
+      "sha256": "1397a837f59b01e57f3f6221d6da6708a565890acafa42ed7973f5520edb3d9a",
+      "reason": "small provenance / build metadata"
+    },
+    {
+      "file": "assets/cloud-visual-v10/background.png",
+      "bytes": 766605,
+      "sha256": "9ed3e52f715f3bb6718691636a1bcab6eaf2894f045f3f3b5db53f7c60be2051",
+      "reason": "runtime image: realmCloud"
+    },
+    {
+      "file": "assets/cloud-visual-v10/environment.png",
+      "bytes": 92591,
+      "sha256": "0c347f51f3b0aab9700e89365674a7588156022eb1f2f1bc6e9f9aa0e55114ef",
+      "reason": "runtime image: cloudEnvironment"
+    },
+    {
+      "file": "assets/cloud-visual-v10/foundation.png",
+      "bytes": 120667,
+      "sha256": "7b43b3f0f1a331d5cf88f17a89eee943317ab7ff7a674639f4067211dc74f487",
+      "reason": "runtime image: cloudFoundation"
+    },
+    {
+      "file": "assets/cloud-visual-v10/normalization.json",
+      "bytes": 8579,
+      "sha256": "7cf492f81f9ed207339b45ed051b31cff791d8637948f611b2a7c73522a70b27",
+      "reason": "small provenance / build metadata"
+    },
+    {
+      "file": "assets/cloud-visual-v10/staff-actors.png",
+      "bytes": 75104,
+      "sha256": "ba293bef4fb40b64d37e8414ce744ee6ca71e4847b47535beaf469ff04de7edd",
+      "reason": "runtime image: staffActors"
+    },
+    {
+      "file": "assets/cloud-visual-v10/staff-fx.png",
+      "bytes": 123014,
+      "sha256": "8c255ac5c0f45d08206aac488f9c092ad061635a6185d42eb0e661a85581309a",
+      "reason": "runtime image: staffFx"
+    },
+    {
+      "file": "assets/combat-identities/dragonking.png",
+      "bytes": 390008,
+      "sha256": "e71b7af97d535acdc0761749e094d2f58bc17bfa8efe803c06cc0f2dddfe2bb7",
+      "reason": "runtime image: identity-dragonking"
+    },
+    {
+      "file": "assets/combat-identities/erlang.png",
+      "bytes": 197673,
+      "sha256": "eb22c2a91fa7145366424e9cf531dd4b0f10e8b8fcdf41ffd41d15a43f32d766",
+      "reason": "runtime image: identity-erlang"
+    },
+    {
+      "file": "assets/combat-identities/juling.png",
+      "bytes": 508267,
+      "sha256": "658a4804f2bdc2aec16371b3a1e1cca2928454232607abc6a7a262e8a318c9ab",
+      "reason": "runtime image: identity-juling"
+    },
+    {
+      "file": "assets/combat-identities/litian.png",
+      "bytes": 348646,
+      "sha256": "20225d9ee15ebad20ffeb0284b9b72ecc23d44906d94df04d604b9ba535e0cd9",
+      "reason": "runtime image: identity-litian"
+    },
+    {
+      "file": "assets/combat-identities/nezha.png",
+      "bytes": 196842,
+      "sha256": "3ceed6a165bbae583f6c99ee75260bc4986bc2f75966fee5f7ac40c047a19345",
+      "reason": "runtime image: identity-nezha"
+    },
+    {
+      "file": "assets/combat-identities/ninehead.png",
+      "bytes": 348565,
+      "sha256": "648afd17c37e81ad33cee6e3d64c69bb1feeb78dd84e4aa1c7d6f597fe2ac1ce",
+      "reason": "runtime image: identity-ninehead"
+    },
+    {
+      "file": "assets/combat-identities/normalization.json",
+      "bytes": 25979,
+      "sha256": "64de1ce8a89adabd883bb8cc0b9aedfa7fe6dde076104ec2d06428dc08cf75ff",
+      "reason": "small provenance / build metadata"
+    },
+    {
+      "file": "assets/combat-identities/qinguang.png",
+      "bytes": 296779,
+      "sha256": "bbff122e4ce1b156f1535d74df3f7f973862180524e2e09067462bd57d2e44b4",
+      "reason": "runtime image: identity-qinguang"
+    },
+    {
+      "file": "assets/combat-identities/wukong.png",
+      "bytes": 176811,
+      "sha256": "10970a543d8aa149816550aa370816e17f90aaafddd050d7c300fc060014eba0",
+      "reason": "runtime image: identity-wukong"
+    },
+    {
+      "file": "assets/combat-v11/contacts.png",
+      "bytes": 30826,
+      "sha256": "ec567c477709e2f32f94043b20bc38c584baf55fadfb63fd2acbdfd97b2bd129",
+      "reason": "runtime image: combatContacts"
+    },
+    {
+      "file": "assets/combat-v11/normalization.json",
+      "bytes": 3035,
+      "sha256": "30a0ae978ff7ab3ed9b6cd6dd286d2dd27631e6f2f07daca730a1d096ea3d16c",
+      "reason": "small provenance / build metadata"
+    },
+    {
+      "file": "assets/combat-v3/impact-atlas.png",
+      "bytes": 817199,
+      "sha256": "e33e7a9af59ec152cefe564a414cc81c40fc6bed9a89a7d57cacd5ead51f9b85",
+      "reason": "runtime image: impacts"
+    },
+    {
+      "file": "assets/combat-v3/manifest.json",
+      "bytes": 2803,
+      "sha256": "5b830d641146b88cc2fc10cb85af2ba185ba2e62ba09b40fd652df2f36674c7b",
+      "reason": "small provenance / build metadata"
+    },
+    {
+      "file": "assets/combat-v3/world-nodes-done.png",
+      "bytes": 1926106,
+      "sha256": "d4eb0446b4d6aa6b6f0368ee06f422e11702790f8cdfc24dbc1e04205e7eaf62",
+      "reason": "runtime image: nodesDone"
+    },
+    {
+      "file": "assets/combat-v3/world-nodes.png",
+      "bytes": 1782220,
+      "sha256": "54a20d33776de30d81233c2cdbe6303ddbdc28ffd71f70cbfbcdfedff86d92b5",
+      "reason": "runtime image: nodes"
+    },
+    {
+      "file": "assets/combat-v3/wukong-combo.png",
+      "bytes": 1541974,
+      "sha256": "916ecdf22c1aeebc0c7bab45667af90b849b4ba979ce229221b4d244d6074739",
+      "reason": "runtime image: combo"
+    },
+    {
+      "file": "assets/enemy-markers/battle-seals.png",
+      "bytes": 1477185,
+      "sha256": "8cad641a5c1035663e52ef36f6fee04f0ad72ccf946c20759a2e194d298fbcb2",
+      "reason": "runtime image: enemyBattleSeals"
+    },
+    {
+      "file": "assets/enemy-vfx-v12/contacts.png",
+      "bytes": 86967,
+      "sha256": "1c60d776ed5a03467050600dc3bd1d356396634b82bfe0d26d4fbe434aefdd3e",
+      "reason": "runtime image: enemy-contacts"
+    },
+    {
+      "file": "assets/enemy-vfx-v12/materials-v2.png",
+      "bytes": 53055,
+      "sha256": "9dda9eae97ff26bad076b954b83a8135f0f343afe391e4fda1b1edb1f4fdef0c",
+      "reason": "runtime image: enemy-materials"
+    },
+    {
+      "file": "assets/enemy-vfx-v12/normalization-v2.json",
+      "bytes": 12630,
+      "sha256": "1959f8ec5203167d7e966f3815a04bb4a4547413f1dc6d486e74ec6e8387095f",
+      "reason": "small provenance / build metadata"
+    },
+    {
+      "file": "assets/enemy-vfx-v12/normalization.json",
+      "bytes": 12531,
+      "sha256": "753c9f24ba7032e98fbe571c527814d8590d5b28e1c5af0ef7725555f217afb6",
+      "reason": "small provenance / build metadata"
+    },
+    {
+      "file": "assets/map-v6/dressing.png",
+      "bytes": 83405,
+      "sha256": "56ff6dede4ac1aacef74286d175f5690c766d607ad01d9a65ae77ecb274557bc",
+      "reason": "runtime image: mapDressing"
+    },
+    {
+      "file": "assets/map-v6/normalization.json",
+      "bytes": 15828,
+      "sha256": "e9f26c1a01670fdebf44d2408501b4d7cd902a39c0ad87892c00b797d97f7986",
+      "reason": "small provenance / build metadata"
+    },
+    {
+      "file": "assets/map-v6/pack-manifest.json",
+      "bytes": 3689,
+      "sha256": "8ebbe98e6a8e52a2577cc27244ec55ce83b219178b1dbd668520f36ff9fe3a50",
+      "reason": "small provenance / build metadata"
+    },
+    {
+      "file": "assets/map-v6/prompts.json",
+      "bytes": 10695,
+      "sha256": "564fd58d5c6a30ba306d6c7ac8d9ac462bbed679074edd797f30e841980507f7",
+      "reason": "small provenance / build metadata"
+    },
+    {
+      "file": "assets/map-v6/props.png",
+      "bytes": 77284,
+      "sha256": "9545a161e530ad5438cd7784f1a79e4ed1b9575a05d42cd917851306eb2539ae",
+      "reason": "runtime image: mapProps"
+    },
+    {
+      "file": "assets/map-v6/terrain.png",
+      "bytes": 82908,
+      "sha256": "13b199e9eb6b90b5c13a7bb247c6e4b0ba07cac93494f466d9b68b35251499e9",
+      "reason": "runtime image: mapTerrain"
+    },
+    {
+      "file": "assets/marketing/rekindled-embers-cover-1920x1080.jpg",
+      "bytes": 1581580,
+      "sha256": "e392182cb4b1cddfd5f7386d3648cea41580bb5544685c9c085f5847e08ca084",
+      "reason": "current authored brand / final marketing deliverable"
+    },
+    {
+      "file": "assets/marketing/rekindled-embers-cover-1920x1080.png",
+      "bytes": 5675364,
+      "sha256": "2210ec93e8ca1d066fec77a630e4b085da2f891f34311f976000c936c25682c8",
+      "reason": "current authored brand / final marketing deliverable"
+    },
+    {
+      "file": "assets/motion-v12/army-seeds.json",
+      "bytes": 4062,
+      "sha256": "6cf4eef8d5f7eb7235515e3ac288c7918865c4a00255d0e719b10c10aa51d82a",
+      "reason": "small provenance / build metadata"
+    },
+    {
+      "file": "assets/motion-v12/cloud.png",
+      "bytes": 354604,
+      "sha256": "95c743950ba74b754a1e5b43bc486ebdaa9c54f21e4b3ff42d8bb884ea3f5479",
+      "reason": "runtime image: motion-cloud"
+    },
+    {
+      "file": "assets/motion-v12/dragon.png",
+      "bytes": 371822,
+      "sha256": "35c4bfb53bf49666d39505df269f08f556fff0d753c8483ba12fed8996c3086f",
+      "reason": "runtime image: motion-dragon"
+    },
+    {
+      "file": "assets/motion-v12/erlang.png",
+      "bytes": 207128,
+      "sha256": "af09aca639c72e8ec0a207444b9d0b59cbe49bcf18ae4c8d864f8fd00216a86e",
+      "reason": "runtime image: motion-erlang"
+    },
+    {
+      "file": "assets/motion-v12/heaven.png",
+      "bytes": 343689,
+      "sha256": "39a66eefe6e69018457921fa69705ab02994c9c036b1b2a6c90db6dd46629844",
+      "reason": "runtime image: motion-heaven"
+    },
+    {
+      "file": "assets/motion-v12/nezha.png",
+      "bytes": 223543,
+      "sha256": "5cb6122e664d9a46f03481ac81ffcfb778ed3dabb5785705e07e315bede7ed5e",
+      "reason": "runtime image: motion-nezha"
+    },
+    {
+      "file": "assets/motion-v12/normalization.json",
+      "bytes": 48293,
+      "sha256": "5a21b1573973b67d52ed31c99a71f91a6e281bfe2fcc0ff433a5d04eba189503",
+      "reason": "small provenance / build metadata"
+    },
+    {
+      "file": "assets/motion-v12/underworld.png",
+      "bytes": 295722,
+      "sha256": "8b993fccf5493eece4e255908f50885a759717d7a9dccf7b88436fe87a6a7f83",
+      "reason": "runtime image: motion-underworld"
+    },
+    {
+      "file": "assets/motion-v12/water.png",
+      "bytes": 338045,
+      "sha256": "96ab9fc3e6adff34a62e0a4aad3ecc34b57dc63454d567a385de1cc71fb25d52",
+      "reason": "runtime image: motion-water"
+    },
+    {
+      "file": "assets/music/gameplay.mp3",
+      "bytes": 4709132,
+      "sha256": "db66bcf0b6ebcb242d6dc7d2e9230636a5efabdf5d2913d362e69f536b0a4423",
+      "reason": "runtime music: gameplay"
+    },
+    {
+      "file": "assets/music/manifest.json",
+      "bytes": 1264,
+      "sha256": "7c1432084e98552c71720c0be86a2508a252c5330b9201b085ba61e9c7d0f46a",
+      "reason": "small provenance / build metadata"
+    },
+    {
+      "file": "assets/music/menu-01.mp3",
+      "bytes": 3135934,
+      "sha256": "0d3d6b907c31dbe215672a1db6612f18396f691f33b59e45169ed1e95d858e53",
+      "reason": "runtime music: menu-01"
+    },
+    {
+      "file": "assets/music/menu-02.mp3",
+      "bytes": 4046249,
+      "sha256": "765fa29ab0a0f95fee6661fd36b675042908ae38aab1e4471fd60a6c4c84b9a0",
+      "reason": "runtime music: menu-02"
+    },
+    {
+      "file": "assets/music/README.md",
+      "bytes": 955,
+      "sha256": "cbe1978e4d4ca4ace6ce950b97c5625d52c8052014b1d45d30b4c73b6acea758",
+      "reason": "small provenance / build metadata"
+    },
+    {
+      "file": "assets/progression-v4/guardians.png",
+      "bytes": 2264115,
+      "sha256": "f3af8dc6426668042fb2c9657e6755fbd0d8e8cb118361e4dcc3767f8b32e7a1",
+      "reason": "runtime image: guardians"
+    },
+    {
+      "file": "assets/progression-v4/manifest.json",
+      "bytes": 2989,
+      "sha256": "64f3847be41aed101414f371b0b505e53bd5394ca4a811d3700377b6d964d273",
+      "reason": "small provenance / build metadata"
+    },
+    {
+      "file": "assets/ranged-v6/manifest.json",
+      "bytes": 3166,
+      "sha256": "d5e44228cd06de6da59fdbb9d29a6974624b207bc49c37c960f5ade41e92228d",
+      "reason": "small provenance / build metadata"
+    },
+    {
+      "file": "assets/ranged-v6/nezha-atlas.png",
+      "bytes": 50835,
+      "sha256": "20b30dee9c9a9282a318231366ede36ba84112552d98bb6ca99d3adfa00fa24b",
+      "reason": "runtime image: nezha"
+    },
+    {
+      "file": "assets/ranged-v6/nezha-empty-hands.png",
+      "bytes": 1207129,
+      "sha256": "23a70c0e7d874df4277855634a2f61db28bd0caf947608cf56f1faa4b853b2af",
+      "reason": "runtime image: nezhaPortrait"
+    },
+    {
+      "file": "assets/ranged-v6/normalization.json",
+      "bytes": 1028,
+      "sha256": "b40a503743412e91e9961be93b2248386fd252944502468387e579b9ba03c5e0",
+      "reason": "small provenance / build metadata"
+    },
+    {
+      "file": "assets/scene-v7/normalization.json",
+      "bytes": 2739,
+      "sha256": "fd086be9245548a3bcd34b71b0c54792521e03b9e606745076ef8b1ffe15781c",
+      "reason": "small provenance / build metadata"
+    },
+    {
+      "file": "assets/scene-v7/prompts.json",
+      "bytes": 2386,
+      "sha256": "8a4ea31611f1bcab0876ddd2e2ffa6852f5515996e38bae5ca7b2f8d9d6a4d0f",
+      "reason": "small provenance / build metadata"
+    },
+    {
+      "file": "assets/scene-v7/seal-states.png",
+      "bytes": 25195,
+      "sha256": "9a2534be7bbf8915c71b2b62db74f98ca746abe6826c436bd2df37c189a9239e",
+      "reason": "runtime image: sceneProps"
+    },
+    {
+      "file": "assets/signature-v7/assets.json",
+      "bytes": 1069,
+      "sha256": "17c36cd87359864b680607f3af6556283cbe91accae13445a2fe611505eb0630",
+      "reason": "small provenance / build metadata"
+    },
+    {
+      "file": "assets/signature-v7/fx.png",
+      "bytes": 22304,
+      "sha256": "e78659c43b73062bc294bf267365a5389fb7e8fa78e765190a6016dc5da3d26e",
+      "reason": "runtime image: sigFx"
+    },
+    {
+      "file": "assets/signature-v7/nezha.png",
+      "bytes": 47154,
+      "sha256": "9723cb3bb797431c56bb76512f7e027f81caf92d76d084c7c5f5b7e7bd629b91",
+      "reason": "runtime image: sigNezha"
+    },
+    {
+      "file": "assets/signature-v7/normalization.json",
+      "bytes": 5292,
+      "sha256": "3a1d4665a85f09b21fa45d38f9ad8dcb4d3f0da593301d42417fc59d624c6685",
+      "reason": "small provenance / build metadata"
+    },
+    {
+      "file": "assets/signature-v7/pack-manifest.json",
+      "bytes": 4777,
+      "sha256": "1c0ffee1a7698b1c8202e5887950b758c1732076bf87f281e30efd33fdd36a0c",
+      "reason": "small provenance / build metadata"
+    },
+    {
+      "file": "assets/signature-v7/prompts.json",
+      "bytes": 6587,
+      "sha256": "4c5f4104a798971f780e4126d3b4ad138d66cf42ed15ab5e123fc604d6b99fdd",
+      "reason": "small provenance / build metadata"
+    },
+    {
+      "file": "assets/signature-v7/wukong.png",
+      "bytes": 52462,
+      "sha256": "b7d4e9b75e805d5a0e86d2c4fbb63f516177c7df68738579f314d020f0348611",
+      "reason": "runtime image: sigWukong"
+    },
+    {
+      "file": "assets/ui-v3/field-folio.png",
+      "bytes": 1901827,
+      "sha256": "c50cda5a0e6677b632301559070720df70b4330db61381a7f2620b071a2ef1fa",
+      "reason": "runtime image: uiFolio"
+    },
+    {
+      "file": "assets/ui-v3/manifest.json",
+      "bytes": 2075,
+      "sha256": "88a48d12ecdb60326c73eadb99f1c547a34a6db965de92259cbe62927eb01a40",
+      "reason": "small provenance / build metadata"
+    },
+    {
+      "file": "assets/ui-v3/pilgrim-scroll.png",
+      "bytes": 1617682,
+      "sha256": "45960432047946fd390e83d12ceeec907e8bd2a08af6459f313c4d68690e9388",
+      "reason": "runtime image: uiScroll"
+    },
+    {
+      "file": "assets/ui-v3/relic-icons.png",
+      "bytes": 2261550,
+      "sha256": "474240ea1bb2d07a0290da25985b680e5d08179bea3cffc8d23b36270a4ccfbc",
+      "reason": "runtime image: uiIcons"
+    },
+    {
+      "file": "assets/v8/companion.png",
+      "bytes": 12027,
+      "sha256": "fdecc6c1695642a3e441882005e10a87541e40ef8643e6a33cbf638b56596c97",
+      "reason": "runtime image: v8Companion"
+    },
+    {
+      "file": "assets/v8/coverage.json",
+      "bytes": 141138,
+      "sha256": "fc876f1402f8c7c31947ab0d09512d6f9af56196eb1eea06a84397f27822dea0",
+      "reason": "small provenance / build metadata"
+    },
+    {
+      "file": "assets/v8/dragon.png",
+      "bytes": 978827,
+      "sha256": "cec510c91e9c39ea0c8f38f29e71efa7e8dc106c1506a3d876600d2a353707ae",
+      "reason": "runtime image: realmDragon"
+    },
+    {
+      "file": "assets/v8/enemies.png",
+      "bytes": 75347,
+      "sha256": "9bcf0cfbe65806ea39d8200d3897cf5db4447a258e38243417b74ce53074efbd",
+      "reason": "runtime image: v8Enemies"
+    },
+    {
+      "file": "assets/v8/erlang-portrait.png",
+      "bytes": 243846,
+      "sha256": "f82e4fdf5579bc84034543cec20176e1ffa8a3a7707fe92eb61149d7667ca9fc",
+      "reason": "runtime image: v8ErlangPortrait"
+    },
+    {
+      "file": "assets/v8/erlang.png",
+      "bytes": 99850,
+      "sha256": "4f88f6376c911a2716ecd300e3fa7b7e4c3f63f88c04f8312b99a1191e220ad2",
+      "reason": "runtime image: v8Erlang"
+    },
+    {
+      "file": "assets/v8/fx.png",
+      "bytes": 5285,
+      "sha256": "6c1d2068258977cbf96f3023bf0bbb553faa3acc8ee8dfc7c5bdcb1a0a65a2fe",
+      "reason": "runtime image: v8Fx"
+    },
+    {
+      "file": "assets/v8/heaven.png",
+      "bytes": 897958,
+      "sha256": "a471217b963a079e8dfe9db8c939bc159c66effc96098298eb9f9364110c5c1c",
+      "reason": "runtime image: realmHeaven"
+    },
+    {
+      "file": "assets/v8/nezha-portrait.png",
+      "bytes": 153573,
+      "sha256": "9615d0758d646361b90d2246bb64719230c85d3ad21de4d26433d1bf2adb471b",
+      "reason": "runtime image: v8NezhaPortrait"
+    },
+    {
+      "file": "assets/v8/nezha.png",
+      "bytes": 70013,
+      "sha256": "087d13c2a979dae72306aeaff88356580ecc5472e73b0599d3ccf2cd2cbc9c59",
+      "reason": "runtime image: v8Nezha"
+    },
+    {
+      "file": "assets/v8/normalization.json",
+      "bytes": 12065,
+      "sha256": "c63e76cf311c44d1b76f31965d092ab5734281cfc246988028242143e8ff5ec2",
+      "reason": "small provenance / build metadata"
+    },
+    {
+      "file": "assets/v8/pack-manifest.json",
+      "bytes": 14604,
+      "sha256": "86b8c9fa6ba650bce3c55c7d9698e75c185e9b9203beabaaf60e43bcd3d9b420",
+      "reason": "small provenance / build metadata"
+    },
+    {
+      "file": "assets/v8/prompts.json",
+      "bytes": 11976,
+      "sha256": "21b0eea66370285656918b16a6a53df816cb0df3f0f50d412c8a8a6a0bdce178",
+      "reason": "small provenance / build metadata"
+    },
+    {
+      "file": "assets/v8/terrain.png",
+      "bytes": 79557,
+      "sha256": "071b3caa5a9582564e3b85d9c8b192494edfae128f9619bc00f60861bf84a6ee",
+      "reason": "runtime image: v8Terrain"
+    },
+    {
+      "file": "assets/v8/underworld.png",
+      "bytes": 877781,
+      "sha256": "ec5d812252459da2633ef90ef6168734d29c93690bf40932a10fedf04be3b2a4",
+      "reason": "runtime image: realmUnderworld"
+    },
+    {
+      "file": "assets/v8/water.png",
+      "bytes": 826553,
+      "sha256": "650725e4f8fbb02c7bd3cfae6edb8d28e029525b528f5293b8f7a79b6304a4c0",
+      "reason": "runtime image: realmWater"
+    }
+  ]
+}

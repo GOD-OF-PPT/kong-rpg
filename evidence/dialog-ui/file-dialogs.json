@@ -1,0 +1,2427 @@
+{
+  "version": "2.1.0",
+  "sha256": "a2b22371d0815f88a58d3c96eb9450b29ba12346f03aff0d931d476ed6dc737e",
+  "kind": "file",
+  "checks": [
+    {
+      "name": "generated UI textures ready",
+      "pass": true
+    },
+    {
+      "name": "prologue-1440 reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "prologue-1440 dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "prologue-1440 uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "start-1440 reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "start-1440 dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "start-1440 uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "start-1440 cloud card text remains on paper",
+      "pass": true
+    },
+    {
+      "name": "start-1440 cloud text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "start-1440 cloud text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "start-1440 cloud text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "start-1440 echo card text remains on paper",
+      "pass": true
+    },
+    {
+      "name": "start-1440 echo text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "start-1440 echo text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "start-1440 echo text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "start-1440 staff card text remains on paper",
+      "pass": true
+    },
+    {
+      "name": "start-1440 staff text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "start-1440 staff text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "start-1440 staff text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "right key selects second scroll",
+      "pass": true
+    },
+    {
+      "name": "left key selects first scroll",
+      "pass": true
+    },
+    {
+      "name": "reverse Tab stays in dialog",
+      "pass": true
+    },
+    {
+      "name": "Tab wraps to first scroll",
+      "pass": true
+    },
+    {
+      "name": "Enter confirms relic and starts combat",
+      "pass": true
+    },
+    {
+      "name": "pause-1440 reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "pause-1440 dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "pause-1440 uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "dialog blocks attack and clone input",
+      "pass": true
+    },
+    {
+      "name": "pause Down focuses guide",
+      "pass": true
+    },
+    {
+      "name": "help-1440 reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "help-1440 dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "help-1440 uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "guide returns to pause trigger",
+      "pass": true
+    },
+    {
+      "name": "range keeps native arrow adjustment",
+      "pass": true
+    },
+    {
+      "name": "Escape works from settings field",
+      "pass": true
+    },
+    {
+      "name": "export and import keep paused state",
+      "pass": true
+    },
+    {
+      "name": "reward-mid-1440 reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "reward-mid-1440 dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "reward-mid-1440 uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "reward-mid-1440 mirror card text remains on paper",
+      "pass": true
+    },
+    {
+      "name": "reward-mid-1440 mirror text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-mid-1440 mirror text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-mid-1440 mirror text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-mid-1440 flame card text remains on paper",
+      "pass": true
+    },
+    {
+      "name": "reward-mid-1440 flame text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-mid-1440 flame text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-mid-1440 flame text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-mid-1440 rest card text remains on paper",
+      "pass": true
+    },
+    {
+      "name": "reward-mid-1440 rest text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-mid-1440 rest text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-mid-1440 rest text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "rest remains a real resource tradeoff",
+      "pass": true
+    },
+    {
+      "name": "replace-1440 reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "replace-1440 dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "replace-1440 uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "replace-1440 cloud card text remains on paper",
+      "pass": true
+    },
+    {
+      "name": "replace-1440 cloud text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "replace-1440 cloud text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "replace-1440 cloud text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "replace-1440 echo card text remains on paper",
+      "pass": true
+    },
+    {
+      "name": "replace-1440 echo text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "replace-1440 echo text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "replace-1440 echo text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "replace-1440 staff card text remains on paper",
+      "pass": true
+    },
+    {
+      "name": "replace-1440 staff text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "replace-1440 staff text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "replace-1440 staff text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "replace Escape cancels safely",
+      "pass": true
+    },
+    {
+      "name": "pending replacement survives reload",
+      "pass": true
+    },
+    {
+      "name": "replacement changes only chosen equipped relic",
+      "pass": true
+    },
+    {
+      "name": "reward-exit-1440 reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "reward-exit-1440 dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "reward-exit-1440 uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "reward-exit-1440 mercy card text remains on paper",
+      "pass": true
+    },
+    {
+      "name": "reward-exit-1440 mercy text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-exit-1440 mercy text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-exit-1440 mercy text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-exit-1440 flame card text remains on paper",
+      "pass": true
+    },
+    {
+      "name": "reward-exit-1440 flame text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-exit-1440 flame text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-exit-1440 flame text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-exit-1440 rest card text remains on paper",
+      "pass": true
+    },
+    {
+      "name": "reward-exit-1440 rest text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-exit-1440 rest text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-exit-1440 rest text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "exit reward advances to next stage",
+      "pass": true
+    },
+    {
+      "name": "death-1440 reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "death-1440 dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "death-1440 uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "failure retry starts same seed with different relic",
+      "pass": true
+    },
+    {
+      "name": "victory-1440 reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "victory-1440 dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "victory-1440 uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "epilogue-1440 reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "epilogue-1440 dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "epilogue-1440 uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "epilogue returns to results",
+      "pass": true
+    },
+    {
+      "name": "history-1440 reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "history-1440 dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "history-1440 uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "legacy-1440 reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "legacy-1440 dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "legacy-1440 uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "start-1366 reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "start-1366 dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "start-1366 uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "start-1366 cloud card text remains on paper",
+      "pass": true
+    },
+    {
+      "name": "start-1366 cloud text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "start-1366 cloud text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "start-1366 cloud text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "start-1366 echo card text remains on paper",
+      "pass": true
+    },
+    {
+      "name": "start-1366 echo text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "start-1366 echo text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "start-1366 echo text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "start-1366 staff card text remains on paper",
+      "pass": true
+    },
+    {
+      "name": "start-1366 staff text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "start-1366 staff text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "start-1366 staff text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "pause-1366 reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "pause-1366 dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "pause-1366 uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "help-1366 reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "help-1366 dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "help-1366 uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "reward-1366 reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "reward-1366 dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "reward-1366 uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "reward-1366 mirror card text remains on paper",
+      "pass": true
+    },
+    {
+      "name": "reward-1366 mirror text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-1366 mirror text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-1366 mirror text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-1366 flame card text remains on paper",
+      "pass": true
+    },
+    {
+      "name": "reward-1366 flame text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-1366 flame text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-1366 flame text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "reward-1366 rest card text remains on paper",
+      "pass": true
+    },
+    {
+      "name": "reward-1366 rest text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "reward-1366 rest text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "reward-1366 rest text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "replace-1366 reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "replace-1366 dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "replace-1366 uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "replace-1366 cloud card text remains on paper",
+      "pass": true
+    },
+    {
+      "name": "replace-1366 cloud text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "replace-1366 cloud text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "replace-1366 cloud text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "replace-1366 echo card text remains on paper",
+      "pass": true
+    },
+    {
+      "name": "replace-1366 echo text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "replace-1366 echo text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "replace-1366 echo text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "replace-1366 staff card text remains on paper",
+      "pass": true
+    },
+    {
+      "name": "replace-1366 staff text does not overlap 1",
+      "pass": true
+    },
+    {
+      "name": "replace-1366 staff text does not overlap 2",
+      "pass": true
+    },
+    {
+      "name": "replace-1366 staff text does not overlap 3",
+      "pass": true
+    },
+    {
+      "name": "victory-1366 reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "victory-1366 dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "victory-1366 uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "epilogue-1366 reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "epilogue-1366 dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "epilogue-1366 uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "history-1366 reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "history-1366 dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "history-1366 uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "legacy-1366 reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "legacy-1366 dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "legacy-1366 uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "history-full-1366 reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "history-full-1366 dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "history-full-1366 uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "full journal scrolls through real keyboard input",
+      "pass": true
+    },
+    {
+      "name": "history-scrolled-1366 reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "history-scrolled-1366 dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "history-scrolled-1366 uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "history-empty-1366 reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "history-empty-1366 dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "history-empty-1366 uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "prologue-1366 reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "prologue-1366 dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "prologue-1366 uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "death-1366 reaches intended screen",
+      "pass": true
+    },
+    {
+      "name": "death-1366 dialog remains inside game view",
+      "pass": true
+    },
+    {
+      "name": "death-1366 uses semantic modal",
+      "pass": true
+    },
+    {
+      "name": "small cost text contrast on paper exceeds 4.5 to 1",
+      "pass": true
+    },
+    {
+      "name": "no page errors",
+      "pass": true
+    },
+    {
+      "name": "offline dialogs make zero HTTP requests",
+      "pass": true
+    },
+    {
+      "name": "reduced motion disables panel entrance",
+      "pass": true
+    }
+  ],
+  "layouts": [
+    {
+      "name": "prologue-1440",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "mode": "prologue",
+      "stage": {
+        "x": 40,
+        "y": 96,
+        "w": 1360,
+        "h": 765
+      },
+      "panel": {
+        "x": 245,
+        "y": 176.140625,
+        "w": 950,
+        "h": 604.71875
+      },
+      "scroll": 0,
+      "focus": "begin-relic",
+      "role": "dialog",
+      "modal": "true",
+      "cards": []
+    },
+    {
+      "name": "start-1440",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "mode": "start",
+      "stage": {
+        "x": 40,
+        "y": 96,
+        "w": 1360,
+        "h": 765
+      },
+      "panel": {
+        "x": 102.109375,
+        "y": 176.1875,
+        "w": 1235.765625,
+        "h": 604.609375
+      },
+      "scroll": 0,
+      "focus": "cloud",
+      "role": "dialog",
+      "modal": "true",
+      "cards": [
+        {
+          "id": "cloud",
+          "box": {
+            "x": 294.984375,
+            "y": 319.296875,
+            "w": 271.328125,
+            "h": 345
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 389.4375,
+                "y": 428.296875,
+                "w": 82.40625,
+                "h": 31.1875
+              }
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 402.640625,
+                "y": 463.484375,
+                "w": 56,
+                "h": 15
+              }
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 337.984375,
+                "y": 488.484375,
+                "w": 185.328125,
+                "h": 45.5
+              }
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 337.984375,
+                "y": 593.609375,
+                "w": 185.328125,
+                "h": 27.6875
+              }
+            }
+          ]
+        },
+        {
+          "id": "echo",
+          "box": {
+            "x": 584.3125,
+            "y": 324.296875,
+            "w": 271.328125,
+            "h": 345
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 678.765625,
+                "y": 433.296875,
+                "w": 82.40625,
+                "h": 31.1875
+              }
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 691.96875,
+                "y": 468.484375,
+                "w": 56,
+                "h": 15
+              }
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 627.3125,
+                "y": 493.484375,
+                "w": 185.328125,
+                "h": 45.5
+              }
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 627.3125,
+                "y": 598.609375,
+                "w": 185.328125,
+                "h": 27.6875
+              }
+            }
+          ]
+        },
+        {
+          "id": "staff",
+          "box": {
+            "x": 873.640625,
+            "y": 324.296875,
+            "w": 271.34375,
+            "h": 345
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 968.109375,
+                "y": 433.296875,
+                "w": 82.40625,
+                "h": 31.1875
+              }
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 981.3125,
+                "y": 468.484375,
+                "w": 56,
+                "h": 15
+              }
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 916.640625,
+                "y": 493.484375,
+                "w": 185.34375,
+                "h": 45.5
+              }
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 916.640625,
+                "y": 598.609375,
+                "w": 185.34375,
+                "h": 27.6875
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pause-1440",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "mode": "paused",
+      "stage": {
+        "x": 40,
+        "y": 96,
+        "w": 1360,
+        "h": 765
+      },
+      "panel": {
+        "x": 170,
+        "y": 250.890625,
+        "w": 1100,
+        "h": 455.21875
+      },
+      "scroll": 0,
+      "focus": "continue",
+      "role": "dialog",
+      "modal": "true",
+      "cards": []
+    },
+    {
+      "name": "help-1440",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "mode": "help",
+      "stage": {
+        "x": 40,
+        "y": 96,
+        "w": 1360,
+        "h": 765
+      },
+      "panel": {
+        "x": 129.265625,
+        "y": 175,
+        "w": 1181.453125,
+        "h": 607
+      },
+      "scroll": 0,
+      "focus": "close-help",
+      "role": "dialog",
+      "modal": "true",
+      "cards": []
+    },
+    {
+      "name": "reward-mid-1440",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "mode": "reward",
+      "stage": {
+        "x": 40,
+        "y": 96,
+        "w": 1360,
+        "h": 765
+      },
+      "panel": {
+        "x": 102.109375,
+        "y": 176.1875,
+        "w": 1235.765625,
+        "h": 604.609375
+      },
+      "scroll": 0,
+      "focus": "mirror",
+      "role": "dialog",
+      "modal": "true",
+      "cards": [
+        {
+          "id": "mirror",
+          "box": {
+            "x": 294.984375,
+            "y": 350.296875,
+            "w": 271.328125,
+            "h": 345
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 389.4375,
+                "y": 459.296875,
+                "w": 82.40625,
+                "h": 31.1875
+              }
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 402.640625,
+                "y": 494.484375,
+                "w": 56,
+                "h": 15
+              }
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 337.984375,
+                "y": 519.484375,
+                "w": 185.328125,
+                "h": 45.5
+              }
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 337.984375,
+                "y": 624.609375,
+                "w": 185.328125,
+                "h": 27.6875
+              }
+            }
+          ]
+        },
+        {
+          "id": "flame",
+          "box": {
+            "x": 584.3125,
+            "y": 345.296875,
+            "w": 271.328125,
+            "h": 345
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 678.765625,
+                "y": 454.296875,
+                "w": 82.40625,
+                "h": 31.1875
+              }
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 691.96875,
+                "y": 489.484375,
+                "w": 56,
+                "h": 15
+              }
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 627.3125,
+                "y": 514.484375,
+                "w": 185.328125,
+                "h": 45.5
+              }
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 627.3125,
+                "y": 619.609375,
+                "w": 185.328125,
+                "h": 27.6875
+              }
+            }
+          ]
+        },
+        {
+          "id": "rest",
+          "box": {
+            "x": 873.640625,
+            "y": 350.296875,
+            "w": 271.34375,
+            "h": 345
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 954.375,
+                "y": 459.296875,
+                "w": 109.875,
+                "h": 31.1875
+              }
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 981.3125,
+                "y": 494.484375,
+                "w": 56,
+                "h": 15
+              }
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 916.640625,
+                "y": 519.484375,
+                "w": 185.34375,
+                "h": 45.5
+              }
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 916.640625,
+                "y": 624.609375,
+                "w": 185.34375,
+                "h": 27.6875
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "replace-1440",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "mode": "replace",
+      "stage": {
+        "x": 40,
+        "y": 96,
+        "w": 1360,
+        "h": 765
+      },
+      "panel": {
+        "x": 102.109375,
+        "y": 144.546875,
+        "w": 1235.765625,
+        "h": 667.90625
+      },
+      "scroll": 0,
+      "focus": "cloud",
+      "role": "dialog",
+      "modal": "true",
+      "cards": [
+        {
+          "id": "cloud",
+          "box": {
+            "x": 294.984375,
+            "y": 350.953125,
+            "w": 271.328125,
+            "h": 345
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 389.4375,
+                "y": 459.953125,
+                "w": 82.40625,
+                "h": 31.1875
+              }
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 402.640625,
+                "y": 495.140625,
+                "w": 56,
+                "h": 15
+              }
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 337.984375,
+                "y": 520.140625,
+                "w": 185.328125,
+                "h": 45.5
+              }
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 337.984375,
+                "y": 625.265625,
+                "w": 185.328125,
+                "h": 27.6875
+              }
+            }
+          ]
+        },
+        {
+          "id": "echo",
+          "box": {
+            "x": 584.3125,
+            "y": 355.953125,
+            "w": 271.328125,
+            "h": 345
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 678.765625,
+                "y": 464.953125,
+                "w": 82.40625,
+                "h": 31.1875
+              }
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 691.96875,
+                "y": 500.140625,
+                "w": 56,
+                "h": 15
+              }
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 627.3125,
+                "y": 525.140625,
+                "w": 185.328125,
+                "h": 45.5
+              }
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 627.3125,
+                "y": 630.265625,
+                "w": 185.328125,
+                "h": 27.6875
+              }
+            }
+          ]
+        },
+        {
+          "id": "staff",
+          "box": {
+            "x": 873.640625,
+            "y": 355.953125,
+            "w": 271.34375,
+            "h": 345
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 968.109375,
+                "y": 464.953125,
+                "w": 82.40625,
+                "h": 31.1875
+              }
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 981.3125,
+                "y": 500.140625,
+                "w": 56,
+                "h": 15
+              }
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 916.640625,
+                "y": 525.140625,
+                "w": 185.34375,
+                "h": 45.5
+              }
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 916.640625,
+                "y": 630.265625,
+                "w": 185.34375,
+                "h": 27.6875
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "reward-exit-1440",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "mode": "reward",
+      "stage": {
+        "x": 40,
+        "y": 96,
+        "w": 1360,
+        "h": 765
+      },
+      "panel": {
+        "x": 102.109375,
+        "y": 176.1875,
+        "w": 1235.765625,
+        "h": 604.609375
+      },
+      "scroll": 0,
+      "focus": "mercy",
+      "role": "dialog",
+      "modal": "true",
+      "cards": [
+        {
+          "id": "mercy",
+          "box": {
+            "x": 294.984375,
+            "y": 345.296875,
+            "w": 271.328125,
+            "h": 345
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 389.4375,
+                "y": 454.296875,
+                "w": 82.40625,
+                "h": 31.1875
+              }
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 402.640625,
+                "y": 489.484375,
+                "w": 56,
+                "h": 15
+              }
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 337.984375,
+                "y": 514.484375,
+                "w": 185.328125,
+                "h": 45.5
+              }
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 337.984375,
+                "y": 619.609375,
+                "w": 185.328125,
+                "h": 27.6875
+              }
+            }
+          ]
+        },
+        {
+          "id": "flame",
+          "box": {
+            "x": 584.3125,
+            "y": 350.296875,
+            "w": 271.328125,
+            "h": 345
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 678.765625,
+                "y": 459.296875,
+                "w": 82.40625,
+                "h": 31.1875
+              }
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 691.96875,
+                "y": 494.484375,
+                "w": 56,
+                "h": 15
+              }
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 627.3125,
+                "y": 519.484375,
+                "w": 185.328125,
+                "h": 45.5
+              }
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 627.3125,
+                "y": 624.609375,
+                "w": 185.328125,
+                "h": 27.6875
+              }
+            }
+          ]
+        },
+        {
+          "id": "rest",
+          "box": {
+            "x": 873.640625,
+            "y": 350.296875,
+            "w": 271.34375,
+            "h": 345
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 954.375,
+                "y": 459.296875,
+                "w": 109.875,
+                "h": 31.1875
+              }
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 981.3125,
+                "y": 494.484375,
+                "w": 56,
+                "h": 15
+              }
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 916.640625,
+                "y": 519.484375,
+                "w": 185.34375,
+                "h": 45.5
+              }
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 916.640625,
+                "y": 624.609375,
+                "w": 185.34375,
+                "h": 27.6875
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "death-1440",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "mode": "dead",
+      "stage": {
+        "x": 40,
+        "y": 96,
+        "w": 1360,
+        "h": 765
+      },
+      "panel": {
+        "x": 220,
+        "y": 192.859375,
+        "w": 1000,
+        "h": 571.265625
+      },
+      "scroll": 0,
+      "focus": "retry",
+      "role": "dialog",
+      "modal": "true",
+      "cards": []
+    },
+    {
+      "name": "victory-1440",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "mode": "won",
+      "stage": {
+        "x": 40,
+        "y": 96,
+        "w": 1360,
+        "h": 765
+      },
+      "panel": {
+        "x": 220,
+        "y": 204.5625,
+        "w": 1000,
+        "h": 547.875
+      },
+      "scroll": 0,
+      "focus": "epilogue",
+      "role": "dialog",
+      "modal": "true",
+      "cards": []
+    },
+    {
+      "name": "epilogue-1440",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "mode": "epilogue",
+      "stage": {
+        "x": 40,
+        "y": 96,
+        "w": 1360,
+        "h": 765
+      },
+      "panel": {
+        "x": 245,
+        "y": 239.734375,
+        "w": 950,
+        "h": 477.53125
+      },
+      "scroll": 0,
+      "focus": "again",
+      "role": "dialog",
+      "modal": "true",
+      "cards": []
+    },
+    {
+      "name": "history-1440",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "mode": "history",
+      "stage": {
+        "x": 40,
+        "y": 96,
+        "w": 1360,
+        "h": 765
+      },
+      "panel": {
+        "x": 129.265625,
+        "y": 218.640625,
+        "w": 1181.453125,
+        "h": 519.71875
+      },
+      "scroll": 0,
+      "focus": "DIV",
+      "role": "dialog",
+      "modal": "true",
+      "cards": []
+    },
+    {
+      "name": "legacy-1440",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "mode": "legacy",
+      "stage": {
+        "x": 40,
+        "y": 96,
+        "w": 1360,
+        "h": 765
+      },
+      "panel": {
+        "x": 245,
+        "y": 271.734375,
+        "w": 950,
+        "h": 413.53125
+      },
+      "scroll": 0,
+      "focus": "open-legacy",
+      "role": "dialog",
+      "modal": "true",
+      "cards": []
+    },
+    {
+      "name": "start-1366",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "mode": "start",
+      "stage": {
+        "x": 146.109375,
+        "y": 96,
+        "w": 1073.765625,
+        "h": 603.984375
+      },
+      "panel": {
+        "x": 195.34375,
+        "y": 151.203125,
+        "w": 975.296875,
+        "h": 493.578125
+      },
+      "scroll": 0,
+      "focus": "cloud",
+      "role": "dialog",
+      "modal": "true",
+      "cards": [
+        {
+          "id": "cloud",
+          "box": {
+            "x": 317.984375,
+            "y": 256.78125,
+            "w": 235.328125,
+            "h": 300
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 399.03125,
+                "y": 341.78125,
+                "w": 73.234375,
+                "h": 27.296875
+              }
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 409.640625,
+                "y": 373.078125,
+                "w": 52,
+                "h": 14
+              }
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 352.984375,
+                "y": 394.078125,
+                "w": 165.328125,
+                "h": 37.375
+              }
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 352.984375,
+                "y": 499.78125,
+                "w": 165.328125,
+                "h": 23
+              }
+            }
+          ]
+        },
+        {
+          "id": "echo",
+          "box": {
+            "x": 565.3125,
+            "y": 256.78125,
+            "w": 235.328125,
+            "h": 300
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 646.359375,
+                "y": 341.78125,
+                "w": 73.234375,
+                "h": 27.296875
+              }
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 656.96875,
+                "y": 373.078125,
+                "w": 52,
+                "h": 14
+              }
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 600.3125,
+                "y": 394.078125,
+                "w": 165.328125,
+                "h": 37.375
+              }
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 600.3125,
+                "y": 499.78125,
+                "w": 165.328125,
+                "h": 23
+              }
+            }
+          ]
+        },
+        {
+          "id": "staff",
+          "box": {
+            "x": 812.640625,
+            "y": 256.78125,
+            "w": 235.328125,
+            "h": 300
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 893.6875,
+                "y": 341.78125,
+                "w": 73.234375,
+                "h": 27.296875
+              }
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 904.296875,
+                "y": 373.078125,
+                "w": 52,
+                "h": 14
+              }
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 847.640625,
+                "y": 394.078125,
+                "w": 165.328125,
+                "h": 37.375
+              }
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 847.640625,
+                "y": 499.78125,
+                "w": 165.328125,
+                "h": 23
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pause-1366",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "mode": "paused",
+      "stage": {
+        "x": 146.109375,
+        "y": 96,
+        "w": 1073.765625,
+        "h": 603.984375
+      },
+      "panel": {
+        "x": 211.421875,
+        "y": 205.1875,
+        "w": 943.140625,
+        "h": 385.59375
+      },
+      "scroll": 0,
+      "focus": "continue",
+      "role": "dialog",
+      "modal": "true",
+      "cards": []
+    },
+    {
+      "name": "help-1366",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "mode": "help",
+      "stage": {
+        "x": 146.109375,
+        "y": 96,
+        "w": 1073.765625,
+        "h": 603.984375
+      },
+      "panel": {
+        "x": 216.78125,
+        "y": 152.90625,
+        "w": 932.421875,
+        "h": 490.171875
+      },
+      "scroll": 0,
+      "focus": "old",
+      "role": "dialog",
+      "modal": "true",
+      "cards": []
+    },
+    {
+      "name": "reward-1366",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "mode": "reward",
+      "stage": {
+        "x": 146.109375,
+        "y": 96,
+        "w": 1073.765625,
+        "h": 603.984375
+      },
+      "panel": {
+        "x": 195.34375,
+        "y": 149.203125,
+        "w": 975.296875,
+        "h": 497.578125
+      },
+      "scroll": 0,
+      "focus": "mirror",
+      "role": "dialog",
+      "modal": "true",
+      "cards": [
+        {
+          "id": "mirror",
+          "box": {
+            "x": 317.984375,
+            "y": 270.78125,
+            "w": 235.328125,
+            "h": 300
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 399.03125,
+                "y": 355.78125,
+                "w": 73.234375,
+                "h": 27.296875
+              }
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 409.640625,
+                "y": 387.078125,
+                "w": 52,
+                "h": 14
+              }
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 352.984375,
+                "y": 408.078125,
+                "w": 165.328125,
+                "h": 37.375
+              }
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 352.984375,
+                "y": 513.78125,
+                "w": 165.328125,
+                "h": 23
+              }
+            }
+          ]
+        },
+        {
+          "id": "flame",
+          "box": {
+            "x": 565.3125,
+            "y": 275.78125,
+            "w": 235.328125,
+            "h": 300
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 646.359375,
+                "y": 360.78125,
+                "w": 73.234375,
+                "h": 27.296875
+              }
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 656.96875,
+                "y": 392.078125,
+                "w": 52,
+                "h": 14
+              }
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 600.3125,
+                "y": 413.078125,
+                "w": 165.328125,
+                "h": 37.375
+              }
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 600.3125,
+                "y": 518.78125,
+                "w": 165.328125,
+                "h": 23
+              }
+            }
+          ]
+        },
+        {
+          "id": "rest",
+          "box": {
+            "x": 812.640625,
+            "y": 270.78125,
+            "w": 235.328125,
+            "h": 300
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 881.484375,
+                "y": 355.78125,
+                "w": 97.640625,
+                "h": 27.296875
+              }
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 904.296875,
+                "y": 387.078125,
+                "w": 52,
+                "h": 14
+              }
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 847.640625,
+                "y": 408.078125,
+                "w": 165.328125,
+                "h": 37.375
+              }
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 847.640625,
+                "y": 513.78125,
+                "w": 165.328125,
+                "h": 23
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "replace-1366",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "mode": "replace",
+      "stage": {
+        "x": 146.109375,
+        "y": 96,
+        "w": 1073.765625,
+        "h": 603.984375
+      },
+      "panel": {
+        "x": 195.34375,
+        "y": 125.953125,
+        "w": 975.296875,
+        "h": 544.078125
+      },
+      "scroll": 0,
+      "focus": "cloud",
+      "role": "dialog",
+      "modal": "true",
+      "cards": [
+        {
+          "id": "cloud",
+          "box": {
+            "x": 317.984375,
+            "y": 277.03125,
+            "w": 235.328125,
+            "h": 300
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 399.03125,
+                "y": 362.03125,
+                "w": 73.234375,
+                "h": 27.296875
+              }
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 409.640625,
+                "y": 393.328125,
+                "w": 52,
+                "h": 14
+              }
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 352.984375,
+                "y": 414.328125,
+                "w": 165.328125,
+                "h": 37.375
+              }
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 352.984375,
+                "y": 520.03125,
+                "w": 165.328125,
+                "h": 23
+              }
+            }
+          ]
+        },
+        {
+          "id": "echo",
+          "box": {
+            "x": 565.3125,
+            "y": 282.03125,
+            "w": 235.328125,
+            "h": 300
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 646.359375,
+                "y": 367.03125,
+                "w": 73.234375,
+                "h": 27.296875
+              }
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 656.96875,
+                "y": 398.328125,
+                "w": 52,
+                "h": 14
+              }
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 600.3125,
+                "y": 419.328125,
+                "w": 165.328125,
+                "h": 37.375
+              }
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 600.3125,
+                "y": 525.03125,
+                "w": 165.328125,
+                "h": 23
+              }
+            }
+          ]
+        },
+        {
+          "id": "staff",
+          "box": {
+            "x": 812.640625,
+            "y": 277.03125,
+            "w": 235.328125,
+            "h": 300
+          },
+          "overflow": false,
+          "parts": [
+            {
+              "kind": "H3",
+              "box": {
+                "x": 893.6875,
+                "y": 362.03125,
+                "w": 73.234375,
+                "h": 27.296875
+              }
+            },
+            {
+              "kind": "tag",
+              "box": {
+                "x": 904.296875,
+                "y": 393.328125,
+                "w": 52,
+                "h": 14
+              }
+            },
+            {
+              "kind": "P",
+              "box": {
+                "x": 847.640625,
+                "y": 414.328125,
+                "w": 165.328125,
+                "h": 37.375
+              }
+            },
+            {
+              "kind": "cost",
+              "box": {
+                "x": 847.640625,
+                "y": 520.03125,
+                "w": 165.328125,
+                "h": 23
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "victory-1366",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "mode": "won",
+      "stage": {
+        "x": 146.109375,
+        "y": 96,
+        "w": 1073.765625,
+        "h": 603.984375
+      },
+      "panel": {
+        "x": 243.5625,
+        "y": 168.15625,
+        "w": 878.84375,
+        "h": 459.671875
+      },
+      "scroll": 0,
+      "focus": "epilogue",
+      "role": "dialog",
+      "modal": "true",
+      "cards": []
+    },
+    {
+      "name": "epilogue-1366",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "mode": "epilogue",
+      "stage": {
+        "x": 146.109375,
+        "y": 96,
+        "w": 1073.765625,
+        "h": 603.984375
+      },
+      "panel": {
+        "x": 254.28125,
+        "y": 228.296875,
+        "w": 857.40625,
+        "h": 339.390625
+      },
+      "scroll": 0,
+      "focus": "again",
+      "role": "dialog",
+      "modal": "true",
+      "cards": []
+    },
+    {
+      "name": "history-1366",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "mode": "history",
+      "stage": {
+        "x": 146.109375,
+        "y": 96,
+        "w": 1073.765625,
+        "h": 603.984375
+      },
+      "panel": {
+        "x": 216.78125,
+        "y": 172.546875,
+        "w": 932.421875,
+        "h": 450.890625
+      },
+      "scroll": 0,
+      "focus": "DIV",
+      "role": "dialog",
+      "modal": "true",
+      "cards": []
+    },
+    {
+      "name": "legacy-1366",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "mode": "legacy",
+      "stage": {
+        "x": 146.109375,
+        "y": 96,
+        "w": 1073.765625,
+        "h": 603.984375
+      },
+      "panel": {
+        "x": 254.28125,
+        "y": 266.796875,
+        "w": 857.40625,
+        "h": 262.390625
+      },
+      "scroll": 0,
+      "focus": "open-legacy",
+      "role": "dialog",
+      "modal": "true",
+      "cards": []
+    },
+    {
+      "name": "history-full-1366",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "mode": "history",
+      "stage": {
+        "x": 146.109375,
+        "y": 96,
+        "w": 1073.765625,
+        "h": 603.984375
+      },
+      "panel": {
+        "x": 216.78125,
+        "y": 145.046875,
+        "w": 932.421875,
+        "h": 505.890625
+      },
+      "scroll": 0,
+      "focus": "DIV",
+      "role": "dialog",
+      "modal": "true",
+      "cards": []
+    },
+    {
+      "name": "history-scrolled-1366",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "mode": "history",
+      "stage": {
+        "x": 146.109375,
+        "y": 96,
+        "w": 1073.765625,
+        "h": 603.984375
+      },
+      "panel": {
+        "x": 216.78125,
+        "y": 145.046875,
+        "w": 932.421875,
+        "h": 505.890625
+      },
+      "scroll": 0,
+      "focus": "DIV",
+      "role": "dialog",
+      "modal": "true",
+      "cards": []
+    },
+    {
+      "name": "history-empty-1366",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "mode": "history",
+      "stage": {
+        "x": 146.109375,
+        "y": 96,
+        "w": 1073.765625,
+        "h": 603.984375
+      },
+      "panel": {
+        "x": 216.78125,
+        "y": 159.546875,
+        "w": 932.421875,
+        "h": 476.890625
+      },
+      "scroll": 0,
+      "focus": "DIV",
+      "role": "dialog",
+      "modal": "true",
+      "cards": []
+    },
+    {
+      "name": "prologue-1366",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "mode": "prologue",
+      "stage": {
+        "x": 146.109375,
+        "y": 96,
+        "w": 1073.765625,
+        "h": 603.984375
+      },
+      "panel": {
+        "x": 254.28125,
+        "y": 175.796875,
+        "w": 857.40625,
+        "h": 444.390625
+      },
+      "scroll": 0,
+      "focus": "begin-relic",
+      "role": "dialog",
+      "modal": "true",
+      "cards": []
+    },
+    {
+      "name": "death-1366",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "mode": "dead",
+      "stage": {
+        "x": 146.109375,
+        "y": 96,
+        "w": 1073.765625,
+        "h": 603.984375
+      },
+      "panel": {
+        "x": 243.5625,
+        "y": 158.5625,
+        "w": 878.84375,
+        "h": 478.859375
+      },
+      "scroll": 0,
+      "focus": "retry",
+      "role": "dialog",
+      "modal": "true",
+      "cards": []
+    }
+  ],
+  "errors": [],
+  "requests": [],
+  "browser": "156.0.4314.42",
+  "contrast": {
+    "paperFifthPercentileLuminance": 0.44321311511875255,
+    "costTextOnPaper": 5.175399324609814,
+    "method": "darker fifth-percentile luminance in quiet paper region against cost ink #54351f; texture sample, not full accessibility certification"
+  },
+  "video": "evidence/dialog-ui/video/page@7b390172d317200ffccf337b8df045da.webm"
+}

@@ -1,0 +1,74 @@
+{
+  "version": "6.0.1",
+  "mode": "http",
+  "sha256": "0148d5a8a1d86e87d8781d6477ce1870646d75ebec9aca11517b2e85954c43d3",
+  "method": "Fixed seed and genuine generated drop; legal JSON starting fixture, then real keyboard movement through visible item.",
+  "checks": [
+    {
+      "name": "rage full resource keeps the drop",
+      "pass": true
+    },
+    {
+      "name": "rage full resource explains why it cannot be picked up",
+      "pass": false
+    }
+  ],
+  "cases": [
+    {
+      "kind": "rage",
+      "full": true,
+      "item": {
+        "x": 439,
+        "y": 420,
+        "w": 16,
+        "h": 20,
+        "kind": "rage",
+        "used": false,
+        "enabled": true,
+        "sourceId": 0,
+        "amount": 14
+      },
+      "resource": 100,
+      "player": {
+        "x": 445.2189140963949,
+        "y": 396,
+        "w": 24,
+        "h": 44,
+        "vx": 9.481819135167619,
+        "vy": 0,
+        "face": 1,
+        "hp": 100,
+        "focus": 75,
+        "rage": 100,
+        "ringCD": 0,
+        "ringAim": null,
+        "ultimate": 0,
+        "ultimateStage": 0,
+        "talismanCD": 0,
+        "ward": 0,
+        "dashTargets": [],
+        "grounded": true,
+        "coyote": 0.1,
+        "buffer": 0,
+        "airJumps": 0,
+        "invuln": 4.441666666666639,
+        "dash": 0,
+        "dashCD": 0,
+        "attack": 0,
+        "attackId": 0,
+        "attackTargets": [],
+        "comboIndex": 0,
+        "slam": false,
+        "landing": 0,
+        "drop": 0,
+        "hurt": 0,
+        "attackBuffer": 0
+      },
+      "hint": "J棍击 · L分身 · K闪避",
+      "pickupEvents": []
+    }
+  ],
+  "errors": [],
+  "requests": [],
+  "browser": "156.0.4314.42"
+}

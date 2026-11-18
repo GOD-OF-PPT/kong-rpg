@@ -1,0 +1,116 @@
+{
+  "version": "12.1.2",
+  "branch": "codex/v12-mechanics-skill-audit",
+  "baseHEAD": "5cee1a0b55aebe413fabc1d8592ab838fda72981",
+  "entrySHA256": "0251dd268da7f1af63278378cd594cad6997dfb7a7c70159590d44bda951a7b4",
+  "fixed": [
+    "unfinished bow firing behind summon/beam",
+    "Erlang step main-attack overlap and stale counterstrike target list",
+    "summon sliding on prior dash",
+    "hurt reaction allowing hidden clone/silk",
+    "Wukong secondary overlapping staff extension",
+    "Erlang cloud relic lacking its stated aerial range"
+  ],
+  "reports": {
+    "artFile": {
+      "file": "art-file/review.json",
+      "sha256": "0251dd268da7f1af63278378cd594cad6997dfb7a7c70159590d44bda951a7b4",
+      "failure": null,
+      "scenes": 352,
+      "networkRequests": 0,
+      "errors": 0
+    },
+    "referencesFile": {
+      "file": "art-file/references.json",
+      "sha256": "0251dd268da7f1af63278378cd594cad6997dfb7a7c70159590d44bda951a7b4",
+      "failure": null,
+      "scenes": 270,
+      "networkRequests": 0,
+      "errors": 0
+    },
+    "contracts": {
+      "file": "after/contracts.json",
+      "sha256": null,
+      "failure": null
+    },
+    "mixedActions": {
+      "file": "after/mixed-actions.json",
+      "sha256": null,
+      "failure": null
+    },
+    "naturalWukong": {
+      "file": "wukong-http/playthrough.json",
+      "sha256": "821e5ab37cbfdb8a413eb2869138a3e6f3e9c88e15e2e949889f4f924e7f2c7b",
+      "failure": null,
+      "completed": 15,
+      "grade": "A",
+      "hits": 37,
+      "elapsed": 488.04166666638713
+    },
+    "naturalNezha": {
+      "file": "nezha-http/playthrough.json",
+      "sha256": "0251dd268da7f1af63278378cd594cad6997dfb7a7c70159590d44bda951a7b4",
+      "failure": null,
+      "completed": 15,
+      "grade": "S",
+      "hits": 19,
+      "elapsed": 426.949999999776
+    },
+    "naturalErlang": {
+      "file": "erlang-jump-http/playthrough.json",
+      "sha256": "0251dd268da7f1af63278378cd594cad6997dfb7a7c70159590d44bda951a7b4",
+      "failure": "Error: Died stage 11: 东海龙王·双龙水柱\n    at E:\\githome\\kong-rpg\\tools\\playthrough-feel-v12.cjs:27:106",
+      "completed": 11,
+      "grade": null,
+      "hits": 31,
+      "elapsed": 369.74999999982805
+    },
+    "heroActionsFile": {
+      "file": "actions-file/verification.json",
+      "checks": 73,
+      "networkRequests": 0,
+      "errors": 0,
+      "sha256": "0251dd268da7f1af63278378cd594cad6997dfb7a7c70159590d44bda951a7b4"
+    },
+    "transitionsFile": {
+      "file": "browser-final-file/contracts.json",
+      "checks": 18,
+      "networkRequests": 0,
+      "errors": 0,
+      "sha256": "0251dd268da7f1af63278378cd594cad6997dfb7a7c70159590d44bda951a7b4"
+    },
+    "transitionsHTTP": {
+      "file": "browser-focus-http/contracts.json",
+      "checks": 17,
+      "networkRequests": 1,
+      "errors": 0,
+      "sha256": "0251dd268da7f1af63278378cd594cad6997dfb7a7c70159590d44bda951a7b4"
+    },
+    "enemyFile": {
+      "file": "enemy-file/enemy-fx.json",
+      "checks": 84,
+      "scenes": 120,
+      "errors": 0,
+      "networkRequests": 0,
+      "sha256": "0251dd268da7f1af63278378cd594cad6997dfb7a7c70159590d44bda951a7b4"
+    }
+  },
+  "package": {
+    "version": "12.1.2",
+    "archive": "E:\\githome\\kong-rpg\\artifacts\\kong-rpg-offline-v12.1.2.zip",
+    "bytes": 446342935,
+    "zipSHA256": "0885f827482ad44449ffbdea92d335089e304694b83bed02f08cb59cf0fbeeaa",
+    "entrySHA256": "0251dd268da7f1af63278378cd594cad6997dfb7a7c70159590d44bda951a7b4",
+    "allCRCsValid": true,
+    "extractedEntryMatches": true,
+    "entry": "E:\\githome\\kong-rpg\\artifacts\\portable-mechanics-recheck-v12\\index.html",
+    "hasNewReview": true,
+    "hasPrompts": false
+  },
+  "limitations": [
+    "No human first-play/quality or listening study",
+    "Erlang full natural clear not established; third attempt completed eleven levels and died to Dragon King in level twelve",
+    "No new natural challenge clear for all three heroes",
+    "Wukong full journey uses entry differing only in the Erlang step target-reset branch; exact old snapshot and scope retained"
+  ]
+}

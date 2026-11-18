@@ -1,0 +1,4218 @@
+{
+  "kind": "http",
+  "baseline": true,
+  "checks": [
+    {
+      "name": "cloud-0-0 idle towards -1",
+      "pass": false,
+      "id": "cloud-0-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-0-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "cloud-0-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-0-3 campaign-active towards -1",
+      "pass": true,
+      "id": "cloud-0-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-0-4 recover towards -1",
+      "pass": false,
+      "id": "cloud-0-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-0-0 idle towards 1",
+      "pass": false,
+      "id": "cloud-0-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-0-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "cloud-0-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-0-3 campaign-active towards 1",
+      "pass": true,
+      "id": "cloud-0-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-0-4 recover towards 1",
+      "pass": false,
+      "id": "cloud-0-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-0-0 idle towards -1",
+      "pass": false,
+      "id": "cloud-0-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-0-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "cloud-0-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-0-3 campaign-active towards -1",
+      "pass": true,
+      "id": "cloud-0-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-0-4 recover towards -1",
+      "pass": false,
+      "id": "cloud-0-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-0-0 idle towards 1",
+      "pass": false,
+      "id": "cloud-0-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-0-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "cloud-0-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-0-3 campaign-active towards 1",
+      "pass": true,
+      "id": "cloud-0-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-0-4 recover towards 1",
+      "pass": false,
+      "id": "cloud-0-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-1-0 idle towards -1",
+      "pass": true,
+      "id": "cloud-1-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-1-2 campaign-windup towards -1",
+      "pass": true,
+      "id": "cloud-1-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-1-3 campaign-active towards -1",
+      "pass": true,
+      "id": "cloud-1-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-1-4 recover towards -1",
+      "pass": true,
+      "id": "cloud-1-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-1-0 idle towards 1",
+      "pass": true,
+      "id": "cloud-1-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-1-2 campaign-windup towards 1",
+      "pass": true,
+      "id": "cloud-1-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-1-3 campaign-active towards 1",
+      "pass": true,
+      "id": "cloud-1-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-1-4 recover towards 1",
+      "pass": true,
+      "id": "cloud-1-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-2-0 idle towards -1",
+      "pass": true,
+      "id": "cloud-2-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-2-2 campaign-windup towards -1",
+      "pass": true,
+      "id": "cloud-2-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-2-3 campaign-active towards -1",
+      "pass": true,
+      "id": "cloud-2-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-2-4 recover towards -1",
+      "pass": true,
+      "id": "cloud-2-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-2-0 idle towards 1",
+      "pass": true,
+      "id": "cloud-2-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-2-2 campaign-windup towards 1",
+      "pass": true,
+      "id": "cloud-2-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-2-3 campaign-active towards 1",
+      "pass": true,
+      "id": "cloud-2-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-2-4 recover towards 1",
+      "pass": true,
+      "id": "cloud-2-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-0-0 idle towards -1",
+      "pass": false,
+      "id": "cloud-0-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-0-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "cloud-0-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-0-3 campaign-active towards -1",
+      "pass": true,
+      "id": "cloud-0-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-0-4 recover towards -1",
+      "pass": false,
+      "id": "cloud-0-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-0-0 idle towards 1",
+      "pass": false,
+      "id": "cloud-0-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-0-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "cloud-0-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-0-3 campaign-active towards 1",
+      "pass": true,
+      "id": "cloud-0-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-0-4 recover towards 1",
+      "pass": false,
+      "id": "cloud-0-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-1-0 idle towards -1",
+      "pass": true,
+      "id": "cloud-1-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-1-2 campaign-windup towards -1",
+      "pass": true,
+      "id": "cloud-1-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-1-3 campaign-active towards -1",
+      "pass": true,
+      "id": "cloud-1-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-1-4 recover towards -1",
+      "pass": true,
+      "id": "cloud-1-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-1-0 idle towards 1",
+      "pass": true,
+      "id": "cloud-1-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-1-2 campaign-windup towards 1",
+      "pass": true,
+      "id": "cloud-1-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-1-3 campaign-active towards 1",
+      "pass": true,
+      "id": "cloud-1-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-1-4 recover towards 1",
+      "pass": true,
+      "id": "cloud-1-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-2-0 idle towards -1",
+      "pass": true,
+      "id": "cloud-2-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-2-2 campaign-windup towards -1",
+      "pass": true,
+      "id": "cloud-2-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-2-3 campaign-active towards -1",
+      "pass": true,
+      "id": "cloud-2-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-2-4 recover towards -1",
+      "pass": true,
+      "id": "cloud-2-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-2-0 idle towards 1",
+      "pass": true,
+      "id": "cloud-2-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-2-2 campaign-windup towards 1",
+      "pass": true,
+      "id": "cloud-2-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-2-3 campaign-active towards 1",
+      "pass": true,
+      "id": "cloud-2-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-2-4 recover towards 1",
+      "pass": true,
+      "id": "cloud-2-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-2-0 idle towards -1",
+      "pass": true,
+      "id": "cloud-2-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-2-2 campaign-windup towards -1",
+      "pass": true,
+      "id": "cloud-2-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-2-3 campaign-active towards -1",
+      "pass": true,
+      "id": "cloud-2-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-2-4 recover towards -1",
+      "pass": true,
+      "id": "cloud-2-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-2-0 idle towards 1",
+      "pass": true,
+      "id": "cloud-2-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-2-2 campaign-windup towards 1",
+      "pass": true,
+      "id": "cloud-2-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-2-3 campaign-active towards 1",
+      "pass": true,
+      "id": "cloud-2-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-2-4 recover towards 1",
+      "pass": true,
+      "id": "cloud-2-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-1-0 idle towards -1",
+      "pass": true,
+      "id": "cloud-1-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-1-2 campaign-windup towards -1",
+      "pass": true,
+      "id": "cloud-1-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-1-3 campaign-active towards -1",
+      "pass": true,
+      "id": "cloud-1-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-1-4 recover towards -1",
+      "pass": true,
+      "id": "cloud-1-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-1-0 idle towards 1",
+      "pass": true,
+      "id": "cloud-1-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-1-2 campaign-windup towards 1",
+      "pass": true,
+      "id": "cloud-1-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-1-3 campaign-active towards 1",
+      "pass": true,
+      "id": "cloud-1-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-1-4 recover towards 1",
+      "pass": true,
+      "id": "cloud-1-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-0-0 idle towards -1",
+      "pass": false,
+      "id": "cloud-0-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-0-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "cloud-0-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-0-3 campaign-active towards -1",
+      "pass": true,
+      "id": "cloud-0-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-0-4 recover towards -1",
+      "pass": false,
+      "id": "cloud-0-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-0-0 idle towards 1",
+      "pass": false,
+      "id": "cloud-0-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-0-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "cloud-0-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-0-3 campaign-active towards 1",
+      "pass": true,
+      "id": "cloud-0-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-0-4 recover towards 1",
+      "pass": false,
+      "id": "cloud-0-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-1-0 idle towards -1",
+      "pass": true,
+      "id": "cloud-1-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-1-2 campaign-windup towards -1",
+      "pass": true,
+      "id": "cloud-1-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-1-3 campaign-active towards -1",
+      "pass": true,
+      "id": "cloud-1-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-1-4 recover towards -1",
+      "pass": true,
+      "id": "cloud-1-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-1-0 idle towards 1",
+      "pass": true,
+      "id": "cloud-1-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-1-2 campaign-windup towards 1",
+      "pass": true,
+      "id": "cloud-1-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-1-3 campaign-active towards 1",
+      "pass": true,
+      "id": "cloud-1-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-1-4 recover towards 1",
+      "pass": true,
+      "id": "cloud-1-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-2-0 idle towards -1",
+      "pass": true,
+      "id": "cloud-2-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-2-2 campaign-windup towards -1",
+      "pass": true,
+      "id": "cloud-2-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-2-3 campaign-active towards -1",
+      "pass": true,
+      "id": "cloud-2-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-2-4 recover towards -1",
+      "pass": true,
+      "id": "cloud-2-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-2-0 idle towards 1",
+      "pass": true,
+      "id": "cloud-2-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-2-2 campaign-windup towards 1",
+      "pass": true,
+      "id": "cloud-2-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-2-3 campaign-active towards 1",
+      "pass": true,
+      "id": "cloud-2-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-2-4 recover towards 1",
+      "pass": true,
+      "id": "cloud-2-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-0-0 idle towards -1",
+      "pass": false,
+      "id": "cloud-0-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-0-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "cloud-0-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-0-3 campaign-active towards -1",
+      "pass": true,
+      "id": "cloud-0-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-0-4 recover towards -1",
+      "pass": false,
+      "id": "cloud-0-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-0-0 idle towards 1",
+      "pass": false,
+      "id": "cloud-0-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-0-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "cloud-0-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-0-3 campaign-active towards 1",
+      "pass": true,
+      "id": "cloud-0-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-0-4 recover towards 1",
+      "pass": false,
+      "id": "cloud-0-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-1-0 idle towards -1",
+      "pass": true,
+      "id": "cloud-1-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-1-2 campaign-windup towards -1",
+      "pass": true,
+      "id": "cloud-1-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-1-3 campaign-active towards -1",
+      "pass": true,
+      "id": "cloud-1-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-1-4 recover towards -1",
+      "pass": true,
+      "id": "cloud-1-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-1-0 idle towards 1",
+      "pass": true,
+      "id": "cloud-1-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-1-2 campaign-windup towards 1",
+      "pass": true,
+      "id": "cloud-1-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-1-3 campaign-active towards 1",
+      "pass": true,
+      "id": "cloud-1-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-1-4 recover towards 1",
+      "pass": true,
+      "id": "cloud-1-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-2-0 idle towards -1",
+      "pass": true,
+      "id": "cloud-2-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-2-2 campaign-windup towards -1",
+      "pass": true,
+      "id": "cloud-2-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-2-3 campaign-active towards -1",
+      "pass": true,
+      "id": "cloud-2-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-2-4 recover towards -1",
+      "pass": true,
+      "id": "cloud-2-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "cloud-2-0 idle towards 1",
+      "pass": true,
+      "id": "cloud-2-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-2-2 campaign-windup towards 1",
+      "pass": true,
+      "id": "cloud-2-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-2-3 campaign-active towards 1",
+      "pass": true,
+      "id": "cloud-2-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "cloud-2-4 recover towards 1",
+      "pass": true,
+      "id": "cloud-2-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-0-0 idle towards -1",
+      "pass": false,
+      "id": "underworld-0-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-0-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "underworld-0-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-0-3 campaign-active towards -1",
+      "pass": true,
+      "id": "underworld-0-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-0-4 recover towards -1",
+      "pass": true,
+      "id": "underworld-0-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-0-0 idle towards 1",
+      "pass": false,
+      "id": "underworld-0-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-0-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "underworld-0-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-0-3 campaign-active towards 1",
+      "pass": true,
+      "id": "underworld-0-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-0-4 recover towards 1",
+      "pass": true,
+      "id": "underworld-0-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-0-0 idle towards -1",
+      "pass": false,
+      "id": "underworld-0-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-0-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "underworld-0-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-0-3 campaign-active towards -1",
+      "pass": true,
+      "id": "underworld-0-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-0-4 recover towards -1",
+      "pass": true,
+      "id": "underworld-0-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-0-0 idle towards 1",
+      "pass": false,
+      "id": "underworld-0-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-0-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "underworld-0-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-0-3 campaign-active towards 1",
+      "pass": true,
+      "id": "underworld-0-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-0-4 recover towards 1",
+      "pass": true,
+      "id": "underworld-0-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-1-0 idle towards -1",
+      "pass": false,
+      "id": "underworld-1-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-1-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "underworld-1-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-1-3 campaign-active towards -1",
+      "pass": true,
+      "id": "underworld-1-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-1-4 recover towards -1",
+      "pass": false,
+      "id": "underworld-1-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-1-0 idle towards 1",
+      "pass": false,
+      "id": "underworld-1-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-1-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "underworld-1-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-1-3 campaign-active towards 1",
+      "pass": true,
+      "id": "underworld-1-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-1-4 recover towards 1",
+      "pass": false,
+      "id": "underworld-1-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-2-0 idle towards -1",
+      "pass": false,
+      "id": "underworld-2-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-2-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "underworld-2-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-2-3 campaign-active towards -1",
+      "pass": true,
+      "id": "underworld-2-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-2-4 recover towards -1",
+      "pass": false,
+      "id": "underworld-2-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-2-0 idle towards 1",
+      "pass": false,
+      "id": "underworld-2-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-2-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "underworld-2-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-2-3 campaign-active towards 1",
+      "pass": true,
+      "id": "underworld-2-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-2-4 recover towards 1",
+      "pass": false,
+      "id": "underworld-2-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-0-0 idle towards -1",
+      "pass": false,
+      "id": "underworld-0-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-0-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "underworld-0-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-0-3 campaign-active towards -1",
+      "pass": true,
+      "id": "underworld-0-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-0-4 recover towards -1",
+      "pass": true,
+      "id": "underworld-0-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-0-0 idle towards 1",
+      "pass": false,
+      "id": "underworld-0-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-0-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "underworld-0-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-0-3 campaign-active towards 1",
+      "pass": true,
+      "id": "underworld-0-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-0-4 recover towards 1",
+      "pass": true,
+      "id": "underworld-0-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-1-0 idle towards -1",
+      "pass": false,
+      "id": "underworld-1-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-1-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "underworld-1-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-1-3 campaign-active towards -1",
+      "pass": true,
+      "id": "underworld-1-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-1-4 recover towards -1",
+      "pass": false,
+      "id": "underworld-1-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-1-0 idle towards 1",
+      "pass": false,
+      "id": "underworld-1-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-1-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "underworld-1-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-1-3 campaign-active towards 1",
+      "pass": true,
+      "id": "underworld-1-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-1-4 recover towards 1",
+      "pass": false,
+      "id": "underworld-1-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-2-0 idle towards -1",
+      "pass": false,
+      "id": "underworld-2-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-2-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "underworld-2-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-2-3 campaign-active towards -1",
+      "pass": true,
+      "id": "underworld-2-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-2-4 recover towards -1",
+      "pass": false,
+      "id": "underworld-2-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-2-0 idle towards 1",
+      "pass": false,
+      "id": "underworld-2-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-2-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "underworld-2-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-2-3 campaign-active towards 1",
+      "pass": true,
+      "id": "underworld-2-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-2-4 recover towards 1",
+      "pass": false,
+      "id": "underworld-2-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-2-0 idle towards -1",
+      "pass": false,
+      "id": "underworld-2-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-2-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "underworld-2-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-2-3 campaign-active towards -1",
+      "pass": true,
+      "id": "underworld-2-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-2-4 recover towards -1",
+      "pass": false,
+      "id": "underworld-2-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-2-0 idle towards 1",
+      "pass": false,
+      "id": "underworld-2-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-2-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "underworld-2-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-2-3 campaign-active towards 1",
+      "pass": true,
+      "id": "underworld-2-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-2-4 recover towards 1",
+      "pass": false,
+      "id": "underworld-2-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-1-0 idle towards -1",
+      "pass": false,
+      "id": "underworld-1-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-1-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "underworld-1-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-1-3 campaign-active towards -1",
+      "pass": true,
+      "id": "underworld-1-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-1-4 recover towards -1",
+      "pass": false,
+      "id": "underworld-1-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-1-0 idle towards 1",
+      "pass": false,
+      "id": "underworld-1-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-1-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "underworld-1-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-1-3 campaign-active towards 1",
+      "pass": true,
+      "id": "underworld-1-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-1-4 recover towards 1",
+      "pass": false,
+      "id": "underworld-1-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-0-0 idle towards -1",
+      "pass": false,
+      "id": "underworld-0-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-0-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "underworld-0-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-0-3 campaign-active towards -1",
+      "pass": true,
+      "id": "underworld-0-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-0-4 recover towards -1",
+      "pass": true,
+      "id": "underworld-0-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-0-0 idle towards 1",
+      "pass": false,
+      "id": "underworld-0-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-0-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "underworld-0-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-0-3 campaign-active towards 1",
+      "pass": true,
+      "id": "underworld-0-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-0-4 recover towards 1",
+      "pass": true,
+      "id": "underworld-0-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-1-0 idle towards -1",
+      "pass": false,
+      "id": "underworld-1-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-1-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "underworld-1-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-1-3 campaign-active towards -1",
+      "pass": true,
+      "id": "underworld-1-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-1-4 recover towards -1",
+      "pass": false,
+      "id": "underworld-1-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-1-0 idle towards 1",
+      "pass": false,
+      "id": "underworld-1-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-1-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "underworld-1-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-1-3 campaign-active towards 1",
+      "pass": true,
+      "id": "underworld-1-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-1-4 recover towards 1",
+      "pass": false,
+      "id": "underworld-1-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-2-0 idle towards -1",
+      "pass": false,
+      "id": "underworld-2-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-2-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "underworld-2-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-2-3 campaign-active towards -1",
+      "pass": true,
+      "id": "underworld-2-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-2-4 recover towards -1",
+      "pass": false,
+      "id": "underworld-2-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-2-0 idle towards 1",
+      "pass": false,
+      "id": "underworld-2-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-2-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "underworld-2-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-2-3 campaign-active towards 1",
+      "pass": true,
+      "id": "underworld-2-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-2-4 recover towards 1",
+      "pass": false,
+      "id": "underworld-2-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-0-0 idle towards -1",
+      "pass": false,
+      "id": "underworld-0-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-0-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "underworld-0-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-0-3 campaign-active towards -1",
+      "pass": true,
+      "id": "underworld-0-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-0-4 recover towards -1",
+      "pass": true,
+      "id": "underworld-0-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-0-0 idle towards 1",
+      "pass": false,
+      "id": "underworld-0-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-0-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "underworld-0-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-0-3 campaign-active towards 1",
+      "pass": true,
+      "id": "underworld-0-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-0-4 recover towards 1",
+      "pass": true,
+      "id": "underworld-0-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-1-0 idle towards -1",
+      "pass": false,
+      "id": "underworld-1-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-1-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "underworld-1-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-1-3 campaign-active towards -1",
+      "pass": true,
+      "id": "underworld-1-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-1-4 recover towards -1",
+      "pass": false,
+      "id": "underworld-1-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-1-0 idle towards 1",
+      "pass": false,
+      "id": "underworld-1-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-1-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "underworld-1-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-1-3 campaign-active towards 1",
+      "pass": true,
+      "id": "underworld-1-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-1-4 recover towards 1",
+      "pass": false,
+      "id": "underworld-1-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-2-0 idle towards -1",
+      "pass": false,
+      "id": "underworld-2-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-2-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "underworld-2-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-2-3 campaign-active towards -1",
+      "pass": true,
+      "id": "underworld-2-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-2-4 recover towards -1",
+      "pass": false,
+      "id": "underworld-2-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "underworld-2-0 idle towards 1",
+      "pass": false,
+      "id": "underworld-2-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-2-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "underworld-2-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-2-3 campaign-active towards 1",
+      "pass": true,
+      "id": "underworld-2-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "underworld-2-4 recover towards 1",
+      "pass": false,
+      "id": "underworld-2-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-0-0 idle towards -1",
+      "pass": false,
+      "id": "water-0-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-0-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "water-0-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-0-3 campaign-active towards -1",
+      "pass": true,
+      "id": "water-0-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-0-4 recover towards -1",
+      "pass": false,
+      "id": "water-0-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-0-0 idle towards 1",
+      "pass": false,
+      "id": "water-0-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-0-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "water-0-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-0-3 campaign-active towards 1",
+      "pass": true,
+      "id": "water-0-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-0-4 recover towards 1",
+      "pass": false,
+      "id": "water-0-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-0-0 idle towards -1",
+      "pass": false,
+      "id": "water-0-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-0-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "water-0-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-0-3 campaign-active towards -1",
+      "pass": true,
+      "id": "water-0-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-0-4 recover towards -1",
+      "pass": false,
+      "id": "water-0-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-0-0 idle towards 1",
+      "pass": false,
+      "id": "water-0-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-0-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "water-0-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-0-3 campaign-active towards 1",
+      "pass": true,
+      "id": "water-0-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-0-4 recover towards 1",
+      "pass": false,
+      "id": "water-0-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-1-0 idle towards -1",
+      "pass": false,
+      "id": "water-1-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-1-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "water-1-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-1-3 campaign-active towards -1",
+      "pass": false,
+      "id": "water-1-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-1-4 recover towards -1",
+      "pass": false,
+      "id": "water-1-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-1-0 idle towards 1",
+      "pass": false,
+      "id": "water-1-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-1-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "water-1-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-1-3 campaign-active towards 1",
+      "pass": false,
+      "id": "water-1-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-1-4 recover towards 1",
+      "pass": false,
+      "id": "water-1-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-2-0 idle towards -1",
+      "pass": false,
+      "id": "water-2-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-2-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "water-2-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-2-3 campaign-active towards -1",
+      "pass": false,
+      "id": "water-2-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-2-4 recover towards -1",
+      "pass": false,
+      "id": "water-2-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-2-0 idle towards 1",
+      "pass": false,
+      "id": "water-2-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-2-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "water-2-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-2-3 campaign-active towards 1",
+      "pass": false,
+      "id": "water-2-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-2-4 recover towards 1",
+      "pass": false,
+      "id": "water-2-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-0-0 idle towards -1",
+      "pass": false,
+      "id": "water-0-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-0-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "water-0-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-0-3 campaign-active towards -1",
+      "pass": true,
+      "id": "water-0-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-0-4 recover towards -1",
+      "pass": false,
+      "id": "water-0-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-0-0 idle towards 1",
+      "pass": false,
+      "id": "water-0-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-0-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "water-0-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-0-3 campaign-active towards 1",
+      "pass": true,
+      "id": "water-0-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-0-4 recover towards 1",
+      "pass": false,
+      "id": "water-0-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-1-0 idle towards -1",
+      "pass": false,
+      "id": "water-1-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-1-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "water-1-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-1-3 campaign-active towards -1",
+      "pass": false,
+      "id": "water-1-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-1-4 recover towards -1",
+      "pass": false,
+      "id": "water-1-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-1-0 idle towards 1",
+      "pass": false,
+      "id": "water-1-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-1-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "water-1-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-1-3 campaign-active towards 1",
+      "pass": false,
+      "id": "water-1-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-1-4 recover towards 1",
+      "pass": false,
+      "id": "water-1-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-2-0 idle towards -1",
+      "pass": false,
+      "id": "water-2-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-2-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "water-2-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-2-3 campaign-active towards -1",
+      "pass": false,
+      "id": "water-2-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-2-4 recover towards -1",
+      "pass": false,
+      "id": "water-2-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-2-0 idle towards 1",
+      "pass": false,
+      "id": "water-2-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-2-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "water-2-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-2-3 campaign-active towards 1",
+      "pass": false,
+      "id": "water-2-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-2-4 recover towards 1",
+      "pass": false,
+      "id": "water-2-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-2-0 idle towards -1",
+      "pass": false,
+      "id": "water-2-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-2-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "water-2-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-2-3 campaign-active towards -1",
+      "pass": false,
+      "id": "water-2-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-2-4 recover towards -1",
+      "pass": false,
+      "id": "water-2-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-2-0 idle towards 1",
+      "pass": false,
+      "id": "water-2-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-2-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "water-2-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-2-3 campaign-active towards 1",
+      "pass": false,
+      "id": "water-2-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-2-4 recover towards 1",
+      "pass": false,
+      "id": "water-2-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-1-0 idle towards -1",
+      "pass": false,
+      "id": "water-1-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-1-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "water-1-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-1-3 campaign-active towards -1",
+      "pass": false,
+      "id": "water-1-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-1-4 recover towards -1",
+      "pass": false,
+      "id": "water-1-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-1-0 idle towards 1",
+      "pass": false,
+      "id": "water-1-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-1-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "water-1-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-1-3 campaign-active towards 1",
+      "pass": false,
+      "id": "water-1-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-1-4 recover towards 1",
+      "pass": false,
+      "id": "water-1-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-0-0 idle towards -1",
+      "pass": false,
+      "id": "water-0-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-0-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "water-0-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-0-3 campaign-active towards -1",
+      "pass": true,
+      "id": "water-0-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-0-4 recover towards -1",
+      "pass": false,
+      "id": "water-0-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-0-0 idle towards 1",
+      "pass": false,
+      "id": "water-0-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-0-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "water-0-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-0-3 campaign-active towards 1",
+      "pass": true,
+      "id": "water-0-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-0-4 recover towards 1",
+      "pass": false,
+      "id": "water-0-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-1-0 idle towards -1",
+      "pass": false,
+      "id": "water-1-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-1-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "water-1-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-1-3 campaign-active towards -1",
+      "pass": false,
+      "id": "water-1-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-1-4 recover towards -1",
+      "pass": false,
+      "id": "water-1-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-1-0 idle towards 1",
+      "pass": false,
+      "id": "water-1-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-1-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "water-1-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-1-3 campaign-active towards 1",
+      "pass": false,
+      "id": "water-1-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-1-4 recover towards 1",
+      "pass": false,
+      "id": "water-1-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-2-0 idle towards -1",
+      "pass": false,
+      "id": "water-2-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-2-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "water-2-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-2-3 campaign-active towards -1",
+      "pass": false,
+      "id": "water-2-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-2-4 recover towards -1",
+      "pass": false,
+      "id": "water-2-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-2-0 idle towards 1",
+      "pass": false,
+      "id": "water-2-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-2-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "water-2-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-2-3 campaign-active towards 1",
+      "pass": false,
+      "id": "water-2-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-2-4 recover towards 1",
+      "pass": false,
+      "id": "water-2-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-0-0 idle towards -1",
+      "pass": false,
+      "id": "water-0-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-0-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "water-0-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-0-3 campaign-active towards -1",
+      "pass": true,
+      "id": "water-0-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-0-4 recover towards -1",
+      "pass": false,
+      "id": "water-0-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-0-0 idle towards 1",
+      "pass": false,
+      "id": "water-0-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-0-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "water-0-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-0-3 campaign-active towards 1",
+      "pass": true,
+      "id": "water-0-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-0-4 recover towards 1",
+      "pass": false,
+      "id": "water-0-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-1-0 idle towards -1",
+      "pass": false,
+      "id": "water-1-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-1-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "water-1-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-1-3 campaign-active towards -1",
+      "pass": false,
+      "id": "water-1-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-1-4 recover towards -1",
+      "pass": false,
+      "id": "water-1-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-1-0 idle towards 1",
+      "pass": false,
+      "id": "water-1-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-1-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "water-1-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-1-3 campaign-active towards 1",
+      "pass": false,
+      "id": "water-1-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-1-4 recover towards 1",
+      "pass": false,
+      "id": "water-1-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-2-0 idle towards -1",
+      "pass": false,
+      "id": "water-2-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-2-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "water-2-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-2-3 campaign-active towards -1",
+      "pass": false,
+      "id": "water-2-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-2-4 recover towards -1",
+      "pass": false,
+      "id": "water-2-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "water-2-0 idle towards 1",
+      "pass": false,
+      "id": "water-2-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-2-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "water-2-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-2-3 campaign-active towards 1",
+      "pass": false,
+      "id": "water-2-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "water-2-4 recover towards 1",
+      "pass": false,
+      "id": "water-2-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-0-0 idle towards -1",
+      "pass": false,
+      "id": "dragon-0-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-0-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "dragon-0-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-0-3 campaign-active towards -1",
+      "pass": true,
+      "id": "dragon-0-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-0-4 recover towards -1",
+      "pass": false,
+      "id": "dragon-0-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-0-0 idle towards 1",
+      "pass": false,
+      "id": "dragon-0-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-0-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "dragon-0-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-0-3 campaign-active towards 1",
+      "pass": true,
+      "id": "dragon-0-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-0-4 recover towards 1",
+      "pass": false,
+      "id": "dragon-0-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-0-0 idle towards -1",
+      "pass": false,
+      "id": "dragon-0-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-0-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "dragon-0-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-0-3 campaign-active towards -1",
+      "pass": true,
+      "id": "dragon-0-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-0-4 recover towards -1",
+      "pass": false,
+      "id": "dragon-0-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-0-0 idle towards 1",
+      "pass": false,
+      "id": "dragon-0-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-0-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "dragon-0-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-0-3 campaign-active towards 1",
+      "pass": true,
+      "id": "dragon-0-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-0-4 recover towards 1",
+      "pass": false,
+      "id": "dragon-0-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-1-0 idle towards -1",
+      "pass": false,
+      "id": "dragon-1-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-1-2 campaign-windup towards -1",
+      "pass": true,
+      "id": "dragon-1-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-1-3 campaign-active towards -1",
+      "pass": true,
+      "id": "dragon-1-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-1-4 recover towards -1",
+      "pass": false,
+      "id": "dragon-1-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-1-0 idle towards 1",
+      "pass": false,
+      "id": "dragon-1-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-1-2 campaign-windup towards 1",
+      "pass": true,
+      "id": "dragon-1-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-1-3 campaign-active towards 1",
+      "pass": true,
+      "id": "dragon-1-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-1-4 recover towards 1",
+      "pass": false,
+      "id": "dragon-1-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-2-0 idle towards -1",
+      "pass": false,
+      "id": "dragon-2-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-2-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "dragon-2-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-2-3 campaign-active towards -1",
+      "pass": true,
+      "id": "dragon-2-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-2-4 recover towards -1",
+      "pass": false,
+      "id": "dragon-2-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-2-0 idle towards 1",
+      "pass": false,
+      "id": "dragon-2-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-2-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "dragon-2-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-2-3 campaign-active towards 1",
+      "pass": true,
+      "id": "dragon-2-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-2-4 recover towards 1",
+      "pass": false,
+      "id": "dragon-2-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-0-0 idle towards -1",
+      "pass": false,
+      "id": "dragon-0-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-0-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "dragon-0-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-0-3 campaign-active towards -1",
+      "pass": true,
+      "id": "dragon-0-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-0-4 recover towards -1",
+      "pass": false,
+      "id": "dragon-0-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-0-0 idle towards 1",
+      "pass": false,
+      "id": "dragon-0-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-0-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "dragon-0-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-0-3 campaign-active towards 1",
+      "pass": true,
+      "id": "dragon-0-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-0-4 recover towards 1",
+      "pass": false,
+      "id": "dragon-0-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-1-0 idle towards -1",
+      "pass": false,
+      "id": "dragon-1-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-1-2 campaign-windup towards -1",
+      "pass": true,
+      "id": "dragon-1-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-1-3 campaign-active towards -1",
+      "pass": true,
+      "id": "dragon-1-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-1-4 recover towards -1",
+      "pass": false,
+      "id": "dragon-1-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-1-0 idle towards 1",
+      "pass": false,
+      "id": "dragon-1-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-1-2 campaign-windup towards 1",
+      "pass": true,
+      "id": "dragon-1-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-1-3 campaign-active towards 1",
+      "pass": true,
+      "id": "dragon-1-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-1-4 recover towards 1",
+      "pass": false,
+      "id": "dragon-1-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-2-0 idle towards -1",
+      "pass": false,
+      "id": "dragon-2-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-2-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "dragon-2-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-2-3 campaign-active towards -1",
+      "pass": true,
+      "id": "dragon-2-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-2-4 recover towards -1",
+      "pass": false,
+      "id": "dragon-2-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-2-0 idle towards 1",
+      "pass": false,
+      "id": "dragon-2-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-2-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "dragon-2-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-2-3 campaign-active towards 1",
+      "pass": true,
+      "id": "dragon-2-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-2-4 recover towards 1",
+      "pass": false,
+      "id": "dragon-2-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-2-0 idle towards -1",
+      "pass": false,
+      "id": "dragon-2-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-2-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "dragon-2-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-2-3 campaign-active towards -1",
+      "pass": true,
+      "id": "dragon-2-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-2-4 recover towards -1",
+      "pass": false,
+      "id": "dragon-2-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-2-0 idle towards 1",
+      "pass": false,
+      "id": "dragon-2-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-2-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "dragon-2-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-2-3 campaign-active towards 1",
+      "pass": true,
+      "id": "dragon-2-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-2-4 recover towards 1",
+      "pass": false,
+      "id": "dragon-2-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-1-0 idle towards -1",
+      "pass": false,
+      "id": "dragon-1-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-1-2 campaign-windup towards -1",
+      "pass": true,
+      "id": "dragon-1-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-1-3 campaign-active towards -1",
+      "pass": true,
+      "id": "dragon-1-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-1-4 recover towards -1",
+      "pass": false,
+      "id": "dragon-1-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-1-0 idle towards 1",
+      "pass": false,
+      "id": "dragon-1-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-1-2 campaign-windup towards 1",
+      "pass": true,
+      "id": "dragon-1-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-1-3 campaign-active towards 1",
+      "pass": true,
+      "id": "dragon-1-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-1-4 recover towards 1",
+      "pass": false,
+      "id": "dragon-1-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-0-0 idle towards -1",
+      "pass": false,
+      "id": "dragon-0-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-0-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "dragon-0-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-0-3 campaign-active towards -1",
+      "pass": true,
+      "id": "dragon-0-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-0-4 recover towards -1",
+      "pass": false,
+      "id": "dragon-0-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-0-0 idle towards 1",
+      "pass": false,
+      "id": "dragon-0-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-0-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "dragon-0-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-0-3 campaign-active towards 1",
+      "pass": true,
+      "id": "dragon-0-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-0-4 recover towards 1",
+      "pass": false,
+      "id": "dragon-0-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-1-0 idle towards -1",
+      "pass": false,
+      "id": "dragon-1-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-1-2 campaign-windup towards -1",
+      "pass": true,
+      "id": "dragon-1-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-1-3 campaign-active towards -1",
+      "pass": true,
+      "id": "dragon-1-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-1-4 recover towards -1",
+      "pass": false,
+      "id": "dragon-1-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-1-0 idle towards 1",
+      "pass": false,
+      "id": "dragon-1-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-1-2 campaign-windup towards 1",
+      "pass": true,
+      "id": "dragon-1-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-1-3 campaign-active towards 1",
+      "pass": true,
+      "id": "dragon-1-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-1-4 recover towards 1",
+      "pass": false,
+      "id": "dragon-1-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-2-0 idle towards -1",
+      "pass": false,
+      "id": "dragon-2-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-2-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "dragon-2-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-2-3 campaign-active towards -1",
+      "pass": true,
+      "id": "dragon-2-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-2-4 recover towards -1",
+      "pass": false,
+      "id": "dragon-2-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-2-0 idle towards 1",
+      "pass": false,
+      "id": "dragon-2-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-2-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "dragon-2-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-2-3 campaign-active towards 1",
+      "pass": true,
+      "id": "dragon-2-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-2-4 recover towards 1",
+      "pass": false,
+      "id": "dragon-2-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-0-0 idle towards -1",
+      "pass": false,
+      "id": "dragon-0-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-0-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "dragon-0-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-0-3 campaign-active towards -1",
+      "pass": true,
+      "id": "dragon-0-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-0-4 recover towards -1",
+      "pass": false,
+      "id": "dragon-0-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-0-0 idle towards 1",
+      "pass": false,
+      "id": "dragon-0-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-0-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "dragon-0-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-0-3 campaign-active towards 1",
+      "pass": true,
+      "id": "dragon-0-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-0-4 recover towards 1",
+      "pass": false,
+      "id": "dragon-0-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-1-0 idle towards -1",
+      "pass": false,
+      "id": "dragon-1-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-1-2 campaign-windup towards -1",
+      "pass": true,
+      "id": "dragon-1-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-1-3 campaign-active towards -1",
+      "pass": true,
+      "id": "dragon-1-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-1-4 recover towards -1",
+      "pass": false,
+      "id": "dragon-1-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-1-0 idle towards 1",
+      "pass": false,
+      "id": "dragon-1-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-1-2 campaign-windup towards 1",
+      "pass": true,
+      "id": "dragon-1-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-1-3 campaign-active towards 1",
+      "pass": true,
+      "id": "dragon-1-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-1-4 recover towards 1",
+      "pass": false,
+      "id": "dragon-1-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-2-0 idle towards -1",
+      "pass": false,
+      "id": "dragon-2-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-2-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "dragon-2-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-2-3 campaign-active towards -1",
+      "pass": true,
+      "id": "dragon-2-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-2-4 recover towards -1",
+      "pass": false,
+      "id": "dragon-2-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "dragon-2-0 idle towards 1",
+      "pass": false,
+      "id": "dragon-2-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-2-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "dragon-2-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-2-3 campaign-active towards 1",
+      "pass": true,
+      "id": "dragon-2-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "dragon-2-4 recover towards 1",
+      "pass": false,
+      "id": "dragon-2-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-0-0 idle towards -1",
+      "pass": false,
+      "id": "heaven-0-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-0-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "heaven-0-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-0-3 campaign-active towards -1",
+      "pass": true,
+      "id": "heaven-0-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-0-4 recover towards -1",
+      "pass": true,
+      "id": "heaven-0-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-0-0 idle towards 1",
+      "pass": false,
+      "id": "heaven-0-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-0-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "heaven-0-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-0-3 campaign-active towards 1",
+      "pass": true,
+      "id": "heaven-0-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-0-4 recover towards 1",
+      "pass": true,
+      "id": "heaven-0-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-0-0 idle towards -1",
+      "pass": false,
+      "id": "heaven-0-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-0-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "heaven-0-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-0-3 campaign-active towards -1",
+      "pass": true,
+      "id": "heaven-0-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-0-4 recover towards -1",
+      "pass": true,
+      "id": "heaven-0-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-0-0 idle towards 1",
+      "pass": false,
+      "id": "heaven-0-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-0-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "heaven-0-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-0-3 campaign-active towards 1",
+      "pass": true,
+      "id": "heaven-0-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-0-4 recover towards 1",
+      "pass": true,
+      "id": "heaven-0-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-1-0 idle towards -1",
+      "pass": false,
+      "id": "heaven-1-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-1-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "heaven-1-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-1-3 campaign-active towards -1",
+      "pass": false,
+      "id": "heaven-1-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-1-4 recover towards -1",
+      "pass": false,
+      "id": "heaven-1-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-1-0 idle towards 1",
+      "pass": false,
+      "id": "heaven-1-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-1-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "heaven-1-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-1-3 campaign-active towards 1",
+      "pass": false,
+      "id": "heaven-1-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-1-4 recover towards 1",
+      "pass": false,
+      "id": "heaven-1-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-2-0 idle towards -1",
+      "pass": false,
+      "id": "heaven-2-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-2-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "heaven-2-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-2-3 campaign-active towards -1",
+      "pass": true,
+      "id": "heaven-2-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-2-4 recover towards -1",
+      "pass": false,
+      "id": "heaven-2-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-2-0 idle towards 1",
+      "pass": false,
+      "id": "heaven-2-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-2-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "heaven-2-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-2-3 campaign-active towards 1",
+      "pass": true,
+      "id": "heaven-2-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-2-4 recover towards 1",
+      "pass": false,
+      "id": "heaven-2-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-0-0 idle towards -1",
+      "pass": false,
+      "id": "heaven-0-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-0-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "heaven-0-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-0-3 campaign-active towards -1",
+      "pass": true,
+      "id": "heaven-0-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-0-4 recover towards -1",
+      "pass": true,
+      "id": "heaven-0-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-0-0 idle towards 1",
+      "pass": false,
+      "id": "heaven-0-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-0-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "heaven-0-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-0-3 campaign-active towards 1",
+      "pass": true,
+      "id": "heaven-0-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-0-4 recover towards 1",
+      "pass": true,
+      "id": "heaven-0-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-1-0 idle towards -1",
+      "pass": false,
+      "id": "heaven-1-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-1-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "heaven-1-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-1-3 campaign-active towards -1",
+      "pass": false,
+      "id": "heaven-1-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-1-4 recover towards -1",
+      "pass": false,
+      "id": "heaven-1-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-1-0 idle towards 1",
+      "pass": false,
+      "id": "heaven-1-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-1-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "heaven-1-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-1-3 campaign-active towards 1",
+      "pass": false,
+      "id": "heaven-1-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-1-4 recover towards 1",
+      "pass": false,
+      "id": "heaven-1-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-2-0 idle towards -1",
+      "pass": false,
+      "id": "heaven-2-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-2-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "heaven-2-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-2-3 campaign-active towards -1",
+      "pass": true,
+      "id": "heaven-2-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-2-4 recover towards -1",
+      "pass": false,
+      "id": "heaven-2-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-2-0 idle towards 1",
+      "pass": false,
+      "id": "heaven-2-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-2-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "heaven-2-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-2-3 campaign-active towards 1",
+      "pass": true,
+      "id": "heaven-2-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-2-4 recover towards 1",
+      "pass": false,
+      "id": "heaven-2-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-2-0 idle towards -1",
+      "pass": false,
+      "id": "heaven-2-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-2-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "heaven-2-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-2-3 campaign-active towards -1",
+      "pass": true,
+      "id": "heaven-2-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-2-4 recover towards -1",
+      "pass": false,
+      "id": "heaven-2-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-2-0 idle towards 1",
+      "pass": false,
+      "id": "heaven-2-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-2-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "heaven-2-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-2-3 campaign-active towards 1",
+      "pass": true,
+      "id": "heaven-2-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-2-4 recover towards 1",
+      "pass": false,
+      "id": "heaven-2-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-1-0 idle towards -1",
+      "pass": false,
+      "id": "heaven-1-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-1-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "heaven-1-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-1-3 campaign-active towards -1",
+      "pass": false,
+      "id": "heaven-1-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-1-4 recover towards -1",
+      "pass": false,
+      "id": "heaven-1-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-1-0 idle towards 1",
+      "pass": false,
+      "id": "heaven-1-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-1-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "heaven-1-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-1-3 campaign-active towards 1",
+      "pass": false,
+      "id": "heaven-1-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-1-4 recover towards 1",
+      "pass": false,
+      "id": "heaven-1-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-0-0 idle towards -1",
+      "pass": false,
+      "id": "heaven-0-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-0-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "heaven-0-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-0-3 campaign-active towards -1",
+      "pass": true,
+      "id": "heaven-0-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-0-4 recover towards -1",
+      "pass": true,
+      "id": "heaven-0-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-0-0 idle towards 1",
+      "pass": false,
+      "id": "heaven-0-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-0-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "heaven-0-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-0-3 campaign-active towards 1",
+      "pass": true,
+      "id": "heaven-0-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-0-4 recover towards 1",
+      "pass": true,
+      "id": "heaven-0-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-1-0 idle towards -1",
+      "pass": false,
+      "id": "heaven-1-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-1-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "heaven-1-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-1-3 campaign-active towards -1",
+      "pass": false,
+      "id": "heaven-1-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-1-4 recover towards -1",
+      "pass": false,
+      "id": "heaven-1-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-1-0 idle towards 1",
+      "pass": false,
+      "id": "heaven-1-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-1-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "heaven-1-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-1-3 campaign-active towards 1",
+      "pass": false,
+      "id": "heaven-1-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-1-4 recover towards 1",
+      "pass": false,
+      "id": "heaven-1-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-2-0 idle towards -1",
+      "pass": false,
+      "id": "heaven-2-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-2-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "heaven-2-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-2-3 campaign-active towards -1",
+      "pass": true,
+      "id": "heaven-2-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-2-4 recover towards -1",
+      "pass": false,
+      "id": "heaven-2-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-2-0 idle towards 1",
+      "pass": false,
+      "id": "heaven-2-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-2-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "heaven-2-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-2-3 campaign-active towards 1",
+      "pass": true,
+      "id": "heaven-2-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-2-4 recover towards 1",
+      "pass": false,
+      "id": "heaven-2-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-0-0 idle towards -1",
+      "pass": false,
+      "id": "heaven-0-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-0-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "heaven-0-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-0-3 campaign-active towards -1",
+      "pass": true,
+      "id": "heaven-0-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-0-4 recover towards -1",
+      "pass": true,
+      "id": "heaven-0-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-0-0 idle towards 1",
+      "pass": false,
+      "id": "heaven-0-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-0-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "heaven-0-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-0-3 campaign-active towards 1",
+      "pass": true,
+      "id": "heaven-0-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-0-4 recover towards 1",
+      "pass": true,
+      "id": "heaven-0-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-1-0 idle towards -1",
+      "pass": false,
+      "id": "heaven-1-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-1-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "heaven-1-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-1-3 campaign-active towards -1",
+      "pass": false,
+      "id": "heaven-1-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-1-4 recover towards -1",
+      "pass": false,
+      "id": "heaven-1-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-1-0 idle towards 1",
+      "pass": false,
+      "id": "heaven-1-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-1-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "heaven-1-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-1-3 campaign-active towards 1",
+      "pass": false,
+      "id": "heaven-1-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-1-4 recover towards 1",
+      "pass": false,
+      "id": "heaven-1-4",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-2-0 idle towards -1",
+      "pass": false,
+      "id": "heaven-2-0",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-2-2 campaign-windup towards -1",
+      "pass": false,
+      "id": "heaven-2-2",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-2-3 campaign-active towards -1",
+      "pass": true,
+      "id": "heaven-2-3",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-2-4 recover towards -1",
+      "pass": false,
+      "id": "heaven-2-4",
+      "scaleX": -1,
+      "face": -1
+    },
+    {
+      "name": "heaven-2-0 idle towards 1",
+      "pass": false,
+      "id": "heaven-2-0",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-2-2 campaign-windup towards 1",
+      "pass": false,
+      "id": "heaven-2-2",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-2-3 campaign-active towards 1",
+      "pass": true,
+      "id": "heaven-2-3",
+      "scaleX": 1,
+      "face": 1
+    },
+    {
+      "name": "heaven-2-4 recover towards 1",
+      "pass": false,
+      "id": "heaven-2-4",
+      "scaleX": 1,
+      "face": 1
+    }
+  ],
+  "errors": [],
+  "captures": [
+    {
+      "name": "cloud-caster-windup",
+      "face": -1
+    },
+    {
+      "name": "water-caster-windup",
+      "face": -1
+    }
+  ],
+  "pass": false
+}

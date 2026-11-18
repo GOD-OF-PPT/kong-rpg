@@ -1,0 +1,61 @@
+{
+  "version": "7.0.1",
+  "results": [
+    {
+      "name": "charged staff tip reaches, pierces and hits a distant shield once",
+      "pass": true
+    },
+    {
+      "name": "body contact does less and cannot pierce the front shield",
+      "pass": true
+    },
+    {
+      "name": "tap staff cannot replace the old close triple combo for free",
+      "pass": true
+    },
+    {
+      "name": "ground pole gives real ascent without damage and cannot repeat in midair",
+      "pass": true
+    },
+    {
+      "name": "pole cannot launch over an empty gap without reaching a surface",
+      "pass": true
+    },
+    {
+      "name": "Nezha can ascend and throw a physical ring during flight",
+      "pass": true
+    },
+    {
+      "name": "air release and repress never refills wheel fuel",
+      "pass": true
+    },
+    {
+      "name": "landing with U released recharges; holding U never refills it",
+      "pass": true
+    },
+    {
+      "name": "replacing cloud removes its extra wheel capacity without a free flight",
+      "pass": true
+    },
+    {
+      "name": "hit cancels both hero abilities, K cancels charge and no refunds",
+      "pass": true
+    },
+    {
+      "name": "charge restore never auto-fires on cleared input; active flight preserves fuel",
+      "pass": true
+    },
+    {
+      "name": "old v6 remains a legacy ruleset",
+      "pass": true
+    },
+    {
+      "name": "shield locks a real break-distance path and has recovery",
+      "pass": true
+    },
+    {
+      "name": "air seal locks before flight moves; saved warning matches danger",
+      "pass": true
+    }
+  ]
+}

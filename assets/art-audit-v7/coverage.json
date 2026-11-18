@@ -1,0 +1,1887 @@
+{
+  "images": {
+    "mountain": {
+      "width": 1672,
+      "height": 941
+    },
+    "ferry": {
+      "width": 1672,
+      "height": 941
+    },
+    "sanctuary": {
+      "width": 1672,
+      "height": 941
+    },
+    "wukong": {
+      "width": 1774,
+      "height": 887
+    },
+    "enemies": {
+      "width": 1774,
+      "height": 887
+    },
+    "stone": {
+      "width": 2172,
+      "height": 724
+    },
+    "run": {
+      "width": 2172,
+      "height": 724
+    },
+    "props": {
+      "width": 2172,
+      "height": 724
+    },
+    "uiScroll": {
+      "width": 1024,
+      "height": 1536
+    },
+    "uiIcons": {
+      "width": 1536,
+      "height": 1024
+    },
+    "uiFolio": {
+      "width": 1860,
+      "height": 846
+    },
+    "combo": {
+      "width": 1254,
+      "height": 1254
+    },
+    "impacts": {
+      "width": 1254,
+      "height": 1254
+    },
+    "nodes": {
+      "width": 2172,
+      "height": 724
+    },
+    "nodesDone": {
+      "width": 2172,
+      "height": 724
+    },
+    "guardians": {
+      "width": 1254,
+      "height": 1254
+    },
+    "nezha": {
+      "width": 768,
+      "height": 128
+    },
+    "nezhaPortrait": {
+      "width": 2172,
+      "height": 724
+    },
+    "mapProps": {
+      "width": 512,
+      "height": 384
+    },
+    "mapTerrain": {
+      "width": 512,
+      "height": 384
+    },
+    "mapDressing": {
+      "width": 512,
+      "height": 256
+    },
+    "sigWukong": {
+      "width": 512,
+      "height": 128
+    },
+    "sigNezha": {
+      "width": 512,
+      "height": 128
+    },
+    "sigFx": {
+      "width": 512,
+      "height": 256
+    },
+    "sceneProps": {
+      "width": 256,
+      "height": 64
+    },
+    "actorStates": {
+      "width": 512,
+      "height": 128
+    }
+  },
+  "frames": {
+    "ArtFrames": [
+      {
+        "id": "wukong-idle",
+        "image": "wukong",
+        "r": [
+          85,
+          40,
+          280,
+          405
+        ],
+        "a": [
+          218,
+          427
+        ]
+      },
+      {
+        "id": "wukong-run",
+        "image": "wukong",
+        "r": [
+          430,
+          90,
+          400,
+          355
+        ],
+        "a": [
+          664,
+          426
+        ]
+      },
+      {
+        "id": "wukong-jump",
+        "image": "wukong",
+        "r": [
+          905,
+          60,
+          400,
+          360
+        ],
+        "a": [
+          1108,
+          384
+        ]
+      },
+      {
+        "id": "wukong-fall",
+        "image": "wukong",
+        "r": [
+          1365,
+          90,
+          390,
+          360
+        ],
+        "a": [
+          1564,
+          443
+        ]
+      },
+      {
+        "id": "wukong-windup",
+        "image": "wukong",
+        "r": [
+          30,
+          465,
+          395,
+          370
+        ],
+        "a": [
+          248,
+          815
+        ]
+      },
+      {
+        "id": "wukong-attack",
+        "image": "wukong",
+        "r": [
+          430,
+          490,
+          550,
+          345
+        ],
+        "a": [
+          651,
+          816
+        ]
+      },
+      {
+        "id": "wukong-heavy",
+        "image": "wukong",
+        "r": [
+          430,
+          490,
+          550,
+          345
+        ],
+        "a": [
+          651,
+          816
+        ]
+      },
+      {
+        "id": "wukong-recover",
+        "image": "wukong",
+        "r": [
+          980,
+          495,
+          393,
+          340
+        ],
+        "a": [
+          1118,
+          816
+        ]
+      },
+      {
+        "id": "wukong-hurt",
+        "image": "wukong",
+        "r": [
+          1380,
+          510,
+          370,
+          325
+        ],
+        "a": [
+          1554,
+          816
+        ]
+      },
+      {
+        "id": "wukong-death",
+        "image": "wukong",
+        "r": [
+          1380,
+          510,
+          370,
+          325
+        ],
+        "a": [
+          1554,
+          816
+        ]
+      },
+      {
+        "id": "wukong-dash",
+        "image": "wukong",
+        "r": [
+          430,
+          90,
+          400,
+          355
+        ],
+        "a": [
+          664,
+          426
+        ]
+      },
+      {
+        "id": "run-0",
+        "image": "run",
+        "r": [
+          12,
+          220,
+          341,
+          330
+        ],
+        "a": [
+          257,
+          548
+        ]
+      },
+      {
+        "id": "run-1",
+        "image": "run",
+        "r": [
+          370,
+          220,
+          323,
+          330
+        ],
+        "a": [
+          600,
+          548
+        ]
+      },
+      {
+        "id": "run-2",
+        "image": "run",
+        "r": [
+          716,
+          220,
+          321,
+          330
+        ],
+        "a": [
+          944,
+          548
+        ]
+      },
+      {
+        "id": "run-3",
+        "image": "run",
+        "r": [
+          1074,
+          220,
+          363,
+          330
+        ],
+        "a": [
+          1335,
+          548
+        ]
+      },
+      {
+        "id": "run-4",
+        "image": "run",
+        "r": [
+          1446,
+          220,
+          332,
+          330
+        ],
+        "a": [
+          1684,
+          548
+        ]
+      },
+      {
+        "id": "run-5",
+        "image": "run",
+        "r": [
+          1808,
+          220,
+          310,
+          330
+        ],
+        "a": [
+          2025,
+          548
+        ]
+      },
+      {
+        "id": "blade-0",
+        "image": "enemies",
+        "r": [
+          0,
+          60,
+          420,
+          395
+        ],
+        "a": [
+          238,
+          447
+        ]
+      },
+      {
+        "id": "blade-1",
+        "image": "enemies",
+        "r": [
+          25,
+          460,
+          395,
+          405
+        ],
+        "a": [
+          245,
+          852
+        ]
+      },
+      {
+        "id": "shield-0",
+        "image": "enemies",
+        "r": [
+          460,
+          25,
+          442,
+          430
+        ],
+        "a": [
+          688,
+          447
+        ]
+      },
+      {
+        "id": "shield-1",
+        "image": "enemies",
+        "r": [
+          465,
+          457,
+          437,
+          408
+        ],
+        "a": [
+          688,
+          852
+        ]
+      },
+      {
+        "id": "caster-0",
+        "image": "enemies",
+        "r": [
+          925,
+          15,
+          400,
+          433
+        ],
+        "a": [
+          1115,
+          435
+        ]
+      },
+      {
+        "id": "caster-1",
+        "image": "enemies",
+        "r": [
+          920,
+          450,
+          405,
+          405
+        ],
+        "a": [
+          1115,
+          840
+        ]
+      },
+      {
+        "id": "boss-0",
+        "image": "enemies",
+        "r": [
+          1350,
+          0,
+          410,
+          453
+        ],
+        "a": [
+          1558,
+          447
+        ]
+      },
+      {
+        "id": "boss-1",
+        "image": "enemies",
+        "r": [
+          1335,
+          447,
+          439,
+          420
+        ],
+        "a": [
+          1560,
+          852
+        ]
+      },
+      {
+        "id": "combo-0",
+        "image": "combo",
+        "r": [
+          0,
+          65,
+          385,
+          350
+        ],
+        "a": [
+          202,
+          401
+        ]
+      },
+      {
+        "id": "combo-1",
+        "image": "combo",
+        "r": [
+          390,
+          65,
+          537,
+          350
+        ],
+        "a": [
+          600,
+          401
+        ]
+      },
+      {
+        "id": "combo-2",
+        "image": "combo",
+        "r": [
+          930,
+          65,
+          324,
+          350
+        ],
+        "a": [
+          1085,
+          401
+        ]
+      },
+      {
+        "id": "combo-3",
+        "image": "combo",
+        "r": [
+          0,
+          440,
+          390,
+          390
+        ],
+        "a": [
+          205,
+          819
+        ]
+      },
+      {
+        "id": "combo-4",
+        "image": "combo",
+        "r": [
+          390,
+          435,
+          500,
+          395
+        ],
+        "a": [
+          600,
+          819
+        ]
+      },
+      {
+        "id": "combo-5",
+        "image": "combo",
+        "r": [
+          895,
+          430,
+          359,
+          400
+        ],
+        "a": [
+          1080,
+          819
+        ]
+      },
+      {
+        "id": "combo-6",
+        "image": "combo",
+        "r": [
+          0,
+          832,
+          423,
+          365
+        ],
+        "a": [
+          202,
+          1189
+        ]
+      },
+      {
+        "id": "combo-7",
+        "image": "combo",
+        "r": [
+          425,
+          855,
+          477,
+          342
+        ],
+        "a": [
+          603,
+          1189
+        ]
+      },
+      {
+        "id": "combo-8",
+        "image": "combo",
+        "r": [
+          902,
+          855,
+          352,
+          342
+        ],
+        "a": [
+          1082,
+          1189
+        ]
+      },
+      {
+        "id": "guardian-0-0",
+        "image": "guardians",
+        "r": [
+          33,
+          85,
+          399,
+          297
+        ],
+        "a": [
+          270,
+          378
+        ]
+      },
+      {
+        "id": "guardian-0-1",
+        "image": "guardians",
+        "r": [
+          94,
+          430,
+          356,
+          375
+        ],
+        "a": [
+          274,
+          800
+        ]
+      },
+      {
+        "id": "guardian-1-0",
+        "image": "guardians",
+        "r": [
+          485,
+          90,
+          385,
+          292
+        ],
+        "a": [
+          675,
+          378
+        ]
+      },
+      {
+        "id": "guardian-1-1",
+        "image": "guardians",
+        "r": [
+          500,
+          452,
+          384,
+          354
+        ],
+        "a": [
+          690,
+          800
+        ]
+      },
+      {
+        "id": "guardian-2-0",
+        "image": "guardians",
+        "r": [
+          885,
+          82,
+          325,
+          300
+        ],
+        "a": [
+          1076,
+          378
+        ]
+      },
+      {
+        "id": "guardian-2-1",
+        "image": "guardians",
+        "r": [
+          940,
+          486,
+          290,
+          320
+        ],
+        "a": [
+          1090,
+          800
+        ]
+      },
+      {
+        "id": "prop-seal",
+        "image": "props",
+        "r": [
+          75,
+          188,
+          620,
+          495
+        ]
+      },
+      {
+        "id": "prop-lamp",
+        "image": "props",
+        "r": [
+          850,
+          210,
+          410,
+          473
+        ]
+      },
+      {
+        "id": "prop-gate",
+        "image": "props",
+        "r": [
+          1390,
+          25,
+          765,
+          658
+        ]
+      },
+      {
+        "id": "node-0",
+        "image": "nodes",
+        "r": [
+          0,
+          0,
+          690,
+          724
+        ]
+      },
+      {
+        "id": "node-done-0",
+        "image": "nodesDone",
+        "r": [
+          0,
+          0,
+          690,
+          724
+        ]
+      },
+      {
+        "id": "node-1",
+        "image": "nodes",
+        "r": [
+          700,
+          0,
+          710,
+          724
+        ]
+      },
+      {
+        "id": "node-done-1",
+        "image": "nodesDone",
+        "r": [
+          700,
+          0,
+          710,
+          724
+        ]
+      },
+      {
+        "id": "node-2",
+        "image": "nodes",
+        "r": [
+          1420,
+          0,
+          752,
+          724
+        ]
+      },
+      {
+        "id": "node-done-2",
+        "image": "nodesDone",
+        "r": [
+          1420,
+          0,
+          752,
+          724
+        ]
+      },
+      {
+        "id": "dialog-scroll",
+        "image": "uiScroll",
+        "r": [
+          172,
+          110,
+          680,
+          1390
+        ]
+      },
+      {
+        "id": "dialog-folio",
+        "image": "uiFolio",
+        "r": [
+          0,
+          0,
+          1860,
+          846
+        ]
+      },
+      {
+        "id": "dialog-wukong",
+        "image": "wukong",
+        "r": [
+          85,
+          40,
+          280,
+          405
+        ]
+      },
+      {
+        "id": "dialog-nezha",
+        "image": "nezhaPortrait",
+        "r": [
+          15,
+          193,
+          325,
+          433
+        ]
+      },
+      {
+        "id": "dialog-lamp",
+        "image": "props",
+        "r": [
+          850,
+          210,
+          410,
+          473
+        ]
+      },
+      {
+        "id": "cloud",
+        "image": "uiIcons",
+        "r": [
+          0,
+          0,
+          384,
+          512
+        ]
+      },
+      {
+        "id": "echo",
+        "image": "uiIcons",
+        "r": [
+          384,
+          0,
+          384,
+          512
+        ]
+      },
+      {
+        "id": "staff",
+        "image": "uiIcons",
+        "r": [
+          768,
+          0,
+          384,
+          512
+        ]
+      },
+      {
+        "id": "mirror",
+        "image": "uiIcons",
+        "r": [
+          1152,
+          0,
+          384,
+          512
+        ]
+      },
+      {
+        "id": "flame",
+        "image": "uiIcons",
+        "r": [
+          0,
+          512,
+          384,
+          512
+        ]
+      },
+      {
+        "id": "mercy",
+        "image": "uiIcons",
+        "r": [
+          384,
+          512,
+          384,
+          512
+        ]
+      },
+      {
+        "id": "rest",
+        "image": "uiIcons",
+        "r": [
+          768,
+          512,
+          384,
+          512
+        ]
+      },
+      {
+        "id": "crest",
+        "image": "uiIcons",
+        "r": [
+          1152,
+          512,
+          384,
+          512
+        ]
+      },
+      {
+        "id": "nezha-0",
+        "image": "nezha",
+        "r": [
+          0,
+          0,
+          128,
+          128
+        ]
+      },
+      {
+        "id": "nezha-1",
+        "image": "nezha",
+        "r": [
+          128,
+          0,
+          128,
+          128
+        ]
+      },
+      {
+        "id": "nezha-2",
+        "image": "nezha",
+        "r": [
+          256,
+          0,
+          128,
+          128
+        ]
+      },
+      {
+        "id": "nezha-3",
+        "image": "nezha",
+        "r": [
+          384,
+          0,
+          128,
+          128
+        ]
+      },
+      {
+        "id": "nezha-4",
+        "image": "nezha",
+        "r": [
+          512,
+          0,
+          128,
+          128
+        ]
+      },
+      {
+        "id": "nezha-5",
+        "image": "nezha",
+        "r": [
+          640,
+          0,
+          128,
+          128
+        ]
+      },
+      {
+        "id": "impact-0",
+        "image": "impacts",
+        "r": [
+          0,
+          0,
+          313.5,
+          313.5
+        ]
+      },
+      {
+        "id": "impact-1",
+        "image": "impacts",
+        "r": [
+          313.5,
+          0,
+          313.5,
+          313.5
+        ]
+      },
+      {
+        "id": "impact-2",
+        "image": "impacts",
+        "r": [
+          627,
+          0,
+          313.5,
+          313.5
+        ]
+      },
+      {
+        "id": "impact-3",
+        "image": "impacts",
+        "r": [
+          940.5,
+          0,
+          313.5,
+          313.5
+        ]
+      },
+      {
+        "id": "impact-4",
+        "image": "impacts",
+        "r": [
+          0,
+          313.5,
+          313.5,
+          313.5
+        ]
+      },
+      {
+        "id": "impact-5",
+        "image": "impacts",
+        "r": [
+          313.5,
+          313.5,
+          313.5,
+          313.5
+        ]
+      },
+      {
+        "id": "impact-6",
+        "image": "impacts",
+        "r": [
+          627,
+          313.5,
+          313.5,
+          313.5
+        ]
+      },
+      {
+        "id": "impact-7",
+        "image": "impacts",
+        "r": [
+          940.5,
+          313.5,
+          313.5,
+          313.5
+        ]
+      },
+      {
+        "id": "impact-8",
+        "image": "impacts",
+        "r": [
+          0,
+          627,
+          313.5,
+          313.5
+        ]
+      },
+      {
+        "id": "impact-9",
+        "image": "impacts",
+        "r": [
+          313.5,
+          627,
+          313.5,
+          313.5
+        ]
+      },
+      {
+        "id": "impact-10",
+        "image": "impacts",
+        "r": [
+          627,
+          627,
+          313.5,
+          313.5
+        ]
+      },
+      {
+        "id": "impact-11",
+        "image": "impacts",
+        "r": [
+          940.5,
+          627,
+          313.5,
+          313.5
+        ]
+      },
+      {
+        "id": "impact-12",
+        "image": "impacts",
+        "r": [
+          0,
+          940.5,
+          313.5,
+          313.5
+        ]
+      },
+      {
+        "id": "impact-13",
+        "image": "impacts",
+        "r": [
+          313.5,
+          940.5,
+          313.5,
+          313.5
+        ]
+      },
+      {
+        "id": "impact-14",
+        "image": "impacts",
+        "r": [
+          627,
+          940.5,
+          313.5,
+          313.5
+        ]
+      },
+      {
+        "id": "impact-15",
+        "image": "impacts",
+        "r": [
+          940.5,
+          940.5,
+          313.5,
+          313.5
+        ]
+      },
+      {
+        "id": "stone",
+        "image": "stone",
+        "r": [
+          90,
+          250,
+          1990,
+          260
+        ]
+      }
+    ],
+    "MapFrames": [
+      {
+        "id": "trial-ready",
+        "image": "mapProps",
+        "r": [
+          0,
+          0,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          112
+        ]
+      },
+      {
+        "id": "trial-active",
+        "image": "mapProps",
+        "r": [
+          128,
+          0,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          112
+        ]
+      },
+      {
+        "id": "trial-cleared",
+        "image": "mapProps",
+        "r": [
+          256,
+          0,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          112
+        ]
+      },
+      {
+        "id": "trial-claimed",
+        "image": "mapProps",
+        "r": [
+          384,
+          0,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          112
+        ]
+      },
+      {
+        "id": "camp-lit",
+        "image": "mapProps",
+        "r": [
+          0,
+          128,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          112
+        ]
+      },
+      {
+        "id": "camp-spent",
+        "image": "mapProps",
+        "r": [
+          128,
+          128,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          112
+        ]
+      },
+      {
+        "id": "pickup-heal",
+        "image": "mapProps",
+        "r": [
+          256,
+          128,
+          32,
+          32
+        ],
+        "anchor": [
+          16,
+          28
+        ]
+      },
+      {
+        "id": "pickup-focus",
+        "image": "mapProps",
+        "r": [
+          384,
+          128,
+          32,
+          32
+        ],
+        "anchor": [
+          16,
+          28
+        ]
+      },
+      {
+        "id": "pickup-rage",
+        "image": "mapProps",
+        "r": [
+          0,
+          256,
+          32,
+          32
+        ],
+        "anchor": [
+          16,
+          28
+        ]
+      },
+      {
+        "id": "hazard-quiet",
+        "image": "mapProps",
+        "r": [
+          128,
+          256,
+          32,
+          16
+        ],
+        "anchor": [
+          0,
+          0
+        ]
+      },
+      {
+        "id": "hazard-warning",
+        "image": "mapProps",
+        "r": [
+          256,
+          256,
+          32,
+          16
+        ],
+        "anchor": [
+          0,
+          0
+        ]
+      },
+      {
+        "id": "hazard-active",
+        "image": "mapProps",
+        "r": [
+          384,
+          256,
+          32,
+          16
+        ],
+        "anchor": [
+          0,
+          0
+        ]
+      },
+      {
+        "id": "ledge-mountain",
+        "image": "mapTerrain",
+        "r": [
+          0,
+          0,
+          64,
+          30
+        ],
+        "anchor": [
+          0,
+          0
+        ]
+      },
+      {
+        "id": "ledge-ferry",
+        "image": "mapTerrain",
+        "r": [
+          128,
+          0,
+          64,
+          30
+        ],
+        "anchor": [
+          0,
+          0
+        ]
+      },
+      {
+        "id": "ledge-temple",
+        "image": "mapTerrain",
+        "r": [
+          256,
+          0,
+          64,
+          30
+        ],
+        "anchor": [
+          0,
+          0
+        ]
+      },
+      {
+        "id": "fragile-ready",
+        "image": "mapTerrain",
+        "r": [
+          384,
+          0,
+          64,
+          30
+        ],
+        "anchor": [
+          0,
+          0
+        ]
+      },
+      {
+        "id": "fragile-cracking",
+        "image": "mapTerrain",
+        "r": [
+          0,
+          128,
+          64,
+          30
+        ],
+        "anchor": [
+          0,
+          0
+        ]
+      },
+      {
+        "id": "raft",
+        "image": "mapTerrain",
+        "r": [
+          128,
+          128,
+          96,
+          30
+        ],
+        "anchor": [
+          0,
+          0
+        ]
+      },
+      {
+        "id": "bridge-off",
+        "image": "mapTerrain",
+        "r": [
+          256,
+          128,
+          64,
+          24
+        ],
+        "anchor": [
+          0,
+          0
+        ]
+      },
+      {
+        "id": "bridge-on",
+        "image": "mapTerrain",
+        "r": [
+          384,
+          128,
+          64,
+          24
+        ],
+        "anchor": [
+          0,
+          0
+        ]
+      },
+      {
+        "id": "wall-mountain",
+        "image": "mapTerrain",
+        "r": [
+          0,
+          256,
+          64,
+          64
+        ],
+        "anchor": [
+          0,
+          0
+        ]
+      },
+      {
+        "id": "wall-ferry",
+        "image": "mapTerrain",
+        "r": [
+          128,
+          256,
+          64,
+          64
+        ],
+        "anchor": [
+          0,
+          0
+        ]
+      },
+      {
+        "id": "wall-temple",
+        "image": "mapTerrain",
+        "r": [
+          256,
+          256,
+          64,
+          64
+        ],
+        "anchor": [
+          0,
+          0
+        ]
+      },
+      {
+        "id": "arena-pillar",
+        "image": "mapTerrain",
+        "r": [
+          384,
+          256,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          112
+        ]
+      },
+      {
+        "id": "dressing-mountain-a",
+        "image": "mapDressing",
+        "r": [
+          0,
+          0,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          112
+        ]
+      },
+      {
+        "id": "dressing-ferry-a",
+        "image": "mapDressing",
+        "r": [
+          128,
+          0,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          112
+        ]
+      },
+      {
+        "id": "dressing-temple-a",
+        "image": "mapDressing",
+        "r": [
+          256,
+          0,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          112
+        ]
+      },
+      {
+        "id": "dressing-mountain-b",
+        "image": "mapDressing",
+        "r": [
+          384,
+          0,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          112
+        ]
+      },
+      {
+        "id": "dressing-ferry-b",
+        "image": "mapDressing",
+        "r": [
+          0,
+          128,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          112
+        ]
+      },
+      {
+        "id": "dressing-temple-b",
+        "image": "mapDressing",
+        "r": [
+          128,
+          128,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          112
+        ]
+      }
+    ],
+    "SignatureFrames": [
+      {
+        "id": "wukong0",
+        "image": "sigWukong",
+        "r": [
+          0,
+          0,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          112
+        ]
+      },
+      {
+        "id": "wukong1",
+        "image": "sigWukong",
+        "r": [
+          128,
+          0,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          112
+        ]
+      },
+      {
+        "id": "wukong2",
+        "image": "sigWukong",
+        "r": [
+          256,
+          0,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          112
+        ]
+      },
+      {
+        "id": "wukong3",
+        "image": "sigWukong",
+        "r": [
+          384,
+          0,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          112
+        ]
+      },
+      {
+        "id": "nezha0",
+        "image": "sigNezha",
+        "r": [
+          0,
+          0,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          112
+        ]
+      },
+      {
+        "id": "nezha1",
+        "image": "sigNezha",
+        "r": [
+          128,
+          0,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          112
+        ]
+      },
+      {
+        "id": "nezha2",
+        "image": "sigNezha",
+        "r": [
+          256,
+          0,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          112
+        ]
+      },
+      {
+        "id": "nezha3",
+        "image": "sigNezha",
+        "r": [
+          384,
+          0,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          112
+        ]
+      },
+      {
+        "id": "shaft",
+        "image": "sigFx",
+        "r": [
+          0,
+          0,
+          32,
+          7
+        ],
+        "anchor": [
+          0,
+          0
+        ]
+      },
+      {
+        "id": "cap",
+        "image": "sigFx",
+        "r": [
+          128,
+          0,
+          22,
+          8
+        ],
+        "anchor": [
+          0,
+          0
+        ]
+      },
+      {
+        "id": "tip",
+        "image": "sigFx",
+        "r": [
+          256,
+          0,
+          38,
+          38
+        ],
+        "anchor": [
+          0,
+          0
+        ]
+      },
+      {
+        "id": "wind",
+        "image": "sigFx",
+        "r": [
+          384,
+          0,
+          38,
+          16
+        ],
+        "anchor": [
+          0,
+          0
+        ]
+      },
+      {
+        "id": "air-warning",
+        "image": "sigFx",
+        "r": [
+          0,
+          128,
+          64,
+          48
+        ],
+        "anchor": [
+          0,
+          0
+        ]
+      },
+      {
+        "id": "air-active",
+        "image": "sigFx",
+        "r": [
+          128,
+          128,
+          64,
+          48
+        ],
+        "anchor": [
+          0,
+          0
+        ]
+      },
+      {
+        "id": "brace",
+        "image": "sigFx",
+        "r": [
+          256,
+          128,
+          22,
+          24
+        ],
+        "anchor": [
+          0,
+          0
+        ]
+      },
+      {
+        "id": "charge",
+        "image": "sigFx",
+        "r": [
+          384,
+          128,
+          40,
+          24
+        ],
+        "anchor": [
+          0,
+          0
+        ]
+      }
+    ],
+    "SceneFrames": [
+      {
+        "id": "seal-intact",
+        "image": "sceneProps",
+        "r": [
+          0,
+          0,
+          64,
+          64
+        ],
+        "anchor": [
+          32,
+          62
+        ]
+      },
+      {
+        "id": "seal-ruined",
+        "image": "sceneProps",
+        "r": [
+          64,
+          0,
+          64,
+          64
+        ],
+        "anchor": [
+          32,
+          62
+        ]
+      },
+      {
+        "id": "seal-lamp-ready",
+        "image": "sceneProps",
+        "r": [
+          128,
+          0,
+          64,
+          64
+        ],
+        "anchor": [
+          32,
+          62
+        ]
+      },
+      {
+        "id": "seal-lamp-spent",
+        "image": "sceneProps",
+        "r": [
+          192,
+          0,
+          64,
+          64
+        ],
+        "anchor": [
+          32,
+          62
+        ]
+      }
+    ],
+    "ActorStateFrames": [
+      {
+        "id": "wukong-dead",
+        "image": "actorStates",
+        "r": [
+          0,
+          0,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          112
+        ]
+      },
+      {
+        "id": "nezha-dead",
+        "image": "actorStates",
+        "r": [
+          128,
+          0,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          112
+        ]
+      },
+      {
+        "id": "nezha-ultimate-start",
+        "image": "actorStates",
+        "r": [
+          256,
+          0,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          112
+        ]
+      },
+      {
+        "id": "nezha-ultimate-release",
+        "image": "actorStates",
+        "r": [
+          384,
+          0,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          112
+        ]
+      }
+    ]
+  },
+  "total": 139
+}

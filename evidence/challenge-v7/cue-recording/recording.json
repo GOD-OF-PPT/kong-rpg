@@ -1,0 +1,21 @@
+{
+  "method": "continuous 5Hz page screenshots; controlled imports between skill scenes, not a natural run",
+  "checks": [
+    {
+      "name": "blade visible line and jump",
+      "hp": 100
+    },
+    {
+      "name": "shield ground warning and jump",
+      "hp": 88
+    },
+    {
+      "name": "two separately locked marks",
+      "hp": 100
+    }
+  ],
+  "errors": [],
+  "frames": 46,
+  "video": "evidence\\challenge-v7\\cue-recording\\challenge-cues.mp4",
+  "recordingError": ""
+}

@@ -1,0 +1,27 @@
+{
+  "method": "same controller and seed before and after; controller reads complete simulation state",
+  "before": {
+    "mash": {
+      "wins": 0,
+      "total": 30,
+      "meanHits": 3.5
+    },
+    "observe": {
+      "wins": 12,
+      "total": 30,
+      "meanHits": 1.833
+    }
+  },
+  "after": {
+    "mash": {
+      "wins": 0,
+      "total": 30,
+      "meanHits": 3.5
+    },
+    "observe": {
+      "wins": 12,
+      "total": 30,
+      "meanHits": 1.9
+    }
+  }
+}

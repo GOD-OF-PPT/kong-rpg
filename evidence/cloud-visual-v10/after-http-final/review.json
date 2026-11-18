@@ -1,0 +1,86 @@
+{
+  "before": false,
+  "mode": "http",
+  "sha256": "6dc7cdc5f0b5456ba22c0a1e68562164f091a285f1e818e3a9bdd959fac45f77",
+  "method": "Public menus, actual movement/F/B/C, actual waits and export/import. Read-only renderer observer captures actual displayed phases. Not a human experience rating.",
+  "checks": [
+    {
+      "name": "fractional display no longer forces nearest-neighbour magnification",
+      "pass": true,
+      "data": {
+        "width": 1358,
+        "height": 763,
+        "scale": 1.4145833333333333,
+        "imageRendering": "auto",
+        "canvas": [
+          960,
+          540
+        ]
+      }
+    },
+    {
+      "name": "two named secret-art labels are visible",
+      "pass": true
+    },
+    {
+      "name": "F sky-staff learns without a leaked attack",
+      "pass": true
+    },
+    {
+      "name": "F orbit-staff learns without a leaked attack",
+      "pass": true
+    },
+    {
+      "name": "claimed world labels disappear",
+      "pass": true
+    }
+  ],
+  "shots": [],
+  "errors": [],
+  "network": [
+    "http://127.0.0.1:5188/?visual-review=1"
+  ],
+  "environment": {
+    "browser": "156.0.4314.50",
+    "version": "10.0.3",
+    "viewport": "1440x1000",
+    "dpr": 1.25
+  },
+  "presentation": {
+    "width": 1358,
+    "height": 763,
+    "scale": 1.4145833333333333,
+    "imageRendering": "auto",
+    "canvas": [
+      960,
+      540
+    ]
+  },
+  "manuals": [
+    {
+      "id": "0:0",
+      "art": "sky-staff",
+      "x": 210,
+      "y": 418,
+      "w": 26,
+      "h": 26,
+      "used": false
+    },
+    {
+      "id": "0:1",
+      "art": "orbit-staff",
+      "x": 310,
+      "y": 418,
+      "w": 26,
+      "h": 26,
+      "used": false
+    }
+  ],
+  "failure": "page.waitForFunction: Timeout 30000ms exceeded.\n    at E:\\githome\\kong-rpg\\tools\\review-cloud-visuals.cjs:19:122",
+  "recording": {
+    "file": "E:\\githome\\kong-rpg\\evidence\\cloud-visual-v10\\after-http-final\\staff-skills.webm",
+    "mime": "video/webm;codecs=vp9",
+    "ms": 31030,
+    "method": "real Canvas captureStream at requested 30Hz, MediaRecorder VP9; actual encoded metadata checked with ffprobe"
+  }
+}

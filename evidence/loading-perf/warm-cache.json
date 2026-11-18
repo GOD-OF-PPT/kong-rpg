@@ -1,0 +1,74 @@
+{
+  "cold": {
+    "ms": 187,
+    "resources": [
+      {
+        "name": "http://127.0.0.1:5188/game.76544aee5645924b.css",
+        "transfer": 12752,
+        "bytes": 12452
+      },
+      {
+        "name": "http://127.0.0.1:5188/game.37a703d59b2cf286.js",
+        "transfer": 116217,
+        "bytes": 115917
+      },
+      {
+        "name": "http://127.0.0.1:5188/assets/images/brandWordmark.d5323c1b198b2397.webp",
+        "transfer": 559538,
+        "bytes": 559238
+      },
+      {
+        "name": "http://127.0.0.1:5188/assets/images/wukong.9ed9b0f96501d7a7.webp",
+        "transfer": 967854,
+        "bytes": 967554
+      },
+      {
+        "name": "http://127.0.0.1:5188/assets/images/stone.7b443d9e58c0ea25.webp",
+        "transfer": 713050,
+        "bytes": 712750
+      },
+      {
+        "name": "http://127.0.0.1:5188/assets/images/mountain.296d70c71773dacb.webp",
+        "transfer": 1937244,
+        "bytes": 1936944
+      }
+    ]
+  },
+  "warm": {
+    "ms": 32,
+    "resources": [
+      {
+        "name": "http://127.0.0.1:5188/game.76544aee5645924b.css",
+        "transfer": 0,
+        "bytes": 12452
+      },
+      {
+        "name": "http://127.0.0.1:5188/game.37a703d59b2cf286.js",
+        "transfer": 0,
+        "bytes": 115917
+      },
+      {
+        "name": "http://127.0.0.1:5188/assets/images/brandWordmark.d5323c1b198b2397.webp",
+        "transfer": 0,
+        "bytes": 559238
+      },
+      {
+        "name": "http://127.0.0.1:5188/assets/images/mountain.296d70c71773dacb.webp",
+        "transfer": 0,
+        "bytes": 1936944
+      },
+      {
+        "name": "http://127.0.0.1:5188/assets/images/wukong.9ed9b0f96501d7a7.webp",
+        "transfer": 0,
+        "bytes": 967554
+      },
+      {
+        "name": "http://127.0.0.1:5188/assets/images/stone.7b443d9e58c0ea25.webp",
+        "transfer": 0,
+        "bytes": 712750
+      }
+    ]
+  },
+  "check": "All four boot images reused from normal HTTP cache; no routes or cache-disabling flags",
+  "pass": true
+}

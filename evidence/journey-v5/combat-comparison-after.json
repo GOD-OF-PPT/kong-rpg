@@ -1,0 +1,454 @@
+{
+  "version": "5.0.0",
+  "sha256": "620e43e67c9ea65fa3b2135de3142c13384952ab7c10b2d35d3785b472baa817",
+  "seed": "V5-COMBAT-COMPARE",
+  "method": "Isolated VM encounter with shipped twin-blade rules. Other enemies, hazards and world nodes removed. Observation policy follows enemy position, dashes on late warning; echo additionally uses its clone. Automated policies, not human evidence.",
+  "rows": [
+    {
+      "relic": "staff",
+      "distance": 50,
+      "policy": "hold-attack",
+      "damage": 12,
+      "killed": true,
+      "seconds": 0.725,
+      "focusSpent": 0,
+      "dashes": 0,
+      "events": [
+        {
+          "type": "warning",
+          "t": 0.008,
+          "wall": 0.008,
+          "kind": "blade",
+          "id": 400,
+          "move": "windup",
+          "x": 3070,
+          "y": 400,
+          "face": -1
+        },
+        {
+          "type": "hurt",
+          "t": 0.542,
+          "wall": 0.592,
+          "source": "执刃魔兵·斩击",
+          "amount": 12
+        },
+        {
+          "type": "kill",
+          "t": 0.675,
+          "wall": 0.725,
+          "kind": "blade"
+        }
+      ]
+    },
+    {
+      "relic": "staff",
+      "distance": 50,
+      "policy": "observe-warning",
+      "damage": 0,
+      "killed": true,
+      "seconds": 0.642,
+      "focusSpent": 0,
+      "dashes": 1,
+      "events": [
+        {
+          "type": "warning",
+          "t": 0.008,
+          "wall": 0.008,
+          "kind": "blade",
+          "id": 400,
+          "move": "windup",
+          "x": 3070,
+          "y": 400,
+          "face": -1
+        },
+        {
+          "type": "kill",
+          "t": 0.617,
+          "wall": 0.642,
+          "kind": "blade"
+        }
+      ]
+    },
+    {
+      "relic": "staff",
+      "distance": 65,
+      "policy": "hold-attack",
+      "damage": 12,
+      "killed": true,
+      "seconds": 0.725,
+      "focusSpent": 0,
+      "dashes": 0,
+      "events": [
+        {
+          "type": "warning",
+          "t": 0.008,
+          "wall": 0.008,
+          "kind": "blade",
+          "id": 400,
+          "move": "windup",
+          "x": 3070,
+          "y": 400,
+          "face": -1
+        },
+        {
+          "type": "hurt",
+          "t": 0.542,
+          "wall": 0.592,
+          "source": "执刃魔兵·斩击",
+          "amount": 12
+        },
+        {
+          "type": "kill",
+          "t": 0.675,
+          "wall": 0.725,
+          "kind": "blade"
+        }
+      ]
+    },
+    {
+      "relic": "staff",
+      "distance": 65,
+      "policy": "observe-warning",
+      "damage": 0,
+      "killed": true,
+      "seconds": 0.642,
+      "focusSpent": 0,
+      "dashes": 1,
+      "events": [
+        {
+          "type": "warning",
+          "t": 0.008,
+          "wall": 0.008,
+          "kind": "blade",
+          "id": 400,
+          "move": "windup",
+          "x": 3070,
+          "y": 400,
+          "face": -1
+        },
+        {
+          "type": "kill",
+          "t": 0.617,
+          "wall": 0.642,
+          "kind": "blade"
+        }
+      ]
+    },
+    {
+      "relic": "staff",
+      "distance": 80,
+      "policy": "hold-attack",
+      "damage": 0,
+      "killed": true,
+      "seconds": 1.933,
+      "focusSpent": 0,
+      "dashes": 0,
+      "events": [
+        {
+          "type": "warning",
+          "t": 0.008,
+          "wall": 0.008,
+          "kind": "blade",
+          "id": 400,
+          "move": "windup",
+          "x": 3070,
+          "y": 400,
+          "face": -1
+        },
+        {
+          "type": "warning",
+          "t": 0.717,
+          "wall": 0.717,
+          "kind": "blade",
+          "id": 400,
+          "move": "second-slash"
+        },
+        {
+          "type": "interrupt",
+          "t": 0.742,
+          "wall": 0.742,
+          "target": 400
+        },
+        {
+          "type": "warning",
+          "t": 1.8,
+          "wall": 1.858,
+          "kind": "blade",
+          "id": 400,
+          "move": "windup",
+          "x": 3071.4000000000015,
+          "y": 400,
+          "face": -1
+        },
+        {
+          "type": "interrupt",
+          "t": 1.875,
+          "wall": 1.933,
+          "target": 400
+        },
+        {
+          "type": "kill",
+          "t": 1.875,
+          "wall": 1.933,
+          "kind": "blade"
+        }
+      ]
+    },
+    {
+      "relic": "staff",
+      "distance": 80,
+      "policy": "observe-warning",
+      "damage": 0,
+      "killed": true,
+      "seconds": 0.642,
+      "focusSpent": 0,
+      "dashes": 1,
+      "events": [
+        {
+          "type": "warning",
+          "t": 0.008,
+          "wall": 0.008,
+          "kind": "blade",
+          "id": 400,
+          "move": "windup",
+          "x": 3070,
+          "y": 400,
+          "face": -1
+        },
+        {
+          "type": "kill",
+          "t": 0.617,
+          "wall": 0.642,
+          "kind": "blade"
+        }
+      ]
+    },
+    {
+      "relic": "echo",
+      "distance": 50,
+      "policy": "hold-attack",
+      "damage": 12,
+      "killed": true,
+      "seconds": 0.725,
+      "focusSpent": 0,
+      "dashes": 0,
+      "events": [
+        {
+          "type": "warning",
+          "t": 0.008,
+          "wall": 0.008,
+          "kind": "blade",
+          "id": 400,
+          "move": "windup",
+          "x": 3070,
+          "y": 400,
+          "face": -1
+        },
+        {
+          "type": "hurt",
+          "t": 0.542,
+          "wall": 0.592,
+          "source": "执刃魔兵·斩击",
+          "amount": 12
+        },
+        {
+          "type": "kill",
+          "t": 0.675,
+          "wall": 0.725,
+          "kind": "blade"
+        }
+      ]
+    },
+    {
+      "relic": "echo",
+      "distance": 50,
+      "policy": "observe-warning",
+      "damage": 0,
+      "killed": true,
+      "seconds": 0.733,
+      "focusSpent": 50,
+      "dashes": 1,
+      "events": [
+        {
+          "type": "warning",
+          "t": 0.008,
+          "wall": 0.008,
+          "kind": "blade",
+          "id": 400,
+          "move": "windup",
+          "x": 3070,
+          "y": 400,
+          "face": -1
+        },
+        {
+          "type": "kill",
+          "t": 0.683,
+          "wall": 0.733,
+          "kind": "blade"
+        }
+      ]
+    },
+    {
+      "relic": "echo",
+      "distance": 65,
+      "policy": "hold-attack",
+      "damage": 12,
+      "killed": true,
+      "seconds": 0.725,
+      "focusSpent": 0,
+      "dashes": 0,
+      "events": [
+        {
+          "type": "warning",
+          "t": 0.008,
+          "wall": 0.008,
+          "kind": "blade",
+          "id": 400,
+          "move": "windup",
+          "x": 3070,
+          "y": 400,
+          "face": -1
+        },
+        {
+          "type": "hurt",
+          "t": 0.542,
+          "wall": 0.592,
+          "source": "执刃魔兵·斩击",
+          "amount": 12
+        },
+        {
+          "type": "kill",
+          "t": 0.675,
+          "wall": 0.725,
+          "kind": "blade"
+        }
+      ]
+    },
+    {
+      "relic": "echo",
+      "distance": 65,
+      "policy": "observe-warning",
+      "damage": 0,
+      "killed": true,
+      "seconds": 0.767,
+      "focusSpent": 50,
+      "dashes": 1,
+      "events": [
+        {
+          "type": "warning",
+          "t": 0.008,
+          "wall": 0.008,
+          "kind": "blade",
+          "id": 400,
+          "move": "windup",
+          "x": 3070,
+          "y": 400,
+          "face": -1
+        },
+        {
+          "type": "warning",
+          "t": 0.717,
+          "wall": 0.767,
+          "kind": "blade",
+          "id": 400,
+          "move": "second-slash"
+        },
+        {
+          "type": "kill",
+          "t": 0.717,
+          "wall": 0.767,
+          "kind": "blade"
+        }
+      ]
+    },
+    {
+      "relic": "echo",
+      "distance": 80,
+      "policy": "hold-attack",
+      "damage": 0,
+      "killed": true,
+      "seconds": 1.875,
+      "focusSpent": 0,
+      "dashes": 0,
+      "events": [
+        {
+          "type": "warning",
+          "t": 0.008,
+          "wall": 0.008,
+          "kind": "blade",
+          "id": 400,
+          "move": "windup",
+          "x": 3070,
+          "y": 400,
+          "face": -1
+        },
+        {
+          "type": "warning",
+          "t": 0.717,
+          "wall": 0.717,
+          "kind": "blade",
+          "id": 400,
+          "move": "second-slash"
+        },
+        {
+          "type": "interrupt",
+          "t": 0.742,
+          "wall": 0.742,
+          "target": 400
+        },
+        {
+          "type": "warning",
+          "t": 1.8,
+          "wall": 1.858,
+          "kind": "blade",
+          "id": 400,
+          "move": "windup",
+          "x": 3071.4000000000015,
+          "y": 400,
+          "face": -1
+        },
+        {
+          "type": "interrupt",
+          "t": 1.817,
+          "wall": 1.875,
+          "target": 400
+        },
+        {
+          "type": "kill",
+          "t": 1.817,
+          "wall": 1.875,
+          "kind": "blade"
+        }
+      ]
+    },
+    {
+      "relic": "echo",
+      "distance": 80,
+      "policy": "observe-warning",
+      "damage": 0,
+      "killed": true,
+      "seconds": 0.717,
+      "focusSpent": 50,
+      "dashes": 1,
+      "events": [
+        {
+          "type": "warning",
+          "t": 0.008,
+          "wall": 0.008,
+          "kind": "blade",
+          "id": 400,
+          "move": "windup",
+          "x": 3070,
+          "y": 400,
+          "face": -1
+        },
+        {
+          "type": "kill",
+          "t": 0.667,
+          "wall": 0.717,
+          "kind": "blade"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "source": "Three user-provided MP3 files; original bytes preserved",
+  "analysis": "ffprobe stream metadata and ffmpeg volumedetect, 2026-10-27",
+  "mix": "Playback gains only, no re-encode or source edits. Levels near -24 dB RMS before shared master.",
+  "tracks": {
+    "menu-01": {
+      "file": "assets/music/menu-01.mp3",
+      "sha256": "0d3d6b907c31dbe215672a1db6612f18396f691f33b59e45169ed1e95d858e53",
+      "bytes": 3135934,
+      "duration": 97.906939,
+      "sampleRate": 44100,
+      "channels": 2,
+      "meanDb": -21.7,
+      "peakDb": -1.1,
+      "gain": 0.75
+    },
+    "menu-02": {
+      "file": "assets/music/menu-02.mp3",
+      "sha256": "765fa29ab0a0f95fee6661fd36b675042908ae38aab1e4471fd60a6c4c84b9a0",
+      "bytes": 4046249,
+      "duration": 126.354286,
+      "sampleRate": 44100,
+      "channels": 2,
+      "meanDb": -16.7,
+      "peakDb": -0.1,
+      "gain": 0.42
+    },
+    "gameplay": {
+      "file": "assets/music/gameplay.mp3",
+      "sha256": "db66bcf0b6ebcb242d6dc7d2e9230636a5efabdf5d2913d362e69f536b0a4423",
+      "bytes": 4709132,
+      "duration": 147.069388,
+      "sampleRate": 44100,
+      "channels": 2,
+      "meanDb": -13.8,
+      "peakDb": 0.0,
+      "gain": 0.3
+    }
+  }
+}

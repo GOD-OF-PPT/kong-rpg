@@ -1,0 +1,365 @@
+{
+  "version": "12.2.1",
+  "mode": "http",
+  "sha256": "bba843b8dfb9341231e8a2791d5c1b0398b36841721e186b53713018b12ad56e",
+  "method": "Production renderer pixel probes, public fixture import then actual resume/pause input and screenshots. Not a human playtest.",
+  "checks": [
+    {
+      "name": "all 19 normal skills retain predictive overlays and head markers",
+      "pass": true
+    },
+    {
+      "name": "all 19 challenge skills paint zero predictive overlay pixels and no head markers",
+      "pass": false
+    }
+  ],
+  "errors": [],
+  "network": [
+    "http://127.0.0.1:5188/?v=12.2.1"
+  ],
+  "probes": [
+    {
+      "difficulty": "normal",
+      "move": "axe-cleave",
+      "telegraph": 518400,
+      "boundary": 518400,
+      "markers": 1,
+      "bodyCue": 518400,
+      "effect": 518400
+    },
+    {
+      "difficulty": "normal",
+      "move": "axe-quake",
+      "telegraph": 518400,
+      "boundary": 518400,
+      "markers": 1,
+      "bodyCue": 518400,
+      "effect": 518400
+    },
+    {
+      "difficulty": "normal",
+      "move": "axe-rush",
+      "telegraph": 518400,
+      "boundary": 518400,
+      "markers": 1,
+      "bodyCue": 518400,
+      "effect": 518400
+    },
+    {
+      "difficulty": "normal",
+      "move": "judge-mark",
+      "telegraph": 518400,
+      "boundary": 518400,
+      "markers": 1,
+      "bodyCue": 518400,
+      "effect": 518400
+    },
+    {
+      "difficulty": "normal",
+      "move": "judge-chain",
+      "telegraph": 518400,
+      "boundary": 518400,
+      "markers": 1,
+      "bodyCue": 518400,
+      "effect": 518400
+    },
+    {
+      "difficulty": "normal",
+      "move": "judge-echo",
+      "telegraph": 518400,
+      "boundary": 518400,
+      "markers": 1,
+      "bodyCue": 518400,
+      "effect": 518400
+    },
+    {
+      "difficulty": "normal",
+      "move": "venom-fan",
+      "telegraph": 518400,
+      "boundary": 518400,
+      "markers": 1,
+      "bodyCue": 518400,
+      "effect": 518400
+    },
+    {
+      "difficulty": "normal",
+      "move": "venom-tide",
+      "telegraph": 518400,
+      "boundary": 518400,
+      "markers": 1,
+      "bodyCue": 518400,
+      "effect": 518400
+    },
+    {
+      "difficulty": "normal",
+      "move": "head-dive",
+      "telegraph": 518400,
+      "boundary": 518400,
+      "markers": 1,
+      "bodyCue": 518400,
+      "effect": 518400
+    },
+    {
+      "difficulty": "normal",
+      "move": "dragon-surge",
+      "telegraph": 518400,
+      "boundary": 518400,
+      "markers": 1,
+      "bodyCue": 518400,
+      "effect": 518400
+    },
+    {
+      "difficulty": "normal",
+      "move": "dragon-column",
+      "telegraph": 518400,
+      "boundary": 518400,
+      "markers": 1,
+      "bodyCue": 518400,
+      "effect": 518400
+    },
+    {
+      "difficulty": "normal",
+      "move": "dragon-thunder",
+      "telegraph": 518400,
+      "boundary": 518400,
+      "markers": 1,
+      "bodyCue": 518400,
+      "effect": 518400
+    },
+    {
+      "difficulty": "normal",
+      "move": "tower-prison",
+      "telegraph": 518400,
+      "boundary": 518400,
+      "markers": 1,
+      "bodyCue": 518400,
+      "effect": 518400
+    },
+    {
+      "difficulty": "normal",
+      "move": "king-sword",
+      "telegraph": 518400,
+      "boundary": 518400,
+      "markers": 1,
+      "bodyCue": 518400,
+      "effect": 518400
+    },
+    {
+      "difficulty": "normal",
+      "move": "king-fire",
+      "telegraph": 518400,
+      "boundary": 518400,
+      "markers": 1,
+      "bodyCue": 518400,
+      "effect": 518400
+    },
+    {
+      "difficulty": "normal",
+      "move": "shield-wave",
+      "telegraph": 518400,
+      "boundary": 518400,
+      "markers": 1,
+      "bodyCue": 518400,
+      "effect": 518400
+    },
+    {
+      "difficulty": "normal",
+      "move": "soldier-slash",
+      "telegraph": 518400,
+      "boundary": 518400,
+      "markers": 1,
+      "bodyCue": 518400,
+      "effect": 518400
+    },
+    {
+      "difficulty": "normal",
+      "move": "soldier-bolt",
+      "telegraph": 518400,
+      "boundary": 518400,
+      "markers": 1,
+      "bodyCue": 518400,
+      "effect": 518400
+    },
+    {
+      "difficulty": "normal",
+      "move": "soldier-rush",
+      "telegraph": 518400,
+      "boundary": 518400,
+      "markers": 1,
+      "bodyCue": 518400,
+      "effect": 518400
+    },
+    {
+      "difficulty": "challenge",
+      "move": "axe-cleave",
+      "telegraph": 518400,
+      "boundary": 518400,
+      "markers": 0,
+      "bodyCue": 518400,
+      "effect": 518400
+    },
+    {
+      "difficulty": "challenge",
+      "move": "axe-quake",
+      "telegraph": 518400,
+      "boundary": 518400,
+      "markers": 0,
+      "bodyCue": 518400,
+      "effect": 518400
+    },
+    {
+      "difficulty": "challenge",
+      "move": "axe-rush",
+      "telegraph": 518400,
+      "boundary": 518400,
+      "markers": 0,
+      "bodyCue": 518400,
+      "effect": 518400
+    },
+    {
+      "difficulty": "challenge",
+      "move": "judge-mark",
+      "telegraph": 518400,
+      "boundary": 518400,
+      "markers": 0,
+      "bodyCue": 518400,
+      "effect": 518400
+    },
+    {
+      "difficulty": "challenge",
+      "move": "judge-chain",
+      "telegraph": 518400,
+      "boundary": 518400,
+      "markers": 0,
+      "bodyCue": 518400,
+      "effect": 518400
+    },
+    {
+      "difficulty": "challenge",
+      "move": "judge-echo",
+      "telegraph": 518400,
+      "boundary": 518400,
+      "markers": 0,
+      "bodyCue": 518400,
+      "effect": 518400
+    },
+    {
+      "difficulty": "challenge",
+      "move": "venom-fan",
+      "telegraph": 518400,
+      "boundary": 518400,
+      "markers": 0,
+      "bodyCue": 518400,
+      "effect": 518400
+    },
+    {
+      "difficulty": "challenge",
+      "move": "venom-tide",
+      "telegraph": 518400,
+      "boundary": 518400,
+      "markers": 0,
+      "bodyCue": 518400,
+      "effect": 518400
+    },
+    {
+      "difficulty": "challenge",
+      "move": "head-dive",
+      "telegraph": 518400,
+      "boundary": 518400,
+      "markers": 0,
+      "bodyCue": 518400,
+      "effect": 518400
+    },
+    {
+      "difficulty": "challenge",
+      "move": "dragon-surge",
+      "telegraph": 518400,
+      "boundary": 518400,
+      "markers": 0,
+      "bodyCue": 518400,
+      "effect": 518400
+    },
+    {
+      "difficulty": "challenge",
+      "move": "dragon-column",
+      "telegraph": 518400,
+      "boundary": 518400,
+      "markers": 0,
+      "bodyCue": 518400,
+      "effect": 518400
+    },
+    {
+      "difficulty": "challenge",
+      "move": "dragon-thunder",
+      "telegraph": 518400,
+      "boundary": 518400,
+      "markers": 0,
+      "bodyCue": 518400,
+      "effect": 518400
+    },
+    {
+      "difficulty": "challenge",
+      "move": "tower-prison",
+      "telegraph": 518400,
+      "boundary": 518400,
+      "markers": 0,
+      "bodyCue": 518400,
+      "effect": 518400
+    },
+    {
+      "difficulty": "challenge",
+      "move": "king-sword",
+      "telegraph": 518400,
+      "boundary": 518400,
+      "markers": 0,
+      "bodyCue": 518400,
+      "effect": 518400
+    },
+    {
+      "difficulty": "challenge",
+      "move": "king-fire",
+      "telegraph": 518400,
+      "boundary": 518400,
+      "markers": 0,
+      "bodyCue": 518400,
+      "effect": 518400
+    },
+    {
+      "difficulty": "challenge",
+      "move": "shield-wave",
+      "telegraph": 518400,
+      "boundary": 518400,
+      "markers": 0,
+      "bodyCue": 518400,
+      "effect": 518400
+    },
+    {
+      "difficulty": "challenge",
+      "move": "soldier-slash",
+      "telegraph": 518400,
+      "boundary": 518400,
+      "markers": 0,
+      "bodyCue": 518400,
+      "effect": 518400
+    },
+    {
+      "difficulty": "challenge",
+      "move": "soldier-bolt",
+      "telegraph": 518400,
+      "boundary": 518400,
+      "markers": 0,
+      "bodyCue": 518400,
+      "effect": 518400
+    },
+    {
+      "difficulty": "challenge",
+      "move": "soldier-rush",
+      "telegraph": 518400,
+      "boundary": 518400,
+      "markers": 0,
+      "bodyCue": 518400,
+      "effect": 518400
+    }
+  ],
+  "failure": "AssertionError [ERR_ASSERTION]: all 19 challenge skills paint zero predictive overlay pixels and no head markers\n    at check (E:\\githome\\kong-rpg\\tools\\verify-challenge-guides.cjs:6:83)\n    at E:\\githome\\kong-rpg\\tools\\verify-challenge-guides.cjs:12:189"
+}

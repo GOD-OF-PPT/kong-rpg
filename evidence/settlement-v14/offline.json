@@ -1,0 +1,1121 @@
+{
+  "offline": true,
+  "checks": [
+    {
+      "name": "homepage still loads only four images",
+      "pass": true
+    },
+    {
+      "name": "settlement image excluded from initial and new-run assets",
+      "pass": true
+    },
+    {
+      "name": "wukong normal retains real score",
+      "pass": true
+    },
+    {
+      "name": "wukong has the correct portrait and name",
+      "pass": true
+    },
+    {
+      "name": "realms reflect actual fifteen-level completion",
+      "pass": true
+    },
+    {
+      "name": "wukong normal all actions fully visible",
+      "pass": true
+    },
+    {
+      "name": "exactly one rating grade",
+      "pass": true
+    },
+    {
+      "name": "wukong challenge retains real score",
+      "pass": true
+    },
+    {
+      "name": "wukong has the correct portrait and name",
+      "pass": true
+    },
+    {
+      "name": "realms reflect actual fifteen-level completion",
+      "pass": true
+    },
+    {
+      "name": "wukong challenge all actions fully visible",
+      "pass": true
+    },
+    {
+      "name": "exactly one rating grade",
+      "pass": true
+    },
+    {
+      "name": "nezha normal retains real score",
+      "pass": true
+    },
+    {
+      "name": "nezha has the correct portrait and name",
+      "pass": true
+    },
+    {
+      "name": "realms reflect actual fifteen-level completion",
+      "pass": true
+    },
+    {
+      "name": "nezha normal all actions fully visible",
+      "pass": true
+    },
+    {
+      "name": "exactly one rating grade",
+      "pass": true
+    },
+    {
+      "name": "nezha challenge retains real score",
+      "pass": true
+    },
+    {
+      "name": "nezha has the correct portrait and name",
+      "pass": true
+    },
+    {
+      "name": "realms reflect actual fifteen-level completion",
+      "pass": true
+    },
+    {
+      "name": "nezha challenge all actions fully visible",
+      "pass": true
+    },
+    {
+      "name": "exactly one rating grade",
+      "pass": true
+    },
+    {
+      "name": "erlang normal retains real score",
+      "pass": true
+    },
+    {
+      "name": "erlang has the correct portrait and name",
+      "pass": true
+    },
+    {
+      "name": "realms reflect actual fifteen-level completion",
+      "pass": true
+    },
+    {
+      "name": "erlang normal all actions fully visible",
+      "pass": true
+    },
+    {
+      "name": "exactly one rating grade",
+      "pass": true
+    },
+    {
+      "name": "erlang challenge retains real score",
+      "pass": true
+    },
+    {
+      "name": "erlang has the correct portrait and name",
+      "pass": true
+    },
+    {
+      "name": "realms reflect actual fifteen-level completion",
+      "pass": true
+    },
+    {
+      "name": "erlang challenge all actions fully visible",
+      "pass": true
+    },
+    {
+      "name": "exactly one rating grade",
+      "pass": true
+    },
+    {
+      "name": "details exposes build and actual totals",
+      "pass": true
+    },
+    {
+      "name": "expanded details keep actions on screen",
+      "pass": true
+    },
+    {
+      "name": "1024px actions visible",
+      "pass": true,
+      "data": {
+        "viewport": {
+          "w": 1024,
+          "h": 768
+        },
+        "stage": {
+          "w": 984,
+          "h": 553.5
+        },
+        "scrollWidth": 982,
+        "clientWidth": 982,
+        "actions": [
+          {
+            "id": "epilogue",
+            "x": 70.09375,
+            "y": 583.765625,
+            "w": 176.75,
+            "h": 47.625,
+            "inside": true
+          },
+          {
+            "id": "retry",
+            "x": 260.578125,
+            "y": 587.578125,
+            "w": 81.53125,
+            "h": 40,
+            "inside": true
+          },
+          {
+            "id": "details",
+            "x": 355.84375,
+            "y": 587.578125,
+            "w": 104.265625,
+            "h": 40,
+            "inside": true
+          },
+          {
+            "id": "export",
+            "x": 880.375,
+            "y": 587.578125,
+            "w": 73.53125,
+            "h": 40,
+            "inside": true
+          }
+        ],
+        "title": {
+          "x": 70.09375,
+          "y": 195.96875,
+          "w": 540.09375,
+          "h": 48.96875,
+          "inside": true
+        }
+      }
+    },
+    {
+      "name": "1024px no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "1440px actions visible",
+      "pass": true,
+      "data": {
+        "viewport": {
+          "w": 1440,
+          "h": 1000
+        },
+        "stage": {
+          "w": 1360,
+          "h": 765
+        },
+        "scrollWidth": 1358,
+        "clientWidth": 1358,
+        "actions": [
+          {
+            "id": "epilogue",
+            "x": 108.890625,
+            "y": 794.25,
+            "w": 244.4375,
+            "h": 55.15625,
+            "inside": true
+          },
+          {
+            "id": "retry",
+            "x": 372.328125,
+            "y": 796.65625,
+            "w": 107.28125,
+            "h": 50.328125,
+            "inside": true
+          },
+          {
+            "id": "details",
+            "x": 498.609375,
+            "y": 798.421875,
+            "w": 134.28125,
+            "h": 46.796875,
+            "inside": true
+          },
+          {
+            "id": "export",
+            "x": 1239.828125,
+            "y": 799.3125,
+            "w": 91.28125,
+            "h": 45.03125,
+            "inside": true
+          }
+        ],
+        "title": {
+          "x": 108.890625,
+          "y": 240.546875,
+          "w": 746.90625,
+          "h": 67.71875,
+          "inside": true
+        }
+      }
+    },
+    {
+      "name": "1440px no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "1920px actions visible",
+      "pass": true,
+      "data": {
+        "viewport": {
+          "w": 1920,
+          "h": 1080
+        },
+        "stage": {
+          "w": 1628.4375,
+          "h": 915.984375
+        },
+        "scrollWidth": 1626,
+        "clientWidth": 1626,
+        "actions": [
+          {
+            "id": "epilogue",
+            "x": 228.09375,
+            "y": 895.46875,
+            "w": 292.75,
+            "h": 60.5,
+            "inside": true
+          },
+          {
+            "id": "retry",
+            "x": 543.609375,
+            "y": 897.421875,
+            "w": 118.28125,
+            "h": 56.59375,
+            "inside": true
+          },
+          {
+            "id": "details",
+            "x": 684.65625,
+            "y": 899.375,
+            "w": 145.046875,
+            "h": 52.6875,
+            "inside": true
+          },
+          {
+            "id": "export",
+            "x": 1589.625,
+            "y": 900.015625,
+            "w": 102.28125,
+            "h": 51.390625,
+            "inside": true
+          }
+        ],
+        "title": {
+          "x": 228.09375,
+          "y": 220.203125,
+          "w": 894.546875,
+          "h": 74.234375,
+          "inside": true
+        }
+      }
+    },
+    {
+      "name": "1920px no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "800px actions visible",
+      "pass": true,
+      "data": {
+        "viewport": {
+          "w": 800,
+          "h": 600
+        },
+        "stage": {
+          "w": 760,
+          "h": 427.5
+        },
+        "scrollWidth": 758,
+        "clientWidth": 758,
+        "actions": [
+          {
+            "id": "epilogue",
+            "x": 58.890625,
+            "y": 450.203125,
+            "w": 136.4375,
+            "h": 41.625,
+            "inside": true
+          },
+          {
+            "id": "retry",
+            "x": 205.9375,
+            "y": 454.015625,
+            "w": 63.15625,
+            "h": 34,
+            "inside": true
+          },
+          {
+            "id": "details",
+            "x": 279.703125,
+            "y": 454.015625,
+            "w": 85.765625,
+            "h": 34,
+            "inside": true
+          },
+          {
+            "id": "export",
+            "x": 681.953125,
+            "y": 454.015625,
+            "w": 59.15625,
+            "h": 34,
+            "inside": true
+          }
+        ],
+        "title": {
+          "x": 58.890625,
+          "y": 149.796875,
+          "w": 432.0625,
+          "h": 37.796875,
+          "inside": true
+        }
+      }
+    },
+    {
+      "name": "800px no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "390px actions visible",
+      "pass": true,
+      "data": {
+        "viewport": {
+          "w": 390,
+          "h": 844
+        },
+        "stage": {
+          "w": 350,
+          "h": 692
+        },
+        "scrollWidth": 348,
+        "clientWidth": 348,
+        "actions": [
+          {
+            "id": "epilogue",
+            "x": 41.875,
+            "y": 652,
+            "w": 306.25,
+            "h": 56,
+            "inside": true
+          },
+          {
+            "id": "retry",
+            "x": 41.875,
+            "y": 720,
+            "w": 64,
+            "h": 40,
+            "inside": true
+          },
+          {
+            "id": "details",
+            "x": 158.078125,
+            "y": 720,
+            "w": 81.859375,
+            "h": 40,
+            "inside": true
+          },
+          {
+            "id": "export",
+            "x": 292.125,
+            "y": 720,
+            "w": 56,
+            "h": 40,
+            "inside": true
+          }
+        ],
+        "title": {
+          "x": 41.875,
+          "y": 156,
+          "w": 306.25,
+          "h": 44.078125,
+          "inside": true
+        }
+      }
+    },
+    {
+      "name": "390px no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "export preserves real ending",
+      "pass": true
+    },
+    {
+      "name": "J confirms the primary action",
+      "pass": true
+    },
+    {
+      "name": "retry still routes to hero selection",
+      "pass": true
+    },
+    {
+      "name": "failure uses correct copy and retry",
+      "pass": true
+    },
+    {
+      "name": "failure new-path returns to menu",
+      "pass": true
+    },
+    {
+      "name": "fullscreen actions visible",
+      "pass": true
+    },
+    {
+      "name": "no runtime errors",
+      "pass": true
+    }
+  ],
+  "captures": [
+    {
+      "file": "offline-wukong-normal.png",
+      "label": "wukong · normal"
+    },
+    {
+      "file": "offline-wukong-challenge.png",
+      "label": "wukong · challenge"
+    },
+    {
+      "file": "offline-nezha-normal.png",
+      "label": "nezha · normal"
+    },
+    {
+      "file": "offline-nezha-challenge.png",
+      "label": "nezha · challenge"
+    },
+    {
+      "file": "offline-erlang-normal.png",
+      "label": "erlang · normal"
+    },
+    {
+      "file": "offline-erlang-challenge.png",
+      "label": "erlang · challenge"
+    },
+    {
+      "file": "offline-details.png",
+      "label": "Expanded details"
+    },
+    {
+      "file": "offline-size-1024.png",
+      "label": "1024×768"
+    },
+    {
+      "file": "offline-size-1440.png",
+      "label": "1440×1000"
+    },
+    {
+      "file": "offline-size-1920.png",
+      "label": "1920×1080"
+    },
+    {
+      "file": "offline-size-800.png",
+      "label": "800×600"
+    },
+    {
+      "file": "offline-size-390.png",
+      "label": "390×844"
+    },
+    {
+      "file": "offline-defeat.png",
+      "label": "Natural failure from original browser journey"
+    },
+    {
+      "file": "offline-fullscreen.png",
+      "label": "Native fullscreen result"
+    }
+  ],
+  "errors": [],
+  "layouts": [
+    {
+      "viewport": {
+        "w": 1280,
+        "h": 796
+      },
+      "stage": {
+        "w": 1123.546875,
+        "h": 631.984375
+      },
+      "scrollWidth": 1122,
+      "clientWidth": 1122,
+      "actions": [
+        {
+          "id": "epilogue",
+          "x": 135.28125,
+          "y": 638.609375,
+          "w": 201.875,
+          "h": 50.40625,
+          "inside": true
+        },
+        {
+          "id": "retry",
+          "x": 352.84375,
+          "y": 642.859375,
+          "w": 89.15625,
+          "h": 41.890625,
+          "inside": true
+        },
+        {
+          "id": "details",
+          "x": 457.6875,
+          "y": 643.8125,
+          "w": 110.90625,
+          "h": 40,
+          "inside": true
+        },
+        {
+          "id": "export",
+          "x": 1067.171875,
+          "y": 643.8125,
+          "w": 77.53125,
+          "h": 40,
+          "inside": true
+        }
+      ],
+      "title": {
+        "x": 135.28125,
+        "y": 188.5,
+        "w": 616.859375,
+        "h": 55.921875,
+        "inside": true
+      }
+    },
+    {
+      "viewport": {
+        "w": 1280,
+        "h": 796
+      },
+      "stage": {
+        "w": 1123.546875,
+        "h": 631.984375
+      },
+      "scrollWidth": 1122,
+      "clientWidth": 1122,
+      "actions": [
+        {
+          "id": "epilogue",
+          "x": 135.28125,
+          "y": 638.609375,
+          "w": 201.875,
+          "h": 50.40625,
+          "inside": true
+        },
+        {
+          "id": "retry",
+          "x": 352.84375,
+          "y": 642.859375,
+          "w": 89.15625,
+          "h": 41.890625,
+          "inside": true
+        },
+        {
+          "id": "details",
+          "x": 457.6875,
+          "y": 643.8125,
+          "w": 110.90625,
+          "h": 40,
+          "inside": true
+        },
+        {
+          "id": "export",
+          "x": 1067.171875,
+          "y": 643.8125,
+          "w": 77.53125,
+          "h": 40,
+          "inside": true
+        }
+      ],
+      "title": {
+        "x": 135.28125,
+        "y": 188.5,
+        "w": 616.859375,
+        "h": 55.921875,
+        "inside": true
+      }
+    },
+    {
+      "viewport": {
+        "w": 1280,
+        "h": 796
+      },
+      "stage": {
+        "w": 1123.546875,
+        "h": 631.984375
+      },
+      "scrollWidth": 1122,
+      "clientWidth": 1122,
+      "actions": [
+        {
+          "id": "epilogue",
+          "x": 135.28125,
+          "y": 638.609375,
+          "w": 201.875,
+          "h": 50.40625,
+          "inside": true
+        },
+        {
+          "id": "retry",
+          "x": 352.84375,
+          "y": 642.859375,
+          "w": 89.15625,
+          "h": 41.890625,
+          "inside": true
+        },
+        {
+          "id": "details",
+          "x": 457.6875,
+          "y": 643.8125,
+          "w": 110.90625,
+          "h": 40,
+          "inside": true
+        },
+        {
+          "id": "export",
+          "x": 1067.171875,
+          "y": 643.8125,
+          "w": 77.53125,
+          "h": 40,
+          "inside": true
+        }
+      ],
+      "title": {
+        "x": 135.28125,
+        "y": 188.5,
+        "w": 616.859375,
+        "h": 55.921875,
+        "inside": true
+      }
+    },
+    {
+      "viewport": {
+        "w": 1280,
+        "h": 796
+      },
+      "stage": {
+        "w": 1123.546875,
+        "h": 631.984375
+      },
+      "scrollWidth": 1122,
+      "clientWidth": 1122,
+      "actions": [
+        {
+          "id": "epilogue",
+          "x": 135.28125,
+          "y": 638.609375,
+          "w": 201.875,
+          "h": 50.40625,
+          "inside": true
+        },
+        {
+          "id": "retry",
+          "x": 352.84375,
+          "y": 642.859375,
+          "w": 89.15625,
+          "h": 41.890625,
+          "inside": true
+        },
+        {
+          "id": "details",
+          "x": 457.6875,
+          "y": 643.8125,
+          "w": 110.90625,
+          "h": 40,
+          "inside": true
+        },
+        {
+          "id": "export",
+          "x": 1067.171875,
+          "y": 643.8125,
+          "w": 77.53125,
+          "h": 40,
+          "inside": true
+        }
+      ],
+      "title": {
+        "x": 135.28125,
+        "y": 188.5,
+        "w": 616.859375,
+        "h": 55.921875,
+        "inside": true
+      }
+    },
+    {
+      "viewport": {
+        "w": 1280,
+        "h": 796
+      },
+      "stage": {
+        "w": 1123.546875,
+        "h": 631.984375
+      },
+      "scrollWidth": 1122,
+      "clientWidth": 1122,
+      "actions": [
+        {
+          "id": "epilogue",
+          "x": 135.28125,
+          "y": 638.609375,
+          "w": 201.875,
+          "h": 50.40625,
+          "inside": true
+        },
+        {
+          "id": "retry",
+          "x": 352.84375,
+          "y": 642.859375,
+          "w": 89.15625,
+          "h": 41.890625,
+          "inside": true
+        },
+        {
+          "id": "details",
+          "x": 457.6875,
+          "y": 643.8125,
+          "w": 110.90625,
+          "h": 40,
+          "inside": true
+        },
+        {
+          "id": "export",
+          "x": 1067.171875,
+          "y": 643.8125,
+          "w": 77.53125,
+          "h": 40,
+          "inside": true
+        }
+      ],
+      "title": {
+        "x": 135.28125,
+        "y": 188.5,
+        "w": 616.859375,
+        "h": 55.921875,
+        "inside": true
+      }
+    },
+    {
+      "viewport": {
+        "w": 1280,
+        "h": 796
+      },
+      "stage": {
+        "w": 1123.546875,
+        "h": 631.984375
+      },
+      "scrollWidth": 1122,
+      "clientWidth": 1122,
+      "actions": [
+        {
+          "id": "epilogue",
+          "x": 135.28125,
+          "y": 638.609375,
+          "w": 201.875,
+          "h": 50.40625,
+          "inside": true
+        },
+        {
+          "id": "retry",
+          "x": 352.84375,
+          "y": 642.859375,
+          "w": 89.15625,
+          "h": 41.890625,
+          "inside": true
+        },
+        {
+          "id": "details",
+          "x": 457.6875,
+          "y": 643.8125,
+          "w": 110.90625,
+          "h": 40,
+          "inside": true
+        },
+        {
+          "id": "export",
+          "x": 1067.171875,
+          "y": 643.8125,
+          "w": 77.53125,
+          "h": 40,
+          "inside": true
+        }
+      ],
+      "title": {
+        "x": 135.28125,
+        "y": 188.5,
+        "w": 616.859375,
+        "h": 55.921875,
+        "inside": true
+      }
+    },
+    {
+      "viewport": {
+        "w": 1024,
+        "h": 768
+      },
+      "stage": {
+        "w": 984,
+        "h": 553.5
+      },
+      "scrollWidth": 982,
+      "clientWidth": 982,
+      "actions": [
+        {
+          "id": "epilogue",
+          "x": 70.09375,
+          "y": 583.765625,
+          "w": 176.75,
+          "h": 47.625,
+          "inside": true
+        },
+        {
+          "id": "retry",
+          "x": 260.578125,
+          "y": 587.578125,
+          "w": 81.53125,
+          "h": 40,
+          "inside": true
+        },
+        {
+          "id": "details",
+          "x": 355.84375,
+          "y": 587.578125,
+          "w": 104.265625,
+          "h": 40,
+          "inside": true
+        },
+        {
+          "id": "export",
+          "x": 880.375,
+          "y": 587.578125,
+          "w": 73.53125,
+          "h": 40,
+          "inside": true
+        }
+      ],
+      "title": {
+        "x": 70.09375,
+        "y": 195.96875,
+        "w": 540.09375,
+        "h": 48.96875,
+        "inside": true
+      }
+    },
+    {
+      "viewport": {
+        "w": 1440,
+        "h": 1000
+      },
+      "stage": {
+        "w": 1360,
+        "h": 765
+      },
+      "scrollWidth": 1358,
+      "clientWidth": 1358,
+      "actions": [
+        {
+          "id": "epilogue",
+          "x": 108.890625,
+          "y": 794.25,
+          "w": 244.4375,
+          "h": 55.15625,
+          "inside": true
+        },
+        {
+          "id": "retry",
+          "x": 372.328125,
+          "y": 796.65625,
+          "w": 107.28125,
+          "h": 50.328125,
+          "inside": true
+        },
+        {
+          "id": "details",
+          "x": 498.609375,
+          "y": 798.421875,
+          "w": 134.28125,
+          "h": 46.796875,
+          "inside": true
+        },
+        {
+          "id": "export",
+          "x": 1239.828125,
+          "y": 799.3125,
+          "w": 91.28125,
+          "h": 45.03125,
+          "inside": true
+        }
+      ],
+      "title": {
+        "x": 108.890625,
+        "y": 240.546875,
+        "w": 746.90625,
+        "h": 67.71875,
+        "inside": true
+      }
+    },
+    {
+      "viewport": {
+        "w": 1920,
+        "h": 1080
+      },
+      "stage": {
+        "w": 1628.4375,
+        "h": 915.984375
+      },
+      "scrollWidth": 1626,
+      "clientWidth": 1626,
+      "actions": [
+        {
+          "id": "epilogue",
+          "x": 228.09375,
+          "y": 895.46875,
+          "w": 292.75,
+          "h": 60.5,
+          "inside": true
+        },
+        {
+          "id": "retry",
+          "x": 543.609375,
+          "y": 897.421875,
+          "w": 118.28125,
+          "h": 56.59375,
+          "inside": true
+        },
+        {
+          "id": "details",
+          "x": 684.65625,
+          "y": 899.375,
+          "w": 145.046875,
+          "h": 52.6875,
+          "inside": true
+        },
+        {
+          "id": "export",
+          "x": 1589.625,
+          "y": 900.015625,
+          "w": 102.28125,
+          "h": 51.390625,
+          "inside": true
+        }
+      ],
+      "title": {
+        "x": 228.09375,
+        "y": 220.203125,
+        "w": 894.546875,
+        "h": 74.234375,
+        "inside": true
+      }
+    },
+    {
+      "viewport": {
+        "w": 800,
+        "h": 600
+      },
+      "stage": {
+        "w": 760,
+        "h": 427.5
+      },
+      "scrollWidth": 758,
+      "clientWidth": 758,
+      "actions": [
+        {
+          "id": "epilogue",
+          "x": 58.890625,
+          "y": 450.203125,
+          "w": 136.4375,
+          "h": 41.625,
+          "inside": true
+        },
+        {
+          "id": "retry",
+          "x": 205.9375,
+          "y": 454.015625,
+          "w": 63.15625,
+          "h": 34,
+          "inside": true
+        },
+        {
+          "id": "details",
+          "x": 279.703125,
+          "y": 454.015625,
+          "w": 85.765625,
+          "h": 34,
+          "inside": true
+        },
+        {
+          "id": "export",
+          "x": 681.953125,
+          "y": 454.015625,
+          "w": 59.15625,
+          "h": 34,
+          "inside": true
+        }
+      ],
+      "title": {
+        "x": 58.890625,
+        "y": 149.796875,
+        "w": 432.0625,
+        "h": 37.796875,
+        "inside": true
+      }
+    },
+    {
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "stage": {
+        "w": 350,
+        "h": 692
+      },
+      "scrollWidth": 348,
+      "clientWidth": 348,
+      "actions": [
+        {
+          "id": "epilogue",
+          "x": 41.875,
+          "y": 652,
+          "w": 306.25,
+          "h": 56,
+          "inside": true
+        },
+        {
+          "id": "retry",
+          "x": 41.875,
+          "y": 720,
+          "w": 64,
+          "h": 40,
+          "inside": true
+        },
+        {
+          "id": "details",
+          "x": 158.078125,
+          "y": 720,
+          "w": 81.859375,
+          "h": 40,
+          "inside": true
+        },
+        {
+          "id": "export",
+          "x": 292.125,
+          "y": 720,
+          "w": 56,
+          "h": 40,
+          "inside": true
+        }
+      ],
+      "title": {
+        "x": 41.875,
+        "y": 156,
+        "w": 306.25,
+        "h": 44.078125,
+        "inside": true
+      }
+    }
+  ],
+  "browser": "156.0.4314.50",
+  "entrySHA256": "4df8fa83438c4947f407e8d0ba059de38c9ca057730d1a50542368865df21d5b",
+  "pass": true
+}

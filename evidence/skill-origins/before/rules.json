@@ -1,0 +1,59 @@
+{
+  "pass": false,
+  "checks": [
+    {
+      "name": "boss lightning announces a complete column from the sky",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(e.marks.every(b=>b.y===0&&b.y+b.h===440))\n\n    at E:\\githome\\kong-rpg\\tools\\verify-skill-origins.cjs:6:212\n    at check (E:\\githome\\kong-rpg\\tools\\verify-skill-origins.cjs:4:29)\n    at Object.<anonymous> (E:\\githome\\kong-rpg\\tools\\verify-skill-origins.cjs:6:1)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+    },
+    {
+      "name": "ordinary thunder casters also strike from above",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n350 !== 0\n\n    at E:\\githome\\kong-rpg\\tools\\verify-skill-origins.cjs:7:136\n    at check (E:\\githome\\kong-rpg\\tools\\verify-skill-origins.cjs:4:29)\n    at Object.<anonymous> (E:\\githome\\kong-rpg\\tools\\verify-skill-origins.cjs:7:1)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+    },
+    {
+      "name": "lightning can hit an airborne actor inside its announced shaft",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(s.player.hp<hp)\n\n    at E:\\githome\\kong-rpg\\tools\\verify-skill-origins.cjs:8:273\n    at check (E:\\githome\\kong-rpg\\tools\\verify-skill-origins.cjs:4:29)\n    at Object.<anonymous> (E:\\githome\\kong-rpg\\tools\\verify-skill-origins.cjs:8:1)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+    },
+    {
+      "name": "moving out of the locked lightning columns avoids damage",
+      "pass": true
+    },
+    {
+      "name": "crossbow bolts launch at the caster weapon instead of the target feet",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(s.projectiles[0].y>=e.y&&s.projectiles[0].y<e.y+e.h*.65)\n\n    at E:\\githome\\kong-rpg\\tools\\verify-skill-origins.cjs:10:182\n    at check (E:\\githome\\kong-rpg\\tools\\verify-skill-origins.cjs:4:29)\n    at Object.<anonymous> (E:\\githome\\kong-rpg\\tools\\verify-skill-origins.cjs:10:1)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+    },
+    {
+      "name": "poison fans share a mouth source and diverge into three actual trajectories",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n3 !== 1\n\n    at E:\\githome\\kong-rpg\\tools\\verify-skill-origins.cjs:11:276\n    at check (E:\\githome\\kong-rpg\\tools\\verify-skill-origins.cjs:4:29)\n    at Object.<anonymous> (E:\\githome\\kong-rpg\\tools\\verify-skill-origins.cjs:11:1)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+    },
+    {
+      "name": "water columns rise from the targeted platform, not the fixed bottom floor",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(e.marks.every(b=>b.y+b.h===K.surfaceAt(s,b.x+b.w/2,s.player.y+42)))\n\n    at E:\\githome\\kong-rpg\\tools\\verify-skill-origins.cjs:12:277\n    at check (E:\\githome\\kong-rpg\\tools\\verify-skill-origins.cjs:4:29)\n    at Object.<anonymous> (E:\\githome\\kong-rpg\\tools\\verify-skill-origins.cjs:12:1)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+    },
+    {
+      "name": "ground waves retain ground-level hit regions",
+      "pass": true
+    },
+    {
+      "name": "all live boss skills retain valid save/import geometry and projectile velocities",
+      "pass": true
+    },
+    {
+      "name": "sky-visible-11 draws lightning at the sky source",
+      "pass": true
+    },
+    {
+      "name": "sky-visible-12 draws lightning at the sky source",
+      "pass": true
+    },
+    {
+      "name": "rendered skill scenes have no browser exceptions",
+      "pass": true
+    }
+  ]
+}

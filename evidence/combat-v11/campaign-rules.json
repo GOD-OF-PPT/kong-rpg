@@ -1,0 +1,74 @@
+{
+  "version": "11.0.0",
+  "normalEnemies": 110,
+  "challengeEnemies": 155,
+  "checks": [
+    {
+      "name": "five specified chapters, 15 distinct level layouts, ten mini and five named major bosses",
+      "pass": true
+    },
+    {
+      "name": "normal and challenge layouts deterministic and reinforcement count grows without a health multiplier",
+      "pass": true
+    },
+    {
+      "name": "SABC score uses time, actual hit events and unique kill ratio with fixed thresholds",
+      "pass": true
+    },
+    {
+      "name": "challenge is S-only and cannot be started through a forged pending difficulty",
+      "pass": true
+    },
+    {
+      "name": "every boss move has locked warning geometry and recoverable windup in both modes",
+      "pass": true
+    },
+    {
+      "name": "challenge adds an independently telegraphed second attack, normal has the original recovery",
+      "pass": true
+    },
+    {
+      "name": "Qin writ armour can be removed through actual attack, pearl and tower destruction interrupt their spells",
+      "pass": true
+    },
+    {
+      "name": "major death opens gate; first fourteen victories give rewards; only fifteenth gate settles",
+      "pass": true
+    },
+    {
+      "name": "summoned tower guards cannot farm score; repeated lethal calls do not count twice",
+      "pass": true
+    },
+    {
+      "name": "all three hero states, four celestial skills and pause restore through fifteen stages",
+      "pass": true
+    },
+    {
+      "name": "F away from any interactable is safe on all fifteen maps",
+      "pass": true
+    },
+    {
+      "name": "legacy v9 routes to preserved entry and corrupted qualification is rejected",
+      "pass": true
+    },
+    {
+      "name": "only a complete normal S result issues the unlock receipt; A and incomplete S do not",
+      "pass": true
+    }
+  ],
+  "evidence": {
+    "flow": {
+      "completed": 15,
+      "guardians": 15
+    },
+    "SReceipt": {
+      "difficulty": "normal",
+      "complete": true,
+      "levels": 15,
+      "seconds": 1200,
+      "hits": 0,
+      "killed": 110,
+      "total": 110
+    }
+  }
+}

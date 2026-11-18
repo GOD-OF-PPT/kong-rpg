@@ -1,0 +1,15 @@
+{
+  "kind": "http",
+  "checks": [
+    {
+      "name": "reward initially selects exactly one card",
+      "pass": true
+    },
+    {
+      "name": "selected card has a prominent outline and explicit label",
+      "pass": false
+    }
+  ],
+  "errors": [],
+  "failure": "AssertionError [ERR_ASSERTION]: selected card has a prominent outline and explicit label\n    at check (E:\\githome\\kong-rpg\\tools\\verify-choice-controls.cjs:4:129)\n    at E:\\githome\\kong-rpg\\tools\\verify-choice-controls.cjs:29:5"
+}

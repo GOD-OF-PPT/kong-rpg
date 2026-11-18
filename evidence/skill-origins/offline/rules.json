@@ -1,0 +1,181 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "name": "boss lightning covers the arena from the sky with exactly one escape lane",
+      "pass": true
+    },
+    {
+      "name": "ordinary thunder casters also strike from above",
+      "pass": true
+    },
+    {
+      "name": "lightning can hit an airborne actor inside its strike area",
+      "pass": true
+    },
+    {
+      "name": "moving out of the locked lightning columns avoids damage",
+      "pass": true
+    },
+    {
+      "name": "crossbow bolts launch at the caster weapon instead of the target feet",
+      "pass": true
+    },
+    {
+      "name": "boss poison fans share a mouth source and diverge into five actual trajectories",
+      "pass": true
+    },
+    {
+      "name": "water columns rise from the targeted platform, not the fixed bottom floor",
+      "pass": true
+    },
+    {
+      "name": "earth and tide signatures retain a ground source",
+      "pass": true
+    },
+    {
+      "name": "all five bosses have a reachable locked escape lane for their signature",
+      "pass": true
+    },
+    {
+      "name": "large blades, geysers and fire wheels match enlarged damage geometry",
+      "pass": true
+    },
+    {
+      "name": "all live boss skills retain valid save/import geometry and projectile velocities",
+      "pass": true
+    },
+    {
+      "name": "sky-height allowance cannot be forged onto a melee hit",
+      "pass": true
+    },
+    {
+      "name": "dragon-thunder-actor-order",
+      "pass": true
+    },
+    {
+      "name": "sky-visible-11 draws lightning at the sky source",
+      "pass": true
+    },
+    {
+      "name": "sharp-bright-lightning-core-11",
+      "pass": true
+    },
+    {
+      "name": "dragon-thunder-actor-order",
+      "pass": true
+    },
+    {
+      "name": "sky-visible-12 draws lightning at the sky source",
+      "pass": true
+    },
+    {
+      "name": "sharp-bright-lightning-core-12",
+      "pass": true
+    },
+    {
+      "name": "judge-mark-actor-order",
+      "pass": true
+    },
+    {
+      "name": "judge-chain-actor-order",
+      "pass": true
+    },
+    {
+      "name": "dragon-column-actor-order",
+      "pass": true
+    },
+    {
+      "name": "tower-prison-actor-order",
+      "pass": true
+    },
+    {
+      "name": "venom-tide-actor-order",
+      "pass": true
+    },
+    {
+      "name": "axe-quake-actor-order",
+      "pass": true
+    },
+    {
+      "name": "ground-spikes-buried-under-terrain",
+      "pass": true
+    },
+    {
+      "name": "axe-cleave-actor-order",
+      "pass": true
+    },
+    {
+      "name": "no-artificial-skill-boundaries",
+      "pass": true
+    },
+    {
+      "name": "all-skills-use-transparent-art-without-panels-or-lines",
+      "pass": true
+    },
+    {
+      "name": "axe-quake real keyboard movement reaches the sole safe lane",
+      "pass": true
+    },
+    {
+      "name": "axe-quake safe lane avoids the real damage event",
+      "pass": true
+    },
+    {
+      "name": "axe-quake remains safe through the whole active window",
+      "pass": true
+    },
+    {
+      "name": "judge-chain real keyboard movement reaches the sole safe lane",
+      "pass": true
+    },
+    {
+      "name": "judge-chain safe lane avoids the real damage event",
+      "pass": true
+    },
+    {
+      "name": "judge-chain remains safe through the whole active window",
+      "pass": true
+    },
+    {
+      "name": "venom-tide real keyboard movement reaches the sole safe lane",
+      "pass": true
+    },
+    {
+      "name": "venom-tide safe lane avoids the real damage event",
+      "pass": true
+    },
+    {
+      "name": "venom-tide remains safe through the whole active window",
+      "pass": true
+    },
+    {
+      "name": "dragon-thunder real keyboard movement reaches the sole safe lane",
+      "pass": true
+    },
+    {
+      "name": "dragon-thunder safe lane avoids the real damage event",
+      "pass": true
+    },
+    {
+      "name": "dragon-thunder remains safe through the whole active window",
+      "pass": true
+    },
+    {
+      "name": "tower-prison real keyboard movement reaches the sole safe lane",
+      "pass": true
+    },
+    {
+      "name": "tower-prison safe lane avoids the real damage event",
+      "pass": true
+    },
+    {
+      "name": "tower-prison remains safe through the whole active window",
+      "pass": true
+    },
+    {
+      "name": "rendered skill scenes have no browser exceptions",
+      "pass": true
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "version": "2.1.0",
+  "results": [
+    {
+      "name": "same seed and input replay produce identical state",
+      "pass": true
+    },
+    {
+      "name": "three authored stages have distinct topology, targets and roles",
+      "pass": true
+    },
+    {
+      "name": "every ground gap remains within base full-jump reach",
+      "pass": true
+    },
+    {
+      "name": "long jump reaches 100px, short jump is meaningfully shorter",
+      "pass": true
+    },
+    {
+      "name": "cloud gives one aerial jump and no more until landing",
+      "pass": true
+    },
+    {
+      "name": "down+jump drops through ledges but solid ground still catches player",
+      "pass": true
+    },
+    {
+      "name": "light strikes no longer freeze a committed enemy warning",
+      "pass": true
+    },
+    {
+      "name": "heavy strike interrupts ordinary windup without making damage immune",
+      "pass": true
+    },
+    {
+      "name": "normal shield frontal guard has rear and recovery alternatives",
+      "pass": true
+    },
+    {
+      "name": "enemy visual/attack source uses shared collision box",
+      "pass": true
+    },
+    {
+      "name": "idle body overlap pushes rather than dealing untelegraphed damage",
+      "pass": true
+    },
+    {
+      "name": "one attack target list prevents repeated damage per swing",
+      "pass": true
+    },
+    {
+      "name": "clone echo trades higher cost for ranged and longer presence",
+      "pass": true
+    },
+    {
+      "name": "clone cannot cast without resources and remains paid in telemetry",
+      "pass": true
+    },
+    {
+      "name": "mirror changes hostile projectile allegiance in invulnerable dash",
+      "pass": true
+    },
+    {
+      "name": "seals warn before emitting projectiles, then can be destroyed",
+      "pass": true
+    },
+    {
+      "name": "mercy heals exactly once per destroyed seal",
+      "pass": true
+    },
+    {
+      "name": "midpoint reward returns to the same map and is not repeatable",
+      "pass": true
+    },
+    {
+      "name": "full relic slots require an explicit replacement",
+      "pass": true
+    },
+    {
+      "name": "rest is an actual opportunity cost and does not grant a relic",
+      "pass": true
+    },
+    {
+      "name": "exit reward advances and restores only specified travel resources",
+      "pass": true
+    },
+    {
+      "name": "boss always takes chip damage in front and full damage from rear/recovery",
+      "pass": true
+    },
+    {
+      "name": "boss shift has a warning and continuous movement, not a teleport",
+      "pass": true
+    },
+    {
+      "name": "boss victory freezes late damage and simulation progression",
+      "pass": true
+    },
+    {
+      "name": "fall restores solid safety with exact life cost",
+      "pass": true
+    },
+    {
+      "name": "save restores clone, projectiles, timing and pause state",
+      "pass": true
+    },
+    {
+      "name": "save preserves pending replacement without silently losing gear",
+      "pass": true
+    },
+    {
+      "name": "legacy save is explicitly routed away from new rules",
+      "pass": true
+    },
+    {
+      "name": "malformed scalar, phases and rewards are rejected",
+      "pass": true
+    },
+    {
+      "name": "restored geometry is canonical, not supplied by JSON",
+      "pass": true
+    },
+    {
+      "name": "late saves retain valid distant-enemy timers",
+      "pass": true
+    },
+    {
+      "name": "v1.2 schema2 saves remain identified as legacy journeys",
+      "pass": true
+    },
+    {
+      "name": "pause freezes gameplay including wall elapsed",
+      "pass": true
+    },
+    {
+      "name": "release has no external scripts, fonts, fetch or ESM",
+      "pass": true
+    }
+  ]
+}

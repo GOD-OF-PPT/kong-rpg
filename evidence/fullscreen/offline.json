@@ -1,0 +1,244 @@
+{
+  "kind": "file",
+  "checks": [
+    {
+      "name": "large window uses its available width",
+      "pass": true
+    },
+    {
+      "name": "game offers a fullscreen control",
+      "pass": true
+    },
+    {
+      "name": "button enters native browser fullscreen",
+      "pass": true
+    },
+    {
+      "name": "fullscreen removes the header and footer",
+      "pass": true
+    },
+    {
+      "name": "fullscreen game keeps the 16:9 aspect ratio",
+      "pass": true
+    },
+    {
+      "name": "fullscreen game fills at least one screen dimension",
+      "pass": true
+    },
+    {
+      "name": "fullscreen input keeps the same run",
+      "pass": true
+    },
+    {
+      "name": "pointer coordinates follow the resized game view",
+      "pass": true
+    },
+    {
+      "name": "the same button exits fullscreen",
+      "pass": true
+    },
+    {
+      "name": "Escape exits native fullscreen",
+      "pass": true
+    },
+    {
+      "name": "F10 enters fullscreen and browser exit restores layout",
+      "pass": true
+    },
+    {
+      "name": "pause dialog stays usable in fullscreen",
+      "pass": true
+    },
+    {
+      "name": "blocked browser fullscreen falls back to filling the window",
+      "pass": true
+    },
+    {
+      "name": "Escape exits the window fallback while keeping pause",
+      "pass": true
+    },
+    {
+      "name": "2560 fullscreen preserves aspect and stays inside view",
+      "pass": true
+    },
+    {
+      "name": "2560 fullscreen control does not cover combat controls",
+      "pass": true
+    },
+    {
+      "name": "1920 fullscreen preserves aspect and stays inside view",
+      "pass": true
+    },
+    {
+      "name": "1920 fullscreen control does not cover combat controls",
+      "pass": true
+    },
+    {
+      "name": "1024 fullscreen preserves aspect and stays inside view",
+      "pass": true
+    },
+    {
+      "name": "1024 fullscreen control does not cover combat controls",
+      "pass": true
+    },
+    {
+      "name": "no browser or game-loop errors",
+      "pass": true
+    }
+  ],
+  "layouts": [
+    {
+      "name": "large-window",
+      "viewport": {
+        "w": 2560,
+        "h": 1439
+      },
+      "app": {
+        "x": 0,
+        "y": 0,
+        "w": 2560,
+        "h": 1439
+      },
+      "stage": {
+        "x": 146.671875,
+        "y": 97.015625,
+        "w": 2266.65625,
+        "h": 1274.984375
+      },
+      "world": {
+        "x": 147.671875,
+        "y": 98.015625,
+        "w": 2264.65625,
+        "h": 1272.984375
+      },
+      "fullscreen": null,
+      "scroll": {
+        "w": 2560,
+        "h": 1439
+      }
+    },
+    {
+      "name": "native-fullscreen",
+      "viewport": {
+        "w": 2560,
+        "h": 1439
+      },
+      "app": {
+        "x": 0,
+        "y": 0,
+        "w": 2560,
+        "h": 1439
+      },
+      "stage": {
+        "x": 0.890625,
+        "y": 0.015625,
+        "w": 2558.21875,
+        "h": 1438.984375
+      },
+      "world": {
+        "x": 0.890625,
+        "y": 0.015625,
+        "w": 2558.21875,
+        "h": 1438.984375
+      },
+      "fullscreen": "app",
+      "scroll": {
+        "w": 2560,
+        "h": 1439
+      }
+    },
+    {
+      "name": "resized-window-fullscreen",
+      "viewport": {
+        "w": 2560,
+        "h": 1080
+      },
+      "app": {
+        "x": 0,
+        "y": 0,
+        "w": 2560,
+        "h": 1080
+      },
+      "stage": {
+        "x": 320,
+        "y": 0,
+        "w": 1920,
+        "h": 1080
+      },
+      "world": {
+        "x": 320,
+        "y": 0,
+        "w": 1920,
+        "h": 1080
+      },
+      "fullscreen": null,
+      "scroll": {
+        "w": 2560,
+        "h": 1080
+      }
+    },
+    {
+      "name": "resized-window-fullscreen",
+      "viewport": {
+        "w": 1920,
+        "h": 1080
+      },
+      "app": {
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 1080
+      },
+      "stage": {
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 1080
+      },
+      "world": {
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 1080
+      },
+      "fullscreen": null,
+      "scroll": {
+        "w": 1920,
+        "h": 1080
+      }
+    },
+    {
+      "name": "resized-window-fullscreen",
+      "viewport": {
+        "w": 1024,
+        "h": 768
+      },
+      "app": {
+        "x": 0,
+        "y": 0,
+        "w": 1024,
+        "h": 768
+      },
+      "stage": {
+        "x": 0,
+        "y": 96,
+        "w": 1024,
+        "h": 576
+      },
+      "world": {
+        "x": 0,
+        "y": 96,
+        "w": 1024,
+        "h": 576
+      },
+      "fullscreen": null,
+      "scroll": {
+        "w": 1024,
+        "h": 768
+      }
+    }
+  ],
+  "errors": [],
+  "browser": "156.0.4314.50",
+  "pass": true
+}

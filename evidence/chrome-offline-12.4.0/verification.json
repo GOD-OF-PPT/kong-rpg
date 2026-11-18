@@ -1,0 +1,140 @@
+{
+  "entry": "E:\\githome\\kong-rpg\\artifacts\\chrome-offline-check-12.4.0\\index.html",
+  "url": "file:///E:/githome/kong-rpg/artifacts/chrome-offline-check-12.4.0/index.html",
+  "sha256": "9c74b421ed8b70bebd8aa12e979130c5297bbc7d775ac463dc0d7809c17f2cc6",
+  "browserPath": "C:/Users/KSG/AppData/Local/Google/Chrome/Application/chrome.exe",
+  "method": "Installed Google Chrome, headed, clean browser context, offline and HTTP(S) blocked; real menu clicks and keyboard; ZIP-extracted root index.html. No injected game state, cached resources or browser security overrides.",
+  "checks": [
+    {
+      "name": "root file entry opens directly in Google Chrome",
+      "pass": true
+    },
+    {
+      "name": "menu and embedded brand are visible",
+      "pass": true
+    },
+    {
+      "name": "character selection opens with all three heroes",
+      "pass": true
+    },
+    {
+      "name": "selected hero enters the real gameplay interface",
+      "pass": true
+    },
+    {
+      "name": "movement, attack and jump respond to actual keys",
+      "pass": true,
+      "data": {
+        "startX": 90,
+        "endX": 167.93333157364447,
+        "swings": 1,
+        "jumps": 1
+      }
+    },
+    {
+      "name": "Escape pauses the game",
+      "pass": true
+    },
+    {
+      "name": "simulation stays frozen while paused",
+      "pass": true
+    },
+    {
+      "name": "all embedded image assets decode",
+      "pass": true,
+      "data": 79
+    },
+    {
+      "name": "offline entry requests no HTTP or HTTPS resources",
+      "pass": true
+    },
+    {
+      "name": "no browser or runtime errors",
+      "pass": true,
+      "data": {
+        "errors": [],
+        "metrics": [],
+        "consoleErrors": []
+      }
+    }
+  ],
+  "errors": [],
+  "network": [],
+  "consoleErrors": [],
+  "browserVersion": "156.0.8078.47",
+  "servedVersion": "12.4.0",
+  "result": "passed",
+  "final": {
+    "screen": "playing",
+    "hero": "wukong",
+    "stage": 0
+  },
+  "audio": {
+    "context": "running",
+    "sampleRate": 48000,
+    "baseLatencyMs": 10,
+    "outputLatencyMs": 40,
+    "volume": 0.25,
+    "masterGain": 0.25,
+    "music": {
+      "scene": "playing",
+      "current": "gameplay",
+      "hidden": false,
+      "rms": 0.025778,
+      "starts": [
+        {
+          "id": "menu-01",
+          "time": 0.171
+        },
+        {
+          "id": "gameplay",
+          "time": 0.712
+        }
+      ],
+      "errors": [],
+      "blocked": 0,
+      "loops": 0,
+      "menuChanges": 0,
+      "voices": [
+        {
+          "id": "menu-01",
+          "paused": true,
+          "position": 1.142,
+          "duration": 97.907,
+          "readyState": 4,
+          "loop": false,
+          "gain": 0,
+          "fading": false
+        },
+        {
+          "id": "gameplay",
+          "paused": false,
+          "position": 1.881,
+          "duration": 147.069,
+          "readyState": 4,
+          "loop": true,
+          "gain": 0.2752,
+          "fading": true
+        }
+      ]
+    },
+    "decoded": [
+      "staff-light-a",
+      "staff-light-b",
+      "staff-heavy",
+      "shield-block",
+      "ring-hit-a",
+      "ring-hit-b",
+      "ground-slam",
+      "ultimate-hit"
+    ],
+    "activeVoices": 0,
+    "played": {},
+    "fallbacks": 0,
+    "coalesced": 0,
+    "stolen": 0,
+    "maxVoices": 0,
+    "decodeErrors": [],
+    "recent": []
+  }
+}

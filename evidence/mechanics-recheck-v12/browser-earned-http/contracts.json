@@ -1,0 +1,243 @@
+{
+  "mode": "http",
+  "sha256": "0251dd268da7f1af63278378cd594cad6997dfb7a7c70159590d44bda951a7b4",
+  "method": "Canonical fixtures through public save import; actual PC keyboard transitions; read-only snapshots and render tracing. Not human preference or a natural full journey.",
+  "checks": [
+    {
+      "name": "bow-to-summon",
+      "pass": true,
+      "data": {
+        "attack": 0,
+        "bow": null,
+        "events": [
+          {
+            "type": "ultimate",
+            "t": 0.167,
+            "wall": 0.167
+          }
+        ]
+      }
+    },
+    {
+      "name": "bow-to-beam",
+      "pass": true,
+      "data": {
+        "attack": 0,
+        "bow": null,
+        "events": [
+          {
+            "type": "art-start",
+            "t": 0.042,
+            "wall": 0.042,
+            "id": "eye-beam"
+          }
+        ]
+      }
+    },
+    {
+      "name": "main-to-step",
+      "pass": true,
+      "data": {
+        "attack": 0,
+        "bow": null,
+        "events": [
+          {
+            "type": "dash",
+            "t": 0.033,
+            "wall": 0.033
+          }
+        ]
+      }
+    },
+    {
+      "name": "wukong-hurt-blocks-L",
+      "pass": true,
+      "data": {
+        "hurt": 0.20666666666666667,
+        "focus": 100
+      }
+    },
+    {
+      "name": "nezha-hurt-blocks-L",
+      "pass": true,
+      "data": {
+        "hurt": 0.19,
+        "focus": 100
+      }
+    },
+    {
+      "name": "staff-to-secondary",
+      "pass": true,
+      "data": {
+        "arm": null,
+        "pose": 0.20833333333333334
+      }
+    },
+    {
+      "name": "step-to-summon",
+      "pass": true,
+      "data": {
+        "dash": 0,
+        "ultimate": 0.8016666666666669
+      }
+    },
+    {
+      "name": "counterstrike-repeats-on-next-step",
+      "pass": true,
+      "data": {
+        "initial": 108,
+        "firstHP": 90,
+        "secondHP": 72
+      }
+    },
+    {
+      "name": "six-arms-still-flies",
+      "pass": true
+    },
+    {
+      "name": "active-form-restores",
+      "pass": true
+    },
+    {
+      "name": "earned-S-unlocks-challenge",
+      "pass": true
+    },
+    {
+      "name": "earned-license-starts-real-challenge",
+      "pass": true
+    },
+    {
+      "name": "no-runtime-errors",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "network": [
+    "http://127.0.0.1:5188/?skill-audit=1"
+  ],
+  "inputs": [
+    {
+      "code": "KeyH",
+      "at": 1793194813487
+    },
+    {
+      "code": "KeyR",
+      "at": 1793194813530
+    },
+    {
+      "code": "Escape",
+      "at": 1793194814193
+    },
+    {
+      "code": "KeyH",
+      "at": 1793194814290
+    },
+    {
+      "code": "KeyC",
+      "at": 1793194814326
+    },
+    {
+      "code": "Escape",
+      "at": 1793194814989
+    },
+    {
+      "code": "KeyJ",
+      "at": 1793194815071
+    },
+    {
+      "code": "KeyU",
+      "at": 1793194815110
+    },
+    {
+      "code": "Escape",
+      "at": 1793194815468
+    },
+    {
+      "code": "KeyL",
+      "at": 1793194815553
+    },
+    {
+      "code": "Escape",
+      "at": 1793194815852
+    },
+    {
+      "code": "KeyL",
+      "at": 1793194816161
+    },
+    {
+      "code": "Escape",
+      "at": 1793194816469
+    },
+    {
+      "code": "KeyH",
+      "at": 1793194816860
+    },
+    {
+      "code": "Escape",
+      "at": 1793194817167
+    },
+    {
+      "code": "KeyU",
+      "at": 1793194817470
+    },
+    {
+      "code": "KeyR",
+      "at": 1793194817509
+    },
+    {
+      "code": "Escape",
+      "at": 1793194817838
+    },
+    {
+      "code": "Escape",
+      "at": 1793194818554
+    },
+    {
+      "code": "KeyU",
+      "at": 1793194818657
+    },
+    {
+      "code": "KeyU",
+      "at": 1793194819738
+    },
+    {
+      "code": "Escape",
+      "at": 1793194820270
+    },
+    {
+      "code": "KeyC",
+      "at": 1793194820588
+    },
+    {
+      "code": "Escape",
+      "at": 1793194821492
+    },
+    {
+      "code": "Digit1",
+      "at": 1793194822736
+    }
+  ],
+  "captures": [
+    "menu.png",
+    "bow-to-summon.png",
+    "bow-to-beam.png",
+    "main-to-step.png",
+    "wukong-hurt-L.png",
+    "nezha-hurt-L.png",
+    "staff-to-secondary.png",
+    "step-to-summon.png",
+    "actual-injury.png",
+    "second-counterstrike.png",
+    "six-arms-flight.png",
+    "earned-S-result.png",
+    "earned-challenge-start.png"
+  ],
+  "browser": "156.0.4314.50",
+  "version": "12.1.2",
+  "recording": {
+    "file": "E:\\githome\\kong-rpg\\evidence\\mechanics-recheck-v12\\browser-earned-http\\transitions.webm",
+    "mime": "video/webm;codecs=vp9",
+    "ms": 10062.799999952316,
+    "method": "real Canvas captureStream at requested 30Hz, MediaRecorder VP9; ms is recording wall time, encoded frame rate not independently inspected"
+  }
+}

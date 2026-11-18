@@ -1,0 +1,89 @@
+{
+  "releaseSHA256": "604aafbcef59c18cbd474082c89c2553705b5c08813e324f650e43303c6e3dcf",
+  "method": "Rebuild output hash compared with before cleanup; fresh HTTP and disconnected file browser contexts; all embedded images decoded, real menu and J/pause input. Not a full campaign replay.",
+  "modes": [
+    {
+      "mode": "http",
+      "checks": [
+        {
+          "name": "all 79 images decode without missing assets",
+          "pass": true
+        },
+        {
+          "name": "all music and sound samples remain embedded",
+          "pass": true
+        },
+        {
+          "name": "current title and menu logo render",
+          "pass": true
+        },
+        {
+          "name": "real PC input still starts combat and attacks",
+          "pass": true
+        },
+        {
+          "name": "pause remains usable",
+          "pass": true
+        },
+        {
+          "name": "no runtime errors",
+          "pass": true
+        }
+      ],
+      "errors": [],
+      "network": [
+        "http://127.0.0.1:5188/?asset-cleanup=1"
+      ],
+      "art": {
+        "count": 79,
+        "errors": [],
+        "decoded": true,
+        "music": 3,
+        "samples": 8
+      }
+    },
+    {
+      "mode": "file",
+      "checks": [
+        {
+          "name": "all 79 images decode without missing assets",
+          "pass": true
+        },
+        {
+          "name": "all music and sound samples remain embedded",
+          "pass": true
+        },
+        {
+          "name": "current title and menu logo render",
+          "pass": true
+        },
+        {
+          "name": "real PC input still starts combat and attacks",
+          "pass": true
+        },
+        {
+          "name": "pause remains usable",
+          "pass": true
+        },
+        {
+          "name": "no runtime errors",
+          "pass": true
+        },
+        {
+          "name": "offline runtime requests no remote files",
+          "pass": true
+        }
+      ],
+      "errors": [],
+      "network": [],
+      "art": {
+        "count": 79,
+        "errors": [],
+        "decoded": true,
+        "music": 3,
+        "samples": 8
+      }
+    }
+  ],
+  "pass": true
+}

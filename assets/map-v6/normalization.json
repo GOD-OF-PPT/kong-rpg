@@ -1,0 +1,922 @@
+{
+  "tool": "built-in image_gen",
+  "normalization": "Pillow crop / nearest-neighbour; original RGBA retained",
+  "sources": {
+    "props": {
+      "file": "assets/map-v6/props-source.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "sha256": "6b7df13a30058a42addd499239fb70865abe862dd6534e5c7328075677a01eea",
+      "fullyTransparentPixels": 917752
+    },
+    "terrain": {
+      "file": "assets/map-v6/terrain-source.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "sha256": "394ddf32f401bdcd75c6f7de6e171882fc4e494ea87791fc5f9766ad98e3c859",
+      "fullyTransparentPixels": 992485
+    },
+    "dressing": {
+      "file": "assets/map-v6/dressing-source.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "sha256": "d37619ede702e3e932f7abaa692aeed535fbbe4aa036adefa78ea4fd3afe46be",
+      "fullyTransparentPixels": 887820
+    }
+  },
+  "frames": {
+    "trial-ready": {
+      "sourceCell": [
+        0,
+        0,
+        320,
+        465
+      ],
+      "alphaBounds": [
+        25,
+        76,
+        302,
+        450
+      ],
+      "group": "trial",
+      "scale": 0.2192513368983957,
+      "normalized": {
+        "image": "mapProps",
+        "r": [
+          0,
+          0,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          112
+        ]
+      }
+    },
+    "trial-active": {
+      "sourceCell": [
+        320,
+        0,
+        646,
+        465
+      ],
+      "alphaBounds": [
+        15,
+        76,
+        326,
+        450
+      ],
+      "group": "trial",
+      "scale": 0.2192513368983957,
+      "normalized": {
+        "image": "mapProps",
+        "r": [
+          128,
+          0,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          112
+        ]
+      }
+    },
+    "trial-cleared": {
+      "sourceCell": [
+        646,
+        0,
+        938,
+        465
+      ],
+      "alphaBounds": [
+        0,
+        76,
+        272,
+        450
+      ],
+      "group": "trial",
+      "scale": 0.2192513368983957,
+      "normalized": {
+        "image": "mapProps",
+        "r": [
+          256,
+          0,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          112
+        ]
+      }
+    },
+    "trial-claimed": {
+      "sourceCell": [
+        938,
+        0,
+        1254,
+        465
+      ],
+      "alphaBounds": [
+        18,
+        76,
+        291,
+        450
+      ],
+      "group": "trial",
+      "scale": 0.2192513368983957,
+      "normalized": {
+        "image": "mapProps",
+        "r": [
+          384,
+          0,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          112
+        ]
+      }
+    },
+    "camp-lit": {
+      "sourceCell": [
+        0,
+        465,
+        314,
+        925
+      ],
+      "alphaBounds": [
+        38,
+        12,
+        280,
+        431
+      ],
+      "group": "camp",
+      "scale": 0.1909307875894988,
+      "normalized": {
+        "image": "mapProps",
+        "r": [
+          0,
+          128,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          112
+        ]
+      }
+    },
+    "camp-spent": {
+      "sourceCell": [
+        314,
+        465,
+        628,
+        925
+      ],
+      "alphaBounds": [
+        36,
+        12,
+        278,
+        431
+      ],
+      "group": "camp",
+      "scale": 0.1909307875894988,
+      "normalized": {
+        "image": "mapProps",
+        "r": [
+          128,
+          128,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          112
+        ]
+      }
+    },
+    "pickup-heal": {
+      "sourceCell": [
+        628,
+        465,
+        942,
+        925
+      ],
+      "alphaBounds": [
+        65,
+        177,
+        260,
+        431
+      ],
+      "group": "heal",
+      "scale": 0.09448818897637795,
+      "normalized": {
+        "image": "mapProps",
+        "r": [
+          256,
+          128,
+          32,
+          32
+        ],
+        "anchor": [
+          16,
+          28
+        ]
+      }
+    },
+    "pickup-focus": {
+      "sourceCell": [
+        942,
+        465,
+        1254,
+        925
+      ],
+      "alphaBounds": [
+        56,
+        253,
+        254,
+        434
+      ],
+      "group": "focus",
+      "scale": 0.10101010101010101,
+      "normalized": {
+        "image": "mapProps",
+        "r": [
+          384,
+          128,
+          32,
+          32
+        ],
+        "anchor": [
+          16,
+          28
+        ]
+      }
+    },
+    "pickup-rage": {
+      "sourceCell": [
+        0,
+        925,
+        280,
+        1254
+      ],
+      "alphaBounds": [
+        85,
+        20,
+        223,
+        302
+      ],
+      "group": "rage",
+      "scale": 0.0851063829787234,
+      "normalized": {
+        "image": "mapProps",
+        "r": [
+          0,
+          256,
+          32,
+          32
+        ],
+        "anchor": [
+          16,
+          28
+        ]
+      }
+    },
+    "hazard-quiet": {
+      "sourceCell": [
+        280,
+        925,
+        622,
+        1254
+      ],
+      "alphaBounds": [
+        22,
+        156,
+        327,
+        283
+      ],
+      "group": "hazard",
+      "scale": "fit (32, 16)",
+      "normalized": {
+        "image": "mapProps",
+        "r": [
+          128,
+          256,
+          32,
+          16
+        ],
+        "anchor": [
+          0,
+          0
+        ]
+      }
+    },
+    "hazard-warning": {
+      "sourceCell": [
+        622,
+        925,
+        940,
+        1254
+      ],
+      "alphaBounds": [
+        4,
+        157,
+        298,
+        283
+      ],
+      "group": "hazard",
+      "scale": "fit (32, 16)",
+      "normalized": {
+        "image": "mapProps",
+        "r": [
+          256,
+          256,
+          32,
+          16
+        ],
+        "anchor": [
+          0,
+          0
+        ]
+      }
+    },
+    "hazard-active": {
+      "sourceCell": [
+        940,
+        925,
+        1254,
+        1254
+      ],
+      "alphaBounds": [
+        1,
+        119,
+        297,
+        283
+      ],
+      "group": "hazard",
+      "scale": "fit (32, 16)",
+      "normalized": {
+        "image": "mapProps",
+        "r": [
+          384,
+          256,
+          32,
+          16
+        ],
+        "anchor": [
+          0,
+          0
+        ]
+      }
+    },
+    "ledge-mountain": {
+      "sourceCell": [
+        0,
+        230,
+        314,
+        490
+      ],
+      "alphaBounds": [
+        11,
+        35,
+        304,
+        216
+      ],
+      "group": "ledge",
+      "scale": "fit (64, 30)",
+      "normalized": {
+        "image": "mapTerrain",
+        "r": [
+          0,
+          0,
+          64,
+          30
+        ],
+        "anchor": [
+          0,
+          0
+        ]
+      }
+    },
+    "ledge-ferry": {
+      "sourceCell": [
+        314,
+        230,
+        628,
+        490
+      ],
+      "alphaBounds": [
+        13,
+        30,
+        304,
+        183
+      ],
+      "group": "ledge",
+      "scale": "fit (64, 30)",
+      "normalized": {
+        "image": "mapTerrain",
+        "r": [
+          128,
+          0,
+          64,
+          30
+        ],
+        "anchor": [
+          0,
+          0
+        ]
+      }
+    },
+    "ledge-temple": {
+      "sourceCell": [
+        628,
+        230,
+        942,
+        490
+      ],
+      "alphaBounds": [
+        12,
+        35,
+        302,
+        214
+      ],
+      "group": "ledge",
+      "scale": "fit (64, 30)",
+      "normalized": {
+        "image": "mapTerrain",
+        "r": [
+          256,
+          0,
+          64,
+          30
+        ],
+        "anchor": [
+          0,
+          0
+        ]
+      }
+    },
+    "fragile-ready": {
+      "sourceCell": [
+        942,
+        230,
+        1254,
+        490
+      ],
+      "alphaBounds": [
+        12,
+        35,
+        301,
+        207
+      ],
+      "group": "fragile",
+      "scale": "fit (64, 30)",
+      "normalized": {
+        "image": "mapTerrain",
+        "r": [
+          384,
+          0,
+          64,
+          30
+        ],
+        "anchor": [
+          0,
+          0
+        ]
+      }
+    },
+    "fragile-cracking": {
+      "sourceCell": [
+        0,
+        530,
+        314,
+        790
+      ],
+      "alphaBounds": [
+        15,
+        62,
+        304,
+        233
+      ],
+      "group": "fragile",
+      "scale": "fit (64, 30)",
+      "normalized": {
+        "image": "mapTerrain",
+        "r": [
+          0,
+          128,
+          64,
+          30
+        ],
+        "anchor": [
+          0,
+          0
+        ]
+      }
+    },
+    "raft": {
+      "sourceCell": [
+        314,
+        530,
+        628,
+        790
+      ],
+      "alphaBounds": [
+        7,
+        94,
+        307,
+        241
+      ],
+      "group": "raft",
+      "scale": "fit (96, 30)",
+      "normalized": {
+        "image": "mapTerrain",
+        "r": [
+          128,
+          128,
+          96,
+          30
+        ],
+        "anchor": [
+          0,
+          0
+        ]
+      }
+    },
+    "bridge-off": {
+      "sourceCell": [
+        628,
+        530,
+        942,
+        790
+      ],
+      "alphaBounds": [
+        8,
+        98,
+        305,
+        225
+      ],
+      "group": "bridge",
+      "scale": "fit (64, 24)",
+      "normalized": {
+        "image": "mapTerrain",
+        "r": [
+          256,
+          128,
+          64,
+          24
+        ],
+        "anchor": [
+          0,
+          0
+        ]
+      }
+    },
+    "bridge-on": {
+      "sourceCell": [
+        942,
+        530,
+        1254,
+        790
+      ],
+      "alphaBounds": [
+        7,
+        97,
+        303,
+        225
+      ],
+      "group": "bridge",
+      "scale": "fit (64, 24)",
+      "normalized": {
+        "image": "mapTerrain",
+        "r": [
+          384,
+          128,
+          64,
+          24
+        ],
+        "anchor": [
+          0,
+          0
+        ]
+      }
+    },
+    "wall-mountain": {
+      "sourceCell": [
+        0,
+        790,
+        314,
+        1254
+      ],
+      "alphaBounds": [
+        26,
+        90,
+        302,
+        342
+      ],
+      "group": "wall",
+      "scale": "fit (64, 64)",
+      "normalized": {
+        "image": "mapTerrain",
+        "r": [
+          0,
+          256,
+          64,
+          64
+        ],
+        "anchor": [
+          0,
+          0
+        ]
+      }
+    },
+    "wall-ferry": {
+      "sourceCell": [
+        314,
+        790,
+        628,
+        1254
+      ],
+      "alphaBounds": [
+        14,
+        90,
+        299,
+        342
+      ],
+      "group": "wall",
+      "scale": "fit (64, 64)",
+      "normalized": {
+        "image": "mapTerrain",
+        "r": [
+          128,
+          256,
+          64,
+          64
+        ],
+        "anchor": [
+          0,
+          0
+        ]
+      }
+    },
+    "wall-temple": {
+      "sourceCell": [
+        628,
+        790,
+        942,
+        1254
+      ],
+      "alphaBounds": [
+        15,
+        88,
+        299,
+        343
+      ],
+      "group": "wall",
+      "scale": "fit (64, 64)",
+      "normalized": {
+        "image": "mapTerrain",
+        "r": [
+          256,
+          256,
+          64,
+          64
+        ],
+        "anchor": [
+          0,
+          0
+        ]
+      }
+    },
+    "arena-pillar": {
+      "sourceCell": [
+        942,
+        790,
+        1254,
+        1254
+      ],
+      "alphaBounds": [
+        72,
+        14,
+        236,
+        387
+      ],
+      "group": "pillar",
+      "scale": 0.2073170731707317,
+      "normalized": {
+        "image": "mapTerrain",
+        "r": [
+          384,
+          256,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          112
+        ]
+      }
+    },
+    "dressing-mountain-a": {
+      "sourceCell": [
+        0,
+        0,
+        512,
+        555
+      ],
+      "alphaBounds": [
+        23,
+        90,
+        484,
+        531
+      ],
+      "group": "dress",
+      "scale": 0.19047619047619047,
+      "normalized": {
+        "image": "mapDressing",
+        "r": [
+          0,
+          0,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          112
+        ]
+      }
+    },
+    "dressing-ferry-a": {
+      "sourceCell": [
+        512,
+        0,
+        1024,
+        555
+      ],
+      "alphaBounds": [
+        17,
+        140,
+        495,
+        532
+      ],
+      "group": "dress",
+      "scale": 0.19047619047619047,
+      "normalized": {
+        "image": "mapDressing",
+        "r": [
+          128,
+          0,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          112
+        ]
+      }
+    },
+    "dressing-temple-a": {
+      "sourceCell": [
+        1024,
+        0,
+        1536,
+        555
+      ],
+      "alphaBounds": [
+        22,
+        99,
+        493,
+        530
+      ],
+      "group": "dress",
+      "scale": 0.19047619047619047,
+      "normalized": {
+        "image": "mapDressing",
+        "r": [
+          256,
+          0,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          112
+        ]
+      }
+    },
+    "dressing-mountain-b": {
+      "sourceCell": [
+        0,
+        555,
+        512,
+        1024
+      ],
+      "alphaBounds": [
+        19,
+        81,
+        491,
+        372
+      ],
+      "group": "dress",
+      "scale": 0.19047619047619047,
+      "normalized": {
+        "image": "mapDressing",
+        "r": [
+          384,
+          0,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          112
+        ]
+      }
+    },
+    "dressing-ferry-b": {
+      "sourceCell": [
+        512,
+        555,
+        1024,
+        1024
+      ],
+      "alphaBounds": [
+        14,
+        60,
+        486,
+        372
+      ],
+      "group": "dress",
+      "scale": 0.19047619047619047,
+      "normalized": {
+        "image": "mapDressing",
+        "r": [
+          0,
+          128,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          112
+        ]
+      }
+    },
+    "dressing-temple-b": {
+      "sourceCell": [
+        1024,
+        555,
+        1536,
+        1024
+      ],
+      "alphaBounds": [
+        6,
+        92,
+        496,
+        373
+      ],
+      "group": "dress",
+      "scale": 0.19047619047619047,
+      "normalized": {
+        "image": "mapDressing",
+        "r": [
+          128,
+          128,
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          112
+        ]
+      }
+    }
+  },
+  "outputs": {
+    "props": {
+      "file": "assets/map-v6/props.png",
+      "sha256": "9545a161e530ad5438cd7784f1a79e4ed1b9575a05d42cd917851306eb2539ae",
+      "bytes": 77284
+    },
+    "terrain": {
+      "file": "assets/map-v6/terrain.png",
+      "sha256": "13b199e9eb6b90b5c13a7bb247c6e4b0ba07cac93494f466d9b68b35251499e9",
+      "bytes": 82908
+    },
+    "dressing": {
+      "file": "assets/map-v6/dressing.png",
+      "sha256": "56ff6dede4ac1aacef74286d175f5690c766d607ad01d9a65ae77ecb274557bc",
+      "bytes": 83405
+    }
+  }
+}

@@ -1,0 +1,496 @@
+{
+  "version": "12.4.0",
+  "web": {
+    "htmlSHA256": "fdccda51729a925db1ea0eded9323f31e2700e14fb4fec395b2fc3e553fc6975",
+    "script": "game.37a703d59b2cf286.js",
+    "scriptBytes": 425654,
+    "brotliBytes": 115917,
+    "css": "game.76544aee5645924b.css",
+    "images": [
+      {
+        "file": "assets/images/mountain.296d70c71773dacb.webp",
+        "bytes": 1936944,
+        "sha256": "296d70c71773dacb67aaa9618f584e1da85d9cb1f4179f897f3ff3cc9719f436",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/ferry.00c9187d27c6cf42.webp",
+        "bytes": 2054860,
+        "sha256": "00c9187d27c6cf425320bd7632b4a5f8bb114f3b0be928ccdd4a758894a1496d",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/sanctuary.43b6700921d4ba58.webp",
+        "bytes": 2162820,
+        "sha256": "43b6700921d4ba589459bf42995f099843d83685c03e1b36c6610e21d8532a25",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/wukong.9ed9b0f96501d7a7.webp",
+        "bytes": 967554,
+        "sha256": "9ed9b0f96501d7a7ba9ee43d6e601598bedb64bd404b091565b8cbe16594c2f6",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/enemies.1358dce83aad1def.webp",
+        "bytes": 1631554,
+        "sha256": "1358dce83aad1def17ec98db71d62a3c41c644dc1e743630a7e8f06894561b25",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/stone.7b443d9e58c0ea25.webp",
+        "bytes": 712750,
+        "sha256": "7b443d9e58c0ea250e4ff6141c470055b41376c63e4ce29c9eaf3dab9d046674",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/run.5e7537d11bc873f4.webp",
+        "bytes": 662758,
+        "sha256": "5e7537d11bc873f4dd19e1c9c0388bc63145dff8d2a069d1a9ca1d8aea53e60b",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/props.8664bb154f970d80.webp",
+        "bytes": 950828,
+        "sha256": "8664bb154f970d806bb1cfc24942e48e87ffb29a61f11332977b3b090adea36b",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/uiScroll.0f9d818e44d66de6.webp",
+        "bytes": 680782,
+        "sha256": "0f9d818e44d66de6693346960c98080995acfb52d5c8a4b9560bfd89c6af0cb9",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/uiIcons.b22b24dc80f80fb8.webp",
+        "bytes": 1201544,
+        "sha256": "b22b24dc80f80fb80b426220c7c5edc534e5a3bfcc79087ce267ac5f2741158a",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/uiFolio.aa1d5550f8b153bd.webp",
+        "bytes": 1196428,
+        "sha256": "aa1d5550f8b153bd9acbf7346ddf43032a6e6f1bf8939765f541253a46dfe27a",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/combo.5f2845eec7b5c782.webp",
+        "bytes": 1233796,
+        "sha256": "5f2845eec7b5c782e462682bac1881dc8a77280582c76ea88104c09716f013af",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/impacts.5a98551eac88b7e0.webp",
+        "bytes": 598594,
+        "sha256": "5a98551eac88b7e0447d8bddbd603ede63b1ce0b96166e3fed6cce75c4b8bb8a",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/nodes.bd6eb0af1cc2545f.webp",
+        "bytes": 1306004,
+        "sha256": "bd6eb0af1cc2545f77f6fa233f5b4d1bb07e1261c561d1e16ba7fc70f98ea595",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/nodesDone.e8c34bfb1c2122c5.webp",
+        "bytes": 1402780,
+        "sha256": "e8c34bfb1c2122c5b0b6fc50002bf84e9bed1663c007e6eae33448f352cee2be",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/guardians.f2256958bb44df8e.webp",
+        "bytes": 1593854,
+        "sha256": "f2256958bb44df8eb1f3bfa7f790ae5741d51814435a17f55bbc2e8dbda7e970",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/nezha.b3cd0febc0b362bf.webp",
+        "bytes": 40970,
+        "sha256": "b3cd0febc0b362bf6858a88fc908f26c2a953b73acfcf080c8b6a026c1f85afd",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/nezhaPortrait.7798c18c7a744d6a.webp",
+        "bytes": 940712,
+        "sha256": "7798c18c7a744d6a1b44fd01dc85fd727e90538c7f3f2fea668da76d6c391f67",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/mapProps.22abc624417c096c.webp",
+        "bytes": 65036,
+        "sha256": "22abc624417c096cc2d46fb7d3a09d3acdf3c37b0b9f691f888360faebfa8bad",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/mapTerrain.151e16d121985e4f.webp",
+        "bytes": 64694,
+        "sha256": "151e16d121985e4f6735760f35a04528fda67b81abeb1535ffa60a5637af35f8",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/mapDressing.21533ece0ad26559.webp",
+        "bytes": 64388,
+        "sha256": "21533ece0ad26559146c7c74b52b64a44daa4a82a9b31dc33f56e8c1592e352c",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/sigWukong.9033a818ac5b11eb.webp",
+        "bytes": 44792,
+        "sha256": "9033a818ac5b11ebb6606fd99a825ee53f5cde74c8190b5eb13edfec7c4a67a7",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/sigNezha.4cfc426a4d91db57.webp",
+        "bytes": 40154,
+        "sha256": "4cfc426a4d91db5730a2ad273cec477973bc15fb68ded40b81345042962cc1f0",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/sigFx.6e1750c4470be309.webp",
+        "bytes": 17558,
+        "sha256": "6e1750c4470be3092d90dde31b0056e79d2f4087d91379deb33720d004fb38f4",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/sceneProps.f344d82172f7c310.webp",
+        "bytes": 21570,
+        "sha256": "f344d82172f7c3107b722680e930e3b8fcfe430badffe62cf2d2f533be6c03c2",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/actorStates.7fd4f3cdf59c15dd.webp",
+        "bytes": 28048,
+        "sha256": "7fd4f3cdf59c15dd0cbe966acbc86baed15c58aaca145b25a25b30c27b937ddd",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/celestialHeroes.87ed678916fb76ad.webp",
+        "bytes": 135968,
+        "sha256": "87ed678916fb76ad71c7d7f0ec4d4100db840997b4d0d75dbb35829932c2775f",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/celestialBosses.6e39041bad7ed4d1.webp",
+        "bytes": 219442,
+        "sha256": "6e39041bad7ed4d1b0fbd41cd3a3dc8de0db019caae5021311e3e02d01c76fbb",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/celestialFx.11e3e7ffbc167462.webp",
+        "bytes": 276854,
+        "sha256": "11e3e7ffbc16746206792f9cd8c1bd0b68237682e8e55a2c77032a8916285b19",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/enemyBattleSeals.2e144ab18ce8961f.webp",
+        "bytes": 648464,
+        "sha256": "2e144ab18ce8961fabb93a6243182103d8fe16ca87d2b07c83e9b5c903197b5a",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/v8ErlangPortrait.736a2466dfb4cc64.webp",
+        "bytes": 157890,
+        "sha256": "736a2466dfb4cc64c0fe703c636d13e7f894a38025b45819b3f477047d8af31a",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/v8NezhaPortrait.39852b288fe480e5.webp",
+        "bytes": 100282,
+        "sha256": "39852b288fe480e559c5447476a8e6376d6fa5843722f4befbc341d92ebb1576",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/v8Erlang.a9add46c4175afa9.webp",
+        "bytes": 79146,
+        "sha256": "a9add46c4175afa9dc7b8e7b7da81dd6f11ef8776c7347dfb9b74256dc80c307",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/v8Nezha.d4372226fdb67f6c.webp",
+        "bytes": 58336,
+        "sha256": "d4372226fdb67f6c0e4733678844d190a467329aff3000cc1a1b366b008ac68e",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/v8Companion.d39df97d634f5bab.webp",
+        "bytes": 9466,
+        "sha256": "d39df97d634f5babc774810e70da6ada0091ec73f0ead5219d153902e68064b7",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/v8Fx.84dd36b85a7fdb5a.webp",
+        "bytes": 4404,
+        "sha256": "84dd36b85a7fdb5a3f86a6665c948ac762de0439341510e99119efc99dab9f3e",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/v8Enemies.641965605b123d44.webp",
+        "bytes": 60080,
+        "sha256": "641965605b123d44a4725313a7159f2ab8790267b8a1eee4fcf8270dbcfcdede",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/v8Terrain.5e6c2fd0a3815ba1.webp",
+        "bytes": 61406,
+        "sha256": "5e6c2fd0a3815ba15f7b6407a641f20eeb15f7827c0e79e5128f1d0b38ce6d4b",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/realmCloud.a4a8cc16fcd9e277.webp",
+        "bytes": 654252,
+        "sha256": "a4a8cc16fcd9e277789655173f4e06fcec5cc57d03e345c096a6ec3285deb373",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/realmHeaven.20a229efe15c8bfc.webp",
+        "bytes": 743846,
+        "sha256": "20a229efe15c8bfc3da8903798e965a976459bcc8b14498d35779d4ddc35737e",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/realmWater.95147b32c5c13442.webp",
+        "bytes": 681522,
+        "sha256": "95147b32c5c13442df09c82ecfd577f57df15561d6dab6a37cf1fb498b1123c6",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/realmDragon.cb1aed65d684e5b6.webp",
+        "bytes": 854436,
+        "sha256": "cb1aed65d684e5b6982ea93254e8f217c9aa1fd46164f20e93cdddfb975e10ce",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/realmUnderworld.c55c20e531a3fbc6.webp",
+        "bytes": 663858,
+        "sha256": "c55c20e531a3fbc65529a982bc1bd6b007581dfa2429e9a0952bc3d8aaab6189",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/campaign-juling.2260465ee6a8a578.webp",
+        "bytes": 79428,
+        "sha256": "2260465ee6a8a5789accc914e29f55bacde7dd632fdd06025174f93600174f65",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/campaign-qinguang.512c756c3e23a18f.webp",
+        "bytes": 70112,
+        "sha256": "512c756c3e23a18fc77ebfd97593921ccdc3bade40b76d89e8b835e0d28c310f",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/campaign-ninehead.f03c188a2a101566.webp",
+        "bytes": 82610,
+        "sha256": "f03c188a2a101566802271d34a04ef6af2b9a7e75f075ac2171ed6a0d70da0cd",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/campaign-dragonking.e962382a4337a2c0.webp",
+        "bytes": 59578,
+        "sha256": "e962382a4337a2c08a199cb34eaff680799c55d6393b92b38471260c17295a12",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/campaign-litian.aaf77f910ea87d3c.webp",
+        "bytes": 58456,
+        "sha256": "aaf77f910ea87d3c06eb32e0229a566d500b09acf0688cd884f6bc5480cc8332",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/campaignArmy-cloud.2bf1ba591daa09d7.webp",
+        "bytes": 45360,
+        "sha256": "2bf1ba591daa09d77065c6010df2c30fc7013b6c60ef1140cafd2534e697db7b",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/campaignArmy-underworld.a834c37238961f18.webp",
+        "bytes": 41170,
+        "sha256": "a834c37238961f182dcd2fb81a579037b35cae8e842b2fa5df1bd0da207254f5",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/campaignArmy-water.16579465d7e8f358.webp",
+        "bytes": 50756,
+        "sha256": "16579465d7e8f3582f48aab347c662760429c418bc7ab401ffe1471b8e32ff04",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/campaignArmy-dragon.bc80b1cca2d77f9f.webp",
+        "bytes": 54560,
+        "sha256": "bc80b1cca2d77f9ffc2cc87d98df712a8205b04dca692a83df607e9774c9affe",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/campaignArmy-heaven.ef166c33c303bc5a.webp",
+        "bytes": 48038,
+        "sha256": "ef166c33c303bc5acdb9543b5a6ef93eb0315e732e1b5e2454db2079381da71e",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/auditDevices.0f5205e24393248f.webp",
+        "bytes": 19704,
+        "sha256": "0f5205e24393248f6841a4b44cc97821febb8b2be9f06ae4cb2c1841d262c27e",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/actorRepair.b925da5a6db2499d.webp",
+        "bytes": 43682,
+        "sha256": "b925da5a6db2499d0cc3ce60034633a2b7731d3f12493a38b4fffec4c71a7490",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/cloudEnvironment.a50aa2327caf0e89.webp",
+        "bytes": 72772,
+        "sha256": "a50aa2327caf0e89a27728d24f4d08434b9e423f79c3efb313c57d5afd8ddb79",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/cloudFoundation.b5f34442752478a4.webp",
+        "bytes": 93600,
+        "sha256": "b5f34442752478a42ed70ad2a5c025ad4a13f9d4ea48745f5f851b4d0d139d4a",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/staffActors.b3b7f4ed8c630ee6.webp",
+        "bytes": 62156,
+        "sha256": "b3b7f4ed8c630ee685ab1c073c31c19ef70e89e63804b7e63b837ae327772b41",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/staffFx.3790d6aaf6dc3e22.webp",
+        "bytes": 105958,
+        "sha256": "3790d6aaf6dc3e220185c46545d362a1542265010dd787afa6d9fd2bc5f40af5",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/combatContacts.1d1046956ad4a15d.webp",
+        "bytes": 24766,
+        "sha256": "1d1046956ad4a15dab8c40a6355313decfd5d6ca0d6b89566289d8a5be6caa86",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/enemy-contacts.9c07869a7e70e1aa.webp",
+        "bytes": 69788,
+        "sha256": "9c07869a7e70e1aabe2824a71e966f9f76e69af1557a4a85d081dc2182a31168",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/enemy-materials.f235bd46e7964f7a.webp",
+        "bytes": 43644,
+        "sha256": "f235bd46e7964f7a681f451dc193b5df749d38d36e98ff06d203aa2c117358d0",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/realmDressing.9128fd95aa511841.webp",
+        "bytes": 89134,
+        "sha256": "9128fd95aa5118417a3973a8ceec4e791245588e1b94fcb24ded9b0a5763f54e",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/motion-nezha.382d90e757bd605d.webp",
+        "bytes": 191432,
+        "sha256": "382d90e757bd605d16c49a0467caa25a9dc9f25d734976d8d8514adda87a80c1",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/motion-erlang.5922fe41a2f97138.webp",
+        "bytes": 166812,
+        "sha256": "5922fe41a2f97138f643fdb503cce075a09f9deb4f7e99882b0dbfe9650f5e25",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/motion-cloud.c6e8e21e0da511ba.webp",
+        "bytes": 280850,
+        "sha256": "c6e8e21e0da511ba478cb3fc7f2c92d92b484fe7bc18206d16978ad3c131908a",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/motion-underworld.5a91eca1fbb8019e.webp",
+        "bytes": 242574,
+        "sha256": "5a91eca1fbb8019e4539d7f9606e94dd399c95c4c8a8e7e85a43539f66e298fe",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/motion-water.56e836a4778f9ac6.webp",
+        "bytes": 283016,
+        "sha256": "56e836a4778f9ac6059bb0e693d73f648d0d7ec82296d53c80195773c9101846",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/motion-dragon.fff38cc6b1dd5d32.webp",
+        "bytes": 308654,
+        "sha256": "fff38cc6b1dd5d322b839719149d86755e88fc3b3e3052caca8fbc03f7a3aa76",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/motion-heaven.6001dae67e97e657.webp",
+        "bytes": 284230,
+        "sha256": "6001dae67e97e65715b9c667fb6bc46bbc57fb069f0ec296d330692ae780c90d",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/identity-wukong.77452b1c77efa052.webp",
+        "bytes": 148334,
+        "sha256": "77452b1c77efa052954218c1047f839478c8d763b58b962d532fb60551b3128a",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/identity-nezha.3ff1a6621a6dc877.webp",
+        "bytes": 165426,
+        "sha256": "3ff1a6621a6dc87778281fd716a734485729aa87c52564fe4f80ba87d0f57d1c",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/identity-erlang.82cf9e7eb8b14f9c.webp",
+        "bytes": 156280,
+        "sha256": "82cf9e7eb8b14f9cf724a773f7987183ce79bc83c84173f0df596b97c3b71624",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/identity-juling.43d7d67f34b74fe4.webp",
+        "bytes": 412530,
+        "sha256": "43d7d67f34b74fe4d1e4a1347769664cfbd7dd34c554ed2a3b13a2eaa7e5bc25",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/identity-qinguang.9a0bb6e7851d6e56.webp",
+        "bytes": 221878,
+        "sha256": "9a0bb6e7851d6e5614235fa57fd24af1e3b61b0aebaf7a3cdacf25eea9ecc421",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/identity-ninehead.90f6548b0c3465d7.webp",
+        "bytes": 275186,
+        "sha256": "90f6548b0c3465d736af55116a616506af44efce27833083b4f1e988fb596b0b",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/identity-dragonking.06140d3691210a95.webp",
+        "bytes": 308228,
+        "sha256": "06140d3691210a952023d77718ea4d6eede55913ef1aacb774bfc5fdfda18f75",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/identity-litian.c95358a8a48a4c76.webp",
+        "bytes": 279336,
+        "sha256": "c95358a8a48a4c76ed061752527600a1bf5ee0afb95ccebfd9e2ea08b6fe6f60",
+        "decodedPixelsEqual": true
+      },
+      {
+        "file": "assets/images/brandWordmark.d5323c1b198b2397.webp",
+        "bytes": 559238,
+        "sha256": "d5323c1b198b2397b2f1b5c4db3643a719f5df1d81128c3f68d4f6e83d6c568e",
+        "decodedPixelsEqual": true
+      }
+    ],
+    "originalImageBytes": 44887374,
+    "losslessImageBytes": 32530700
+  },
+  "offline": {
+    "sha256": "9c74b421ed8b70bebd8aa12e979130c5297bbc7d775ac463dc0d7809c17f2cc6",
+    "bytes": 76416360
+  },
+  "sourceLoader": {
+    "imageBytes": 5849,
+    "musicBytes": 456
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "version": "11.0.0",
+  "branch": "codex/v11-combat-feedback",
+  "baseHEAD": "201b65ec8b520325290d5906f6d9603c75357441",
+  "entrySHA256": "c3cfe9930cebfb0d7c0946e14b9820a284cc79b03ab5b167b4f6147c64d7d916",
+  "normal": {
+    "report": "final-normal-http-retry/playthrough.json",
+    "grade": "S",
+    "levels": 15,
+    "hits": 16,
+    "seconds": 339.9916666665218,
+    "errors": []
+  },
+  "offlineChallenge": {
+    "report": "final-challenge-file/playthrough.json",
+    "grade": "A",
+    "levels": 15,
+    "hits": 23,
+    "seconds": 367.57499999983,
+    "networkRequests": 0,
+    "errors": []
+  },
+  "qualification": "actual normal S export, imported through public UI",
+  "evidenceLimits": [
+    "No external human playtest or listening acceptance",
+    "Only Nezha repeated complete final journeys; other heroes have mechanism, action and controlled encounter evidence",
+    "Controllers read full state; VM win counts are not player statistics",
+    "All historical failures retained; earlier hashes are not final acceptance"
+  ]
+}

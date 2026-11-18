@@ -1,303 +1,110 @@
-(function (K) {
+(function(K){
   'use strict';
-
-  const THEMES = {
-    menu: {
-      step: .52,
-      lead: [220, 0, 261.63, 293.66, 329.63, 0, 293.66, 261.63, 220, 196, 164.81, 0, 196, 220, 0, 0],
-      bass: [110, 0, 0, 0, 87.31, 0, 0, 0, 98, 0, 0, 0, 110, 0, 0, 0],
-      drum: [1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0]
-    },
-    0: {
-      step: .36,
-      lead: [146.83, 220, 261.63, 293.66, 329.63, 293.66, 220, 0, 196, 220, 261.63, 220, 164.81, 146.83, 196, 0],
-      bass: [73.42, 0, 0, 0, 110, 0, 0, 0, 98, 0, 0, 0, 73.42, 0, 0, 0],
-      drum: [1, 0, 0, 1, 0, 0, 2, 0, 1, 0, 0, 0, 2, 0, 0, 0]
-    },
-    1: {
-      step: .32,
-      lead: [164.81, 196, 246.94, 293.66, 329.63, 293.66, 246.94, 196, 220, 246.94, 329.63, 392, 329.63, 246.94, 196, 164.81],
-      bass: [82.41, 0, 82.41, 0, 98, 0, 0, 0, 110, 0, 98, 0, 82.41, 0, 0, 0],
-      drum: [1, 0, 2, 0, 1, 0, 0, 2, 1, 0, 2, 0, 1, 0, 2, 0]
-    },
-    2: {
-      step: .30,
-      lead: [130.81, 196, 233.08, 261.63, 311.13, 261.63, 233.08, 196, 174.61, 196, 261.63, 293.66, 261.63, 196, 155.56, 130.81],
-      bass: [65.41, 0, 0, 65.41, 77.78, 0, 0, 0, 87.31, 0, 0, 87.31, 65.41, 0, 0, 0],
-      drum: [1, 0, 2, 0, 0, 1, 2, 0, 1, 0, 2, 0, 1, 2, 0, 0]
-    },
-    3: {
-      step: .21,
-      lead: [110, 130.81, 164.81, 196, 220, 233.08, 220, 164.81, 146.83, 164.81, 220, 261.63, 233.08, 196, 164.81, 130.81],
-      bass: [55, 55, 0, 55, 65.41, 0, 65.41, 0, 73.42, 73.42, 0, 73.42, 58.27, 0, 55, 0],
-      drum: [1, 2, 0, 2, 1, 0, 2, 1, 1, 2, 0, 2, 1, 1, 2, 2]
-    }
-  };
-
-  K.Audio = class {
-    constructor() {
-      this.ctx = null;
-      this.volume = .38;
-      this.muted = false;
-      this.next = 0;
-      this.stepIdx = 0;
-      this.lastTheme = null;
-      this.enabled = true;
-    }
-
-    unlock() {
-      try {
-        if (!this.ctx) {
-          this.ctx = new (window.AudioContext || window.webkitAudioContext)();
-          this.bus = this.ctx.createGain();
-          this.bus.gain.value = this.muted ? 0 : this.volume * .35;
-          this.bus.connect(this.ctx.destination);
+  K.Audio=class{
+    constructor(){this.ctx=null;this.volume=.25;this.enabled=true;this.buffers={};this.voices=[];this.lastSample={};this.variants={};this.ready=null;this.screen='menu';this.music=null;this.stats={played:{},fallbacks:0,coalesced:0,stolen:0,maxVoices:0,decodeErrors:[],recent:[]};}
+    unlock(){
+      try{
+        if(!this.ctx){
+          this.ctx=new(window.AudioContext||window.webkitAudioContext)({latencyHint:'interactive'});
+          this.master=this.ctx.createGain();this.master.gain.value=this.volume;
+          this.bus=this.ctx.createGain();this.bus.gain.value=.3;
+          this.impactBus=this.ctx.createGain();this.impactBus.gain.value=.65;
+          const compressor=this.ctx.createDynamicsCompressor();compressor.threshold.value=-10;compressor.knee.value=6;compressor.ratio.value=5;compressor.attack.value=.003;compressor.release.value=.08;
+          // A safety ceiling after the volume stage; quiet transients stay linear.
+          const ceiling=this.ctx.createWaveShaper(),curve=new Float32Array(4097);
+          for(let i=0;i<curve.length;i++){const x=i/(curve.length-1)*2-1,a=Math.abs(x);curve[i]=Math.sign(x)*(a<=.8?a:.8+.15*Math.tanh((a-.8)/.15));}
+          ceiling.curve=curve;ceiling.oversample='4x';
+          this.bus.connect(compressor);this.impactBus.connect(compressor);compressor.connect(this.master);this.master.connect(ceiling);ceiling.connect(this.ctx.destination);
+          if(K.Music&&K.MusicTracks)this.music=new K.Music(this.ctx,compressor,K.MusicTracks);
+          this.setScreen(this.screen);
+          this.ready=Promise.all(Object.entries(K.ImpactSamples||{}).map(async([id,data])=>{
+            try{let buffer;if(typeof data==='string')buffer=Uint8Array.from(atob(data),c=>c.charCodeAt(0)).buffer;else{const response=await fetch(data.src);if(!response.ok)throw Error('Sound unavailable');buffer=await response.arrayBuffer();}this.buffers[id]=await this.ctx.decodeAudioData(buffer);}
+            catch{this.stats.decodeErrors.push(id);}
+          }));
         }
-        if (this.ctx.state === 'suspended') this.ctx.resume();
-      } catch {
-        this.enabled = false;
+        if(this.ctx.state==='suspended')this.ctx.resume().catch(()=>{});
+        this.music?.retry();
+      }catch{this.enabled=false;}
+    }
+    stopVoice(voice){const t=this.ctx.currentTime;voice.level.gain.cancelScheduledValues(t);voice.level.gain.setTargetAtTime(0,t,.002);try{voice.source.stop(t+.012);}catch{}this.voices=this.voices.filter(v=>v!==voice);}
+    stopImpacts(){for(const voice of [...this.voices])this.stopVoice(voice);this.lastSample={};}
+    sample(kind,gain=.65,priority=1){
+      if(!this.ctx||!this.enabled)return false;
+      const variants=kind==='staff-light'?['staff-light-a','staff-light-b']:kind==='ring-hit'?['ring-hit-a','ring-hit-b']:[kind];
+      const index=this.variants[kind]||0,id=variants[index%variants.length],buffer=this.buffers[id];
+      if(!buffer){this.stats.fallbacks++;return false;}
+      const t=this.ctx.currentTime,cooldown=kind==='ultimate-hit'?.12:kind==='shield-block'?.065:.045;
+      if(t-(this.lastSample[kind]??-1)<cooldown){this.stats.coalesced++;return true;}
+      this.voices=this.voices.filter(v=>v.end>t);
+      if(this.voices.length>=6){const victim=this.voices.reduce((a,b)=>a.priority<=b.priority?a:b);if(victim.priority>priority){this.stats.coalesced++;return true;}this.stopVoice(victim);this.stats.stolen++;}
+      this.lastSample[kind]=t;this.variants[kind]=index+1;
+      const source=this.ctx.createBufferSource(),level=this.ctx.createGain();source.buffer=buffer;level.gain.value=gain;source.connect(level);level.connect(this.impactBus);
+      const voice={source,level,priority,end:t+buffer.duration};this.voices.push(voice);source.onended=()=>{source.disconnect();level.disconnect();this.voices=this.voices.filter(v=>v!==voice);};source.start(t);
+      this.stats.played[id]=(this.stats.played[id]||0)+1;this.stats.maxVoices=Math.max(this.stats.maxVoices,this.voices.length);
+      this.stats.recent.push({id,time:+t.toFixed(4),submittedMs:+performance.now().toFixed(2)});if(this.stats.recent.length>64)this.stats.recent.shift();
+      return true;
+    }
+    events(events){
+      const slam=events.some(e=>e.type==='slam-land'),guard=events.some(e=>e.type==='boss-guard'),thunder=events.some(e=>e.type==='thunder-hit'),contact=events.some(e=>['hit','blocked','boss-guard','slam-land','ultimate-hit','thunder-hit'].includes(e.type));
+      for(const e of events){
+        if(e.type==='hit'&&['lotus-burn','six-arms'].includes(e.impact))continue;
+        // One sound per resolved action, including area attacks and guard chip.
+        if(e.type==='hit'&&(e.impact==='ultimate'||(slam&&e.impact==='heavy')||(guard&&e.kind==='boss')||(thunder&&e.impact==='thunder')))continue;
+        if(e.type==='seal-hit'&&contact)continue;
+        this.event(e);
       }
     }
-
-    setVolume(v) {
-      this.volume = K.clamp(Number(v) || 0, 0, 1);
-      if (this.bus) this.bus.gain.value = this.muted ? 0 : this.volume * .35;
+    diagnostics(){return{context:this.ctx?.state||'locked',sampleRate:this.ctx?.sampleRate||0,baseLatencyMs:+((this.ctx?.baseLatency||0)*1000).toFixed(3),outputLatencyMs:+((this.ctx?.outputLatency||0)*1000).toFixed(3),volume:this.volume,masterGain:this.master?.gain.value??0,music:this.music?.diagnostics()||{scene:'locked',current:null},decoded:Object.keys(this.buffers),activeVoices:this.voices.length,...JSON.parse(JSON.stringify(this.stats))};}
+    tone(freq,len=.12,type='triangle',gain=.2,delay=0){if(!this.ctx||!this.enabled)return;const t=this.ctx.currentTime+delay;const osc=this.ctx.createOscillator(),g=this.ctx.createGain();osc.type=type;osc.frequency.setValueAtTime(freq,t);g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(gain,t+.006);g.gain.exponentialRampToValueAtTime(.001,t+len);osc.connect(g);g.connect(this.bus);osc.start(t);osc.stop(t+len+.02);}
+    noise(length=.08,gain=.09){if(!this.ctx||!this.enabled)return;const count=Math.floor(this.ctx.sampleRate*length),buffer=this.ctx.createBuffer(1,count,this.ctx.sampleRate),samples=buffer.getChannelData(0);let n=73;for(let i=0;i<count;i++){n=(n*16807)%2147483647;samples[i]=(n/1073741824-1)*Math.pow(1-i/count,2);}const source=this.ctx.createBufferSource(),level=this.ctx.createGain();source.buffer=buffer;level.gain.value=gain;source.connect(level);level.connect(this.bus);source.start();}
+    sweep(from,to,len=.1,gain=.1){if(!this.ctx||!this.enabled)return;const t=this.ctx.currentTime,o=this.ctx.createOscillator(),g=this.ctx.createGain();o.type='triangle';o.frequency.setValueAtTime(from,t);o.frequency.exponentialRampToValueAtTime(to,t+len);g.gain.setValueAtTime(gain,t);g.gain.exponentialRampToValueAtTime(.001,t+len);o.connect(g);g.connect(this.bus);o.start(t);o.stop(t+len+.01);}
+    enemySound(material,hit=false){
+      if(!this.ctx||!this.enabled)return;const p={steel:[730,210,.07],stone:[130,42,.17],ink:[360,110,.15],venom:[510,180,.11],water:[250,560,.1],thunder:[1180,75,.07],tower:[440,146,.18],fire:[620,90,.09],wind:[780,330,.06]}[material];if(!p)return;this.sweep(p[0],p[1],p[2],hit?.055:.035);this.noise(material==='stone'?.12:.045,hit?.045:.025);if(['ink','tower','steel'].includes(material))this.tone(p[0]*1.45,.09,'sine',.025,.012);
     }
-
-    setMuted(m) {
-      this.muted = !!m;
-      if (this.bus) this.bus.gain.value = this.muted ? 0 : this.volume * .35;
+    event(e){
+      if(e.type==='bow-draw')this.sweep(180,390,.18,.04);
+      if(e.type==='staff-bolt')this.sweep(580,160,.12,.07);
+      if(e.type==='boss-brace')this.sample('shield-block',.33,1);
+      if(e.type==='lotus-buff'){this.tone(880,.15,'sine',.05);this.tone(1320,.12,'sine',.035,.04);}
+      if(e.type==='bow-fire')this.sweep(850,260,.1,.07);
+      if(e.type==='eye'){this.tone(660,.2,'sine',.08);this.tone(990,.2,'sine',.04,.05);}
+      if(e.type==='staff-extend'){this.sweep(370,95,.13,.075);this.noise(.065,.04);}
+      if(e.type==='staff-vault'){this.sweep(210,620,.2,.07);this.sample('ground-slam',.35,1);}
+      if(e.type==='wheel-start'){this.noise(.12,.035);this.sweep(240,670,.18,.06);}
+      if(e.type==='art-learn'){[440,660,880].forEach((f,i)=>this.tone(f,.18,'sine',.07,i*.07));}
+      if(e.type==='art-start'){this.sweep(e.id==='eye-beam'?180:120,e.id==='eye-beam'?1200:520,.3,.08);this.noise(.08,.04);}
+      if(e.type==='art-impact'){this.sample('ultimate-hit',.85,3);this.sweep(180,32,.35,.12);}
+      if(e.type==='art-pulse'){if(e.id==='eye-beam')this.sweep(940,760,.12,.035);else this.noise(.075,.04);}
+      if(e.type==='ultimate'){this.sweep(95,360,.2,.13);this.tone(146.83,.7,'triangle',.12);this.tone(293.66,.65,'sine',.1,.13);}
+      if(e.type==='ultimate-hit'&&!this.sample('ultimate-hit',.85,3)){this.sweep(190,35,.3,.17);this.noise(.2,.16);}
+      if(e.type==='ultimate-ready'){[440,660,880].forEach((f,i)=>this.tone(f,.17,'sine',.07,i*.08));}
+      if(e.type==='talisman'){this.tone(e.id==='ward'?660:1180,.24,'sine',.1);}
+      if(e.type==='thunder-hit'){this.noise(.13,.12);this.sweep(900,70,.13,.12);}
+      if(e.type==='guardian-enter'){this.tone(82,.7,'triangle',.15);this.noise(.2,.08);}
+      if(e.type==='guardian-defeat'){[220,330,440,660].forEach((f,i)=>this.tone(f,.4,'triangle',.11,i*.1));}
+      if(e.type==='strike-release'){const heavy=e.combo===3;if(e.hero==='nezha'){this.sweep(heavy?780:1180,heavy?190:410,heavy?.10:.045,.045);this.noise(.03,.025);}else if(e.hero==='erlang'){this.sweep(heavy?490:880,heavy?115:260,heavy?.15:.08,.05);this.tone(heavy?270:590,.04,'triangle',.025);}else{this.noise(heavy?.11:.055,heavy?.075:.045);this.sweep(heavy?300:620,heavy?90:240,heavy?.13:.07,.055);}}
+      if(e.type==='hit'&&e.impact!=='ultimate'){const heavy=['heavy','thunder'].includes(e.impact);if(e.hero==='nezha'&&['light','heavy'].includes(e.impact)){this.sweep(heavy?650:940,160,heavy?.08:.045,.065);this.noise(.025,.04);}else if(e.hero==='erlang'&&['light','heavy','arrow','beam','hound'].includes(e.impact)){this.sweep(e.impact==='arrow'?1300:heavy?520:860,180,heavy?.12:.055,.055);this.noise(.028,.045);}else if(!this.sample(e.impact==='ring'?'ring-hit':heavy?'staff-heavy':'staff-light',heavy?.8:.65,heavy?2:1)){this.sweep(heavy?150:330,heavy?48:130,heavy?.16:.075,heavy?.15:.09);this.noise(heavy?.09:.035,heavy?.12:.065);}}
+      if(e.type==='seal-hit')this.sample('staff-light',.5);
+      if(e.type==='hurt'){this.tone(72,.16,'triangle',.09);if(e.enemyMaterial)this.enemySound(e.enemyMaterial,true);else this.noise(.12,.075);}
+      if(e.type==='jump'){this.tone(e.air?590:390,.1,'sine',.17);if(e.air)this.tone(780,.13,'sine',.08,.04);}
+      if(e.type==='dash'){this.noise(.12,.08);this.tone(820,.06,'triangle',.06);}
+      if(e.type==='clone'){this.tone(440,.3);this.tone(660,.4,'sine',.2,.1);}
+      if(e.type==='warning'||e.type==='boss-warning'){this.tone(e.type==='boss-warning'?220:330,.15,'triangle',.09);this.tone(e.type==='boss-warning'?330:440,.1,'sine',.07,.10);}
+      if(e.type==='enemy-attack'){const profile=K.enemyEffectProfile?.(e.move);if(profile)this.enemySound(profile.material);else{this.noise(.09,.08);this.tone(155,.08,'triangle',.08);}}
+      if(e.type==='interrupt'){this.tone(680,.15,'triangle',.15);this.tone(1040,.08,'sine',.08);}
+      if(e.type==='slam-land'&&!this.sample('ground-slam',.8,2)){this.sweep(140,45,.22,.14);this.noise(.16,.13);}
+      if(e.type==='reflect'){this.tone(880,.13,'sine',.09);this.tone(1320,.16,'sine',.05,.04);}
+      if(e.type==='world-start'||e.type==='world-clear'||e.type==='story'){this.tone(220,.7,'sine',.07);this.tone(607,.6,'sine',.035,.04);}
+      if(['seal','relic','victory'].includes(e.type))[330,440,660].forEach((f,i)=>this.tone(f,.4,'triangle',.18,i*.11));
+      if((e.type==='blocked'||e.type==='boss-guard')&&!this.sample('shield-block',.65,2))this.tone(970,.045,'square',.055);
     }
-
-    tone(freq, len = .12, type = 'triangle', gain = .2, delay = 0, slideTo = 0) {
-      if (!this.ctx || !this.enabled || this.muted || this.volume <= 0.001) return;
-      const t = this.ctx.currentTime + delay;
-      const osc = this.ctx.createOscillator(), g = this.ctx.createGain();
-      osc.type = type;
-      osc.frequency.setValueAtTime(freq, t);
-      if (slideTo > 0) osc.frequency.exponentialRampToValueAtTime(slideTo, t + len * .85);
-      g.gain.setValueAtTime(0.0001, t);
-      g.gain.linearRampToValueAtTime(gain, t + .007);
-      g.gain.exponentialRampToValueAtTime(.0008, t + len);
-      osc.connect(g); g.connect(this.bus);
-      osc.start(t); osc.stop(t + len + .025);
+    setScreen(screen){
+      this.screen=screen;
+      const mode=screen==='playing'?'playing':['dead','won','epilogue','legacy'].includes(screen)?'silent':['paused','build'].includes(screen)?'quiet':['reward','replace','art-choice'].includes(screen)?'reading':screen==='help'&&this.music?.current?.id==='gameplay'?'quiet':'menu';
+      this.music?.setScene(mode);
     }
-
-    pluck(freq, len = .42, gain = .09, delay = 0) {
-      if (!this.ctx || !this.enabled || this.muted || this.volume <= 0.001) return;
-      const t = this.ctx.currentTime + delay;
-      const osc = this.ctx.createOscillator(), sub = this.ctx.createOscillator();
-      const filter = this.ctx.createBiquadFilter(), g = this.ctx.createGain();
-      osc.type = 'sawtooth';
-      sub.type = 'triangle';
-      osc.frequency.setValueAtTime(freq * 1.008, t);
-      osc.frequency.exponentialRampToValueAtTime(freq, t + .035);
-      sub.frequency.setValueAtTime(freq * 2, t);
-      filter.type = 'lowpass';
-      filter.frequency.setValueAtTime(Math.min(3400, freq * 6.5), t);
-      filter.frequency.exponentialRampToValueAtTime(Math.max(260, freq * 1.6), t + len);
-      g.gain.setValueAtTime(0.0001, t);
-      g.gain.linearRampToValueAtTime(gain, t + .008);
-      g.gain.exponentialRampToValueAtTime(.0008, t + len);
-      const subGain = this.ctx.createGain();
-      subGain.gain.value = .28;
-      osc.connect(filter); sub.connect(subGain); subGain.connect(filter);
-      filter.connect(g); g.connect(this.bus);
-      osc.start(t); sub.start(t);
-      osc.stop(t + len + .03); sub.stop(t + len + .03);
-    }
-
-    noise(length = .08, gain = .09, filterFreq = 1800) {
-      if (!this.ctx || !this.enabled || this.muted || this.volume <= 0.001) return;
-      const count = Math.floor(this.ctx.sampleRate * length);
-      const buffer = this.ctx.createBuffer(1, count, this.ctx.sampleRate);
-      const samples = buffer.getChannelData(0);
-      let n = 73;
-      for (let i = 0; i < count; i++) {
-        n = (n * 16807) % 2147483647;
-        samples[i] = (n / 1073741824 - 1) * Math.pow(1 - i / count, 1.8);
-      }
-      const source = this.ctx.createBufferSource(), filter = this.ctx.createBiquadFilter(), level = this.ctx.createGain();
-      source.buffer = buffer;
-      filter.type = 'bandpass';
-      filter.frequency.value = filterFreq;
-      filter.Q.value = .85;
-      level.gain.value = gain;
-      source.connect(filter); filter.connect(level); level.connect(this.bus);
-      source.start();
-    }
-
-    event(e) {
-      if (!e) return;
-      switch (e.type) {
-        case 'swing':
-          if (e.riposte) {
-            this.noise(.18, .18, 2500);
-            this.tone(320, .15, 'sawtooth', .18, 0, 740);
-            this.tone(920, .20, 'triangle', .14, .03);
-          } else if (e.style === 'thrust') {
-            this.noise(.09, .14, 3200);
-            this.tone(420 + e.combo * 85, .07, 'sawtooth', .10, 0, 240);
-          } else {
-            this.noise(e.combo === 3 ? .15 : .085, .15, e.combo === 3 ? 1150 : 2100);
-            this.tone(165 + e.combo * 58, .09, 'triangle', .12, 0, 105 + e.combo * 28);
-          }
-          break;
-        case 'stance-switch':
-          this.pluck(e.flow ? 587.33 : 440, .24, .12);
-          if (e.flow) { this.noise(.12, .12, 2600); this.tone(880, .14, 'triangle', .11, .03); }
-          break;
-        case 'immobilize':
-          this.tone(587.33, .38, 'sine', .19, 0, 1174.66);
-          this.pluck(880, .45, .14, .04);
-          break;
-        case 'shatter':
-          this.noise(.20, .20, 3400);
-          this.tone(1244.5, .16, 'triangle', .16, 0, 440);
-          this.tone(98, .25, 'sawtooth', .18, 0, 48);
-          break;
-        case 'rock-cast':
-          this.tone(196, .16, 'square', .10, 0, 164.81);
-          this.tone(392, .12, 'triangle', .09);
-          break;
-        case 'pillar-cast':
-          this.tone(140, .24, 'sawtooth', .17, 0, 290);
-          this.tone(520 + (e.power || 1) * 110, .22, 'triangle', .14, .03);
-          break;
-        case 'pillar-hit':
-          this.noise(.26, .24, 620);
-          this.tone(92, .38, 'sawtooth', .24, 0, 42);
-          this.tone(220, .32, 'triangle', .18, .02, 110);
-          this.pluck(440, .5, .15, .04);
-          break;
-        case 'jar-boom':
-          this.noise(.32, .26, 480);
-          this.tone(86, .42, 'sawtooth', .24, 0, 36);
-          break;
-        case 'chest-open':
-        case 'forge-buy':
-          [392, 493.88, 587.33, 783.99].forEach((f, i) => this.pluck(f, .42, .13, i * .055));
-          break;
-        case 'mote':
-          this.tone(880, .055, 'sine', .055, 0, 1174.66);
-          break;
-        case 'insight':
-          if (e.rock) {
-            this.tone(220, .48, 'triangle', .24);
-            this.tone(659.25, .42, 'sine', .22, .01);
-            this.tone(1318.5, .36, 'triangle', .16, .03);
-            this.noise(.14, .18, 2800);
-          } else {
-            this.tone(880, .25, 'sine', .2, 0, 1320);
-            this.tone(1318.5, .34, 'triangle', .15, .04);
-            this.tone(110, .22, 'sine', .18, 0, 55);
-          }
-          break;
-        case 'stance-up':
-          this.pluck(523.25 + (e.stance || 1) * 65, .28, .12);
-          break;
-        case 'hit':
-          this.tone(122, .09, 'square', .14, 0, 70);
-          this.tone(490, .048, 'triangle', .12);
-          this.noise(.055, .10, 1950);
-          break;
-        case 'ward-block':
-          this.tone(660, .16, 'triangle', .14);
-          this.tone(990, .2, 'sine', .11, .03);
-          break;
-        case 'hurt':
-          this.tone(82, .22, 'sawtooth', .16, 0, 46);
-          this.noise(.16, .14, 900);
-          break;
-        case 'jump':
-          this.tone(e.air ? 560 : 350, .11, 'sine', .16, 0, e.air ? 780 : 510);
-          if (e.air) this.tone(840, .13, 'sine', .08, .04);
-          break;
-        case 'pad-jump':
-          [392, 523.25, 783.99].forEach((f, i) => this.pluck(f, .32, .12, i * .045));
-          break;
-        case 'dash':
-          this.noise(.11, .09, 2600);
-          this.tone(760, .065, 'triangle', .07, 0, 420);
-          break;
-        case 'clone':
-          this.pluck(440, .38, .13);
-          this.tone(659.25, .36, 'sine', .14, .08);
-          break;
-        case 'reflect':
-          this.tone(740, .12, 'triangle', .15, 0, 1180);
-          this.noise(.07, .08, 3200);
-          break;
-        case 'bell-ring':
-        case 'bell-clear':
-        case 'mirror-break':
-          this.tone(196, .85, 'sine', .22);
-          this.tone(392, .65, 'triangle', .12, .02);
-          this.tone(587.33, .5, 'sine', .08, .05);
-          break;
-        case 'stele-awake':
-          [293.66, 392, 493.88, 587.33].forEach((f, i) => this.pluck(f, .55, .13, i * .07));
-          break;
-        case 'boss-phase':
-        case 'boss-beam':
-          this.noise(.34, .22, 540);
-          this.tone(73.42, .55, 'sawtooth', .22, 0, 52);
-          this.tone(220, .45, 'triangle', .15, .06, 146.83);
-          break;
-        case 'pillar-erupt':
-          this.noise(.18, .15, 720);
-          this.tone(98, .22, 'sawtooth', .14, 0, 58);
-          break;
-        case 'warning':
-        case 'boss-warning':
-          this.tone(e.type === 'boss-warning' ? 220 : 330, .15, 'triangle', .095);
-          this.tone(e.type === 'boss-warning' ? 330 : 440, .11, 'sine', .075, .09);
-          break;
-        case 'enemy-attack':
-          this.noise(.09, .1, 1400);
-          this.tone(155, .08, 'triangle', .11, 0, 95);
-          break;
-        case 'interrupt':
-          this.tone(680, .15, 'triangle', .15);
-          this.tone(1040, .1, 'sine', .1, .03);
-          break;
-        case 'seal':
-        case 'relic':
-        case 'victory':
-        case 'macaque-kill':
-        case 'warden-kill':
-          [329.63, 440, 587.33, 659.25].forEach((f, i) => this.pluck(f, .52, .15, i * .085));
-          break;
-        case 'blocked':
-        case 'boss-guard':
-          this.tone(960, .05, 'square', .065);
-          break;
-      }
-    }
-
-    tick(playing, stage = 0, bossHp = 270, inMenu = false) {
-      if (!this.ctx || !this.enabled || this.muted || this.volume <= 0.001) return;
-      if (!playing && !inMenu) return;
-      const key = inMenu ? 'menu' : stage;
-      if (this.lastTheme !== key) { this.lastTheme = key; this.stepIdx = 0; }
-      const theme = THEMES[key] || THEMES[0];
-      const t = this.ctx.currentTime;
-      if (t < this.next) return;
-      let tempo = theme.step;
-      if (!inMenu && stage === 3 && bossHp < 180) tempo = bossHp <= 130 ? .165 : .19;
-      this.next = t + tempo;
-      const i = this.stepIdx++ % 16;
-      const lead = theme.lead[i];
-      const bass = theme.bass[i];
-      const drum = theme.drum[i];
-      if (lead > 0) this.pluck(lead, tempo * 1.65, inMenu ? .052 : .074);
-      if (bass > 0) this.tone(bass, tempo * 2.1, 'sine', inMenu ? .055 : .088);
-      if (drum === 1) {
-        this.tone(82, .14, 'sine', .11, 0, 42);
-        this.noise(.06, .035, 420);
-      } else if (drum === 2) {
-        this.tone(680, .035, 'triangle', .045);
-      }
-    }
+    tick(){this.music?.tick();}
+    setVolume(v){this.volume=Number.isFinite(v)?Math.max(0,Math.min(1,v)):.25;if(this.master)this.master.gain.setTargetAtTime(this.volume,this.ctx.currentTime,.012);}
+    menu(kind){if(kind==='move')this.tone(440,.045,'sine',.055);else{this.tone(660,.09,'triangle',.07);this.tone(880,.13,'sine',.035,.035);}}
   };
 })(globalThis.Kong ||= {});

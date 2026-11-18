@@ -1,0 +1,44 @@
+{
+  "before": false,
+  "mode": "http",
+  "sha256": "67e20df4cce0b4e38d80f23af38f7c21129df9d5b2f3a51fea87dfcdd30b6b40",
+  "method": "Public menus, actual movement/F/B/C, actual waits and export/import. Read-only renderer observer captures actual displayed phases. Not a human experience rating.",
+  "checks": [
+    {
+      "name": "fractional display no longer forces nearest-neighbour magnification",
+      "pass": false,
+      "data": {
+        "width": 1358,
+        "height": 763,
+        "scale": 1.4145833333333333,
+        "imageRendering": "pixelated",
+        "canvas": [
+          960,
+          540
+        ]
+      }
+    }
+  ],
+  "shots": [],
+  "errors": [],
+  "network": [
+    "http://127.0.0.1:5188/?visual-review=1"
+  ],
+  "environment": {
+    "browser": "156.0.4314.50",
+    "version": "10.0.2",
+    "viewport": "1440x1000",
+    "dpr": 1.25
+  },
+  "presentation": {
+    "width": 1358,
+    "height": 763,
+    "scale": 1.4145833333333333,
+    "imageRendering": "pixelated",
+    "canvas": [
+      960,
+      540
+    ]
+  },
+  "failure": "Error: fractional display no longer forces nearest-neighbour magnification\n    at check (E:\\githome\\kong-rpg\\tools\\review-cloud-visuals.cjs:5:100)\n    at E:\\githome\\kong-rpg\\tools\\review-cloud-visuals.cjs:13:253"
+}

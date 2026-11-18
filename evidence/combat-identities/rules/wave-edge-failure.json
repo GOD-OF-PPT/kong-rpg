@@ -1,0 +1,39 @@
+{
+  "version": "12.2.0",
+  "method": "Production simulation, canonical state/import checks. Not human playtest.",
+  "rows": [
+    {
+      "name": "three weapons differ in timing, silhouette and spatial role; phases release once",
+      "pass": true
+    },
+    {
+      "name": "dash cancels commitment immediately; damage cannot start an invisible attack",
+      "pass": true
+    },
+    {
+      "name": "all five bosses select by position and never repeat a locked far attack indefinitely",
+      "pass": true
+    },
+    {
+      "name": "every move has a locked warning, bounded chain and stationary vulnerable opening",
+      "pass": true
+    },
+    {
+      "name": "old schema12 active attacks get the canonical hero style on restore",
+      "pass": true
+    },
+    {
+      "name": "active damage and projectiles survive export/import and keep their spell identity",
+      "pass": true
+    },
+    {
+      "name": "low waves start at the forward foot, never at the far edge behind the caster",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: venom-tide\n    at E:\\githome\\kong-rpg\\tools\\verify-combat-identities.cjs:12:359\n    at check (E:\\githome\\kong-rpg\\tools\\verify-combat-identities.cjs:3:37)\n    at Object.<anonymous> (E:\\githome\\kong-rpg\\tools\\verify-combat-identities.cjs:12:1)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+    },
+    {
+      "name": "mixed existing hero skills stay saveable through normal/challenge fights",
+      "pass": true
+    }
+  ]
+}

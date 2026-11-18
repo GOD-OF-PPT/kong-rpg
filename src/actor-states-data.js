@@ -1,0 +1,1 @@
+(function(K){K.ActorStateFrames={"wukong-dead":{"image":"actorStates","r":[0,0,128,128],"anchor":[64,112]},"nezha-dead":{"image":"actorStates","r":[128,0,128,128],"anchor":[64,112]},"nezha-ultimate-start":{"image":"actorStates","r":[256,0,128,128],"anchor":[64,112]},"nezha-ultimate-release":{"image":"actorStates","r":[384,0,128,128],"anchor":[64,112]}};})(globalThis.Kong ||= {});

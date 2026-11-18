@@ -1,0 +1,45 @@
+{
+  "entry": "E:\\githome\\kong-rpg\\release\\index.html",
+  "sha256": "e8b26ad5b53e6d880c8fc00f69be0da50782ca4052704858c5620b2f0cf2f924",
+  "entryBytes": 76416495,
+  "browser": "156.0.8078.47",
+  "cpuSlowdown": 1,
+  "method": "Installed visible Chrome, file://, fresh context, browser offline and HTTP(S) blocked. Measures actual navigation/paint/boot asset readiness; CPU throttling is stated separately, not physical disk cold-cache emulation.",
+  "domReadyWallMs": 1077,
+  "homeReadyWallMs": 1266,
+  "navigation": {
+    "paint": [
+      {
+        "name": "first-paint",
+        "ms": 224
+      },
+      {
+        "name": "first-contentful-paint",
+        "ms": 224
+      }
+    ],
+    "dom": 1053,
+    "loadedImages": 79,
+    "resources": []
+  },
+  "checks": [
+    {
+      "name": "offline root HTML at most 1 MiB",
+      "pass": false
+    },
+    {
+      "name": "home ready within 5 seconds",
+      "pass": true
+    },
+    {
+      "name": "initial boot decodes only four menu images",
+      "pass": false
+    },
+    {
+      "name": "no network or script errors",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "requests": []
+}

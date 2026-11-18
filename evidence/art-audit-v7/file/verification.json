@@ -1,0 +1,628 @@
+{
+  "version": "7.1.2",
+  "base": "f041955f42d65aff38e2485c259c744e5c760909",
+  "kind": "file",
+  "sha256": "48c9582b4b5f34272d78e174388a6567471059671bdb1af34a1a04b0ca4c05c6",
+  "environment": {
+    "os": "10.0.26200",
+    "node": "v22.12.0",
+    "viewport": "1366x768",
+    "browser": "156.0.4314.42"
+  },
+  "checks": [
+    {
+      "name": "all 26 local images decode without missing-asset fallback",
+      "pass": true
+    },
+    {
+      "name": "all 139 registered source/state frames are nonempty and in bounds",
+      "pass": true
+    },
+    {
+      "name": "compiled character and combo sprites do not clip their cache edges",
+      "pass": true,
+      "cache": [
+        {
+          "id": "wukong-idle",
+          "edge": 0,
+          "visible": 1480
+        },
+        {
+          "id": "wukong-run",
+          "edge": 0,
+          "visible": 2228
+        },
+        {
+          "id": "wukong-jump",
+          "edge": 0,
+          "visible": 1276
+        },
+        {
+          "id": "wukong-fall",
+          "edge": 0,
+          "visible": 1499
+        },
+        {
+          "id": "wukong-windup",
+          "edge": 0,
+          "visible": 1673
+        },
+        {
+          "id": "wukong-attack",
+          "edge": 0,
+          "visible": 1637
+        },
+        {
+          "id": "wukong-heavy",
+          "edge": 0,
+          "visible": 1637
+        },
+        {
+          "id": "wukong-recover",
+          "edge": 0,
+          "visible": 1529
+        },
+        {
+          "id": "wukong-hurt",
+          "edge": 0,
+          "visible": 1316
+        },
+        {
+          "id": "wukong-dash",
+          "edge": 0,
+          "visible": 1399
+        },
+        {
+          "id": "combo-0",
+          "edge": 0,
+          "visible": 2235
+        },
+        {
+          "id": "combo-1",
+          "edge": 0,
+          "visible": 2295
+        },
+        {
+          "id": "combo-2",
+          "edge": 0,
+          "visible": 2111
+        },
+        {
+          "id": "combo-3",
+          "edge": 0,
+          "visible": 2113
+        },
+        {
+          "id": "combo-4",
+          "edge": 0,
+          "visible": 2315
+        },
+        {
+          "id": "combo-5",
+          "edge": 0,
+          "visible": 2224
+        },
+        {
+          "id": "combo-6",
+          "edge": 0,
+          "visible": 2470
+        },
+        {
+          "id": "combo-7",
+          "edge": 0,
+          "visible": 2175
+        },
+        {
+          "id": "combo-8",
+          "edge": 0,
+          "visible": 1848
+        },
+        {
+          "id": "blade-0",
+          "edge": 0,
+          "visible": 1524
+        },
+        {
+          "id": "blade-1",
+          "edge": 0,
+          "visible": 1832
+        },
+        {
+          "id": "shield-0",
+          "edge": 0,
+          "visible": 2644
+        },
+        {
+          "id": "shield-1",
+          "edge": 0,
+          "visible": 2590
+        },
+        {
+          "id": "caster-0",
+          "edge": 0,
+          "visible": 895
+        },
+        {
+          "id": "caster-1",
+          "edge": 0,
+          "visible": 1166
+        },
+        {
+          "id": "boss-0",
+          "edge": 0,
+          "visible": 3516
+        },
+        {
+          "id": "boss-1",
+          "edge": 0,
+          "visible": 4023
+        }
+      ]
+    },
+    {
+      "name": "every DOM art variable is backed by embedded pixels",
+      "pass": true,
+      "css": [
+        {
+          "id": "--scroll-art",
+          "loaded": true
+        },
+        {
+          "id": "--folio-art",
+          "loaded": true
+        },
+        {
+          "id": "--icon-cloud",
+          "loaded": true
+        },
+        {
+          "id": "--icon-echo",
+          "loaded": true
+        },
+        {
+          "id": "--icon-staff",
+          "loaded": true
+        },
+        {
+          "id": "--icon-mirror",
+          "loaded": true
+        },
+        {
+          "id": "--icon-flame",
+          "loaded": true
+        },
+        {
+          "id": "--icon-mercy",
+          "loaded": true
+        },
+        {
+          "id": "--icon-rest",
+          "loaded": true
+        },
+        {
+          "id": "--icon-crest",
+          "loaded": true
+        },
+        {
+          "id": "--portrait-art",
+          "loaded": true
+        },
+        {
+          "id": "--lamp-art",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "name": "wukong real Q activates a visible protection ring",
+      "pass": true
+    },
+    {
+      "name": "wukong protection remains drawn through its signature pose",
+      "pass": true
+    },
+    {
+      "name": "wukong actual lethal attack reaches death state",
+      "pass": true
+    },
+    {
+      "name": "nezha real Q activates a visible protection ring",
+      "pass": true
+    },
+    {
+      "name": "nezha protection remains drawn through its signature pose",
+      "pass": true
+    },
+    {
+      "name": "nezha actual lethal attack reaches death state",
+      "pass": true
+    },
+    {
+      "name": "Nezha real R completes with the existing timing and one resource spend",
+      "pass": true
+    },
+    {
+      "name": "DOM pause keeps battle input fenced",
+      "pass": true
+    },
+    {
+      "name": "art changes preserve actual export/import",
+      "pass": true
+    },
+    {
+      "name": "no page errors",
+      "pass": true
+    },
+    {
+      "name": "fresh disconnected file context makes zero HTTP requests",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "network": [],
+  "inputs": [
+    {
+      "key": "Digit2",
+      "at": 1793078742665,
+      "screen": "heroes"
+    },
+    {
+      "key": "Digit1",
+      "at": 1793078742699,
+      "screen": "start"
+    },
+    {
+      "key": "Escape",
+      "at": 1793078742736,
+      "screen": "playing"
+    },
+    {
+      "key": "KeyQ",
+      "at": 1793078743049,
+      "screen": "playing"
+    },
+    {
+      "key": "Escape",
+      "at": 1793078743626,
+      "screen": "playing"
+    },
+    {
+      "key": "KeyQ",
+      "at": 1793078744183,
+      "screen": "playing"
+    },
+    {
+      "key": "Escape",
+      "at": 1793078744772,
+      "screen": "playing"
+    },
+    {
+      "key": "KeyR",
+      "at": 1793078745547,
+      "screen": "playing"
+    },
+    {
+      "key": "Escape",
+      "at": 1793078746433,
+      "screen": "playing"
+    },
+    {
+      "key": "KeyJ",
+      "at": 1793078746450,
+      "screen": "paused"
+    }
+  ],
+  "captures": [
+    "title.png",
+    "heroes.png",
+    "wukong-ward-idle.png",
+    "wukong-ward-signature.png",
+    "wukong-death-result.png",
+    "nezha-ward-idle.png",
+    "nezha-ward-signature.png",
+    "nezha-death-result.png",
+    "nezha-ultimate-action.png",
+    "catalogue-wukong-dead.png",
+    "catalogue-nezha-dead.png",
+    "catalogue-nezha-ultimate-start.png",
+    "catalogue-nezha-ultimate-release.png",
+    "catalogue-wukong-ward-charge.png",
+    "catalogue-nezha-ward-flight.png",
+    "catalogue-nezha-slam.png",
+    "catalogue-guardian-0.png",
+    "catalogue-guardian-1.png",
+    "catalogue-guardian-2.png",
+    "catalogue-world-0-ready.png",
+    "catalogue-world-0-done.png",
+    "catalogue-world-1-ready.png",
+    "catalogue-world-1-done.png",
+    "catalogue-world-2-ready.png",
+    "catalogue-world-2-done.png",
+    "catalogue-map-0.png",
+    "catalogue-map-1.png",
+    "catalogue-map-2.png",
+    "catalogue-map-3.png"
+  ],
+  "scenes": [
+    {
+      "method": "render-only fixed state",
+      "name": "wukong-dead",
+      "hero": "wukong",
+      "stage": 0,
+      "seed": "FULL-ART-1027",
+      "camera": 250,
+      "clock": 1.2
+    },
+    {
+      "method": "render-only fixed state",
+      "name": "nezha-dead",
+      "hero": "nezha",
+      "stage": 0,
+      "seed": "FULL-ART-1027",
+      "camera": 250,
+      "clock": 1.2
+    },
+    {
+      "method": "render-only fixed state",
+      "name": "nezha-ultimate-start",
+      "hero": "nezha",
+      "stage": 0,
+      "seed": "FULL-ART-1027",
+      "camera": 250,
+      "clock": 1.2
+    },
+    {
+      "method": "render-only fixed state",
+      "name": "nezha-ultimate-release",
+      "hero": "nezha",
+      "stage": 0,
+      "seed": "FULL-ART-1027",
+      "camera": 250,
+      "clock": 1.2
+    },
+    {
+      "method": "render-only fixed state",
+      "name": "wukong-ward-charge",
+      "hero": "wukong",
+      "stage": 0,
+      "seed": "FULL-ART-1027",
+      "camera": 250,
+      "clock": 1.2
+    },
+    {
+      "method": "render-only fixed state",
+      "name": "nezha-ward-flight",
+      "hero": "nezha",
+      "stage": 0,
+      "seed": "FULL-ART-1027",
+      "camera": 250,
+      "clock": 1.2
+    },
+    {
+      "method": "render-only fixed state",
+      "name": "nezha-slam",
+      "hero": "nezha",
+      "stage": 0,
+      "seed": "FULL-ART-1027",
+      "camera": 250,
+      "clock": 1.2
+    },
+    {
+      "method": "render-only fixed state",
+      "name": "guardian-0",
+      "hero": "nezha",
+      "stage": 0,
+      "seed": "FULL-ART-1027",
+      "camera": 6360,
+      "clock": 1.2
+    },
+    {
+      "method": "render-only fixed state",
+      "name": "guardian-1",
+      "hero": "nezha",
+      "stage": 1,
+      "seed": "FULL-ART-1027",
+      "camera": 6360,
+      "clock": 1.2
+    },
+    {
+      "method": "render-only fixed state",
+      "name": "guardian-2",
+      "hero": "nezha",
+      "stage": 2,
+      "seed": "FULL-ART-1027",
+      "camera": 6360,
+      "clock": 1.2
+    },
+    {
+      "method": "render-only fixed state",
+      "name": "world-0-ready",
+      "hero": "nezha",
+      "stage": 0,
+      "seed": "FULL-ART-1027",
+      "camera": 1895,
+      "clock": 1.2
+    },
+    {
+      "method": "render-only fixed state",
+      "name": "world-0-done",
+      "hero": "nezha",
+      "stage": 0,
+      "seed": "FULL-ART-1027",
+      "camera": 1895,
+      "clock": 1.2
+    },
+    {
+      "method": "render-only fixed state",
+      "name": "world-1-ready",
+      "hero": "nezha",
+      "stage": 1,
+      "seed": "FULL-ART-1027",
+      "camera": 4690,
+      "clock": 1.2
+    },
+    {
+      "method": "render-only fixed state",
+      "name": "world-1-done",
+      "hero": "nezha",
+      "stage": 1,
+      "seed": "FULL-ART-1027",
+      "camera": 4690,
+      "clock": 1.2
+    },
+    {
+      "method": "render-only fixed state",
+      "name": "world-2-ready",
+      "hero": "nezha",
+      "stage": 2,
+      "seed": "FULL-ART-1027",
+      "camera": 5010,
+      "clock": 1.2
+    },
+    {
+      "method": "render-only fixed state",
+      "name": "world-2-done",
+      "hero": "nezha",
+      "stage": 2,
+      "seed": "FULL-ART-1027",
+      "camera": 5010,
+      "clock": 1.2
+    },
+    {
+      "method": "render-only fixed state",
+      "name": "map-0",
+      "hero": "nezha",
+      "stage": 0,
+      "seed": "FULL-ART-1027",
+      "camera": 4170,
+      "clock": 1.2
+    },
+    {
+      "method": "render-only fixed state",
+      "name": "map-1",
+      "hero": "nezha",
+      "stage": 1,
+      "seed": "FULL-ART-1027",
+      "camera": 4170,
+      "clock": 1.2
+    },
+    {
+      "method": "render-only fixed state",
+      "name": "map-2",
+      "hero": "nezha",
+      "stage": 2,
+      "seed": "FULL-ART-1027",
+      "camera": 4170,
+      "clock": 1.2
+    },
+    {
+      "method": "render-only fixed state",
+      "name": "map-3",
+      "hero": "nezha",
+      "stage": 3,
+      "seed": "FULL-ART-1027",
+      "camera": 2020,
+      "clock": 1.2
+    }
+  ],
+  "recording": {
+    "file": "E:\\githome\\kong-rpg\\evidence\\art-audit-v7\\file\\state-actions.mp4",
+    "fps": 5,
+    "frames": [
+      {
+        "index": 0,
+        "ms": 66.32
+      },
+      {
+        "index": 1,
+        "ms": 249.97
+      },
+      {
+        "index": 2,
+        "ms": 521.48
+      },
+      {
+        "index": 3,
+        "ms": 674.47
+      },
+      {
+        "index": 4,
+        "ms": 901.42
+      },
+      {
+        "index": 5,
+        "ms": 1081.2
+      },
+      {
+        "index": 6,
+        "ms": 1414.94
+      },
+      {
+        "index": 7,
+        "ms": 1658.49
+      },
+      {
+        "index": 8,
+        "ms": 1714.8
+      },
+      {
+        "index": 9,
+        "ms": 2052.81
+      },
+      {
+        "index": 10,
+        "ms": 2114.62
+      },
+      {
+        "index": 11,
+        "ms": 2311.22
+      },
+      {
+        "index": 12,
+        "ms": 2570.49
+      },
+      {
+        "index": 13,
+        "ms": 2736.14
+      },
+      {
+        "index": 14,
+        "ms": 3015.03
+      },
+      {
+        "index": 15,
+        "ms": 3148.25
+      },
+      {
+        "index": 16,
+        "ms": 3350.65
+      },
+      {
+        "index": 17,
+        "ms": 3550.11
+      },
+      {
+        "index": 18,
+        "ms": 3769.12
+      },
+      {
+        "index": 19,
+        "ms": 3985.01
+      },
+      {
+        "index": 20,
+        "ms": 4199
+      },
+      {
+        "index": 21,
+        "ms": 4844.99
+      },
+      {
+        "index": 22,
+        "ms": 4897.33
+      }
+    ],
+    "method": "continuous page screenshots at requested 5Hz; JSON contains actual capture times",
+    "error": ""
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "seed": "DECISION-1027",
+  "method": "production simulation in fixed isolated configurations; no player claims",
+  "results": [
+    {
+      "scene": "locked-air-seal",
+      "policy": "keep-hovering",
+      "hp": 88,
+      "damage": 12,
+      "focusSpent": 27.3,
+      "sources": [
+        "莲灯使·锁空莲印"
+      ]
+    },
+    {
+      "scene": "locked-air-seal",
+      "policy": "release-and-land",
+      "hp": 100,
+      "damage": 0,
+      "focusSpent": 13,
+      "sources": []
+    },
+    {
+      "scene": "vertical-route",
+      "policy": "jump",
+      "peakFootHeight": 331.6,
+      "focusSpent": 0,
+      "vaults": 0
+    },
+    {
+      "scene": "vertical-route",
+      "policy": "vault",
+      "peakFootHeight": 281.6,
+      "focusSpent": 21,
+      "vaults": 1
+    },
+    {
+      "scene": "air-seal-with-catching-ledge",
+      "policy": "release-without-moving",
+      "damage": 12,
+      "hp": 88
+    }
+  ]
+}

@@ -1,0 +1,418 @@
+{
+  "version": "6.0.2",
+  "mode": "file",
+  "sha256": "e1e5e24dbd17cabfd3a73254deefd8102f06ca94e8f6df7c94f9b3dd5332e664",
+  "method": "Fixed seed and genuine generated drop; legal JSON starting fixture, then real keyboard movement through visible item.",
+  "checks": [
+    {
+      "name": "rage full resource keeps the drop",
+      "pass": true
+    },
+    {
+      "name": "rage full resource explains why it cannot be picked up",
+      "pass": true
+    },
+    {
+      "name": "real R expenditure allows the retained gold drop to collect",
+      "pass": true
+    },
+    {
+      "name": "rage missing resource automatically collects the drop",
+      "pass": true
+    },
+    {
+      "name": "rage pickup settles once",
+      "pass": true
+    },
+    {
+      "name": "heal full resource keeps the drop",
+      "pass": true
+    },
+    {
+      "name": "heal full resource explains why it cannot be picked up",
+      "pass": true
+    },
+    {
+      "name": "heal missing resource automatically collects the drop",
+      "pass": true
+    },
+    {
+      "name": "heal pickup settles once",
+      "pass": true
+    },
+    {
+      "name": "focus full resource keeps the drop",
+      "pass": true
+    },
+    {
+      "name": "focus full resource explains why it cannot be picked up",
+      "pass": true
+    },
+    {
+      "name": "focus missing resource automatically collects the drop",
+      "pass": true
+    },
+    {
+      "name": "focus pickup settles once",
+      "pass": true
+    },
+    {
+      "name": "no runtime errors",
+      "pass": true
+    },
+    {
+      "name": "offline has no HTTP(S) requests",
+      "pass": true
+    }
+  ],
+  "cases": [
+    {
+      "kind": "rage",
+      "full": true,
+      "item": {
+        "x": 439,
+        "y": 420,
+        "w": 16,
+        "h": 20,
+        "kind": "rage",
+        "used": false,
+        "enabled": true,
+        "sourceId": 0,
+        "amount": 14
+      },
+      "resource": 100,
+      "player": {
+        "x": 443.09837213282304,
+        "y": 396,
+        "w": 24,
+        "h": 44,
+        "vx": 11.152119540223827,
+        "vy": 0,
+        "face": 1,
+        "hp": 100,
+        "focus": 75,
+        "rage": 100,
+        "ringCD": 0,
+        "ringAim": null,
+        "ultimate": 0,
+        "ultimateStage": 0,
+        "talismanCD": 0,
+        "ward": 0,
+        "dashTargets": [],
+        "grounded": true,
+        "coyote": 0.1,
+        "buffer": 0,
+        "airJumps": 0,
+        "invuln": 4.474999999999974,
+        "dash": 0,
+        "dashCD": 0,
+        "attack": 0,
+        "attackId": 0,
+        "attackTargets": [],
+        "comboIndex": 0,
+        "slam": false,
+        "landing": 0,
+        "drop": 0,
+        "hurt": 0,
+        "attackBuffer": 0
+      },
+      "hint": "战意火 · 战意已满（100/100）· 先用 R 大招",
+      "pickupEvents": []
+    },
+    {
+      "kind": "rage",
+      "full": false,
+      "item": {
+        "x": 439,
+        "y": 420,
+        "w": 16,
+        "h": 20,
+        "kind": "rage",
+        "used": true,
+        "enabled": true,
+        "sourceId": 0,
+        "amount": 14
+      },
+      "resource": 64,
+      "player": {
+        "x": 445.2189140963949,
+        "y": 396,
+        "w": 24,
+        "h": 44,
+        "vx": 9.481819135167619,
+        "vy": 0,
+        "face": 1,
+        "hp": 100,
+        "focus": 75,
+        "rage": 64,
+        "ringCD": 0,
+        "ringAim": null,
+        "ultimate": 0,
+        "ultimateStage": 0,
+        "talismanCD": 0,
+        "ward": 0,
+        "dashTargets": [],
+        "grounded": true,
+        "coyote": 0.1,
+        "buffer": 0,
+        "airJumps": 0,
+        "invuln": 4.499999999999975,
+        "dash": 0,
+        "dashCD": 0,
+        "attack": 0,
+        "attackId": 0,
+        "attackTargets": [],
+        "comboIndex": 0,
+        "slam": false,
+        "landing": 0,
+        "drop": 0,
+        "hurt": 0,
+        "attackBuffer": 0
+      },
+      "hint": "J棍击 · L分身 · K闪避",
+      "pickupEvents": [
+        {
+          "type": "pickup",
+          "t": 0.258,
+          "wall": 0.258,
+          "kind": "rage",
+          "amount": 14,
+          "sourceId": 0
+        }
+      ]
+    },
+    {
+      "kind": "heal",
+      "full": true,
+      "item": {
+        "x": 6444,
+        "y": 420,
+        "w": 16,
+        "h": 20,
+        "kind": "heal",
+        "used": false,
+        "enabled": true,
+        "sourceId": 7,
+        "amount": 12
+      },
+      "resource": 100,
+      "player": {
+        "x": 6450.218914096395,
+        "y": 396,
+        "w": 24,
+        "h": 44,
+        "vx": 9.481819135167619,
+        "vy": 0,
+        "face": 1,
+        "hp": 100,
+        "focus": 75,
+        "rage": 39,
+        "ringCD": 0,
+        "ringAim": null,
+        "ultimate": 0,
+        "ultimateStage": 0,
+        "talismanCD": 0,
+        "ward": 0,
+        "dashTargets": [],
+        "grounded": true,
+        "coyote": 0.1,
+        "buffer": 0,
+        "airJumps": 0,
+        "invuln": 4.499999999999975,
+        "dash": 0,
+        "dashCD": 0,
+        "attack": 0,
+        "attackId": 0,
+        "attackTargets": [],
+        "comboIndex": 0,
+        "slam": false,
+        "landing": 0,
+        "drop": 0,
+        "hurt": 0,
+        "attackBuffer": 0
+      },
+      "hint": "小还丹 · 生命已满（100/100）· 暂留原地",
+      "pickupEvents": []
+    },
+    {
+      "kind": "heal",
+      "full": false,
+      "item": {
+        "x": 6444,
+        "y": 420,
+        "w": 16,
+        "h": 20,
+        "kind": "heal",
+        "used": true,
+        "enabled": true,
+        "sourceId": 7,
+        "amount": 12
+      },
+      "resource": 62,
+      "player": {
+        "x": 6450.286076981935,
+        "y": 396,
+        "w": 24,
+        "h": 44,
+        "vx": 8.059546264892477,
+        "vy": 0,
+        "face": 1,
+        "hp": 62,
+        "focus": 75,
+        "rage": 39,
+        "ringCD": 0,
+        "ringAim": null,
+        "ultimate": 0,
+        "ultimateStage": 0,
+        "talismanCD": 0,
+        "ward": 0,
+        "dashTargets": [],
+        "grounded": true,
+        "coyote": 0.1,
+        "buffer": 0,
+        "airJumps": 0,
+        "invuln": 4.491666666666641,
+        "dash": 0,
+        "dashCD": 0,
+        "attack": 0,
+        "attackId": 0,
+        "attackTargets": [],
+        "comboIndex": 0,
+        "slam": false,
+        "landing": 0,
+        "drop": 0,
+        "hurt": 0,
+        "attackBuffer": 0
+      },
+      "hint": "J棍击 · L分身 · K闪避",
+      "pickupEvents": [
+        {
+          "type": "pickup",
+          "t": 0.258,
+          "wall": 0.258,
+          "kind": "heal",
+          "amount": 12,
+          "sourceId": 7
+        }
+      ]
+    },
+    {
+      "kind": "focus",
+      "full": true,
+      "item": {
+        "x": 2564,
+        "y": 420,
+        "w": 16,
+        "h": 20,
+        "kind": "focus",
+        "used": false,
+        "enabled": true,
+        "sourceId": 4,
+        "amount": 20
+      },
+      "resource": 100,
+      "player": {
+        "x": 2570.1398989369345,
+        "y": 396,
+        "w": 24,
+        "h": 44,
+        "vx": 11.155081335491317,
+        "vy": 0,
+        "face": 1,
+        "hp": 100,
+        "focus": 100,
+        "rage": 39,
+        "ringCD": 0,
+        "ringAim": null,
+        "ultimate": 0,
+        "ultimateStage": 0,
+        "talismanCD": 0,
+        "ward": 0,
+        "dashTargets": [],
+        "grounded": true,
+        "coyote": 0.1,
+        "buffer": 0,
+        "airJumps": 0,
+        "invuln": 4.499999999999975,
+        "dash": 0,
+        "dashCD": 0,
+        "attack": 0,
+        "attackId": 0,
+        "attackTargets": [],
+        "comboIndex": 0,
+        "slam": false,
+        "landing": 0,
+        "drop": 0,
+        "hurt": 0,
+        "attackBuffer": 0
+      },
+      "hint": "定心光 · 定力已满（100/100）· 神通消耗后可拾取",
+      "pickupEvents": []
+    },
+    {
+      "kind": "focus",
+      "full": false,
+      "item": {
+        "x": 2564,
+        "y": 420,
+        "w": 16,
+        "h": 20,
+        "kind": "focus",
+        "used": true,
+        "enabled": true,
+        "sourceId": 4,
+        "amount": 20
+      },
+      "resource": 70,
+      "player": {
+        "x": 2568.177366312899,
+        "y": 396,
+        "w": 24,
+        "h": 44,
+        "vx": 9.479301609190253,
+        "vy": 0,
+        "face": 1,
+        "hp": 100,
+        "focus": 70,
+        "rage": 39,
+        "ringCD": 0,
+        "ringAim": null,
+        "ultimate": 0,
+        "ultimateStage": 0,
+        "talismanCD": 0,
+        "ward": 0,
+        "dashTargets": [],
+        "grounded": true,
+        "coyote": 0.1,
+        "buffer": 0,
+        "airJumps": 0,
+        "invuln": 4.508333333333309,
+        "dash": 0,
+        "dashCD": 0,
+        "attack": 0,
+        "attackId": 0,
+        "attackTargets": [],
+        "comboIndex": 0,
+        "slam": false,
+        "landing": 0,
+        "drop": 0,
+        "hurt": 0,
+        "attackBuffer": 0
+      },
+      "hint": "J棍击 · L分身 · K闪避",
+      "pickupEvents": [
+        {
+          "type": "pickup",
+          "t": 0.258,
+          "wall": 0.258,
+          "kind": "focus",
+          "amount": 20,
+          "sourceId": 4
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "requests": [],
+  "browser": "156.0.4314.42"
+}

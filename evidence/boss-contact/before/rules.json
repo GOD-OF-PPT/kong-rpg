@@ -1,0 +1,221 @@
+{
+  "pass": false,
+  "checks": [
+    {
+      "name": "wukong normal 2: boss contact cannot bounce or grant a free hit",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: contact must not reverse falling velocity\n    at E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:13:12\n    at check (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:4:29)\n    at Object.<anonymous> (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:11:3)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+    },
+    {
+      "name": "wukong normal 5: boss contact cannot bounce or grant a free hit",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: contact must not reverse falling velocity\n    at E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:13:12\n    at check (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:4:29)\n    at Object.<anonymous> (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:11:3)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+    },
+    {
+      "name": "wukong normal 8: boss contact cannot bounce or grant a free hit",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: contact must not reverse falling velocity\n    at E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:13:12\n    at check (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:4:29)\n    at Object.<anonymous> (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:11:3)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+    },
+    {
+      "name": "wukong normal 11: boss contact cannot bounce or grant a free hit",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: contact must not reverse falling velocity\n    at E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:13:12\n    at check (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:4:29)\n    at Object.<anonymous> (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:11:3)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+    },
+    {
+      "name": "wukong normal 14: boss contact cannot bounce or grant a free hit",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: contact must not reverse falling velocity\n    at E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:13:12\n    at check (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:4:29)\n    at Object.<anonymous> (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:11:3)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+    },
+    {
+      "name": "wukong challenge 2: boss contact cannot bounce or grant a free hit",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: contact must not reverse falling velocity\n    at E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:13:12\n    at check (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:4:29)\n    at Object.<anonymous> (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:11:3)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+    },
+    {
+      "name": "wukong challenge 5: boss contact cannot bounce or grant a free hit",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: contact must not reverse falling velocity\n    at E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:13:12\n    at check (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:4:29)\n    at Object.<anonymous> (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:11:3)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+    },
+    {
+      "name": "wukong challenge 8: boss contact cannot bounce or grant a free hit",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: contact must not reverse falling velocity\n    at E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:13:12\n    at check (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:4:29)\n    at Object.<anonymous> (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:11:3)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+    },
+    {
+      "name": "wukong challenge 11: boss contact cannot bounce or grant a free hit",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: contact must not reverse falling velocity\n    at E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:13:12\n    at check (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:4:29)\n    at Object.<anonymous> (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:11:3)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+    },
+    {
+      "name": "wukong challenge 14: boss contact cannot bounce or grant a free hit",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: contact must not reverse falling velocity\n    at E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:13:12\n    at check (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:4:29)\n    at Object.<anonymous> (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:11:3)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+    },
+    {
+      "name": "nezha normal 2: boss contact cannot bounce or grant a free hit",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: contact must not reverse falling velocity\n    at E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:13:12\n    at check (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:4:29)\n    at Object.<anonymous> (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:11:3)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+    },
+    {
+      "name": "nezha normal 5: boss contact cannot bounce or grant a free hit",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: contact must not reverse falling velocity\n    at E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:13:12\n    at check (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:4:29)\n    at Object.<anonymous> (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:11:3)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+    },
+    {
+      "name": "nezha normal 8: boss contact cannot bounce or grant a free hit",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: contact must not reverse falling velocity\n    at E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:13:12\n    at check (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:4:29)\n    at Object.<anonymous> (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:11:3)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+    },
+    {
+      "name": "nezha normal 11: boss contact cannot bounce or grant a free hit",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: contact must not reverse falling velocity\n    at E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:13:12\n    at check (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:4:29)\n    at Object.<anonymous> (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:11:3)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+    },
+    {
+      "name": "nezha normal 14: boss contact cannot bounce or grant a free hit",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: contact must not reverse falling velocity\n    at E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:13:12\n    at check (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:4:29)\n    at Object.<anonymous> (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:11:3)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+    },
+    {
+      "name": "nezha challenge 2: boss contact cannot bounce or grant a free hit",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: contact must not reverse falling velocity\n    at E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:13:12\n    at check (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:4:29)\n    at Object.<anonymous> (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:11:3)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+    },
+    {
+      "name": "nezha challenge 5: boss contact cannot bounce or grant a free hit",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: contact must not reverse falling velocity\n    at E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:13:12\n    at check (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:4:29)\n    at Object.<anonymous> (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:11:3)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+    },
+    {
+      "name": "nezha challenge 8: boss contact cannot bounce or grant a free hit",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: contact must not reverse falling velocity\n    at E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:13:12\n    at check (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:4:29)\n    at Object.<anonymous> (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:11:3)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+    },
+    {
+      "name": "nezha challenge 11: boss contact cannot bounce or grant a free hit",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: contact must not reverse falling velocity\n    at E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:13:12\n    at check (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:4:29)\n    at Object.<anonymous> (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:11:3)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+    },
+    {
+      "name": "nezha challenge 14: boss contact cannot bounce or grant a free hit",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: contact must not reverse falling velocity\n    at E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:13:12\n    at check (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:4:29)\n    at Object.<anonymous> (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:11:3)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+    },
+    {
+      "name": "erlang normal 2: boss contact cannot bounce or grant a free hit",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: contact must not reverse falling velocity\n    at E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:13:12\n    at check (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:4:29)\n    at Object.<anonymous> (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:11:3)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+    },
+    {
+      "name": "erlang normal 5: boss contact cannot bounce or grant a free hit",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: contact must not reverse falling velocity\n    at E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:13:12\n    at check (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:4:29)\n    at Object.<anonymous> (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:11:3)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+    },
+    {
+      "name": "erlang normal 8: boss contact cannot bounce or grant a free hit",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: contact must not reverse falling velocity\n    at E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:13:12\n    at check (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:4:29)\n    at Object.<anonymous> (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:11:3)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+    },
+    {
+      "name": "erlang normal 11: boss contact cannot bounce or grant a free hit",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: contact must not reverse falling velocity\n    at E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:13:12\n    at check (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:4:29)\n    at Object.<anonymous> (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:11:3)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+    },
+    {
+      "name": "erlang normal 14: boss contact cannot bounce or grant a free hit",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: contact must not reverse falling velocity\n    at E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:13:12\n    at check (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:4:29)\n    at Object.<anonymous> (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:11:3)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+    },
+    {
+      "name": "erlang challenge 2: boss contact cannot bounce or grant a free hit",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: contact must not reverse falling velocity\n    at E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:13:12\n    at check (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:4:29)\n    at Object.<anonymous> (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:11:3)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+    },
+    {
+      "name": "erlang challenge 5: boss contact cannot bounce or grant a free hit",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: contact must not reverse falling velocity\n    at E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:13:12\n    at check (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:4:29)\n    at Object.<anonymous> (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:11:3)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+    },
+    {
+      "name": "erlang challenge 8: boss contact cannot bounce or grant a free hit",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: contact must not reverse falling velocity\n    at E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:13:12\n    at check (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:4:29)\n    at Object.<anonymous> (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:11:3)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+    },
+    {
+      "name": "erlang challenge 11: boss contact cannot bounce or grant a free hit",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: contact must not reverse falling velocity\n    at E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:13:12\n    at check (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:4:29)\n    at Object.<anonymous> (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:11:3)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+    },
+    {
+      "name": "erlang challenge 14: boss contact cannot bounce or grant a free hit",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: contact must not reverse falling velocity\n    at E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:13:12\n    at check (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:4:29)\n    at Object.<anonymous> (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:11:3)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+    },
+    {
+      "name": "boss pinned to left arena wall still leaves an escape side",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(s.player.vy>0)\n\n    at E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:20:120\n    at check (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:4:29)\n    at Object.<anonymous> (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:17:40)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+    },
+    {
+      "name": "boss pinned to right arena wall still leaves an escape side",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(s.player.vy>0)\n\n    at E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:20:120\n    at check (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:4:29)\n    at Object.<anonymous> (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:17:40)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+    },
+    {
+      "name": "an intentional downward slam still hits a boss once without rebounding",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(s.player.vy>0)\n\n    at E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:23:112\n    at check (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:4:29)\n    at Object.<anonymous> (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:22:1)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+    },
+    {
+      "name": "ordinary enemies retain stomp damage, rebound and air-jump refresh",
+      "pass": true
+    },
+    {
+      "name": "midair save/import cannot restore the old head-bounce loop",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(landed)\n\n    at E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:30:232\n    at check (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:4:29)\n    at Object.<anonymous> (E:\\githome\\kong-rpg\\tools\\verify-boss-contact.cjs:29:1)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+    }
+  ],
+  "samples": [
+    {
+      "boss": "juling",
+      "seconds": 8.391666666666831,
+      "playerHP": 0,
+      "bossHP": 298,
+      "groundedFrames": 0,
+      "stomps": 24
+    },
+    {
+      "boss": "qinguang",
+      "seconds": 7.216666666666815,
+      "playerHP": 0,
+      "bossHP": 633,
+      "groundedFrames": 0,
+      "stomps": 20
+    },
+    {
+      "boss": "ninehead",
+      "seconds": 8.800000000000141,
+      "playerHP": 36,
+      "bossHP": 679,
+      "groundedFrames": 0,
+      "stomps": 25
+    },
+    {
+      "boss": "dragonking",
+      "seconds": 7.933333333333517,
+      "playerHP": 0,
+      "bossHP": 984,
+      "groundedFrames": 0,
+      "stomps": 21
+    },
+    {
+      "boss": "litian",
+      "seconds": 7.825000000000179,
+      "playerHP": 0,
+      "bossHP": 1222,
+      "groundedFrames": 0,
+      "stomps": 22
+    }
+  ]
+}

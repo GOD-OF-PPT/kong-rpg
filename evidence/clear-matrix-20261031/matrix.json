@@ -1,0 +1,2611 @@
+{
+  "at": "2026-10-31T03:09:46.262Z",
+  "version": "12.4.1",
+  "allPass": true,
+  "seed": "LOTUS-1025",
+  "rows": [
+    {
+      "hero": "wukong",
+      "difficulty": "normal",
+      "pass": true,
+      "run": "wukong-normal-attempt3",
+      "rating": "A",
+      "seconds": 666,
+      "hits": 33,
+      "killed": 110,
+      "total": 110,
+      "hp": 140,
+      "stage": 14,
+      "completed": 15,
+      "guardians": 15,
+      "controllerSHA256": "10221314bd2e0e545883d5be2b37477e993fab38a0b56e8bed1abfd4d938d9b3",
+      "finalSaveSHA256": "2dca84547b9de90df3fb4d5b4bb54a2bda23eb498d74a2b05737600c577fa2d3",
+      "validation": {
+        "sameRunId": true,
+        "sameHeroAndMode": true,
+        "completedFifteen": true,
+        "fifteenGuardians": true,
+        "browserStages": true,
+        "noRuntimeErrors": true,
+        "liveEntryMatchesCurrent": true,
+        "ratingMatches": true
+      },
+      "frames": [
+        {
+          "file": "hero-choice.png",
+          "label": "选择孙悟空 · 普通旅程",
+          "screen": "heroes"
+        },
+        {
+          "file": "stage-01.png",
+          "label": "云上 · 踏云前哨",
+          "screen": "playing",
+          "hero": "wukong",
+          "difficulty": "normal",
+          "stage": 0,
+          "hp": 100,
+          "time": 0.26666666666666666,
+          "boss": [
+            {
+              "id": "cloud-mini0",
+              "hp": 108,
+              "maxHp": 108,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-02.png",
+          "label": "云上 · 巡风断桥",
+          "screen": "playing",
+          "hero": "wukong",
+          "difficulty": "normal",
+          "stage": 1,
+          "hp": 84,
+          "time": 39.26666666666508,
+          "boss": [
+            {
+              "id": "cloud-mini1",
+              "hp": 108,
+              "maxHp": 108,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-03.png",
+          "label": "云上 · 斩云天门",
+          "screen": "playing",
+          "hero": "wukong",
+          "difficulty": "normal",
+          "stage": 2,
+          "hp": 120,
+          "time": 67.33333333333299,
+          "boss": [
+            {
+              "id": "juling",
+              "hp": 600,
+              "maxHp": 600,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "boss-3.png",
+          "label": "巨灵神 · 战斗",
+          "screen": "playing",
+          "hero": "wukong",
+          "difficulty": "normal",
+          "stage": 2,
+          "hp": 116,
+          "time": 85.52500000001413,
+          "boss": [
+            {
+              "id": "juling",
+              "hp": 600,
+              "maxHp": 600,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-04.png",
+          "label": "地府 · 鬼门引路",
+          "screen": "playing",
+          "hero": "wukong",
+          "difficulty": "normal",
+          "stage": 3,
+          "hp": 110,
+          "time": 103.29166666669494,
+          "boss": [
+            {
+              "id": "underworld-mini0",
+              "hp": 116,
+              "maxHp": 116,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-05.png",
+          "label": "地府 · 判牒回廊",
+          "screen": "playing",
+          "hero": "wukong",
+          "difficulty": "normal",
+          "stage": 4,
+          "hp": 140,
+          "time": 129.79166666671296,
+          "boss": [
+            {
+              "id": "underworld-mini1",
+              "hp": 116,
+              "maxHp": 116,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-06.png",
+          "label": "地府 · 一殿问罪",
+          "screen": "playing",
+          "hero": "wukong",
+          "difficulty": "normal",
+          "stage": 5,
+          "hp": 140,
+          "time": 165.50833333334714,
+          "boss": [
+            {
+              "id": "qinguang",
+              "hp": 800,
+              "maxHp": 800,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "boss-6.png",
+          "label": "秦广王 · 战斗",
+          "screen": "playing",
+          "hero": "wukong",
+          "difficulty": "normal",
+          "stage": 5,
+          "hp": 140,
+          "time": 176.2416666666707,
+          "boss": [
+            {
+              "id": "qinguang",
+              "hp": 800,
+              "maxHp": 800,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-07.png",
+          "label": "水下 · 沉渊浅滩",
+          "screen": "playing",
+          "hero": "wukong",
+          "difficulty": "normal",
+          "stage": 6,
+          "hp": 140,
+          "time": 219.60833333329794,
+          "boss": [
+            {
+              "id": "water-mini0",
+              "hp": 124,
+              "maxHp": 124,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-08.png",
+          "label": "水下 · 毒潮暗礁",
+          "screen": "playing",
+          "hero": "wukong",
+          "difficulty": "normal",
+          "stage": 7,
+          "hp": 140,
+          "time": 246.64999999994,
+          "boss": [
+            {
+              "id": "water-mini1",
+              "hp": 124,
+              "maxHp": 124,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-09.png",
+          "label": "水下 · 九首盘渊",
+          "screen": "playing",
+          "hero": "wukong",
+          "difficulty": "normal",
+          "stage": 8,
+          "hp": 140,
+          "time": 269.8083333332523,
+          "boss": [
+            {
+              "id": "ninehead",
+              "hp": 1000,
+              "maxHp": 1000,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "boss-9.png",
+          "label": "九头虫 · 战斗",
+          "screen": "playing",
+          "hero": "wukong",
+          "difficulty": "normal",
+          "stage": 8,
+          "hp": 140,
+          "time": 277.808333333245,
+          "boss": [
+            {
+              "id": "ninehead",
+              "hp": 1000,
+              "maxHp": 1000,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-10.png",
+          "label": "龙宫 · 珊庭守廊",
+          "screen": "playing",
+          "hero": "wukong",
+          "difficulty": "normal",
+          "stage": 9,
+          "hp": 140,
+          "time": 312.67499999987996,
+          "boss": [
+            {
+              "id": "dragon-mini0",
+              "hp": 132,
+              "maxHp": 132,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-11.png",
+          "label": "龙宫 · 潮珠外殿",
+          "screen": "playing",
+          "hero": "wukong",
+          "difficulty": "normal",
+          "stage": 10,
+          "hp": 140,
+          "time": 336.5333333331916,
+          "boss": [
+            {
+              "id": "dragon-mini1",
+              "hp": 132,
+              "maxHp": 132,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-12.png",
+          "label": "龙宫 · 东海龙座",
+          "screen": "playing",
+          "hero": "wukong",
+          "difficulty": "normal",
+          "stage": 11,
+          "hp": 140,
+          "time": 363.0333333331675,
+          "boss": [
+            {
+              "id": "dragonking",
+              "hp": 1250,
+              "maxHp": 1250,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "boss-12.png",
+          "label": "东海龙王 · 战斗",
+          "screen": "playing",
+          "hero": "wukong",
+          "difficulty": "normal",
+          "stage": 11,
+          "hp": 140,
+          "time": 373.14166666649163,
+          "boss": [
+            {
+              "id": "dragonking",
+              "hp": 1250,
+              "maxHp": 1250,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-13.png",
+          "label": "天宫 · 雷诏封阶",
+          "screen": "playing",
+          "hero": "wukong",
+          "difficulty": "normal",
+          "stage": 12,
+          "hp": 92,
+          "time": 535.2416666663443,
+          "boss": [
+            {
+              "id": "heaven-mini0",
+              "hp": 140,
+              "maxHp": 140,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-14.png",
+          "label": "天宫 · 天王戍廊",
+          "screen": "playing",
+          "hero": "wukong",
+          "difficulty": "normal",
+          "stage": 13,
+          "hp": 140,
+          "time": 569.5999999996463,
+          "boss": [
+            {
+              "id": "heaven-mini1",
+              "hp": 140,
+              "maxHp": 140,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-15.png",
+          "label": "天宫 · 七宝镇天",
+          "screen": "playing",
+          "hero": "wukong",
+          "difficulty": "normal",
+          "stage": 14,
+          "hp": 128,
+          "time": 606.6416666662793,
+          "boss": [
+            {
+              "id": "litian",
+              "hp": 1500,
+              "maxHp": 1500,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "boss-15.png",
+          "label": "托塔天王 · 战斗",
+          "screen": "playing",
+          "hero": "wukong",
+          "difficulty": "normal",
+          "stage": 14,
+          "hp": 140,
+          "time": 618.6916666662684,
+          "boss": [
+            {
+              "id": "litian",
+              "hp": 1500,
+              "maxHp": 1500,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "victory.png",
+          "label": "十五关胜利结算",
+          "screen": "won",
+          "hero": "wukong",
+          "difficulty": "normal",
+          "stage": 14,
+          "hp": 140,
+          "time": 666.1083333328919,
+          "boss": [
+            {
+              "id": "litian",
+              "hp": 0,
+              "maxHp": 1500,
+              "phase": "campaign-active"
+            }
+          ]
+        }
+      ],
+      "attempts": [
+        {
+          "run": "wukong-normal-attempt3",
+          "pass": true,
+          "screen": "won",
+          "stage": 14
+        },
+        {
+          "run": "wukong-normal-attempt2",
+          "pass": false,
+          "screen": "dead",
+          "stage": 14
+        },
+        {
+          "run": "wukong-normal-attempt1",
+          "pass": false,
+          "screen": "dead",
+          "stage": 14
+        }
+      ]
+    },
+    {
+      "hero": "wukong",
+      "difficulty": "challenge",
+      "pass": true,
+      "run": "wukong-challenge-attempt2",
+      "rating": "A",
+      "seconds": 688,
+      "hits": 37,
+      "killed": 155,
+      "total": 155,
+      "hp": 140,
+      "stage": 14,
+      "completed": 15,
+      "guardians": 15,
+      "controllerSHA256": "10221314bd2e0e545883d5be2b37477e993fab38a0b56e8bed1abfd4d938d9b3",
+      "finalSaveSHA256": "f54652788a6f6111d21d640309b6d092c034ab27ba64bc3a60de662ec541c6d1",
+      "validation": {
+        "sameRunId": true,
+        "sameHeroAndMode": true,
+        "completedFifteen": true,
+        "fifteenGuardians": true,
+        "browserStages": true,
+        "noRuntimeErrors": true,
+        "liveEntryMatchesCurrent": true,
+        "ratingMatches": true
+      },
+      "frames": [
+        {
+          "file": "hero-choice.png",
+          "label": "选择孙悟空 · 挑战·五界重劫",
+          "screen": "heroes",
+          "hero": "nezha",
+          "difficulty": "normal",
+          "stage": 14,
+          "hp": 124,
+          "time": 426.949999999776,
+          "boss": [
+            {
+              "id": "litian",
+              "hp": 0,
+              "maxHp": 1500,
+              "phase": "recover"
+            }
+          ]
+        },
+        {
+          "file": "stage-01.png",
+          "label": "云上 · 踏云前哨",
+          "screen": "playing",
+          "hero": "wukong",
+          "difficulty": "challenge",
+          "stage": 0,
+          "hp": 100,
+          "time": 0.2333333333333333,
+          "boss": [
+            {
+              "id": "cloud-mini0",
+              "hp": 108,
+              "maxHp": 108,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-02.png",
+          "label": "云上 · 巡风断桥",
+          "screen": "playing",
+          "hero": "wukong",
+          "difficulty": "challenge",
+          "stage": 1,
+          "hp": 120,
+          "time": 33.54999999999874,
+          "boss": [
+            {
+              "id": "cloud-mini1",
+              "hp": 108,
+              "maxHp": 108,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-03.png",
+          "label": "云上 · 斩云天门",
+          "screen": "playing",
+          "hero": "wukong",
+          "difficulty": "challenge",
+          "stage": 2,
+          "hp": 120,
+          "time": 71.79166666666987,
+          "boss": [
+            {
+              "id": "juling",
+              "hp": 600,
+              "maxHp": 600,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "boss-3.png",
+          "label": "巨灵神 · 战斗",
+          "screen": "playing",
+          "hero": "wukong",
+          "difficulty": "challenge",
+          "stage": 2,
+          "hp": 120,
+          "time": 80.30000000000997,
+          "boss": [
+            {
+              "id": "juling",
+              "hp": 600,
+              "maxHp": 600,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-04.png",
+          "label": "地府 · 鬼门引路",
+          "screen": "playing",
+          "hero": "wukong",
+          "difficulty": "challenge",
+          "stage": 3,
+          "hp": 114,
+          "time": 117.45833333337288,
+          "boss": [
+            {
+              "id": "underworld-mini0",
+              "hp": 116,
+              "maxHp": 116,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-05.png",
+          "label": "地府 · 判牒回廊",
+          "screen": "playing",
+          "hero": "wukong",
+          "difficulty": "challenge",
+          "stage": 4,
+          "hp": 140,
+          "time": 144.70833333336606,
+          "boss": [
+            {
+              "id": "underworld-mini1",
+              "hp": 116,
+              "maxHp": 116,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-06.png",
+          "label": "地府 · 一殿问罪",
+          "screen": "playing",
+          "hero": "wukong",
+          "difficulty": "challenge",
+          "stage": 5,
+          "hp": 140,
+          "time": 176.55000000000376,
+          "boss": [
+            {
+              "id": "qinguang",
+              "hp": 800,
+              "maxHp": 800,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "boss-6.png",
+          "label": "秦广王 · 战斗",
+          "screen": "playing",
+          "hero": "wukong",
+          "difficulty": "challenge",
+          "stage": 5,
+          "hp": 140,
+          "time": 187.94166666666007,
+          "boss": [
+            {
+              "id": "qinguang",
+              "hp": 800,
+              "maxHp": 800,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-07.png",
+          "label": "水下 · 沉渊浅滩",
+          "screen": "playing",
+          "hero": "wukong",
+          "difficulty": "challenge",
+          "stage": 6,
+          "hp": 140,
+          "time": 236.50833333328256,
+          "boss": [
+            {
+              "id": "water-mini0",
+              "hp": 124,
+              "maxHp": 124,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-08.png",
+          "label": "水下 · 毒潮暗礁",
+          "screen": "playing",
+          "hero": "wukong",
+          "difficulty": "challenge",
+          "stage": 7,
+          "hp": 140,
+          "time": 264.55833333325705,
+          "boss": [
+            {
+              "id": "water-mini1",
+              "hp": 124,
+              "maxHp": 124,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-09.png",
+          "label": "水下 · 九首盘渊",
+          "screen": "playing",
+          "hero": "wukong",
+          "difficulty": "challenge",
+          "stage": 8,
+          "hp": 140,
+          "time": 286.81666666657014,
+          "boss": [
+            {
+              "id": "ninehead",
+              "hp": 1000,
+              "maxHp": 1000,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "boss-9.png",
+          "label": "九头虫 · 战斗",
+          "screen": "playing",
+          "hero": "wukong",
+          "difficulty": "challenge",
+          "stage": 8,
+          "hp": 140,
+          "time": 297.56666666656037,
+          "boss": [
+            {
+              "id": "ninehead",
+              "hp": 1000,
+              "maxHp": 1000,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-10.png",
+          "label": "龙宫 · 珊庭守廊",
+          "screen": "playing",
+          "hero": "wukong",
+          "difficulty": "challenge",
+          "stage": 9,
+          "hp": 140,
+          "time": 332.79166666652833,
+          "boss": [
+            {
+              "id": "dragon-mini0",
+              "hp": 132,
+              "maxHp": 132,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-11.png",
+          "label": "龙宫 · 潮珠外殿",
+          "screen": "playing",
+          "hero": "wukong",
+          "difficulty": "challenge",
+          "stage": 10,
+          "hp": 140,
+          "time": 358.441666666505,
+          "boss": [
+            {
+              "id": "dragon-mini1",
+              "hp": 132,
+              "maxHp": 132,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-12.png",
+          "label": "龙宫 · 东海龙座",
+          "screen": "playing",
+          "hero": "wukong",
+          "difficulty": "challenge",
+          "stage": 11,
+          "hp": 140,
+          "time": 394.46666666647224,
+          "boss": [
+            {
+              "id": "dragonking",
+              "hp": 1250,
+              "maxHp": 1250,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "boss-12.png",
+          "label": "东海龙王 · 战斗",
+          "screen": "playing",
+          "hero": "wukong",
+          "difficulty": "challenge",
+          "stage": 11,
+          "hp": 140,
+          "time": 414.6083333331206,
+          "boss": [
+            {
+              "id": "dragonking",
+              "hp": 1250,
+              "maxHp": 1250,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-13.png",
+          "label": "天宫 · 雷诏封阶",
+          "screen": "playing",
+          "hero": "wukong",
+          "difficulty": "challenge",
+          "stage": 12,
+          "hp": 140,
+          "time": 538.8083333330077,
+          "boss": [
+            {
+              "id": "heaven-mini0",
+              "hp": 140,
+              "maxHp": 140,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-14.png",
+          "label": "天宫 · 天王戍廊",
+          "screen": "playing",
+          "hero": "wukong",
+          "difficulty": "challenge",
+          "stage": 13,
+          "hp": 120,
+          "time": 595.0999999996232,
+          "boss": [
+            {
+              "id": "heaven-mini1",
+              "hp": 140,
+              "maxHp": 140,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-15.png",
+          "label": "天宫 · 七宝镇天",
+          "screen": "playing",
+          "hero": "wukong",
+          "difficulty": "challenge",
+          "stage": 14,
+          "hp": 140,
+          "time": 632.5916666662557,
+          "boss": [
+            {
+              "id": "litian",
+              "hp": 1500,
+              "maxHp": 1500,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "boss-15.png",
+          "label": "托塔天王 · 战斗",
+          "screen": "playing",
+          "hero": "wukong",
+          "difficulty": "challenge",
+          "stage": 14,
+          "hp": 140,
+          "time": 644.5916666662448,
+          "boss": [
+            {
+              "id": "litian",
+              "hp": 1500,
+              "maxHp": 1500,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "victory.png",
+          "label": "十五关胜利结算",
+          "screen": "won",
+          "hero": "wukong",
+          "difficulty": "challenge",
+          "stage": 14,
+          "hp": 140,
+          "time": 688.7916666662046,
+          "boss": [
+            {
+              "id": "litian",
+              "hp": 0,
+              "maxHp": 1500,
+              "phase": "campaign-windup"
+            }
+          ]
+        }
+      ],
+      "attempts": [
+        {
+          "run": "wukong-challenge-attempt2",
+          "pass": true,
+          "screen": "won",
+          "stage": 14
+        },
+        {
+          "run": "wukong-challenge-attempt1",
+          "pass": false,
+          "screen": "dead",
+          "stage": 14
+        }
+      ]
+    },
+    {
+      "hero": "nezha",
+      "difficulty": "normal",
+      "pass": true,
+      "run": "nezha-normal-attempt1",
+      "rating": "A",
+      "seconds": 452,
+      "hits": 27,
+      "killed": 110,
+      "total": 110,
+      "hp": 52,
+      "stage": 14,
+      "completed": 15,
+      "guardians": 15,
+      "controllerSHA256": "75bbc9ee289aefbf9e744fb2d4bf2d04ac45abce29d3dfb657eb71b58ed2fc0a",
+      "finalSaveSHA256": "da90cf0c12f94d1a5a9b3458a812c28f54940fd268f5f1fb14bccb4cb90de359",
+      "validation": {
+        "sameRunId": true,
+        "sameHeroAndMode": true,
+        "completedFifteen": true,
+        "fifteenGuardians": true,
+        "browserStages": true,
+        "noRuntimeErrors": true,
+        "liveEntryMatchesCurrent": true,
+        "ratingMatches": true
+      },
+      "frames": [
+        {
+          "file": "hero-choice.png",
+          "label": "选择哪吒 · 普通旅程",
+          "screen": "heroes"
+        },
+        {
+          "file": "stage-01.png",
+          "label": "云上 · 踏云前哨",
+          "screen": "playing",
+          "hero": "nezha",
+          "difficulty": "normal",
+          "stage": 0,
+          "hp": 100,
+          "time": 0.175,
+          "boss": [
+            {
+              "id": "cloud-mini0",
+              "hp": 108,
+              "maxHp": 108,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-02.png",
+          "label": "云上 · 巡风断桥",
+          "screen": "playing",
+          "hero": "nezha",
+          "difficulty": "normal",
+          "stage": 1,
+          "hp": 120,
+          "time": 26.083333333332494,
+          "boss": [
+            {
+              "id": "cloud-mini1",
+              "hp": 108,
+              "maxHp": 108,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-03.png",
+          "label": "云上 · 斩云天门",
+          "screen": "playing",
+          "hero": "nezha",
+          "difficulty": "normal",
+          "stage": 2,
+          "hp": 120,
+          "time": 53.733333333330926,
+          "boss": [
+            {
+              "id": "juling",
+              "hp": 600,
+              "maxHp": 600,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "boss-3.png",
+          "label": "巨灵神 · 战斗",
+          "screen": "playing",
+          "hero": "nezha",
+          "difficulty": "normal",
+          "stage": 2,
+          "hp": 120,
+          "time": 62.69166666666375,
+          "boss": [
+            {
+              "id": "juling",
+              "hp": 600,
+              "maxHp": 600,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-04.png",
+          "label": "地府 · 鬼门引路",
+          "screen": "playing",
+          "hero": "nezha",
+          "difficulty": "normal",
+          "stage": 3,
+          "hp": 114,
+          "time": 80.44166666667675,
+          "boss": [
+            {
+              "id": "underworld-mini0",
+              "hp": 116,
+              "maxHp": 116,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-05.png",
+          "label": "地府 · 判牒回廊",
+          "screen": "playing",
+          "hero": "nezha",
+          "difficulty": "normal",
+          "stage": 4,
+          "hp": 140,
+          "time": 101.9500000000272,
+          "boss": [
+            {
+              "id": "underworld-mini1",
+              "hp": 116,
+              "maxHp": 116,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-06.png",
+          "label": "地府 · 一殿问罪",
+          "screen": "playing",
+          "hero": "nezha",
+          "difficulty": "normal",
+          "stage": 5,
+          "hp": 140,
+          "time": 129.20000000004683,
+          "boss": [
+            {
+              "id": "qinguang",
+              "hp": 800,
+              "maxHp": 800,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "boss-6.png",
+          "label": "秦广王 · 战斗",
+          "screen": "playing",
+          "hero": "nezha",
+          "difficulty": "normal",
+          "stage": 5,
+          "hp": 140,
+          "time": 138.3500000000385,
+          "boss": [
+            {
+              "id": "qinguang",
+              "hp": 800,
+              "maxHp": 800,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-07.png",
+          "label": "水下 · 沉渊浅滩",
+          "screen": "playing",
+          "hero": "nezha",
+          "difficulty": "normal",
+          "stage": 6,
+          "hp": 128,
+          "time": 166.45000000001295,
+          "boss": [
+            {
+              "id": "water-mini0",
+              "hp": 124,
+              "maxHp": 124,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-08.png",
+          "label": "水下 · 毒潮暗礁",
+          "screen": "playing",
+          "hero": "nezha",
+          "difficulty": "normal",
+          "stage": 7,
+          "hp": 140,
+          "time": 195.01666666665363,
+          "boss": [
+            {
+              "id": "water-mini1",
+              "hp": 124,
+              "maxHp": 124,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-09.png",
+          "label": "水下 · 九首盘渊",
+          "screen": "playing",
+          "hero": "nezha",
+          "difficulty": "normal",
+          "stage": 8,
+          "hp": 140,
+          "time": 216.76666666663385,
+          "boss": [
+            {
+              "id": "ninehead",
+              "hp": 1000,
+              "maxHp": 1000,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "boss-9.png",
+          "label": "九头虫 · 战斗",
+          "screen": "playing",
+          "hero": "nezha",
+          "difficulty": "normal",
+          "stage": 8,
+          "hp": 140,
+          "time": 225.63333333329246,
+          "boss": [
+            {
+              "id": "ninehead",
+              "hp": 1000,
+              "maxHp": 1000,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-10.png",
+          "label": "龙宫 · 珊庭守廊",
+          "screen": "playing",
+          "hero": "nezha",
+          "difficulty": "normal",
+          "stage": 9,
+          "hp": 140,
+          "time": 248.06666666660539,
+          "boss": [
+            {
+              "id": "dragon-mini0",
+              "hp": 132,
+              "maxHp": 132,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-11.png",
+          "label": "龙宫 · 潮珠外殿",
+          "screen": "playing",
+          "hero": "nezha",
+          "difficulty": "normal",
+          "stage": 10,
+          "hp": 140,
+          "time": 270.77499999991807,
+          "boss": [
+            {
+              "id": "dragon-mini1",
+              "hp": 132,
+              "maxHp": 132,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-12.png",
+          "label": "龙宫 · 东海龙座",
+          "screen": "playing",
+          "hero": "nezha",
+          "difficulty": "normal",
+          "stage": 11,
+          "hp": 140,
+          "time": 297.53333333322706,
+          "boss": [
+            {
+              "id": "dragonking",
+              "hp": 1250,
+              "maxHp": 1250,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "boss-12.png",
+          "label": "东海龙王 · 战斗",
+          "screen": "playing",
+          "hero": "nezha",
+          "difficulty": "normal",
+          "stage": 11,
+          "hp": 140,
+          "time": 307.53333333321797,
+          "boss": [
+            {
+              "id": "dragonking",
+              "hp": 1250,
+              "maxHp": 1250,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-13.png",
+          "label": "天宫 · 雷诏封阶",
+          "screen": "playing",
+          "hero": "nezha",
+          "difficulty": "normal",
+          "stage": 12,
+          "hp": 140,
+          "time": 354.22499999984217,
+          "boss": [
+            {
+              "id": "heaven-mini0",
+              "hp": 140,
+              "maxHp": 140,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-14.png",
+          "label": "天宫 · 天王戍廊",
+          "screen": "playing",
+          "hero": "nezha",
+          "difficulty": "normal",
+          "stage": 13,
+          "hp": 140,
+          "time": 383.17499999981584,
+          "boss": [
+            {
+              "id": "heaven-mini1",
+              "hp": 140,
+              "maxHp": 140,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-15.png",
+          "label": "天宫 · 七宝镇天",
+          "screen": "playing",
+          "hero": "nezha",
+          "difficulty": "normal",
+          "stage": 14,
+          "hp": 140,
+          "time": 409.29166666645875,
+          "boss": [
+            {
+              "id": "litian",
+              "hp": 1500,
+              "maxHp": 1500,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "boss-15.png",
+          "label": "托塔天王 · 战斗",
+          "screen": "playing",
+          "hero": "nezha",
+          "difficulty": "normal",
+          "stage": 14,
+          "hp": 140,
+          "time": 417.5333333331179,
+          "boss": [
+            {
+              "id": "litian",
+              "hp": 1500,
+              "maxHp": 1500,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "victory.png",
+          "label": "十五关胜利结算",
+          "screen": "won",
+          "hero": "nezha",
+          "difficulty": "normal",
+          "stage": 14,
+          "hp": 52,
+          "time": 452.84999999975247,
+          "boss": [
+            {
+              "id": "litian",
+              "hp": 0,
+              "maxHp": 1500,
+              "phase": "campaign-windup"
+            }
+          ]
+        }
+      ],
+      "attempts": [
+        {
+          "run": "nezha-normal-attempt1",
+          "pass": true,
+          "screen": "won",
+          "stage": 14
+        }
+      ]
+    },
+    {
+      "hero": "nezha",
+      "difficulty": "challenge",
+      "pass": true,
+      "run": "nezha-challenge-attempt3",
+      "rating": "A",
+      "seconds": 445,
+      "hits": 29,
+      "killed": 155,
+      "total": 155,
+      "hp": 140,
+      "stage": 14,
+      "completed": 15,
+      "guardians": 15,
+      "controllerSHA256": "b56ad9600dbcffada1ee49d791bed1694fdef045504f71ac6152af7182dcb3ef",
+      "finalSaveSHA256": "c529c74f30c2b724fc160160d353dbb80698653e920670c303f420081c9f05f3",
+      "validation": {
+        "sameRunId": true,
+        "sameHeroAndMode": true,
+        "completedFifteen": true,
+        "fifteenGuardians": true,
+        "browserStages": true,
+        "noRuntimeErrors": true,
+        "liveEntryMatchesCurrent": true,
+        "ratingMatches": true
+      },
+      "frames": [
+        {
+          "file": "hero-choice.png",
+          "label": "选择哪吒 · 挑战·五界重劫",
+          "screen": "heroes",
+          "hero": "nezha",
+          "difficulty": "normal",
+          "stage": 14,
+          "hp": 124,
+          "time": 426.949999999776,
+          "boss": [
+            {
+              "id": "litian",
+              "hp": 0,
+              "maxHp": 1500,
+              "phase": "recover"
+            }
+          ]
+        },
+        {
+          "file": "stage-01.png",
+          "label": "云上 · 踏云前哨",
+          "screen": "playing",
+          "hero": "nezha",
+          "difficulty": "challenge",
+          "stage": 0,
+          "hp": 100,
+          "time": 0.24999999999999997,
+          "boss": [
+            {
+              "id": "cloud-mini0",
+              "hp": 108,
+              "maxHp": 108,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-02.png",
+          "label": "云上 · 巡风断桥",
+          "screen": "playing",
+          "hero": "nezha",
+          "difficulty": "challenge",
+          "stage": 1,
+          "hp": 120,
+          "time": 17.99999999999962,
+          "boss": [
+            {
+              "id": "cloud-mini1",
+              "hp": 108,
+              "maxHp": 108,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-03.png",
+          "label": "云上 · 斩云天门",
+          "screen": "playing",
+          "hero": "nezha",
+          "difficulty": "challenge",
+          "stage": 2,
+          "hp": 120,
+          "time": 43.54166666666484,
+          "boss": [
+            {
+              "id": "juling",
+              "hp": 600,
+              "maxHp": 600,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "boss-3.png",
+          "label": "巨灵神 · 战斗",
+          "screen": "playing",
+          "hero": "nezha",
+          "difficulty": "challenge",
+          "stage": 2,
+          "hp": 111,
+          "time": 62.13333333333045,
+          "boss": [
+            {
+              "id": "juling",
+              "hp": 600,
+              "maxHp": 600,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-04.png",
+          "label": "地府 · 鬼门引路",
+          "screen": "playing",
+          "hero": "nezha",
+          "difficulty": "challenge",
+          "stage": 3,
+          "hp": 99,
+          "time": 82.44166666667834,
+          "boss": [
+            {
+              "id": "underworld-mini0",
+              "hp": 116,
+              "maxHp": 116,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-05.png",
+          "label": "地府 · 判牒回廊",
+          "screen": "playing",
+          "hero": "nezha",
+          "difficulty": "challenge",
+          "stage": 4,
+          "hp": 115,
+          "time": 109.65000000003333,
+          "boss": [
+            {
+              "id": "underworld-mini1",
+              "hp": 116,
+              "maxHp": 116,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-06.png",
+          "label": "地府 · 一殿问罪",
+          "screen": "playing",
+          "hero": "nezha",
+          "difficulty": "challenge",
+          "stage": 5,
+          "hp": 120,
+          "time": 135.36666666670789,
+          "boss": [
+            {
+              "id": "qinguang",
+              "hp": 800,
+              "maxHp": 800,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "boss-6.png",
+          "label": "秦广王 · 战斗",
+          "screen": "playing",
+          "hero": "nezha",
+          "difficulty": "challenge",
+          "stage": 5,
+          "hp": 120,
+          "time": 144.70833333336606,
+          "boss": [
+            {
+              "id": "qinguang",
+              "hp": 800,
+              "maxHp": 800,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-07.png",
+          "label": "水下 · 沉渊浅滩",
+          "screen": "playing",
+          "hero": "nezha",
+          "difficulty": "challenge",
+          "stage": 6,
+          "hp": 140,
+          "time": 170.3166666666761,
+          "boss": [
+            {
+              "id": "water-mini0",
+              "hp": 124,
+              "maxHp": 124,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-08.png",
+          "label": "水下 · 毒潮暗礁",
+          "screen": "playing",
+          "hero": "nezha",
+          "difficulty": "challenge",
+          "stage": 7,
+          "hp": 140,
+          "time": 193.7749999999881,
+          "boss": [
+            {
+              "id": "water-mini1",
+              "hp": 124,
+              "maxHp": 124,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-09.png",
+          "label": "水下 · 九首盘渊",
+          "screen": "playing",
+          "hero": "nezha",
+          "difficulty": "challenge",
+          "stage": 8,
+          "hp": 140,
+          "time": 218.74166666663206,
+          "boss": [
+            {
+              "id": "ninehead",
+              "hp": 1000,
+              "maxHp": 1000,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "boss-9.png",
+          "label": "九头虫 · 战斗",
+          "screen": "playing",
+          "hero": "nezha",
+          "difficulty": "challenge",
+          "stage": 8,
+          "hp": 140,
+          "time": 228.79166666662292,
+          "boss": [
+            {
+              "id": "ninehead",
+              "hp": 1000,
+              "maxHp": 1000,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-10.png",
+          "label": "龙宫 · 珊庭守廊",
+          "screen": "playing",
+          "hero": "nezha",
+          "difficulty": "challenge",
+          "stage": 9,
+          "hp": 140,
+          "time": 251.19166666660254,
+          "boss": [
+            {
+              "id": "dragon-mini0",
+              "hp": 132,
+              "maxHp": 132,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-11.png",
+          "label": "龙宫 · 潮珠外殿",
+          "screen": "playing",
+          "hero": "nezha",
+          "difficulty": "challenge",
+          "stage": 10,
+          "hp": 140,
+          "time": 275.4833333332471,
+          "boss": [
+            {
+              "id": "dragon-mini1",
+              "hp": 132,
+              "maxHp": 132,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-12.png",
+          "label": "龙宫 · 东海龙座",
+          "screen": "playing",
+          "hero": "nezha",
+          "difficulty": "challenge",
+          "stage": 11,
+          "hp": 140,
+          "time": 307.891666666551,
+          "boss": [
+            {
+              "id": "dragonking",
+              "hp": 1250,
+              "maxHp": 1250,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "boss-12.png",
+          "label": "东海龙王 · 战斗",
+          "screen": "playing",
+          "hero": "nezha",
+          "difficulty": "challenge",
+          "stage": 11,
+          "hp": 140,
+          "time": 323.4916666665368,
+          "boss": [
+            {
+              "id": "dragonking",
+              "hp": 1250,
+              "maxHp": 1250,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-13.png",
+          "label": "天宫 · 雷诏封阶",
+          "screen": "playing",
+          "hero": "nezha",
+          "difficulty": "challenge",
+          "stage": 12,
+          "hp": 140,
+          "time": 353.99166666650905,
+          "boss": [
+            {
+              "id": "heaven-mini0",
+              "hp": 140,
+              "maxHp": 140,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-14.png",
+          "label": "天宫 · 天王戍廊",
+          "screen": "playing",
+          "hero": "nezha",
+          "difficulty": "challenge",
+          "stage": 13,
+          "hp": 140,
+          "time": 375.74166666648927,
+          "boss": [
+            {
+              "id": "heaven-mini1",
+              "hp": 140,
+              "maxHp": 140,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-15.png",
+          "label": "天宫 · 七宝镇天",
+          "screen": "playing",
+          "hero": "nezha",
+          "difficulty": "challenge",
+          "stage": 14,
+          "hp": 134,
+          "time": 397.3916666664696,
+          "boss": [
+            {
+              "id": "litian",
+              "hp": 1500,
+              "maxHp": 1500,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "boss-15.png",
+          "label": "托塔天王 · 战斗",
+          "screen": "playing",
+          "hero": "nezha",
+          "difficulty": "challenge",
+          "stage": 14,
+          "hp": 140,
+          "time": 407.93333333312665,
+          "boss": [
+            {
+              "id": "litian",
+              "hp": 1500,
+              "maxHp": 1500,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "victory.png",
+          "label": "十五关胜利结算",
+          "screen": "won",
+          "hero": "nezha",
+          "difficulty": "challenge",
+          "stage": 14,
+          "hp": 140,
+          "time": 445.14166666642615,
+          "boss": [
+            {
+              "id": "litian",
+              "hp": 0,
+              "maxHp": 1500,
+              "phase": "campaign-active"
+            }
+          ]
+        }
+      ],
+      "attempts": [
+        {
+          "run": "nezha-challenge-attempt3",
+          "pass": true,
+          "screen": "won",
+          "stage": 14
+        },
+        {
+          "run": "nezha-challenge-attempt2",
+          "pass": false,
+          "screen": "playing",
+          "stage": 0,
+          "failure": "clock.pauseAt: Error: Cannot fast-forward to the past"
+        },
+        {
+          "run": "nezha-challenge-attempt1",
+          "pass": false,
+          "screen": "dead",
+          "stage": 14
+        }
+      ]
+    },
+    {
+      "hero": "erlang",
+      "difficulty": "normal",
+      "pass": true,
+      "run": "erlang-normal-attempt3",
+      "rating": "A",
+      "seconds": 526,
+      "hits": 23,
+      "killed": 110,
+      "total": 110,
+      "hp": 106,
+      "stage": 14,
+      "completed": 15,
+      "guardians": 15,
+      "controllerSHA256": "10221314bd2e0e545883d5be2b37477e993fab38a0b56e8bed1abfd4d938d9b3",
+      "finalSaveSHA256": "0ac93c32cde3194d6b21eb0fc75734419133a9a739a3cc4f430a3b1cc3d1ad05",
+      "validation": {
+        "sameRunId": true,
+        "sameHeroAndMode": true,
+        "completedFifteen": true,
+        "fifteenGuardians": true,
+        "browserStages": true,
+        "noRuntimeErrors": true,
+        "liveEntryMatchesCurrent": true,
+        "ratingMatches": true
+      },
+      "frames": [
+        {
+          "file": "hero-choice.png",
+          "label": "选择杨戬 · 普通旅程",
+          "screen": "heroes"
+        },
+        {
+          "file": "stage-01.png",
+          "label": "云上 · 踏云前哨",
+          "screen": "playing",
+          "hero": "erlang",
+          "difficulty": "normal",
+          "stage": 0,
+          "hp": 100,
+          "time": 0.275,
+          "boss": [
+            {
+              "id": "cloud-mini0",
+              "hp": 108,
+              "maxHp": 108,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-02.png",
+          "label": "云上 · 巡风断桥",
+          "screen": "playing",
+          "hero": "erlang",
+          "difficulty": "normal",
+          "stage": 1,
+          "hp": 120,
+          "time": 21.741666666666074,
+          "boss": [
+            {
+              "id": "cloud-mini1",
+              "hp": 108,
+              "maxHp": 108,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-03.png",
+          "label": "云上 · 斩云天门",
+          "screen": "playing",
+          "hero": "erlang",
+          "difficulty": "normal",
+          "stage": 2,
+          "hp": 120,
+          "time": 54.29166666666423,
+          "boss": [
+            {
+              "id": "juling",
+              "hp": 600,
+              "maxHp": 600,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "boss-3.png",
+          "label": "巨灵神 · 战斗",
+          "screen": "playing",
+          "hero": "erlang",
+          "difficulty": "normal",
+          "stage": 2,
+          "hp": 102,
+          "time": 78.29166666667504,
+          "boss": [
+            {
+              "id": "juling",
+              "hp": 600,
+              "maxHp": 600,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-04.png",
+          "label": "地府 · 鬼门引路",
+          "screen": "playing",
+          "hero": "erlang",
+          "difficulty": "normal",
+          "stage": 3,
+          "hp": 120,
+          "time": 95.64166666668885,
+          "boss": [
+            {
+              "id": "underworld-mini0",
+              "hp": 116,
+              "maxHp": 116,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-05.png",
+          "label": "地府 · 判牒回廊",
+          "screen": "playing",
+          "hero": "erlang",
+          "difficulty": "normal",
+          "stage": 4,
+          "hp": 120,
+          "time": 121.90000000004308,
+          "boss": [
+            {
+              "id": "underworld-mini1",
+              "hp": 116,
+              "maxHp": 116,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-06.png",
+          "label": "地府 · 一殿问罪",
+          "screen": "playing",
+          "hero": "erlang",
+          "difficulty": "normal",
+          "stage": 5,
+          "hp": 120,
+          "time": 147.10833333336387,
+          "boss": [
+            {
+              "id": "qinguang",
+              "hp": 800,
+              "maxHp": 800,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "boss-6.png",
+          "label": "秦广王 · 战斗",
+          "screen": "playing",
+          "hero": "erlang",
+          "difficulty": "normal",
+          "stage": 5,
+          "hp": 120,
+          "time": 157.6666666666876,
+          "boss": [
+            {
+              "id": "qinguang",
+              "hp": 800,
+              "maxHp": 800,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-07.png",
+          "label": "水下 · 沉渊浅滩",
+          "screen": "playing",
+          "hero": "erlang",
+          "difficulty": "normal",
+          "stage": 6,
+          "hp": 140,
+          "time": 185.9166666666619,
+          "boss": [
+            {
+              "id": "water-mini0",
+              "hp": 124,
+              "maxHp": 124,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-08.png",
+          "label": "水下 · 毒潮暗礁",
+          "screen": "playing",
+          "hero": "erlang",
+          "difficulty": "normal",
+          "stage": 7,
+          "hp": 140,
+          "time": 209.3749999999739,
+          "boss": [
+            {
+              "id": "water-mini1",
+              "hp": 124,
+              "maxHp": 124,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-09.png",
+          "label": "水下 · 九首盘渊",
+          "screen": "playing",
+          "hero": "erlang",
+          "difficulty": "normal",
+          "stage": 8,
+          "hp": 140,
+          "time": 231.12499999995413,
+          "boss": [
+            {
+              "id": "ninehead",
+              "hp": 1000,
+              "maxHp": 1000,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "boss-9.png",
+          "label": "九头虫 · 战斗",
+          "screen": "playing",
+          "hero": "erlang",
+          "difficulty": "normal",
+          "stage": 8,
+          "hp": 140,
+          "time": 243.9249999999425,
+          "boss": [
+            {
+              "id": "ninehead",
+              "hp": 1000,
+              "maxHp": 1000,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-10.png",
+          "label": "龙宫 · 珊庭守廊",
+          "screen": "playing",
+          "hero": "erlang",
+          "difficulty": "normal",
+          "stage": 9,
+          "hp": 140,
+          "time": 272.6333333332497,
+          "boss": [
+            {
+              "id": "dragon-mini0",
+              "hp": 132,
+              "maxHp": 132,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-11.png",
+          "label": "龙宫 · 潮珠外殿",
+          "screen": "playing",
+          "hero": "erlang",
+          "difficulty": "normal",
+          "stage": 10,
+          "hp": 140,
+          "time": 299.3916666665587,
+          "boss": [
+            {
+              "id": "dragon-mini1",
+              "hp": 132,
+              "maxHp": 132,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-12.png",
+          "label": "龙宫 · 东海龙座",
+          "screen": "playing",
+          "hero": "erlang",
+          "difficulty": "normal",
+          "stage": 11,
+          "hp": 140,
+          "time": 325.09166666653533,
+          "boss": [
+            {
+              "id": "dragonking",
+              "hp": 1250,
+              "maxHp": 1250,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "boss-12.png",
+          "label": "东海龙王 · 战斗",
+          "screen": "playing",
+          "hero": "erlang",
+          "difficulty": "normal",
+          "stage": 11,
+          "hp": 140,
+          "time": 334.3416666665269,
+          "boss": [
+            {
+              "id": "dragonking",
+              "hp": 1250,
+              "maxHp": 1250,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-13.png",
+          "label": "天宫 · 雷诏封阶",
+          "screen": "playing",
+          "hero": "erlang",
+          "difficulty": "normal",
+          "stage": 12,
+          "hp": 140,
+          "time": 411.65833333312327,
+          "boss": [
+            {
+              "id": "heaven-mini0",
+              "hp": 140,
+              "maxHp": 140,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-14.png",
+          "label": "天宫 · 天王戍廊",
+          "screen": "playing",
+          "hero": "erlang",
+          "difficulty": "normal",
+          "stage": 13,
+          "hp": 140,
+          "time": 438.0166666664326,
+          "boss": [
+            {
+              "id": "heaven-mini1",
+              "hp": 140,
+              "maxHp": 140,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-15.png",
+          "label": "天宫 · 七宝镇天",
+          "screen": "playing",
+          "hero": "erlang",
+          "difficulty": "normal",
+          "stage": 14,
+          "hp": 140,
+          "time": 461.22499999974485,
+          "boss": [
+            {
+              "id": "litian",
+              "hp": 1500,
+              "maxHp": 1500,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "boss-15.png",
+          "label": "托塔天王 · 战斗",
+          "screen": "playing",
+          "hero": "erlang",
+          "difficulty": "normal",
+          "stage": 14,
+          "hp": 140,
+          "time": 469.9166666664036,
+          "boss": [
+            {
+              "id": "litian",
+              "hp": 1500,
+              "maxHp": 1500,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "victory.png",
+          "label": "十五关胜利结算",
+          "screen": "won",
+          "hero": "erlang",
+          "difficulty": "normal",
+          "stage": 14,
+          "hp": 106,
+          "time": 526.5249999996855,
+          "boss": [
+            {
+              "id": "litian",
+              "hp": 0,
+              "maxHp": 1500,
+              "phase": "idle"
+            }
+          ]
+        }
+      ],
+      "attempts": [
+        {
+          "run": "erlang-normal-attempt3",
+          "pass": true,
+          "screen": "won",
+          "stage": 14
+        },
+        {
+          "run": "erlang-normal-attempt2",
+          "pass": false,
+          "screen": "dead",
+          "stage": 14
+        },
+        {
+          "run": "erlang-normal-attempt1",
+          "pass": false,
+          "screen": "dead",
+          "stage": 14
+        }
+      ]
+    },
+    {
+      "hero": "erlang",
+      "difficulty": "challenge",
+      "pass": true,
+      "run": "erlang-challenge-attempt1",
+      "rating": "A",
+      "seconds": 616,
+      "hits": 38,
+      "killed": 155,
+      "total": 155,
+      "hp": 132,
+      "stage": 14,
+      "completed": 15,
+      "guardians": 15,
+      "controllerSHA256": "b56ad9600dbcffada1ee49d791bed1694fdef045504f71ac6152af7182dcb3ef",
+      "finalSaveSHA256": "d569c2cabd8bf1073df6cec62df9ceec9b448aca00b456b1e15d3840f8c4a93c",
+      "validation": {
+        "sameRunId": true,
+        "sameHeroAndMode": true,
+        "completedFifteen": true,
+        "fifteenGuardians": true,
+        "browserStages": true,
+        "noRuntimeErrors": true,
+        "liveEntryMatchesCurrent": true,
+        "ratingMatches": true
+      },
+      "frames": [
+        {
+          "file": "hero-choice.png",
+          "label": "选择杨戬 · 挑战·五界重劫",
+          "screen": "heroes",
+          "hero": "nezha",
+          "difficulty": "normal",
+          "stage": 14,
+          "hp": 124,
+          "time": 426.949999999776,
+          "boss": [
+            {
+              "id": "litian",
+              "hp": 0,
+              "maxHp": 1500,
+              "phase": "recover"
+            }
+          ]
+        },
+        {
+          "file": "stage-01.png",
+          "label": "云上 · 踏云前哨",
+          "screen": "playing",
+          "hero": "erlang",
+          "difficulty": "challenge",
+          "stage": 0,
+          "hp": 100,
+          "time": 0.24166666666666664,
+          "boss": [
+            {
+              "id": "cloud-mini0",
+              "hp": 108,
+              "maxHp": 108,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-02.png",
+          "label": "云上 · 巡风断桥",
+          "screen": "playing",
+          "hero": "erlang",
+          "difficulty": "challenge",
+          "stage": 1,
+          "hp": 120,
+          "time": 25.449999999999196,
+          "boss": [
+            {
+              "id": "cloud-mini1",
+              "hp": 108,
+              "maxHp": 108,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-03.png",
+          "label": "云上 · 斩云天门",
+          "screen": "playing",
+          "hero": "erlang",
+          "difficulty": "challenge",
+          "stage": 2,
+          "hp": 120,
+          "time": 75.20000000000591,
+          "boss": [
+            {
+              "id": "juling",
+              "hp": 600,
+              "maxHp": 600,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "boss-3.png",
+          "label": "巨灵神 · 战斗",
+          "screen": "playing",
+          "hero": "erlang",
+          "difficulty": "challenge",
+          "stage": 2,
+          "hp": 108,
+          "time": 91.60000000001897,
+          "boss": [
+            {
+              "id": "juling",
+              "hp": 600,
+              "maxHp": 600,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-04.png",
+          "label": "地府 · 鬼门引路",
+          "screen": "playing",
+          "hero": "erlang",
+          "difficulty": "challenge",
+          "stage": 3,
+          "hp": 120,
+          "time": 117.45833333337288,
+          "boss": [
+            {
+              "id": "underworld-mini0",
+              "hp": 116,
+              "maxHp": 116,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-05.png",
+          "label": "地府 · 判牒回廊",
+          "screen": "playing",
+          "hero": "erlang",
+          "difficulty": "challenge",
+          "stage": 4,
+          "hp": 120,
+          "time": 148.30833333336278,
+          "boss": [
+            {
+              "id": "underworld-mini1",
+              "hp": 116,
+              "maxHp": 116,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-06.png",
+          "label": "地府 · 一殿问罪",
+          "screen": "playing",
+          "hero": "erlang",
+          "difficulty": "challenge",
+          "stage": 5,
+          "hp": 120,
+          "time": 173.60833333333977,
+          "boss": [
+            {
+              "id": "qinguang",
+              "hp": 800,
+              "maxHp": 800,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "boss-6.png",
+          "label": "秦广王 · 战斗",
+          "screen": "playing",
+          "hero": "erlang",
+          "difficulty": "challenge",
+          "stage": 5,
+          "hp": 120,
+          "time": 186.199999999995,
+          "boss": [
+            {
+              "id": "qinguang",
+              "hp": 800,
+              "maxHp": 800,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-07.png",
+          "label": "水下 · 沉渊浅滩",
+          "screen": "playing",
+          "hero": "erlang",
+          "difficulty": "challenge",
+          "stage": 6,
+          "hp": 134,
+          "time": 225.8083333332923,
+          "boss": [
+            {
+              "id": "water-mini0",
+              "hp": 124,
+              "maxHp": 124,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-08.png",
+          "label": "水下 · 毒潮暗礁",
+          "screen": "playing",
+          "hero": "erlang",
+          "difficulty": "challenge",
+          "stage": 7,
+          "hp": 140,
+          "time": 258.01666666659634,
+          "boss": [
+            {
+              "id": "water-mini1",
+              "hp": 124,
+              "maxHp": 124,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-09.png",
+          "label": "水下 · 九首盘渊",
+          "screen": "playing",
+          "hero": "erlang",
+          "difficulty": "challenge",
+          "stage": 8,
+          "hp": 140,
+          "time": 284.16666666657255,
+          "boss": [
+            {
+              "id": "ninehead",
+              "hp": 1000,
+              "maxHp": 1000,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "boss-9.png",
+          "label": "九头虫 · 战斗",
+          "screen": "playing",
+          "hero": "erlang",
+          "difficulty": "challenge",
+          "stage": 8,
+          "hp": 128,
+          "time": 298.6166666665594,
+          "boss": [
+            {
+              "id": "ninehead",
+              "hp": 1000,
+              "maxHp": 1000,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-10.png",
+          "label": "龙宫 · 珊庭守廊",
+          "screen": "playing",
+          "hero": "erlang",
+          "difficulty": "challenge",
+          "stage": 9,
+          "hp": 130,
+          "time": 332.02499999986236,
+          "boss": [
+            {
+              "id": "dragon-mini0",
+              "hp": 132,
+              "maxHp": 132,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-11.png",
+          "label": "龙宫 · 潮珠外殿",
+          "screen": "playing",
+          "hero": "erlang",
+          "difficulty": "challenge",
+          "stage": 10,
+          "hp": 140,
+          "time": 358.058333333172,
+          "boss": [
+            {
+              "id": "dragon-mini1",
+              "hp": 132,
+              "maxHp": 132,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-12.png",
+          "label": "龙宫 · 东海龙座",
+          "screen": "playing",
+          "hero": "erlang",
+          "difficulty": "challenge",
+          "stage": 11,
+          "hp": 140,
+          "time": 388.3999999998111,
+          "boss": [
+            {
+              "id": "dragonking",
+              "hp": 1250,
+              "maxHp": 1250,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "boss-12.png",
+          "label": "东海龙王 · 战斗",
+          "screen": "playing",
+          "hero": "erlang",
+          "difficulty": "challenge",
+          "stage": 11,
+          "hp": 140,
+          "time": 404.1916666664634,
+          "boss": [
+            {
+              "id": "dragonking",
+              "hp": 1250,
+              "maxHp": 1250,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-13.png",
+          "label": "天宫 · 雷诏封阶",
+          "screen": "playing",
+          "hero": "erlang",
+          "difficulty": "challenge",
+          "stage": 12,
+          "hp": 128,
+          "time": 474.9999999997323,
+          "boss": [
+            {
+              "id": "heaven-mini0",
+              "hp": 140,
+              "maxHp": 140,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-14.png",
+          "label": "天宫 · 天王戍廊",
+          "screen": "playing",
+          "hero": "erlang",
+          "difficulty": "challenge",
+          "stage": 13,
+          "hp": 140,
+          "time": 504.6249999997054,
+          "boss": [
+            {
+              "id": "heaven-mini1",
+              "hp": 140,
+              "maxHp": 140,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "stage-15.png",
+          "label": "天宫 · 七宝镇天",
+          "screen": "playing",
+          "hero": "erlang",
+          "difficulty": "challenge",
+          "stage": 14,
+          "hp": 140,
+          "time": 546.3249999996675,
+          "boss": [
+            {
+              "id": "litian",
+              "hp": 1500,
+              "maxHp": 1500,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "boss-15.png",
+          "label": "托塔天王 · 战斗",
+          "screen": "playing",
+          "hero": "erlang",
+          "difficulty": "challenge",
+          "stage": 14,
+          "hp": 140,
+          "time": 565.7833333329831,
+          "boss": [
+            {
+              "id": "litian",
+              "hp": 1500,
+              "maxHp": 1500,
+              "phase": "idle"
+            }
+          ]
+        },
+        {
+          "file": "victory.png",
+          "label": "十五关胜利结算",
+          "screen": "won",
+          "hero": "erlang",
+          "difficulty": "challenge",
+          "stage": 14,
+          "hp": 132,
+          "time": 616.0333333329374,
+          "boss": [
+            {
+              "id": "litian",
+              "hp": 0,
+              "maxHp": 1500,
+              "phase": "recover"
+            }
+          ]
+        }
+      ],
+      "attempts": [
+        {
+          "run": "erlang-challenge-attempt1",
+          "pass": true,
+          "screen": "won",
+          "stage": 14
+        }
+      ]
+    }
+  ],
+  "method": "Six separate stage-zero browser journeys, real keyboard and mouse, production Vite output. Read-only snapshots guide automated inputs; local independent-state simulation assists sword/fire evasion. Playwright virtual clock advances normal RAF and fixed simulation steps. Earlier failures retained. Historical normal-S save unlocks challenge only; each challenge restarts from stage zero. No gameplay changes or jump-ahead imports."
+}

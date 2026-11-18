@@ -1,23 +1,3 @@
-const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
-require('./pack-art.cjs');
-const root=path.resolve(__dirname,'..'),out=path.join(root,'release');fs.mkdirSync(out,{recursive:true});
-const safeDOM=fs.readFileSync(path.join(root,'src/safe-dom.js'),'utf8');
-const safeBlock='<!-- kong-safe-dom:start -->\n<script>\n'+safeDOM.replace(/<\/script/gi,'<\\/script')+'\n</script>\n<!-- kong-safe-dom:end -->';
-for(const file of ['release/legacy-v1.html','evidence/readability/baseline.html']){
-  const target=path.join(root,file),before=fs.readFileSync(target,'utf8');
-  const after=before.includes('<!-- kong-safe-dom:start -->')
-    ? before.replace(/<!-- kong-safe-dom:start -->[\s\S]*?<!-- kong-safe-dom:end -->/,()=>safeBlock)
-    : before.replace('<head>','<head>\n'+safeBlock);
-  if(after!==before)fs.writeFileSync(target,after);
-}
-let html=fs.readFileSync(path.join(root,'index.html'),'utf8');
-html=html.replace('<head>','<head><meta name="kong-package" content="standalone">');
-html=html.replace(/<link rel="stylesheet" href="(src\/[^"]+)">/g,(_,file)=>'<style>'+fs.readFileSync(path.join(root,file),'utf8')+'</style>');
-html=html.replace(/<script src="(src\/[^" ]+)"><\/script>/g,(_,file)=>'<script>\n'+fs.readFileSync(path.join(root,file),'utf8').replace(/<\/script/gi,'<\\/script')+'\n</script>');
-if(/(?:src|href)="(?:https?:|src\/)/.test(html))throw new Error('Release still has an external dependency');
-const temp=path.join(out,'.index-build-'+process.pid+'.html');fs.writeFileSync(temp,html);fs.renameSync(temp,path.join(out,'index.html'));
-fs.copyFileSync(path.join(root,'README.md'),path.join(out,'README.md'));
-for(const folder of ['art-v1','readability','complete-v2']){fs.mkdirSync(path.join(out,'docs',folder),{recursive:true});for(const file of fs.readdirSync(path.join(root,'docs',folder)).filter(x=>x.endsWith('.md')))fs.copyFileSync(path.join(root,'docs',folder,file),path.join(out,'docs',folder,file));}
-if(!fs.existsSync(path.join(out,'legacy-v1.html')))throw new Error('Preserved v1.2 entry is missing');
-fs.writeFileSync(path.join(out,'manifest.json'),JSON.stringify({version:JSON.parse(fs.readFileSync(path.join(root,'package.json'),'utf8')).version,entry:'index.html',sha256:crypto.createHash('sha256').update(html).digest('hex'),bytes:Buffer.byteLength(html),runtimeDependencies:[],legacyEntry:'legacy-v1.html'},null,2));
-console.log('Standalone release:',Buffer.byteLength(html),'bytes');
+// Compatibility entry for offline callers.
+require('./prepare-assets.cjs');
+(async()=>{const {build}=await import('vite');await build({mode:'offline'});})().catch(error=>{console.error(error);process.exitCode=1;});

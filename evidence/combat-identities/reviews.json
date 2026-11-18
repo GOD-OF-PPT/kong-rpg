@@ -1,0 +1,104 @@
+{
+  "wukong-main1": {
+    "status": "已修复",
+    "notes": [
+      "棍身与腰部横扫对应；亮轨与接触范围共用状态，收势回到持棍。"
+    ]
+  },
+  "wukong-main3": {
+    "status": "已修复",
+    "notes": [
+      "举棍、下砸、低位跟随和回收分开；脚底没有随判定横滑。"
+    ]
+  },
+  "nezha-main1": {
+    "status": "已修复",
+    "notes": [
+      "枪尖直刺与狭长判定对应，使用短方向火星而非通用圆环。"
+    ]
+  },
+  "nezha-main2": {
+    "status": "已修复",
+    "notes": [
+      "低位准备后向上挑枪，支持较高目标；仍需观察更长连播的身体比例。"
+    ]
+  },
+  "erlang-main2": {
+    "status": "已修复",
+    "notes": [
+      "勾挑的低起手与上方跟随区别于直刺。"
+    ]
+  },
+  "erlang-main3": {
+    "status": "已修复",
+    "notes": [
+      "刀锋下落与斜切命中表现；保留较长承诺。"
+    ]
+  },
+  "enemy-axe-cleave": {
+    "status": "已修复",
+    "notes": [
+      "抬斧、下斩与低位收斧分开，方向锁定后不翻身。"
+    ]
+  },
+  "enemy-axe-rush": {
+    "status": "已修复",
+    "notes": [
+      "蓄肩、冲身、落地撑住三个姿势；移动身体是危险主体。"
+    ]
+  },
+  "enemy-judge-chain": {
+    "status": "已修复",
+    "notes": [
+      "先收袖再伸掌施锁，链柱保持明确边界。"
+    ]
+  },
+  "enemy-judge-echo": {
+    "status": "已修复",
+    "notes": [
+      "首判后重新预警和锁点，六张运行帧记录复判与收笔。"
+    ]
+  },
+  "enemy-venom-tide": {
+    "status": "已修复",
+    "notes": [
+      "低头吐潮，波源已改前脚；最后入口需看最终运行帧，旧图不作新结论。"
+    ]
+  },
+  "enemy-head-dive": {
+    "status": "已修复",
+    "notes": [
+      "伏身、拉长俯冲、爪部撑地分别可辨。"
+    ]
+  },
+  "enemy-dragon-surge": {
+    "status": "已修复",
+    "notes": [
+      "三叉戟横推配合地线潮涌，长低潮线保留跳跃解。"
+    ]
+  },
+  "enemy-dragon-thunder": {
+    "status": "已修复",
+    "notes": [
+      "上举龙戟与雷诏落点对应，柱间保留可移动空档。"
+    ]
+  },
+  "enemy-tower-prison": {
+    "status": "已修复",
+    "notes": [
+      "举塔与塔光柱分开，塔基是打断点。"
+    ]
+  },
+  "enemy-king-fire": {
+    "status": "已修复",
+    "notes": [
+      "横剑引轮，火轮为小型空心滚动物；已同步前向预警。"
+    ]
+  },
+  "enemy-soldier-bolt": {
+    "status": "已修复",
+    "notes": [
+      "手部发射与细弩矢轮廓对应，预警线仍有边界。"
+    ]
+  }
+}

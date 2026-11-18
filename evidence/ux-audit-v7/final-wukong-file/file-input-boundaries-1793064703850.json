@@ -1,0 +1,9586 @@
+[
+  {
+    "ms": 1175,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "menu",
+    "target": "begin"
+  },
+  {
+    "ms": 1175.2000000476837,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "menu",
+    "target": "begin"
+  },
+  {
+    "ms": 1175.2999999523163,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "menu",
+    "target": "begin"
+  },
+  {
+    "ms": 1488.6000000238419,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "prologue",
+    "target": "begin-relic"
+  },
+  {
+    "ms": 1488.7000000476837,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "prologue",
+    "target": "begin-relic"
+  },
+  {
+    "ms": 1488.7999999523163,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "prologue",
+    "target": "begin-relic"
+  },
+  {
+    "ms": 1519.7999999523163,
+    "type": "keydown",
+    "code": "Digit1",
+    "detail": 0,
+    "mode": "heroes",
+    "target": "choose-wukong"
+  },
+  {
+    "ms": 1554,
+    "type": "keyup",
+    "code": "Digit1",
+    "detail": 0,
+    "mode": "start",
+    "target": "BODY"
+  },
+  {
+    "ms": 1678.3999999761581,
+    "type": "keydown",
+    "code": "Digit1",
+    "detail": 0,
+    "mode": "start",
+    "target": "BUTTON"
+  },
+  {
+    "ms": 1709.2999999523163,
+    "type": "keyup",
+    "code": "Digit1",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 2042.3999999761581,
+    "type": "keydown",
+    "code": "Escape",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 2050.600000023842,
+    "type": "keyup",
+    "code": "Escape",
+    "detail": 0,
+    "mode": "paused",
+    "target": "world"
+  },
+  {
+    "ms": 2060.899999976158,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "paused",
+    "target": "continue"
+  },
+  {
+    "ms": 2061.2999999523163,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "paused",
+    "target": "continue"
+  },
+  {
+    "ms": 2308.2000000476837,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "paused",
+    "target": "export"
+  },
+  {
+    "ms": 2308.7000000476837,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "paused",
+    "target": "export"
+  },
+  {
+    "ms": 2308.7000000476837,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "paused",
+    "target": "export"
+  },
+  {
+    "ms": 2727.2000000476837,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "paused",
+    "target": "continue"
+  },
+  {
+    "ms": 2727.399999976158,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "paused",
+    "target": "continue"
+  },
+  {
+    "ms": 2727.399999976158,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "paused",
+    "target": "continue"
+  },
+  {
+    "ms": 3110.2999999523163,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 3135.2999999523163,
+    "type": "keydown",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 3146.100000023842,
+    "type": "keydown",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 3160.899999976158,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 3263.7000000476837,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 3264.399999976158,
+    "type": "keyup",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 3265.5,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 3265.5,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 3277.100000023842,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 3966.399999976158,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 3976.600000023842,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 3988.100000023842,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 4305.799999952316,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 4306.899999976158,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 4306.899999976158,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 4317.600000023842,
+    "type": "keydown",
+    "code": "KeyU",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 5014.700000047684,
+    "type": "keyup",
+    "code": "KeyU",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 5422.100000023842,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 5432.700000047684,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 5541.700000047684,
+    "type": "keydown",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 5647.5,
+    "type": "keyup",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 5950.399999976158,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 5951.5,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 5951.600000023842,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 5964,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 6559.700000047684,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 6572.399999976158,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 6583.799999952316,
+    "type": "keydown",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 6597.399999976158,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 6698.899999976158,
+    "type": "keyup",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 6821.600000023842,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 6822.700000047684,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 6822.700000047684,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 7036.700000047684,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 7049.399999976158,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 7060.799999952316,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 7167.299999952316,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 7169.600000023842,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 7169.700000047684,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 7363.600000023842,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 7375.399999976158,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 7387.200000047684,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 7826.100000023842,
+    "type": "keydown",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 7914.5,
+    "type": "keyup",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 8015.200000047684,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 8016.200000047684,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 8016.200000047684,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 8029.200000047684,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 8663.899999976158,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 8674.899999976158,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 8688,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 9116.399999976158,
+    "type": "keyup",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 9245.200000047684,
+    "type": "keydown",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 9347.899999976158,
+    "type": "keyup",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 9575.299999952316,
+    "type": "keydown",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 9681.100000023842,
+    "type": "keyup",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 10114,
+    "type": "keydown",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 10124.899999976158,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 10233.100000023842,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 10234,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 10234.100000023842,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 10236.899999976158,
+    "type": "keyup",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 10250.799999952316,
+    "type": "keydown",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 10346.700000047684,
+    "type": "keyup",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 10360.100000023842,
+    "type": "keydown",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 10715.299999952316,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 10729.799999952316,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 10741.100000023842,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 11076.600000023842,
+    "type": "keydown",
+    "code": "KeyF",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 11155.799999952316,
+    "type": "keyup",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "reward",
+    "target": "BUTTON"
+  },
+  {
+    "ms": 11156.799999952316,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "reward",
+    "target": "BUTTON"
+  },
+  {
+    "ms": 11157.700000047684,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "reward",
+    "target": "BUTTON"
+  },
+  {
+    "ms": 11157.700000047684,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "reward",
+    "target": "stage"
+  },
+  {
+    "ms": 11158.200000047684,
+    "type": "keyup",
+    "code": "KeyF",
+    "detail": 0,
+    "mode": "reward",
+    "target": "BUTTON"
+  },
+  {
+    "ms": 11524.100000023842,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "reward",
+    "target": "relic-detail-vitality"
+  },
+  {
+    "ms": 11530.600000023842,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "reward",
+    "target": "relic-detail-vitality"
+  },
+  {
+    "ms": 11530.600000023842,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "reward",
+    "target": "relic-detail-vitality"
+  },
+  {
+    "ms": 11693,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 11705,
+    "type": "keydown",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 11719.5,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 12949.299999952316,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 12950.299999952316,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 12950.299999952316,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 13280.600000023842,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 13966.799999952316,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 13980.799999952316,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 13993.200000047684,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 14448.600000023842,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 14449.200000047684,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 14449.200000047684,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 14461.700000047684,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 14577.899999976158,
+    "type": "keydown",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 14699.700000047684,
+    "type": "keyup",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 15133.200000047684,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 15144.799999952316,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 15156.299999952316,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 15296.700000047684,
+    "type": "keydown",
+    "code": "KeyS",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 15310.299999952316,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 15432.899999976158,
+    "type": "keyup",
+    "code": "KeyS",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 15433.799999952316,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 15664.200000047684,
+    "type": "keyup",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 15677.100000023842,
+    "type": "keydown",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 16038.899999976158,
+    "type": "keyup",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 16169.399999976158,
+    "type": "keydown",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 16297.799999952316,
+    "type": "keydown",
+    "code": "KeyF",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 16719.5,
+    "type": "keyup",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 16720.200000047684,
+    "type": "keyup",
+    "code": "KeyF",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 16734.100000023842,
+    "type": "keydown",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 16861.100000023842,
+    "type": "keydown",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 16984.100000023842,
+    "type": "keyup",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 17102.299999952316,
+    "type": "keyup",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 17234.299999952316,
+    "type": "keydown",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 17469.5,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 17472.799999952316,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 17472.799999952316,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 17489.399999976158,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 17600.5,
+    "type": "keyup",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 17848.299999952316,
+    "type": "keydown",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 18084,
+    "type": "keyup",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 18099,
+    "type": "keydown",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 18217.100000023842,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 18233.399999976158,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 18248.399999976158,
+    "type": "keydown",
+    "code": "KeyS",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 18263.399999976158,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 18276.5,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 18385.899999976158,
+    "type": "keyup",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 18388.200000047684,
+    "type": "keyup",
+    "code": "KeyS",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 18389.600000023842,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 18405.299999952316,
+    "type": "keydown",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 18520.799999952316,
+    "type": "keyup",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 18536.399999976158,
+    "type": "keydown",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 18766.799999952316,
+    "type": "keyup",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 18899.5,
+    "type": "keydown",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 18919.100000023842,
+    "type": "keydown",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 19037.600000023842,
+    "type": "keyup",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 19154,
+    "type": "keyup",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 19170.399999976158,
+    "type": "keydown",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 19519.799999952316,
+    "type": "keyup",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 19538.600000023842,
+    "type": "keydown",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 19655.100000023842,
+    "type": "keyup",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 19786.299999952316,
+    "type": "keydown",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 19920.700000047684,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 19922.299999952316,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 19922.399999976158,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 19940.100000023842,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 20602.5,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 20622.600000023842,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 20641,
+    "type": "keydown",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 20657.299999952316,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 20787.200000047684,
+    "type": "keyup",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 21272.299999952316,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 21273.299999952316,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 21273.299999952316,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 21630.600000023842,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 21649.200000047684,
+    "type": "keydown",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 21770.600000023842,
+    "type": "keyup",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 22252.5,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 22271.399999976158,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 22290.600000023842,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 23570,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 23571,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 23571,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 23591.200000047684,
+    "type": "keydown",
+    "code": "KeyU",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 24087.799999952316,
+    "type": "keydown",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 24203.5,
+    "type": "keyup",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 24354.5,
+    "type": "keydown",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 24487.100000023842,
+    "type": "keyup",
+    "code": "KeyU",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 24488.100000023842,
+    "type": "keyup",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 24508.299999952316,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 24527.5,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 24654.799999952316,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 24655.700000047684,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 24655.700000047684,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 24805.5,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 25405,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 25423.299999952316,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 25441.799999952316,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 25591.600000023842,
+    "type": "keydown",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 25724.600000023842,
+    "type": "keyup",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 26824,
+    "type": "keydown",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 26955.700000047684,
+    "type": "keyup",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 27091.700000047684,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 27093.799999952316,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 27093.799999952316,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 27110.5,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 27703.299999952316,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 27723.899999976158,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 28335.899999976158,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 28355.700000047684,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 28374.5,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 29141.100000023842,
+    "type": "keydown",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 29272.5,
+    "type": "keyup",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 29407,
+    "type": "keydown",
+    "code": "KeyF",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 29540.200000047684,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 29540.799999952316,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 29540.899999976158,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 29541.399999976158,
+    "type": "keyup",
+    "code": "KeyF",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 29558.100000023842,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 30188.100000023842,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 30207.399999976158,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 30226.899999976158,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 31105.600000023842,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 31106.5,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 31106.5,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 31525.600000023842,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 32187.600000023842,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 32206.899999976158,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 32225.399999976158,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 32781.200000047684,
+    "type": "keydown",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 32910.299999952316,
+    "type": "keyup",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 33041.10000002384,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 33042.39999997616,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 33042.39999997616,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 33065.10000002384,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 33704.799999952316,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 33725.799999952316,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 33745.60000002384,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 33892.200000047684,
+    "type": "keydown",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 34040.89999997616,
+    "type": "keyup",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 35122.60000002384,
+    "type": "keydown",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 35258,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 35259,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 35259,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 35260.10000002384,
+    "type": "keyup",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 35398.200000047684,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 35421,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 35575.799999952316,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 35706.299999952316,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 35707.200000047684,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 35707.200000047684,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 35956.60000002384,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 35980.299999952316,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 36001.89999997616,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 36407,
+    "type": "keydown",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 36540,
+    "type": "keyup",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 37875.799999952316,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 37876.700000047684,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 37876.700000047684,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 37899.299999952316,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 38575.700000047684,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 38597.799999952316,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 38620.700000047684,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 38777.60000002384,
+    "type": "keyup",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 38798.10000002384,
+    "type": "keydown",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 39212.299999952316,
+    "type": "keyup",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 39382.5,
+    "type": "keydown",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 39526.5,
+    "type": "keyup",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 39702.200000047684,
+    "type": "keydown",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 39991.39999997616,
+    "type": "keyup",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 40141.200000047684,
+    "type": "keydown",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 40325.799999952316,
+    "type": "keydown",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 40476.799999952316,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 40478.200000047684,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 40478.200000047684,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 40479.5,
+    "type": "keyup",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 40480.10000002384,
+    "type": "keyup",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 40507.200000047684,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 40672.39999997616,
+    "type": "keydown",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 40939.10000002384,
+    "type": "keyup",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 41074.60000002384,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 41098.700000047684,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 41126.10000002384,
+    "type": "keydown",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 41154,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 41332.5,
+    "type": "keydown",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 41476,
+    "type": "keyup",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 42310.299999952316,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 42311.799999952316,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 42311.799999952316,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 42338,
+    "type": "keydown",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 42361.89999997616,
+    "type": "keydown",
+    "code": "KeyU",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 42491.10000002384,
+    "type": "keyup",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 42911.39999997616,
+    "type": "keyup",
+    "code": "KeyU",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 43078.89999997616,
+    "type": "keydown",
+    "code": "KeyR",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 43225.299999952316,
+    "type": "keyup",
+    "code": "KeyR",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 43252,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 43281.10000002384,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 45185.200000047684,
+    "type": "keydown",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 45329.799999952316,
+    "type": "keyup",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 45505.60000002384,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 45643.700000047684,
+    "type": "keyup",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 45820.200000047684,
+    "type": "keydown",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 46110.10000002384,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 46110.89999997616,
+    "type": "keyup",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 46287.39999997616,
+    "type": "keydown",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 46450.89999997616,
+    "type": "keydown",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 46594.299999952316,
+    "type": "keyup",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 46595,
+    "type": "keyup",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 46747.200000047684,
+    "type": "keydown",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 47028.39999997616,
+    "type": "keyup",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 47204.10000002384,
+    "type": "keydown",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 47368.200000047684,
+    "type": "keydown",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 47513.89999997616,
+    "type": "keyup",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 47514.39999997616,
+    "type": "keyup",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 47539.39999997616,
+    "type": "keydown",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 48407.89999997616,
+    "type": "keyup",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 48434.89999997616,
+    "type": "keydown",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 48745.299999952316,
+    "type": "keydown",
+    "code": "KeyF",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 48831.299999952316,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "reward",
+    "target": "BUTTON"
+  },
+  {
+    "ms": 48832.299999952316,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "reward",
+    "target": "SECTION"
+  },
+  {
+    "ms": 48832.299999952316,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "reward",
+    "target": "stage"
+  },
+  {
+    "ms": 48834.10000002384,
+    "type": "keyup",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "reward",
+    "target": "BUTTON"
+  },
+  {
+    "ms": 48835.299999952316,
+    "type": "keyup",
+    "code": "KeyF",
+    "detail": 0,
+    "mode": "reward",
+    "target": "BUTTON"
+  },
+  {
+    "ms": 49230,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "reward",
+    "target": "relic-detail-dash-strike"
+  },
+  {
+    "ms": 49241.39999997616,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "reward",
+    "target": "relic-detail-dash-strike"
+  },
+  {
+    "ms": 49241.39999997616,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "reward",
+    "target": "relic-detail-dash-strike"
+  },
+  {
+    "ms": 49805.200000047684,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 49831,
+    "type": "keydown",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 49854.39999997616,
+    "type": "keydown",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 49880.39999997616,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 50018,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 50019.299999952316,
+    "type": "keyup",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 50020,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 50020.10000002384,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 50048.700000047684,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 50642.299999952316,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 50669.60000002384,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 50696.799999952316,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 50996.200000047684,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 50997,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 50997,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 51020.39999997616,
+    "type": "keydown",
+    "code": "KeyU",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 51924.200000047684,
+    "type": "keyup",
+    "code": "KeyU",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 52392.89999997616,
+    "type": "keydown",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 52543.799999952316,
+    "type": "keyup",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 52576.299999952316,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 52604.89999997616,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 52760.60000002384,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 52761.200000047684,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 52761.299999952316,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 52790.39999997616,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 53391.299999952316,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 53420.299999952316,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 53444.60000002384,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 53601,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 53603.200000047684,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 53603.200000047684,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 53921.799999952316,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 54512.5,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 54540.799999952316,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 54564.200000047684,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 55051.5,
+    "type": "keydown",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 55194.200000047684,
+    "type": "keyup",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 55498.10000002384,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 55498.89999997616,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 55498.89999997616,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 55529.39999997616,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 56141.60000002384,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 56169.10000002384,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 56195.39999997616,
+    "type": "keydown",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 56223.299999952316,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 56381.5,
+    "type": "keyup",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 57517.89999997616,
+    "type": "keydown",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 57664.60000002384,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 57665.39999997616,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 57665.5,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 57667.60000002384,
+    "type": "keyup",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 57853.299999952316,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 57879.799999952316,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 58810.89999997616,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 58812,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 58812,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 59141.60000002384,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 59749,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 59778.799999952316,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 59806.700000047684,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 60278.60000002384,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 60280.39999997616,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 60280.39999997616,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 60310.10000002384,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 61001.799999952316,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 61037.10000002384,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 61061.39999997616,
+    "type": "keydown",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 61091.200000047684,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 61247.39999997616,
+    "type": "keyup",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 61419.299999952316,
+    "type": "keyup",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 61454.10000002384,
+    "type": "keydown",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 61954.60000002384,
+    "type": "keydown",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 62114.39999997616,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 62115.299999952316,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 62115.299999952316,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 62117.39999997616,
+    "type": "keyup",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 62145.60000002384,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 62308.299999952316,
+    "type": "keyup",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 62340.10000002384,
+    "type": "keydown",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 62795,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 62821,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 62851.700000047684,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 63046.89999997616,
+    "type": "keydown",
+    "code": "KeyS",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 63078.39999997616,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 63109.39999997616,
+    "type": "keydown",
+    "code": "KeyF",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 63209.200000047684,
+    "type": "keyup",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "reward",
+    "target": "BUTTON"
+  },
+  {
+    "ms": 63211.299999952316,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "reward",
+    "target": "BUTTON"
+  },
+  {
+    "ms": 63212.39999997616,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "reward",
+    "target": "BUTTON"
+  },
+  {
+    "ms": 63212.5,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "reward",
+    "target": "stage"
+  },
+  {
+    "ms": 63212.89999997616,
+    "type": "keyup",
+    "code": "KeyS",
+    "detail": 0,
+    "mode": "reward",
+    "target": "BUTTON"
+  },
+  {
+    "ms": 63213.5,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "reward",
+    "target": "BUTTON"
+  },
+  {
+    "ms": 63214.200000047684,
+    "type": "keyup",
+    "code": "KeyF",
+    "detail": 0,
+    "mode": "reward",
+    "target": "BUTTON"
+  },
+  {
+    "ms": 63622.700000047684,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "reward",
+    "target": "relic-detail-rest"
+  },
+  {
+    "ms": 63633.60000002384,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "reward",
+    "target": "relic-detail-rest"
+  },
+  {
+    "ms": 63633.700000047684,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "reward",
+    "target": "relic-detail-rest"
+  },
+  {
+    "ms": 63871,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 63900.39999997616,
+    "type": "keydown",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 63930.5,
+    "type": "keydown",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 63961.799999952316,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 64117,
+    "type": "keyup",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 64627,
+    "type": "keydown",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 64785.5,
+    "type": "keyup",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 65281.10000002384,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 65283.89999997616,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 65284,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 65642.20000004768,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 66260.70000004768,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 66293.29999995232,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 66324.5,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 66480.39999997616,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 66481.20000004768,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 66481.20000004768,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 66676.89999997616,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 66873,
+    "type": "keydown",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 67033.29999995232,
+    "type": "keyup",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 67350.20000004768,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 67385.20000004768,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 67414.10000002384,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 69057.79999995232,
+    "type": "keydown",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 69211.20000004768,
+    "type": "keyup",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 69364.79999995232,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 69366.60000002384,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 69366.70000004768,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 69396.29999995232,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 69996.89999997616,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 70027.60000002384,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 70057.5,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 70242.39999997616,
+    "type": "keydown",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 70418,
+    "type": "keyup",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 71329.29999995232,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 71330.29999995232,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 71330.29999995232,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 71359.10000002384,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 72017.39999997616,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 72051,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 72083.89999997616,
+    "type": "keydown",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 72116.79999995232,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 72281.10000002384,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 72283.60000002384,
+    "type": "keyup",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 72284.89999997616,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 72284.89999997616,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 72478.60000002384,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 72504.20000004768,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 73357.10000002384,
+    "type": "keydown",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 73531.39999997616,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 73533,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 73533.10000002384,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 73534,
+    "type": "keyup",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 73567.20000004768,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 74172.20000004768,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 74364.20000004768,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 75015.20000004768,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 75043.5,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 75078.70000004768,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 75760.20000004768,
+    "type": "keydown",
+    "code": "KeyF",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 75933.20000004768,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 75934.29999995232,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 75934.39999997616,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 75935.10000002384,
+    "type": "keyup",
+    "code": "KeyF",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 75959.79999995232,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 76559.89999997616,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 76586.29999995232,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 76619.20000004768,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 77246.39999997616,
+    "type": "keydown",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 77399.70000004768,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 77401.20000004768,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 77401.20000004768,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 77402.20000004768,
+    "type": "keyup",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 77597.29999995232,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 77628.39999997616,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 77825.89999997616,
+    "type": "keydown",
+    "code": "KeyS",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 77857.89999997616,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 78029.70000004768,
+    "type": "keyup",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 78030.79999995232,
+    "type": "keyup",
+    "code": "KeyS",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 78032.70000004768,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 78068.39999997616,
+    "type": "keydown",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 78116.70000004768,
+    "type": "keydown",
+    "code": "KeyF",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 78600.39999997616,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 78601.5,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 78601.5,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 78602,
+    "type": "keyup",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 78602.70000004768,
+    "type": "keyup",
+    "code": "KeyF",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 78634.10000002384,
+    "type": "keydown",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 78667,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 78980.10000002384,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 79010.5,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 79037.5,
+    "type": "keydown",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 79068.60000002384,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 79233.5,
+    "type": "keyup",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 80319.10000002384,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 80320,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 80320,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 80349.70000004768,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 80982.5,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 81175.70000004768,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 81774.79999995232,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 81803.29999995232,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 81832.89999997616,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 82784.60000002384,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 82785.5,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 82785.5,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 82817.10000002384,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 83426.39999997616,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 83459,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 83489.39999997616,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 84263.10000002384,
+    "type": "keyup",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 84458.10000002384,
+    "type": "keydown",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 84637.89999997616,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 84795,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 84795.89999997616,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 84795.89999997616,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 84796.60000002384,
+    "type": "keyup",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 84826.89999997616,
+    "type": "keydown",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 85297.70000004768,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 85300,
+    "type": "keyup",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 85335.29999995232,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 85365.79999995232,
+    "type": "keydown",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 85395.70000004768,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 85883.89999997616,
+    "type": "keyup",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 86074.79999995232,
+    "type": "keydown",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 86394.39999997616,
+    "type": "keyup",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 86577.29999995232,
+    "type": "keydown",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 86727.70000004768,
+    "type": "keyup",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 86755.5,
+    "type": "keydown",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 86786.60000002384,
+    "type": "keydown",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 86947.79999995232,
+    "type": "keyup",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 87109.70000004768,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 87110.5,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 87110.5,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 87140.79999995232,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 87760.10000002384,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 87787.70000004768,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 87813.5,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 87966.29999995232,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 87967.70000004768,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 87967.79999995232,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 88302.60000002384,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 88945.60000002384,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 88974.20000004768,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 89003.10000002384,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 89189.39999997616,
+    "type": "keydown",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 89345.39999997616,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 89346.20000004768,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 89346.29999995232,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 89346.89999997616,
+    "type": "keyup",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 89494.5,
+    "type": "keyup",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 89524.70000004768,
+    "type": "keydown",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 89678.29999995232,
+    "type": "keyup",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 89709.5,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 89739.20000004768,
+    "type": "keydown",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 89769.60000002384,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 89932,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 89933.20000004768,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 89933.20000004768,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 90122.20000004768,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 90152.89999997616,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 90317.39999997616,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 90318.60000002384,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 90318.70000004768,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 90475.39999997616,
+    "type": "keyup",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 90504.20000004768,
+    "type": "keydown",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 90830.29999995232,
+    "type": "keyup",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 90859.70000004768,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 90889.39999997616,
+    "type": "keydown",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 90917.70000004768,
+    "type": "keydown",
+    "code": "KeyR",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 90942.89999997616,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 91095,
+    "type": "keyup",
+    "code": "KeyR",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 91124.60000002384,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 91727.29999995232,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 92976.60000002384,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 92977.5,
+    "type": "keyup",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 92978.20000004768,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 92978.29999995232,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 93008.29999995232,
+    "type": "keydown",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 93460.70000004768,
+    "type": "keyup",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 93489.70000004768,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 93522.39999997616,
+    "type": "keydown",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 93554,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 95171.60000002384,
+    "type": "keydown",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 95202.5,
+    "type": "keydown",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 95366.20000004768,
+    "type": "keyup",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 95367.29999995232,
+    "type": "keyup",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 95511.60000002384,
+    "type": "keyup",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 95684.89999997616,
+    "type": "keydown",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 96329.10000002384,
+    "type": "keyup",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 96355.20000004768,
+    "type": "keydown",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 97142.70000004768,
+    "type": "keydown",
+    "code": "KeyF",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 97232.20000004768,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "reward",
+    "target": "BUTTON"
+  },
+  {
+    "ms": 97233.10000002384,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "reward",
+    "target": "SECTION"
+  },
+  {
+    "ms": 97233.10000002384,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "reward",
+    "target": "stage"
+  },
+  {
+    "ms": 97233.60000002384,
+    "type": "keyup",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "reward",
+    "target": "BUTTON"
+  },
+  {
+    "ms": 97234.29999995232,
+    "type": "keyup",
+    "code": "KeyF",
+    "detail": 0,
+    "mode": "reward",
+    "target": "BUTTON"
+  },
+  {
+    "ms": 97624.39999997616,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "reward",
+    "target": "relic-detail-rest"
+  },
+  {
+    "ms": 97630.5,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "reward",
+    "target": "relic-detail-rest"
+  },
+  {
+    "ms": 97630.5,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "reward",
+    "target": "relic-detail-rest"
+  },
+  {
+    "ms": 98193,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 98222.29999995232,
+    "type": "keydown",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 98253.20000004768,
+    "type": "keydown",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 98284,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 98448.39999997616,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 98450.39999997616,
+    "type": "keyup",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 98451.39999997616,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 98451.5,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 98484.39999997616,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 99117.10000002384,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 99151.70000004768,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 99184.79999995232,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 99501.39999997616,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 99502.39999997616,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 99502.39999997616,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 99533.39999997616,
+    "type": "keydown",
+    "code": "KeyU",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 100482.79999995232,
+    "type": "keyup",
+    "code": "KeyU",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 100865.20000004768,
+    "type": "keydown",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 101028.5,
+    "type": "keyup",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 101224.89999997616,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 101845.10000002384,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 101876.39999997616,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 101905.20000004768,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 102241.89999997616,
+    "type": "keydown",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 102391.5,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 102392.79999995232,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 102392.79999995232,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 102393.5,
+    "type": "keyup",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 102585,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 102619.20000004768,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 103459.60000002384,
+    "type": "keydown",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 103608.79999995232,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 103609.79999995232,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 103609.89999997616,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 103612.20000004768,
+    "type": "keyup",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 103794.70000004768,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 103826.60000002384,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 104782.79999995232,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 104783.60000002384,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 104783.60000002384,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 105124.29999995232,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 105758,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 105789.20000004768,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 105819.79999995232,
+    "type": "keydown",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 105849.89999997616,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 106015.79999995232,
+    "type": "keyup",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 108091.70000004768,
+    "type": "keydown",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 108248.70000004768,
+    "type": "keyup",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 108412.10000002384,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 108412.79999995232,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 108412.89999997616,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 108440.89999997616,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 108745.5,
+    "type": "keyup",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 108773.70000004768,
+    "type": "keydown",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 109079,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 109079.79999995232,
+    "type": "keyup",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 109112.89999997616,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 109145.10000002384,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 109318.39999997616,
+    "type": "keydown",
+    "code": "KeyR",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 109461.20000004768,
+    "type": "keyup",
+    "code": "KeyR",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 109814.79999995232,
+    "type": "keydown",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 109850.89999997616,
+    "type": "keydown",
+    "code": "KeyS",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 109884.29999995232,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 110024.60000002384,
+    "type": "keyup",
+    "code": "KeyS",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 110025.89999997616,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 110390.29999995232,
+    "type": "keydown",
+    "code": "KeyF",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 110477.79999995232,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "reward",
+    "target": "BUTTON"
+  },
+  {
+    "ms": 110478.39999997616,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "reward",
+    "target": "DIV"
+  },
+  {
+    "ms": 110478.5,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "reward",
+    "target": "stage"
+  },
+  {
+    "ms": 110484.79999995232,
+    "type": "keyup",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "reward",
+    "target": "BUTTON"
+  },
+  {
+    "ms": 110485.60000002384,
+    "type": "keyup",
+    "code": "KeyF",
+    "detail": 0,
+    "mode": "reward",
+    "target": "BUTTON"
+  },
+  {
+    "ms": 110874,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "reward",
+    "target": "relic-detail-rest"
+  },
+  {
+    "ms": 110878.89999997616,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "reward",
+    "target": "relic-detail-rest"
+  },
+  {
+    "ms": 110878.89999997616,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "reward",
+    "target": "relic-detail-rest"
+  },
+  {
+    "ms": 111122.5,
+    "type": "keydown",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 111155.79999995232,
+    "type": "keydown",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 111312.89999997616,
+    "type": "keyup",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 111314.29999995232,
+    "type": "keyup",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 111348.20000004768,
+    "type": "keydown",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 111382.29999995232,
+    "type": "keydown",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 111549,
+    "type": "keyup",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 111581.20000004768,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 111609.89999997616,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 111756.79999995232,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 111757.70000004768,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 111757.70000004768,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 111783.20000004768,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 112391.70000004768,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 112420.10000002384,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 112451,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 113127.39999997616,
+    "type": "keydown",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 113281.39999997616,
+    "type": "keyup",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 114404.79999995232,
+    "type": "keydown",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 114565.70000004768,
+    "type": "keyup",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 115215.29999995232,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 115216.29999995232,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 115216.39999997616,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 115564.29999995232,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 116197.29999995232,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 116227.79999995232,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 116255.89999997616,
+    "type": "keydown",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 116285.60000002384,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 116444.20000004768,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 116444.89999997616,
+    "type": "keyup",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 116445.60000002384,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 116445.70000004768,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 116477,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 117115,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 117147.20000004768,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 117176.60000002384,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 117805.60000002384,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 117806.60000002384,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 117806.60000002384,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 117835.89999997616,
+    "type": "keydown",
+    "code": "KeyU",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 117993.79999995232,
+    "type": "keyup",
+    "code": "KeyU",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 118026.10000002384,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 118059.20000004768,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 118408.79999995232,
+    "type": "keydown",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 118560.20000004768,
+    "type": "keyup",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 118734.10000002384,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 118734.70000004768,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 118734.79999995232,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 118922.60000002384,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 119575.89999997616,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 119609,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 119636.10000002384,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 119825.10000002384,
+    "type": "keydown",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 119997.60000002384,
+    "type": "keyup",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 120664,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 120665,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 120665,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 120689.5,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 121345.60000002384,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 121378.20000004768,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 121407.39999997616,
+    "type": "keydown",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 121438.79999995232,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 121613.79999995232,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 121614.60000002384,
+    "type": "keyup",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 121615.39999997616,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 121615.39999997616,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 121958.10000002384,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 122323.5,
+    "type": "keydown",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 122495.5,
+    "type": "keyup",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 122663.70000004768,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 122697.20000004768,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 122731.60000002384,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 123264.10000002384,
+    "type": "keydown",
+    "code": "KeyF",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 123427.39999997616,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 123428.20000004768,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 123428.20000004768,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 123428.79999995232,
+    "type": "keyup",
+    "code": "KeyF",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 123458.39999997616,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 123486.89999997616,
+    "type": "keydown",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 123645.10000002384,
+    "type": "keyup",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 124092.79999995232,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 124123.10000002384,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 124155.29999995232,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 124946.89999997616,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 124947.79999995232,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 124947.79999995232,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 125118.10000002384,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 125728,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 125760.39999997616,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 125791.70000004768,
+    "type": "keydown",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 125823.79999995232,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 125981.70000004768,
+    "type": "keyup",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 126655.29999995232,
+    "type": "keydown",
+    "code": "KeyF",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 127110.60000002384,
+    "type": "keyup",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 127111.29999995232,
+    "type": "keyup",
+    "code": "KeyF",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 127142.10000002384,
+    "type": "keydown",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 127320.89999997616,
+    "type": "keydown",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 127477.70000004768,
+    "type": "keyup",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 127994.79999995232,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 127997.5,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 127997.5,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 128034.20000004768,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 128662.10000002384,
+    "type": "keyup",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 128663.79999995232,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 128697,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 128728.79999995232,
+    "type": "keydown",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 128759.89999997616,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 128965.10000002384,
+    "type": "keydown",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 129128.70000004768,
+    "type": "keyup",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 129465.29999995232,
+    "type": "keyup",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 129499.29999995232,
+    "type": "keydown",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 130160.10000002384,
+    "type": "keyup",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 130189.29999995232,
+    "type": "keydown",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 130217.39999997616,
+    "type": "keydown",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 130378.20000004768,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 130381.5,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 130381.5,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 130382.39999997616,
+    "type": "keyup",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 130409.79999995232,
+    "type": "keydown",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 130580.79999995232,
+    "type": "keyup",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 130606.39999997616,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 130637.5,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 130798.20000004768,
+    "type": "keyup",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 130823.89999997616,
+    "type": "keydown",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 131159.60000002384,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 131160.70000004768,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 131160.70000004768,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 131161.39999997616,
+    "type": "keyup",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 131196.39999997616,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 131393.5,
+    "type": "keydown",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 131730.29999995232,
+    "type": "keyup",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 131756.70000004768,
+    "type": "keydown",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 131907.29999995232,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 131940.79999995232,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 131973.89999997616,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 132166.79999995232,
+    "type": "keyup",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 132345,
+    "type": "keydown",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 132840.39999997616,
+    "type": "keyup",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 133026.29999995232,
+    "type": "keydown",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 133366,
+    "type": "keyup",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 133397,
+    "type": "keydown",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 133564.20000004768,
+    "type": "keyup",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 133594,
+    "type": "keydown",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 133916.29999995232,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 133917.10000002384,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 133917.10000002384,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 133949.5,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 134111.39999997616,
+    "type": "keyup",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 134143.39999997616,
+    "type": "keydown",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 134613.29999995232,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 134614.29999995232,
+    "type": "keyup",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 134649.89999997616,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 134678.39999997616,
+    "type": "keydown",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 134708.20000004768,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 135377.29999995232,
+    "type": "keyup",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 135406.20000004768,
+    "type": "keydown",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 135888.20000004768,
+    "type": "keyup",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 135918.39999997616,
+    "type": "keydown",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 135950.60000002384,
+    "type": "keydown",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 136113.79999995232,
+    "type": "keyup",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 136263.39999997616,
+    "type": "keyup",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 136453.70000004768,
+    "type": "keydown",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 136613.29999995232,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 136614.60000002384,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 136614.60000002384,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 136650.89999997616,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 136976.5,
+    "type": "keyup",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 137004.5,
+    "type": "keydown",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 137348,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 137377.5,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 137405.70000004768,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 137580.89999997616,
+    "type": "keyup",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 137610.70000004768,
+    "type": "keydown",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 137777.29999995232,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 137780,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 137780.10000002384,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 137968.29999995232,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 137999.89999997616,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 138161.5,
+    "type": "keyup",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 138193.10000002384,
+    "type": "keydown",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 138371,
+    "type": "keydown",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 138526,
+    "type": "keyup",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 138526.79999995232,
+    "type": "keyup",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 138726.20000004768,
+    "type": "keydown",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 139041.70000004768,
+    "type": "keyup",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 139244.39999997616,
+    "type": "keydown",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 139277.39999997616,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 139444.20000004768,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 139446.5,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 139446.5,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 139447.5,
+    "type": "keyup",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 139482.5,
+    "type": "keydown",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 139960.20000004768,
+    "type": "keyup",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 139992.20000004768,
+    "type": "keydown",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 140160.79999995232,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 140192.70000004768,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 140227.10000002384,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 140254.39999997616,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 140410.89999997616,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 140411.70000004768,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 140411.70000004768,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 140565.10000002384,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 140595.39999997616,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 140626.20000004768,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 141798.10000002384,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 141799,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 141799,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 142138.20000004768,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 142758.60000002384,
+    "type": "keyup",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 142759.20000004768,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 142793.70000004768,
+    "type": "keydown",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 142935.5,
+    "type": "keyup",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 142959.79999995232,
+    "type": "keydown",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 143297.29999995232,
+    "type": "keyup",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 143333,
+    "type": "keydown",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 143491.79999995232,
+    "type": "keyup",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 143519.60000002384,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 143550.5,
+    "type": "keydown",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 143574.60000002384,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 143730.89999997616,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 143732.10000002384,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 143732.10000002384,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 143764.60000002384,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 143797.70000004768,
+    "type": "keydown",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 143957.10000002384,
+    "type": "keyup",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 144131.89999997616,
+    "type": "keyup",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 144168.20000004768,
+    "type": "keydown",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 144330.20000004768,
+    "type": "keyup",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 144357.10000002384,
+    "type": "keydown",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 144507.5,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 144541.10000002384,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 144570.20000004768,
+    "type": "keydown",
+    "code": "KeyR",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 144604.10000002384,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 144761.5,
+    "type": "keyup",
+    "code": "KeyR",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 145779.89999997616,
+    "type": "keydown",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 145941.89999997616,
+    "type": "keyup",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 146096.89999997616,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 146098.29999995232,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 146098.29999995232,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 146130.60000002384,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 146787.60000002384,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 146816.10000002384,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 146849.29999995232,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 147040.39999997616,
+    "type": "keydown",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 147198.5,
+    "type": "keyup",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 147530.20000004768,
+    "type": "keyup",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 147561.20000004768,
+    "type": "keydown",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 147758.70000004768,
+    "type": "keydown",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 147916.79999995232,
+    "type": "keyup",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 148082.20000004768,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 148083.10000002384,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 148083.20000004768,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 148114.5,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 148275.70000004768,
+    "type": "keyup",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 148306,
+    "type": "keydown",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 148796.89999997616,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 148830.39999997616,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 148859.29999995232,
+    "type": "keydown",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 148890.60000002384,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 149064.60000002384,
+    "type": "keyup",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 149706.5,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 149707.39999997616,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 149707.39999997616,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 149739.39999997616,
+    "type": "keydown",
+    "code": "KeyU",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 149932.5,
+    "type": "keydown",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 150094.29999995232,
+    "type": "keyup",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 150576.10000002384,
+    "type": "keyup",
+    "code": "KeyU",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 151207.70000004768,
+    "type": "keyup",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 151240.10000002384,
+    "type": "keydown",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 151563.29999995232,
+    "type": "keyup",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 151592.5,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 151622.20000004768,
+    "type": "keydown",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 151653.79999995232,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 151808.39999997616,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 151809.20000004768,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 151809.20000004768,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 151840.29999995232,
+    "type": "keydown",
+    "code": "KeyU",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 152177.10000002384,
+    "type": "keyup",
+    "code": "KeyU",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 152207.39999997616,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 152237.20000004768,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 152889.89999997616,
+    "type": "keydown",
+    "code": "KeyR",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 153055.20000004768,
+    "type": "keyup",
+    "code": "KeyR",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 153257.89999997616,
+    "type": "keydown",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 153429,
+    "type": "keyup",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 154240.10000002384,
+    "type": "keydown",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 154388.60000002384,
+    "type": "keyup",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 154564.10000002384,
+    "type": "keyup",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 154737,
+    "type": "keydown",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 155422.79999995232,
+    "type": "keydown",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 155576.89999997616,
+    "type": "keyup",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 155580.20000004768,
+    "type": "keyup",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 155614.5,
+    "type": "keydown",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 157422.10000002384,
+    "type": "keydown",
+    "code": "KeyF",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 157515.89999997616,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "reward",
+    "target": "BUTTON"
+  },
+  {
+    "ms": 157516.79999995232,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "reward",
+    "target": "SECTION"
+  },
+  {
+    "ms": 157516.79999995232,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "reward",
+    "target": "stage"
+  },
+  {
+    "ms": 157517.39999997616,
+    "type": "keyup",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "reward",
+    "target": "BUTTON"
+  },
+  {
+    "ms": 157518,
+    "type": "keyup",
+    "code": "KeyF",
+    "detail": 0,
+    "mode": "reward",
+    "target": "BUTTON"
+  },
+  {
+    "ms": 157889,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "reward",
+    "target": "relic-detail-rest"
+  },
+  {
+    "ms": 157892.89999997616,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "reward",
+    "target": "relic-detail-rest"
+  },
+  {
+    "ms": 157892.89999997616,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "reward",
+    "target": "relic-detail-rest"
+  },
+  {
+    "ms": 158439.79999995232,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 158466,
+    "type": "keydown",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 158492.79999995232,
+    "type": "keydown",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 158519.70000004768,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 158668.29999995232,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 158669,
+    "type": "keyup",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 158669.70000004768,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 158669.70000004768,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 158697.39999997616,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 159384.89999997616,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 159413.10000002384,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 159437.20000004768,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 161081.60000002384,
+    "type": "keydown",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 161225.5,
+    "type": "keyup",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 161369.29999995232,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 161370,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 161370,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 161398.79999995232,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 161972.89999997616,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 162001.79999995232,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 162026.20000004768,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 162351.39999997616,
+    "type": "keydown",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 162504.10000002384,
+    "type": "keyup",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 162526.60000002384,
+    "type": "keydown",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 162672.20000004768,
+    "type": "keyup",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 162673,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 162673.79999995232,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 162673.79999995232,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 162674.5,
+    "type": "keyup",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 162699.79999995232,
+    "type": "keydown",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 162725,
+    "type": "keydown",
+    "code": "KeyU",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 162867.29999995232,
+    "type": "keyup",
+    "code": "KeyU",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 162891.29999995232,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 163189.60000002384,
+    "type": "keyup",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 163216.29999995232,
+    "type": "keydown",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 163520.60000002384,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 163538.89999997616,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 163568,
+    "type": "keydown",
+    "code": "KeyS",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 163591.5,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 163619.89999997616,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 163768.20000004768,
+    "type": "keyup",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 163768.70000004768,
+    "type": "keyup",
+    "code": "KeyS",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 163769.29999995232,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 163792.29999995232,
+    "type": "keydown",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 164110.5,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 164253.60000002384,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 164254.5,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 164254.5,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 164255.79999995232,
+    "type": "keyup",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 164431.5,
+    "type": "keydown",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 164453,
+    "type": "keydown",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 164588.5,
+    "type": "keyup",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 164589.29999995232,
+    "type": "keyup",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 164734.29999995232,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 164754.39999997616,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 164777.89999997616,
+    "type": "keydown",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 164805.39999997616,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 164960.10000002384,
+    "type": "keydown",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 165105.60000002384,
+    "type": "keyup",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 165254.79999995232,
+    "type": "keyup",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 165281.89999997616,
+    "type": "keydown",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 165706.10000002384,
+    "type": "keydown",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 165832.89999997616,
+    "type": "keyup",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 166628.39999997616,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 166629.20000004768,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 166629.20000004768,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 167038,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 167324.79999995232,
+    "type": "keydown",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 167470.39999997616,
+    "type": "keyup",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 167604.5,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 167629.29999995232,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 167655.20000004768,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 168996.70000004768,
+    "type": "keydown",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 169126.29999995232,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 169127.70000004768,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 169127.70000004768,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 169128.20000004768,
+    "type": "keyup",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 169152.79999995232,
+    "type": "keydown",
+    "code": "KeyU",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 169688,
+    "type": "keyup",
+    "code": "KeyU",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 170217.20000004768,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 170240,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 170501.60000002384,
+    "type": "keyup",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 170653.89999997616,
+    "type": "keydown",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 170676.20000004768,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 170816.39999997616,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 170817.10000002384,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 170817.10000002384,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 170817.70000004768,
+    "type": "keyup",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 170842.20000004768,
+    "type": "keydown",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 170980.70000004768,
+    "type": "keyup",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 171006.20000004768,
+    "type": "keydown",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 171302.79999995232,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 171303.79999995232,
+    "type": "keyup",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 171330.10000002384,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 171353.79999995232,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 171482.79999995232,
+    "type": "keydown",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 171750.60000002384,
+    "type": "keyup",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 171773.60000002384,
+    "type": "keydown",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 172078.5,
+    "type": "keydown",
+    "code": "KeyR",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 172350.79999995232,
+    "type": "keyup",
+    "code": "KeyR",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 175361.29999995232,
+    "type": "keydown",
+    "code": "KeyF",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 175500.29999995232,
+    "type": "keyup",
+    "code": "KeyF",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 175768.89999997616,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 175769.5,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 175769.5,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 176027.89999997616,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 176466.89999997616,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 176488,
+    "type": "keydown",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 176512.89999997616,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 176647.70000004768,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 176648.29999995232,
+    "type": "keyup",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 176668.89999997616,
+    "type": "keydown",
+    "code": "KeyS",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 176690.70000004768,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 176817.10000002384,
+    "type": "keyup",
+    "code": "KeyS",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 176817.60000002384,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 178162.89999997616,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 178596.39999997616,
+    "type": "keydown",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 178730,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 178730.39999997616,
+    "type": "keyup",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 180102.60000002384,
+    "type": "keydown",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 180253.60000002384,
+    "type": "keyup",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 180509.29999995232,
+    "type": "keyup",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 180532.20000004768,
+    "type": "keydown",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 180556.29999995232,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 180695.39999997616,
+    "type": "keydown",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 180811.70000004768,
+    "type": "keyup",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 181212.5,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 181230.39999997616,
+    "type": "keydown",
+    "code": "KeyS",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 181245.20000004768,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 181369.89999997616,
+    "type": "keyup",
+    "code": "KeyS",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 181370.60000002384,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 183068.10000002384,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 183581.79999995232,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 184131.39999997616,
+    "type": "keydown",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 184265,
+    "type": "keyup",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 184288.29999995232,
+    "type": "keydown",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 184419.60000002384,
+    "type": "keyup",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 184420.10000002384,
+    "type": "keyup",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 184445.70000004768,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 184575.89999997616,
+    "type": "keydown",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 185097.79999995232,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 185112.89999997616,
+    "type": "keydown",
+    "code": "KeyS",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 185134.29999995232,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 185262.39999997616,
+    "type": "keyup",
+    "code": "KeyS",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 185263.29999995232,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 186013,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 186013.60000002384,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 186013.60000002384,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 186692.60000002384,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 186715.89999997616,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 187635.39999997616,
+    "type": "keydown",
+    "code": "KeyR",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 187656.70000004768,
+    "type": "keydown",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 187798.29999995232,
+    "type": "keyup",
+    "code": "KeyR",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 187798.79999995232,
+    "type": "keyup",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 188581.70000004768,
+    "type": "keydown",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 188717,
+    "type": "keyup",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 188850.79999995232,
+    "type": "keyup",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 188872.89999997616,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 189014.20000004768,
+    "type": "keydown",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 189513,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 189531.10000002384,
+    "type": "keydown",
+    "code": "KeyS",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 189552.10000002384,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 189684.39999997616,
+    "type": "keyup",
+    "code": "KeyS",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 189685,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 189836.29999995232,
+    "type": "keydown",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 189964.70000004768,
+    "type": "keyup",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 191542,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 192077.29999995232,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 192212.39999997616,
+    "type": "keydown",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 192351.10000002384,
+    "type": "keyup",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 192373.60000002384,
+    "type": "keydown",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 192498.20000004768,
+    "type": "keyup",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 192628.89999997616,
+    "type": "keyup",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 192650.10000002384,
+    "type": "keydown",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 194234.10000002384,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 194878.39999997616,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 196165.10000002384,
+    "type": "keydown",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 196295,
+    "type": "keyup",
+    "code": "KeyK",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 196312.10000002384,
+    "type": "keydown",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 196448.79999995232,
+    "type": "keyup",
+    "code": "KeyD",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 196449.29999995232,
+    "type": "keyup",
+    "code": "KeyL",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 196469.79999995232,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 196633.20000004768,
+    "type": "keydown",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 197150.29999995232,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 197174.70000004768,
+    "type": "keydown",
+    "code": "KeyS",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 197200,
+    "type": "keydown",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 197329.70000004768,
+    "type": "keyup",
+    "code": "KeyS",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 197330.20000004768,
+    "type": "keyup",
+    "code": "KeyW",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 198078,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 198078.60000002384,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 198078.60000002384,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 198615.20000004768,
+    "type": "keydown",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 198637.79999995232,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "playing",
+    "target": "world"
+  },
+  {
+    "ms": 199479.70000004768,
+    "type": "keyup",
+    "code": "KeyA",
+    "detail": 0,
+    "mode": "won",
+    "target": "epilogue"
+  },
+  {
+    "ms": 199480.10000002384,
+    "type": "keyup",
+    "code": "KeyJ",
+    "detail": 0,
+    "mode": "won",
+    "target": "epilogue"
+  },
+  {
+    "ms": 199480.79999995232,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "won",
+    "target": "DIV"
+  },
+  {
+    "ms": 199480.79999995232,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "won",
+    "target": "stage"
+  },
+  {
+    "ms": 199796.29999995232,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "won",
+    "target": "epilogue"
+  },
+  {
+    "ms": 199796.39999997616,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "won",
+    "target": "epilogue"
+  },
+  {
+    "ms": 199796.5,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "won",
+    "target": "epilogue"
+  },
+  {
+    "ms": 200079.39999997616,
+    "type": "pointerdown",
+    "button": 0,
+    "detail": 0,
+    "mode": "epilogue",
+    "target": "back-result"
+  },
+  {
+    "ms": 200079.79999995232,
+    "type": "pointerup",
+    "button": 0,
+    "detail": 0,
+    "mode": "epilogue",
+    "target": "back-result"
+  },
+  {
+    "ms": 200079.79999995232,
+    "type": "click",
+    "button": 0,
+    "detail": 1,
+    "mode": "epilogue",
+    "target": "back-result"
+  }
+]
