@@ -1,0 +1,33 @@
+{
+  "root": "E:\\githome\\kong-rpg-main-size-20261117",
+  "excluded": [
+    ".cache",
+    ".git",
+    ".hg",
+    ".next",
+    ".svn",
+    ".turbo",
+    "Library",
+    "Logs",
+    "Temp",
+    "build",
+    "coverage",
+    "dist",
+    "node_modules"
+  ],
+  "files": 802,
+  "htmlFiles": 3,
+  "configFiles": 1,
+  "hashes": {
+    "index.html": "8fe4d96cab1dfd45618b1b6a2ba527be07809731ee6c4b662777e3cf1bc7fa23",
+    "dist-offline/index.html": "4df8fa83438c4947f407e8d0ba059de38c9ca057730d1a50542368865df21d5b",
+    "release/sound-check.html": "a99bd4f656c1fed3e8266cf926871aa09e15673e56c3f035cecc27783093e5b1",
+    "vite.config.mjs": "ffc167719f8ba55a325acc2a6ee578cc5d8dea2935ba3274531a2ff50d755ecb"
+  },
+  "findings": [],
+  "counts": {
+    "High": 0,
+    "Medium": 0,
+    "需人工复核": 0
+  }
+}

@@ -6,6 +6,8 @@
 
 资源目录已清理未使用的原图、草稿和废弃版本；当前构建只依赖保留的成品。来源记录与历史素材恢复方法见[资源保留规则](assets/README.md)。
 
+main 已合入 `codex/asset-loading-performance`。合并后、瘦身前的完整文件树保存在 GitHub 的 [`backup/main-after-asset-loading-merge-20261118`](https://github.com/GOD-OF-PPT/kong-rpg/tree/backup/main-after-asset-loading-merge-20261118)；历史发行 HTML、ZIP 和大体积证据按原路径归档在那里。体积检查、保留范围和恢复命令见 [仓库存储说明](docs/repository-storage.md)。
+
 ## v12.4.1 战斗与结算
 
 - 引入 Vite，网络版输出到 `dist/`，独立离线版输出到 `dist-offline/`；保留首页四张图片和分段加载。构建及预览用法见 [Vite 构建说明](docs/loading-perf/VITE.md)。
@@ -107,7 +109,7 @@
 
 ## 直接运行
 
-执行 `npm run build:offline` 后双击 `dist-offline/index.html`。PC Edge / Chrome，无需网络、安装、CDN、字体下载或安全设置。必须保留整个 `dist-offline/`；历史 `release/legacy-v*.html` 作为仓库档案保留，不进入当前构建。
+执行 `npm run build:offline` 后双击 `dist-offline/index.html`。PC Edge / Chrome，无需网络、安装、CDN、字体下载或安全设置。必须保留整个 `dist-offline/`；图片、音乐和脚本分段加载，不能只复制一个 HTML。历史 `release/legacy-v*.html` 在上述备份分支保留，不进入当前构建。
 
 网络预览/构建需要Node.js 20.9+，首次安装开发依赖：
 

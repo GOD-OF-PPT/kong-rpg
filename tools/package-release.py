@@ -9,6 +9,7 @@ release = root / 'dist-offline'
 manifest = json.loads((release / 'manifest.json').read_text(encoding='utf8'))
 assert hashlib.sha256((release / manifest['entry']).read_bytes()).hexdigest() == manifest['sha256']
 target = root / 'artifacts' / ('kong-rpg-offline-v' + manifest['version'] + '.zip')
+target.parent.mkdir(parents=True, exist_ok=True)
 temporary = target.with_suffix('.zip.tmp')
 # Package the active Vite dependency closure, rather than every stale hash
 # left beside retained legacy releases by an incremental build.

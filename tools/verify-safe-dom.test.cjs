@@ -79,12 +79,13 @@ test('rerender clears old controls and handles malformed tags without an HTML si
   assert.equal(target.children.length, 0);
 });
 
-test('all standalone pages embed exactly the shared safe DOM implementation', () => {
-  const source = fs.readFileSync(path.join(root, 'src/safe-dom.js'), 'utf8').trim();
-  for (const file of ['release/index.html', 'release/legacy-v1.html', 'evidence/readability/baseline.html']) {
-    const html = fs.readFileSync(path.join(root, file), 'utf8');
-    assert.ok(html.includes(source), file);
-    assert.ok(!/\b(?:innerHTML|outerHTML)\s*=/.test(html), file);
-    assert.ok(html.includes('KongSafeDOM.render('), file);
+test('current Vite consumer loads the DOM-only UI and app modules', () => {
+  assert.ok(fs.readFileSync(path.join(root, 'index.html'), 'utf8').includes('src="./src/main.js"'));
+  const entry = fs.readFileSync(path.join(root, 'src/main.js'), 'utf8');
+  assert.ok(entry.includes("import './ui.js'"));
+  assert.ok(entry.indexOf("import './ui.js'") < entry.indexOf("import './app.js'"));
+  for (const file of ['src/ui.js', 'src/app.js']) {
+    const source = fs.readFileSync(path.join(root, file), 'utf8');
+    assert.ok(!/\b(?:innerHTML|outerHTML|insertAdjacentHTML|DOMParser)\b/.test(source), file);
   }
 });

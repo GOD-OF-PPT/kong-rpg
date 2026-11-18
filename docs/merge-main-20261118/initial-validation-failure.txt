@@ -1,0 +1,6 @@
+Initial post-cleanup npm run verify:
+FAIL legacy v9 routes to preserved entry and corrupted qualification is rejected ENOENT: no such file or directory, open 'E:\githome\kong-rpg-main-size-20261117\release\legacy-v9.html'
+
+Cause: the current Vite distribution already excludes legacy HTML. The core rule test also checked the physical historical HTML digest, so moving that file to the verified backup made the disk lookup fail.
+
+Resolution: keep the legacy-save rejection, unchanged input and corrupted-qualification checks in the default consumer test. Move the original exact v9 SHA-256 assertion into tools/verify-main-archive.py, which checks the actual archived HTML bytes and verifies every archived object against the GitHub backup. No historical digest assertion is waived.

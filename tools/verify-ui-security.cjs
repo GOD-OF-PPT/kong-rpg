@@ -106,8 +106,8 @@ async function browserCheck(){
     await page.keyboard.press('Escape');await page.locator('#build-details').click();await screen('build');
     check('learned art appears in loadout',await page.locator('[data-art-equip]').count()===1);
     await page.locator('[data-art-equip]').click();await page.locator('#close-build').click();
-    await load('dead');check('damage source stays literal text',(await page.locator('.subtitle').textContent()).includes('<img src=x onerror="__uiXss=1">'));
-    check('rating renders DOM elements',await page.locator('.campaign-rating .rating-grade').count()===1);
+    await load('dead');check('damage source stays literal text',(await page.locator('.settlement-score p').textContent()).includes('<img src=x onerror="__uiXss=1">'));
+    check('rating renders DOM elements',await page.locator('.settlement-rating .rating-grade').count()===1);
     await load('won');await page.locator('#epilogue').click();await screen('epilogue');
     await page.locator('#main-menu').click();
     const hostile='\"><img src=x onerror="__uiXss=1"><svg onload="__uiXss=1">&\'';

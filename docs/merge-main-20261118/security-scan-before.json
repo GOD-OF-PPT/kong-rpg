@@ -1,0 +1,61 @@
+{
+  "root": "E:\\githome\\kong-rpg-main-size-20261117",
+  "excluded": [
+    ".cache",
+    ".git",
+    ".hg",
+    ".next",
+    ".svn",
+    ".turbo",
+    "Library",
+    "Logs",
+    "Temp",
+    "build",
+    "coverage",
+    "dist",
+    "node_modules"
+  ],
+  "files": 793,
+  "htmlFiles": 3,
+  "configFiles": 1,
+  "hashes": {
+    "index.html": "8fe4d96cab1dfd45618b1b6a2ba527be07809731ee6c4b662777e3cf1bc7fa23",
+    "dist-offline/index.html": "4df8fa83438c4947f407e8d0ba059de38c9ca057730d1a50542368865df21d5b",
+    "release/sound-check.html": "84f49d49804ad2c62bf7974bd65d49e2b3c9c4456a0077add59965b05ea9eed9",
+    "vite.config.mjs": "ffc167719f8ba55a325acc2a6ee578cc5d8dea2935ba3274531a2ff50d755ecb"
+  },
+  "findings": [
+    {
+      "file": "docs/ranged-v6/research/西遊記-第004回.txt",
+      "line": "N/A",
+      "rule": "中文路径",
+      "level": "Medium",
+      "evidence": "docs/ranged-v6/research/西遊記-第004回.txt",
+      "reason": "路径编码和部署兼容性风险",
+      "fix": "改为 ASCII 名称并更新引用"
+    },
+    {
+      "file": "docs/ranged-v6/research/西遊記-第006回.txt",
+      "line": "N/A",
+      "rule": "中文路径",
+      "level": "Medium",
+      "evidence": "docs/ranged-v6/research/西遊記-第006回.txt",
+      "reason": "路径编码和部署兼容性风险",
+      "fix": "改为 ASCII 名称并更新引用"
+    },
+    {
+      "file": "release/sound-check.html",
+      "line": 1,
+      "rule": "活跃源 Data URI",
+      "level": "Medium",
+      "evidence": "src=\"data:audio/wav;base64,UklGRqQ5AABXQVZFZm10IBAAAAABAAEAAH0AAAD6AAACABAAZGF0YYA5AAAAAPX+LP3i/VH+DPwi/l8ByP5o/9j8a/kJ/QD9j/0J/yv9ePv0/ecGvgWd/0YIAw3WBk0JCQngA7kJGArDBJoG1AaJBvgFG/43/EMA5P+CAv4A4fiU+VAAXfq08X/46Pzc/OoAXPxO+rwF/QhSAKv6cAA1B",
+      "reason": "内嵌活动资源或不透明资源来源",
+      "fix": "使用受控本地资源或安全 DOM 构造"
+    }
+  ],
+  "counts": {
+    "High": 0,
+    "Medium": 3,
+    "需人工复核": 0
+  }
+}
